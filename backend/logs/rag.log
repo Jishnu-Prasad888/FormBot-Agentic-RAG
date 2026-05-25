@@ -5217,3 +5217,93 @@ fastapi.exceptions.ResponseValidationError: 1 validation errors:
 2026-05-25 09:04:54 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are equivalent e-documents (ACCOUNT OPENING FORM FOR RE' collection='text_documents'
 2026-05-25 09:04:55 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
 2026-05-25 09:04:55 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:05:13 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [18520.9ms]
+2026-05-25 09:05:13 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:05:13 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - cc (Agriculture Loan Application For'
+2026-05-25 09:05:13 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - cc (Agriculture Loan Application For' collection='text_documents'
+2026-05-25 09:05:13 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:05:13 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:05:19 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:05:19 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:05:19 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:05:19 | INFO     | rag_platform.main | ← GET /health 200 [2.0ms]
+2026-05-25 09:05:19 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:05:19 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:05:19 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.0ms]
+2026-05-25 09:05:19 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.0ms]
+2026-05-25 09:05:19 | INFO     | rag_platform.main | ← GET /health/db 200 [9.5ms]
+2026-05-25 09:05:28 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [15515.0ms]
+2026-05-25 09:05:28 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:05:28 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - tl/dl (Agriculture Loan Application '
+2026-05-25 09:05:28 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - tl/dl (Agriculture Loan Application ' collection='text_documents'
+2026-05-25 09:05:29 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:05:29 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:05:44 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [15610.5ms]
+2026-05-25 09:05:44 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:05:44 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - od'
+2026-05-25 09:05:44 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - od' collection='text_documents'
+2026-05-25 09:05:44 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:05:44 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:05:49 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:05:49 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:05:49 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:05:49 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:05:49 | INFO     | rag_platform.main | ← GET /health 200 [11.0ms]
+2026-05-25 09:05:49 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:05:49 | INFO     | rag_platform.main | ← GET /health/chroma 200 [19.0ms]
+2026-05-25 09:05:49 | INFO     | rag_platform.main | ← GET /health/ollama 404 [25.0ms]
+2026-05-25 09:05:49 | INFO     | rag_platform.main | ← GET /health/db 200 [44.6ms]
+2026-05-25 09:06:01 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [17384.7ms]
+2026-05-25 09:06:01 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:06:01 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are sourcing entities - branch/rmru/fsto (Agriculture L'
+2026-05-25 09:06:01 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are sourcing entities - branch/rmru/fsto (Agriculture L' collection='text_documents'
+2026-05-25 09:06:02 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:06:02 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:06:15 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14077.7ms]
+2026-05-25 09:06:16 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:06:16 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are sourcing entities - dsa/dse/sboss/ba (Agriculture L'
+2026-05-25 09:06:16 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are sourcing entities - dsa/dse/sboss/ba (Agriculture L' collection='text_documents'
+2026-05-25 09:06:16 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:06:16 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:06:19 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:06:19 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:06:19 | INFO     | rag_platform.main | ← GET /health 200 [0.9ms]
+2026-05-25 09:06:19 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:06:19 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:06:19 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:06:19 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.0ms]
+2026-05-25 09:06:19 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.0ms]
+2026-05-25 09:06:19 | INFO     | rag_platform.main | ← GET /health/db 200 [10.0ms]
+2026-05-25 09:06:29 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [13698.9ms]
+2026-05-25 09:06:29 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:06:29 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='how to categorize asset as movable/immovable/liquid (Agricul'
+2026-05-25 09:06:29 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='how to categorize asset as movable/immovable/liquid (Agricul' collection='text_documents'
+2026-05-25 09:06:30 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:06:30 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:06:48 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [18815.6ms]
+2026-05-25 09:06:48 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:06:48 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is primary vs collateral security (Agriculture Loan App'
+2026-05-25 09:06:48 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is primary vs collateral security (Agriculture Loan App' collection='text_documents'
+2026-05-25 09:06:49 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:06:49 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:07:02 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14413.6ms]
+2026-05-25 09:07:02 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:07:02 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='difference between individual and non-individual form (Agric'
+2026-05-25 09:07:02 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='difference between individual and non-individual form (Agric' collection='text_documents'
+2026-05-25 09:07:03 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:07:03 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:07:11 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:07:11 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:07:11 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:07:11 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:07:11 | INFO     | rag_platform.main | ← GET /health 200 [3.0ms]
+2026-05-25 09:07:11 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:07:11 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.0ms]
+2026-05-25 09:07:11 | INFO     | rag_platform.main | ← GET /health/ollama 404 [4.0ms]
+2026-05-25 09:07:11 | INFO     | rag_platform.main | ← GET /health/db 200 [9.0ms]
+2026-05-25 09:07:17 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14601.4ms]
+2026-05-25 09:07:17 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:07:17 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what qualifies as a tie-up which has to be mentioned (Agricu'
+2026-05-25 09:07:17 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what qualifies as a tie-up which has to be mentioned (Agricu' collection='text_documents'
+2026-05-25 09:07:17 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:07:17 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
