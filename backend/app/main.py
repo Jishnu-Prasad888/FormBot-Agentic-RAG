@@ -46,8 +46,8 @@ async def lifespan(app: FastAPI):
     logger.info("Application startup complete")
     yield
     logger.info("Shutting down application")
-    from app.embeddings.ollama_client import ollama_client
-    await ollama_client.close()
+    from app.embeddings.openai_client import openai_client
+    await openai_client.close()
     logger.info("Shutdown complete")
 
 

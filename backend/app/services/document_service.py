@@ -8,7 +8,7 @@ import aiofiles
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.repositories.document_repository import document_repo
 from app.chromadb.client import chroma_client
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.rag.table_rag import table_rag
 from app.rag.pdf_rag import pdf_rag
 from app.rag.markdown_rag import markdown_rag
@@ -154,7 +154,7 @@ class DocumentService:
             "retrieval_strategy": strategy,
             "language": (extra_metadata or {}).get("language", "en"),
             "chunk_count": chunk_count,
-            "embedding_model": settings.OLLAMA_EMBED_MODEL,
+            "embedding_model": settings.OPENAI_EMBED_MODEL,
             "collection_name": collection,
             "metadata_json": extra_metadata or {},
         }

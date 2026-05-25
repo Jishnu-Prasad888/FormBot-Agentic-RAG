@@ -4,7 +4,7 @@ import httpx
 from bs4 import BeautifulSoup
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.chromadb.client import chroma_client
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.rag.bm25 import bm25_retriever
 from app.core.config import settings
 from app.core.logging import get_logger

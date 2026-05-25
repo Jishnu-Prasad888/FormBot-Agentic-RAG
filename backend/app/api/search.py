@@ -8,7 +8,7 @@ from app.rag.hybrid_rag import hybrid_rag
 from app.rag.bm25 import bm25_retriever
 from app.rag.table_rag import table_rag
 from app.rag.metadata_filter import filter_results, build_chroma_filter
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.chromadb.client import chroma_client
 from app.schemas.search import SearchRequest, SearchResponse, SearchResult
 from app.core.logging import get_logger

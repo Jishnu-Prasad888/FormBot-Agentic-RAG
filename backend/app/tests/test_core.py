@@ -130,8 +130,8 @@ def test_bm25_remove_collection():
 
 def test_settings_defaults():
     from app.core.config import settings
-    assert settings.OLLAMA_LLM_MODEL == "llama3.1:8b"
-    assert settings.OLLAMA_EMBED_MODEL == "nomic-embed-text-v2-moe"
+    assert settings.OPENAI_LLM_MODEL == "gpt-4o-mini"
+    assert settings.OPENAI_EMBED_MODEL == "text-embedding-3-small"
     assert settings.TOP_K == 5
     assert settings.CHUNK_SIZE == 512
 

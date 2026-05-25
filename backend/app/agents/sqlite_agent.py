@@ -2,7 +2,7 @@ import time
 from typing import Any, Optional
 from app.agents.base import BaseAgent
 from app.rag.table_rag import table_rag
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 
 
 class SQLiteAgent(BaseAgent):

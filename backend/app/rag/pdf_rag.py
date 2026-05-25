@@ -4,7 +4,7 @@ import uuid
 from typing import Any, Optional
 import pdfplumber
 from app.chromadb.client import chroma_client
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.core.logging import get_logger
 from app.core.config import settings
 

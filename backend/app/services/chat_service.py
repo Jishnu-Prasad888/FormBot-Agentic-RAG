@@ -4,7 +4,7 @@ from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.repositories.conversation_repository import conversation_repo
 from app.services.rag_service import rag_service
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.core.logging import get_logger
 from app.core.exceptions import ConversationNotFoundError
 
@@ -13,7 +13,6 @@ logger = get_logger("chat_service")
 SYSTEM_PROMPT = """You are an intelligent assistant with access to a document knowledge base.
 Answer questions using the provided context. If the context doesn't contain enough information,
 say so clearly. Always cite your sources when possible. Be concise and accurate."""
-
 
 class ChatService:
     async def chat(

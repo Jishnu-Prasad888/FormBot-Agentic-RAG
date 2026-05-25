@@ -13,7 +13,7 @@ from app.rag.evaluator import (
     compute_accuracy, compute_faithfulness, compute_answer_relevancy,
     compute_context_precision, compute_context_recall,
 )
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.repositories.log_repository import log_repo
 from app.core.config import settings
 from app.core.logging import get_logger

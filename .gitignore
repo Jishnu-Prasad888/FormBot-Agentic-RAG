@@ -1,0 +1,10 @@
+bhak_outputs/
+.env
+__pycache__/
+*.pyc   
+*.pyo
+*.pyd
+venv/
+node_modules/
+dist/
+build/

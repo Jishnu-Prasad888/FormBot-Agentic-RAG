@@ -6,7 +6,7 @@ from app.agents.sqlite_agent import sqlite_agent
 from app.agents.router_agent import router_agent, _detect_doc_type
 from app.agents.web_agent import web_agent
 from app.agents.evaluator_agent import evaluator_agent
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.core.logging import get_logger
 
 logger = get_logger("coordinator_agent")

@@ -29,9 +29,13 @@ class ConversationNotFoundError(RAGPlatformException):
         super().__init__(f"Conversation {conv_id} not found", 404)
 
 
-class OllamaConnectionError(RAGPlatformException):
+class OpenAIConnectionError(RAGPlatformException):
     def __init__(self, detail: str = ""):
-        super().__init__(f"Ollama connection failed: {detail}", 503)
+        super().__init__(f"OpenAI connection failed: {detail}", 503)
+
+
+# Backward-compat alias so any existing catch clauses still work
+OllamaConnectionError = OpenAIConnectionError
 
 
 class ChromaDBError(RAGPlatformException):

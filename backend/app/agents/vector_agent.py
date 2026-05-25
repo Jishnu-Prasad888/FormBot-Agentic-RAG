@@ -3,7 +3,7 @@ from typing import Any, Optional
 from app.agents.base import BaseAgent
 from app.rag.hybrid_rag import hybrid_rag
 from app.rag.vector_rag import vector_rag
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.core.config import settings
 
 

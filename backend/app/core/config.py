@@ -14,11 +14,12 @@ class Settings(BaseSettings):
     CHROMA_PORT: int = 8001
     CHROMA_PERSIST_DIR: str = "./chroma_db"
 
-    OLLAMA_BASE_URL: str = "http://localhost:11434"
-    OLLAMA_LLM_MODEL: str = "llama3.1:8b"
-    OLLAMA_EMBED_MODEL: str = "nomic-embed-text-v2-moe"
-    OLLAMA_TIMEOUT: int = 120
-    OLLAMA_MAX_RETRIES: int = 3
+    # ── OpenAI ────────────────────────────────────────────────────────────────
+    OPENAI_API_KEY: str = ""
+    OPENAI_LLM_MODEL: str = "gpt-4o-mini"
+    OPENAI_EMBED_MODEL: str = "text-embedding-3-small"
+    OPENAI_TIMEOUT: int = 120
+    OPENAI_MAX_RETRIES: int = 3
 
     UPLOAD_DIR: str = "./uploads"
     LOG_FILE: str = "./logs/rag.log"

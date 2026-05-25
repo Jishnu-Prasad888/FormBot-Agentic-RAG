@@ -2,7 +2,7 @@ import time
 from typing import Any, Optional
 from app.agents.base import BaseAgent
 from app.services.web_service import web_service
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 
 
 class WebEnrichmentAgent(BaseAgent):

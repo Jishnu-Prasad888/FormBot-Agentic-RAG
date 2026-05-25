@@ -5,7 +5,7 @@ from app.rag.pdf_rag import pdf_rag
 from app.rag.markdown_rag import markdown_rag
 from app.rag.table_rag import table_rag
 from app.rag.vector_rag import vector_rag
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 
 
 ROUTING_RULES = {

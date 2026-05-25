@@ -4,7 +4,7 @@ from sqlalchemy import text
 
 from app.core.dependencies import get_db
 from app.chromadb.client import chroma_client
-from app.embeddings.ollama_client import ollama_client
+from app.embeddings.openai_client import openai_client as ollama_client
 from app.core.logging import get_logger
 
 router = APIRouter(tags=["Health"])
@@ -39,8 +39,8 @@ async def health_chroma():
     return {"status": status, "chromadb": "persistent", "collections": collections}
 
 
-@router.get("/health/ollama")
-async def health_ollama():
+@router.get("/health/openai")
+async def health_openai():
     ok = await ollama_client.health_check()
     models = []
     if ok:
@@ -51,6 +51,6 @@ async def health_ollama():
             pass
     return {
         "status": "ok" if ok else "error",
-        "ollama": "connected" if ok else "unreachable",
+        "openai": "connected" if ok else "unreachable",
         "models": models,
     }
