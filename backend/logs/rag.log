@@ -3788,3 +3788,1432 @@ fastapi.exceptions.ResponseValidationError: 1 validation errors:
 2026-05-25 08:38:18 | INFO     | rag_platform.main | → GET /favicon.ico
 2026-05-25 08:38:18 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/favicon.ico
 2026-05-25 08:38:18 | INFO     | rag_platform.main | ← GET /favicon.ico 404 [31.0ms]
+2026-05-25 08:43:13 | INFO     | rag_platform.main | Starting MultimodalRAGPlatform v1.0.0
+2026-05-25 08:43:13 | INFO     | rag_platform.init_db | Initializing database tables...
+2026-05-25 08:43:13 | INFO     | rag_platform.init_db | Database initialized successfully.
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | ChromaDB initialized at ./chroma_db
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | Collection 'table_documents' ready
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | Collection 'pdf_documents' ready
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | Collection 'markdown_documents' ready
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | Collection 'audio_transcripts' ready
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | Collection 'web_documents' ready
+2026-05-25 08:43:14 | INFO     | rag_platform.chromadb_client | All default collections initialized
+2026-05-25 08:43:14 | INFO     | rag_platform.main | Application startup complete
+2026-05-25 08:43:14 | INFO     | rag_platform.main | → GET /api/documents
+2026-05-25 08:43:14 | INFO     | rag_platform.main | ← GET /api/documents 200 [28.0ms]
+2026-05-25 08:43:14 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-25 08:43:14 | ERROR    | rag_platform.exceptions | Unhandled exception: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9DF739B0>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 1 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9DF739B0>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9DF739B0>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /api/documents
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /api/chroma/collections
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'pdf_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'web_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'markdown_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'audio_transcripts' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'table_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [61.2ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health 200 [60.2ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /api/chroma/collections 200 [60.7ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:43:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.1ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.6ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /api/chroma/collections
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'pdf_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'web_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'markdown_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'audio_transcripts' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.chromadb_client | Collection 'table_documents' ready
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health 200 [23.6ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /api/chroma/collections 200 [24.3ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:43:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.4ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/db 200 [111.4ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.0ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:43:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health 200 [3.8ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.8ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /api/documents 200 [121.1ms]
+2026-05-25 08:43:15 | ERROR    | rag_platform.exceptions | Unhandled exception: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E165CD0>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 1 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E165CD0>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E165CD0>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/db 200 [16.0ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/db 200 [9.7ms]
+2026-05-25 08:43:15 | ERROR    | rag_platform.exceptions | Unhandled exception: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E167B90>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 1 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E167B90>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E167B90>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health 200 [4.6ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.6ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:43:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.3ms]
+2026-05-25 08:43:15 | INFO     | rag_platform.main | ← GET /health/db 200 [10.4ms]
+2026-05-25 08:43:17 | INFO     | rag_platform.main | → GET /favicon.ico
+2026-05-25 08:43:17 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/favicon.ico
+2026-05-25 08:43:17 | INFO     | rag_platform.main | ← GET /favicon.ico 404 [1.2ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-25 08:43:46 | ERROR    | rag_platform.exceptions | Unhandled exception: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E167800>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 1 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E167800>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E167800>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health 200 [0.0ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health/db 200 [5.1ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.2ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:43:46 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.3ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health 200 [1.2ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health/db 200 [6.0ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health/chroma 200 [2.1ms]
+2026-05-25 08:43:46 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:43:46 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:43:46 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.4ms]
+2026-05-25 08:44:37 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:44:37 | INFO     | rag_platform.main | ← GET /health 200 [2.0ms]
+2026-05-25 08:44:38 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:44:38 | INFO     | rag_platform.main | ← GET /health/db 200 [8.0ms]
+2026-05-25 08:44:52 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:44:52 | INFO     | rag_platform.main | ← GET /health/chroma 200 [2.5ms]
+2026-05-25 08:44:53 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:44:53 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:44:53 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.0ms]
+2026-05-25 08:45:26 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:45:26 | INFO     | rag_platform.main | ← GET /health 200 [4.6ms]
+2026-05-25 08:45:26 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:45:26 | INFO     | rag_platform.main | ← GET /health/db 200 [12.6ms]
+2026-05-25 08:45:34 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:45:34 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:45:34 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:45:34 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:45:34 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:45:34 | INFO     | rag_platform.main | ← GET /health/chroma 200 [13.3ms]
+2026-05-25 08:45:34 | INFO     | rag_platform.main | ← GET /health/ollama 404 [11.6ms]
+2026-05-25 08:45:34 | INFO     | rag_platform.main | ← GET /health 200 [10.7ms]
+2026-05-25 08:45:34 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:45:35 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.0ms]
+2026-05-25 08:45:35 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:45:35 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:45:35 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.0ms]
+2026-05-25 08:45:35 | INFO     | rag_platform.main | ← GET /health/db 200 [21.5ms]
+2026-05-25 08:46:25 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:46:25 | INFO     | rag_platform.main | ← GET /health 200 [1.0ms]
+2026-05-25 08:46:26 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:46:26 | INFO     | rag_platform.main | ← GET /health/db 200 [10.2ms]
+2026-05-25 08:46:37 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:46:37 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:46:37 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.0ms]
+2026-05-25 08:46:37 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:46:37 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.0ms]
+2026-05-25 08:46:44 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:46:44 | INFO     | rag_platform.main | ← GET /health 200 [1.0ms]
+2026-05-25 08:46:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:46:44 | INFO     | rag_platform.main | ← GET /health/db 200 [8.3ms]
+2026-05-25 08:46:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:46:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.0ms]
+2026-05-25 08:46:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:46:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:46:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.0ms]
+2026-05-25 08:47:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:47:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:47:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:47:15 | INFO     | rag_platform.main | ← GET /health 200 [3.0ms]
+2026-05-25 08:47:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.5ms]
+2026-05-25 08:47:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:47:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:47:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.0ms]
+2026-05-25 08:47:15 | INFO     | rag_platform.main | ← GET /health/db 200 [14.7ms]
+2026-05-25 08:47:44 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:47:44 | INFO     | rag_platform.main | ← GET /health 200 [2.1ms]
+2026-05-25 08:47:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:47:44 | INFO     | rag_platform.main | ← GET /health/db 200 [8.5ms]
+2026-05-25 08:47:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:47:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.0ms]
+2026-05-25 08:47:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:47:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:47:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.0ms]
+2026-05-25 08:49:48 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:49:48 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:49:48 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:49:48 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:49:48 | INFO     | rag_platform.main | ← GET /health 200 [9.0ms]
+2026-05-25 08:49:48 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:49:48 | INFO     | rag_platform.main | ← GET /health/chroma 200 [14.0ms]
+2026-05-25 08:49:48 | INFO     | rag_platform.main | ← GET /health/ollama 404 [13.0ms]
+2026-05-25 08:49:48 | INFO     | rag_platform.main | ← GET /health/db 200 [25.0ms]
+2026-05-25 08:50:06 | INFO     | rag_platform.main | → OPTIONS /api/rag/evaluate
+2026-05-25 08:50:06 | INFO     | rag_platform.main | ← OPTIONS /api/rag/evaluate 200 [2.0ms]
+2026-05-25 08:50:06 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:50:06 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is CIF (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 08:50:06 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is CIF (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 08:50:09 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:50:09 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:50:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:50:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:50:14 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:50:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:50:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:50:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.1ms]
+2026-05-25 08:50:14 | INFO     | rag_platform.main | ← GET /health 200 [8.0ms]
+2026-05-25 08:50:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [8.0ms]
+2026-05-25 08:50:14 | INFO     | rag_platform.main | ← GET /health/db 200 [19.1ms]
+2026-05-25 08:50:22 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [15540.6ms]
+2026-05-25 08:50:22 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:50:22 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is CKYC (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 08:50:22 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is CKYC (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 08:50:22 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:50:22 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:50:34 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12290.6ms]
+2026-05-25 08:50:34 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:50:34 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is BSBDA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 08:50:34 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is BSBDA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 08:50:35 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:50:35 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:50:45 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:50:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:50:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:50:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:50:45 | INFO     | rag_platform.main | ← GET /health 200 [9.0ms]
+2026-05-25 08:50:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:50:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [9.0ms]
+2026-05-25 08:50:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.0ms]
+2026-05-25 08:50:45 | INFO     | rag_platform.main | ← GET /health/db 200 [16.1ms]
+2026-05-25 08:50:51 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [16982.8ms]
+2026-05-25 08:50:51 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:50:51 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is FATCA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 08:50:51 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is FATCA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 08:50:52 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:50:52 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:51:01 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10167.8ms]
+2026-05-25 08:51:01 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:51:01 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is TIN (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 08:51:01 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is TIN (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 08:51:02 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:51:02 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:51:14 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12399.6ms]
+2026-05-25 08:51:14 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:51:14 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='normal/small/minor account type means what? (ACCOUNT OPENING'
+2026-05-25 08:51:14 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='normal/small/minor account type means what? (ACCOUNT OPENING' collection='text_documents'
+2026-05-25 08:51:14 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:51:14 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:51:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:51:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:51:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:51:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:51:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:51:15 | INFO     | rag_platform.main | ← GET /health 200 [7.9ms]
+2026-05-25 08:51:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.9ms]
+2026-05-25 08:51:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.9ms]
+2026-05-25 08:51:15 | INFO     | rag_platform.main | ← GET /health/db 200 [16.2ms]
+2026-05-25 08:51:32 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [18816.5ms]
+2026-05-25 08:51:32 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:51:32 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is mode of operation (ACCOUNT OPENING FORM FOR RESIDENT'
+2026-05-25 08:51:32 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is mode of operation (ACCOUNT OPENING FORM FOR RESIDENT' collection='text_documents'
+2026-05-25 08:51:33 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:51:33 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:51:47 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14254.5ms]
+2026-05-25 08:51:47 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:51:47 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are equivalent e-documents (ACCOUNT OPENING FORM FOR RE'
+2026-05-25 08:51:47 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are equivalent e-documents (ACCOUNT OPENING FORM FOR RE' collection='text_documents'
+2026-05-25 08:51:47 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:51:47 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:52:01 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [13766.1ms]
+2026-05-25 08:52:01 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:52:01 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - cc (Agriculture Loan Application For'
+2026-05-25 08:52:01 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - cc (Agriculture Loan Application For' collection='text_documents'
+2026-05-25 08:52:01 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:52:01 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:52:05 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:52:05 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:52:05 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:52:05 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:52:05 | INFO     | rag_platform.main | ← GET /health 200 [7.0ms]
+2026-05-25 08:52:05 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:52:05 | INFO     | rag_platform.main | ← GET /health/chroma 200 [12.2ms]
+2026-05-25 08:52:05 | INFO     | rag_platform.main | ← GET /health/ollama 404 [11.2ms]
+2026-05-25 08:52:05 | INFO     | rag_platform.main | ← GET /health/db 200 [21.2ms]
+2026-05-25 08:52:14 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:52:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:52:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:52:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:52:14 | INFO     | rag_platform.main | ← GET /health 200 [11.9ms]
+2026-05-25 08:52:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:52:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [16.0ms]
+2026-05-25 08:52:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [16.0ms]
+2026-05-25 08:52:14 | INFO     | rag_platform.main | ← GET /health/db 200 [35.5ms]
+2026-05-25 08:52:15 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14741.5ms]
+2026-05-25 08:52:15 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:52:15 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - tl/dl (Agriculture Loan Application '
+2026-05-25 08:52:15 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - tl/dl (Agriculture Loan Application ' collection='text_documents'
+2026-05-25 08:52:16 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:52:16 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:52:27 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12076.3ms]
+2026-05-25 08:52:27 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:52:27 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - od'
+2026-05-25 08:52:27 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - od' collection='text_documents'
+2026-05-25 08:52:28 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:52:28 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:52:38 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10399.1ms]
+2026-05-25 08:52:38 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:52:38 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are sourcing entities - branch/rmru/fsto (Agriculture L'
+2026-05-25 08:52:38 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are sourcing entities - branch/rmru/fsto (Agriculture L' collection='text_documents'
+2026-05-25 08:52:38 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:52:38 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:52:45 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:52:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:52:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:52:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:52:45 | INFO     | rag_platform.main | ← GET /health 200 [5.0ms]
+2026-05-25 08:52:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:52:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [6.9ms]
+2026-05-25 08:52:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.9ms]
+2026-05-25 08:52:45 | INFO     | rag_platform.main | ← GET /health/db 200 [15.1ms]
+2026-05-25 08:52:52 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14072.5ms]
+2026-05-25 08:52:52 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:52:52 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are sourcing entities - dsa/dse/sboss/ba (Agriculture L'
+2026-05-25 08:52:52 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are sourcing entities - dsa/dse/sboss/ba (Agriculture L' collection='text_documents'
+2026-05-25 08:52:52 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:52:52 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:53:09 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [17431.1ms]
+2026-05-25 08:53:09 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:53:09 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='how to categorize asset as movable/immovable/liquid (Agricul'
+2026-05-25 08:53:09 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='how to categorize asset as movable/immovable/liquid (Agricul' collection='text_documents'
+2026-05-25 08:53:10 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:53:10 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:53:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:53:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:53:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:53:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:53:15 | INFO     | rag_platform.main | ← GET /health 200 [2.1ms]
+2026-05-25 08:53:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:53:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [6.0ms]
+2026-05-25 08:53:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.0ms]
+2026-05-25 08:53:15 | INFO     | rag_platform.main | ← GET /health/db 200 [12.1ms]
+2026-05-25 08:53:23 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [13464.5ms]
+2026-05-25 08:53:23 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:53:23 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is primary vs collateral security (Agriculture Loan App'
+2026-05-25 08:53:23 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is primary vs collateral security (Agriculture Loan App' collection='text_documents'
+2026-05-25 08:53:23 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:53:23 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:53:35 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12355.2ms]
+2026-05-25 08:53:35 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:53:35 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='difference between individual and non-individual form (Agric'
+2026-05-25 08:53:35 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='difference between individual and non-individual form (Agric' collection='text_documents'
+2026-05-25 08:53:36 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:53:36 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:53:50 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14840.9ms]
+2026-05-25 08:53:50 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:53:50 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what qualifies as a tie-up which has to be mentioned (Agricu'
+2026-05-25 08:53:50 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what qualifies as a tie-up which has to be mentioned (Agricu' collection='text_documents'
+2026-05-25 08:53:50 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:53:50 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:54:02 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12055.5ms]
+2026-05-25 08:54:02 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:54:02 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is rlms application no. (auto loan application)'
+2026-05-25 08:54:02 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is rlms application no. (auto loan application)' collection='text_documents'
+2026-05-25 08:54:02 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:54:02 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:54:10 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:54:10 | INFO     | rag_platform.main | ← GET /health 200 [1.0ms]
+2026-05-25 08:54:10 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:54:10 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:54:10 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:54:10 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:54:10 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.0ms]
+2026-05-25 08:54:10 | INFO     | rag_platform.main | ← GET /health/chroma 200 [9.0ms]
+2026-05-25 08:54:10 | INFO     | rag_platform.main | ← GET /health/db 200 [19.5ms]
+2026-05-25 08:54:11 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [9439.5ms]
+2026-05-25 08:54:12 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:54:12 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is sourcing entity type - branch/mpst (auto loan applic'
+2026-05-25 08:54:12 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is sourcing entity type - branch/mpst (auto loan applic' collection='text_documents'
+2026-05-25 08:54:12 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:54:12 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:54:14 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:54:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:54:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:54:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:54:14 | INFO     | rag_platform.main | ← GET /health 200 [6.0ms]
+2026-05-25 08:54:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:54:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [10.0ms]
+2026-05-25 08:54:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [10.0ms]
+2026-05-25 08:54:14 | INFO     | rag_platform.main | ← GET /health/db 200 [15.0ms]
+2026-05-25 08:54:21 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [9297.8ms]
+2026-05-25 08:54:21 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:54:21 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is sourcing entity type - ssl (auto loan application)'
+2026-05-25 08:54:21 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is sourcing entity type - ssl (auto loan application)' collection='text_documents'
+2026-05-25 08:54:21 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:54:21 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:54:34 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12998.1ms]
+2026-05-25 08:54:34 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:54:34 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is sourcing entity type - dealer (auto loan application'
+2026-05-25 08:54:34 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is sourcing entity type - dealer (auto loan application' collection='text_documents'
+2026-05-25 08:54:35 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:54:35 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:54:45 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:54:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:54:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:54:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:54:45 | INFO     | rag_platform.main | ← GET /health 200 [8.0ms]
+2026-05-25 08:54:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:54:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [14.7ms]
+2026-05-25 08:54:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [14.7ms]
+2026-05-25 08:54:45 | INFO     | rag_platform.main | ← GET /health/db 200 [27.6ms]
+2026-05-25 08:54:46 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12485.0ms]
+2026-05-25 08:54:46 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:54:46 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is sourcing entity type - alc (auto loan application)'
+2026-05-25 08:54:46 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is sourcing entity type - alc (auto loan application)' collection='text_documents'
+2026-05-25 08:54:47 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:54:47 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:54:59 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12562.0ms]
+2026-05-25 08:54:59 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:54:59 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='is passport compulsory (auto loan application)'
+2026-05-25 08:54:59 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='is passport compulsory (auto loan application)' collection='text_documents'
+2026-05-25 08:54:59 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:54:59 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:55:09 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10169.5ms]
+2026-05-25 08:55:09 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:55:09 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is NACH repayment mode (auto loan application)'
+2026-05-25 08:55:09 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is NACH repayment mode (auto loan application)' collection='text_documents'
+2026-05-25 08:55:10 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:55:10 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:55:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:55:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:55:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:55:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:55:15 | INFO     | rag_platform.main | ← GET /health 200 [8.0ms]
+2026-05-25 08:55:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:55:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.0ms]
+2026-05-25 08:55:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.1ms]
+2026-05-25 08:55:15 | INFO     | rag_platform.main | ← GET /health/db 200 [19.1ms]
+2026-05-25 08:55:20 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11298.9ms]
+2026-05-25 08:55:20 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:55:20 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is exim registration code (Application form for msme lo'
+2026-05-25 08:55:20 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is exim registration code (Application form for msme lo' collection='text_documents'
+2026-05-25 08:55:21 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:55:21 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:55:32 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11207.8ms]
+2026-05-25 08:55:32 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:55:32 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is urc'
+2026-05-25 08:55:32 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is urc' collection='text_documents'
+2026-05-25 08:55:32 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:55:32 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:55:42 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10014.1ms]
+2026-05-25 08:55:42 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:55:42 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is ZED rated meaning (Application form for msme loans ('
+2026-05-25 08:55:42 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is ZED rated meaning (Application form for msme loans (' collection='text_documents'
+2026-05-25 08:55:42 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:55:42 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:55:45 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:55:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:55:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:55:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:55:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:55:45 | INFO     | rag_platform.main | ← GET /health 200 [18.3ms]
+2026-05-25 08:55:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [20.1ms]
+2026-05-25 08:55:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [22.0ms]
+2026-05-25 08:55:45 | INFO     | rag_platform.main | ← GET /health/db 200 [43.7ms]
+2026-05-25 08:55:54 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12760.5ms]
+2026-05-25 08:55:54 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:55:54 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is type of facility cash credit (Application form for m'
+2026-05-25 08:55:54 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is type of facility cash credit (Application form for m' collection='text_documents'
+2026-05-25 08:55:55 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:55:55 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:56:05 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10762.9ms]
+2026-05-25 08:56:05 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:56:05 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is type of facility term loan (Application form for msm'
+2026-05-25 08:56:05 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is type of facility term loan (Application form for msm' collection='text_documents'
+2026-05-25 08:56:06 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:56:06 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:56:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:56:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:56:15 | INFO     | rag_platform.main | ← GET /health 200 [1.0ms]
+2026-05-25 08:56:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:56:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:56:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:56:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.0ms]
+2026-05-25 08:56:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.0ms]
+2026-05-25 08:56:15 | INFO     | rag_platform.main | ← GET /health/db 200 [19.0ms]
+2026-05-25 08:56:15 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [9973.9ms]
+2026-05-25 08:56:15 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:56:15 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is type of facility LC/BG (Application form for msme lo'
+2026-05-25 08:56:15 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is type of facility LC/BG (Application form for msme lo' collection='text_documents'
+2026-05-25 08:56:16 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:56:16 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:56:25 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10117.1ms]
+2026-05-25 08:56:25 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:56:25 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are proforma invoices (Application form for msme loans '
+2026-05-25 08:56:25 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are proforma invoices (Application form for msme loans ' collection='text_documents'
+2026-05-25 08:56:26 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:56:26 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:56:47 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [21669.3ms]
+2026-05-25 08:56:47 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:56:47 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are BIS/FPO/ISO specifications and for what kind of bus'
+2026-05-25 08:56:47 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are BIS/FPO/ISO specifications and for what kind of bus' collection='text_documents'
+2026-05-25 08:56:48 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:56:48 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:56:59 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11948.3ms]
+2026-05-25 08:56:59 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:56:59 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are BIS/FPO/ISO specifications and for what kind of bus'
+2026-05-25 08:56:59 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are BIS/FPO/ISO specifications and for what kind of bus' collection='text_documents'
+2026-05-25 08:56:59 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:57:00 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:57:11 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:57:11 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:57:11 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:57:11 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:57:11 | INFO     | rag_platform.main | ← GET /health 200 [4.0ms]
+2026-05-25 08:57:11 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:57:11 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.5ms]
+2026-05-25 08:57:11 | INFO     | rag_platform.main | ← GET /health/ollama 404 [6.6ms]
+2026-05-25 08:57:11 | INFO     | rag_platform.main | ← GET /health/db 200 [13.6ms]
+2026-05-25 08:57:13 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14454.6ms]
+2026-05-25 08:57:14 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:57:14 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are BIS/FPO/ISO specifications and for what kind of bus'
+2026-05-25 08:57:14 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are BIS/FPO/ISO specifications and for what kind of bus' collection='text_documents'
+2026-05-25 08:57:14 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:57:14 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:57:28 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14457.0ms]
+2026-05-25 08:57:28 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:57:28 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are kishor/tarun categories (PMMY Loan application)'
+2026-05-25 08:57:28 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are kishor/tarun categories (PMMY Loan application)' collection='text_documents'
+2026-05-25 08:57:28 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:57:28 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:57:30 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:57:30 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:57:30 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:57:30 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:57:30 | INFO     | rag_platform.main | ← GET /health 200 [13.0ms]
+2026-05-25 08:57:30 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:57:30 | INFO     | rag_platform.main | ← GET /health/chroma 200 [11.0ms]
+2026-05-25 08:57:30 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.0ms]
+2026-05-25 08:57:30 | INFO     | rag_platform.main | ← GET /health/db 200 [28.0ms]
+2026-05-25 08:57:41 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [13138.6ms]
+2026-05-25 08:57:41 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:57:41 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is shishu category (PMMY Loan application)'
+2026-05-25 08:57:41 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is shishu category (PMMY Loan application)' collection='text_documents'
+2026-05-25 08:57:42 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:57:42 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:57:44 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:57:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:57:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:57:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:57:44 | INFO     | rag_platform.main | ← GET /health 200 [11.0ms]
+2026-05-25 08:57:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:57:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [11.0ms]
+2026-05-25 08:57:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [8.0ms]
+2026-05-25 08:57:44 | INFO     | rag_platform.main | ← GET /health/db 200 [27.0ms]
+2026-05-25 08:57:53 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11930.2ms]
+2026-05-25 08:57:53 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:57:53 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='how to select business type (PMMY Loan application)'
+2026-05-25 08:57:53 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='how to select business type (PMMY Loan application)' collection='text_documents'
+2026-05-25 08:57:54 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:57:54 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:58:04 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11085.3ms]
+2026-05-25 08:58:04 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:58:04 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='will there be penalties if predictions are not met (PMMY Loa'
+2026-05-25 08:58:04 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='will there be penalties if predictions are not met (PMMY Loa' collection='text_documents'
+2026-05-25 08:58:05 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:58:05 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:58:14 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:58:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:58:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:58:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:58:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:58:14 | INFO     | rag_platform.main | ← GET /health 200 [17.0ms]
+2026-05-25 08:58:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [12.0ms]
+2026-05-25 08:58:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [10.0ms]
+2026-05-25 08:58:14 | INFO     | rag_platform.main | ← GET /health/db 200 [21.0ms]
+2026-05-25 08:58:16 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11252.6ms]
+2026-05-25 08:58:16 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:58:16 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is form 16 (personal loan application form)'
+2026-05-25 08:58:16 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is form 16 (personal loan application form)' collection='text_documents'
+2026-05-25 08:58:16 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:58:16 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:58:27 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11227.3ms]
+2026-05-25 08:58:27 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:58:27 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='for whom is form 16 mandatory (personal loan application for'
+2026-05-25 08:58:27 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='for whom is form 16 mandatory (personal loan application for' collection='text_documents'
+2026-05-25 08:58:27 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:58:27 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:58:38 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10990.4ms]
+2026-05-25 08:58:38 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:58:38 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is DSP-PMSP-ICGSP (personal loan application form)'
+2026-05-25 08:58:38 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is DSP-PMSP-ICGSP (personal loan application form)' collection='text_documents'
+2026-05-25 08:58:38 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:58:38 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:58:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:58:44 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:58:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:58:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:58:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:58:44 | INFO     | rag_platform.main | ← GET /health 200 [13.6ms]
+2026-05-25 08:58:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [12.6ms]
+2026-05-25 08:58:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [13.0ms]
+2026-05-25 08:58:44 | INFO     | rag_platform.main | ← GET /health/db 200 [30.5ms]
+2026-05-25 08:58:48 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10424.0ms]
+2026-05-25 08:58:48 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:58:48 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is LOS (personal loan application form)'
+2026-05-25 08:58:48 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is LOS (personal loan application form)' collection='text_documents'
+2026-05-25 08:58:49 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:58:49 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:59:00 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11727.6ms]
+2026-05-25 08:59:00 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:59:00 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is LMS/OCAS (personal loan application form)'
+2026-05-25 08:59:00 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is LMS/OCAS (personal loan application form)' collection='text_documents'
+2026-05-25 08:59:00 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:59:00 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:59:14 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:59:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:59:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:59:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:59:14 | INFO     | rag_platform.main | ← GET /health 200 [136.7ms]
+2026-05-25 08:59:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:59:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.0ms]
+2026-05-25 08:59:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.0ms]
+2026-05-25 08:59:14 | INFO     | rag_platform.main | ← GET /health/db 200 [145.7ms]
+2026-05-25 08:59:15 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14747.8ms]
+2026-05-25 08:59:15 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:59:15 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is repayment mode - PDCs (personal loan application for'
+2026-05-25 08:59:15 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is repayment mode - PDCs (personal loan application for' collection='text_documents'
+2026-05-25 08:59:15 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:59:15 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:59:44 | INFO     | rag_platform.main | → GET /health
+2026-05-25 08:59:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 08:59:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 08:59:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 08:59:44 | INFO     | rag_platform.main | ← GET /health 200 [7.0ms]
+2026-05-25 08:59:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 08:59:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.0ms]
+2026-05-25 08:59:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [9.0ms]
+2026-05-25 08:59:44 | INFO     | rag_platform.main | ← GET /health/db 200 [22.0ms]
+2026-05-25 08:59:45 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [30744.9ms]
+2026-05-25 08:59:45 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:59:45 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is repayment mode - ECS (personal loan application form'
+2026-05-25 08:59:45 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is repayment mode - ECS (personal loan application form' collection='text_documents'
+2026-05-25 08:59:46 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:59:46 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 08:59:54 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [8712.5ms]
+2026-05-25 08:59:54 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 08:59:54 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is No. of units acquired in single residential housing '
+2026-05-25 08:59:54 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is No. of units acquired in single residential housing ' collection='text_documents'
+2026-05-25 08:59:55 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 08:59:55 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:00:06 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [11406.0ms]
+2026-05-25 09:00:06 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:00:06 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is Power of attorney (Home loan application form)'
+2026-05-25 09:00:06 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is Power of attorney (Home loan application form)' collection='text_documents'
+2026-05-25 09:00:06 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:00:06 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:00:14 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:00:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:00:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:00:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:00:14 | INFO     | rag_platform.main | ← GET /health 200 [16.5ms]
+2026-05-25 09:00:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:00:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [21.0ms]
+2026-05-25 09:00:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [14.0ms]
+2026-05-25 09:00:14 | INFO     | rag_platform.main | ← GET /health/db 200 [37.0ms]
+2026-05-25 09:00:21 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [15032.1ms]
+2026-05-25 09:00:21 | INFO     | rag_platform.main | → OPTIONS /api/rag/evaluate
+2026-05-25 09:00:21 | INFO     | rag_platform.main | ← OPTIONS /api/rag/evaluate 200 [2.0ms]
+2026-05-25 09:00:21 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:00:21 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is IFSC CODE (Home loan application form)'
+2026-05-25 09:00:21 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is IFSC CODE (Home loan application form)' collection='text_documents'
+2026-05-25 09:00:21 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:00:21 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:00:37 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [16063.3ms]
+2026-05-25 09:00:37 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:00:37 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is HFC/FI in Takeover of Home Loans from other Banks / '
+2026-05-25 09:00:37 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is HFC/FI in Takeover of Home Loans from other Banks / ' collection='text_documents'
+2026-05-25 09:00:37 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:00:37 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:00:44 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:00:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:00:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:00:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:00:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:00:44 | INFO     | rag_platform.main | ← GET /health 200 [11.0ms]
+2026-05-25 09:00:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [11.0ms]
+2026-05-25 09:00:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [11.0ms]
+2026-05-25 09:00:44 | INFO     | rag_platform.main | ← GET /health/db 200 [19.0ms]
+2026-05-25 09:00:53 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [16195.5ms]
+2026-05-25 09:00:53 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:00:53 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is RERA (Home loan application form)'
+2026-05-25 09:00:53 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is RERA (Home loan application form)' collection='text_documents'
+2026-05-25 09:00:53 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:00:53 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:01:04 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10707.6ms]
+2026-05-25 09:01:04 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:01:04 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is sale transaction category normal sale/ POA Sale/ Gif'
+2026-05-25 09:01:04 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is sale transaction category normal sale/ POA Sale/ Gif' collection='text_documents'
+2026-05-25 09:01:04 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:01:04 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:01:15 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:01:15 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:01:15 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:01:15 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:01:15 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:01:15 | INFO     | rag_platform.main | ← GET /health 200 [8.1ms]
+2026-05-25 09:01:15 | INFO     | rag_platform.main | ← GET /health/ollama 404 [8.1ms]
+2026-05-25 09:01:15 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.0ms]
+2026-05-25 09:01:15 | INFO     | rag_platform.main | ← GET /health/db 200 [17.2ms]
+2026-05-25 09:01:21 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [17307.0ms]
+2026-05-25 09:01:21 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:01:21 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is collateral type term deposit/ NSC/KVP / Govt. promis'
+2026-05-25 09:01:21 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is collateral type term deposit/ NSC/KVP / Govt. promis' collection='text_documents'
+2026-05-25 09:01:21 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:01:21 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:01:42 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [20841.5ms]
+2026-05-25 09:01:42 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:01:42 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='Can savings for a minor be withdrawn (SSA Account Withdrawal'
+2026-05-25 09:01:42 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='Can savings for a minor be withdrawn (SSA Account Withdrawal' collection='text_documents'
+2026-05-25 09:01:42 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:01:42 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:01:45 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:01:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:01:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:01:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:01:45 | INFO     | rag_platform.main | ← GET /health 200 [5.0ms]
+2026-05-25 09:01:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:01:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.0ms]
+2026-05-25 09:01:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.0ms]
+2026-05-25 09:01:45 | INFO     | rag_platform.main | ← GET /health/db 200 [17.0ms]
+2026-05-25 09:01:57 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [15297.2ms]
+2026-05-25 09:01:57 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:01:57 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='What things need to be ensured when withdrawing savings for '
+2026-05-25 09:01:57 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='What things need to be ensured when withdrawing savings for ' collection='text_documents'
+2026-05-25 09:01:57 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:01:57 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:02:14 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [16923.9ms]
+2026-05-25 09:02:14 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:02:14 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='Will I need a SB account to withdraw the savings (SSA Accoun'
+2026-05-25 09:02:14 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='Will I need a SB account to withdraw the savings (SSA Accoun' collection='text_documents'
+2026-05-25 09:02:15 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:02:15 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:02:27 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [13194.9ms]
+2026-05-25 09:02:27 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:02:27 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='What options do I have to withdraw my savings to (SSA Accoun'
+2026-05-25 09:02:27 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='What options do I have to withdraw my savings to (SSA Accoun' collection='text_documents'
+2026-05-25 09:02:28 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:02:28 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:02:45 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:02:45 | INFO     | rag_platform.main | ← GET /health 200 [2.0ms]
+2026-05-25 09:02:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:02:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:02:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:02:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:02:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.5ms]
+2026-05-25 09:02:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.6ms]
+2026-05-25 09:02:45 | INFO     | rag_platform.main | ← GET /health/db 200 [25.8ms]
+2026-05-25 09:02:45 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [17973.9ms]
+2026-05-25 09:02:45 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:02:45 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='What is a demand draft (SSA Account Withdrawal)'
+2026-05-25 09:02:45 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='What is a demand draft (SSA Account Withdrawal)' collection='text_documents'
+2026-05-25 09:02:46 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:02:46 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:02:48 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-25 09:02:48 | ERROR    | rag_platform.exceptions | Unhandled exception: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E27A480>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 1 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E27A480>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x0000024D9E27A480>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-25 09:02:48 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:02:48 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:02:48 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:02:48 | INFO     | rag_platform.main | ← GET /health 200 [3.5ms]
+2026-05-25 09:02:48 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.5ms]
+2026-05-25 09:02:48 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:02:48 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:02:48 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.0ms]
+2026-05-25 09:02:48 | INFO     | rag_platform.main | ← GET /health/db 200 [15.9ms]
+2026-05-25 09:02:58 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12521.9ms]
+2026-05-25 09:03:11 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:03:11 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is CIF (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 09:03:11 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is CIF (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 09:03:12 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:03:12 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:03:18 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:03:18 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:03:18 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:03:18 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:03:18 | INFO     | rag_platform.main | ← GET /health 200 [9.6ms]
+2026-05-25 09:03:18 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:03:18 | INFO     | rag_platform.main | ← GET /health/chroma 200 [9.1ms]
+2026-05-25 09:03:18 | INFO     | rag_platform.main | ← GET /health/ollama 404 [6.1ms]
+2026-05-25 09:03:18 | INFO     | rag_platform.main | ← GET /health/db 200 [18.8ms]
+2026-05-25 09:03:25 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [13578.7ms]
+2026-05-25 09:03:25 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:03:25 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is CKYC (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 09:03:25 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is CKYC (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 09:03:25 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:03:25 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:03:40 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [15638.0ms]
+2026-05-25 09:03:40 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:03:40 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is BSBDA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 09:03:40 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is BSBDA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 09:03:41 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:03:41 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:03:49 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:03:49 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:03:49 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:03:49 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:03:49 | INFO     | rag_platform.main | ← GET /health 200 [6.2ms]
+2026-05-25 09:03:49 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:03:49 | INFO     | rag_platform.main | ← GET /health/chroma 200 [9.0ms]
+2026-05-25 09:03:49 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.1ms]
+2026-05-25 09:03:49 | INFO     | rag_platform.main | ← GET /health/db 200 [19.7ms]
+2026-05-25 09:03:55 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14161.7ms]
+2026-05-25 09:03:55 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:03:55 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is FATCA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 09:03:55 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is FATCA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 09:03:55 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:03:55 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:04:09 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [14830.5ms]
+2026-05-25 09:04:09 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:04:09 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is TIN (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)'
+2026-05-25 09:04:09 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is TIN (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-05-25 09:04:10 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:04:10 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:04:19 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:04:19 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:04:19 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:04:19 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:04:19 | INFO     | rag_platform.main | ← GET /health 200 [10.0ms]
+2026-05-25 09:04:19 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:04:19 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.0ms]
+2026-05-25 09:04:19 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.0ms]
+2026-05-25 09:04:19 | INFO     | rag_platform.main | ← GET /health/db 200 [20.0ms]
+2026-05-25 09:04:20 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [10822.5ms]
+2026-05-25 09:04:20 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:04:20 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='normal/small/minor account type means what? (ACCOUNT OPENING'
+2026-05-25 09:04:20 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='normal/small/minor account type means what? (ACCOUNT OPENING' collection='text_documents'
+2026-05-25 09:04:21 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:04:21 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:04:42 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [21919.9ms]
+2026-05-25 09:04:42 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:04:42 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is mode of operation (ACCOUNT OPENING FORM FOR RESIDENT'
+2026-05-25 09:04:42 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is mode of operation (ACCOUNT OPENING FORM FOR RESIDENT' collection='text_documents'
+2026-05-25 09:04:43 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:04:43 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-25 09:04:48 | INFO     | rag_platform.main | → GET /health
+2026-05-25 09:04:48 | INFO     | rag_platform.main | → GET /health/db
+2026-05-25 09:04:48 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-25 09:04:48 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-25 09:04:48 | INFO     | rag_platform.main | ← GET /health 200 [4.0ms]
+2026-05-25 09:04:48 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-25 09:04:48 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.5ms]
+2026-05-25 09:04:48 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.5ms]
+2026-05-25 09:04:48 | INFO     | rag_platform.main | ← GET /health/db 200 [14.5ms]
+2026-05-25 09:04:54 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [12119.1ms]
+2026-05-25 09:04:54 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-05-25 09:04:54 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are equivalent e-documents (ACCOUNT OPENING FORM FOR RE'
+2026-05-25 09:04:54 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are equivalent e-documents (ACCOUNT OPENING FORM FOR RE' collection='text_documents'
+2026-05-25 09:04:55 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-25 09:04:55 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
