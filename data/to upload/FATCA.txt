@@ -1,0 +1,161 @@
+What is FATCA?
+FATCA is a United States federal law requiring all non-U.S. foreign financial institutions (FFIs) to search their records for customers with indicia of U.S.-person status, such as U.S. citizenship or residency, and report the assets and identities of such persons to the U.S. Department of the Treasury.
+
+Who does FATCA apply to?
+FATCA affects U.S. persons, which includes U.S. citizens, permanent residents (green card holders), and entities that are created or organized in the U.S. or under the laws of the U.S.
+
+Required Documentation:
+For U.S. persons:
+
+Form W-9 – Request for Taxpayer Identification Number and Certification.
+For non-U.S. persons:
+
+W-8BEN: Individuals – If you are a non-U.S. individual receiving U.S.-source income, use this form to claim foreign status and, if applicable, benefits under a tax treaty.
+W-8BEN-E: Entities – For foreign entities (corporations, partnerships, etc.) receiving U.S.-source income. Use this to assert foreign status and claim any treaty benefits.
+
+The Common Reporting Standard (CRS)
+What is CRS?
+The Common Reporting Standard, developed by the Organisation for Economic Co-operation and Development (OECD), is an information standard for the automatic exchange of information (AEOI) regarding bank accounts on a global level, aimed at preventing tax evasion.
+
+Who does CRS apply to?
+All account holders of financial institutions in participating countries are subject to CRS, which requires such institutions to collect and report information to their local tax authority.
+
+Required Documentation:
+For individual account holders:
+
+A self-certification form that confirms their tax residency.
+For entities:
+
+The Entity Self-Certification Form for entities.
+The Controlling Person Self-Certification Form for individuals exercising control over entities.
+
+
+Introduction about FATCA-CRS-UBO requirements:
+Mutlilateral Competent Authority Agreement [MCAA] and Foreign Account Tax Compliance Act [FATCA]
+In terms of the MCAA, all countries which are a signatory to MCAA, are obliged to exchange a wide range of financial information. India has joined MCAA on Automatic Exchange of Financial Account Information on June 3, 2015. Additionally, Governments of India and USA have signed an agreement to improve international tax compliance and to implement the FATCA in India.
+
+Further, to combat the problem of offshore tax evasion and avoidance and stashing of unaccounted money abroad requiring cooperation amongst tax authorities, the G20 and OECD countries worked together and have developed a Common Reporting Standard (CRS) on Automatic Exchange of Information (AEOI).
+
+As per above agreements and towards compliance with tax information sharing laws, such as FATCA/CRS, requires the financial institutions of the “source” jurisdiction to collect and report information to their tax authorities about account holders “resident” in other countries, such information having to be transmitted “automatically’ on yearly basis. The information to be exchanged relates not only to individuals but also to shell companies and trusts having beneficial ownership or interest in the “resident” countries. This also mandates all financial intermediaries to seek additional personal, tax and beneficial owner information and certain certifications and documentation from our account holders. Intermediaries are also obliged to share information on your account with relevant tax authorities and other competent authorities.
+
+Vide SEBI Circular CIR/MIRSD/2/2013 dated January 24, 2013, SEBI has guidelines on identification of Beneficial Ownership and mandated all Intermediaries to identify & verify such beneficiary owners
+
+Following information is mandated as part of FATCA-CRS-UBO requirements and also additional Supplementary KYC Information as per AMFI guidelines:
+
+Country of Birth / Incorporation
+Place of Birth / Incorporation
+Address Type [Residential or Business, Residential, Business, Registered Office] for the KYC registered address
+Occupation
+Applicant Income details
+Net Worth details
+Details of PEP [Politically Exposed Person]
+Information on specific Corporate services [applicable for Non-Individuals]
+Information about Ultimate Beneficiary Owner(s) / Controlling Person(s) [applicable for select category of Non-Individuals]
+If your [customer] tax residency is other than India, then following information for all countries in which you are resident for tax purposes is required:
+Camsonline Mutual Fund Transfer Agent Online
+Country of Tax Residency [also include USA, where the individual is a citizen / green card holder of The USA]
+
+Tax Identification Number [If not available, kindly provide its functional equivalent]
+
+Identification Type[TIN or Other, to be specified)]
+
+All investors [both Individuals and Entities] are required to fill-up the applicable FATCA-CRS Declaration &-Supp. KYC Information Form and submit to Fund/CAMS for update. For more details, refer the following forms and FAQs
+
+FATCA Entity Self-Certification Form
+This Form must be completed for all Non-Individuals (”Applicant”) who open accounts with the State Bank of India, Singapore Branch (”SBIS”) 
+and serves to clarify possible tax liability in the United States of America (U.S.). In addtion to this Form, additional documents may be required 
+to prove the Applicant’s U.S. person status. FATCA refers to the Foreign Account Tax Compliance Act of the U.S.
+Active NFFE
+Applicant Name:
+Country of Incorporation:
+Country(ies) in which Applicant is subjected to Tax:
+Applicant’s Registration Number:
+Country(ies) of Operation:
+Tax Identification Number (TIN):
+State Bank of India Co. Reg. No. S77FC2670D Feb 2015
+Part A: General Information
+Part B: FATCA Status of Applicant
+Please complete this section by ticking the corresponding boxes that match your FATCA status.
+Kindly consult your tax advisor if you require assistance on identifying your FATCA Status.
+Specified US Person [Please provide SBIS with completed W-9]
+Non-Financial Foreign Entity (NFFE)
+Passive NFFE Other NFFE, please specify
+Exempt Beneficial Owner
+Government Entity International Organisation Central Bank
+Fund that Qualifies as Exempt Beneficial Owner
+Foreign Financial Institution (FFI)
+Singaporean Financial Institution or other Partner Jurisdiction Financial Institution [Please provide SBIS with GIIN in Part D of this 
+Form]
+Reporting FFI [Please provide SBIS with GIIN in Part D of this Form and W-8-BEN E]
+Non-Reporting FFI
+Participating FFI [Please provide SBIS with GIIN in Part D of this Form and W-8-BEN E]
+Non-Participating FFI *
+Deemed Compliant FFI [Please provide SBIS with GIIN in Part D of this Form and W-8-BEN E]
+Owner-Documented FFI [Please provide SBIS with GIIN in Part D of this Form and W-8-BEN E]
+Part C: Information on US Controlling Person(s)
+Please complete this section with details on Applicant’s US Controlling Person(s)
+Applicant has 1 or more US Controlling Person(s)
+Name Residential Address TIN Percentage Ownership
+Applicant has no US Controlling Person(s)
+Note - For Passive NFFE, you are required to aggregate the ownership values of any related parties to determine whether the ownership 
+threshold of 25% is met. “Related parties” refers to a person’s family which includes brothers and sisters, spouse, ancestors and lineal 
+descendants. It also includes legal adoption. “Ancestors” includes parents and grandparents. “Lineal descendants” includes children and 
+grandchildren. “Family” includes spouses of any of the family members.
+State Bank of India Co. Reg. No. S77FC2670D Feb 2015
+Part D: Global Intermediary Identification Number (GIIN)
+Please only complete this section if the Applicant is a FFI or Direct Reporting NFFE or Sponsor Direct Reporting NFFE and has a GIIN
+GIIN:
+If you are a Sponsored FFI without a GIIN, please provide the name and GIIN of the Sponsoring FFI
+Sponsoring FFI: GIIN of Sponsoring FFI:
+Part E: Change of Status
+You agree to notify SBIS within 30 days (“Notification Period”) if there are any changes in circumstances that may cause the information furnished
+in this Form or in the relevant accompanying documents provided to SBIS to become incorrect, misleading, potentially misleading, outdated 
+and/or anything which, in SBIS’s opinion, constitutes a material or adverse effect on your status (“Material Change in Status”). In the event of 
+the Applicant’s failure to notify SBIS of any Material Change of Status within the Notification Period, SBIS reserves the right to terminate the 
+banking relationship with the Applicant.
+Part F: Confirmation of Completeness, Accuracy and Truth of Information
+You acknowledge and confirm that the information provided in this Form and the relevant accompanying documents, including but not limited 
+to Form W-9 provided to SBIS are complete, accurate and true.
+Part G: Authorisation
+You hereby irrevocably authorise SBIS to disclose to the Inland Revenue Authority of Singapore (IRAS) and/or foreign tax authorities (including 
+the U.S. Internal Revenue Service) the Applicant’s name, address, taxpayer identification number, account number, FATCA compliance status, 
+FATCA indicia, account balance, account value, payments to and from any of the Applicant’s account(s), account statements, amount of money, 
+the type and value of financial products and/or assets held with SBIS, amount of revenue and income and any other information regarding the 
+Applicant and shareholders or beneficial owners of the Applicant (“Applicant’s Information”) as may be requested or required by IRAS and/or 
+foreign tax authorities (including the U.S. Internal Revenue Service).
+You also irrevocably authorise SBIS to withhold and payout from the Applicant’s account(s) and/or from the income derived from SBIS such 
+amounts as may be required by IRAS and/or foreign tax authorities (including the U.S Internal Revenue Service).
+You further authorise SBIS to close the Applicant’s account and SBIS reserves the right to terminate the banking relationship with the Applicant 
+if:
+• The information provided in this Form and relevant accompanying documents are found to be incomplete, inaccurate and/or false, or
+• You fail to provide the necessary information to determine whether you are a U.S. person, or
+• You fail to provide the necessary information requested by SBIS to confirm your FATCA classification, or
+• You have specified your status as a Non-Participating Foreign Financial Institution (FFI).
+You agree and acknowledge that SBIS is entitled to take all necessary actions to be and remain compliant with FATCA under any laws,
+regulations, directives, notices or agreements between governments or issued by authorities such as the Monetary Authority of Singapore, IRAS 
+and the Ministry of Finance of Singapore.
+Part H: Allocation of Risk
+You agree that, subject to any professional duties and obligations that are imposed on us by statute or as required by relevant professional 
+standards, we shall not seek to establish the accuracy and completeness of any information and the authenticity of any document provided to 
+us by you. Where any document so provided purports to be a copy, we may assume that the copy provided is a complete, true and accurate 
+copy of such document.
+You agree to accept the risk and not hold SBIS responsible if:
+• The banking relationship with SBIS is terminated due to your failure to notify SBIS within the Notification Period of any changes in
+circumstances that may cause the information furnished in this Form or in the relevant accompanying documents provided to SBIS to become 
+incorrect, misleading, potentially misleading and/or outdated, or
+• The information provided in this form and/or the relevant accompanying documents provided to SBIS are found to be incomplete, inaccurate 
+and/or false, or
+You also agree to accept the risk and hold SBIS harmless against all actions, proceedings and claims brought or threatened against SBIS 
+(whether by you or any third party) and all loss, damages and expenses (including legal expenses) relating to, in any way out of or in connection 
+with the disclosure of the Applicant’s Information as required by IRAS and/or foreign tax authorities (including the U.S. Internal Revenue
+Service).
+Part I: Signatory
+We hereby acknowledge and fully agree to the clauses, terms and conditions specified within this Form. We further acknowledge
+that we permit the disclosure of information, account withholding and termination of banking/business relationship as may be deemed necessary 
+by SBIS, in accordance with the relevant laws of Singapore, towards the fulfilment of its obligations under FATCA, Singapore’s Intergovernmental
+Agreement with the US (IGA) and/or to authorities such as the Monetary Authority of Singapore, IRAS and/or the Ministry of Finance of
+Singapore.
+Name & Signature of Authorised Applicant:
+Date:
+Name & Signature of Authorised Applicant:
+Date:

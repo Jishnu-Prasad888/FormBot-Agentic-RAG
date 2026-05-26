@@ -1,0 +1,48 @@
+
+What is Core Banking Solution?
+A core banking solution (CBS) is a software used by banks to manage primary operations. It is a centralized system that allows customers or businesses to carry out transactions from any branch rather than only from the branch where the account was opened.
+
+It streamlines and centralises banking operations for any bank or NBFC. With a robust CBS, banks can manage various account activities like deposits or withdrawals, loans, payments, information like account balance and more.
+
+Today, with solutions like RazorpayX Business Banking+, businesses can harness the power of automation and technology to make cash management efficient and accurate. Businesses can now manage payroll, vendor payments, invoices and contracts, bulk 
+payouts, and so much more from one centralized dashboard.
+
+What is Core Banking?
+Core banking is a centralised system that allows customers or business bodies to carry on business operations regardless of the bank’s branch. 
+
+The main objective of core banking solutions is to offer tailor-made offerings to customers at their convenience. These solutions differ in nature and are dependent a lot on the customer base. CBS refers to the networking of different bank branches that enables customers to opt for varied banking facilities from different corners of the world. The entire banking application is based on a centralised server and can be used via the internet. 
+
+Different functions of core banking encompass transactions, payments, loans and more. Internet banking, ATMs (Automated Teller Machines), Phone banking, Fund transfer remotely and instantly (IMPS, NEFT, RTGS and more), interest computation on loans and deposits etc., are some of the core banking solutions types.
+
+While customers or business bodies reap the benefits of carrying out transactions freely, financial institutions via core banking solutions benefit from lesser time and can save upon resources that are used for repetitive business activities. 
+
+Some of the lucrative features of core banking solutions are:
+
+Transaction management
+Customer relationship management activities
+Accounts, loans and disbursal management
+Customer onboarding
+Deposits and withdrawal management etc.
+Advantages of Core Banking
+Both businesses and customers benefit from different core banking solutions. 
+
+Advantages for Customers
+Internet banking, mobile banking etc. are among the multiple channels that prove effective for faster payment processing.
+CBS (Core Banking Solution) benefits those who are living in rural areas. For instance, farmers can easily get e-payments towards subsidies directly in their accounts.
+Customers can get expedited service for routine transactions which includes withdrawals, passbooks, demand drafts, cash deposits etc.
+The provision of a 24X7 banking service is another notable advantage of core banking solutions. Moreover, the provisions can be opted at any time and anywhere. 
+Every bank branch uses applications from the data centre or central servers, hence deposits done in one branch get displayed instantly. Customers or any business owners can withdraw funds from any branch across the world.
+Core banking solutions curb the need for filling out multiple entries, thereby reducing errors and ensuring accuracy.
+It facilitates a hassle-free merging of self-service operations and back-office data.
+Advantages for Businesses
+Core banking solutions facilitate standardisation and transparency within business bodies and branches of banks. Since all the branches are connected to a central server, transactions can be viewed anytime. Instant projection of the transactions helps businesses to deal with inaccurate transactions or fraud.
+Core banking solution emerged to be a saviour helping businesses cater to the increasing needs of customers. It ensures better customer retention via prompt customer service.
+This banking mode has led to the minimization of errors, thereby facilitating accurate transactions.
+It helps to bring down and manage operational costs involving lesser manpower for process execution.
+With the emergence of different core banking solution types, submission of reports to regulatory boards and the government has become convenient.
+Core banking solutions help in efficient documents and record management. CBS incorporates a centralized database that helps in the faster collection of data.
+It has become convenient for businesses to process cash, compute interest, open accounts, incorporate policy changes etc.
+In addition, businesses can offer services and products to customers at nominal rates. For instance, automating different parts of financial transactions has curbed the need for multiple staff, helping to save on wages and related costs.
+Custom-crafted banking software enables full integration of the banking system.
+Another advantage of core banking is that it adds security levels to the banking system. 
+Core banking solutions facilitate informed decision-making ability. For instance, as the overall banking procedure has become streamlined, business bodies can now decide whether to use the funds for business expansion or for lending out to customers.

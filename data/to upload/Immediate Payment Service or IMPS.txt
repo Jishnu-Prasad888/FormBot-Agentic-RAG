@@ -1,0 +1,66 @@
+Immediate Payment Service or IMPS allows all SBI account holders to make real-time fund transfers through their savings accounts. This facility is available with net banking and even through the mobile application. Since funds are transferred immediately, you also have easy IMPS reference number tracking SBI options that allow you to check the status of your transactions.
+
+IMPS Fund Transfer through SBI
+Log on the SBI Online (www.onlinesbi.com)
+Visit the “Transfer/Payment”option and choose “IMPS Fund Transfer”
+If you have added the beneficiary as an IMPS beneficiary, choose the “Person to Person” option
+If you have added the beneficiary as an Interbank Beneficiary, choose the “Person to Account” option
+Enter the amount to be transferred
+Approve the transaction with a One Time Password that is sent to your registered mobile number
+SBI IMPS Charges
+The charges for transferring money through IMPS using SBI Anywhere Personal.
+
+Amount	IMPS Charges
+Rs. 1,00,000 to Rs. 2,00,000	NIL
+SBI IMPS Limit
+To promote mobile banking while keeping a check on illegal activities, SBI has set a daily transfer limit for IMPS transactions. The transfer limit defined by SBI for IMPS has been listed here:
+
+Activity	SBI IMPS Transfer Limit
+Within 4 days of activation of a beneficiary	Up to Rs. 1 lakh
+After 4 days of activation of a beneficiary	Up to Rs. 2 lakh
+SBI IMPS Timings
+SBI IMPS service is available 24×7, however, there are a few things related to the payment service that has fixed timings. When using SBI IMPS service, here are a few details that you must keep in mind:
+
+Timings for the activation of beneficiary details added by a user– The SBI account holders who wish to use SBI IMPS services can add and approve only one beneficiary in a day. However, the beneficiary’s details will be activated by the internet banking system within 4 hours provided you approve the details using OTP between 06:00 AM to 08:00 PM (IST). The beneficiary details that are approved after 08:00 PM will be activated on the next day after 08:00 AM (IST). You can initiate transactions with the new beneficiary only after its activation.
+Timings to initiate and receive IMPS remittances – In SBI IMPS, the outward transactions have fixed timings, which are between 08:00 AM and 08:00 PM (IST), whereas the inward transactions are available 24×7 throughout the year. Also in the case of SBI IMPS outward transactions, the SBI account holders are allowed to send a collective amount of Rs. 40,000 only between 08:00 AM and 08:00 PM (IST). For both SBI IMPS outward as well as inward transactions there is no restriction of weekends or public holidays.
+SBI Reference Number Tracking
+With every IMPS transaction, the MMID or the Mobile Money Identifier is extremely important. This seven-digit code recognizes the beneficiary and the remitter and ensures that wrong transactions are avoided.
+
+With every IMPS transfer that you make, you will also receive a unique SBI IMPS Reference number that you can use to track the status of the transaction.
+Once the remitter submits a fund transfer request online, an SMS is sent to the remitter as well as the beneficiary with the reference number.
+You can also click on “Fund Transfer” and choose the “View Transactions” option to check the status. Choose the date of transfer to get a list of transactions carried out on that day.
+You can also click on “Fund Transfer” and choose the “View Transactions” option to check the status. Choose the date of transfer to get a list of transactions carried out on that day.
+What is MMID
+Every account holder will receive a unique 7-digit code called the Mobile Money Identifier or MMID that allows you to carry out IMPS transactions. This code is provided to you automatically when you download the mobile application & register for IMPS. There are other ways to obtain this code as well:
+
+Log on to your mobile banking account and click on generate MMID to get your unique number.
+If you are not registered for mobile banking, the mobile number can be registered at the nearest SBI ATM using the following steps:
+Swipe your debit card
+Choose the mobile registration option
+Enter your mobile number
+Select SMS or secure code or IMPS
+Enter your mobile number and click on confirm.
+If you do not have a debit card, you can also visit your nearest SBI branch and obtain the MMID by filling up a form.
+The MMID is sent through an SMS to the registered mobile number.
+
+FAQs
+Q. What happens if I add the wrong details of the beneficiary for remittance?
+Ans. If the beneficiary’s details are wrong, there is a high possibility of the transaction getting rejected. If you are transferring money using the account number, then please re-check it before making any transaction.
+
+Q. If the transaction is not completed, will the customer get his/her money back and when?
+Ans. Yes, if the transaction is not completed, the remitter will get the money back immediately. If the funds are not transferred immediately in any case, the reversal of funds will happen in seven days.
+
+Q. How long does it take for the remittance to be carried into the beneficiary’s account?
+Ans.  The funds should be credited to the beneficiary’s account immediately.
+
+Q. Is it necessary for the remitter to have a sufficient account balance to initiate IMPS?
+Ans. Yes, the remitter should have a sufficient account balance to initiate IMPS.
+
+Q. Can the beneficiary receive funds using the mobile number other than registered with the bank?
+Ans. The beneficiary can receive funds using the registered mobile number only. In case, the beneficiary wants to receive funds using any other mobile number, the beneficiary will have to approach the bank and get the mobile number changed in such a case for mobile banking.
+
+Q. What all details of the beneficiary are required to initiate an IMPS remittance from person to person?
+Ans. The details required are – MMID of the beneficiary, mobile number of the beneficiary and name of the beneficiary.
+
+Q. What all details of the beneficiary are required to initiate an IMPS remittance from person to account?
+Ans. The details required are – Name of the beneficiary, account number of the beneficiary and IFS Code of the beneficiary’s bank.

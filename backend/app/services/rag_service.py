@@ -130,17 +130,17 @@ class RAGService:
                 answer = await ollama_client.generate(prompt, system=RAG_SYSTEM)
                 latency = (time.time() - start) * 1000
 
-                acc = await compute_accuracy(answer, expected)
-                faith = await compute_faithfulness(answer, context_texts)
-                cp = await compute_context_precision(question, context_texts)
-                cr = await compute_context_recall(expected, context_texts)
-                ar = await compute_answer_relevancy(question, answer)
+                acc_score, _ = await compute_accuracy(answer, expected)
+                faith_score, _ = await compute_faithfulness(answer, context_texts)
+                cp_score, _ = await compute_context_precision(question, context_texts)
+                cr_score, _ = await compute_context_recall(expected, context_texts)
+                ar_score, _ = await compute_answer_relevancy(question, answer)
 
-                results["accuracy"].append(acc)
-                results["faithfulness"].append(faith)
-                results["context_precision"].append(cp)
-                results["context_recall"].append(cr)
-                results["answer_relevancy"].append(ar)
+                results["accuracy"].append(acc_score)
+                results["faithfulness"].append(faith_score)
+                results["context_precision"].append(cp_score)
+                results["context_recall"].append(cr_score)
+                results["answer_relevancy"].append(ar_score)
                 results["latency_ms"].append(latency)
             except Exception as e:
                 logger.error(f"Eval failed for '{question}': {e}")

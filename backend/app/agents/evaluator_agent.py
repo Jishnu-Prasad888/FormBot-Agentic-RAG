@@ -29,10 +29,13 @@ class RetrievalEvaluationAgent(BaseAgent):
 
         context_texts = [c.get("chunk_text", "") for c in chunks if c.get("chunk_text")]
 
-        faithfulness = await compute_faithfulness(answer, context_texts)
-        relevancy = await compute_answer_relevancy(query, answer)
-        cp = await compute_context_precision(query, context_texts)
-        cr = await compute_context_recall(expected, context_texts) if expected else 0.0
+        faithfulness, faith_rationale = await compute_faithfulness(answer, context_texts)
+        relevancy, relevancy_rationale = await compute_answer_relevancy(query, answer)
+        cp, cp_rationale = await compute_context_precision(query, context_texts)
+        if expected:
+            cr, cr_rationale = await compute_context_recall(expected, context_texts)
+        else:
+            cr, cr_rationale = 0.0, "No expected answer provided."
         latency = (time.time() - start) * 1000
 
         coverage = len([c for c in chunks if c.get("score", 0) > 0.5]) / max(len(chunks), 1)
@@ -42,9 +45,13 @@ class RetrievalEvaluationAgent(BaseAgent):
             "agent": self.name,
             "query": query,
             "faithfulness": faithfulness,
+            "faithfulness_rationale": faith_rationale,
             "answer_relevancy": relevancy,
+            "answer_relevancy_rationale": relevancy_rationale,
             "context_precision": cp,
+            "context_precision_rationale": cp_rationale,
             "context_recall": cr,
+            "context_recall_rationale": cr_rationale,
             "retrieval_coverage": round(coverage, 4),
             "retrieval_ok": retrieval_ok,
             "latency_ms": round(latency, 2),

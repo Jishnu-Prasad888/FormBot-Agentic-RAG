@@ -1,0 +1,260 @@
+Q.1. What is Electronic Clearing Service (ECS)? 
+Ans : ECS is an electronic mode of payment / receipt for transactions that are repetitive and 
+periodic in nature. ECS is used by institutions for making bulk payment of amounts towards 
+distribution of dividend, interest, salary, pension, etc., or for bulk collection of amounts 
+towards telephone / electricity / water dues, cess / tax collections, loan instalment 
+repayments, periodic investments in mutual funds, insurance premium etc. Essentially, ECS 
+facilitates bulk transfer of monies from one bank account to many bank accounts or vice 
+versa. ECS includes transactions processed under National Automated Clearing House 
+(NACH) operated by National Payments Corporation of India (NPCI). 
+Q.2. What are the variants of ECS? In what way are they different from each other? 
+Ans : Primarily, there are two variants of ECS - ECS Credit and ECS Debit. 
+ECS Credit is used by an institution for affording credit to a large number of beneficiaries 
+(for instance, employees, investors etc.) having accounts with bank branches at various 
+locations within the jurisdiction of a ECS Centre by raising a single debit to the bank account 
+of the user institution. ECS Credit enables payment of amounts towards distribution of 
+dividend, interest, salary, pension, etc., of the user institution. 
+ECS Debit is used by an institution for raising debits to a large number of accounts (for 
+instance, consumers of utility services, borrowers, investors in mutual funds etc.) maintained 
+with bank branches at various locations within the jurisdiction of a ECS Centre for single 
+credit to the bank account of the user institution. ECS Debit is useful for payment of 
+telephone / electricity / water bills, cess / tax collections, loan installment repayments, 
+periodic investments in mutual funds, insurance premium etc., that are periodic or repetitive 
+in nature and payable to the user institution by large number of customers etc. 
+Q.3. At how many places in the country is  ECS Scheme available? 
+Ans : Based on the geographical location of branches covered, there are three broad 
+categories of ECS Schemes – Local ECS, Regional ECS and National ECS.These schemes 
+are either operated by RBI or by the designated commercial banks. NACH is also one of the 
+form of ECS system operated by NPCI and further details about NACH is available at NPCI 
+web site under the link http://www.npci.org.in/clearing_faq.aspx. 
+Local ECS – this is operating at 81 centres / locations across the country. At each of these 
+ECS centres, the branch coverage is restricted to the geographical coverage of the clearing 
+house, generally covering one city and/or satellite towns and suburbs adjoining the city. 
+Regional ECS – this is operating at 9 centres / locations at various parts of the country. 
+RECS facilitates the coverage all core-banking-enabled branches in a State or group of 
+States and can be used by institutions desirous of reaching beneficiaries within the State / 
+group of States. The system takes advantage of the core banking system in banks. 
+Accordingly, even though the inter-bank settlement takes place centrally at one location in 
+the State, the actual customers under the Scheme may have their accounts at various bank 
+branches across the length and breadth of the State / group of States. 
+National ECS – this is the centralized version of ECS Credit which was launched in October 
+2008. The Scheme is operated at Mumbai and facilitates the coverage of all core-banking 
+enabled branches located anywhere in the country. This system too takes advantage of the 
+core banking system in banks. Accordingly, even though the inter-bank settlement takes place 
+centrally at one location at Mumbai, the actual customers under the Scheme may have their 
+accounts at various bank branches across the length and breadth of the country. Banks are 
+free to add any of their core-banking-enabled branches in NECS irrespective of their 
+location. Details of NECS Scheme are available on the website of Reserve Bank of India at 
+http://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=2345 
+The list of centres where the ECS facility is available has been placed on the website of 
+Reserve Bank of India at http://www.rbi.org.in/Scripts/ECSUserView.aspx?Id=26. Similarly, 
+the centre-wise list of bank branches participating at each location is available on the website 
+of Reserve Bank of India at http://www.rbi.org.in/scripts/ECSUserView.aspx?Id=27 
+ECS (CREDIT) 
+Q.4. Who can initiate an ECS Credit transaction? 
+Ans : ECS Credit payments can be initiated by any institution (called ECS Credit User) 
+which needs to make bulk or repetitive payments to a number of beneficiaries. The 
+institutional User has to first register with an ECS Centre. The User has to also obtain the 
+consent of beneficiaries (i.e., the recipients of salary, pension, dividend, interest etc.) and get 
+their bank account particulars prior to participation in the ECS Credit scheme. 
+ECS Credit payments can be put through by the ECS User only through his / her bank 
+(known as the Sponsor bank). ECS Credits are afforded to the beneficiary account holders 
+(known as destination account holders) through the beneficiary account holders’ bank 
+(known as the destination bank). The beneficiary account holders are required to give 
+mandates to the user institutions to enable them to afford credit to their bank accounts 
+through the ECS Credit mechanism. 
+Q.5. How does the ECS Credit Scheme work? 
+Ans : The User intending to effect payments through ECS Credit has to submit details of the 
+beneficiaries (like name, bank / branch / account number of the beneficiary, MICR code of 
+the destination bank branch, etc.), date on which credit is to be afforded to the beneficiaries, 
+etc., in a specified format (called the input file) through its sponsor bank to one of the  ECS 
+Centres where it is registered as a User. 
+The bank managing the ECS Centre then debits the account of the sponsor bank on the 
+scheduled settlement day and credits the accounts of the destination banks, for onward credit 
+to the accounts of the ultimate beneficiaries with the destination bank branches. 
+on 
+Further details about the ECS Credit scheme are contained in the Procedural Guidelines and 
+available 
+the 
+website 
+of 
+Reserve 
+http://www.rbi.org.in/Scripts/ECSUserView.aspx?Id=1 
+Q.6. What is a MICR Code? 
+Bank 
+of 
+India 
+at 
+Ans : MICR is an acronym for Magnetic Ink Character Recognition. The MICR Code is a 
+numeric code that uniquely identifies a bank-branch participating in the ECS Credit scheme. 
+This is a 9 digit code to identify the location of the bank branch; the first 3 characters 
+represent the city, the next 3 the bank and the last 3 the branch. The MICR Code allotted to a 
+bank branch is printed on the MICR band of cheques issued by bank branches. 
+Q.7. How does a beneficiary participate in ECS Credit Scheme? 
+Ans : The beneficiary has to furnish a mandate to the user institution giving consent to avail 
+the ECS Credit facility. The mandate contains details of his / her bank branch, account 
+particulars and authorises the user institution to afford credit to his / her account with the 
+destination bank branch. 
+Q.8. Is it necessary for user institutions to collect the mandates from beneficiaries? 
+Ans : Yes, in addition to the consent of the beneficiaries, the mandate also provides important 
+information related to bank account details etc. which are useful for the user institution to 
+transfer funds to the right accounts . A model mandate form has been prescribed for the 
+purpose and is available in the ECS Credit Procedural Guidelines. 
+Q.9. Is there scope for the beneficiary to alter the mandate under the ECS Credit Scheme? 
+Ans : Yes. In case the information / account particulars contained in the mandate undergo 
+any change, the beneficiary has to notify the changes to the User Institution so that the 
+correct information can be incorporated in its records. This will ensure that transactions do 
+not get rejected at the beneficiary’s bank branch due to inconsistencies/ mismatch in the data 
+sent by the user institution. 
+Q.10. Can ECS be used to transfer funds to Non Resident External (NRE) and Non 
+Resident Ordinary (NRO) accounts? 
+Ans: Yes. ECS can be used to transfer funds to NRE and NRO accounts in the country. This, 
+however, is subject to the adherence to the provisions of the Foreign Exchange Management 
+Act, 2000 (FEMA) and Wire Transfer Guidelines. 
+Q.11. Will beneficiaries be intimated of credits afforded to their account under the ECS 
+Credit Scheme? 
+Ans : It is the responsibility of the user institution to communicate to the beneficiary the 
+details of credit that is being afforded to his / her account, indicating the proposed date of 
+credit, amount and related particulars of the payment. Destination banks have been advised 
+to ensure that the pass books / statements given to the beneficiary account holders reflect 
+particulars of the transaction / credit provided by the ECS user institutions. The beneficiaries 
+can match the entries in the passbook / account statement with the advice received by them 
+from the User Institutions. Many banks also give mobile alerts / messages to customers after 
+credit of such funds to accounts. 
+Q.12. What will happen if credit is not afforded to the account of the beneficiary? 
+Ans: If a Destination Bank is not in a position to credit the beneficiary account due to any 
+reason, the same would be returned to the ECS Centre to enable the ECS Centre to pass on 
+the uncredited items to the User Institution through the Sponsor Bank. The User Institution 
+can then initiate payment through alternate modes to the beneficiary. 
+In case of delayed credit by the destination bank, the destination bank would be liable to pay 
+penal interest (at the prevailing RBI LAF Repo rate plus two percent) from the due date of 
+credit till the date of actual credit. Such penal interest should be credited to the Destination 
+Account Holder’s account even if no claim is lodged to the effect by the Destination Account 
+Holder. 
+Q.13. What are the advantages of the ECS Credit Scheme to the beneficiary 
+Ans : ECS Credit offers many advantages to the beneficiary – 
+ The beneficiary need not visit his / her bank for depositing the paper instruments 
+which he would have otherwise received had he not opted for ECS Credit.  
+ The beneficiary need not be apprehensive of loss / theft of physical instruments or the 
+likelihood of fraudulent encashment thereof.  
+ Cost effective. 
+ The beneficiary receives the funds right on the due date. 
+Q.14. How does the ECS Credit Scheme benefit User Institutions? 
+Ans : User institutions enjoy many advantages as well. For instance, 
+ Savings on administrative machinery and costs of printing, dispatch and 
+reconciliation of paper instruments that would have been used had beneficiaries not 
+opted for ECS Credit.  
+ Avoid chances of loss / theft of instruments in transit, likelihood of fraudulent 
+encashment of paper instruments, etc. and subsequent correspondence / litigation.  
+ Efficient payment mode ensuring that the beneficiaries get credit on a designated 
+date. 
+ Cost effective. 
+Q.15. Are there any advantages of the ECS Credit Scheme to the banking system? 
+Ans : Yes, the banking system too benefits from ECS Credit Scheme such as – 
+ Freedom from paper handling and the resultant disadvantages of handling, 
+presenting and monitoring paper instruments presented in clearing. Ease of 
+processing and return for the destination bank branches.  
+ Smooth process of reconciliation for the sponsor banks. 
+ Cost effective. 
+Q.16. Is there any limit on the value of individual transactions in ECS Credit? 
+Ans : No. There is no value limit on the amount of individual transactions. 
+Q.17.  What are the processing / service charges levied under ECS Credit? 
+Ans : The Reserve Bank of India has deregulated the charges to be levied by sponsor banks 
+from user institutions. The sponsor banks are, however, required to disclose the charges in a 
+transparent manner. With effect from 1st July 2011, originating banks are required to pay a 
+nominal charge of 25 paise per transaction to the Clearing house and destination bank 
+respectively. Destination bank branches have been directed to afford ECS Credit free of 
+charge to the beneficiary account holders. 
+ECS (DEBIT) 
+Q.18. Who can initiate a ECS Debit transaction? 
+Ans : ECS Debit transaction can be initiated by any institution (called ECS Debit User) 
+which has to receive / collect amounts towards telephone / electricity / water dues, cess / tax 
+collections, loan installment repayments, periodic investments in mutual funds, insurance 
+premium etc. It is a Scheme under which an account holder with a bank branch can authorise 
+an ECS User to recover an amount at a prescribed frequency by raising a debit to his / her 
+bank account. 
+The User institution has to first register with an ECS Centre. The User institution has to also 
+obtain the authorization (mandate) from its customers for debiting their account along with 
+their bank account particulars prior to participation in the ECS Debit scheme. The mandate 
+has to be duly verified by the beneficiary’s bank.  A copy of the mandate should be available 
+on record with the destination bank where the customer has a bank account. 
+Q.19. How does the ECS Debit Scheme work? 
+Ans : The ECS Debit User intending to collect receivables through ECS Debit has to submit 
+details of the customers (like name, bank / branch / account number of the customer, MICR 
+code of the destination bank branch, etc.), date on which the customer’s account is to be 
+debited, etc., in a specified format (called the input file) through its sponsor bank to the ECS 
+Centre. 
+The bank managing the ECS Centre then passes on the debits to the destination banks for 
+onward debit to the customer’s account with the destination bank branch and credits the 
+sponsor bank's account for onward credit to the User institution. Destination bank branches 
+will treat the electronic instructions received from the ECS Centre on par with the physical 
+cheques and accordingly debit the customer accounts maintained with them. All the 
+unsuccessful debits are returned to the sponsor bank through the ECS Centre (for onward 
+return to the User Institution) within the specified time frame. 
+on 
+For further details about the ECS Debit scheme, the ECS Debit Procedural Guidelines – 
+available 
+the 
+website 
+of 
+Reserve 
+Bank 
+of 
+http://www.rbi.org.in/Scripts/ECSUserView.aspx?Id=25  may be referred to. 
+Q.20. What are the advantages of ECS Debit Scheme to the customers? 
+Ans : The advantages of ECS Debit to customers are many and include, 
+India 
+at 
+ ECS Debit mandates will take care of automatic debit to customer accounts on the 
+due dates without customers having to visit bank branches / collection centres of 
+utility service providers etc.  
+ Customers need not keep track of due date for payments.  
+ The debits to customer accounts would be monitored by the ECS Users, and the 
+customers alerted accordingly. 
+ Cost effective. 
+Q.21. How does the ECS Debit Scheme benefit user institutions? 
+Ans : User institutions enjoy many benefits from the ECS Debit Scheme like, 
+ Savings on administrative machinery and costs of collecting the cheques from 
+customers, presenting in clearing, monitoring their realisation and reconciliation.  
+ Better cash management because of realisation / recovery of dues on due dates 
+promptly and efficiently.  
+ Avoids chances of loss / theft of instruments in transit, likelihood of fraudulent access 
+to the paper instruments and encashment thereof.  
+ Realisation of payments on a uniform date instead of fragmented receipts spread over 
+many days. 
+ Cost effective. 
+Q.22. What are the advantages of ECS Debit Scheme to the banking system? 
+Ans : The banking system has many benefits from ECS Debit such as –  
+ Freedom from paper handling and the resultant disadvantages of handling, receiving 
+and monitoring paper instruments presented in clearing.  
+ Ease of processing and return for the destination bank branches. Destination bank 
+branches can debit the customers’ accounts after matching the account number of the 
+customer in their database and due verification of existence of valid mandate and its 
+particulars. With core banking systems in place and straight-through-processing, this 
+process can be completed with minimal manual intervention. 
+ Smooth process of reconciliation for the sponsor banks. 
+ Cost effective. 
+Q.23. Can the mandate once given by a customer be withdrawn or stopped? 
+Ans : Yes. Any mandate in ECS Debit is on par with a cheque issued by a customer. The 
+customer has to maintain adequate funds in his / her account with the destination bank 
+branch to ensure the ECS Debit instructions are honoured when presented. In case of any 
+need to withdraw or stop a mandate, the customer has to give prior notice to the ECS user 
+institution well in time, so as to ensure that the input files submitted by the user do not 
+continue to include the ECS Debit details in respect of the mandates withdrawn or stopped by 
+customers. The process flow to be followed for withdrawing / stopping mandates is detailed 
+in ECS Debit Procedural Guidelines. 
+Q.24. Can a customer stipulate any ceiling on the amount of debit, purpose or validity 
+period of the mandate under the ECS Debit Scheme? 
+Ans : Yes. It is left to the choice of the individual customer and the ECS user to decide these 
+aspects. The mandate can contain a ceiling on the maximum amount of debit, specify the 
+purpose of debit and validity period of the mandate. 
+Q.25. Is there any limit on the value of Individual transactions in ECS Debit? 
+Ans : No. There is no value limit on the amount of individual transactions that can be 
+collected by ECS Debit. 
+Q.26. What are the processing / service charges levied under ECS Debit? 
+Ans : The Reserve Bank of India has deregulated the charges to be levied by sponsor banks 
+from user institutions. The sponsor banks are, however, required to disclose the charges in a 
+transparent manner. With effect from 1st July 2011, originating banks are required to pay a 
+nominal charge of 25 paise and 50 paise per transaction to the Clearing house and 
+destination bank respectively. Bank branches do not generally levy processing / service 
+charges for debiting the accounts of customers maintained with them. 
