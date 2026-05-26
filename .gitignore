@@ -1,5 +1,6 @@
 bhak_outputs/
 .env
+*.env
 __pycache__/
 *.pyc   
 *.pyo
