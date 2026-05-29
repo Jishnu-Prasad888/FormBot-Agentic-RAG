@@ -1,0 +1,464 @@
+
+Introduction
+A proforma invoice is the first official document in any Indian export transaction. You send it to your buyer before goods are shipped or services are delivered, and it does a lot of the heavy lifting that follows. Buyers use it to arrange Letters of Credit with their banks. Customs authorities in the buyer's country reference it for import permits. Your own bank will refer back to it when the payment comes in.
+
+
+
+Getting it right from the start sets up everything downstream smoothly, from the shipping bill to the final commercial invoice. Getting it wrong can mean delays, LC discrepancies, or compliance issues you don't see coming until the money is already held up.
+
+
+
+This article covers what a proforma invoice is, what it must include for Indian exporters, how it fits into the full export document chain, and the best practices that save you time and friction.
+
+Key takeaways:
+A proforma invoice is a document shared before the actual trade of goods or services. Although not a legal necessity, providing a proforma invoice is considered good practice in the exporting domain.
+
+
+A proforma invoice has several benefits. It fosters trust, credibility, transparency, and mutual agreement between the seller and the buyer. Creating a proforma invoice is a common practice for both international and domestic exporters.
+
+
+For Indian exporters specifically, the proforma invoice typically needs to include your IEC (Import Export Code), GSTIN, HSN/SAC codes, Incoterms, and RBI purpose code, all of which feed directly into downstream documents like the commercial invoice, shipping bill, and Letter of Credit.
+What is a proforma invoice?
+A proforma invoice is a preliminary invoice, or a bill of sale, issued before goods are shipped, or services are delivered. Proforma invoices neither demand payment nor are legally binding, but instead represent a commitment for the transaction. It is different from the commercial invoice, which is provided after the transaction has been completed.
+
+
+
+The proforma invoice includes detailed information about the items outlined in the transaction. Depending on the goods/services being delivered, the industry, and buyer requirements, the proforma invoice format can include the following information:
+
+
+
+Header and label
+A unique invoice reference or number
+Date of preparation or issue
+Seller and buyer details
+Detailed description of goods or services and their pricing
+IEC number: the 10-digit Import Export Code issued by DGFT, required for all Indian export transactions. Banks need it for remittance processing and customs references it for clearance.
+Incoterms (e.g., FOB, CIF, EXW): the internationally agreed trade terms that define who bears the shipping cost and risk at each stage. Essential on any export proforma invoice and directly affects your pricing calculations.
+Validity period 
+Proposed terms of sale and payment
+Shipping information
+Any certifications required by customs authorities
+Signature or authorization
+
+
+For example, say a freelancer is providing graphic design services to an international client. But the client wants to know the cost breakdown before committing fully. The freelancer can use the proforma invoice to provide a detailed breakdown of the service charges, hours, software licensing costs, taxes, and more.
+
+
+
+A goods export example: An Indian textile manufacturer in Surat receives an inquiry from a UK buyer for 5,000 cotton T-shirts. The manufacturer issues a proforma invoice stating: HS code 610910, quantity, FOB Mumbai price of USD 3.50 per piece, Incoterms, payment terms (50% advance, balance via LC), and port of loading. The UK buyer then uses this proforma invoice to arrange a Letter of Credit with their bank.
+
+
+
+While providing a proforma invoice is not a legal necessity for Indian exporters, it has become a widely accepted practice in international trade.
+
+How does a proforma invoice work?
+The proforma invoice is issued and delivered by the seller before the transaction goes through. It starts with an initial discussion, followed by the proforma invoice request, invoice creation, and follow-up discussions.
+
+Here’s a breakdown of the steps:
+
+
+
+Discussion
+After the initial buyer inquiry, the seller and buyer discuss the trade itself. This typically involves outlining details regarding prices, delivery, and payment terms.
+
+
+
+Proforma invoice request
+The buyer then requests a proforma invoice from the seller to get a complete picture of the transaction and its minutiae.
+
+
+
+Proforma invoice creation
+The supplier creates the proforma invoice document, typically using ERP software, furnishing complete details about the transaction. Once created, the document is then forwarded to the buyer.
+
+
+
+Follow-up discussions
+The buyer reviews the proforma invoice. They can either accept the terms or negotiate further. Each negotiation requires an updated proforma invoice. However, the invoice cannot be updated without the buyer’s consent.
+
+
+
+When both the buyer and seller agree on the terms, the proforma invoice acts as the starting point for the trading activities that follow.
+
+
+
+Acceptance and downstream documents: Once your buyer accepts the proforma invoice, it triggers the creation of the Purchase Order on their end.
+
+ 
+
+From there, the proforma invoice becomes the reference document for everything that follows: the commercial invoice, packing list, and shipping bill must all align with it. If the buyer is arranging a Letter of Credit, their bank issues the LC based on the proforma, which is why every field needs to be accurate from the outset.
+
+Benefits of using a proforma invoice in international and domestic trade
+A proforma invoice represents commitment, increases transparency, provides negotiation powers to both parties, streamlines the trade process, supports Indian exporter compliance, and creates mutual understanding.
+
+
+
+Commitment
+When the seller issues a proforma invoice, it shows commitment towards fulfilling the transaction. It builds trust between the two parties and is a common expectation in international trade. 
+
+
+
+Transparency
+The proforma invoice builds transparency for the transaction by outlining and describing all the particulars in a single document that is accessible to both parties. This is a critical step before finalizing the transaction.
+
+
+
+Negotiation
+The proforma invoice gives both parties negotiation power. The seller can outline the costs and delivery timelines, and the buyer can budget accordingly or negotiate for a better deal.
+
+
+
+Process streamlining
+The proforma invoice streamlines trading in multiple ways. It simplifies supply chain coordination with logistics partners, allows the seller to plan inventory, saves time for both parties, and keeps expectations transparent and upfront. This efficiency really helps in international trade, which tends to get complicated.
+
+
+
+Compliance
+For Indian exporters, the proforma invoice does more compliance work than most people realise. Here's specifically what it enables:
+
+Your buyer uses it to apply for import permits in their country.
+Their bank uses it to issue a Letter of Credit (LC) in your favour.
+Under FEMA, the proforma is referenced when the buyer's bank initiates the overseas remittance, the purpose code on the proforma helps categorise the inward remittance correctly.
+Once payment is received, your AD (Authorised Dealer) bank opens the EDPMS entry using the proforma as the reference document.
+
+
+Mutual understanding
+The proforma invoice is critical for building mutual understanding of the transaction for the seller and buyer. No details are missed, future disagreements can be mitigated, and both parties are able to operate on equal grounds.
+
+
+
+These benefits explain why the proforma invoice is considered a good practice in trading.
+
+Use cases across industries
+Although commonly used by exporters, the proforma invoice can also be used by freelancers, manufacturing businesses, e-commerce companies, and service providers. Here’s how:
+
+
+
+Exporters
+For Indian exporters, the proforma invoice is a working document, not just a formality. You use it for customs pre-clearance, to enable your buyer to arrange a Letter of Credit, to collect advance payments before shipment, and as the reference document your freight forwarder and bank will check the final shipping bill against. Every field matters, because the commercial invoice and shipping bill must align with the proforma exactly.
+
+
+
+Freelancers
+Freelancers can benefit from providing a proforma invoice as well. In industries like consultancy or graphic design, for example, the document can provide structure to an otherwise unregulated transaction procedure.
+
+
+
+Manufacturing
+Manufacturers can benefit from the structured reporting that proforma invoices facilitate, especially for bulk production and export. Outlining details like product specifications and customization terms upfront can prevent costly errors in the future.
+
+
+
+E-commerce
+E-commerce platforms and businesses can use the proforma invoice for large order quantities and customization requests. 
+
+
+
+Service providers
+Service-providing agencies can use the proforma invoice to communicate the scope of services, fees, timelines, and more.
+
+Proforma invoice vs. commercial invoice: Key differences
+The proforma invoice is created and shared before the trade. It contains details on expected pricing and timelines. The commercial invoice is the final bill shared after the trade has been completed.
+
+
+
+In the following table, we’ll make a quick comparison between a proforma and a traditional commercial invoice.
+
+Feature	Proforma invoice	Commercial invoice
+Objective	A commitment of intent between the two parties	The final request confirming completion of sale
+Legal binding	Not legally binding	Legally binding
+Content	Comprehensive sale details – products, pricing, timelines, taxes, and more	Final details of the goods and services delivered, including the final payment amount
+Modification	Can be revised	Cannot be revised
+Payment terms	No payment required	Payment required as per sale terms
+Used for customs / banking	Yes, used to arrange LC, import permits, and advance remittances	Yes, required for customs clearance, GST filing, and payment confirmation
+One important distinction worth noting: the commercial invoice, not the proforma, is the document required for GST zero-rating claims and input tax credit. If your buyer is asking for a "tax invoice," they want the commercial invoice, not the proforma.
+
+Quotation vs. Proforma invoice vs. purchase order: When to use what
+The proforma invoice is issued before the trade occurs. It is frequently confused with the quotation, which is a supplier’s offer for potential trade, and the purchase order, which is the buyer’s official confirmation. 
+
+
+
+Here, we will cover these three documents that identify landmark stages in the trade process.
+
+Document	Issued By	Purpose	Stage	Who holds it
+Quotation	Seller	Provides a simple price offer for products/services	Early stage, before the commitment	Informal, both parties, no banking/customs role
+Proforma Invoice	Seller	Provides a detailed cost estimate, including terms, shipping, duties, etc.	Mid-stage, once buyer is serious but before final agreement	Formal, held by both parties; used for banking and customs processes
+Purchase Order (PO)	Buyer	Confirms order details, quantities, and agreed terms with seller	After proforma acceptance, before commercial invoice	Buyer's binding commitment to proceed
+Commercial Invoice	Seller	The final legally binding bill after goods/services are delivered	Post-shipment	Required for customs clearance, GST filing, and payment receipt
+Proforma Invoice and Letter of Credit: What Indian Exporters Need to Know
+One of the most important uses of a proforma invoice in Indian export trade is enabling your buyer to arrange a Letter of Credit (LC) with their bank. If you're dealing with large orders or new overseas buyers, understanding this link is essential.
+
+
+
+How it works:
+
+You send the proforma invoice to your overseas buyer.
+The buyer submits it to their bank, which uses it to issue an LC in your favour.
+The LC guarantees you'll receive payment once you present the agreed shipping documents, commercial invoice, bill of lading, packing list, certificate of origin, to your bank.
+Your bank checks those documents against the LC terms before releasing payment.
+
+
+The critical requirement: Every field on your proforma invoice must exactly match the corresponding fields on the commercial invoice and other shipping documents. A different HSN code, a different quantity, a different Incoterm, any discrepancy makes the LC "discrepant," and the bank can reject the documents and hold up your payment.
+
+
+
+This is why the proforma invoice deserves the same care as your final commercial invoice, even though it's technically a preliminary document.
+
+Key features of an effective proforma invoice
+An effective proforma invoice can set the stage for smooth trade. Some of its key features include HSN/SAC codes, currency, tax, payment terms, and estimated delivery.
+
+
+
+HSN/SAC codes
+HSN (Harmonized System of Nomenclature) codes are used for naming and uniquely classifying trade goods. The SAC (Service Accounting Code) similarly applies to various services, their identification, and classification. As per the GST regulations in India, the proforma invoice should include information on both.
+
+
+
+Currency
+
+Another invoicing requirement in international export is currency specification. The document should specify the currency for payment terms and related calculations on the total amount, broken down, if needed.
+
+
+
+Tax
+For both international and national exports, remember to include applicable taxes, such as the VAT or GST, on a proforma invoice, which helps the buyer estimate costs on their end.
+
+
+
+Payment terms
+Depending on initial discussions between both parties, the document should lay out the payment terms transparently.
+
+
+
+Estimated delivery
+Lastly, the document should mention timelines and expected delivery dates, broken down by deliverables, if applicable. This can make logistical planning easier for both parties.
+
+
+
+IEC number 
+Your DGFT-issued 10-digit Import Export Code must be included on all export proforma invoices. Banks require it when processing inward remittances, and customs references it for clearance. Leaving it out creates friction at multiple downstream stages.
+
+
+Incoterms 
+Incoterms (e.g., FOB Mumbai, CIF London, EXW Surat) define exactly who is responsible for freight, insurance, and risk at each stage of shipment. They directly affect your pricing calculations and are a standard expectation on any export proforma invoice. Always specify both the Incoterm and the named place.
+
+Challenges in creating a proforma invoice
+When creating proforma invoices, you might face challenges like incorrect formats, missing information, and miscommunications. These can lead to delays and confusion later.
+
+
+
+Incorrect format
+The proforma invoice, its format, and the details it carries have to be consistent. Otherwise, it can create confusion and make document processing a lengthier process. Hence, remember to use a consistent proforma invoice format for all your exports.
+
+
+
+Missing regulatory information
+Missing or miscommunicated regulatory information can lead to penalties. So, remember to include all required details in the proforma invoice.
+
+
+
+Exchange rate risks
+The time period between issuing the proforma invoice and receiving the payment can be long. Fluctuating exchange rates can affect the final amount.
+
+
+
+In addition to these, manually creating proforma invoices can come with its own set of challenges. Time and resource consumption, human errors, inefficiency, and compliance risks, being a few. To work around these, it’s best to follow a few general practices.
+
+
+
+Incorrect or outdated HS codes 
+Using the wrong HSN code on your proforma creates a mismatch with the later commercial invoice and shipping bill and that mismatch can trigger customs delays, duty reclassification, or rejection by the buyer's bank when checking documents against LC terms.
+
+ 
+
+Worth noting: DGFT updated ITC-HS codes to an 8-digit classification in 2025, so if your proforma templates haven't been updated, you could be using codes that no longer apply. Double-check your HS codes against the current ITC-HS schedule before issuing any new proforma invoices.
+
+
+
+Wrong RBI purpose code 
+For service exporters and freelancers, selecting the wrong RBI purpose code, for example, using P0802 for software consultancy when P0806 applies to information services, causes issues with EDPMS reconciliation, eFIRA generation, and can attract compliance scrutiny from your AD bank.
+
+ 
+
+The purpose code you put on the proforma follows the transaction all the way through to payment receipt. Getting it right at the proforma stage prevents problems later. Use Xflow's Purpose Codes tool to identify the correct code for your service type.
+
+
+
+In addition to these, manually creating proforma invoices can come with its own set of challenges, time and resource consumption, human errors, inefficiency, and compliance risks among them. To work around these, it's best to follow a few general practices.
+
+Best practices for generating and sharing proforma invoices
+Some best practices to create an effective proforma invoice include using standard templates, digitally signing invoices, and accounting for currency conversion when writing the document.
+
+
+
+Here’s a closer look at each of these:
+
+
+
+Use standard templates
+Using standard, professional templates for all your proforma invoices is a key step. It shows professionalism and makes document processing easier in the long run.
+
+
+
+Digitally sign invoices
+Use digital signatures for credibility and to ensure the validity of the invoice.
+
+
+
+Account for currency conversion
+If your business conducts cross-border exports, account for currency conversions within the invoice. Mention exchange rates and specify how currency conversion will be dealt with. 
+
+
+
+Use Xflow's FX AI Analyst to time your conversions around macro events that move exchange rates, and the Currency Converter tool to quote accurate figures at the time of issuing the proforma.
+
+
+
+Include IEC and Incoterms by default 
+These two fields are the most distinctly Indian-export-specific items on a proforma invoice, and they're the ones most commonly left out of generic templates. Make IEC and Incoterms standard fields in every proforma template you use regardless of what the buyer specifically requests. Omitting them creates friction with banks, freight forwarders, and customs at exactly the moments when you need things to move quickly.
+
+Integrating proforma invoices with invoicing and payment platforms
+Integrating your proforma invoice workflow with the right platform removes a significant amount of manual overhead. With Xflow Invoicing, you can create and send invoices, including proformas,  directly from the platform, with all the mandatory fields (IEC, HSN/SAC, Incoterms, purpose code) built into the template.
+
+
+
+When a payment comes in against your proforma, Xflow automatically generates an eFIRA (electronic Foreign Inward Remittance Advice) within 24 hours, which you can then match back to the proforma invoice reference for EDPMS reconciliation. For exporters receiving multiple international payments per month, this automation removes the most time-consuming part of the compliance workflow.
+
+
+
+Xflow also integrates with accounting platforms through its API, meaning your payments, invoices, and reconciliation records stay in sync without manual data entry. 
+
+Legal and regulatory compliance
+If you provide a proforma invoice to your buyers, make sure to follow legal and regulatory compliances like GST guidelines, RBI requirements, and export documentation standards.
+
+
+
+GST guidelines
+The GST guidelines do not directly mention proforma invoices. However, as best practice, all proforma invoices must contain HSN and SAC codes, which help identify and classify the goods and services being provided. The invoice should also provide information on the GST registration number, along with different taxation information.
+
+
+
+RBI requirements
+The RBI does not have specific guidelines surrounding the proforma invoice itself, but the purpose code you include on the proforma has real downstream consequences. When your buyer's bank initiates the overseas remittance in response to the proforma, the receiving bank in India uses the purpose code to categorise the inward remittance for FEMA compliance and EDPMS tracking.
+
+
+
+A wrong or missing purpose code on the proforma sets up reconciliation problems at the payment receipt stage that are difficult to unwind later. Use Xflow's Purpose Codes tool to confirm the right code before you issue the proforma.
+
+
+
+Export documentation standards
+Since the proforma is the predecessor to many export documentations in India, and can help in obtaining export financing and insurance, it’s important to prepare it carefully, while communicating all the necessary information.
+
+
+
+Letter of Credit compliance 
+When your buyer uses the proforma invoice to arrange an LC, you're effectively locking in the terms. Every field on the proforma, HSN code, quantity, Incoterms, unit price, currency, port of loading, must exactly match the commercial invoice, packing list, and bill of lading you present later. Any discrepancy gives the bank grounds to reject the LC documents and hold up your payment. Treat the proforma with the same rigour as the final commercial invoice, because the LC is built around it.
+
+
+
+Bonus tip: When creating the proforma invoice, it is best to add legal disclaimers stating that it is not the final invoice, and add authorized signatures and company seals to validate the document.
+
+How Invoicing Is Evolving in India?
+Proforma invoicing is changing, and several of these shifts are already here, not just on the horizon.
+
+
+
+E-invoicing 
+Generating e-invoices through software is the most prominent change. GST e-invoicing is already mandatory for businesses above ₹5 crore turnover. These platforms generate proforma invoices and more on a single interface that connects with your accounting and ERP systems, helping you avoid common human errors and stay compliant.
+
+
+
+Blockchain verification 
+Blockchain technology has added a layer of security to invoicing by authenticating and securing your data. Invoicing software is increasingly incorporating this into its operations.
+
+
+
+Automated GST filing 
+Automation also helps with compliance. Software and tools can automatically file GST, ensuring compliance and efficiency for all invoice types covered under the GST regime.
+
+
+
+DGFT's shift to digital export documentation 
+A more immediately relevant shift for Indian exporters: DGFT has been progressively moving export documentation online through ICEGATE, eBRC (Electronic Bank Realisation Certificate), and the e-Shipping Bill. As these systems become mandatory, the data on your proforma invoice needs to flow cleanly into digital submissions.
+
+Future trends in invoicing
+Proforma invoicing is experiencing a shift in 2025. However, as invoicing requirements continue to evolve, the future looks promising with e-invoicing, blockchain verification, and automated GST filings.
+
+
+
+E-invoicing
+Generating e-invoices through software is the most prominent change. These platforms can generate proforma invoices and more, on a single interface that connects with all your accounting and ERP systems. Moving away from manual invoice generation can help you avoid common human errors.
+
+
+
+Blockchain verification
+The latest blockchain technology has added a layer of security to invoicing. Blockchain works by authenticating and securing your data. Invoicing software frequently makes use of blockchain tech in its operations.
+
+
+
+Automated GST filing
+Automation also helps with compliance. Software and tools can automatically file GST, ensuring compliance and efficiency for all invoice types covered under the GST regime.
+
+Why Xflow is built to simplify global invoicing and cross-border payment workflows?
+For Indian exporters frequently engaged in cross-border trade, having a reliable payment platform is critical. Xflow provides all necessary global payment services, including invoicing, in a single, user-friendly platform.
+
+
+
+With Xflow Invoicing, you can create and send proforma invoices and commercial invoices directly from the platform, with all the fields Indian exporters need (IEC, HSN/SAC, Incoterms, RBI purpose code) built in as standard.
+
+
+
+Every inward remittance you receive through Xflow comes with an automatically generated eFIRA within 24 hours, matched to your invoice reference and ready for EDPMS reconciliation, at zero cost.
+
+
+
+Xflow's FX AI Analyst helps you time currency conversions around macro events, like RBI rate decisions, so you're not leaving money on the table when the USD/INR rate moves.
+
+
+
+All of this runs on the lowest FX rates, with no hidden fees, and under RBI PA-CB authorisation, so your international payment flows are compliant by design.
+
+
+
+Frequently asked questions
+
+1. Is GST applicable on the proforma invoice?
+
+Since the proforma invoice is only a draft outlining the trade, and not a tax invoice, GST on proforma invoice is not applicable. The GST registration number is mentioned on most proforma invoices, regardless.
+
+
+2. What is the difference between a regular and a proforma invoice?
+
+A regular, commercial invoice is a legally binding document that requires payment and can be used for GST filing. A proforma invoice does not have the same legal binding, and is only used to communicate details, terms, pricing, and export order confirmation.
+
+
+3. Do freelancers need a proforma invoice?
+
+Freelancers can definitely benefit from having a proforma invoice in place for their business, since it can be used to communicate the terms and particulars of their services to potential buyers. The proforma invoice can help set clear expectations before the work even begins.
+
+
+4. How is proforma invoice used in export compliance?
+
+For Indian exporters, the proforma invoice is the first official document of the trade process. When the buyer accepts the terms of the trade, the proforma invoice can help prepare customs clearance documents. Later, it can be used to create the commercial invoice that matches the invoice formats for export required by customs, shipping lines, and banks.
+
+
+5. What details must an export proforma invoice include in India?
+
+At a minimum: exporter name, GSTIN, and IEC number; buyer details; itemised description with HSN or SAC codes; quantity, unit price, and total value; currency; Incoterms and port of loading; payment terms; validity date; and RBI purpose code (for service exports). For goods exports, also include the HS code for customs reference.
+
+
+6. Can a proforma invoice be used to get a Letter of Credit?
+
+Yes, this is one of its primary uses in Indian export trade. Your overseas buyer submits your proforma invoice to their bank to arrange an LC in your favour. Once issued, every field on the proforma must match the commercial invoice and shipping documents exactly and any discrepancy can cause the LC to be rejected, holding up your payment.
+
+
+7. Is an IEC number mandatory on a proforma invoice?
+
+It's not legally mandated on the proforma itself, but it's standard practice and practically required. Banks need it when processing inward remittances and customs references it for clearance. Leaving it out creates unnecessary friction downstream.
+
+
+8. What is the validity period of a proforma invoice?
+
+There's no fixed validity period set by law, you set it yourself and state it clearly on the document. Common practice is 15-30 days for commodity goods and 30-60 days for manufacturing orders. Once the validity expires, if the buyer hasn't confirmed, you'll need to issue a new proforma invoice with updated pricing and terms.
+

@@ -1,0 +1,49 @@
+What is Loan Origination System?
+Loan origination is the term used to explain the process in which a company or an individual obtains a loan from a lending entity such as bank, NBFC, micro financing company and so on.
+
+Loan origination in India involves multiple steps, starting from pre-qualification to fund approval and disbursal, and requires the presentation of key documents that support the interests of both parties involved. 
+
+The need for instant gratification among the millennials has forced lenders to become technology savvy and embrace digital platforms more than ever. This has led to the rise of Loan Origination System (LOS) – a system developed specifically to support the loan application process for banks and other financial institutions.  
+
+LOS is important for lenders because it plays a significant role in allowing the lending organization to stand out of the competition by eliminating inefficiencies, reducing cost of customer acquisition and enhancing customer experience.
+
+This guide will take you through every step of the loan origination process and will explain how LOS employs various techniques to overcome the drawbacks of the long paper trail process. 
+
+How big is the loan origination industry in India?
+Research says, that 22 million Indians look for new opportunities for credit, every single month. On an average, there are about 590 Google searches for the keyword, “Loan origination system” or “LOS” every month. 
+
+While the pandemic may have accelerated some new trends and paved way for changes in the loan origination sector, the need for credit and the loan origination system are bound to grow.
+
+What are the issues that arise from the loan origination process and how can LOS solve them?
+In the traditional lending system, a single agent or the relationship manager acts as the face of the lending organization. This single person deals with all the stakeholders of the process and navigates through multiple layers to deliver the right information to the customer as well as the credit analysis desk.  
+
+From the process perspective, loan origination continues to be linear and involved with manual interventions. This leads to lack of transparency and predictability throughout the process. As a result, the turnaround time of loan applications remain high (sometimes even as high as 6 months) and causes operational inefficiency and customer dissatisfaction.
+
+From the data perspective, manual entries lead to multiple errors and the concept of real-time data is almost absent. While some lending institutions claim to have automated certain workflows within the process, data tends to remain trapped within Word or PDF documents, and their real potential goes untapped. 
+
+While finding the right technical solution to these problems, seems to be the most logical next step, skeptics think otherwise – what is the need to change when banks and other lending institutions have practiced the same for many decades?
+
+To start with, the industry dynamics have changed. Customers have greater demand than before, and the regulatory landscape has become more demanding too. From the business point of view, the cost of loan origination system has gone up considerably and the profits have come down. 
+As a result, lenders are opting for digitization to empower their own business as well as the consumer.
+
+What can we expect from the LOS?
+Lending institutions mainly focus on three important factors, 
+
+Increased efficiency and speed of operations.
+Unfaltering customer experience.
+Optimally managed risk.
+Paper-based loan approval processes or the use of spreadsheets to underwrite credit can be too cumbersome to achieve these business goals. A robust, scalable, technology-enabled solution such as the LOS is the answer to this business problem. 
+
+Note: Specific uses of LOS at each stage of the loan origination process has been discussed below. 
+
+Different Types of Users
+So, who needs the Loan origination system the most? Below is a list of businesses that can benefit for engaging a LOS.
+
+Banks
+Small Finance Banks
+Non-Banking Financial Institutions (NBFCs)
+Housing Finance Companies (HFCs)
+Micro-Financing Institutions (MFIs)
+Fintech Companies
+Credit Cooperatives
+Mortgage loan originators
