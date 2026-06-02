@@ -2,6 +2,7 @@ import time
 from typing import Any, Optional
 from app.agents.base import BaseAgent
 from app.rag.evaluator import (
+    compute_accuracy,
     compute_faithfulness, compute_answer_relevancy,
     compute_context_precision, compute_context_recall,
 )
@@ -29,6 +30,11 @@ class RetrievalEvaluationAgent(BaseAgent):
 
         context_texts = [c.get("chunk_text", "") for c in chunks if c.get("chunk_text")]
 
+        if expected:
+            accuracy, acc_rationale = await compute_accuracy(answer, expected)
+        else:
+            accuracy, acc_rationale = 0.0, "No expected answer provided."
+
         faithfulness, faith_rationale = await compute_faithfulness(answer, context_texts)
         relevancy, relevancy_rationale = await compute_answer_relevancy(query, answer)
         cp, cp_rationale = await compute_context_precision(query, context_texts)
@@ -44,6 +50,9 @@ class RetrievalEvaluationAgent(BaseAgent):
         return {
             "agent": self.name,
             "query": query,
+            "generated_answer": answer,
+            "accuracy": accuracy,
+            "accuracy_rationale": acc_rationale,
             "faithfulness": faithfulness,
             "faithfulness_rationale": faith_rationale,
             "answer_relevancy": relevancy,
@@ -59,10 +68,11 @@ class RetrievalEvaluationAgent(BaseAgent):
 
     async def evaluate(self, result: dict[str, Any]) -> dict[str, Any]:
         score = (
-            result.get("faithfulness", 0) * 0.3
-            + result.get("answer_relevancy", 0) * 0.3
-            + result.get("context_precision", 0) * 0.2
-            + result.get("context_recall", 0) * 0.2
+            result.get("accuracy", 0) * 0.2
+            + result.get("faithfulness", 0) * 0.25
+            + result.get("answer_relevancy", 0) * 0.25
+            + result.get("context_precision", 0) * 0.15
+            + result.get("context_recall", 0) * 0.15
         )
         result["overall_score"] = round(score, 4)
         result["answer"] = f"Evaluation complete. Overall score: {result['overall_score']:.2f}"

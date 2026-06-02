@@ -2,23 +2,21 @@
 POST /api/rag/evaluate
 
 Accepts a list of {question, expected_answer} pairs, runs each through the
-RAG pipeline, scores with the LLM-as-judge evaluator, and returns per-question
+multi-agent RAG pipeline (coordinator → evaluator), and returns per-question
 detail alongside aggregate metrics.
 """
 
-import time
 from typing import Any
 
 from fastapi import APIRouter, Depends
 from fastapi.responses import StreamingResponse
 from sqlalchemy.ext.asyncio import AsyncSession
+from pydantic import BaseModel
 
 from app.core.dependencies import get_db
 from app.services.rag_service import rag_service
-from app.embeddings.openai_client import openai_client as ollama_client
-from app.evaluation.evaluator import evaluate_single   # ← new LLM-judge module
+from app.evaluation.agent_runner import evaluate_question, failed_question_row
 from app.core.logging import get_logger
-from pydantic import BaseModel
 
 from app.schemas.rag import RAGQueryRequest, RAGQueryResponse, RAGRetrieveRequest
 from app.schemas.search import SearchResult
@@ -67,6 +65,7 @@ class EvalQuestion(BaseModel):
 class EvaluateRequest(BaseModel):
     questions: list[EvalQuestion]
     dataset_name: str = "eval_run"
+    top_k: int = 5
 
 
 @router.post("/evaluate")
@@ -77,134 +76,15 @@ async def evaluate_rag(req: EvaluateRequest, db: AsyncSession = Depends(get_db))
 
     for qa in req.questions:
         try:
-            # 1. Retrieve context
-            retrieval_result = await rag_service.retrieve(
-                qa.question, strategy="hybrid", top_k=5
-            )
-            context_chunks = [r["chunk_text"] for r in retrieval_result]
-
-            # 2. Generate answer
-            context_str = "\n\n".join(
-                f"[Source: {r.get('filename', 'unknown')}]\n{r['chunk_text']}"
-                for r in retrieval_result
-            )
-            messages = [{
-                "role": "user",
-                "content": (
-                    f"Context:\n{context_str}\n\nQuestion: {qa.question}"
-                    if context_chunks else qa.question
-                ),
-            }]
-            generated_answer = await ollama_client.chat(
-                messages,
-                system=(
-"""
-You are an SBI Banking Knowledge Assistant.
-
-Scope:
-- Treat all user questions as related to SBI Bank, banking operations, financial services, regulatory processes, forms, policies, products, and internal documentation unless the user explicitly changes the topic.
-- The retrieved context is the primary source of truth.
-
-RETRIEVAL-AWARE BEHAVIOR
-
-1. Relevance First
-- Carefully identify which parts of the retrieved context are relevant to the user's question.
-- Ignore unrelated retrieved passages.
-- Do not combine information from unrelated sections unless they clearly refer to the same subject.
-
-2. Direct Answering
-- If the answer is explicitly present, provide the answer directly.
-- For field names, abbreviations, codes, labels, column names, form fields, statuses, and identifiers, return the exact meaning or definition found in the retrieved content.
-- Prefer the most specific answer over a generic one.
-
-3. Multiple Matches
-- If multiple retrieved passages contain possible answers:
-  - Prefer the passage that most closely matches the user's wording and intent.
-  - Prefer SBI-specific definitions over generic banking definitions.
-  - Prefer the most complete and unambiguous answer.
-
-4. Ambiguity Handling
-- If the retrieved information is ambiguous, ask a short clarification question.
-- Do not guess which product, form, scheme, process, or field the user means.
-
-5. Missing Information
-- If the retrieved context does not contain sufficient information:
-  - Use general banking knowledge only when highly confident.
-  - Clearly separate inferred knowledge from retrieved facts.
-  - Never invent SBI-specific procedures, codes, policies, field meanings, product details, limits, eligibility rules, or internal terminology.
-
-6. Conflict Resolution
-- If retrieved passages conflict:
-  - Prefer the more specific passage.
-  - Prefer SBI-specific information over generic information.
-  - Prefer the passage that directly addresses the user's question.
-  - Do not merge conflicting answers.
-
-7. Hallucination Prevention
-- Never fabricate:
-  - Form field definitions
-  - Internal codes
-  - Status meanings
-  - Product rules
-  - Interest rates
-  - Regulatory requirements
-  - Process steps
-  - Branch-specific information
-- If uncertain, say:
-  "I do not have enough information to answer that."
-
-LOCATION DEFAULT
-- If a state is required but not specified, assume Karnataka, India.
-
-RESPONSE STYLE
-- Answer the user's question directly.
-- Keep responses concise.
-- For definition questions, return only the definition unless more detail is requested.
-- Avoid unnecessary explanations, background information, examples, or assumptions.
-- Never mention retrieval, documents, context, sources, or knowledge-base mechanics.
-
-Priority Order:
-1. Relevant retrieved SBI information
-2. Highly confident banking knowledge that does not conflict with retrieved information
-3. "I do not have enough information to answer that."
-"""
-                ),
-            )
-
-            # 3. LLM-as-judge scoring
-            row = await evaluate_single(
-                question=qa.question,
-                expected_answer=qa.expected_answer,
-                generated_answer=generated_answer,
-                context_chunks=context_chunks,
-            )
+            row = await evaluate_question(qa.question, qa.expected_answer, req.top_k)
             per_question.append(row)
             latencies.append(row["latency_ms"])
-
         except Exception as exc:
             logger.error(f"Eval error for '{qa.question[:60]}': {exc}")
             failed.append({"question": qa.question, "error": str(exc)})
-            per_question.append({
-                "question": qa.question,
-                "expected_answer": qa.expected_answer,
-                "generated_answer": "",
-                "retrieved_context": "",
-                "accuracy": 0.0,
-                "faithfulness": 0.0,
-                "answer_relevancy": 0.0,
-                "context_precision": 0.0,
-                "context_recall": 0.0,
-                "accuracy_rationale": "",
-                "faithfulness_rationale": "",
-                "answer_relevancy_rationale": "",
-                "context_precision_rationale": "",
-                "context_recall_rationale": "",
-                "latency_ms": 0.0,
-                "error": str(exc),
-            })
+            per_question.append(failed_question_row(qa.question, qa.expected_answer, str(exc)))
 
-    # Aggregate over successful rows only
-    succeeded = [r for r in per_question if "error" not in r or not r.get("error")]
+    succeeded = [r for r in per_question if not r.get("error")]
 
     def _avg(k: str) -> float:
         if not succeeded:
@@ -212,7 +92,6 @@ Priority Order:
         return round(sum(r.get(k, 0.0) for r in succeeded) / len(succeeded), 4)
 
     return {
-        # Aggregate metrics (for backward compat with existing frontend)
         "accuracy":          _avg("accuracy"),
         "faithfulness":      _avg("faithfulness"),
         "context_precision": _avg("context_precision"),
@@ -220,7 +99,6 @@ Priority Order:
         "answer_relevancy":  _avg("answer_relevancy"),
         "latency_avg_ms":    round(sum(latencies) / len(latencies), 1) if latencies else 0.0,
         "failed_questions":  failed,
-        # NEW: per-question detail for the UI
         "per_question":      per_question,
         "dataset_name":      req.dataset_name,
     }

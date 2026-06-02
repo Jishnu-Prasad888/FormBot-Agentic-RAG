@@ -5,8 +5,8 @@ from app.agents.vector_agent import vector_agent
 from app.agents.sqlite_agent import sqlite_agent
 from app.agents.router_agent import router_agent, _detect_doc_type
 from app.agents.web_agent import web_agent
-from app.agents.evaluator_agent import evaluator_agent
 from app.embeddings.openai_client import openai_client as ollama_client
+from app.core.prompts import DEFAULT_COORDINATOR_SYNTHESIS_PROMPT
 from app.core.logging import get_logger
 
 logger = get_logger("coordinator_agent")
@@ -24,6 +24,19 @@ def _classify_intent(query: str) -> str:
         if any(kw in q_lower for kw in keywords):
             return intent
     return "general"
+
+
+def _dedupe_chunks(chunks: list[dict]) -> list[dict]:
+    """Drop duplicate chunks when router and vector agents return the same hits."""
+    seen: set[str] = set()
+    deduped: list[dict] = []
+    for chunk in chunks:
+        key = chunk.get("chunk_id") or chunk.get("chunk_text", "")[:120]
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(chunk)
+    return deduped
 
 
 class CoordinatorAgent(BaseAgent):
@@ -52,6 +65,7 @@ class CoordinatorAgent(BaseAgent):
             "agents": agents_to_run,
             "context": ctx,
             "top_k": ctx.get("top_k", 5),
+            "synthesis_system": ctx.get("synthesis_system"),
         }
 
     async def execute(self, plan: dict[str, Any]) -> dict[str, Any]:
@@ -100,7 +114,7 @@ class CoordinatorAgent(BaseAgent):
             f"Multiple agents retrieved the following information:\n\n{combined_context}\n\n"
             f"Based on all above, provide a comprehensive final answer to: {query}"
         )
-        system = "You are a coordinator that synthesizes information from multiple sources into a single coherent answer."
+        system = plan.get("synthesis_system") or DEFAULT_COORDINATOR_SYNTHESIS_PROMPT
         final_answer = await ollama_client.generate(synthesis_prompt, system=system)
         latency = (time.time() - start) * 1000
 
@@ -108,7 +122,7 @@ class CoordinatorAgent(BaseAgent):
             "agent": self.name,
             "query": query,
             "answer": final_answer,
-            "chunks": all_chunks,
+            "chunks": _dedupe_chunks(all_chunks),
             "agent_results": agent_results,
             "intent": plan["intent"],
             "latency_ms": round(latency, 2),
