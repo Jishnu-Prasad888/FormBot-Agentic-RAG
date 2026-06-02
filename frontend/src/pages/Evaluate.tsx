@@ -65,8 +65,9 @@ const SAMPLE_QAS: QA[] = [
       "The documents cover government schemes and eligibility criteria.",
   },
   {
-    question: "Who is eligible for the scheme?",
-    expected_answer: "Small and marginal farmers with valid land records.",
+    question: "Who is eligible for the SCSS?",
+    expected_answer:
+      "Senior citizens aged 60 and above are eligible for the SCSS.",
   },
 ];
 

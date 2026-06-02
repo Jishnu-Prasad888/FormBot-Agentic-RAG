@@ -16326,3 +16326,857 @@ fastapi.exceptions.ResponseValidationError: 2 validation errors:
 2026-05-27 15:38:17 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
 2026-05-27 15:38:17 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.3ms]
 2026-05-27 15:38:17 | INFO     | rag_platform.main | ← GET /health/db 200 [14.4ms]
+2026-05-29 10:31:17 | INFO     | rag_platform.main | Starting MultimodalRAGPlatform v1.0.0
+2026-05-29 10:31:17 | INFO     | rag_platform.init_db | Initializing database tables...
+2026-05-29 10:31:17 | INFO     | rag_platform.init_db | Database initialized successfully.
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | ChromaDB initialized at ./chroma_db
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | Collection 'table_documents' ready
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | Collection 'pdf_documents' ready
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | Collection 'markdown_documents' ready
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | Collection 'audio_transcripts' ready
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | Collection 'web_documents' ready
+2026-05-29 10:31:18 | INFO     | rag_platform.chromadb_client | All default collections initialized
+2026-05-29 10:31:18 | INFO     | rag_platform.main | Application startup complete
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /api/chroma/collections
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /api/documents
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:31:19 | INFO     | rag_platform.chromadb_client | Collection 'pdf_documents' ready
+2026-05-29 10:31:19 | INFO     | rag_platform.chromadb_client | Collection 'web_documents' ready
+2026-05-29 10:31:19 | INFO     | rag_platform.chromadb_client | Collection 'markdown_documents' ready
+2026-05-29 10:31:19 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:31:19 | INFO     | rag_platform.chromadb_client | Collection 'audio_transcripts' ready
+2026-05-29 10:31:19 | INFO     | rag_platform.chromadb_client | Collection 'table_documents' ready
+2026-05-29 10:31:19 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /api/chroma/collections 200 [77.8ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health 200 [79.7ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/ollama 404 [80.9ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:31:19 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.8ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/ollama 404 [8.7ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health 200 [8.7ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:31:19 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/chroma 200 [13.7ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/ollama 404 [14.7ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/db 200 [148.0ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /api/documents 200 [174.6ms]
+2026-05-29 10:31:19 | ERROR    | rag_platform.exceptions | Unhandled exception: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA510>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA540>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 2 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA510>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA540>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA510>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA540>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:31:19 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/ollama 404 [0.5ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/chroma 200 [0.0ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health 200 [4.9ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/db 200 [453.0ms]
+2026-05-29 10:31:19 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:31:19 | INFO     | rag_platform.main | ← GET /health/db 200 [7.0ms]
+2026-05-29 10:31:28 | INFO     | rag_platform.main | → GET /api/documents
+2026-05-29 10:31:28 | INFO     | rag_platform.main | ← GET /api/documents 200 [34.6ms]
+2026-05-29 10:31:28 | INFO     | rag_platform.main | → GET /api/documents
+2026-05-29 10:31:28 | INFO     | rag_platform.main | ← GET /api/documents 200 [20.3ms]
+2026-05-29 10:31:44 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:31:44 | INFO     | rag_platform.main | ← GET /health 200 [4.2ms]
+2026-05-29 10:31:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:31:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:31:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.9ms]
+2026-05-29 10:31:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:31:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:31:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.4ms]
+2026-05-29 10:31:44 | INFO     | rag_platform.main | ← GET /health/db 200 [47.2ms]
+2026-05-29 10:31:48 | INFO     | rag_platform.main | → OPTIONS /api/search/hybrid
+2026-05-29 10:31:48 | INFO     | rag_platform.main | ← OPTIONS /api/search/hybrid 200 [0.0ms]
+2026-05-29 10:31:48 | INFO     | rag_platform.main | → POST /api/search/hybrid
+2026-05-29 10:31:48 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='scss'
+2026-05-29 10:31:48 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='scss' collection='text_documents'
+2026-05-29 10:31:52 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:31:52 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-29 10:31:52 | INFO     | rag_platform.main | ← POST /api/search/hybrid 200 [4262.8ms]
+2026-05-29 10:32:08 | INFO     | rag_platform.main | → POST /api/search/hybrid
+2026-05-29 10:32:08 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='senior citizen'
+2026-05-29 10:32:08 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='senior citizen' collection='text_documents'
+2026-05-29 10:32:10 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:32:10 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-29 10:32:10 | INFO     | rag_platform.main | ← POST /api/search/hybrid 200 [1562.8ms]
+2026-05-29 10:32:14 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:32:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:32:14 | INFO     | rag_platform.main | ← GET /health 200 [6.9ms]
+2026-05-29 10:32:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:32:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [14.0ms]
+2026-05-29 10:32:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:32:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:32:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [4.2ms]
+2026-05-29 10:32:14 | INFO     | rag_platform.main | ← GET /health/db 200 [62.7ms]
+2026-05-29 10:32:16 | INFO     | rag_platform.main | → POST /api/search/hybrid
+2026-05-29 10:32:16 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='SCSS'
+2026-05-29 10:32:16 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='SCSS' collection='text_documents'
+2026-05-29 10:32:17 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:32:17 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-29 10:32:17 | INFO     | rag_platform.main | ← POST /api/search/hybrid 200 [1110.6ms]
+2026-05-29 10:32:26 | INFO     | rag_platform.main | → OPTIONS /api/search/vector
+2026-05-29 10:32:26 | INFO     | rag_platform.main | ← OPTIONS /api/search/vector 200 [0.5ms]
+2026-05-29 10:32:26 | INFO     | rag_platform.main | → POST /api/search/vector
+2026-05-29 10:32:26 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='SCSS' collection='text_documents'
+2026-05-29 10:32:27 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:32:27 | INFO     | rag_platform.main | ← POST /api/search/vector 200 [720.9ms]
+2026-05-29 10:32:33 | INFO     | rag_platform.main | → OPTIONS /api/search/bm25
+2026-05-29 10:32:33 | INFO     | rag_platform.main | ← OPTIONS /api/search/bm25 200 [0.0ms]
+2026-05-29 10:32:33 | INFO     | rag_platform.main | → POST /api/search/bm25
+2026-05-29 10:32:33 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-29 10:32:33 | INFO     | rag_platform.main | ← POST /api/search/bm25 200 [2.9ms]
+2026-05-29 10:32:39 | INFO     | rag_platform.main | → OPTIONS /api/search/metadata
+2026-05-29 10:32:39 | INFO     | rag_platform.main | ← OPTIONS /api/search/metadata 200 [0.0ms]
+2026-05-29 10:32:39 | INFO     | rag_platform.main | → POST /api/search/metadata
+2026-05-29 10:32:40 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:32:40 | INFO     | rag_platform.main | ← POST /api/search/metadata 200 [1006.0ms]
+2026-05-29 10:32:44 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:32:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:32:44 | INFO     | rag_platform.main | ← GET /health 200 [0.0ms]
+2026-05-29 10:32:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:32:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.0ms]
+2026-05-29 10:32:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:32:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:32:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [11.5ms]
+2026-05-29 10:32:44 | INFO     | rag_platform.main | ← GET /health/db 200 [60.4ms]
+2026-05-29 10:32:45 | INFO     | rag_platform.main | → OPTIONS /api/search/table
+2026-05-29 10:32:45 | INFO     | rag_platform.main | ← OPTIONS /api/search/table 200 [3.0ms]
+2026-05-29 10:32:45 | INFO     | rag_platform.main | → POST /api/search/table
+2026-05-29 10:32:46 | INFO     | rag_platform.chromadb_client | Collection 'table_documents' ready
+2026-05-29 10:32:46 | INFO     | rag_platform.main | ← POST /api/search/table 200 [1089.5ms]
+2026-05-29 10:33:12 | INFO     | rag_platform.main | → POST /api/search/vector
+2026-05-29 10:33:12 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='scss' collection='text_documents'
+2026-05-29 10:33:13 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:33:13 | INFO     | rag_platform.main | ← POST /api/search/vector 200 [1049.3ms]
+2026-05-29 10:33:14 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:33:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:33:14 | INFO     | rag_platform.main | ← GET /health 200 [6.1ms]
+2026-05-29 10:33:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:33:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [2.4ms]
+2026-05-29 10:33:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:33:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:33:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.1ms]
+2026-05-29 10:33:14 | INFO     | rag_platform.main | ← GET /health/db 200 [39.3ms]
+2026-05-29 10:33:24 | INFO     | rag_platform.main | → POST /api/search/table
+2026-05-29 10:33:26 | INFO     | rag_platform.chromadb_client | Collection 'table_documents' ready
+2026-05-29 10:33:26 | INFO     | rag_platform.main | ← POST /api/search/table 200 [2680.9ms]
+2026-05-29 10:33:32 | INFO     | rag_platform.main | → POST /api/search/hybrid
+2026-05-29 10:33:32 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='scss'
+2026-05-29 10:33:32 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='scss' collection='text_documents'
+2026-05-29 10:33:33 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:33:33 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-29 10:33:33 | INFO     | rag_platform.main | ← POST /api/search/hybrid 200 [882.8ms]
+2026-05-29 10:33:36 | INFO     | rag_platform.main | → POST /api/search/hybrid
+2026-05-29 10:33:36 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='SCSS'
+2026-05-29 10:33:36 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='SCSS' collection='text_documents'
+2026-05-29 10:33:37 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-05-29 10:33:37 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-29 10:33:37 | INFO     | rag_platform.main | ← POST /api/search/hybrid 200 [883.1ms]
+2026-05-29 10:33:45 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:33:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:33:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:33:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:33:45 | INFO     | rag_platform.main | ← GET /health 200 [12.5ms]
+2026-05-29 10:33:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:33:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [28.0ms]
+2026-05-29 10:33:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [30.8ms]
+2026-05-29 10:33:45 | INFO     | rag_platform.main | ← GET /health/db 200 [59.7ms]
+2026-05-29 10:34:14 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:34:14 | INFO     | rag_platform.main | ← GET /health 200 [0.5ms]
+2026-05-29 10:34:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:34:14 | INFO     | rag_platform.main | ← GET /health/db 200 [19.0ms]
+2026-05-29 10:34:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:34:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [15.4ms]
+2026-05-29 10:34:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:34:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:34:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [4.6ms]
+2026-05-29 10:34:44 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:34:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:34:44 | INFO     | rag_platform.main | ← GET /health 200 [6.2ms]
+2026-05-29 10:34:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:34:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:34:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:34:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [40.7ms]
+2026-05-29 10:34:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [65.4ms]
+2026-05-29 10:34:45 | INFO     | rag_platform.main | ← GET /health/db 200 [138.1ms]
+2026-05-29 10:35:14 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:35:14 | INFO     | rag_platform.main | ← GET /health 200 [1.3ms]
+2026-05-29 10:35:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:35:14 | INFO     | rag_platform.main | ← GET /health/db 200 [21.0ms]
+2026-05-29 10:35:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:35:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [23.6ms]
+2026-05-29 10:35:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:35:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:35:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.8ms]
+2026-05-29 10:35:44 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:35:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:35:44 | INFO     | rag_platform.main | ← GET /health 200 [2.8ms]
+2026-05-29 10:35:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:35:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.4ms]
+2026-05-29 10:35:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:35:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:35:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.8ms]
+2026-05-29 10:35:44 | INFO     | rag_platform.main | ← GET /health/db 200 [29.9ms]
+2026-05-29 10:36:14 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:36:14 | INFO     | rag_platform.main | ← GET /health 200 [0.0ms]
+2026-05-29 10:36:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:36:14 | INFO     | rag_platform.main | ← GET /health/db 200 [6.9ms]
+2026-05-29 10:36:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:36:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [16.1ms]
+2026-05-29 10:36:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:36:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:36:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.0ms]
+2026-05-29 10:36:44 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:36:44 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:36:44 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:36:44 | INFO     | rag_platform.main | ← GET /health 200 [7.1ms]
+2026-05-29 10:36:44 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.8ms]
+2026-05-29 10:36:44 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:36:44 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:36:44 | INFO     | rag_platform.main | ← GET /health/ollama 404 [17.4ms]
+2026-05-29 10:36:44 | INFO     | rag_platform.main | ← GET /health/db 200 [49.8ms]
+2026-05-29 10:37:10 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-29 10:37:10 | ERROR    | rag_platform.exceptions | Unhandled exception: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA960>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6421310>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 2 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA960>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6421310>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B61DA960>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6421310>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-29 10:37:11 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-29 10:37:11 | ERROR    | rag_platform.exceptions | Unhandled exception: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6423830>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6421C40>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 2 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6423830>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6421C40>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6423830>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6421C40>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-29 10:37:11 | INFO     | rag_platform.main | → GET /api/chat/conversations
+2026-05-29 10:37:11 | ERROR    | rag_platform.exceptions | Unhandled exception: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6494890>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6495370>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+ | path=/api/chat/conversations
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    |     self.gen.throw(value)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 2 validation errors:
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6494890>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    |   {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6495370>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\main.py", line 79, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 2 validation errors:
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 0, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6494890>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+  {'type': 'get_attribute_error', 'loc': ('response', 'conversations', 1, 'messages'), 'msg': "Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)", 'input': <app.database.models.Conversation object at 0x00000299B6495370>, 'ctx': {'error': "MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)"}}
+
+2026-05-29 10:37:14 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:37:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:37:14 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:37:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:37:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:37:14 | INFO     | rag_platform.main | ← GET /health 200 [26.3ms]
+2026-05-29 10:37:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [23.5ms]
+2026-05-29 10:37:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [22.7ms]
+2026-05-29 10:37:14 | INFO     | rag_platform.main | ← GET /health/db 200 [47.9ms]
+2026-05-29 10:37:18 | INFO     | rag_platform.main | → OPTIONS /api/chat/stream
+2026-05-29 10:37:18 | INFO     | rag_platform.main | ← OPTIONS /api/chat/stream 200 [6.2ms]
+2026-05-29 10:37:18 | INFO     | rag_platform.main | → POST /api/chat/stream
+2026-05-29 10:37:18 | INFO     | rag_platform.main | ← POST /api/chat/stream 200 [19.9ms]
+2026-05-29 10:37:18 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='tell me about scss'
+2026-05-29 10:37:18 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='tell me about scss' collection='text_documents'
+2026-05-29 10:37:18 | ERROR    | rag_platform.openai_client | OpenAI embeddings connection error: [Errno 11001] getaddrinfo failed
+2026-05-29 10:37:18 | WARNING  | rag_platform.hybrid_rag | Vector retrieval failed: OpenAI connection failed: [Errno 11001] getaddrinfo failed
+2026-05-29 10:37:18 | WARNING  | rag_platform.bm25 | BM25 index not found for 'text_documents'
+2026-05-29 10:37:18 | ERROR    | rag_platform.openai_client | OpenAI stream error: [Errno 11001] getaddrinfo failed
+2026-05-29 10:37:18 | ERROR    | rag_platform.exceptions | Unhandled exception: OpenAI connection failed: [Errno 11001] getaddrinfo failed | path=/api/chat/stream
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 188, in __call__
+    |     await response(scope, wrapped_receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 222, in __call__
+    |     async for chunk in self.body_iterator:
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 179, in body_stream
+    |     raise app_exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\routing.py", line 74, in app
+    |     await response(scope, receive, send)
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\responses.py", line 252, in __call__
+    |     async with anyio.create_task_group() as task_group:
+    |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+    |     raise BaseExceptionGroup(
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+      |     await self.app(scope, receive, _send)
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+      |     with collapse_excgroups():
+      |   File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+      |     self.gen.throw(value)
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+      |     raise exc
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\responses.py", line 255, in wrap
+      |     await func()
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\responses.py", line 244, in stream_response
+      |     async for chunk in self.body_iterator:
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\api\chat.py", line 27, in token_generator
+      |     async for token in chat_service.chat_stream(db, req.message, req.conversation_id, req.top_k):
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\services\chat_service.py", line 183, in chat_stream
+      |     async for token in ollama_client.chat_stream(messages, system=SYSTEM_PROMPT):
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\embeddings\openai_client.py", line 113, in chat_stream
+      |     async for token in self._chat_stream(chat_messages, model):
+      |   File "C:\Users\Jishnu\Desktop\SRAG\backend\app\embeddings\openai_client.py", line 150, in _chat_stream
+      |     raise OpenAIConnectionError(str(e))
+      | app.core.exceptions.OpenAIConnectionError: OpenAI connection failed: [Errno 11001] getaddrinfo failed
+      +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Jishnu\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\responses.py", line 255, in wrap
+    await func()
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\venv\Lib\site-packages\starlette\responses.py", line 244, in stream_response
+    async for chunk in self.body_iterator:
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\api\chat.py", line 27, in token_generator
+    async for token in chat_service.chat_stream(db, req.message, req.conversation_id, req.top_k):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\services\chat_service.py", line 183, in chat_stream
+    async for token in ollama_client.chat_stream(messages, system=SYSTEM_PROMPT):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\embeddings\openai_client.py", line 113, in chat_stream
+    async for token in self._chat_stream(chat_messages, model):
+  File "C:\Users\Jishnu\Desktop\SRAG\backend\app\embeddings\openai_client.py", line 150, in _chat_stream
+    raise OpenAIConnectionError(str(e))
+app.core.exceptions.OpenAIConnectionError: OpenAI connection failed: [Errno 11001] getaddrinfo failed
+2026-05-29 10:37:50 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:37:50 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:37:50 | INFO     | rag_platform.main | ← GET /health 200 [2.1ms]
+2026-05-29 10:37:50 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:37:50 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:37:50 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.6ms]
+2026-05-29 10:37:50 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:37:50 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.9ms]
+2026-05-29 10:37:50 | INFO     | rag_platform.main | ← GET /health/db 200 [20.9ms]
+2026-05-29 10:38:37 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:38:37 | INFO     | rag_platform.main | ← GET /health 200 [3.5ms]
+2026-05-29 10:38:37 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:38:37 | INFO     | rag_platform.main | ← GET /health/db 200 [6.3ms]
+2026-05-29 10:38:37 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:38:37 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.0ms]
+2026-05-29 10:38:37 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:38:37 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:38:37 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.9ms]
+2026-05-29 10:38:45 | INFO     | rag_platform.main | → GET /health
+2026-05-29 10:38:45 | INFO     | rag_platform.main | → GET /health/db
+2026-05-29 10:38:45 | INFO     | rag_platform.main | ← GET /health 200 [2.0ms]
+2026-05-29 10:38:45 | INFO     | rag_platform.main | → GET /health/chroma
+2026-05-29 10:38:45 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.4ms]
+2026-05-29 10:38:45 | INFO     | rag_platform.main | → GET /health/ollama
+2026-05-29 10:38:45 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-05-29 10:38:45 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.5ms]
+2026-05-29 10:38:45 | INFO     | rag_platform.main | ← GET /health/db 200 [18.1ms]
