@@ -11,3 +11,8 @@ dist/
 build/
 backend/logs/rag.log
 *.log
+*.bin
+*.pkl
+*.log
+eval/
+chroma_db/
