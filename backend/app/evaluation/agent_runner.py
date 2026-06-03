@@ -1,16 +1,21 @@
 """
-Multi-agent evaluation runner.
+Simple nearest-neighbor RAG evaluation.
 
-Orchestrates coordinator_agent (retrieval + answer synthesis) and
-evaluator_agent (LLM-as-judge scoring) for each ground-truth Q&A pair.
+Uses direct retrieval + LLM generation and scoring (no multi-agent orchestration).
 """
 
 import time
 from typing import Any
 
-from app.agents.coordinator_agent import coordinator_agent
-from app.agents.evaluator_agent import evaluator_agent
-from app.core.prompts import SBI_SYSTEM_PROMPT
+from app.services.rag_service import rag_service
+from app.evaluation.evaluator import evaluate_single
+from app.embeddings.openai_client import openai_client
+from app.core.logging import get_logger
+
+logger = get_logger("evaluation.agent_runner")
+
+RAG_SYSTEM = """You are a helpful assistant. Answer the question using the provided context.
+Be concise and accurate. If the answer is not in the context, say 'Not found in available documents'."""
 
 
 def _chunk_texts(chunks: list[dict]) -> list[str]:
@@ -23,36 +28,38 @@ async def evaluate_question(
     top_k: int = 5,
 ) -> dict[str, Any]:
     """
-    Run one Q&A pair through the multi-agent eval pipeline.
-
-    1. coordinator_agent — routes to retrieval agents, synthesizes final answer
-    2. evaluator_agent — scores answer against expected_answer and retrieved chunks
+    Run one Q&A pair through simple nearest-neighbor RAG.
+    
+    1. Retrieve top_k chunks (hybrid search)
+    2. Generate answer from context
+    3. Score with LLM-as-judge
     """
     t0 = time.time()
 
-    coord = await coordinator_agent.run(
-        question,
-        {"top_k": top_k, "synthesis_system": SBI_SYSTEM_PROMPT},
-    )
-    chunks = coord.get("chunks", [])
-    generated_answer = coord.get("answer", "")
-
-    scores = await evaluator_agent.run(
-        question,
-        {
-            "answer": generated_answer,
-            "chunks": chunks,
-            "expected_answer": expected_answer,
-        },
-    )
-
+    # Retrieve chunks
+    chunks = await rag_service.retrieve(question, strategy="hybrid", top_k=top_k)
+    
+    # Generate answer
+    chunk_texts = _chunk_texts(chunks)
+    context_text = "\n---\n".join(chunk_texts)
+    
+    if context_text.strip():
+        prompt = f"Context:\n{context_text}\n\nQuestion: {question}"
+    else:
+        prompt = f"Question: {question}"
+    
+    generated_answer = await openai_client.generate(prompt, system=RAG_SYSTEM)
+    
+    # Score
+    scores = await evaluate_single(question, generated_answer, expected_answer, chunks)
+    
     latency_ms = round((time.time() - t0) * 1000, 1)
 
     return {
         "question": question,
         "expected_answer": expected_answer,
         "generated_answer": generated_answer,
-        "retrieved_context": "\n---\n".join(_chunk_texts(chunks)),
+        "retrieved_context": context_text,
         "accuracy": scores.get("accuracy", 0.0),
         "faithfulness": scores.get("faithfulness", 0.0),
         "answer_relevancy": scores.get("answer_relevancy", 0.0),
@@ -64,11 +71,6 @@ async def evaluate_question(
         "context_precision_rationale": scores.get("context_precision_rationale", ""),
         "context_recall_rationale": scores.get("context_recall_rationale", ""),
         "latency_ms": latency_ms,
-        "intent": coord.get("intent"),
-        "agents_invoked": [r.get("agent") for r in coord.get("agent_results", [])],
-        "retrieval_coverage": scores.get("retrieval_coverage"),
-        "retrieval_ok": scores.get("retrieval_ok"),
-        "overall_score": scores.get("overall_score"),
     }
 
 
@@ -90,10 +92,5 @@ def failed_question_row(question: str, expected_answer: str, error: str) -> dict
         "context_precision_rationale": "",
         "context_recall_rationale": "",
         "latency_ms": 0.0,
-        "intent": None,
-        "agents_invoked": [],
-        "retrieval_coverage": None,
-        "retrieval_ok": None,
-        "overall_score": None,
         "error": error,
     }
