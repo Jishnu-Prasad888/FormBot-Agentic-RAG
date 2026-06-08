@@ -10,6 +10,7 @@ from typing import Any
 from app.services.rag_service import rag_service
 from app.evaluation.evaluator import evaluate_single
 from app.embeddings.openai_client import openai_client
+from app.rag.cross_encoder import cross_encoder
 from app.core.logging import get_logger
 
 logger = get_logger("evaluation.agent_runner")
@@ -30,13 +31,17 @@ async def evaluate_question(
     Run one Q&A pair through simple nearest-neighbor RAG.
     
     1. Retrieve top_k chunks (hybrid search)
-    2. Generate answer from context
-    3. Score with LLM-as-judge
+    2. Rerank with cross-encoder
+    3. Generate answer from context
+    4. Score with LLM-as-judge
     """
     t0 = time.time()
 
     # Retrieve chunks
-    chunks = await rag_service.retrieve(question, strategy="hybrid", top_k=top_k)
+    chunks = await rag_service.retrieve(question, strategy="hybrid", top_k=top_k * 2)
+    
+    # Rerank with cross-encoder
+    chunks = cross_encoder.rerank(question, chunks, top_k=top_k)
     
     # Generate answer
     chunk_texts = _chunk_texts(chunks)
