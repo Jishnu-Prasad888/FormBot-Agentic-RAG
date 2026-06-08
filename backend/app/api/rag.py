@@ -66,6 +66,8 @@ class EvaluateRequest(BaseModel):
     questions: list[EvalQuestion]
     dataset_name: str = "eval_run"
     top_k: int = 5
+    use_query_expansion: bool = False
+    num_expansions: int = 2
 
 
 @router.post("/evaluate")
@@ -76,7 +78,13 @@ async def evaluate_rag(req: EvaluateRequest, db: AsyncSession = Depends(get_db))
 
     for qa in req.questions:
         try:
-            row = await evaluate_question(qa.question, qa.expected_answer, req.top_k)
+            row = await evaluate_question(
+                qa.question, 
+                qa.expected_answer, 
+                req.top_k,
+                req.use_query_expansion,
+                req.num_expansions
+            )
             per_question.append(row)
             latencies.append(row["latency_ms"])
         except Exception as exc:
