@@ -1,0 +1,174 @@
+
+Form 121 (Tax Year 2026-27): How to Fill, Submit and Save TDS
+Form 121 is a self declaration form for TDS deduction at nil rate. It replaces Form 15G and Form 15H, with effect from 1st April 2026.  Form 121 is a unified self-declaration form under Income Tax Act 2025 read with the Income Tax Rules 2026. However, the purpose of Form 121 remains the same but simplifies the process by providing a single declaration form for all taxpayers instead of separate forms based on age.
+
+Income Tax Forms 2026
+
+Form 121 is the new income tax form under Income Tax Rules 2026 which replaces the previous Form 15G and Form 15H with effect from April 1, 2026 for Tax Year 2026-27 and onwards. 
+
+What is Form 121?
+Form 121 is the new unified self-declaration form in India that replaces Form 15G and 15H with effect from 1st April 2026 which allows resident individuals and HUFs to prevent TDS deduction on interest, dividends, and other income by declaring that their total income is below the taxable limit. Form 121 can be filed by resident taxpayers irrespective of their age. This is a major update from the old Income Tax Act 1961 which had two different forms based on the age of the taxpayer. 
+
+Particulars	Old Income Tax Framework	New Income Tax Framework
+Form Number	Form No. 15G & 15H	Form No. 121
+Corresponding Section of I.T. Act	Section 197A (1), 197A (1A) & 197A (1C) 	Section 393(6) & 393(7)
+Corresponding Rule	Rule 29C	Rule 211
+Why was Form 121 Introduced?
+The Income Tax Act 1961, had sprawling provisions, often out of sequence, and complicated to understand. Therefore, Income Tax Act, 2025 was introduced, taking effect from 01st April 2026. The new act removed redundant provisions, and ensured easy interpretation of statute and stronger compliance. All the sections, rules and forms has gone through re-numbering and changes. Form 15 G and 15H, which was used for nil TDS deduction for certain income, is now replaced by Form 121. 
+
+Form 121 vs Form 15G vs Form 15H: Key Differences
+Basis	Form 15G	Form 15H	Form 121
+Applicable Law	Governed under the Income Tax Act, 1961	Governed under the Income Tax Act, 1961	Introduced under the Income Tax Act, 2025
+Governing Rule	Rule 29C	Rule 29C	Rule 211
+Relevant Section	Section 197A(1)	Section 197A(1)	Sections 393(6) and 393(7)
+Eligible Taxpayers	Resident individuals below 60 years, HUFs, trusts, and certain other eligible assessees	Resident senior citizens aged 60 years or above	Eligible resident taxpayers declaring nil tax liability
+Ineligible Taxpayers	Companies, partnership firms, and non-residents	Non-residents and individuals below 60 years	Non-residents and taxpayers with estimated tax liability
+Key Condition	Estimated total tax liability should be Nil and total income must generally be below the basic exemption limit	Estimated total tax liability should be Nil	Estimated total tax liability should be Nil under the new tax regime provisions
+Purpose	To prevent TDS deduction on interest income and specified receipts	To prevent TDS deduction mainly on interest income for senior citizens	Unified self-declaration form replacing Forms 15G and 15H for eligible taxpayers
+Age Declaration Requirement	Applicant must declare that they are below 60 years of age	Mandatory declaration confirming senior citizen status (60 years or above)	Age-based distinction removed; applicable based on eligibility and nil tax liability
+UIN Requirement	Deductor must allot a Unique Identification Number (UIN) for every declaration received	Deductor must allot a Unique Identification Number (UIN) for every declaration received	UIN generation and reporting required as prescribed under Rule 211
+ITR Filing History Requirement	PAN mandatory; no specific prior ITR filing condition under the form itself	PAN mandatory; no mandatory ITR history condition	May require validation through previous return filing and compliance records as prescribed under the new framework
+Submission Method	Can be submitted physically or electronically to banks, EPFO, or deductors	Can be submitted physically or electronically to banks or deductors	Expected to be submitted through prescribed digital and electronic modes under the new compliance system
+Primary Users	Salaried individuals, fixed deposit holders, and small taxpayers below 60 years	Pensioners and senior citizen deposit holders	All eligible resident taxpayers seeking a single unified declaration mechanism
+Income Covered	Interest income, EPF withdrawals, insurance commission, rent, and specified payments	Primarily bank or post office interest and other specified incomes	Specified incomes notified for nil-TDS declaration under the Income Tax Act, 2025
+Replacement Status	Existing declaration form	Existing declaration form for senior citizens	Proposed consolidated replacement for Forms 15G and 15H
+Who can File Form 121?
+Form 121 can be filed by resident taxpayers irrespective of their age, who have total income below the taxable limit with a zero tax liability. Resident taxpayers include:
+
+Resident individuals (including senior citizens)
+Hindu Undivided Family (HUFs)
+Other eligible assessees such as certain trusts with total income below the taxable limit
+Conditions to be Eligible for Form 121
+The taxpayer should be a resident in India
+The total tax liability for the year should be zero after deductions and exemptions
+The declaration must be submitted before TDS is deducted by the payer
+Who cannot File Form 121?
+Form 121 cannot be filed by:
+
+A Non-Resident (NRIs)
+Companies and Partnership firms
+Individuals or entities with taxable income and tax liability
+Income Limits - Old Tax Regime vs New Tax Regime
+Category of Taxpayer	Old Tax Regime	New Tax Regime
+Individuals Below 60 Years	Rs. 2.5 lakh	Rs. 4 lakh
+Senior Citizens (60 Years to Below 80 Years)	Rs. 3 lakh	Rs. 4 lakh
+Super Senior Citizens (80 Years and Above)	Rs. 5 lakh	Rs. 4 lakh
+How to Fill Form 121?
+Step 1: Determine your total taxable income for the year and calculate the tax liability on it using ClearTax Income Tax Calculator. 
+
+Step 2: If your total tax liability is zero then you are eligible to submit Form 121. 
+
+Step 3: Download the Form 121 PDF from the income tax department’s website. 
+
+Step 4: Fill in Part A i.e, the Declarant’s details such as PAN, Name, Address, Residential Status, Income details, and all other fields
+
+Step 5: Enter the details of the payer such as TAN of the bank or the institution
+
+Step 6: Sign and submit the declaration to the payer before the deduction of TDS for the year.
+When to submit Form 121?
+
+Form 121 is usually submitted in the beginning of the financial year. However, the form can be filed anytime before TDS is deducted. Once the form is filed, income earned subsequently is eligible for nil TDS deduction.
+
+How to Submit Form 121?
+Form 121 has to be submitted by the taxpayer to each payer individually to avoid TDS deduction. 
+Taxpayers can submit the form manually or online through the respective bank or institution's online facility. 
+Taxpayers should make sure that Form 121 has been submitted before the income has been credited or paid to them i.e., before any TDS has been deducted by the payer. 
+Once Form 121 has been submitted by the taxpayer, the payer i.e., the bank or institution uploads Part B of the form on the Income Tax e-filing portal. 
+Incomes covered under Form 121
+Form 121 can be submitted by eligible taxpayer having the following incomes for Tax Year 2026-27 and onwards:
+
+Interest on bank fixed deposits and savings accounts
+Interest on post office deposits
+Interest on securities or bonds
+Dividend income
+Income from mutual funds
+Payments from life insurance policies
+EPF or PF withdrawals and pension
+Insurance commission
+Rental income
+Other specified incomes where TDS is applicable
+Form 121 - Part A
+Part A of Form 121 captures the basic details of the taxpayer or the declarant and is the first section that must be filled by all eligible applicants such as resident individuals or HUFs.
+
+Details required in Part A
+Name of the taxpayer
+PAN (Permanent Account Number)
+Residential status (must be resident in India)
+Tax Year
+Complete address (including PIN code)
+Email ID and mobile number
+Nature of Income
+Part A establishes the identity, contact details, and eligibility of the taxpayer before making the income declaration.
+
+Form 121 - Part B
+Part B of Form 121 is filled by the payer or deductor such as bank, company, or institution who receives the declaration. Form 121 part B should be filled by the person responsible for paying income. 
+
+Details required in Part B
+Name, address
+TAN and PAN
+Email ID and contact number
+Tax year
+Unique Identification Number (UIN)
+Estimated income
+Estimated total income
+Aggregate income declared
+Date of declaration received
+What happens if You Don't Submit Form 121?
+There is no statutory mandate to submit Form 121 when you are eligible. However, if you miss out submitting Form 121, TDS will be deducted against your income at applicable rates, even when the estimated total liability for the financial year is nil. Simply speaking, if you don't submit form 121 before the income is received, the only adverse consequence is that TDS is deducted at applicable rates.
+
+Download Form 121 PDF
+You can Download Form 121 PDF from the income tax portal.
+
+Frequently Asked Questions
+What is Form 121 in income tax?
+
+Form 121 is a self-declaration form which is submitted by taxpayer to avoid TDS when their tax liability is zero. 
+
+Has Form 121 replaced Form 15G and Form 15H?
+
+Effective from 1st April 2026 onwards, Form 121 has replaced both Form 15G and Form 15H under the Income Tax Act 2025. 
+
+Can a senior citizen file Form 121?
+
+Yes, a senior citizen can also file Form 121.
+
+Can an NRI file Form 121?
+
+No, NRIs cannot file Form 121 as the form is only for resident taxpayers. 
+
+Is Form 121 mandatory for bank FD interest?
+
+No, filing Form 121 is not mandatory. Resident taxpayers can file Form 121 to avoid TDS when their tax liability is zero. 
+
+Will my interest income become tax-free if I submit Form 121?
+
+If your total tax liability is zero, then no TDS will be deducted on your interest income if you submit Form 121. 
+
+When should Form 121 be submitted, before or after interest credit?
+
+Form 121 should be submitted by the taxpayer before the interest is credited as TDS will also be deducted at the time of crediting interest. 
+
+Can I submit Form 121 after TDS is deducted?
+
+Form 121 is submitted to avoid TDS deduction when the taxpayer's tax liability is zero. Hence, it is always recommended to submit Form 121 before TDS deduction. 
+
+What happens if I don't submit Form 121?
+
+If Form 121 is not submitted by the taxpayer, then the payer paying interest will deduct TDS at applicable rate as per the income tax act provisions. 
+
+Can HUF submit Form 121?
+
+Yes, Form 121 can be submitted by HUFs also to avoid TDS deduction. 
+
+How do I submit Form 121 online to my bank?
+
+Taxpayers can submit Form 121 online through their respective bank's online portal. 
+
+What is the income limit for non-senior citizens to file Form 121?
+
+When the non-senior citizen income is up to Rs. 4 lakhs under the new regime or Rs. 2.5 lakhs under the old regime, they are eligible for filing Form 121.
+
+Can I submit Form 121 to multiple banks for different FDs?
+
+Yes, you can submit form 121 to multiple banks for different FDs
+

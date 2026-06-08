@@ -11,6 +11,7 @@ import {
   ChevronRight,
   FileText,
   X,
+  Check,
 } from "lucide-react";
 import { ragEvaluate } from "../api/client";
 import Spinner from "../components/Spinner";
@@ -56,6 +57,10 @@ interface EvalSummary {
   latency_avg_ms: number;
   failed_questions: { question: string; error: string }[];
   per_question: QuestionResult[];
+}
+
+interface RunMode {
+  mode: "all" | "individual";
 }
 
 const SAMPLE_QAS: QA[] = [
@@ -184,7 +189,17 @@ function GradeChip({ score }: { score: number }) {
   );
 }
 
-function QuestionRow({ row, idx }: { row: QuestionResult; idx: number }) {
+function QuestionRow({
+  row,
+  idx,
+  onRunIndividual,
+  isRunning,
+}: {
+  row: QuestionResult;
+  idx: number;
+  onRunIndividual: (idx: number) => void;
+  isRunning: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const avg =
     (row.accuracy +
@@ -221,6 +236,21 @@ function QuestionRow({ row, idx }: { row: QuestionResult; idx: number }) {
         >
           {row.question}
         </span>
+        {!row.error && <Check size={12} color="#00ff9f" />}
+        <button
+          className="text-xs px-2 py-1 border border-[#a78bfa] text-[#a78bfa] hover:bg-[#a78bfa] hover:text-[#0a0e1b] transition-colors"
+          onClick={(e) => {
+            e.stopPropagation();
+            onRunIndividual(idx);
+          }}
+          disabled={isRunning}
+          style={{
+            opacity: isRunning ? 0.5 : 1,
+            cursor: isRunning ? "not-allowed" : "pointer",
+          }}
+        >
+          {isRunning ? "Running..." : "Run"}
+        </button>
         {row.error ? (
           <span
             className="text-xs text-[#ff4d6d]"
@@ -256,6 +286,40 @@ function QuestionRow({ row, idx }: { row: QuestionResult; idx: number }) {
             </div>
           ) : (
             <>
+              {/* Metric scores + rationales */}
+              <div className="space-y-2 pt-3">
+                {METRIC_KEYS.map((key) => (
+                  <div key={key} className="flex items-start gap-3">
+                    <div className="w-32 flex-shrink-0">
+                      <div
+                        className="text-xs font-bold mb-0.5"
+                        style={{
+                          fontFamily: "Space Mono, monospace",
+                          color: METRIC_COLORS[key],
+                          fontSize: "0.6rem",
+                        }}
+                      >
+                        {METRIC_LABELS[key]}
+                      </div>
+                      <ScoreBar
+                        score={(row as any)[key] || 0}
+                        color={METRIC_COLORS[key]}
+                      />
+                    </div>
+                    <div
+                      className="text-xs text-white pt-0.5"
+                      style={{
+                        fontFamily: "IBM Plex Mono, monospace",
+                        fontSize: "0.65rem",
+                        lineHeight: "1.5",
+                      }}
+                    >
+                      {(row as any)[`${key}_rationale`] || "—"}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
               {/* Answers */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-3">
                 <div>
@@ -328,40 +392,6 @@ function QuestionRow({ row, idx }: { row: QuestionResult; idx: number }) {
                 </div>
               </div>
 
-              {/* Metric scores + rationales */}
-              <div className="space-y-2">
-                {METRIC_KEYS.map((key) => (
-                  <div key={key} className="flex items-start gap-3">
-                    <div className="w-32 flex-shrink-0">
-                      <div
-                        className="text-xs font-bold mb-0.5"
-                        style={{
-                          fontFamily: "Space Mono, monospace",
-                          color: METRIC_COLORS[key],
-                          fontSize: "0.6rem",
-                        }}
-                      >
-                        {METRIC_LABELS[key]}
-                      </div>
-                      <ScoreBar
-                        score={(row as any)[key] || 0}
-                        color={METRIC_COLORS[key]}
-                      />
-                    </div>
-                    <div
-                      className="text-xs text-[#4a5a8e] pt-0.5"
-                      style={{
-                        fontFamily: "IBM Plex Mono, monospace",
-                        fontSize: "0.65rem",
-                        lineHeight: "1.5",
-                      }}
-                    >
-                      {(row as any)[`${key}_rationale`] || "—"}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
               <div
                 className="text-xs text-[#2a3a6e]"
                 style={{
@@ -390,8 +420,52 @@ export default function Evaluate({ onToast }: Props) {
     done: number;
     total: number;
   } | null>(null);
+  const [runMode, setRunMode] = useState<"all" | "individual" | null>(null);
+  const [runningIndividual, setRunningIndividual] = useState<Set<number>>(
+    new Set(),
+  );
   const fileRef = useRef<HTMLInputElement>(null);
   const [csvFileName, setCsvFileName] = useState<string | null>(null);
+
+  const isQuestionEvaluated = (question: string): boolean => {
+    if (!result) return false;
+    return result.per_question.some((r) => r.question === question);
+  };
+
+  const handleRemoveLastResult = () => {
+    if (!result || result.per_question.length === 0) return;
+
+    const updated = result.per_question.slice(0, -1);
+    if (updated.length === 0) {
+      setResult(null);
+      onToast("info", "Last result removed — all cleared");
+      return;
+    }
+
+    const succeeded = updated.filter((r) => !r.error);
+    const avg = (k: keyof QuestionResult) =>
+      succeeded.length
+        ? succeeded.reduce((s, r) => s + ((r[k] as number) || 0), 0) /
+          succeeded.length
+        : 0;
+
+    setResult({
+      accuracy: avg("accuracy"),
+      faithfulness: avg("faithfulness"),
+      context_precision: avg("context_precision"),
+      context_recall: avg("context_recall"),
+      answer_relevancy: avg("answer_relevancy"),
+      latency_avg_ms:
+        succeeded.length > 0
+          ? updated.reduce((s, r) => s + r.latency_ms, 0) / succeeded.length
+          : 0,
+      failed_questions: updated
+        .filter((r) => r.error)
+        .map((r) => ({ question: r.question, error: r.error! })),
+      per_question: updated,
+    });
+    onToast("info", "Last result removed");
+  };
 
   const addQA = () =>
     setQAs((q) => [...q, { question: "", expected_answer: "" }]);
@@ -441,32 +515,31 @@ export default function Evaluate({ onToast }: Props) {
       return;
     }
 
+    // Filter out already evaluated questions
+    const toEvaluate = valid.filter((q) => !isQuestionEvaluated(q.question));
+    if (toEvaluate.length === 0) {
+      onToast("info", "All questions already evaluated");
+      return;
+    }
+
+    setRunMode("all");
     setLoading(true);
-    setResult(null);
-    setProgress({ done: 0, total: valid.length });
+    setProgress({ done: 0, total: toEvaluate.length });
 
     try {
-      // The backend should ideally support SSE/websocket for progress; here we
-      // simulate progress by calling the evaluate endpoint which accepts a
-      // progress_callback concept via polling — or we rely on a batch endpoint
-      // that returns per_question results. We pass the full batch and poll.
-      //
-      // Since the existing API is a single POST, we do sequential individual calls
-      // so the UI can show per-question progress.
-      const perQuestion: QuestionResult[] = [];
+      const perQuestion: QuestionResult[] = result?.per_question || [];
       let totalLatency = 0;
 
-      for (let i = 0; i < valid.length; i++) {
-        setProgress({ done: i, total: valid.length });
+      for (let i = 0; i < toEvaluate.length; i++) {
+        setProgress({ done: i, total: toEvaluate.length });
         try {
           const res = await ragEvaluate({
-            questions: [valid[i]],
+            questions: [toEvaluate[i]],
             dataset_name: `${datasetName}_q${i + 1}`,
           });
-          // res is an EvaluationResponse with per_question array (index 0)
           const qr: QuestionResult = res.per_question?.[0] ?? {
-            question: valid[i].question,
-            expected_answer: valid[i].expected_answer,
+            question: toEvaluate[i].question,
+            expected_answer: toEvaluate[i].expected_answer,
             generated_answer: "",
             retrieved_context: "",
             accuracy: res.accuracy ?? 0,
@@ -485,8 +558,8 @@ export default function Evaluate({ onToast }: Props) {
           totalLatency += qr.latency_ms;
         } catch (e: any) {
           perQuestion.push({
-            question: valid[i].question,
-            expected_answer: valid[i].expected_answer,
+            question: toEvaluate[i].question,
+            expected_answer: toEvaluate[i].expected_answer,
             generated_answer: "",
             retrieved_context: "",
             accuracy: 0,
@@ -505,7 +578,7 @@ export default function Evaluate({ onToast }: Props) {
         }
       }
 
-      setProgress({ done: valid.length, total: valid.length });
+      setProgress({ done: toEvaluate.length, total: toEvaluate.length });
 
       const succeeded = perQuestion.filter((r) => !r.error);
       const avg = (k: keyof QuestionResult) =>
@@ -536,6 +609,108 @@ export default function Evaluate({ onToast }: Props) {
       onToast("error", e?.response?.data?.error || "Evaluation failed");
     } finally {
       setLoading(false);
+      setProgress(null);
+    }
+  };
+
+  const handleRunIndividual = async (index: number) => {
+    const qa = qas[index];
+    if (!qa.question.trim() || !qa.expected_answer.trim()) {
+      onToast("warning", "Question and expected answer required");
+      return;
+    }
+
+    setRunMode("individual");
+    setRunningIndividual((s) => new Set(s).add(index));
+
+    try {
+      const res = await ragEvaluate({
+        questions: [qa],
+        dataset_name: `${datasetName}_individual_q${index + 1}`,
+      });
+
+      const qr: QuestionResult = res.per_question?.[0] ?? {
+        question: qa.question,
+        expected_answer: qa.expected_answer,
+        generated_answer: "",
+        retrieved_context: "",
+        accuracy: res.accuracy ?? 0,
+        faithfulness: res.faithfulness ?? 0,
+        answer_relevancy: res.answer_relevancy ?? 0,
+        context_precision: res.context_precision ?? 0,
+        context_recall: res.context_recall ?? 0,
+        accuracy_rationale: "",
+        faithfulness_rationale: "",
+        answer_relevancy_rationale: "",
+        context_precision_rationale: "",
+        context_recall_rationale: "",
+        latency_ms: res.latency_avg_ms ?? 0,
+      };
+
+      // Add or update result
+      setResult((prev) => {
+        if (!prev) {
+          // First individual result
+          const summary: EvalSummary = {
+            accuracy: qr.accuracy,
+            faithfulness: qr.faithfulness,
+            context_precision: qr.context_precision,
+            context_recall: qr.context_recall,
+            answer_relevancy: qr.answer_relevancy,
+            latency_avg_ms: qr.latency_ms,
+            failed_questions: qr.error
+              ? [{ question: qr.question, error: qr.error }]
+              : [],
+            per_question: [qr],
+          };
+          return summary;
+        }
+
+        // Update existing result
+        const existing = prev.per_question.findIndex(
+          (r) => r.question === qa.question,
+        );
+
+        let updated = [...prev.per_question];
+        if (existing >= 0) {
+          updated[existing] = qr;
+        } else {
+          updated.push(qr);
+        }
+
+        const succeeded = updated.filter((r) => !r.error);
+        const avg = (k: keyof QuestionResult) =>
+          succeeded.length
+            ? succeeded.reduce((s, r) => s + ((r[k] as number) || 0), 0) /
+              succeeded.length
+            : 0;
+
+        return {
+          accuracy: avg("accuracy"),
+          faithfulness: avg("faithfulness"),
+          context_precision: avg("context_precision"),
+          context_recall: avg("context_recall"),
+          answer_relevancy: avg("answer_relevancy"),
+          latency_avg_ms:
+            succeeded.length > 0
+              ? updated.reduce((s, r) => s + r.latency_ms, 0) / succeeded.length
+              : 0,
+          failed_questions: updated
+            .filter((r) => r.error)
+            .map((r) => ({ question: r.question, error: r.error! })),
+          per_question: updated,
+        };
+      });
+
+      onToast("success", `Q&A #${index + 1} evaluated`);
+    } catch (e: any) {
+      onToast("error", e?.response?.data?.error || "Evaluation failed");
+    } finally {
+      setRunningIndividual((s) => {
+        const ns = new Set(s);
+        ns.delete(index);
+        return ns;
+      });
     }
   };
 
@@ -684,14 +859,36 @@ export default function Evaluate({ onToast }: Props) {
                   >
                     Q&A Pair #{i + 1}
                   </span>
-                  {qas.length > 1 && (
-                    <button
-                      onClick={() => removeQA(i)}
-                      className="text-[#ff4d6d] hover:opacity-70"
-                    >
-                      <Trash2 size={11} />
-                    </button>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {isQuestionEvaluated(qa.question) && (
+                      <Check size={12} color="#00ff9f" />
+                    )}
+                    <div className="flex items-center gap-1">
+                      {qa.question.trim() && qa.expected_answer.trim() && (
+                        <button
+                          onClick={() => handleRunIndividual(i)}
+                          disabled={runningIndividual.has(i)}
+                          className="text-xs px-2 py-1 border border-[#00ff9f] text-[#00ff9f] hover:bg-[#00ff9f] hover:text-[#0a0e1b] transition-colors"
+                          style={{
+                            opacity: runningIndividual.has(i) ? 0.5 : 1,
+                            cursor: runningIndividual.has(i)
+                              ? "not-allowed"
+                              : "pointer",
+                          }}
+                        >
+                          {runningIndividual.has(i) ? "Running..." : "Run"}
+                        </button>
+                      )}
+                      {qas.length > 1 && (
+                        <button
+                          onClick={() => removeQA(i)}
+                          className="text-[#ff4d6d] hover:opacity-70"
+                        >
+                          <Trash2 size={11} />
+                        </button>
+                      )}
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <label
@@ -793,23 +990,81 @@ export default function Evaluate({ onToast }: Props) {
             </div>
           )}
 
-          <button
-            className="btn-brutal w-full py-3 text-sm flex items-center justify-center gap-2"
-            style={{
-              borderColor: "#a78bfa",
-              color: "#a78bfa",
-              boxShadow: "4px 4px 0 #a78bfa",
-            }}
-            onClick={handleEval}
-            disabled={loading}
-          >
-            {loading ? (
-              <Spinner size={16} color="#a78bfa" />
-            ) : (
-              <FlaskConical size={16} />
-            )}
-            {loading ? "EVALUATING..." : "RUN EVALUATION"}
-          </button>
+          <div className="flex gap-2">
+            <button
+              className="btn-brutal flex-1 py-3 text-sm flex items-center justify-center gap-2"
+              style={{
+                borderColor: "#a78bfa",
+                color: "#a78bfa",
+                boxShadow: "4px 4px 0 #a78bfa",
+              }}
+              onClick={handleEval}
+              disabled={loading}
+            >
+              {loading && runMode === "all" ? (
+                <Spinner size={16} color="#a78bfa" />
+              ) : (
+                <FlaskConical size={16} />
+              )}
+              {loading && runMode === "all" ? "RUNNING ALL..." : "RUN ALL"}
+            </button>
+          </div>
+
+          {/* Progress bar */}
+          {loading && progress && (
+            <div className="brutal-card p-4 space-y-2">
+              <div className="flex items-center justify-between">
+                <span
+                  className="text-xs font-bold"
+                  style={{
+                    fontFamily: "Space Mono, monospace",
+                    color: "#a78bfa",
+                    fontSize: "0.65rem",
+                  }}
+                >
+                  EVALUATING...
+                </span>
+                <span
+                  className="text-xs"
+                  style={{
+                    fontFamily: "IBM Plex Mono, monospace",
+                    color: "#6b82b0",
+                    fontSize: "0.65rem",
+                  }}
+                >
+                  {progress.done} / {progress.total}
+                </span>
+              </div>
+              <div
+                className="w-full bg-[#0f1629] border border-[#1e2d54]"
+                style={{ height: "6px" }}
+              >
+                <div
+                  className="h-full transition-all duration-500"
+                  style={{
+                    width: `${(progress.done / progress.total) * 100}%`,
+                    background: "linear-gradient(90deg, #a78bfa, #00d4ff)",
+                  }}
+                />
+              </div>
+              <div className="flex gap-1 flex-wrap">
+                {Array.from({ length: progress.total }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-2 h-2 rounded-full transition-colors duration-300"
+                    style={{
+                      background:
+                        i < progress.done
+                          ? "#00ff9f"
+                          : i === progress.done
+                            ? "#a78bfa"
+                            : "#1e2d54",
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* ── Right: Results ───────────────────────────────────────────────── */}
@@ -833,14 +1088,25 @@ export default function Evaluate({ onToast }: Props) {
                 className="brutal-card p-4 text-center"
                 style={{ boxShadow: `6px 6px 0 ${gradeInfo.color}` }}
               >
-                <div
-                  className="text-xs text-[#4a5a8e] mb-1"
-                  style={{
-                    fontFamily: "Space Mono, monospace",
-                    fontSize: "0.6rem",
-                  }}
-                >
-                  OVERALL GRADE · LLM-AS-JUDGE
+                <div className="flex items-center justify-between mb-2">
+                  <div
+                    className="text-xs text-[#4a5a8e]"
+                    style={{
+                      fontFamily: "Space Mono, monospace",
+                      fontSize: "0.6rem",
+                    }}
+                  >
+                    OVERALL GRADE · LLM-AS-JUDGE
+                  </div>
+                  {result.per_question.length > 0 && (
+                    <button
+                      onClick={handleRemoveLastResult}
+                      className="text-xs px-2 py-0.5 border border-[#ff4d6d] text-[#ff4d6d] hover:bg-[#ff4d6d] hover:text-[#0a0e1b] transition-colors"
+                      style={{ fontSize: "0.65rem" }}
+                    >
+                      Undo Last
+                    </button>
+                  )}
                 </div>
                 <div
                   className="text-4xl font-bold"
@@ -918,13 +1184,22 @@ export default function Evaluate({ onToast }: Props) {
                     className="text-[#2a3a6e]"
                     style={{ fontSize: "0.6rem" }}
                   >
-                    click to expand
+                    click to expand · or run individually
                   </span>
                 </div>
                 <div>
-                  {result.per_question.map((row, i) => (
-                    <QuestionRow key={i} row={row} idx={i} />
-                  ))}
+                  {[...result.per_question].reverse().map((row, i) => {
+                    const originalIdx = result.per_question.length - 1 - i;
+                    return (
+                      <QuestionRow
+                        key={originalIdx}
+                        row={row}
+                        idx={originalIdx}
+                        onRunIndividual={() => handleRunIndividual(originalIdx)}
+                        isRunning={runningIndividual.has(originalIdx)}
+                      />
+                    );
+                  })}
                 </div>
               </div>
 

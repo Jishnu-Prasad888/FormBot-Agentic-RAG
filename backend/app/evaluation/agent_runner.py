@@ -14,8 +14,7 @@ from app.core.logging import get_logger
 
 logger = get_logger("evaluation.agent_runner")
 
-RAG_SYSTEM = """You are a helpful assistant. Answer the question using the provided context.
-Be concise and accurate. If the answer is not in the context, say 'Not found in available documents'."""
+RAG_SYSTEM = """Answer the question carefully"""
 
 
 def _chunk_texts(chunks: list[dict]) -> list[str]:
@@ -51,7 +50,7 @@ async def evaluate_question(
     generated_answer = await openai_client.generate(prompt, system=RAG_SYSTEM)
     
     # Score
-    scores = await evaluate_single(question, generated_answer, expected_answer, chunks)
+    scores = await evaluate_single(question, expected_answer, generated_answer, chunk_texts)
     
     latency_ms = round((time.time() - t0) * 1000, 1)
 
