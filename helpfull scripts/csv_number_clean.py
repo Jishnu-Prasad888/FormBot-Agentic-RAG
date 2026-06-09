@@ -1,7 +1,7 @@
 import csv
 
-input_file = "eval_clean.csv"
-output_file = "eval_number_clean.csv"
+input_file = "C:\\Users\\Jishnu\\Desktop\\SRAG\\helpfull scripts\\0.6_accuracy_and_belowrows_common_removed_questions_eval_number_clean.csv"
+output_file = "C:\\Users\\Jishnu\\Desktop\\SRAG\\helpfull scripts\\eval_number_clean_removed_common.csv.csv"
 
 rows = []
 

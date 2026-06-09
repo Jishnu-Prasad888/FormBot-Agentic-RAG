@@ -178,9 +178,9 @@ Eval Answer: A Proforma Invoice is a preliminary, estimated bill sent by a suppl
 
 ================================================================================
 
-Question no: 35
-Eval Question: what are kishor/tarun categories (PMMY Loan application)
-Eval Answer: Kishor: Covers loans from ₹50,001 up to ₹5,000,000 (₹5 Lakhs). It is tailored for entrepreneurs who have already started their business and need capital to expand or buy initial equipment. Tarun: Covers larger loans from ₹5,000,000 up to ₹10,000,000 (₹10 Lakhs). It is meant for established small businesses requiring higher funding for scaling up operations.
+Question no: 32
+Eval Question: what are BIS/FPO/ISO specifications and for what kind of businesses should the be follwed (Application form for msme loans (business loan))
+Eval Answer: BIS (Bureau of Indian Standards): The national body certifying safe physical standards (famous for the ISI mark). Who needs it: Manufacturing businesses making electrical goods, consumer electronics, steel products, cylinders, toys, or packaged drinking water.
 
 ================================================================================
 
@@ -205,6 +205,12 @@ Eval Answer: No penalty for missing predictions: The form asks for a table of yo
 Question no: 39
 Eval Question: what is form 16 (personal loan application form)
 Eval Answer: Form 16 is an official certificate issued by an employer to its employees in India. It serves as a comprehensive tax statement proving how much income you earned over the financial year and exactly how much Income Tax was deducted at source (TDS) from your salary and deposited with the government.
+
+================================================================================
+
+Question no: 40
+Eval Question: for whom is form 16 mandatory (personal loan application form)
+Eval Answer: For a loan applicant, providing Form 16 is generally required by banks as primary income proof for salaried individuals to verify steady financial stability, especially if you do not have recent consecutive salary slips.
 
 ================================================================================
 
@@ -286,12 +292,6 @@ Eval Answer: Yes the form allows withdrawal of the savings by a gaurdian incase 
 
 ================================================================================
 
-Question no: 54
-Eval Question: What things need to be ensured when withdrawing savings for a minor (SSA Account Withdrawal)
-Eval Answer: For withdrawing savings from a account belonging to a minor then the form specifies the needs to be alive
-
-================================================================================
-
 Question no: 55
 Eval Question: Will I need a SB account to withdraw the savings (SSA Account Withdrawal)
 Eval Answer: Yes you can have the option of withdrawing hte savings to a SB account for which you will need a SB account for withdrawing your savings and the form requires you to specify SB account numnber and the name of hte account office the account is standing at
@@ -370,9 +370,21 @@ Eval Answer: On medical ground of life-threatening disease of the account holder
 
 ================================================================================
 
+Question no: 68
+Eval Question: What is CBS (SSA Account Premature Closure)
+Eval Answer: “CBS” means Core Banking Solution platform or any other electronic platform which electronically connects all offices of a Bank and or the postal department simultaneously or in phases, for bringing speed, uniformity and ease in operational matters.
+
+================================================================================
+
 Question no: 69
 Eval Question: What happens when the account holder become a non-resident of India (SSA Account Premature Closure)
 Eval Answer: If, after the opening of an Account, the Account holder becomes a non-citizen or non-resident of India, intimation to this effect shall be given by the guardian or the Account holder to the post office or the Bank concerned, as the case may be, within a period of one month from the date of such status of the Account holder’s citizenship or resident status.
+
+================================================================================
+
+Question no: 70
+Eval Question: what is the Power to relax (SSA Account Premature Closure)
+Eval Answer: Where the Government is satisfied that the operation of any of the provisions of these rules causes undue hardship to the Account holder, it may, by order and for reasons to be recorded in writing, relax the requirement of that provision or provisions in respect of such Account holder, in a manner not inconsistent with the other provisions of these rules.
 
 ================================================================================
 
@@ -388,9 +400,9 @@ Eval Answer: Open an SSY account today by visiting your nearest post office or a
 
 ================================================================================
 
-Question no: 74
-Eval Question: What is the interest rate I can expect (SSA Application for opening an account)
-Eval Answer: Currently 8.2% per year (annual cycle increase interest)
+Question no: 75
+Eval Question: Can I get a tax exemption for this (SSA Application for opening an account)
+Eval Answer: yes you can get a exemption under Section 80C of Income Tax Act
 
 ================================================================================
 
@@ -559,6 +571,12 @@ Eval Answer: Crossing a cheque means drawing two parallel diagonal lines across 
 
 ================================================================================
 
+Question no: 104
+Eval Question: can i still deposit the out of circulation 1k and 2k notes? (deposit slip)
+Eval Answer: No. you must leave those rows blank
+
+================================================================================
+
 Question no: 105
 Eval Question: what is COS161R (Withdrawal Slip)
 Eval Answer: C.O.S 161R refers to the official Savings Bank Withdrawal Form issued by the State Bank of India (SBI). It is used by account holders to withdraw cash directly from their bank accounts at an SBI branch, typically in conjunction with their passbook
@@ -607,12 +625,6 @@ Eval Answer: the following denominations are rupees is 2000 , 500 , 100 , 50 , 2
 
 ================================================================================
 
-Question no: 113
-Eval Question: what should I ensure when using OVD and GCC to withdraw amount (Withdrawal Slip)
-Eval Answer: It is Mandatory to accompany with registered mobile number during this process
-
-================================================================================
-
 Question no: 114
 Eval Question: what is the liimits for opening the account (SCSS Account Opening Form)
 Eval Answer: The account shall be opened with a minimum deposit of one thousand rupees or any sum in multiple of one thousand rupees not exceeding Rupees Rs 30 Lakhs
@@ -646,6 +658,15 @@ Eval Answer: Only the spouse of hte primary account holder can be the secondary 
 Question no: 119
 Eval Question: what documents are accepted as valid for purpose of identification and address proof (SCSS Account Opening Form)
 Eval Answer: The following documents are accepted as valid documents for the purpose of identification and address proof: 1. Passport 2.Driving license 3. Voter’s ID card 4. Job card issued by NREGA signed by the State Government officer 5. Letter issued by the National Population Register containing details of name and address
+
+================================================================================
+
+Question no: 120
+Eval Question: what is the tax benifit (SCSS Account Opening Form)
+Eval Answer: The principal amount deposited in the SCSS scheme can be claimed as deduction under section 80C (Section 123 of the Income Tax Act, 2025) of the Income Tax Act.
+Section 80C benefits are not available under the new tax regime.
+If the total interest in SCSS accounts exceeds Rs 1 lakh p.a., TDS will be deducted. 
+If the account is opened by individuals less than 60 years, TDS will be deducted if the total interest exceeds Rs 50,000 per annum.
 
 ================================================================================
 
@@ -790,6 +811,12 @@ Eval Answer: There shall be only one deposit in the account in multiple of one t
 
 ================================================================================
 
+Question no: 145
+Eval Question: what is account transfer fees (SCSS Account Deposit Slip)
+Eval Answer: An account transfer fee is a charge incurred when moving money or assets from one financial account to another. It typically falls into two main categories: Electronic Transfers (moving money) and Brokerage/Account Migrations (switching institutions). In India, digital transfers like NEFT, RTGS, and UPI are mostly free for savings account holders when initiated via net banking or mobile apps If you visit your local bank branch (e.g., State Bank of India or ICICI Bank) to process an RTGS or NEFT, small slab-based fees (usually between ₹2 and ₹50 plus GST) may apply  Moving money abroad incurs wire transfer fees, correspondent bank charges, and potential currency exchange markups
+
+================================================================================
+
 Question no: 146
 Eval Question: what is duplicate passbook fees (SCSS Account Deposit Slip)
 Eval Answer: n the event of loss or destruction of a pass book issued by an Accounts Office, the Accounts Office may, on an application made to it in this behalf, and on payment of rupee one by the subscriber, issue a duplicate thereof to him.
@@ -886,21 +913,9 @@ Eval Answer: In case of death of a depositor before maturity, the account shall 
 
 ================================================================================
 
-Question no: 165
-Eval Question: what is duplicate passbook fees (PPF Account Deposit slip)
-Eval Answer: n the event of loss or destruction of a pass book issued by an Accounts Office, the Accounts Office may, on an application made to it in this behalf, and on payment of rupee one by the subscriber, issue a duplicate thereof to him.
-
-================================================================================
-
 Question no: 166
 Eval Question: what are the accepted modes of deposit (PPF Account Deposit slip)
 Eval Answer: An initial account deposit can be made in hard cash for any total valuation up to rupees one lakh. Alternatively, you may pay via a cheque or demand draft made out directly to the investor and signed over to the deposit office, or simply issued to the office itself; electronic fund transfers are also fully permitted if the chosen deposit branch operates on a unified Core Banking Solution network.
-
-================================================================================
-
-Question no: 167
-Eval Question: what denominations can i use to deposit (PPF Account Deposit slip)
-Eval Answer: When filling out a cash deposit slip, you can list your currency notes under the standard active denominations of ₹500, ₹100, ₹50, ₹20, and ₹10. However, you must explicitly cross out or ignore the pre-printed row designated for 1,000 rupee notes, as this currency denomination has been completely withdrawn and is no longer accepted by banks.
 
 ================================================================================
 
@@ -916,6 +931,12 @@ Eval Answer: The moment a branch office identifies that a customer's total accou
 
 ================================================================================
 
+Question no: 170
+Eval Question: what details of mine are needed to add nominee (Public Provident Fund Account Nomination Form)
+Eval Answer: Name of the account holder , the account number and addressand data
+
+================================================================================
+
 Question no: 171
 Eval Question: what details of the nominees are needed (Public Provident Fund Account Nomination Form)
 Eval Answer: names of nominees , address of nominees , date of birth in case of minor else age and proportionate amount
@@ -925,6 +946,12 @@ Eval Answer: names of nominees , address of nominees , date of birth in case of 
 Question no: 172
 Eval Question: what happens in case of adding minors in nominees (Public Provident Fund Account Nomination Form)
 Eval Answer: A adult has to sign teh form to whom the amount will be trasfered to incase of death of the account owner or maturing of the account
+
+================================================================================
+
+Question no: 173
+Eval Question: when can i add nominees (Public Provident Fund Account Nomination Form)
+Eval Answer: Subscriber to the fund may nominate in Form E or, asnear thereto as possible, one or more persons to receive theamount standing to his credit in the event of his death beforethe amount has become payable or, having become payable,has not been paid.
 
 ================================================================================
 
@@ -949,6 +976,12 @@ Eval Answer: If a subscriber to an account in respect of which a nomination is i
 Question no: 177
 Eval Question: what happens incase no nominees are mentioned (Public Provident Fund Account Nomination Form)
 Eval Answer: The amount after the substraction of any fees will be transfered to the legal heirs of the account owener
+
+================================================================================
+
+Question no: 178
+Eval Question: what about the interest to be paid by the nominees after death of the account owner (Public Provident Fund Account Nomination Form)
+Eval Answer: The nominee/heir to the deceased subscriber is liable to pay interest on loans availed of by the subscriber but not paid before his death.
 
 ================================================================================
 
@@ -1057,6 +1090,12 @@ Eval Answer: First, ensure you have a valid, active mobile number linked to your
 Question no: 196
 Eval Question: what is the form for (loan against property allocation form)
 Eval Answer: This application form is for the SBI Loan against Property (LAP) scheme, which is an exclusive loan offer tailored for State Bank Home Loan customers to unlock the true value of their existing residential or commercial property to meet personal needs. According to the document, the loan amount is meant strictly for personal purposes—such as meeting expenditures on education, marriage, or healthcare—and applicants must sign an undertaking declaring that the funds will not be utilized for speculative or business purposes.
+
+================================================================================
+
+Question no: 197
+Eval Question: meaning of the roles applicant, co-applicant and guarantor (loan against property allocation form)
+Eval Answer: The document lists three categories of individuals who can be parties to the loan request: the Applicant, Co-Applicant, and Guarantor. While the text does not provide separate narrative definitions for each role, it indicates that anyone applying under these roles must provide identical sets of personal details (Form-A) , complete employment and income histories (Form-B) , and jointly sign the Form-D declaration to give collective consent for bank undertakings, credit bureau reporting (CIBIL), and rule compliance
 
 ================================================================================
 

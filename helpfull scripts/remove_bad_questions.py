@@ -17,31 +17,13 @@ if not API_KEY:
 
 client = OpenAI(api_key=API_KEY)
 
-FORMS_DIR = "forms"
-INPUT_CSV = "eval.csv"
+FORMS_DIR = "C:\\Users\\Jishnu\\Desktop\\SRAG\\helpfull scripts\\forms"
+INPUT_CSV = "C:\\Users\\Jishnu\\Desktop\\SRAG\\helpfull scripts\\eval.csv"
 OUTPUT_FILE = "eval_clean.txt"
 
 MODEL = "gpt-5"
 
 client = OpenAI(api_key=API_KEY)
-
-
-def extract_pdf_text(pdf_path: Path) -> str:
-    """Extract text from a PDF."""
-    try:
-        reader = pypdf.PdfReader(str(pdf_path))
-        pages = []
-
-        for page in reader.pages:
-            text = page.extract_text()
-            if text:
-                pages.append(text)
-
-        return "\n".join(pages)
-
-    except Exception as e:
-        print(f"Failed to read {pdf_path}: {e}")
-        return ""
 
 
 def load_all_forms_text(forms_dir: str) -> str:
@@ -51,15 +33,10 @@ def load_all_forms_text(forms_dir: str) -> str:
     pdf_files = sorted(Path(forms_dir).glob("*.pdf"))
 
     for pdf_file in pdf_files:
-        print(f"Loading: {pdf_file.name}")
-
-        text = extract_pdf_text(pdf_file)
-
         # Keep filename so model knows which form it came from
-        all_text.append(
-            f"\n\n========== FILE: {pdf_file.name} ==========\n{text}"
-        )
+        all_text.append(pdf_file.name.replace(".pdf",""))
 
+    print(all_text)
     return "\n".join(all_text)
 
 
@@ -127,7 +104,7 @@ FORMS:
 def main():
     print("Loading SBI forms...")
     forms_text = load_all_forms_text(FORMS_DIR)
-
+    print(forms_text)
     kept_rows = []
 
     with open(INPUT_CSV, "r", encoding="utf-8", newline="") as f:

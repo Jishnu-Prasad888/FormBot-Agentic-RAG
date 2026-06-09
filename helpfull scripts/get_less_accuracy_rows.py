@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 
 # Input CSV file
-input_file = "eval_number_clean 5th june.csv"
+input_file = "C:\\Users\\Jishnu\\Desktop\\SRAG\\eval\\results\\8th june 2nd cross encoder.csv"
 
 # Read CSV
 df = pd.read_csv(input_file)
