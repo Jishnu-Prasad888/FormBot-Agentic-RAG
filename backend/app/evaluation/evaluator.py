@@ -1,8 +1,11 @@
 """
-LLM-as-a-Judge evaluator for RAG pipelines.
+LLM-as-a-Judge evaluator for RAG pipelines with retrieval metrics.
 
 Each metric is computed by prompting the LLM to score (0.0–1.0) with a brief rationale,
 rather than relying on cosine-similarity heuristics.
+
+Additionally, retrieval metrics (Recall@K, MRR, nDCG) are computed separately.
+Accuracy is evaluated via: exact match, semantic similarity, F1, and LLM-as-judge.
 """
 
 import json
@@ -11,6 +14,8 @@ import time
 from typing import Any
 
 from app.embeddings.openai_client import openai_client as ollama_client
+from app.evaluation.retrieval_metrics import retrieval_metrics
+from app.evaluation.accuracy_evaluation import accuracy_evaluator
 from app.core.logging import get_logger
 
 logger = get_logger("evaluator")
@@ -147,39 +152,71 @@ async def evaluate_single(
     expected_answer: str,
     generated_answer: str,
     context_chunks: list[str],
+    retrieved_chunk_ids: list[str] = None,
+    gold_chunk_ids: set[str] = None,
 ) -> dict[str, Any]:
     """
-    Run all five metrics for a single Q&A pair via the LLM judge.
-    Returns a dict with scores, rationales, and the raw inputs for export.
+    Run all metrics for a single Q&A pair: LLM-as-judge + retrieval metrics + accuracy metrics.
+    Returns a dict with scores, rationales, and retrieval/accuracy performance.
     """
     t0 = time.time()
 
-    accuracy,          acc_rationale  = await compute_accuracy(generated_answer, expected_answer)
+    accuracy_llm,          acc_rationale  = await compute_accuracy(generated_answer, expected_answer)
     faithfulness,      fai_rationale  = await compute_faithfulness(generated_answer, context_chunks)
     answer_relevancy,  rel_rationale  = await compute_answer_relevancy(question, generated_answer)
     context_precision, pre_rationale  = await compute_context_precision(question, context_chunks)
     context_recall,    rec_rationale  = await compute_context_recall(expected_answer, context_chunks)
 
+    # Multi-method accuracy evaluation
+    exact_match = accuracy_evaluator.exact_match(generated_answer, expected_answer)
+    semantic_sim = accuracy_evaluator.semantic_similarity(generated_answer, expected_answer)
+    f1 = accuracy_evaluator.f1_score(generated_answer, expected_answer)
+    accuracy_combined = accuracy_evaluator.combined_accuracy(generated_answer, expected_answer)
+
+    # Retrieval metrics
+    recall_10 = 0.0
+    recall_20 = 0.0
+    recall_50 = 0.0
+    mrr = 0.0
+    ndcg_10 = 0.0
+    gold_answer_found = False
+
+    if retrieved_chunk_ids and gold_chunk_ids:
+        recall_10 = retrieval_metrics.recall_at_k(retrieved_chunk_ids, gold_chunk_ids, 10)
+        recall_20 = retrieval_metrics.recall_at_k(retrieved_chunk_ids, gold_chunk_ids, 20)
+        recall_50 = retrieval_metrics.recall_at_k(retrieved_chunk_ids, gold_chunk_ids, 50)
+        mrr = retrieval_metrics.mrr(retrieved_chunk_ids, gold_chunk_ids)
+        ndcg_10 = retrieval_metrics.ndcg_at_k([1.0] * len(retrieved_chunk_ids), gold_chunk_ids, retrieved_chunk_ids, 10)
+
+    gold_answer_found = retrieval_metrics.gold_in_retrieved([{"chunk_text": c} for c in context_chunks], expected_answer)
+
     latency_ms = round((time.time() - t0) * 1000, 1)
 
     return {
-        # ── inputs (for export) ───────────────────────────────────────────────
-        "question":          question,
-        "expected_answer":   expected_answer,
-        "generated_answer":  generated_answer,
-        "retrieved_context": "\n---\n".join(context_chunks),
-        # ── scores ───────────────────────────────────────────────────────────
-        "accuracy":          accuracy,
+        # ── LLM-as-judge scores ──────────────────────────────────────────────
+        "accuracy_llm":      round(accuracy_llm, 4),
         "faithfulness":      faithfulness,
         "answer_relevancy":  answer_relevancy,
         "context_precision": context_precision,
         "context_recall":    context_recall,
-        # ── rationales ───────────────────────────────────────────────────────
+        # ── Accuracy methods ─────────────────────────────────────────────────
+        "exact_match":       exact_match,
+        "semantic_similarity": round(semantic_sim, 4),
+        "f1":                f1,
+        "accuracy_combined": accuracy_combined,
+        # ── Retrieval metrics ─────────────────────────────────────────────────
+        "recall_10":         round(recall_10, 4),
+        "recall_20":         round(recall_20, 4),
+        "recall_50":         round(recall_50, 4),
+        "mrr":               round(mrr, 4),
+        "ndcg_10":           round(ndcg_10, 4),
+        "gold_answer_found": gold_answer_found,
+        # ── Rationales ───────────────────────────────────────────────────────
         "accuracy_rationale":          acc_rationale,
         "faithfulness_rationale":      fai_rationale,
         "answer_relevancy_rationale":  rel_rationale,
         "context_precision_rationale": pre_rationale,
         "context_recall_rationale":    rec_rationale,
-        # ── meta ─────────────────────────────────────────────────────────────
+        # ── Meta ─────────────────────────────────────────────────────────────
         "latency_ms": latency_ms,
     }

@@ -8,6 +8,7 @@ from app.rag.bm25 import bm25_retriever
 from app.rag.table_rag import table_rag
 from app.rag.pdf_rag import pdf_rag
 from app.rag.markdown_rag import markdown_rag
+from app.rag.multi_collection_retrieval import multi_collection_retriever
 from app.rag.metadata_filter import filter_results
 from app.rag.evaluator import (
     compute_accuracy, compute_faithfulness, compute_answer_relevancy,
@@ -32,7 +33,17 @@ class RAGService:
         top_k: int = 5,
         filters: Optional[dict] = None,
         collection_name: Optional[str] = None,
+        all_collections: bool = False,
     ) -> list[dict[str, Any]]:
+        """
+        Retrieve from single or multiple collections.
+        If all_collections=True, search across all available collections.
+        """
+        if all_collections:
+            return await multi_collection_retriever.retrieve_all_collections(
+                query, strategy, top_k, filters
+            )
+
         col = collection_name or "text_documents"
         if strategy == "vector":
             return await vector_rag.retrieve(query, col, top_k, filters)

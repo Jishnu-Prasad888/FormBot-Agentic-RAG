@@ -34,26 +34,47 @@ interface QuestionResult {
   expected_answer: string;
   generated_answer: string;
   retrieved_context: string;
-  accuracy: number;
+  // LLM-as-judge
+  accuracy_llm?: number;
   faithfulness: number;
   answer_relevancy: number;
   context_precision: number;
   context_recall: number;
+  // Accuracy methods
+  exact_match?: number;
+  semantic_similarity?: number;
+  f1?: number;
+  accuracy_combined?: number;
+  // Retrieval metrics
+  recall_10?: number;
+  recall_20?: number;
+  recall_50?: number;
+  mrr?: number;
+  ndcg_10?: number;
+  gold_answer_found?: boolean;
+  // Rationales
   accuracy_rationale: string;
   faithfulness_rationale: string;
   answer_relevancy_rationale: string;
   context_precision_rationale: string;
   context_recall_rationale: string;
+  // Meta
   latency_ms: number;
   error?: string;
 }
 
 interface EvalSummary {
-  accuracy: number;
+  accuracy_llm: number;
+  accuracy_combined: number;
   faithfulness: number;
   context_precision: number;
   context_recall: number;
   answer_relevancy: number;
+  recall_10: number;
+  recall_20: number;
+  recall_50: number;
+  mrr: number;
+  ndcg_10: number;
   latency_avg_ms: number;
   failed_questions: { question: string; error: string }[];
   per_question: QuestionResult[];
@@ -77,24 +98,44 @@ const SAMPLE_QAS: QA[] = [
 ];
 
 const METRIC_COLORS: Record<string, string> = {
-  accuracy: "#00d4ff",
+  accuracy_llm: "#00d4ff",
+  accuracy_combined: "#00d4ff",
   faithfulness: "#00ff9f",
   context_precision: "#ffe600",
   context_recall: "#ff4d6d",
   answer_relevancy: "#a78bfa",
+  exact_match: "#00ff9f",
+  semantic_similarity: "#a78bfa",
+  f1: "#ffe600",
+  recall_10: "#00d4ff",
+  recall_20: "#ff8c00",
+  recall_50: "#ff4d6d",
+  mrr: "#a78bfa",
+  ndcg_10: "#00ff9f",
 };
 
 const METRIC_LABELS: Record<string, string> = {
-  accuracy: "Accuracy",
+  accuracy_llm: "Accuracy (LLM)",
+  accuracy_combined: "Accuracy (Combined)",
   faithfulness: "Faithfulness",
   context_precision: "Context Precision",
   context_recall: "Context Recall",
   answer_relevancy: "Answer Relevancy",
+  exact_match: "Exact Match",
+  semantic_similarity: "Semantic Similarity",
+  f1: "F1 Score",
+  recall_10: "Recall@10",
+  recall_20: "Recall@20",
+  recall_50: "Recall@50",
+  mrr: "MRR",
+  ndcg_10: "nDCG@10",
 };
 
-const METRIC_KEYS = Object.keys(
-  METRIC_LABELS,
-) as (keyof typeof METRIC_LABELS)[];
+const LLM_JUDGE_METRICS = ["accuracy_llm", "faithfulness", "context_precision", "context_recall", "answer_relevancy"] as const;
+const ACCURACY_METRICS = ["exact_match", "semantic_similarity", "f1", "accuracy_combined"] as const;
+const RETRIEVAL_METRICS = ["recall_10", "recall_20", "recall_50", "mrr", "ndcg_10"] as const;
+
+const METRIC_KEYS = Object.keys(METRIC_LABELS) as (keyof typeof METRIC_LABELS)[];
 
 // ─── CSV helpers ──────────────────────────────────────────────────────────────
 
