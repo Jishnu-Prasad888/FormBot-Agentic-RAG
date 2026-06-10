@@ -1,0 +1,199 @@
+What is Form 16? Meaning, Parts, and How to Download
+Form 16 is a TDS certificate issued by an employer that shows the tax deducted from your salary and a detailed breakup of your income, exemptions, deductions, and taxable amount for the financial year. It is an important document for salaried taxpayers to verify TDS and file their income tax return accurately, and can be downloaded from the employer or payroll portal once issued.
+
+This blog explains in detail about Form 16, which is applicable for FY 2025-26 and preceding years. 
+
+Form 16 Renamed as Form 130
+
+Under the Income Tax Act 2025, Form 16 has been renumbered as Form 130 effective from Tax Year 2026-27 (April 1, 2026) and onwards. For FY 2025-26, your employer will still issue Form 16 as usual.  
+
+What is Form 16?
+Form 16 is a TDS certificate issued by the employer containing TDS deducted on salary, the salary income during the financial year. It serves as a handy document for ITR filing process as it contains various information related to employer, the taxpayer, TDS deducted, income estimate, deductions claimable etc. It is issued under section 203 of the Income Tax Act, 1961.
+
+Form 16 is divided into 2 parts: Part A and Part B. While part A contains a summary of TDS deductions PAN and TAN of the employer, PAN of the employee, etc, part B contains detailed break-up of salary, exemptions and deductions under the Income Tax Act.
+
+Important Details Available in Form 16
+1. Part - A
+Name and address of employer and employee.
+TAN of the employer
+PAN of employer and employee
+Quarterly break-up of amount of TDS deducted against salary.
+Date in which monthly TDS deducted is deposited to the government.
+2. Part-B
+Gross salary (including all allowances and perquisites)
+Exempt allowances under section 10 (reduced from gross salary)
+Income other than salary declared for TDS deduction purpose.
+Deductions under chapter VI-A
+Total taxable income offered for TDS deduction
+Estimated tax liability (tax, surcharge, cess and rebate is calculated separately as applicable)
+Relief under section 89.
+In the case of salaried employees, Form 16 plays a very important role when it comes to filing income tax returns. It has two components: Part A and Part B.
+
+How to Download Form 16?
+To download Form 16 from the TRACES portal, employers must log in using their PAN (as User ID) and password. After logging in, navigate to the ‘Downloads’ tab, select ‘Form 16’, choose the relevant financial year, and verify the PAN and TDS details. Enter the TDS receipt number, tax deducted, and date, then submit the request. Once processed, Form 16 (Part A & B) will be available for download under the ‘Downloads’ section.
+
+Visit the official TRACES website.
+If you are already registered, enter your PAN card number (User ID) and Password to log in. For new users, complete the registration process and create a new account.
+Navigate to the ‘Downloads’ tab and select ‘Form 16.’
+Choose the Form type and select the financial year for which Form 16 is required.
+Verify PAN and other details.
+Enter the TDS receipt number and select the date of the TDS.
+Add the total tax deducted and collected.
+Click on submit to request for download.
+Download the files under the ‘Downloads’ tab once the Form is available for download.
+How Employees Can Download Form 16?
+Form 16 is a certificate that needs to be provided by the employer to the employee. Since the statute mandates the employer to furnish Form 16 to the employee, it cannot be downloaded by the employee from any other source. 
+
+It is usual to miss Form 16 of the previous employer due to job change. In those cases, contacting previous company's HR is the most recommended option. Healthy practice is downloading and documenting all the payslips, Form 16, and other relevant salary during exit.
+
+Who Receives Form 16?
+1. Eligibility Criteria
+As per section 203 of the act, the employer is obliged to deduct TDS if the employee's income is taxable. 
+Therefore, every salaried individual whose income falls under the taxable bracket is eligible for Form 16.
+On shifting jobs during the financial year, it is necessary to collect Form 16 from all the employers you have worked with during that year. 
+2. When Form 16 is not Required?
+If TDS is not deducted for the employee, the employer is not required to provide form 16.
+However, nowadays, many organisations issue this certificate to employees as a good work practice. It contains a consolidated picture of the individual’s earnings and has other additional uses.
+Why is Form 16 Required?
+Form 16 is a very important document as:
+
+Proof that the government has received the tax deducted by your employer.
+Assists in the process of filing your income tax return with important information like:
+Salary details
+deductions against salary
+other investment deductions claimed against total income.
+Proof of Salary Income
+Many banks and financial institutions demand Form 16 to verify the person’s credentials while applying for loans. 
+Form 16 Password
+ The password format for form 16 for Form 16 can differ slightly across organisations.
+You can try various combinations of passwords as follows
+PAN in lower case and date of birth in DDMMYYYY format.
+Only PAN in lower case.
+Only PAN in upper case.
+Only date of birth in DDMMYYYY format.
+Upload Form 16 & File Income Tax Return
+ClearTax software automatically extracts all the relevant information from your Form 16 and prepares your tax return. You do not need to enter anything manually.
+
+Upload your Form 16 to E-File ITR
+
+Points to be Noted while Checking Form 16
+Once an individual receives Form 16 from the employer, it is their responsibility to ensure that all the details are correct.
+Make sure to verify the details mentioned in Form 16, for example, details of the amount of income, TDS deducted, etc.
+If any of the details is mentioned incorrectly, one should immediately reach out to the organization’s HR/Payroll/Finance department and get the same corrected.
+The employer would then correct their end by filing a revised TDS return to credit the TDS amount against the correct PAN. Once the revised TDS return is processed, the employer will issue an updated Form 16 to their employee.
+Difference Between Form 16, Form 16A and Form 16B
+
+Particulars	Form 16	Form 16A	Form 16B
+Description	TDS certificate issued as proof of tax deducted from the employee's salary income.	TDS certificate issued for income other than salary, such as interest income, insurance commission, or rent receipts.	TDS certificate for property purchase under section 194-IA of the Income Tax Act.
+Who Issues It	Employer	Financial Institutions	Buyer of Property
+Income Covered	Salary Income	Other Income	Sale of immovable property - land or building
+Frequency	Issued annually	Issued Quarterly	Each time the transaction takes place.
+Threshold limit	When the income has exceeded the basic exemption limit.	When the specific income has crossed the threshold limit for TDS under the respective section.	When the sale value of the property or the Stamp Duty Value exceeds Rs.50 Lakhs.
+Purpose	Proof that tax has been deducted at source from the employee's salary and deposited with the government. Essential for filing income tax returns.	Issued when TDS is deducted on non-salary income (e.g., interest on fixed deposits, insurance commission, rent receipts).	Proof of TDS deduction on property transactions. The buyer furnishes Form 16B to the seller as proof of the tax deduction.
+Rates	Slab rates	Rates as specified under respective sections	1% on the amount paid or Stamp Duty Value, whichever is higher.
+Difference between Form 16 and Form 26AS
+The following are the differences between Form 16 and Form 26AS: 
+
+Grounds of Difference	Form 16	Form 26AS
+Meaning	Form 16 is a TDS certificate containing salary TDS and a detailed break-up of salary income.	Form 26 AS is a consolidated document containing all TDS deducted, advance tax payment, self assessment tax payments, income against which TDS deducted during the year, high value transactions, etc.
+Importance	Form 16 is a very handy document for tax filing, but it is not mandatory document required for tax filing. 	Form 26AS also is not mandatory to file ITR, though it contains all TDS deductions, and various other details in one place.
+Issuer	Form 16 is issued by the employer	Form 26AS is issued by the Income Tax Department.
+Discrepancies	In case of errors in Form 16, contact your employer to make changes in the Form 16. 	In case of errors in Form 26AS, contact the respective deductor to correct their TDS returns (for example, for errors in rent TDS, contact your tenant)
+The following are the important updates related to the Income Tax Act 2025.
+
+Though the Income Tax Act 2025 takes effect from 01st April 2026, the Provisions of the 1961 act applies for AY 2026-27, as it pertains to income earned up to 31st March, 2026. 
+
+Below is a table comparing sections from the Income Tax Act 1961 with those in the Income Tax Act 2025. 
+
+Topic 	Income Tax Act 1961	Income Tax Act 2025
+TDS certification issuance by employer	Section 203	Section 395(4)
+Exempt allowance 	Section 10	Section 11 read with Schedule II to VII
+Deductions from gross total income	Chapter VI-A	Chapter VIII (Section 122 onwards)
+Relief on salary paid in arrears or advance	Section 89	Section 157
+TDS on sale of immovable property	Section 194-IA	Section 393(1)
+
+Frequently Asked Questions
+How to get Form 16?
+
+You can get your Form 16 from your employer. Even if you have left your job, your employer will provide you with Form 16. Unfortunately, this income tax Form 16 cannot be downloaded from anywhere.
+
+Can I file my ITR without Form 16?
+
+
+Though this is one of the most important income tax forms, but don’t worry if you do not have it. You can still file your income tax return using your payslips and form 26AS.
+
+Is form 16 compulsory for every employee?
+
+
+TDS certificate in Form 16 is issued when TDS has been deducted. If the employer has deducted no TDS, the employer may not give you Form 16. Please take a look at our Guide on how to e-file without form 16.
+
+When does the employer deduct TDS and does not issue a certificate?
+
+
+Any person responsible for paying a salary must deduct TDS before making payment. The Income Tax Act lays down that every person who deducts TDS from a payment must furnish a certificate with TDS deducted & deposited details. An employer in specific is compulsorily required to furnish a certificate in the format of Form 16.
+
+If no Form 16 has been issued to me, does it mean I don’t have to pay tax or file a return?
+
+While the onus of deducting tax on salaries and providing Form 16 is on the employer, the onus of paying income tax and filing an income tax return is on you. If your aggregate income from all sources goes above the minimum tax slab, you must pay tax, whether or not your employer has deducted TDS. Even when he fails to issue you a Form 16, you must file an income tax return and pay off the due taxes.
+
+Can you use TRACES to get Form 16 from your employers?
+
+
+Employees cannot use TRACES to get Form 16. They do not have information of the TDS receipt number and the total tax deducted. They have to get it from their employers directly.
+
+How employer can download Form 16 from TRACES?
+
+Employer can download Form 16 from the TRACES website, the steps to follow is given above.
+
+How can I open my Form 16?
+
+
+You can use your Form 16 password to open this password-protected PDF. The password is the first five characters of your PAN followed by your date of birth in the format DDMMYYYY.
+
+What is the penalty for not furnishing Form 16 by the employer?
+
+The employer will have to pay a sum of Rs. 100 per day for every day the default continues.
+
+What is the difference between Form 16 and Form 16A?
+
+While Form 16 is a TDS certificate for only salary income, Form 16A is applicable for TDS on ‘Income Other than Salary’. For example, rent, professional fees, interest, etc.
+
+Is Form 16 and Income Tax Return the same?
+
+No, Form 16 is not the same as an Income Tax Return (ITR). Form 16 is a TDS certificate issued by the employer, whereas an ITR is a form filed by the taxpayer with the income tax department declaring their income and taxes.
+
+What should i do if there is error in my Form 16?
+
+If you notice any discrepancies or errors in Form 16, you should bring it to the attention of your employer immediately for correction.
+
+How long does it take to get Form 16?
+
+The employer deducting tax should issue Form 16 by 15th June after the end of the financial year in which tax is deducted.
+
+How to check the authenticity of my Form 16?
+
+Your Form 16 is digitally signed by or on behalf of your employer. In addition to checking the details of your salary, tax deductions, tax calculations you should also check the form to make sure that the digital signature is validated and the form is authentic. The validation of a digital signature ensures that there is no tampering with the Form 16 after signing.
+
+Is it mandatory to issue Form 16?
+
+Yes, it is mandatory for every employer who has deducted any tax at source to issue Form 16 to the employees. It is a vital document for the employees to file their income tax returns.
+
+What is a Digital Form 16?
+
+Digital Form 16 is an electronically generated TDS certificate issued by an employer through the Income Tax Department’s TRACES portal. It provides details of your salary and the tax deducted.
+
+When will salaried employees receive Form 16 for filing ITR for FY 2025-26 (AY 2026-27)?
+
+The salaried employees will receive the Form 16 for filing ITR for FY 2025-26 (AY 2026-27) latest by June 15th 2026.
+
+Can there be mistakes in Form 16?
+
+Yes. Though the instances of errors are less, there can be mistakes in Form 16. Please check your salary details in form 16 vis-a-vis salary pay-slip. If you find any error in form 16, request your employer to make corrections in their TDS returns.
+
+Is form 16 and salary slip the same?
+
+No. Form 16 is a document mandatorily required to be issued under the Income Tax Act. It contains your taxable salary, TDS deducted, and other details from income tax perspective. Whereas your salary pay-slip is a document issued from accounting perspective, containing a detailed break-up of your CTC. 
+
+What if HRA is not provided in Form 16?
+
+Firstly, part B of form 16 contains HRA exemption eligible under section 10(13A). If HRA exemption is not shown in Form 16, either you would have opted for new tax regime (HRA exemption is not available under the new regime) or your employer does not provide HRA as a component of your salary. In the second case, you can still claim deduction under section 80GG. 
