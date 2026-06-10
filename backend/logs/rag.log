@@ -56319,3 +56319,375 @@ fastapi.exceptions.ResponseValidationError: 4 validation errors:
 2026-06-10 12:20:15 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
 2026-06-10 12:21:50 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
 2026-06-10 12:21:50 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:22:43 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:22:43 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /favicon.ico
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health 200 [15.5ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/chroma 200 [14.5ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/ollama 404 [14.5ms]
+2026-06-10 12:22:43 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/favicon.ico
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /favicon.ico
+2026-06-10 12:22:43 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/favicon.ico
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /favicon.ico 404 [4.4ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /favicon.ico 404 [4.3ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health 200 [7.9ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:22:43 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/chroma 200 [7.4ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.9ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health 200 [5.5ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.6ms]
+2026-06-10 12:22:43 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/ollama 404 [4.8ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health 200 [3.6ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is TIN (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' top_k=10
+2026-06-10 12:22:43 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is TIN (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.8ms]
+2026-06-10 12:22:43 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.2ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/db 200 [60.2ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health 200 [1.6ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/db 200 [43.2ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:22:43 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.6ms]
+2026-06-10 12:22:43 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/db 200 [38.9ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.8ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/db 200 [28.3ms]
+2026-06-10 12:22:43 | INFO     | rag_platform.main | ← GET /health/db 200 [14.8ms]
+2026-06-10 12:22:47 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:23:18 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:23:18 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:24:58 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:24:58 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health 200 [12.0ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/chroma 200 [13.1ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/ollama 404 [14.1ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health 200 [9.9ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:24:58 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/chroma 200 [7.1ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.1ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health 200 [7.1ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='normal/small/minor account type means what? (ACCOUNT OPENING' top_k=10
+2026-06-10 12:24:58 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='normal/small/minor account type means what? (ACCOUNT OPENING' collection='text_documents'
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:24:58 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.8ms]
+2026-06-10 12:24:58 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.0ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/db 200 [41.6ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/db 200 [29.6ms]
+2026-06-10 12:24:58 | INFO     | rag_platform.main | ← GET /health/db 200 [14.7ms]
+2026-06-10 12:24:59 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:26:28 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:26:28 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:27:28 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:27:28 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health 200 [15.9ms]
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health/chroma 200 [15.9ms]
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health/ollama 404 [15.9ms]
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health 200 [13.9ms]
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:27:28 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:27:28 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.9ms]
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health/ollama 404 [4.5ms]
+2026-06-10 12:27:28 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is mode of operation (ACCOUNT OPENING FORM FOR RESIDENT' top_k=10
+2026-06-10 12:27:28 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is mode of operation (ACCOUNT OPENING FORM FOR RESIDENT' collection='text_documents'
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health/db 200 [32.4ms]
+2026-06-10 12:27:28 | INFO     | rag_platform.main | ← GET /health/db 200 [17.5ms]
+2026-06-10 12:27:30 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:27:59 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:27:59 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:28:26 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:28:31 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [497976.1ms]
+2026-06-10 12:28:37 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:28:37 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are equivalent e-documents (ACCOUNT OPENING FORM FOR RE' top_k=10
+2026-06-10 12:28:37 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are equivalent e-documents (ACCOUNT OPENING FORM FOR RE' collection='text_documents'
+2026-06-10 12:28:38 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:29:14 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:29:14 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:29:43 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:29:45 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [287220.3ms]
+2026-06-10 12:29:46 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [422280.2ms]
+2026-06-10 12:29:49 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [140510.8ms]
+2026-06-10 12:30:05 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [88158.3ms]
+2026-06-10 12:30:05 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:30:05 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - cc (Agriculture Loan Application For' top_k=10
+2026-06-10 12:30:05 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - cc (Agriculture Loan Application For' collection='text_documents'
+2026-06-10 12:30:06 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:30:40 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:30:40 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:31:40 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:32:08 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [122469.7ms]
+2026-06-10 12:37:23 | INFO     | rag_platform.main | → OPTIONS /api/rag/evaluate
+2026-06-10 12:37:23 | INFO     | rag_platform.main | ← OPTIONS /api/rag/evaluate 200 [3.1ms]
+2026-06-10 12:37:23 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:37:23 | INFO     | rag_platform.main | ← GET /health 200 [4.0ms]
+2026-06-10 12:37:23 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:37:23 | INFO     | rag_platform.main | ← GET /health/db 200 [19.5ms]
+2026-06-10 12:37:23 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:37:23 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.6ms]
+2026-06-10 12:37:23 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:37:23 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:37:23 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:37:23 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.6ms]
+2026-06-10 12:37:23 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - tl/dl (Agriculture Loan Application ' top_k=10
+2026-06-10 12:37:23 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - tl/dl (Agriculture Loan Application ' collection='text_documents'
+2026-06-10 12:37:25 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:37:57 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:37:57 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:38:56 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:38:56 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health 200 [8.1ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/chroma 200 [6.1ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.1ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health 200 [6.1ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:38:56 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.0ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.0ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health 200 [3.0ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:38:56 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:38:56 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.0ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.0ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/db 200 [30.1ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/db 200 [23.4ms]
+2026-06-10 12:38:56 | INFO     | rag_platform.main | ← GET /health/db 200 [15.6ms]
+2026-06-10 12:38:59 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:38:59 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:38:59 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:38:59 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:38:59 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:38:59 | INFO     | rag_platform.main | ← GET /health 200 [7.2ms]
+2026-06-10 12:38:59 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.3ms]
+2026-06-10 12:38:59 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.4ms]
+2026-06-10 12:38:59 | INFO     | rag_platform.main | ← GET /health/db 200 [12.4ms]
+2026-06-10 12:39:23 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:39:23 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is facility type - od' top_k=10
+2026-06-10 12:39:23 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is facility type - od' collection='text_documents'
+2026-06-10 12:39:24 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:39:51 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:39:51 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:40:12 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health 200 [2.9ms]
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:40:12 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.3ms]
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.5ms]
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health 200 [3.1ms]
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health/chroma 200 [4.5ms]
+2026-06-10 12:40:12 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.0ms]
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health/db 200 [20.5ms]
+2026-06-10 12:40:12 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:40:12 | INFO     | rag_platform.main | ← GET /health/db 200 [6.2ms]
+2026-06-10 12:40:23 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [180156.8ms]
+2026-06-10 12:40:29 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:40:29 | INFO     | rag_platform.main | ← GET /health 200 [1.3ms]
+2026-06-10 12:40:29 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:40:29 | INFO     | rag_platform.main | ← GET /health/db 200 [15.5ms]
+2026-06-10 12:40:29 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:40:29 | INFO     | rag_platform.main | ← GET /health/chroma 200 [3.9ms]
+2026-06-10 12:40:29 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:40:29 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:40:29 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.0ms]
+2026-06-10 12:40:31 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [67253.9ms]
+2026-06-10 12:40:31 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:40:31 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are sourcing entities - branch/rmru/fsto (Agriculture L' top_k=10
+2026-06-10 12:40:31 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are sourcing entities - branch/rmru/fsto (Agriculture L' collection='text_documents'
+2026-06-10 12:40:32 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:41:05 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:41:05 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:42:03 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:42:03 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health 200 [9.0ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/chroma 200 [7.0ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/ollama 404 [7.0ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health 200 [3.0ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:42:03 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.0ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/ollama 404 [5.8ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health 200 [1.8ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:42:03 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.7ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/ollama 404 [2.0ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/db 200 [30.5ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/db 200 [21.5ms]
+2026-06-10 12:42:03 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:42:03 | INFO     | rag_platform.main | ← GET /health/db 200 [5.7ms]
+2026-06-10 12:42:30 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:42:30 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:42:30 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:42:30 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:42:30 | INFO     | rag_platform.main | ← GET /health 200 [0.0ms]
+2026-06-10 12:42:30 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:42:30 | INFO     | rag_platform.main | ← GET /health/chroma 200 [0.0ms]
+2026-06-10 12:42:30 | INFO     | rag_platform.main | ← GET /health/ollama 404 [0.0ms]
+2026-06-10 12:42:30 | INFO     | rag_platform.main | ← GET /health/db 200 [17.6ms]
+2026-06-10 12:42:31 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:42:31 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what are sourcing entities - dsa/dse/sboss/ba (Agriculture L' top_k=10
+2026-06-10 12:42:31 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what are sourcing entities - dsa/dse/sboss/ba (Agriculture L' collection='text_documents'
+2026-06-10 12:42:31 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [120744.2ms]
+2026-06-10 12:42:32 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:43:05 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:43:05 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:43:40 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:44:05 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [94147.3ms]
+2026-06-10 12:44:05 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:44:05 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='how to categorize asset as movable/immovable/liquid (Agricul' top_k=10
+2026-06-10 12:44:05 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='how to categorize asset as movable/immovable/liquid (Agricul' collection='text_documents'
+2026-06-10 12:44:06 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:44:37 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:44:37 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:45:35 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:46:00 | INFO     | rag_platform.main | ← POST /api/rag/evaluate 200 [115604.2ms]
+2026-06-10 12:46:00 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:46:00 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is primary vs collateral security (Agriculture Loan App' top_k=10
+2026-06-10 12:46:00 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is primary vs collateral security (Agriculture Loan App' collection='text_documents'
+2026-06-10 12:46:02 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:47:00 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:47:00 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:50:14 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health 200 [5.0ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:50:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [5.2ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [6.2ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health 200 [9.5ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [9.4ms]
+2026-06-10 12:50:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.5ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health 200 [4.7ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:50:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [9.2ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → OPTIONS /api/rag/evaluate
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [3.5ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← OPTIONS /api/rag/evaluate 200 [2.9ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health 200 [0.0ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/db 200 [48.8ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/db 200 [47.6ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.0ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:50:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [1.6ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/db 200 [38.5ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health 200 [3.1ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/chroma 200 [8.3ms]
+2026-06-10 12:50:14 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:50:14 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/ollama 404 [4.0ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='difference between individual and non-individual form (Agric' top_k=10
+2026-06-10 12:50:14 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='difference between individual and non-individual form (Agric' collection='text_documents'
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/db 200 [37.2ms]
+2026-06-10 12:50:14 | INFO     | rag_platform.main | ← GET /health/db 200 [19.6ms]
+2026-06-10 12:50:15 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:51:51 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:51:51 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:55:02 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:55:02 | INFO     | rag_platform.main | → GET /health
+2026-06-10 12:55:02 | INFO     | rag_platform.main | → GET /health/db
+2026-06-10 12:55:02 | INFO     | rag_platform.main | → GET /health/chroma
+2026-06-10 12:55:02 | INFO     | rag_platform.main | → GET /health/ollama
+2026-06-10 12:55:02 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:55:02 | WARNING  | rag_platform.exceptions | HTTP 404: Not Found | path=/health/ollama
+2026-06-10 12:55:02 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:55:02 | INFO     | rag_platform.main | ← GET /health 200 [14.4ms]
+2026-06-10 12:55:02 | INFO     | rag_platform.main | ← GET /health/chroma 200 [14.4ms]
+2026-06-10 12:55:02 | INFO     | rag_platform.main | ← GET /health/ollama 404 [12.9ms]
+2026-06-10 12:55:02 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what qualifies as a tie-up which has to be mentioned (Agricu' top_k=10
+2026-06-10 12:55:02 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what qualifies as a tie-up which has to be mentioned (Agricu' collection='text_documents'
+2026-06-10 12:55:02 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is rlms application no. (auto loan application)' top_k=10
+2026-06-10 12:55:02 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is rlms application no. (auto loan application)' collection='text_documents'
+2026-06-10 12:55:02 | INFO     | rag_platform.main | ← GET /health/db 200 [25.8ms]
+2026-06-10 12:55:03 | INFO     | rag_platform.main | → POST /api/rag/evaluate
+2026-06-10 12:55:03 | INFO     | rag_platform.hybrid_rag | HybridRAG retrieve: query='what is sourcing entity type - branch/mpst (auto loan applic' top_k=10
+2026-06-10 12:55:03 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is sourcing entity type - branch/mpst (auto loan applic' collection='text_documents'
+2026-06-10 12:55:03 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:56:46 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:56:46 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
+2026-06-10 12:58:37 | INFO     | rag_platform.cross_encoder | Reranked 10 chunks, selected top 5
+2026-06-10 12:58:37 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
