@@ -56317,3 +56317,5 @@ fastapi.exceptions.ResponseValidationError: 4 validation errors:
 2026-06-10 12:20:13 | INFO     | rag_platform.vector_rag | VectorRAG retrieve: query='what is FATCA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL)' collection='text_documents'
 2026-06-10 12:20:13 | INFO     | rag_platform.main | ← GET /health/db 200 [33.4ms]
 2026-06-10 12:20:15 | INFO     | rag_platform.chromadb_client | Collection 'text_documents' ready
+2026-06-10 12:21:50 | INFO     | rag_platform.cross_encoder | Reranked 20 chunks, selected top 10
+2026-06-10 12:21:50 | INFO     | rag_platform.parent_context | Expanded 10 chunks with parent context
