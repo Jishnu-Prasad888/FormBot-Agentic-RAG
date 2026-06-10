@@ -8,6 +8,7 @@ from app.rag.hybrid_rag import hybrid_rag
 from app.rag.bm25 import bm25_retriever
 from app.rag.table_rag import table_rag
 from app.rag.metadata_filter import filter_results, build_chroma_filter
+from app.rag.synonym_expansion import get_synonym_expander
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.chromadb.client import chroma_client
 from app.schemas.search import SearchRequest, SearchResponse, SearchResult
@@ -15,6 +16,25 @@ from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/search", tags=["Search"])
 logger = get_logger("api.search")
+
+
+def _search_with_synonyms(search_fn, query: str, *args, **kwargs) -> list[dict]:
+    """Search with query and its synonym expansions, deduplicate and merge results"""
+    expander = get_synonym_expander()
+    expanded_queries = expander.expand_query(query)
+    
+    all_results = {}
+    for q in expanded_queries:
+        try:
+            results = search_fn(q, *args, **kwargs)
+            for r in results:
+                doc_id = r.get("chunk_id", r.get("document_id", ""))
+                if doc_id not in all_results:
+                    all_results[doc_id] = r
+        except Exception as e:
+            logger.warning(f"Search failed for query '{q}': {e}")
+    
+    return sorted(all_results.values(), key=lambda x: x.get("score", 0), reverse=True)
 
 
 def _build_response(query: str, results: list[dict], strategy: str, start_time: float) -> SearchResponse:
@@ -50,7 +70,22 @@ def _build_response(query: str, results: list[dict], strategy: str, start_time: 
 async def vector_search(req: SearchRequest):
     start = time.time()
     collection = req.collection_name or "text_documents"
-    results = await vector_rag.retrieve(req.query, collection, req.top_k, req.filters)
+    
+    async def search(q):
+        return await vector_rag.retrieve(q, collection, req.top_k, req.filters)
+    
+    expander = get_synonym_expander()
+    expanded_queries = expander.expand_query(req.query)
+    
+    all_results = {}
+    for q in expanded_queries:
+        results = await search(q)
+        for r in results:
+            doc_id = r.get("chunk_id", r.get("document_id", ""))
+            if doc_id not in all_results:
+                all_results[doc_id] = r
+    
+    results = sorted(all_results.values(), key=lambda x: x.get("score", 0), reverse=True)[:req.top_k]
     return _build_response(req.query, results, "vector", start)
 
 
@@ -58,9 +93,21 @@ async def vector_search(req: SearchRequest):
 async def bm25_search(req: SearchRequest):
     start = time.time()
     collection = req.collection_name or "text_documents"
-    results = bm25_retriever.search(collection, req.query, req.top_k)
-    if req.filters:
-        results = filter_results(results, req.filters)
+    
+    expander = get_synonym_expander()
+    expanded_queries = expander.expand_query(req.query)
+    
+    all_results = {}
+    for q in expanded_queries:
+        results = bm25_retriever.search(collection, q, req.top_k)
+        if req.filters:
+            results = filter_results(results, req.filters)
+        for r in results:
+            doc_id = r.get("chunk_id", r.get("document_id", ""))
+            if doc_id not in all_results:
+                all_results[doc_id] = r
+    
+    results = sorted(all_results.values(), key=lambda x: x.get("score", 0), reverse=True)[:req.top_k]
     return _build_response(req.query, results, "bm25", start)
 
 
@@ -68,7 +115,22 @@ async def bm25_search(req: SearchRequest):
 async def hybrid_search(req: SearchRequest):
     start = time.time()
     collection = req.collection_name or "text_documents"
-    results = await hybrid_rag.retrieve(req.query, collection, req.top_k, req.filters)
+    
+    async def search(q):
+        return await hybrid_rag.retrieve(q, collection, req.top_k, req.filters)
+    
+    expander = get_synonym_expander()
+    expanded_queries = expander.expand_query(req.query)
+    
+    all_results = {}
+    for q in expanded_queries:
+        results = await search(q)
+        for r in results:
+            doc_id = r.get("chunk_id", r.get("document_id", ""))
+            if doc_id not in all_results:
+                all_results[doc_id] = r
+    
+    results = sorted(all_results.values(), key=lambda x: x.get("score", 0), reverse=True)[:req.top_k]
     return _build_response(req.query, results, "hybrid", start)
 
 
