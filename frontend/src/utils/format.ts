@@ -16,8 +16,10 @@ export const formatLatency = (ms: number): string => {
   return `${(ms / 1000).toFixed(1)}s`;
 };
 
-export const formatScore = (score: number): string =>
-  `${(score * 100).toFixed(1)}%`;
+export const formatScore = (score: number): string => {
+  const s = isNaN(score) ? 0 : score;
+  return `${(s * 100).toFixed(1)}%`;
+};
 
 export const formatBytes = (bytes: number): string => {
   if (bytes < 1024) return `${bytes}B`;

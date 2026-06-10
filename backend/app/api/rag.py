@@ -100,11 +100,25 @@ async def evaluate_rag(req: EvaluateRequest, db: AsyncSession = Depends(get_db))
         return round(sum(r.get(k, 0.0) for r in succeeded) / len(succeeded), 4)
 
     return {
-        "accuracy":          _avg("accuracy"),
+        # LLM-as-judge metrics
+        "accuracy_llm":      _avg("accuracy_llm"),
+        "accuracy":          _avg("accuracy_llm"),  # Backward compat
         "faithfulness":      _avg("faithfulness"),
         "context_precision": _avg("context_precision"),
         "context_recall":    _avg("context_recall"),
         "answer_relevancy":  _avg("answer_relevancy"),
+        # Accuracy methods
+        "exact_match":       _avg("exact_match"),
+        "semantic_similarity": _avg("semantic_similarity"),
+        "f1":                _avg("f1"),
+        "accuracy_combined": _avg("accuracy_combined"),
+        # Retrieval metrics
+        "recall_10":         _avg("recall_10"),
+        "recall_20":         _avg("recall_20"),
+        "recall_50":         _avg("recall_50"),
+        "mrr":               _avg("mrr"),
+        "ndcg_10":           _avg("ndcg_10"),
+        # Meta
         "latency_avg_ms":    round(sum(latencies) / len(latencies), 1) if latencies else 0.0,
         "failed_questions":  failed,
         "per_question":      per_question,

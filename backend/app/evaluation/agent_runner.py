@@ -110,11 +110,24 @@ async def evaluate_question(
         "retrieved_context": context_text,
         "expanded_queries": queries if use_query_expansion else [],
         "num_chunks": len(all_chunks),
-        "accuracy": scores.get("accuracy", 0.0),
+        # LLM-as-judge
+        "accuracy_llm": scores.get("accuracy_llm", 0.0),
         "faithfulness": scores.get("faithfulness", 0.0),
         "answer_relevancy": scores.get("answer_relevancy", 0.0),
         "context_precision": scores.get("context_precision", 0.0),
         "context_recall": scores.get("context_recall", 0.0),
+        # Accuracy methods
+        "exact_match": scores.get("exact_match", 0.0),
+        "semantic_similarity": scores.get("semantic_similarity", 0.0),
+        "f1": scores.get("f1", 0.0),
+        "accuracy_combined": scores.get("accuracy_combined", 0.0),
+        # Retrieval metrics
+        "recall_10": scores.get("recall_10", 0.0),
+        "recall_20": scores.get("recall_20", 0.0),
+        "recall_50": scores.get("recall_50", 0.0),
+        "mrr": scores.get("mrr", 0.0),
+        "ndcg_10": scores.get("ndcg_10", 0.0),
+        # Rationales
         "accuracy_rationale": scores.get("accuracy_rationale", ""),
         "faithfulness_rationale": scores.get("faithfulness_rationale", ""),
         "answer_relevancy_rationale": scores.get("answer_relevancy_rationale", ""),
@@ -133,11 +146,24 @@ def failed_question_row(question: str, expected_answer: str, error: str) -> dict
         "retrieved_context": "",
         "expanded_queries": [],
         "num_chunks": 0,
-        "accuracy": 0.0,
+        # LLM-as-judge
+        "accuracy_llm": 0.0,
         "faithfulness": 0.0,
         "answer_relevancy": 0.0,
         "context_precision": 0.0,
         "context_recall": 0.0,
+        # Accuracy methods
+        "exact_match": 0.0,
+        "semantic_similarity": 0.0,
+        "f1": 0.0,
+        "accuracy_combined": 0.0,
+        # Retrieval metrics
+        "recall_10": 0.0,
+        "recall_20": 0.0,
+        "recall_50": 0.0,
+        "mrr": 0.0,
+        "ndcg_10": 0.0,
+        # Rationales
         "accuracy_rationale": "",
         "faithfulness_rationale": "",
         "answer_relevancy_rationale": "",

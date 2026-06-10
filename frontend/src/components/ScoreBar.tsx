@@ -9,7 +9,8 @@ interface Props {
 }
 
 export default function ScoreBar({ score, label, color = '#00d4ff', showValue = true }: Props) {
-  const pct = Math.min(Math.max(score, 0), 1) * 100;
+  const s = isNaN(score) ? 0 : score;
+  const pct = Math.min(Math.max(s, 0), 1) * 100;
   return (
     <div className="w-full">
       {(label || showValue) && (
@@ -21,7 +22,7 @@ export default function ScoreBar({ score, label, color = '#00d4ff', showValue = 
           )}
           {showValue && (
             <span className="text-xs font-bold" style={{ fontFamily: 'IBM Plex Mono, monospace', color, fontSize: '0.7rem' }}>
-              {formatScore(score)}
+              {formatScore(s)}
             </span>
           )}
         </div>

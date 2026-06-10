@@ -229,12 +229,13 @@ function exportToCSV(rows: QuestionResult[]) {
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
 function GradeChip({ score }: { score: number }) {
+  const s = isNaN(score) ? 0 : score;
   const { label, color } =
-    score >= 0.8
+    s >= 0.8
       ? { label: "EXCELLENT", color: "#00ff9f" }
-      : score >= 0.6
+      : s >= 0.6
         ? { label: "GOOD", color: "#ffe600" }
-        : score >= 0.4
+        : s >= 0.4
           ? { label: "FAIR", color: "#ff8c00" }
           : { label: "POOR", color: "#ff4d6d" };
   return (
