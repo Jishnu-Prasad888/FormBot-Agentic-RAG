@@ -155,24 +155,6 @@ function parseCSV(text: string): QA[] {
 }
 
 function exportToCSV(rows: QuestionResult[]) {
-  const headers = [
-    "Question No",
-    "Question",
-    "Expected Answer",
-    "Generated Answer",
-    "Retrieved Context",
-    "Accuracy",
-    "Faithfulness",
-    "Context Precision",
-    "Context Recall",
-    "Answer Relevancy",
-    "Accuracy Rationale",
-    "Faithfulness Rationale",
-    "Context Precision Rationale",
-    "Context Recall Rationale",
-    "Answer Relevancy Rationale",
-    "Latency (ms)",
-  ];
   const escape = (v: any) => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const csvRows = rows.map((r, i) =>
     [
@@ -181,11 +163,24 @@ function exportToCSV(rows: QuestionResult[]) {
       escape(r.expected_answer),
       escape(r.generated_answer),
       escape(r.retrieved_context),
-      r.accuracy,
+      // LLM-as-judge
+      r.accuracy_llm ?? 0,
       r.faithfulness,
       r.context_precision,
       r.context_recall,
       r.answer_relevancy,
+      // Accuracy methods
+      r.exact_match ?? 0,
+      r.semantic_similarity ?? 0,
+      r.f1 ?? 0,
+      r.accuracy_combined ?? 0,
+      // Retrieval metrics
+      r.recall_10 ?? 0,
+      r.recall_20 ?? 0,
+      r.recall_50 ?? 0,
+      r.mrr ?? 0,
+      r.ndcg_10 ?? 0,
+      r.gold_answer_found ? "Yes" : "No",
       escape(r.accuracy_rationale),
       escape(r.faithfulness_rationale),
       escape(r.context_precision_rationale),
@@ -194,6 +189,34 @@ function exportToCSV(rows: QuestionResult[]) {
       r.latency_ms,
     ].join(","),
   );
+  const headers = [
+    "Question No",
+    "Question",
+    "Expected Answer",
+    "Generated Answer",
+    "Retrieved Context",
+    "Accuracy (LLM)",
+    "Faithfulness",
+    "Context Precision",
+    "Context Recall",
+    "Answer Relevancy",
+    "Exact Match",
+    "Semantic Similarity",
+    "F1 Score",
+    "Accuracy (Combined)",
+    "Recall@10",
+    "Recall@20",
+    "Recall@50",
+    "MRR",
+    "nDCG@10",
+    "Gold Answer Found",
+    "Accuracy Rationale",
+    "Faithfulness Rationale",
+    "Context Precision Rationale",
+    "Context Recall Rationale",
+    "Answer Relevancy Rationale",
+    "Latency (ms)",
+  ];
   const blob = new Blob([[headers.join(","), ...csvRows].join("\n")], {
     type: "text/csv",
   });
@@ -242,13 +265,19 @@ function QuestionRow({
   isRunning: boolean;
 }) {
   const [open, setOpen] = useState(false);
-  const avg =
-    (row.accuracy +
-      row.faithfulness +
-      row.context_precision +
-      row.context_recall +
-      row.answer_relevancy) /
-    5;
+  
+  // Calculate average of LLM-as-judge metrics
+  const llmMetrics = [
+    row.accuracy_llm ?? 0,
+    row.faithfulness,
+    row.context_precision,
+    row.context_recall,
+    row.answer_relevancy,
+  ];
+  const avg = llmMetrics.reduce((a, b) => a + b, 0) / llmMetrics.length;
+
+  // Gold answer found indicator
+  const goldFound = row.gold_answer_found ?? false;
 
   return (
     <div
@@ -327,10 +356,20 @@ function QuestionRow({
             </div>
           ) : (
             <>
-              {/* Metric scores + rationales */}
+              {/* LLM-as-Judge Metrics */}
               <div className="space-y-2 pt-3">
-                {METRIC_KEYS.map((key) => (
-                  <div key={key} className="flex items-start gap-3">
+                <div
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{
+                    fontFamily: "Space Mono, monospace",
+                    color: "#a78bfa",
+                    fontSize: "0.6rem",
+                  }}
+                >
+                  LLM-as-Judge Metrics
+                </div>
+                {LLM_JUDGE_METRICS.map((key) => (
+                  <div key={key} className="flex items-start gap-3 pl-2">
                     <div className="w-32 flex-shrink-0">
                       <div
                         className="text-xs font-bold mb-0.5"
@@ -357,6 +396,99 @@ function QuestionRow({
                     >
                       {(row as any)[`${key}_rationale`] || "—"}
                     </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Accuracy Methods */}
+              <div className="space-y-2 pt-3">
+                <div
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{
+                    fontFamily: "Space Mono, monospace",
+                    color: "#00ff9f",
+                    fontSize: "0.6rem",
+                  }}
+                >
+                  Accuracy Evaluation
+                </div>
+                {ACCURACY_METRICS.map((key) => (
+                  <div key={key} className="flex items-center gap-3 pl-2">
+                    <div className="w-32 flex-shrink-0">
+                      <div
+                        className="text-xs font-bold mb-0.5"
+                        style={{
+                          fontFamily: "Space Mono, monospace",
+                          color: METRIC_COLORS[key],
+                          fontSize: "0.6rem",
+                        }}
+                      >
+                        {METRIC_LABELS[key]}
+                      </div>
+                      <ScoreBar
+                        score={(row as any)[key] || 0}
+                        color={METRIC_COLORS[key]}
+                      />
+                    </div>
+                    <span
+                      className="text-xs text-[#cbd5e1]"
+                      style={{ fontFamily: "Space Mono, monospace" }}
+                    >
+                      {((row as any)[key] * 100).toFixed(0)}%
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Retrieval Metrics */}
+              <div className="space-y-2 pt-3">
+                <div
+                  className="text-xs font-bold uppercase tracking-widest flex items-center gap-2"
+                  style={{
+                    fontFamily: "Space Mono, monospace",
+                    color: "#ff4d6d",
+                    fontSize: "0.6rem",
+                  }}
+                >
+                  Retrieval Metrics
+                  {goldFound && (
+                    <span
+                      style={{
+                        color: "#00ff9f",
+                        background: "#00ff9f22",
+                        padding: "2px 6px",
+                        borderRadius: "3px",
+                        fontSize: "0.55rem",
+                      }}
+                    >
+                      ✓ GOLD ANSWER FOUND
+                    </span>
+                  )}
+                </div>
+                {RETRIEVAL_METRICS.map((key) => (
+                  <div key={key} className="flex items-center gap-3 pl-2">
+                    <div className="w-32 flex-shrink-0">
+                      <div
+                        className="text-xs font-bold mb-0.5"
+                        style={{
+                          fontFamily: "Space Mono, monospace",
+                          color: METRIC_COLORS[key],
+                          fontSize: "0.6rem",
+                        }}
+                      >
+                        {METRIC_LABELS[key]}
+                      </div>
+                      <ScoreBar
+                        score={(row as any)[key] || 0}
+                        color={METRIC_COLORS[key]}
+                      />
+                    </div>
+                    <span
+                      className="text-xs text-[#cbd5e1]"
+                      style={{ fontFamily: "Space Mono, monospace" }}
+                    >
+                      {((row as any)[key] * 100).toFixed(0)}%
+                    </span>
                   </div>
                 ))}
               </div>
@@ -491,11 +623,17 @@ export default function Evaluate({ onToast }: Props) {
         : 0;
 
     setResult({
-      accuracy: avg("accuracy"),
+      accuracy_llm: avg("accuracy_llm"),
+      accuracy_combined: avg("accuracy_combined"),
       faithfulness: avg("faithfulness"),
       context_precision: avg("context_precision"),
       context_recall: avg("context_recall"),
       answer_relevancy: avg("answer_relevancy"),
+      recall_10: avg("recall_10"),
+      recall_20: avg("recall_20"),
+      recall_50: avg("recall_50"),
+      mrr: avg("mrr"),
+      ndcg_10: avg("ndcg_10"),
       latency_avg_ms:
         succeeded.length > 0
           ? updated.reduce((s, r) => s + r.latency_ms, 0) / succeeded.length
@@ -583,11 +721,21 @@ export default function Evaluate({ onToast }: Props) {
             expected_answer: toEvaluate[i].expected_answer,
             generated_answer: "",
             retrieved_context: "",
-            accuracy: res.accuracy ?? 0,
+            accuracy_llm: res.accuracy_llm ?? res.accuracy ?? 0,
+            accuracy_combined: res.accuracy_combined ?? 0,
             faithfulness: res.faithfulness ?? 0,
             answer_relevancy: res.answer_relevancy ?? 0,
             context_precision: res.context_precision ?? 0,
             context_recall: res.context_recall ?? 0,
+            exact_match: res.exact_match ?? 0,
+            semantic_similarity: res.semantic_similarity ?? 0,
+            f1: res.f1 ?? 0,
+            recall_10: res.recall_10 ?? 0,
+            recall_20: res.recall_20 ?? 0,
+            recall_50: res.recall_50 ?? 0,
+            mrr: res.mrr ?? 0,
+            ndcg_10: res.ndcg_10 ?? 0,
+            gold_answer_found: res.gold_answer_found ?? false,
             accuracy_rationale: "",
             faithfulness_rationale: "",
             answer_relevancy_rationale: "",
@@ -603,11 +751,21 @@ export default function Evaluate({ onToast }: Props) {
             expected_answer: toEvaluate[i].expected_answer,
             generated_answer: "",
             retrieved_context: "",
-            accuracy: 0,
+            accuracy_llm: 0,
+            accuracy_combined: 0,
             faithfulness: 0,
             answer_relevancy: 0,
             context_precision: 0,
             context_recall: 0,
+            exact_match: 0,
+            semantic_similarity: 0,
+            f1: 0,
+            recall_10: 0,
+            recall_20: 0,
+            recall_50: 0,
+            mrr: 0,
+            ndcg_10: 0,
+            gold_answer_found: false,
             accuracy_rationale: "",
             faithfulness_rationale: "",
             answer_relevancy_rationale: "",
@@ -629,11 +787,17 @@ export default function Evaluate({ onToast }: Props) {
           : 0;
 
       const summary: EvalSummary = {
-        accuracy: avg("accuracy"),
+        accuracy_llm: avg("accuracy_llm"),
+        accuracy_combined: avg("accuracy_combined"),
         faithfulness: avg("faithfulness"),
         context_precision: avg("context_precision"),
         context_recall: avg("context_recall"),
         answer_relevancy: avg("answer_relevancy"),
+        recall_10: avg("recall_10"),
+        recall_20: avg("recall_20"),
+        recall_50: avg("recall_50"),
+        mrr: avg("mrr"),
+        ndcg_10: avg("ndcg_10"),
         latency_avg_ms: succeeded.length ? totalLatency / succeeded.length : 0,
         failed_questions: perQuestion
           .filter((r) => r.error)
@@ -675,11 +839,21 @@ export default function Evaluate({ onToast }: Props) {
         expected_answer: qa.expected_answer,
         generated_answer: "",
         retrieved_context: "",
-        accuracy: res.accuracy ?? 0,
+        accuracy_llm: res.accuracy_llm ?? res.accuracy ?? 0,
+        accuracy_combined: res.accuracy_combined ?? 0,
         faithfulness: res.faithfulness ?? 0,
         answer_relevancy: res.answer_relevancy ?? 0,
         context_precision: res.context_precision ?? 0,
         context_recall: res.context_recall ?? 0,
+        exact_match: res.exact_match ?? 0,
+        semantic_similarity: res.semantic_similarity ?? 0,
+        f1: res.f1 ?? 0,
+        recall_10: res.recall_10 ?? 0,
+        recall_20: res.recall_20 ?? 0,
+        recall_50: res.recall_50 ?? 0,
+        mrr: res.mrr ?? 0,
+        ndcg_10: res.ndcg_10 ?? 0,
+        gold_answer_found: res.gold_answer_found ?? false,
         accuracy_rationale: "",
         faithfulness_rationale: "",
         answer_relevancy_rationale: "",
@@ -693,11 +867,17 @@ export default function Evaluate({ onToast }: Props) {
         if (!prev) {
           // First individual result
           const summary: EvalSummary = {
-            accuracy: qr.accuracy,
+            accuracy_llm: qr.accuracy_llm ?? 0,
+            accuracy_combined: qr.accuracy_combined ?? 0,
             faithfulness: qr.faithfulness,
             context_precision: qr.context_precision,
             context_recall: qr.context_recall,
             answer_relevancy: qr.answer_relevancy,
+            recall_10: qr.recall_10 ?? 0,
+            recall_20: qr.recall_20 ?? 0,
+            recall_50: qr.recall_50 ?? 0,
+            mrr: qr.mrr ?? 0,
+            ndcg_10: qr.ndcg_10 ?? 0,
             latency_avg_ms: qr.latency_ms,
             failed_questions: qr.error
               ? [{ question: qr.question, error: qr.error }]
@@ -727,11 +907,17 @@ export default function Evaluate({ onToast }: Props) {
             : 0;
 
         return {
-          accuracy: avg("accuracy"),
+          accuracy_llm: avg("accuracy_llm"),
+          accuracy_combined: avg("accuracy_combined"),
           faithfulness: avg("faithfulness"),
           context_precision: avg("context_precision"),
           context_recall: avg("context_recall"),
           answer_relevancy: avg("answer_relevancy"),
+          recall_10: avg("recall_10"),
+          recall_20: avg("recall_20"),
+          recall_50: avg("recall_50"),
+          mrr: avg("mrr"),
+          ndcg_10: avg("ndcg_10"),
           latency_avg_ms:
             succeeded.length > 0
               ? updated.reduce((s, r) => s + r.latency_ms, 0) / succeeded.length
@@ -756,7 +942,7 @@ export default function Evaluate({ onToast }: Props) {
   };
 
   const overallAvg = result
-    ? (result.accuracy +
+    ? (result.accuracy_llm +
         result.faithfulness +
         result.context_precision +
         result.context_recall +
@@ -787,8 +973,7 @@ export default function Evaluate({ onToast }: Props) {
           className="text-xs text-[#4a5a8e] mt-0.5"
           style={{ fontFamily: "IBM Plex Mono, monospace" }}
         >
-          LLM-as-Judge: accuracy, faithfulness, precision & recall — no cosine
-          heuristics
+          LLM-as-Judge · Accuracy Methods · Retrieval Metrics
         </p>
       </div>
 
@@ -1197,13 +1382,53 @@ export default function Evaluate({ onToast }: Props) {
                     color: "#6b82b0",
                   }}
                 >
-                  Metric Breakdown
+                  LLM-as-Judge Metrics
                 </div>
-                {METRIC_KEYS.map((key) => (
+                {(LLM_JUDGE_METRICS as readonly string[]).map((key) => (
                   <ScoreBar
                     key={key}
                     score={(result as any)[key] || 0}
-                    label={METRIC_LABELS[key]}
+                    label={METRIC_LABELS[key as keyof typeof METRIC_LABELS]}
+                    color={METRIC_COLORS[key]}
+                  />
+                ))}
+              </div>
+
+              <div className="brutal-card p-4 space-y-4">
+                <div
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{
+                    fontFamily: "Space Mono, monospace",
+                    color: "#6b82b0",
+                  }}
+                >
+                  Accuracy Evaluation Methods
+                </div>
+                {(ACCURACY_METRICS as readonly string[]).map((key) => (
+                  <ScoreBar
+                    key={key}
+                    score={(result as any)[key] || 0}
+                    label={METRIC_LABELS[key as keyof typeof METRIC_LABELS]}
+                    color={METRIC_COLORS[key]}
+                  />
+                ))}
+              </div>
+
+              <div className="brutal-card p-4 space-y-4">
+                <div
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{
+                    fontFamily: "Space Mono, monospace",
+                    color: "#6b82b0",
+                  }}
+                >
+                  Retrieval Metrics
+                </div>
+                {(RETRIEVAL_METRICS as readonly string[]).map((key) => (
+                  <ScoreBar
+                    key={key}
+                    score={(result as any)[key] || 0}
+                    label={METRIC_LABELS[key as keyof typeof METRIC_LABELS]}
                     color={METRIC_COLORS[key]}
                   />
                 ))}
