@@ -7,9 +7,7 @@ from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.rag.bm25 import bm25_retriever
 from app.core.config import settings
-from app.core.logging import get_logger
 
-logger = get_logger("web_service")
 
 ALLOWED_DOMAINS = [
     "docs.", "developer.", "gov.", ".gov", "wikipedia.org",
@@ -53,7 +51,6 @@ class WebService:
         collection_name: str = "web_documents",
         metadata: Optional[dict] = None,
     ) -> dict[str, Any]:
-        logger.info(f"Web ingest: {url}")
         html = await _fetch_url(url)
         text = _clean_html(html)
         chunks = _chunk_text(text, settings.CHUNK_SIZE, settings.CHUNK_OVERLAP)

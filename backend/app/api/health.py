@@ -5,10 +5,8 @@ from sqlalchemy import text
 from app.core.dependencies import get_db
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
-from app.core.logging import get_logger
 
 router = APIRouter(tags=["Health"])
-logger = get_logger("api.health")
 
 
 @router.get("/health")
@@ -22,7 +20,6 @@ async def health_db(db: AsyncSession = Depends(get_db)):
         await db.execute(text("SELECT 1"))
         return {"status": "ok", "database": "sqlite"}
     except Exception as e:
-        logger.error(f"DB health check failed: {e}")
         return {"status": "error", "database": "sqlite", "detail": str(e)}
 
 

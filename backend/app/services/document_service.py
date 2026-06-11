@@ -14,10 +14,8 @@ from app.rag.pdf_rag import pdf_rag
 from app.rag.markdown_rag import markdown_rag
 from app.rag.bm25 import bm25_retriever
 from app.core.config import settings
-from app.core.logging import get_logger
 from app.core.exceptions import DocumentNotFoundError, UnsupportedFileTypeError
 
-logger = get_logger("document_service")
 
 SUPPORTED_TYPES = {
     "pdf": "pdf",
@@ -165,7 +163,6 @@ class DocumentService:
         if chunk_records:
             await document_repo.bulk_create_chunks(db, chunk_records)
 
-        logger.info(f"Document '{filename}' indexed: id={doc_id} chunks={chunk_count}")
         return {"document": doc, "chunk_count": chunk_count}
 
     async def reindex(self, db: AsyncSession, doc_id: str) -> dict[str, Any]:
@@ -184,7 +181,6 @@ class DocumentService:
         try:
             chroma_client.delete_by_document_id(doc.collection_name or "text_documents", doc_id)
         except Exception as e:
-            logger.warning(f"Chroma delete failed during reindex: {e}")
 
         await document_repo.delete_chunks(db, doc_id)
 
@@ -219,7 +215,6 @@ class DocumentService:
         try:
             chroma_client.delete_by_document_id(doc.collection_name or "text_documents", doc_id)
         except Exception as e:
-            logger.warning(f"Chroma delete failed: {e}")
         filepath = Path(doc.filepath)
         if filepath.exists():
             filepath.unlink()

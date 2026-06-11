@@ -1,8 +1,6 @@
 from typing import Any
 from rank_bm25 import BM25Okapi
-from app.core.logging import get_logger
 
-logger = get_logger("bm25")
 
 
 class BM25Retriever:
@@ -18,11 +16,9 @@ class BM25Retriever:
         self._corpus[collection_name] = chunks
         tokenized = [self._tokenize(c["chunk_text"]) for c in chunks]
         self._index[collection_name] = BM25Okapi(tokenized)
-        logger.info(f"BM25 indexed {len(chunks)} chunks for '{collection_name}'")
 
     def search(self, collection_name: str, query: str, top_k: int = 5) -> list[dict[str, Any]]:
         if collection_name not in self._index:
-            logger.warning(f"BM25 index not found for '{collection_name}'")
             return []
         bm25 = self._index[collection_name]
         corpus = self._corpus[collection_name]

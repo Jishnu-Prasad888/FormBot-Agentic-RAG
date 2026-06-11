@@ -7,10 +7,8 @@ from app.core.dependencies import get_db
 from app.rag.pdf_rag import pdf_rag
 from app.services.document_service import document_service
 from app.schemas.search import SearchResult
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/pdf", tags=["PDF RAG"])
-logger = get_logger("api.pdf")
 
 
 @router.post("/index")

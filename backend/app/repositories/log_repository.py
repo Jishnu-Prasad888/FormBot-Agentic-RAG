@@ -1,9 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.database.models import RetrievalLog, EvaluationRun
-from app.core.logging import get_logger
 
-logger = get_logger("log_repo")
 
 
 class LogRepository:

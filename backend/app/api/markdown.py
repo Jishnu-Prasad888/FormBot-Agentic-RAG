@@ -7,10 +7,8 @@ from app.core.dependencies import get_db
 from app.rag.markdown_rag import markdown_rag
 from app.services.document_service import document_service
 from app.schemas.search import SearchResult
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/markdown", tags=["Markdown RAG"])
-logger = get_logger("api.markdown")
 
 
 @router.post("/index")

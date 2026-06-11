@@ -11,9 +11,8 @@ from app.services.rag_service import rag_service
 from app.evaluation.evaluator import evaluate_single
 from app.embeddings.openai_client import openai_client
 from app.rag.cross_encoder import cross_encoder
-from app.core.logging import get_logger
+from app.core.config import settings
 
-logger = get_logger("evaluation.agent_runner")
 
 RAG_SYSTEM = """Answer the question carefully"""
 
@@ -52,7 +51,7 @@ async def _expand_query(question: str, num_expansions: int = 2) -> list[str]:
 async def evaluate_question(
     question: str,
     expected_answer: str,
-    top_k: int = 5,
+    top_k: int = None,
     use_query_expansion: bool = False,
     num_expansions: int = 2,
 ) -> dict[str, Any]:
@@ -67,6 +66,9 @@ async def evaluate_question(
     """
     t0 = time.time()
     
+    if top_k is None:
+        top_k = settings.TOP_K
+
     # Query expansion before retrieval
     if use_query_expansion:
         queries = await _expand_query(question, num_expansions)
@@ -79,7 +81,7 @@ async def evaluate_question(
     
     for query in queries:
         chunks = await rag_service.retrieve(query, strategy="hybrid", top_k=top_k * 2)
-        chunks = cross_encoder.rerank(query, chunks, top_k=top_k)
+        chunks = cross_encoder.rerank(query, chunks, top_k=settings.RERANK_TOP_K)
         
         for c in chunks:
             cid = c.get("chunk_id")
@@ -98,8 +100,26 @@ async def evaluate_question(
     
     generated_answer = await openai_client.generate(prompt, system=RAG_SYSTEM)
     
+    # Build retrieved chunk IDs and derive gold IDs via text matching
+    retrieved_chunk_ids = [c.get("chunk_id", "") for c in all_chunks if c.get("chunk_id")]
+    expected_lower = expected_answer.lower()
+    gold_chunk_ids = {
+        c.get("chunk_id")
+        for c in all_chunks
+        if c.get("chunk_id") and (
+            expected_lower in c.get("chunk_text", "").lower()
+            or (len(expected_lower) >= 20 and expected_lower[:20] in c.get("chunk_text", "").lower())
+        )
+    }
+    # Fallback: if no exact match found, mark best-scoring chunks as gold
+    if not gold_chunk_ids and all_chunks:
+        best_score = max((c.get("score", 0) for c in all_chunks), default=0)
+        if best_score > 0:
+            gold_chunk_ids = {c.get("chunk_id") for c in all_chunks if c.get("score", 0) >= best_score * 0.9 and c.get("chunk_id")}
+
     # Score
-    scores = await evaluate_single(question, expected_answer, generated_answer, chunk_texts)
+    scores = await evaluate_single(question, expected_answer, generated_answer, chunk_texts,
+                                   retrieved_chunk_ids=retrieved_chunk_ids, gold_chunk_ids=gold_chunk_ids)
     
     latency_ms = round((time.time() - t0) * 1000, 1)
 

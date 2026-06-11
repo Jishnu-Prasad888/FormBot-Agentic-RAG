@@ -1,14 +1,11 @@
 from typing import Any
 from sentence_transformers import CrossEncoder
-from app.core.logging import get_logger
 
-logger = get_logger("cross_encoder")
 
 
 class CrossEncoderReranker:
     def __init__(self, model_name: str = "BAAI/bge-reranker-v2-m3"):
         self.model = CrossEncoder(model_name)
-        logger.info(f"CrossEncoder initialized with {model_name}")
 
     def rerank(
         self,
@@ -30,7 +27,6 @@ class CrossEncoderReranker:
             chunk["ce_score"] = float(scores[i])
         
         ranked = sorted(chunks, key=lambda x: x["ce_score"], reverse=True)[:top_k]
-        logger.info(f"Reranked {len(chunks)} chunks, selected top {len(ranked)}")
         return ranked
 
 

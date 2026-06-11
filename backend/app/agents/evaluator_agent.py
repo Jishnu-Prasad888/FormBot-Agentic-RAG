@@ -6,7 +6,6 @@ from app.rag.evaluator import (
     compute_faithfulness, compute_answer_relevancy,
     compute_context_precision, compute_context_recall,
 )
-from app.core.logging import get_logger
 
 
 class RetrievalEvaluationAgent(BaseAgent):

@@ -2,9 +2,7 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
-from app.core.logging import get_logger
 
-logger = get_logger("exceptions")
 
 
 class RAGPlatformException(Exception):
@@ -49,7 +47,6 @@ class UnsupportedFileTypeError(RAGPlatformException):
 
 
 async def rag_platform_exception_handler(request: Request, exc: RAGPlatformException):
-    logger.error(f"RAGPlatformException: {exc.message} | path={request.url.path}")
     return JSONResponse(
         status_code=exc.status_code,
         content={"error": exc.message, "status_code": exc.status_code},
@@ -57,7 +54,6 @@ async def rag_platform_exception_handler(request: Request, exc: RAGPlatformExcep
 
 
 async def http_exception_handler(request: Request, exc: StarletteHTTPException):
-    logger.warning(f"HTTP {exc.status_code}: {exc.detail} | path={request.url.path}")
     return JSONResponse(
         status_code=exc.status_code,
         content={"error": exc.detail, "status_code": exc.status_code},
@@ -65,7 +61,6 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 
 
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
-    logger.warning(f"Validation error: {exc.errors()} | path={request.url.path}")
     return JSONResponse(
         status_code=422,
         content={"error": "Validation failed", "details": exc.errors()},
@@ -73,7 +68,6 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 
 async def generic_exception_handler(request: Request, exc: Exception):
-    logger.error(f"Unhandled exception: {exc} | path={request.url.path}", exc_info=True)
     return JSONResponse(
         status_code=500,
         content={"error": "Internal server error", "status_code": 500},

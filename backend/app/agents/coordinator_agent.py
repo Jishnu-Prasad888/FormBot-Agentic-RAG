@@ -7,9 +7,7 @@ from app.agents.router_agent import router_agent, _detect_doc_type
 from app.agents.web_agent import web_agent
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.core.prompts import DEFAULT_COORDINATOR_SYNTHESIS_PROMPT
-from app.core.logging import get_logger
 
-logger = get_logger("coordinator_agent")
 
 INTENT_KEYWORDS = {
     "table": ["table", "csv", "spreadsheet", "rows", "columns", "sum", "count", "average", "aggregate"],
@@ -93,7 +91,6 @@ class CoordinatorAgent(BaseAgent):
                 agent_results.append(res)
                 all_chunks.extend(res.get("chunks", []))
             except Exception as e:
-                logger.error(f"Agent '{agent_name}' failed: {e}")
 
         # Synthesize answers from all agents
         if not agent_results:

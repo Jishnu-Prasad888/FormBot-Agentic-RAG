@@ -3,9 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, delete
 from sqlalchemy.orm import selectinload
 from app.database.models import Conversation, Message
-from app.core.logging import get_logger
 
-logger = get_logger("conversation_repo")
 
 
 class ConversationRepository:

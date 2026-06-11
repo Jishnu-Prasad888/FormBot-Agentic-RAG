@@ -1,9 +1,7 @@
 import json
 import csv
 from pathlib import Path
-from app.core.logging import get_logger
 
-logger = get_logger("synonym_expansion")
 
 
 class SynonymExpander:
@@ -29,9 +27,7 @@ class SynonymExpander:
                     self.synonyms[canonical] = aliases
                     for alias in aliases:
                         self.reverse_map[alias] = canonical
-            logger.info(f"Loaded {len(self.synonyms)} canonical terms from JSON")
         except Exception as e:
-            logger.error(f"Error loading JSON synonyms: {e}")
 
     def _load_csv(self, path: str):
         """Load synonyms from CSV format: canonical,alias"""
@@ -47,9 +43,7 @@ class SynonymExpander:
                         if alias not in self.synonyms[canonical]:
                             self.synonyms[canonical].append(alias)
                         self.reverse_map[alias] = canonical
-            logger.info(f"Loaded synonyms from CSV, total canonical terms: {len(self.synonyms)}")
         except Exception as e:
-            logger.error(f"Error loading CSV synonyms: {e}")
 
     def expand_query(self, query: str) -> list[str]:
         """Expand query with synonyms and return list of expanded queries"""

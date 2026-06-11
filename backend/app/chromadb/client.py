@@ -3,10 +3,8 @@ from typing import Any, Optional
 import chromadb
 from chromadb.config import Settings as ChromaSettings
 from app.core.config import settings
-from app.core.logging import get_logger
 from app.core.exceptions import ChromaDBError
 
-logger = get_logger("chromadb_client")
 
 COLLECTIONS = [
     "table_documents",
@@ -29,9 +27,7 @@ class ChromaDBClient:
                     path=settings.CHROMA_PERSIST_DIR,
                     settings=ChromaSettings(anonymized_telemetry=False),
                 )
-                logger.info(f"ChromaDB initialized at {settings.CHROMA_PERSIST_DIR}")
             except Exception as e:
-                logger.error(f"ChromaDB init failed: {e}")
                 raise ChromaDBError(str(e))
         return self._client
 
@@ -42,20 +38,16 @@ class ChromaDBClient:
                 name=name,
                 metadata=metadata or {"hnsw:space": "cosine"},
             )
-            logger.info(f"Collection '{name}' ready")
             return collection
         except Exception as e:
-            logger.error(f"create_collection failed for '{name}': {e}")
             raise ChromaDBError(str(e))
 
     def delete_collection(self, name: str) -> bool:
         try:
             client = self.get_client()
             client.delete_collection(name)
-            logger.info(f"Collection '{name}' deleted")
             return True
         except Exception as e:
-            logger.error(f"delete_collection failed for '{name}': {e}")
             raise ChromaDBError(str(e))
 
     def add_documents(
@@ -74,10 +66,8 @@ class ChromaDBClient:
                 documents=documents,
                 metadatas=metadatas or [{} for _ in ids],
             )
-            logger.info(f"Added {len(ids)} docs to '{collection_name}'")
             return True
         except Exception as e:
-            logger.error(f"add_documents failed: {e}")
             raise ChromaDBError(str(e))
 
     def search(
@@ -112,7 +102,6 @@ class ChromaDBClient:
                 })
             return output
         except Exception as e:
-            logger.error(f"search failed in '{collection_name}': {e}")
             raise ChromaDBError(str(e))
 
     def metadata_filter(
@@ -136,7 +125,6 @@ class ChromaDBClient:
             self.delete_collection(collection_name)
             return self.add_documents(collection_name, ids, embeddings, documents, metadatas)
         except Exception as e:
-            logger.error(f"reindex failed: {e}")
             raise ChromaDBError(str(e))
 
     def list_collections(self) -> list[str]:
@@ -144,7 +132,6 @@ class ChromaDBClient:
             client = self.get_client()
             return [c.name for c in client.list_collections()]
         except Exception as e:
-            logger.error(f"list_collections failed: {e}")
             raise ChromaDBError(str(e))
 
     def get_collection_count(self, collection_name: str) -> int:
@@ -161,10 +148,8 @@ class ChromaDBClient:
             ids = results.get("ids", [])
             if ids:
                 collection.delete(ids=ids)
-                logger.info(f"Deleted {len(ids)} chunks for doc {document_id} from '{collection_name}'")
             return True
         except Exception as e:
-            logger.error(f"delete_by_document_id failed: {e}")
             raise ChromaDBError(str(e))
 
     def health_check(self) -> bool:
@@ -177,7 +162,6 @@ class ChromaDBClient:
     def init_collections(self):
         for name in COLLECTIONS:
             self.create_collection(name)
-        logger.info("All default collections initialized")
 
 
 chroma_client = ChromaDBClient()

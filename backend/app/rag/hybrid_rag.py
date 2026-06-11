@@ -5,9 +5,7 @@ from app.rag.metadata_filter import filter_results
 from app.rag.parent_context import parent_context_expander
 from app.rag.cross_encoder import cross_encoder
 from app.core.config import settings
-from app.core.logging import get_logger
 
-logger = get_logger("hybrid_rag")
 
 
 class HybridRAG:
@@ -73,7 +71,6 @@ class HybridRAG:
         top_k: int = 5,
         filters: Optional[dict] = None,
     ) -> list[dict[str, Any]]:
-        logger.info(f"HybridRAG retrieve: query='{query[:60]}' top_k={top_k}")
 
         # Dense retrieval: top 50
         vector_results = []
@@ -82,7 +79,6 @@ class HybridRAG:
                 query, collection_name, settings.DENSE_TOP_K, filters
             )
         except Exception as e:
-            logger.warning(f"Vector retrieval failed: {e}")
 
         # BM25 retrieval: top 50
         bm25_results = []
@@ -90,7 +86,6 @@ class HybridRAG:
             bm25_raw = bm25_retriever.search(collection_name, query, settings.BM25_TOP_K)
             bm25_results = filter_results(bm25_raw, filters or {})
         except Exception as e:
-            logger.warning(f"BM25 retrieval failed: {e}")
 
         if not vector_results and not bm25_results:
             return []

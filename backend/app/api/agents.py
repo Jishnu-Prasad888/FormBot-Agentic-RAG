@@ -9,10 +9,8 @@ from app.agents.router_agent import router_agent
 from app.agents.web_agent import web_agent
 from app.agents.evaluator_agent import evaluator_agent
 from app.schemas.agent import AgentRequest, AgentResponse, CoordinatorRequest
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/agents", tags=["Agents"])
-logger = get_logger("api.agents")
 
 
 def _to_response(result: dict) -> AgentResponse:

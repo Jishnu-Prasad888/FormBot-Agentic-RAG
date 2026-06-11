@@ -2,9 +2,7 @@ from typing import Any
 import re
 from difflib import SequenceMatcher
 from app.embeddings.openai_client import openai_client
-from app.core.logging import get_logger
 
-logger = get_logger("accuracy_evaluation")
 
 
 class AccuracyEvaluator:

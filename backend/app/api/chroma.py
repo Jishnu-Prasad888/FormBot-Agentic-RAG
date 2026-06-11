@@ -4,10 +4,8 @@ from typing import Any, Optional
 
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/chroma", tags=["ChromaDB"])
-logger = get_logger("api.chroma")
 
 
 class ChromaIndexRequest(BaseModel):

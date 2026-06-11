@@ -5,10 +5,8 @@ from typing import Any, Optional
 import pdfplumber
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
-from app.core.logging import get_logger
 from app.core.config import settings
 
-logger = get_logger("pdf_rag")
 PDF_COLLECTION = "pdf_documents"
 
 
@@ -101,7 +99,6 @@ class PDFHierarchicalRAG:
 
         if ids:
             chroma_client.add_documents(PDF_COLLECTION, ids, embeddings, documents, metadatas)
-        logger.info(f"PDF indexed '{filename}': {len(ids)} chunks")
         return {"document_id": document_id, "chunk_count": len(ids)}
 
     async def query(

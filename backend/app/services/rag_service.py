@@ -17,9 +17,7 @@ from app.rag.evaluator import (
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.repositories.log_repository import log_repo
 from app.core.config import settings
-from app.core.logging import get_logger
 
-logger = get_logger("rag_service")
 
 RAG_SYSTEM = """You are an expert assistant. Answer the question using only the provided context.
 Be factual, concise, and cite sources. If the answer is not in the context, say 'Not found in available documents'."""
@@ -134,7 +132,7 @@ class RAGService:
             expected = q["expected_answer"]
             try:
                 start = time.time()
-                chunks = await self.retrieve(question, strategy="hybrid", top_k=5)
+                chunks = await self.retrieve(question, strategy="hybrid", top_k=settings.TOP_K)
                 context_texts = [r["chunk_text"] for r in chunks]
                 context = "\n\n".join(context_texts)
                 prompt = f"Context:\n{context}\n\nQuestion: {question}"
@@ -154,7 +152,6 @@ class RAGService:
                 results["answer_relevancy"].append(ar_score)
                 results["latency_ms"].append(latency)
             except Exception as e:
-                logger.error(f"Eval failed for '{question}': {e}")
                 results["failed"].append({"question": question, "error": str(e)})
 
         def avg(lst): return round(sum(lst) / len(lst), 4) if lst else 0.0

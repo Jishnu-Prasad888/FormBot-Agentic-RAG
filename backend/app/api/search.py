@@ -12,10 +12,8 @@ from app.rag.synonym_expansion import get_synonym_expander
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.chromadb.client import chroma_client
 from app.schemas.search import SearchRequest, SearchResponse, SearchResult
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/search", tags=["Search"])
-logger = get_logger("api.search")
 
 
 def _search_with_synonyms(search_fn, query: str, *args, **kwargs) -> list[dict]:
@@ -32,7 +30,6 @@ def _search_with_synonyms(search_fn, query: str, *args, **kwargs) -> list[dict]:
                 if doc_id not in all_results:
                     all_results[doc_id] = r
         except Exception as e:
-            logger.warning(f"Search failed for query '{q}': {e}")
     
     return sorted(all_results.values(), key=lambda x: x.get("score", 0), reverse=True)
 

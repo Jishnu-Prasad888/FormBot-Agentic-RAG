@@ -3,9 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, delete
 from sqlalchemy.orm import selectinload
 from app.database.models import Document, Chunk
-from app.core.logging import get_logger
 
-logger = get_logger("document_repo")
 
 
 class DocumentRepository:

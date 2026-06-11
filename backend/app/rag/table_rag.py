@@ -7,9 +7,7 @@ import pandas as pd
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.rag.metadata_filter import build_chroma_filter
-from app.core.logging import get_logger
 
-logger = get_logger("table_rag")
 
 SCHEMA_COLLECTION = "table_documents"
 
@@ -95,7 +93,6 @@ class TableRAG:
             })
 
         chroma_client.add_documents(SCHEMA_COLLECTION, ids, embeddings, documents, metadatas)
-        logger.info(f"TableRAG indexed {filename}: {len(ids)} chunks (schema + {len(ids)-1} row chunks)")
         return {"document_id": document_id, "chunk_count": len(ids), "schema": schema_info}
 
     async def query(

@@ -4,9 +4,7 @@ from app.rag.hybrid_rag import hybrid_rag
 from app.rag.table_rag import table_rag
 from app.rag.pdf_rag import pdf_rag
 from app.rag.markdown_rag import markdown_rag
-from app.core.logging import get_logger
 
-logger = get_logger("multi_collection_retrieval")
 
 DEFAULT_COLLECTIONS = [
     "text_documents",
@@ -56,7 +54,6 @@ class MultiCollectionRetriever:
 
                 all_results.extend(results)
             except Exception as e:
-                logger.warning(f"Multi-collection retrieval failed for '{collection}': {e}")
                 continue
 
         if not all_results:

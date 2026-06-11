@@ -16,9 +16,7 @@ from typing import Any
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.evaluation.retrieval_metrics import retrieval_metrics
 from app.evaluation.accuracy_evaluation import accuracy_evaluator
-from app.core.logging import get_logger
 
-logger = get_logger("evaluator")
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -54,7 +52,6 @@ async def _llm_score(prompt: str) -> tuple[float, str]:
         rationale = data.get("rationale", "")
         return round(max(0.0, min(1.0, score)), 4), rationale
     except Exception as exc:
-        logger.warning("LLM scoring parse error: %s | raw=%.200r", exc, raw)
         # Fallback: try regex on whatever we got back
         m = _SCORE_RE.search(raw)
         if m:

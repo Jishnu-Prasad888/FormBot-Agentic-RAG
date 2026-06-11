@@ -5,10 +5,8 @@ from app.core.dependencies import get_db
 from app.services.web_service import web_service
 from app.schemas.web import WebIngestRequest, WebQueryRequest, WebIngestResponse
 from app.schemas.search import SearchResult
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/web", tags=["Web Ingestion"])
-logger = get_logger("api.web")
 
 
 @router.post("/ingest", response_model=WebIngestResponse)

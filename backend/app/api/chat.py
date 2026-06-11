@@ -9,10 +9,8 @@ from app.schemas.chat import (
     ChatRequest, ChatResponse, ConversationListResponse, ConversationResponse
 )
 from app.core.exceptions import ConversationNotFoundError
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/chat", tags=["Chat"])
-logger = get_logger("api.chat")
 
 
 @router.post("", response_model=ChatResponse)

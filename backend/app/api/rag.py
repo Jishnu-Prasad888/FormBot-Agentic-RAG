@@ -16,12 +16,10 @@ from pydantic import BaseModel
 from app.core.dependencies import get_db
 from app.services.rag_service import rag_service
 from app.evaluation.agent_runner import evaluate_question, failed_question_row
-from app.core.logging import get_logger
 
 from app.schemas.rag import RAGQueryRequest, RAGQueryResponse, RAGRetrieveRequest
 from app.schemas.search import SearchResult
 
-logger = get_logger("api.rag.evaluate")
 router = APIRouter(prefix="/api/rag", tags=["rag"])
 
 
@@ -88,7 +86,6 @@ async def evaluate_rag(req: EvaluateRequest, db: AsyncSession = Depends(get_db))
             per_question.append(row)
             latencies.append(row["latency_ms"])
         except Exception as exc:
-            logger.error(f"Eval error for '{qa.question[:60]}': {exc}")
             failed.append({"question": qa.question, "error": str(exc)})
             per_question.append(failed_question_row(qa.question, qa.expected_answer, str(exc)))
 

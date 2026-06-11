@@ -7,10 +7,8 @@ from app.core.dependencies import get_db
 from app.rag.table_rag import table_rag
 from app.services.document_service import document_service
 from app.schemas.search import SearchResult
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/tablerag", tags=["TableRAG"])
-logger = get_logger("api.tablerag")
 
 
 @router.post("/index")

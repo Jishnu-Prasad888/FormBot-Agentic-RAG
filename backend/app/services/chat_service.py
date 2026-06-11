@@ -5,11 +5,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.repositories.conversation_repository import conversation_repo
 from app.services.rag_service import rag_service
 from app.embeddings.openai_client import openai_client as ollama_client
-from app.core.logging import get_logger
 from app.core.exceptions import ConversationNotFoundError
 from app.core.prompts import SYSTEM_PROMPT
 
-logger = get_logger("chat_service")
 
 
 class ChatService:

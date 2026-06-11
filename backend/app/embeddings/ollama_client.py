@@ -4,10 +4,8 @@ from typing import AsyncGenerator, Optional
 import httpx
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 from app.core.config import settings
-from app.core.logging import get_logger
 from app.core.exceptions import OllamaConnectionError
 
-logger = get_logger("ollama_client")
 
 
 class OllamaClient:
@@ -51,10 +49,8 @@ class OllamaClient:
             data = response.json()
             return data.get("response", "")
         except httpx.HTTPStatusError as e:
-            logger.error(f"Ollama generate HTTP error: {e}")
             raise OllamaConnectionError(str(e))
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"Ollama connection error: {e}")
             raise OllamaConnectionError(str(e))
 
     @retry(
@@ -84,10 +80,8 @@ class OllamaClient:
             data = response.json()
             return data.get("message", {}).get("content", "")
         except httpx.HTTPStatusError as e:
-            logger.error(f"Ollama chat HTTP error: {e}")
             raise OllamaConnectionError(str(e))
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"Ollama connection error: {e}")
             raise OllamaConnectionError(str(e))
 
     async def generate_stream(
@@ -116,7 +110,6 @@ class OllamaClient:
                         except json.JSONDecodeError:
                             continue
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"Ollama stream error: {e}")
             raise OllamaConnectionError(str(e))
 
     async def chat_stream(
@@ -150,7 +143,6 @@ class OllamaClient:
                         except json.JSONDecodeError:
                             continue
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"Ollama chat stream error: {e}")
             raise OllamaConnectionError(str(e))
 
     @retry(
@@ -170,10 +162,8 @@ class OllamaClient:
             data = response.json()
             return data.get("embedding", [])
         except httpx.HTTPStatusError as e:
-            logger.error(f"Ollama embeddings HTTP error: {e}")
             raise OllamaConnectionError(str(e))
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"Ollama embeddings connection error: {e}")
             raise OllamaConnectionError(str(e))
 
     async def batch_embeddings(self, texts: list[str], model: Optional[str] = None) -> list[list[float]]:
@@ -195,7 +185,6 @@ class OllamaClient:
             response.raise_for_status()
             return response.json().get("models", [])
         except Exception as e:
-            logger.error(f"Failed to list Ollama models: {e}")
             return []
 
 

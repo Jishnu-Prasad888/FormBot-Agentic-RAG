@@ -1,8 +1,6 @@
 from typing import Any, Optional
 from app.chromadb.client import chroma_client
-from app.core.logging import get_logger
 
-logger = get_logger("parent_context")
 
 
 class ParentContextExpander:
@@ -74,7 +72,6 @@ class ParentContextExpander:
 
             expanded.append(expanded_chunk)
 
-        logger.info(f"Expanded {len(expanded)} chunks with parent context")
         return expanded
 
 

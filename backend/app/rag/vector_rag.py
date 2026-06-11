@@ -2,9 +2,7 @@ from typing import Any, Optional
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.rag.metadata_filter import build_chroma_filter
-from app.core.logging import get_logger
 
-logger = get_logger("vector_rag")
 
 
 class VectorRAG:
@@ -15,7 +13,6 @@ class VectorRAG:
         top_k: int = 5,
         filters: Optional[dict] = None,
     ) -> list[dict[str, Any]]:
-        logger.info(f"VectorRAG retrieve: query='{query[:60]}' collection='{collection_name}'")
         query_embedding = await ollama_client.embeddings(query)
         where = build_chroma_filter(filters) if filters else None
         results = chroma_client.search(collection_name, query_embedding, top_k, where)
@@ -43,7 +40,6 @@ class VectorRAG:
                     r["filename"] = r.get("metadata", {}).get("filename", "")
                 all_results.extend(results)
             except Exception as e:
-                logger.warning(f"Collection '{collection}' search failed: {e}")
         all_results.sort(key=lambda x: x["score"], reverse=True)
         return all_results[:top_k]
 

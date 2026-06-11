@@ -5,7 +5,7 @@ from typing import Any, Optional
 class RAGQueryRequest(BaseModel):
     query: str = Field(..., min_length=1)
     strategy: str = Field(default="hybrid", description="vector|bm25|hybrid|table|pdf|markdown")
-    top_k: int = Field(default=5, ge=1, le=50)
+    top_k: int = Field(default=20, ge=1, le=50)
     filters: Optional[dict[str, Any]] = None
     conversation_id: Optional[str] = None
 
@@ -22,7 +22,7 @@ class RAGQueryResponse(BaseModel):
 class RAGRetrieveRequest(BaseModel):
     query: str = Field(..., min_length=1)
     strategy: str = Field(default="hybrid")
-    top_k: int = Field(default=5, ge=1, le=50)
+    top_k: int = Field(default=20, ge=1, le=50)
     filters: Optional[dict[str, Any]] = None
 
 

@@ -9,10 +9,8 @@ from app.services.document_service import document_service
 from app.repositories.document_repository import document_repo
 from app.schemas.document import DocumentResponse, DocumentListResponse, ChunkResponse, ReindexResponse
 from app.core.exceptions import DocumentNotFoundError
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/documents", tags=["Documents"])
-logger = get_logger("api.documents")
 
 
 @router.post("/upload", response_model=dict)

@@ -5,10 +5,8 @@ from app.schemas.embeddings import (
     EmbeddingResponse, EmbeddingBatchResponse, EmbeddingModelInfo,
 )
 from app.core.config import settings
-from app.core.logging import get_logger
 
 router = APIRouter(prefix="/api/embeddings", tags=["Embeddings"])
-logger = get_logger("api.embeddings")
 
 
 @router.post("/generate", response_model=EmbeddingResponse)

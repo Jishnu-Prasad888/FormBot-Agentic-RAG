@@ -2,9 +2,7 @@ import re
 from typing import Any, Optional
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
-from app.core.logging import get_logger
 
-logger = get_logger("markdown_rag")
 MD_COLLECTION = "markdown_documents"
 
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+)$", re.MULTILINE)
@@ -72,7 +70,6 @@ class MarkdownRAG:
 
         if ids:
             chroma_client.add_documents(MD_COLLECTION, ids, embeddings, documents, metadatas)
-        logger.info(f"Markdown indexed '{filename}': {len(ids)} sections")
         return {"document_id": document_id, "chunk_count": len(ids)}
 
     async def query(

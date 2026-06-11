@@ -3,10 +3,8 @@ from typing import AsyncGenerator, Optional
 import httpx
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 from app.core.config import settings
-from app.core.logging import get_logger
 from app.core.exceptions import OpenAIConnectionError
 
-logger = get_logger("openai_client")
 
 OPENAI_API_BASE = "https://api.openai.com/v1"
 
@@ -84,10 +82,8 @@ class OpenAIClient:
             data = response.json()
             return data["choices"][0]["message"]["content"]
         except httpx.HTTPStatusError as e:
-            logger.error(f"OpenAI chat HTTP error: {e.response.status_code} {e.response.text}")
             raise OpenAIConnectionError(str(e))
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"OpenAI connection error: {e}")
             raise OpenAIConnectionError(str(e))
 
     async def generate_stream(
@@ -146,7 +142,6 @@ class OpenAIClient:
                     except (json.JSONDecodeError, KeyError, IndexError):
                         continue
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"OpenAI stream error: {e}")
             raise OpenAIConnectionError(str(e))
 
     @retry(
@@ -170,10 +165,8 @@ class OpenAIClient:
             data = response.json()
             return data["data"][0]["embedding"]
         except httpx.HTTPStatusError as e:
-            logger.error(f"OpenAI embeddings HTTP error: {e.response.status_code} {e.response.text}")
             raise OpenAIConnectionError(str(e))
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"OpenAI embeddings connection error: {e}")
             raise OpenAIConnectionError(str(e))
 
     async def batch_embeddings(self, texts: list[str], model: Optional[str] = None) -> list[list[float]]:
@@ -208,10 +201,8 @@ class OpenAIClient:
             items = sorted(data["data"], key=lambda x: x["index"])
             return [item["embedding"] for item in items]
         except httpx.HTTPStatusError as e:
-            logger.error(f"OpenAI batch embeddings HTTP error: {e.response.status_code} {e.response.text}")
             raise OpenAIConnectionError(str(e))
         except (httpx.ConnectError, httpx.TimeoutException) as e:
-            logger.error(f"OpenAI batch embeddings connection error: {e}")
             raise OpenAIConnectionError(str(e))
 
     async def health_check(self) -> bool:
@@ -229,7 +220,6 @@ class OpenAIClient:
             response.raise_for_status()
             return response.json().get("data", [])
         except Exception as e:
-            logger.error(f"Failed to list OpenAI models: {e}")
             return []
 
 

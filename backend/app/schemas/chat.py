@@ -6,7 +6,7 @@ from datetime import datetime
 class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1)
     conversation_id: Optional[str] = None
-    top_k: int = Field(default=5, ge=1, le=20)
+    top_k: int = Field(default=20, ge=1, le=50)
     stream: bool = False
 
 

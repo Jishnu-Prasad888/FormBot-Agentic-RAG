@@ -7,7 +7,6 @@ from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app.core.config import settings
-from app.core.logging import get_logger
 from app.core.exceptions import (
     RAGPlatformException,
     rag_platform_exception_handler,
@@ -32,23 +31,17 @@ from app.api.chroma import router as chroma_router
 from app.api.embeddings import router as embeddings_router
 from app.api.web import router as web_router
 
-logger = get_logger("main")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info(f"Starting {settings.APP_NAME} v{settings.APP_VERSION}")
     await init_db()
     try:
         chroma_client.init_collections()
     except Exception as e:
-        logger.warning(f"ChromaDB init warning: {e}")
-    logger.info("Application startup complete")
     yield
-    logger.info("Shutting down application")
     from app.embeddings.openai_client import openai_client
     await openai_client.close()
-    logger.info("Shutdown complete")
 
 
 app = FastAPI(
@@ -75,10 +68,8 @@ app.add_middleware(
 @app.middleware("http")
 async def logging_middleware(request: Request, call_next):
     start = time.time()
-    logger.info(f"→ {request.method} {request.url.path}")
     response = await call_next(request)
     latency = (time.time() - start) * 1000
-    logger.info(f"← {request.method} {request.url.path} {response.status_code} [{latency:.1f}ms]")
     return response
 
 
