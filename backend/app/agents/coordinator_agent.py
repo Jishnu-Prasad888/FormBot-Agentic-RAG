@@ -90,7 +90,8 @@ class CoordinatorAgent(BaseAgent):
                     continue
                 agent_results.append(res)
                 all_chunks.extend(res.get("chunks", []))
-            except Exception as e:
+            except Exception:
+                pass
 
         # Synthesize answers from all agents
         if not agent_results:

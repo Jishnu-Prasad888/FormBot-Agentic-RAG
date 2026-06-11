@@ -38,7 +38,8 @@ async def lifespan(app: FastAPI):
     await init_db()
     try:
         chroma_client.init_collections()
-    except Exception as e:
+    except Exception:
+        pass
     yield
     from app.embeddings.openai_client import openai_client
     await openai_client.close()
