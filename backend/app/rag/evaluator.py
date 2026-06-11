@@ -14,6 +14,34 @@ from app.rag.vector_rag import vector_rag
 _SCORE_RE = re.compile(r'"score"\s*:\s*([0-9]*\.?[0-9]+)')
 
 
+async def _expand_query(question: str) -> str:
+    """Use LLM to expand/rephrase the query for better retrieval."""
+    prompt = f"""Rephrase the following question to improve retrieval from a document database. 
+Make it more specific and include relevant keywords. Return only the rephrased question.
+
+Original question: {question}"""
+    return await ollama_client.chat([{"role": "user", "content": prompt}])
+
+
+async def _check_sufficiency(question: str, context_chunks: list[str]) -> tuple[bool, str]:
+    """Check if retrieved context is sufficient to answer the question."""
+    context = "\n\n---\n\n".join(context_chunks[:5])
+    prompt = f"""Does the CONTEXT below contain sufficient information to answer the QUESTION?
+Respond with a JSON object: {{"sufficient": true/false, "reason": "brief explanation"}}
+
+QUESTION: {question}
+
+CONTEXT: {context}"""
+    
+    try:
+        response = await ollama_client.chat([{"role": "user", "content": prompt}])
+        response = response.strip().strip("```json").strip("```").strip()
+        data = json.loads(response)
+        return data.get("sufficient", False), data.get("reason", "")
+    except:
+        return len(context_chunks) > 0, "Parse error"
+
+
 async def _llm_score(prompt: str) -> tuple[float, str]:
     system = (
         "You are an expert RAG evaluation judge. "
@@ -119,15 +147,40 @@ async def evaluate_single(
     context_chunks: list[str] = None,
     collection_name: str = "text_documents",
     top_k: int = 5,
+    max_tries: int = 2,
 ) -> dict[str, Any]:
     """
-    Retrieve using nearest neighbor search, then evaluate with LLM judge.
+    Retrieve with iterative query expansion if context insufficient (max 2 tries).
     """
     t0 = time.time()
     
-    # Perform nearest neighbor retrieval
-    results = await vector_rag.retrieve(question, collection_name, top_k)
-    retrieved_chunks = [r.get("chunk_text", "") for r in results]
+    current_query = question
+    all_attempts = []
+    retrieved_chunks = []
+    
+    for attempt in range(max_tries):
+        # Retrieve with current query
+        results = await vector_rag.retrieve(current_query, collection_name, top_k)
+        retrieved_chunks = [r.get("chunk_text", "") for r in results]
+        
+        all_attempts.append({
+            "attempt": attempt + 1,
+            "query": current_query,
+            "num_results": len(results)
+        })
+        
+        # Check if context is sufficient
+        if retrieved_chunks:
+            is_sufficient, reason = await _check_sufficiency(question, retrieved_chunks)
+            all_attempts[-1]["sufficient"] = is_sufficient
+            all_attempts[-1]["reason"] = reason
+            
+            if is_sufficient or attempt == max_tries - 1:
+                break
+        
+        # Expand query for next attempt
+        if attempt < max_tries - 1:
+            current_query = await _expand_query(current_query)
     
     # Run LLM-based evaluation metrics
     accuracy, acc_rationale = await compute_accuracy(generated_answer, expected_answer)
@@ -143,6 +196,7 @@ async def evaluate_single(
         "expected_answer": expected_answer,
         "generated_answer": generated_answer,
         "retrieved_context": "\n---\n".join(retrieved_chunks),
+        "retrieval_attempts": all_attempts,
         "accuracy": accuracy,
         "faithfulness": faithfulness,
         "answer_relevancy": answer_relevancy,
