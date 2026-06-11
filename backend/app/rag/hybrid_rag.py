@@ -78,14 +78,16 @@ class HybridRAG:
             vector_results = await vector_rag.retrieve(
                 query, collection_name, settings.DENSE_TOP_K, filters
             )
-        except Exception as e:
+        except Exception:
+            pass
 
         # BM25 retrieval: top 50
         bm25_results = []
         try:
             bm25_raw = bm25_retriever.search(collection_name, query, settings.BM25_TOP_K)
             bm25_results = filter_results(bm25_raw, filters or {})
-        except Exception as e:
+        except Exception:
+            pass
 
         if not vector_results and not bm25_results:
             return []

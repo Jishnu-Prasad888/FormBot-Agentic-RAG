@@ -29,7 +29,8 @@ class WebEnrichmentAgent(BaseAgent):
             try:
                 await web_service.ingest(url)
                 chunks = await web_service.query(query, url=url, top_k=top_k)
-            except Exception as e:
+            except Exception:
+                pass
 
         context_str = "\n\n".join(r["chunk_text"] for r in chunks) if chunks else "No web context available."
         system = "You are a research assistant. Summarize and answer based on web content. Always note the source URL."

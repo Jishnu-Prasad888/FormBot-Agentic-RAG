@@ -29,7 +29,8 @@ def _search_with_synonyms(search_fn, query: str, *args, **kwargs) -> list[dict]:
                 doc_id = r.get("chunk_id", r.get("document_id", ""))
                 if doc_id not in all_results:
                     all_results[doc_id] = r
-        except Exception as e:
+        except Exception:
+            pass
     
     return sorted(all_results.values(), key=lambda x: x.get("score", 0), reverse=True)
 

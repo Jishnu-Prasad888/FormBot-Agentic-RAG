@@ -27,7 +27,8 @@ class SynonymExpander:
                     self.synonyms[canonical] = aliases
                     for alias in aliases:
                         self.reverse_map[alias] = canonical
-        except Exception as e:
+        except Exception:
+            pass
 
     def _load_csv(self, path: str):
         """Load synonyms from CSV format: canonical,alias"""
@@ -43,7 +44,8 @@ class SynonymExpander:
                         if alias not in self.synonyms[canonical]:
                             self.synonyms[canonical].append(alias)
                         self.reverse_map[alias] = canonical
-        except Exception as e:
+        except Exception:
+            pass
 
     def expand_query(self, query: str) -> list[str]:
         """Expand query with synonyms and return list of expanded queries"""

@@ -7,6 +7,7 @@ class BaseAgent(ABC):
     name: str = "base_agent"
 
     def __init__(self):
+        pass
 
     @abstractmethod
     async def plan(self, query: str, context: Optional[dict] = None) -> dict[str, Any]:

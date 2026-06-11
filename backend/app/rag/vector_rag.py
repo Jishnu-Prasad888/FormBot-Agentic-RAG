@@ -39,7 +39,8 @@ class VectorRAG:
                     r["document_id"] = r.get("metadata", {}).get("document_id", "")
                     r["filename"] = r.get("metadata", {}).get("filename", "")
                 all_results.extend(results)
-            except Exception as e:
+            except Exception:
+                pass
         all_results.sort(key=lambda x: x["score"], reverse=True)
         return all_results[:top_k]
 

@@ -180,7 +180,8 @@ class DocumentService:
         # Delete existing vector data
         try:
             chroma_client.delete_by_document_id(doc.collection_name or "text_documents", doc_id)
-        except Exception as e:
+        except Exception:
+            pass
 
         await document_repo.delete_chunks(db, doc_id)
 
@@ -214,7 +215,8 @@ class DocumentService:
             raise DocumentNotFoundError(doc_id)
         try:
             chroma_client.delete_by_document_id(doc.collection_name or "text_documents", doc_id)
-        except Exception as e:
+        except Exception:
+            pass
         filepath = Path(doc.filepath)
         if filepath.exists():
             filepath.unlink()
