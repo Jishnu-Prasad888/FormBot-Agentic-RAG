@@ -1,9 +1,0 @@
-Intraday Facility to Stockbrokers/Professional Clearing Member
-Stockbrokers/ PCMS are using IDF for pay in & pay out obligations/ margin placement with the Exchange. IDF is required for meeting the intraday deficits which will be squared off at the end of the day through the Settlement Account. Intra Day Facility be allowed only in Cash & Derivatives Segment.
-Nature of Facility
-:  The limit will be in the nature of Intra-Day Facility (IDF). The outstanding will be liquidated at the end of the day. In exceptional cases, wherein the drawls from the account are not liquidated at the end of the day, the overnight outstanding in IDF should be liquidated latest by the end of the next working day. Interest at Clean OD rate will be recovered whenever there is overnight outstanding in IDF account.
-Margin:
-: Minimum 50% cash margin
-Authorized Branches:
-Financial Institution Branch, Mumbai (11777) under CAG Vertical is the only branch authorized to undertake this business.
-Last Updated On : Friday, 20-12-2024
