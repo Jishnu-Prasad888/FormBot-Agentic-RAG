@@ -14,12 +14,19 @@ soup = BeautifulSoup(html, "html.parser")
 for a in soup.find_all("a"):
     href = a.get("href")
 
-    if href.endswith(".txt"):
-        url = urljoin(BASE_URL, href)
+    if not href or not href.endswith(".json"):
+        continue
 
-        print("Downloading", href)
+    url = urljoin(BASE_URL, href)
 
-        r = requests.get(url)
+    # Remove leading web_
+    filename = href
+    if filename.startswith("web_"):
+        filename = filename[4:]
 
-        with open(Path(OUTPUT_DIR) / href, "wb") as f:
-            f.write(r.content)
+    print("Downloading", href, "->", filename)
+
+    r = requests.get(url)
+
+    with open(Path(OUTPUT_DIR) / filename, "wb") as f:
+        f.write(r.content)
