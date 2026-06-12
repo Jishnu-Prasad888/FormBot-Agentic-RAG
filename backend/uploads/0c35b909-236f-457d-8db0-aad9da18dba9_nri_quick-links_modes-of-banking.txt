@@ -1,0 +1,78 @@
+Modes of Banking - NRI
+Modes of Banking
+Non-Financial Transactions
+Description
+Letter / Physical request at the Branch
+Internet Banking
+Telephone Banking at Toll Free Number
+Email from the registered email address
+Account related
+Generation of account statement
+Enquiry for account balance
+Cheque collection / realization status
+Cheque Book & Demand Draft related
+Cheque Book issuance / re-issuance
+Stop cheque payment
+Demand draft issuance
+ATM Card related
+ATM-cum-Debit card issuance / re-issuance
+ATM card activation
+ATM PIN issuance / re-issuance
+Blocking / Hot-listing of ATM-cum-Debit card
+Internet Banking (INB) related
+Activation of Internet banking (INB) Facility
+Re-issuance of Username for Internet banking (INB) Facility
+Re-issuance of Login Password for Internet banking (INB) Facility
+Re-issuance of profile Password for Internet banking (INB) Facility
+Activate Standing Instruction facility
+Change in personal details related
+Change of registered postal address
+Change of mobile number
+Change of telephone / fax number
+Change of registered email address
+Addition / Change / Cancellation of Nominee
+Addition / deletion of joint account holders
+Miscellaneous
+Closure of account
+Transfer of account & CIF to another branch
+Re- KYC of non-compliant NRE / NRO / FCNR (B) accounts
+Power of Attorney (POA) for operating NRE / NRO / FCNR (B) account
+Taxation related
+Information about tax deduction at source in NRO accounts
+Issue of certificate regarding interest paid on accounts
+Submission of Tax- Residency certificate, Self-Declaration and Form No. 10 F for availing DTAA benefit
+Financial Transactions
+Description
+Letter / Physical request
+Internet Banking
+Telephone Banking
+Email from the registered email address
+Account & Deposit related
+Opening of a new NRE / NRO savings bank account
+Opening of a new NRE deposit account (TDR, STDR, RD)
+#
+Opening of a new NRO deposit account (TDR, STDR, RD)
+#
+Opening of a new FCNR (B) deposit account (TDR, STDR)
+*
+#
+Change of maturity / renewal instructions of NRE / NRO / FCNR (B) deposit account (TDR, STDR, RD)
+Request for premature closure and payment of NRE / NRO / FCNR (B) deposit (TDR, STDR, RD) for credit to your account
+Request for premature closure and payment of NRE / NRO / FCNR (B) deposit (TDR, STDR, RD) for credit to third party account
+Funds Transfer related
+Funds transfer from NRE to NRE account
+Funds transfer from NRE to NRO account
+Funds transfer from NRO to NRO account
+Funds transfer from NRO to NRE account
+Funds transfer to a third party account in India in Rupee
+Funds transfer from NRE / FCNR (B) account to own overseas accounts
+*
+Funds transfer from NRO account to own overseas accounts
+Funds transfer from NRE / FCNR (B) account to a third party account overseas
+*
+Funds transfer NRO account to a third party account overseas
+*
+Request will be captured through Internet Banking but it will be processed by Home Branch manually. Deposits created through this mode will not be in the form of e-TDR or e-STDR.
+*
+Deposit has to be created in the same style, under the same CIF in the same branch, as it is there in the corresponding Savings Bank account from which it is created.
+Last Updated On : Thursday, 11-07-2024

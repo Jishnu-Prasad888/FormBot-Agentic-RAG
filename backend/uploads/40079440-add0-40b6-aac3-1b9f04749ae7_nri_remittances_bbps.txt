@@ -1,0 +1,13 @@
+Cross Border Bill Payments through Bharat Bill Payment System - NRI
+Bharat Bill Payment System (BBPS) for Cross-Border Inbound Bill Payments under Rupee Drawing Arrangement (RDA)
+Bharat Bill Payment System
+is a Reserve Bank of India (RBI) conceptualized ecosystem driven by National Payments Corporation of India (NPCI). BBPS offers an interoperable platform for standardized bill payment experience.
+To facilitate Non-Resident Indians undertake utility, education and other bill payments on behalf of their families in India, RBI vide its Notification RBI/2022-23/115 A.P. (DIR Series) Circular No. 14, dated 15.09.2022 has allowed foreign inward remittances received under the Rupee Drawing Arrangement (RDA), to be transferred to the KYC compliant bank account of the biller (beneficiary) through Bharat Bill Payment System (BBPS), subject to the conditions mentioned in Para 3 of A.P. (DIR Series) Circular No.120 dated April 10, 2014.
+Accordingly, SBI is onboarding Exchange Companies for processing India based bill payments of NRI customers & their family members.
+List of Exchange Companies onboarded for Cross Border Bill Payments:
+Global Money Exchange Company, Oman (GMEC) (URL:
+https://globalmoneyexchange.net/globalnet/web/index.php)
+Note:
+Non-Resident Indians in Oman can visit authorized GMEC branches in Oman for availing the BBPS facility for making utility, education and other bill payments of their family members in India.
+List of authorised branches and acceptable biller categories will be made available by the Exchange Company on their website.
+Last Updated On : Thursday, 11-07-2024

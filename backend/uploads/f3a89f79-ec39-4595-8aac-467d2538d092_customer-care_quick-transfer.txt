@@ -1,0 +1,12 @@
+1. How do I do Quick Transfer using QR code?
+A facility available in post login section of YONO Lite application, whereby Beneficiary (any SBI customer) can create a QR code by selecting credit A/c Number. The generated QR code can be shared (by the beneficiary) with any SBI customer to send money by scanning the QR code using SBI YONO Lite App
+Log into SBI YONO Lite Application using internet banking credentials / Easy PIN.
+Select “Quick Transfer & Donations” >> “Send Money using QR Code”
+Select Debit account and click “Scan now”.
+Note: The feature to send money using ‘QR Code’ is only available on Android Phones. Non-Android Phones do not have facility to send money using QR code option
+2. How do I do Quick Transfer without QR code?
+SBI YONO Lite users can now make instant funds transfer to beneficiaries without their prior registration / without QR Code. Steps to perform Quick Transfer:
+The remitter logs into SBI YONO Lite application
+Select “Quick Transfer & Donations” >> “Send Money using Account Details”
+The remitter enters the Beneficiary name, Account number, IFSC, Amount and “Remarks” and proceeds for payment. No prior registration of the beneficiary is required.
+Last Updated On : Tuesday, 04-02-2025

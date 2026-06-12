@@ -1,0 +1,41 @@
+ReCalculate
+Maturity Value Calculator
+Principal
+Annual Rate of Interest
+|
+1%
+|
+3%
+|
+5%
+|
+7%
+|
+9%
+|
+11%
+|
+13%
+|
+15%
+|
+17%
+|
+19%
+|
+21%
+Duration
+Day
+Month
+Year
+0
+/-
+Maturity Value
+0
+/-
+Interest Value (Value rounded of to the nearest Rupee)
+Note:
+Interest compounded on Quarterly basis.
+Maturity calculator is provided only as general self-help Planning Tools.Interest and Maturity Values are indicative only.
+The actual maturity value will be as printed in your Fixed Deposit Receipt.
+Last Updated On : Friday, 26-12-2025

@@ -1,0 +1,81 @@
+Open Savings account 24*7 without visiting branch
+Features :
+Open your Savings Account through Video KYC.
+Paperless account opening and no branch visit needed.
+Only Aadhaar details & PAN(Physical) required.
+Customer will be able to transfer funds using NEFT, IMPS, UPI etc. through YONO app or Online SBI i.e. Internet Banking.
+Rupay classic card will be issued.
+Experience 24*7 banking access through Yono app, internet banking and mobile banking.
+SMS Alerts, SBI Quick Missed call facility available.
+Facility of transfer of accounts through Internet Banking channel.
+Nomination facility is mandatory.
+Signature will be captured during Video KYC process. Customer can apply for cheque book through YONO/INB/Branch after account is successfully opened.
+Passbook will be issued if requested by the customer.
+Charges for all other services will be in accordance with extant service charges applicable to Regular savings bank account.
+Option to apply for Corporate Salary Package account.
+To know more, visit
+YONO Blogs
+Eligibility :
+Resident Indians above 18 years of age and who are literate.
+New to bank customer and does not have a CIF with SBI. In case customer has any active relationship/CIF with the bank, she/he is not eligible for this account.
+Mode of operation allowed is only “Single”.
+Requirements :
+Physical (Original) PAN and Aadhaar number are mandatory.
+Aadhaar bears the current address of the customer and mobile number as submitted in Aadhaar details must be in possession of the customer as OTP will be triggered on the same number.
+Mobile number is mandatory.
+Customer should be physically present in India during the complete account opening process.
+How to open Savings Account through Video KYC? :
+Download YONO App
+Click New to SBI—Open Savings Account → Without Branch visit→ Savings Account through Video KYC
+Enter your PAN, Aadhaar details
+Enter OTP sent to Aadhaar registered mobile number.
+Enter other relevant details
+Schedule Video Call
+Login to the YONO App at the scheduled time through Resume and complete the Video KYC process
+Your Insta Plus Savings account will be opened, Account will be activated for debit transactions after verification by Bank Officials.
+Frequently Asked Questions : -
+Who can open this Insta Plus account?
+Insta plus account is for every Resident Indian born in India above 18 years who hold an Aadhaar number and PAN and have mobile registered with Aadhaar
+Can I download SBI yono app on tab?
+Yes, But ONLY on Tab with Unique IMEI number, having a SIM card and supported OS.
+Can I enter a different mobile number other than registered on Aadhaar?
+Yes. Different mobile may be used however user should be in possession of the Aadhaar registered mobile and be able to retrieve OTP delivered on Aadhaar registered mobile.
+What happened if I exit the App without completing the process?
+The App has the facility to resume from the point, where you left.
+Can I nominate online?
+Yes. Nomination is mandatory for the Insta plus Savings Account.
+Do I need visit branch for opening Insta plus account?
+No, Customer need not visit branch for opening Insta plus account.
+Will Cheque Book be issued in an Insta plus Account?
+Yes, Customer can apply for cheque book through YONO/INB/Branch after account is successfully opened.
+How can I apply for Cheque Book?
+Customer can apply for cheque book through YONO/INB/Branch after account is successfully opened
+Will Pass Book be issued in an Insta plus Account?
+Yes, Passbook can be issued if requested by customer.
+What if my Video call is disconnected in between?
+The App has the facility to resume wherein you can reinitiate video call again.
+For how many days I can reschedule video calls for later date?
+Presently, option to book slot for video calls will be available for next 3 working days
+Can I initiate video call during holidays and weekends?
+No, currently this facility is available only during office hours on working days of the place of video call.
+Once I book the slot, whether I will receive the calls?
+No, you need to press “Resume application” button inside the app to start the call on slot which u have booked for video call.
+Within how many days video call need to be completed post token number generations?
+Video call need to be completed within 5 days of token number generation
+I am getting error 'The data entered by you resembles with existing application’ after key in PAN?
+This appears when user is having some existing relationship with bank or the data resembles with an existing data or application with the Bank.
+I am getting error ‘Your account has been locked out' during resuming journey?
+This appears when user enters wrong credentials more than three times.
+I am getting error ‘Only 1 active session is allowed’ during video call?
+This appears when handset or browser is changed. Also, it appears if Cache memory is cleared. For all these cases user may have to Reinitiate Journey with different mobile number
+I am getting error ‘Permission Required for Location’ during video call?
+User need to enable location setting in mobile phone for YONO App and also for Chrome Browser.
+I am getting error ‘Error while booking a slot' and ‘video call link is expired’ while initiating for video call?
+Request user to log off once and press “Resume application” for above observations.
+How will I get my Account details?
+Once the Video call is completed and KYC is approved by Bank, the account details are available after “Resume application”
+How will I get my Internet Banking for the Account?
+The Internet Banking username / userid is sent to you by SMS. Use this with the application password set by you initially to register for YONO / Internet Banking.
+Apply Now
+Download YONO SBI
+Last Updated On : Monday, 01-12-2025

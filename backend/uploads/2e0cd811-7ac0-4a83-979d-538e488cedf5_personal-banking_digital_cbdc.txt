@@ -1,0 +1,460 @@
+FAQ on Digital Rupee – e₹
+COMPLAINT/QUERIES – SUMMARY
+NON-FINANCIAL
+General
+Wallet
+Limits
+Merchant
+FINANCIAL
+Load
+Redeem
+Pay
+Collect
+Other
+TECHNICAL (APP RELATED)
+Registration
+SIM verification
+PIN Related
+QR Related
+UNAUTHORIZED TRANSACTIONS
+Registration
+SIM verification
+PIN Related
+QR Related
+NON-FINANCIAL
+a. GENERAL
+1. What is a central bank digital currency (CBDC)
+Central Bank digital currency (
+CBDC
+) or “
+Digital Rupee
+” or “
+e₹
+” is a digital form of currency notes issued by central bank. It is held in a CBDC wallet that is issued by the banks. The wallet can be linked to your SBI Bank account for loading
+e₹
+. It is not different from banknotes but being digital, it is likely to be easier, faster & cheaper. It has all the transactional benefits of other forms of digital money
+2. What are the key features of e₹?
+e₹
+is a sovereign currency issued by Central Banks, in alignment with their monetary policy, as mentioned in the RBI concept note.
+e₹
+appears as a liability on the central bank’s balance sheet. It must be accepted as a medium of payment, legal tender, and a safe store of value by all citizens, enterprises, and government agencies.
+e₹
+is freely convertible against commercial bank money and cash.
+3. Will e₹ replace cash, debit cards and credit cards?
+No.
+As per RBI,
+e₹
+is aimed to compliment and create an alternate to physical currency and not replace current forms of money. It will provide additional avenue of payment to users.
+4. How e₹ is different from UPI or other fund transfer mode (NEFT/RTGS/IMPS)?
+e₹
+is a digital form of currency notes. However, other payments like UPI, NEFT, RTGS, IMPS etc. uses underlying currency/cash to transfer the funds.
+5. Is e₹ same as cryptocurrency such as bitcoin?
+No. e₹
+is digital form of currency notes unlike other cryptocurrencies such as bitcoin. e₹ has intrinsic value and is regulated by the central bank. e₹ will always have same value as of physical bank currency notes which is a legal tender issued by the central bank unlike crypto assets such as bitcoin.
+6. Who can use e₹?
+Anyone with an
+e₹
+App can transact in
+e₹
+through a convenient and safe digital wallet. This
+e₹
+wallet will be like your physical wallet in digital form on your Android/iOS device.
+7. What is an e₹ Wallet?
+An e₹ wallet is a digital wallet in your Android/iOS device. It stores digital currency just as a physical wallet stores physical currency.
+8. What is CBDC - Interoperability?
+The UPI interoperability feature by SBI Bank CBDC Wallet Application enables customers to make payments to beneficiary on their existing UPI QR Codes available with them, helping customers to transact their tokens and beneficiary to accept payments via UPI without any separate onboarding process.
+9. How can I register for CBDC eRupee App of SBI?
+You can register by downloading ‘eRupee App by SBI’ from Play Store/App Store and registering on it. Screen wise assistance is provided to guide you for registration.
+For Bank account-linked Full-KYC eRupee wallet
+, please keep ready your active savings/current account number and Debit Card ready for authentication. Give consent for all the required access and usage of eRupee App to take benefit of all the App features.
+For Aadhaar-linked Minimum KYC eRupee wallet to received Govt. benefits
+, please keep ready your Aadhaar number ready for authentication.
+10. I do not have a debit card. How can I complete registration on the App?
+If you have internet banking facility with transaction rights for your SBI bank a/c, you can generate virtual debit card and use it for registration. For details and FAQs, please visit
+https://www.onlinesbi.sbi/sbijava/ecardfa_0.html
+Steps for creating Virtual Card:
+Login to your online banking account (
+www.onlinesbi.com
+) and click on "
+Requests
+" tab and select "
+State Bank Virtual Card
+" option
+Click on "
+Generate Virtual Card
+" tab
+Enter the secure 8-digit password (OTP), received on your mobile.
+After successful validation, Card image with Card No., expiry date, etc will be displayed on the screen and your Card is now created and available for use and e-commerce transaction.
+11. I do not have a debit card. How can I complete registration on the App?
+If you have internet banking facility with transaction rights for your SBI bank a/c, you can generate virtual debit card and use it for registration. For details and FAQs, please visit
+https://www.onlinesbi.sbi/sbijava/ecardfaq_0.html
+Steps for creating Virtual Card:
+Login to your online banking account (
+www.onlinesbi.com
+) and click on "
+Requests
+" tab and select "
+State Bank Virtual Card
+" option.
+Click on "
+Generate Virtual Card
+" tab.
+Enter the amount and select an account which will be debited for funding (initially lien-marking and later debiting) the Virtual Card.
+Enter the secure 8-digit password (OTP), received on your mobile.
+After successful validation, Card image with Card No., expiry date, etc will be displayed on the screen and your Card is now created and available for use and e-commerce transaction.
+b. Wallet
+1. Is SBI savings account mandatory for customers to use e₹ (Digital rupee) App?
+Yes
+,
+SBI
+savings account is mandatory for customers to use
+e₹
+App’s full functionality. Customers can also create their Wallet using Aadhar card number, but their usage will be restricted to receipt of Subsidy/ Grants from Government bodies and payment will be restricted as per Subsidy scheme end usage.
+2. Can a non-SBI customer use e₹ (Digital rupee) App by SBI?
+Yes
+, a Non-SBI customer can use
+e₹
+App by SBI for receipt and payment of Subsidy from Govt.
+3. Is e₹ Secure and Private?
+Yes, e₹
+stored in
+e₹
+wallet is safe even if the mobile device on which the
+e₹
+wallet is installed is lost. The
+e₹
+wallet can be recovered using the same phone number / SIM on a new mobile device.
+4. Are there any charges/fees for using e₹?
+No
+. There are no charges for using
+e₹.
+5. Is there any minimum balance required to open/ maintain an e₹ wallet?
+No
+. There is no minimum balance required to open/ maintain an
+e₹
+wallet.
+6. Will I be paid interest on my e₹ wallet?
+No
+, as it is a Digital form of Bank note currency, there is no interest paid on digital currency in your
+e₹
+wallet.
+7. Can I save my taxes by investing in these tokens?
+No
+, having digital currency is like having physical bank note currency.
+8. How many Wallets can a customer hold?
+Only one
+e₹
+Wallet can be held against a Bank registered mobile number.
+9. How do I know my VPA / wallet address?
+To know your VPA / wallet address, please email
+cbdc@sbi.co.in
+from your bank registered email ID.
+10. How do I view my transactions in my wallet?
+On the
+e₹
+App – Home Page, click on ‘History’ icon placed in the bottom.
+11. What happens to my e₹ Wallet if I lose/change my phone?
+e₹
+Wallet can be recovered using same phone number/sim on the
+e₹
+App.
+12. I have changed my home branch. But my wallet is not updated. What to do?
+First, redeem all tokens to your linked bank a/c. Then, de-register from the
+e₹
+App and re-register again, choosing the desired savings account number.
+13. How do I update the IFSC code of my e₹-linked bank account?
+First, redeem all tokens to your linked bank a/c. Then, de-register from the
+e₹
+App and re-register again, choosing the desired savings account number.
+14. I want to change my linked account number. What to do?
+First, redeem all tokens to your linked bank a/c. Then, de-register from the
+e₹
+App and re-register again, choosing the desired savings account number.
+15. How to de-register/delete e₹ wallet?
+First, redeem the Digital Rupee to a linked bank account.
+Then, click on ‘Profile’ icon placed in the bottom of
+e₹
+App Home Page.
+Select ‘De-register Wallet’ option. A prompt will be shown about the wallet being deleted, click on ‘Continue’ and then ‘De-Register’.
+Authenticate with your wallet PIN, and the wallet will be de-registered.
+c. LIMITS
+1. Is there any limit on maintaining e₹ wallet and its usage?
+e₹
+can be used 24 hours per day, 7 days a week, and 365 days a year. However, few limitations Apply on volume and value of transactions as under:
+Particulars
+Limit
+Per transaction limit
+Rs. 10,000
+Holding capacity for wallet (Amount)
+Rs. 1,00,000
+Per day Load & Inward Transfer (Amount)
+Rs. 25,000
+Per day Unload (Amount)
+Rs. 1,00,000
+Per day Outward Transfer (Amount)
+Rs. 50,000
+No. of P2P transactions (within 30 days)
+100
+No. of load, unload, inward & outward transfers
+20
+d. MERCHANT
+1. I am a Business/ Merchant. How can I download e₹ App and get my own e₹ R code?
+For registration and onboarding on the
+e₹
+App, please contact your SBI home branch or email at
+cbdc@sbi.co.in
+or contact customer care 1800 1234.
+Information required from Businesses/ Merchants:
+a) Name of Merchant (must be same as recorded in bank a/c)
+b) PAN No.
+c) Bank a/c details (Account No., Branch name & Code, IFSC code)
+d) Mobile number and e-mail
+e) Address (as recorded in bank a/c)
+Merchant e₹ App, merchant portal, CBDC merchant transactions:
+After onboarding, Bank will intimate Merchants through SMS/e-mail, and they can download and register on ‘Merchant
+e₹
+by SBI’ App from Play Store/AppStore.
+Using the App, Merchants can download the CBDC QR code and display it at their premises for receiving customer payments.
+Merchants receives SMS alerts for all the CBDC transactions.
+At EOD, all digital rupees received in the Wallet is converted to INR and credited to the linked bank account.
+App has the facility to view all CBDC transactions.
+A dedicated Portal is also available where Merchants can log in and view transactions, download statements and generate R code for customers.
+URL/Link for Merchant portal is:
+https://merchante₹ .bank.sbi/rtsp-merchant/#/login
+.
+2. Is SBI current account mandatory for Merchants to use e₹ (Digital rupee) App?
+Yes, SBI
+current account/ cash credit is mandatory for merchants.
+II. FINANCIAL
+a. LOAD
+1. How to load money in my e₹ wallet?
+On the
+e₹
+App - Home Page, click on ‘Load’.
+Enter amount or select denominations by swiping up to add. Click on ‘Load Digital Rupee’
+Choose any of the following modes and follow on-screen instructions:
+a. Linked SBI Savings account.
+b. Other UPI Account.
+After successful PIN verification, chosen account will be debited, and
+e₹
+wallet will be credited with equivalent amount.
+2. How to load e₹ (Digital rupee) using Credit Card?
+e₹
+cannot be loaded using Credit Card. Loading can only be done through linked SBI savings account or any UPI linked bank account.
+3. While loading from SBI linked savings account or UPI, bank account is debited but wallet not credited with e₹ (Digital rupee). How to resolve/lodge a complaint?
+In such cases, money is refunded back to linked account. Sometimes, this takes longer than intended. If refund not received within 48 hours, complaint may be lodged on the
+e₹
+App.
+1) On the
+e₹
+App – Home Page, click on ‘Complaints’ icon placed in the bottom, then ‘Raise New Complaint’, choose ‘Financial’, then select the transaction, and enter details.
+2) Customers may also contact Customer Care 1800 1234 or email
+cbdc@sbi.co.in
+.
+b. REDEEM
+1. How to redeem e₹ from my wallet and get money back to my linked bank account?
+On the
+e₹
+App - Home Page, click on ‘Redeem’.
+Select denominations by swiping up. Click on ‘Redeem Digital Rupee’. Alternatively, You may select Redeem All option > Confirm the SBI Linked Savings account > Redeem Digital Rupee.
+Choose the linked bank account to be credited and follow instructions displayed on the screen.
+After successful PIN verification,
+e₹
+wallet will be debited, and linked account will be credited with equivalent amount
+2. While redeeming, e₹ was debited from my wallet but funds are not credited into my account. How to resolve/lodge a complaint?
+In such cases, money is refunded back to linked account. Sometimes, this takes longer than intended. If refund not received within 48 hours, complaint may be lodged on the
+e₹
+App.
+1) On the
+e₹
+App – Home Page, click on ‘Complaints’ icon placed in the bottom, then ‘Raise New Complaint’, choose ‘Financial’, then select the transaction, and enter details.
+2) Customers may also contact Customer Care 1800 1234 or email
+cbdc@sbi.co.in
+.
+c. PAY
+1. How to send payments using e₹?
+On the
+e₹
+App – Home Page, click on ‘Send’.
+Choose ‘Phone Number/Contact’ or ‘QR Code’ and click on ‘Verify’.
+Once verified, click on ‘Send Digital Rupee’.
+Enter
+e₹
+amount or select denominations by swiping up. Then, click on ‘Send Digital Rupee’.
+2. How to pay if I do not have the required amount or denomination in wallet?
+On the
+e₹
+App – Home Page, ensure that ‘Auto Load’ is enabled.
+Carry out ‘Pay’ transaction as usual.
+In case of low/zero balance in wallet, ‘Auto Load’ utility will automatically load
+e₹
+from linked savings a/c and enable you to successfully pay
+In case of different denominations in wallet, amount chosen will be paid and change will be credited in wallet. For e.g., if an item worth
+e₹
+15 is to be purchased from a merchant, and wallet has only
+e₹
+20, enter 15 in the
+e₹
+amount field while sending money. Merchant will be paid
+e₹
+15 and change of
+e₹
+5 will be credited in wallet.
+3. How to transfer e₹ directly to someone else’s bank account or UPI VPA?
+Currently,
+e₹
+can only be transferred to
+e₹
+(Digital Rupee) wallet or redeemed to linked bank account.
+4. Does transfer of tokens happen only during banking hours?
+All payments are instant and are available 24/7
+5. While paying the merchant through e₹ App, e₹ was debited from my wallet but merchant did not receive the funds. How to resolve/lodge a complaint?
+In such cases, money is refunded back to linked account. Sometimes, this takes longer than intended. If refund not received within 48 hours, complaint may be lodged on the
+e₹
+App.
+On the
+e₹
+App – Home Page, click on ‘Complaints’ icon placed in the bottom, then ‘Raise New Complaint’, choose ‘Financial’, then select the transaction, and enter details
+Customers may also contact Customer Care 1800 1234 or email
+cbdc@sbi.co.in
+.
+6. While sending e₹ to the merchant’s CBDC wallet, e₹ was debited from my wallet but the merchant’s wallet did not receive e₹. How to resolve/lodge a complaint?
+In such cases,
+e₹
+is refunded back to the wallet debited. Sometimes, this takes longer than intended. If refund not received within 48 hours, complaint may be lodged on the
+e₹
+App.
+On the
+e₹
+App – Home Page, click on ‘Complaints’ icon placed in the bottom, then ‘Raise New Complaint’, choose ‘Financial’, then select the transaction, and enter details.
+Customers may also contact Customer Care 1800 1234 or email
+cbdc@sbi.co.in
+.
+7. What if the merchant confirms the refund, but my wallet or bank account has not yet been credited?
+In such cases, refund is credited to linked account. Sometimes, this takes longer than intended. If refund not received within 48 hours, complaint may be lodged on the
+e₹
+App.
+On the
+e₹
+App – Home Page, click on ‘Complaints’ icon placed in the bottom, then ‘Raise New Complaint’, choose ‘Financial’, then select the transaction, and enter details
+Customers may also contact Customer Care 1800 1234 or email
+cbdc@sbi.co.in
+.
+8. While sending e₹ to another CBDC wallet, e₹ was debited from my wallet but the beneficiary’s wallet did not receive e₹. How to resolve/lodge a complaint?
+In such cases,
+e₹
+is refunded back to the wallet debited. Sometimes, this takes longer than intended. If refund not received within 48 hours, complaint may be lodged on the
+e₹
+App.
+On the
+e₹
+App – Home Page, click on ‘Complaints’ icon placed in the bottom, then ‘Raise New Complaint’, choose ‘Financial’, then select the transaction, and enter details.
+Customers may also contact Customer Care 1800 1234 or email
+cbdc@sbi.co.in
+.
+d. COLLECT
+1. How to Collect payments using e₹?
+The Collect facility is available only for Token to Token exchange. The Transaction flows is as under,
+On the
+e₹
+App – Home Page, click on ‘Collect’.
+Enter Amount, generate QR and share it with the Sender
+Sender initiates ‘Pay’ transaction through their CBDC App.
+e. OTHER
+1. What if my transaction status continues to be ‘Pending’?
+Please wait till the transaction on the App shows either ‘Successful’ or ‘Rejected’. Sometimes, this takes longer than intended. If issue is not resolved within 48 hours, complaint may be lodged on the
+e₹
+App.
+On the
+e₹
+App – Home Page, click on ‘Complaints’ icon placed in the bottom, then ‘Raise New Complaint’, choose ‘Financial’, then select the transaction, and enter details
+Customers may also contact Customer Care 1800 1234 or email
+cbdc@sbi.co.in
+.
+2. Wallet is showing incorrect balance/ zero balance. What to do?
+For customers using a smartphone with an operating system (OS) of Android 9/ iOS v17 or below, we recommend updating your device to Android 10 or a more recent version. After successfully updating your OS, please re-register your wallet.
+If the issue persists, please contact our support team at cbdc@sbi.co.in with the following information:
+Device
+OS version
+CBDC App version
+AC No
+Error Screenshot
+Registered Mobile No
+3. Will I receive an SMS from the bank after each financial transaction?
+Yes, an SMS is sent for every financial transaction.
+III. TECHNICAL (APP RELATED)
+a. REGISTRATION
+1. How to register/sign up for e₹ for the first-time users?
+Download CBDC SBI App ‘e-Rupee by SBI’ from Google Play store/ App Store.
+Provide for SMS and phone call permission and accept Terms and conditions.
+Select SIM Card with registered mobile number and verify SIM.
+Set App PIN and authenticate your device password (PIN, Face Unlock or Fingerprint)
+Enter your name and then create PIN.
+Two Wallet options are given for registration
+Savings Bank Wallet (based on SBI Savings account + Debit card) – for regular CBDC transactions.
+Aadhaar Special Purpose Wallet (based on Aadhar Number) – for receiving Government Grants & Subsidies.
+For Savings Bank Wallet
+, select the SBI Bank Account you would like to link, enter Card Details and follow the screen input options.
+For Savings Bank Wallet
+, enter Aadhaar details and follow screen input options.Complete OTP authentication to complete registration
+Wallet Successfully created screen will be displayed. Now, you can start using
+e₹
+(eRupee) app by SBI
+2. What mobile OS platform does the e₹ App currently support?
+It is available for use on Android (version 10 & above) and iOS (version 17 & above).
+3. While registration on the App, I am unable to go to the next step. Why am I getting stuck?
+The issue emerges when there is a recent update. In such case, the App has to be updated to the latest version available on Google Play store/ App Store. If the problem persists, the User is advised to uninstall the App and reinstall from Google Play store/ App Store. Follow next steps as prompted by the App.
+b. SIM VERIFICATION
+1. Why is my SIM verification failing?
+SIM Card verification is done with mobile number registered in your SBI bank a/c. Please check the SIM Cards on your phone. If you have two SIM cards, kindly disable the other SIM card momentarily and keep active only the one that is registered in your SBI bank a/c. After verification and successful registration on the App, you may re-enable the other SIM.
+2. I am unable to register as SIM verification is taking a longer time.
+GPS location may be disabled. To enable GPS location:
+Access the Mobile Device Toolbar
+: Swipe down from the top of your home screen to reveal the toolbar.
+Enable GPS Location
+: Make sure that the GPS location is turned on.
+Open App Info for CBDC Application
+: Long press the CBDC Application icon until a pop-up Appears, then select the "App Info" option.
+Adjust Permissions
+:
+Click on the "Permissions" option.
+Select "Location."
+Enable the "Allow only while using the App" option.
+Turn on "Use precise location."
+Register in e₹ App
+and recover your wallet using your existing wallet PIN.
+3. I am getting KYC error while registration on the App. What do I do?
+For checking status of KYC or updation of KYC, please contact your home branch. After updation of KYC, please attempt registration.
+c. PIN RELATED
+1. How to reset PIN?
+On the
+e₹
+App – Home Page, click on ‘Profile’ icon placed in the bottom.
+Select ‘PIN settings’ and click on ‘Forgot PIN?’.
+Enter last six digits and expiry date of the linked SBI Debit Card.
+2. What if wrong Wallet PIN is entered during a transaction?
+The Transaction will not proceed till the correct PIN is entered. Further, In case the customer forget his PIN, he may initiate resetting his Wallet PIN through by navigating through Profile > Pin setting > Forget PIN.
+Please Note that a Cooling period will apply immediately after the Wallet PIN is reset, which is 24 hours for Android Phones and 48 hours on iOS.
+d. QR RELATED
+1. I am not able to scan the CBDC QR code using another UPI App.
+The functionality of scanning CBDC QR code from other UPI Apps is under development. However, users can scan the CBDC QR code by using the CBDC
+e₹
+App for collecting/sending money.
+IV. UNAUTHORIZED TRANSACTIONS
+1. In case of unauthorized CBDC transactions reported by customers, the following actions are to be taken by the customer:
+Actions by customer
+:
+Intimate home branch where the CBDC linked account is maintained for putting a stop in the account, blocking of all the CBDC elements (linked - mobile number, Wallet ID, VPA, and Device ID) OR Email the Complaint details to your Home Branch and
+cbdc@sbi.co.in
+from your bank registered email ID.
+File an FIR with the local police and provide a copy along with other related proof/documents/information to the home branch.
+Visit
+https://sbi.bank.in/web/personal-banking/cyber-security
+for more details.
+File online fraud complaint at
+https://cybercrime.gov.in/
+. Keep validating documents ready to substantiate the fraud claim. National cybercrime hotline number is 1930.
+Email the Complaint details with s
+cbdc@sbi.co.in
+from your bank registered email ID.
+Last Updated On : Friday, 06-02-2026

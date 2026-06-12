@@ -1,0 +1,16 @@
+Revision of Interest Rate on Export Credit
+Taking in to account announcement of NIRVIK Scheme of ECGC in the Union Budget 2020, SBI revises Interest Rate on Export Credit (Pre-Shipment and Post-Shipment Finance in Rupee and Foreign Currency)
+Present Interest Rate on Export Credit (Maximum)
+Revised Interest Rate on Export Credit (Maximum)*
+Rupee
+MSME: 8.35%
+(Repo Rate + Spread 2.65% + Credit Risk Premium 0.55%)
+Others: 8.40% (1 Year MCLR+ Margin 0.55%)
+Rupee
+All Segments: 7.35 % (Repo Rate + Margin 2.20%)
+Foreign Currency (PCFC/EBR)
+All Segments: LIBOR/ EUROLIBOR / EURIBOR + Margin 2.00%
+Foreign Currency (PCFC/EBR)
+All Segments: LIBOR/ EUROLIBOR / EURIBOR + Margin 1.50%
+*Revised Interest Rate on Export Credit applicable w.e.f. from Implementation date of NIRVIK Scheme of ECGC.
+Last Updated On : Thursday, 20-02-2020

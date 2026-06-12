@@ -1,0 +1,2102 @@
+Interest Rates for the purpose of computing perquisite valuation
+Home Loans (Term Loan)
+Interest rates on 1st April 2025 for the purpose of computing perquisite valuation
+Interest Rates on 1st APRIL, 2024 For the purpose of computing perquisite valuation
+ROI FOR REH PRODUCTS WEF 01.04.2024
+RBI REPO : 6.5%/BANK MARKUP / SPREAD : 2.65%/EBR : 9.15%
+REGULAR HOME LOAN INCLUDING FLEXIPAY, NRI, NON-SALARIED PRIVILEGE / SHAURYA, APON GHAR
+CIBIL SCORE
+APP CRP
+BSD
+TERM LOAN
+MAX GAIN
+CRP
+EFF RATE
+CRP + PREM
+EFF RATE
+> = 800
+0.00%
+0.00%
+0.00%
+9.15%
+0.40%
+9.55%
+750 - 799
+0.10%
+-0.10%
+0.10%
+9.15%
+0.50%
+9.55%
+700 -749
+0.20%
+0.00%
+0.20%
+9.35%
+0.60%
+9.75%
+650 - 699
+0.30%
+0.00%
+0.30%
+9.45%
+0.70%
+9.85%
+550 - 649
+0.50%
+0.00%
+0.50%
+9.65%
+0.90%
+10.05%
+< 550
+1.00%
+0.00%
+1.00%
+10.15%
+1.40%
+10.55%
+NTC = "101-150"
+0.30%
+0.00%
+0.30%
+9.45%
+0.70%
+9.85%
+NTC = "151-200"
+0.20%
+0.00%
+0.20%
+9.35%
+0.60%
+9.75%
+NTC / NO SCORE / -1
+0.20%
+0.00%
+0.20%
+9.35%
+0.60%
+9.75%
+CRE HOME LOAN INCLUDING FLEXIPAY, NRI, NON-SALARIED PRIVILEGE / SHAURYA, APON GHAR
+CIBIL SCORE
+APP CRP
+BSD
+TERM LOAN
+MAX GAIN
+CRP
+EFF RATE
+CRP + PREM
+EFF RATE
+> = 800
+0.00%
+0.00%
+0.20%
+9.35%
+0.50%
+9.65%
+750 - 799
+0.10%
+-0.10%
+0.30%
+9.35%
+0.60%
+9.65%
+700 -749
+0.20%
+0.00%
+0.40%
+9.55%
+0.70%
+9.85%
+650 - 699
+0.30%
+0.00%
+0.50%
+9.65%
+0.80%
+9.95%
+550 - 649
+0.50%
+0.00%
+0.70%
+9.85%
+1.00%
+10.15%
+< 550
+1.00%
+0.00%
+1.20%
+10.35%
+1.50%
+10.65%
+NTC = "101-150"
+0.30%
+0.00%
+0.50%
+9.65%
+0.80%
+9.95%
+NTC = "151-200"
+0.20%
+0.00%
+0.40%
+9.55%
+0.70%
+9.85%
+NTC / NO SCORE / -1
+0.20%
+0.00%
+0.40%
+9.55%
+0.70%
+9.85%
+TOPUP LOAN
+CIBIL SCORE
+APP CRP
+BSD
+TERM LOAN
+OVERDRAFT
+CRP
+EFF RATE
+CRP + PREM
+EFF RATE
+> = 800
+0.00%
+0.00%
+0.40%
+9.55%
+0.70%
+9.85%
+750 - 799
+0.10%
+-0.10%
+0.50%
+9.55%
+0.80%
+9.85%
+700 -749
+0.20%
+0.00%
+0.60%
+9.75%
+0.90%
+10.05%
+650 - 699
+0.30%
+0.00%
+0.70%
+9.85%
+1.00%
+10.15%
+550 - 649
+0.50%
+0.00%
+1.00%
+10.15%
+1.30%
+10.45%
+< 550
+1.00%
+0.00%
+1.10%
+10.25%
+1.40%
+10.55%
+NTC = "101-150"
+0.30%
+0.00%
+0.70%
+9.85%
+1.00%
+10.15%
+NTC = "151-200"
+0.20%
+0.00%
+0.60%
+9.75%
+0.90%
+10.05%
+NTC / NO SCORE / -1
+0.20%
+0.00%
+0.60%
+9.75%
+0.90%
+10.05%
+REALTY LOAN
+CIBIL SCORE
+APP CRP
+BSD
+TERM LOAN
+CRE
+TERM LOAN
+CRP
+EFF RATE
+CRP + PREM
+EFF RATE
+> = 800
+0.00%
+0.00%
+0.30%
+9.45%
+0.50%
+9.65%
+750 - 799
+0.10%
+-0.10%
+0.40%
+9.45%
+0.60%
+9.65%
+700 -749
+0.20%
+0.00%
+0.50%
+9.65%
+0.70%
+9.85%
+650 - 699
+0.30%
+0.00%
+0.60%
+9.75%
+0.80%
+9.95%
+550 - 649
+0.50%
+0.00%
+0.70%
+9.85%
+0.90%
+10.05%
+< 550
+1.00%
+0.00%
+1.50%
+10.65%
+1.70%
+10.85%
+NTC = "101-150"
+0.30%
+0.00%
+0.60%
+9.75%
+0.80%
+9.95%
+NTC = "151-200"
+0.20%
+0.00%
+0.50%
+9.65%
+0.70%
+9.85%
+NTC / NO SCORE / -1
+0.20%
+0.00%
+0.50%
+9.65%
+0.70%
+9.85%
+TRIBAL PLUS
+CIBIL SCORE
+APP CRP
+BSD
+TERM LOAN
+CRP + PREM
+EFF RATE
+> = 800
+0.00%
+0.00%
+0.10%
+9.25%
+750 - 799
+0.10%
+-0.10%
+0.20%
+9.25%
+700 -749
+0.20%
+0.00%
+0.30%
+9.45%
+650 - 699
+0.30%
+0.00%
+0.40%
+9.55%
+550 - 649
+0.50%
+0.00%
+0.60%
+9.75%
+< 550
+1.00%
+0.00%
+1.10%
+10.25%
+NTC = "101-150"
+0.30%
+0.00%
+0.40%
+9.55%
+NTC = "151-200"
+0.20%
+0.00%
+0.30%
+9.45%
+NTC / NO SCORE / -1
+0.20%
+0.00%
+0.30%
+9.45%
+P-LAP(for All Borrowers inclusive of Salaried / Non-Salaried & Income from Salary / Rental Income)
+CIBIL SCORE
+APP CRP
+BSD
+TERM LOAN
+CRP
+EFF RATE
+> = 800
+0.00%
+0.00%
+1.75%
+10.90%
+750 - 799
+0.10%
+-0.10%
+1.85%
+10.90%
+700 -749
+0.20%
+0.00%
+1.95%
+11.10%
+650 - 699
+0.30%
+0.00%
+2.05%
+11.20%
+550 - 649
+0.50%
+0.00%
+2.15%
+11.30%
+< 550
+1.00%
+0.00%
+2.50%
+11.65%
+NTC = "101-150"
+0.30%
+0.00%
+2.05%
+11.20%
+NTC = "151-200"
+0.20%
+0.00%
+1.95%
+11.10%
+NTC / NO SCORE / -1
+0.20%
+0.00%
+1.95%
+11.10%
+SMART HOME TOPUP
+REVERSE MORTGAGE LOAN
+EMD
+INSTA TOPUP
+YONO & INB
+HL FOR
+EMP OF GOVT OF KERALA
+TERM LOAN
+OVERDRAFT
+PUBLIC
+STAFF
+TERM LOAN
+OVERDRAFT
+TERM LOAN
+MAX GAIN
+CRP
+EFF RATE
+CRP
+EFF RATE
+CRP
+EFF RATE
+CRP
+EFF RATE
+CRP
+EFF RATE
+CRP
+CONV FEE
+EFF RATE
+CRP
+EFF RATE
+CRP
+EFF RATE
+0.60%
+0.60%
+1.00%
+1.00%
+2.40%
+2.40%
+1.40%
+1.40%
+3.80%
+3.80%
+0.50%
+0.10%
+0.60%
+0.15%
+0.15%
+0.55%
+0.55%
+IMPORTANT INSTRUCTIONS
+NO HOME LOANS TO BE SANCTIONED FOR CIBIL SCORE BELOW "550"
+1) 0.05% CONCESSION AVAILABLE TO WOMEN BORROWERS SUBJECT TO MINIMUM EBR i.e 9.15%
+2) PREMIUM OF 0.10% TO CARD RATE FOR LOANS UPTO RS. 30 LACS FOR LTV > 80% & <= 90%
+3) TOPUP LOAN ABOVE RS. 2.00 CRORES NOT PERMITTED UNDER OVERDRAFT
+4) 0.05% CONCESSION UNDER PRIVILEGE & SHAURYA HL & Apon Ghar HL
+5) INTEREST RATE ON TOPUP LOAN SHOULD NEVER BE BELOW THE RATE OF INTEREST CHARGED ON THE UNDERLYING HOME LOAN (IF UNDERLYING HL IS AT HIGHER ROI FOR AN INFERIOR CIBIL AND LOWER ROI IS APPLICABLE ON TOPUP LOAN BECAUSE OF IMPROVEMENT IN CIBIL SCORE - THE ROI ON TOPUP LOAN WILL BE MINIMUM THE ROI CHARGED ON HOME LOAN
+6) INTEREST RATE ON SURAKSHA LOAN ACCOUNTS WILL BE AS PER THE UNDERLYING HOME LOAN ACCOUNT INTEREST RATE"
+Interest Rates on 1st APRIL, 2023 For the purpose of computing perquisite valuation
+Interest Rates on 1st APRIL, 2022 For the purpose of computing perquisite valuation
+ROI FOR REH PRODUCTS WEF 01.04.2022
+EBR @ 6.65 A (Repo Rate- 4.00 % +2.65%)
+HOME LOANS(Term Loans)
+Step Up CRP Based On Credit Score (CIBIL):
+Loan Amt
+CRP linked to Credit score
+All Loan Limits Irrespective of Salaried and Non- Salaried
+/ProfessionaI & self- employed etc
+Credit score
+(CIBIL)
+Step up CRP starting Rate:
+6.65 + 0.00 = 6.65 %
+Effective Rate
+>=800
+EBR + 00 bps
+ER 6.65 %
+750—799
+EBR + 10 bps
+ER 6.75 %
+700—749
+EBR + 20 bps
+ER 6.85%
+650 — 699
+EBR + 30 bps
+ER 6.95%
+0 — 649
+EBR + 50 bps
+ER 7.15 %
+NTC / No CIBIL
+score /-1
+EBR + 20 bps
+ER 6.85 %
+<550
+Not eligible
+HOME LOANS (MAXGAIN)
+40 bps over applicable Home- Term loan interest rate for all loan limit (>=Rs 20 lacs & upto Rs 3 crs).
+Other Conditions Applicable:
+1
+05 bps concession will be available to women subject to minimum EBR i.e 6.65%
+2
+A premium of 10 bps will be added to the Card Rate for Loan up to Rs 30 Lacs if LTV ratio is >80% & <=90%.
+3
+Minimum threshold for CIBIL score is 550, below which NO LOAN will be sanctioned
+Discontinued I NOT applicable any longer - Remaining conditions (05 bps concession for digitally sourced loan in YONO, premium of 10 bps for customer who falls under RG (4 to 6), premium of 15 bps for non-salaried customers etc )}
+OTHER HOME LOAN VARIANTS
+Other HL Product
+ROI Structure wef 01.04.2022
+CRE Home Loan
+Term  Loan  -  An  additional  20  bps  premium  will  be added to the applicable home loan (TL) ROI.
+Maxgain - An additional 50 bps premium will be added to the applicable home loan (TL) ROI.
+Privilege Scheme & Shaurya Scheme
+5 bps concession over applicable home loan rates if Maintaining salary a/c with SBI under salary packages. (Subject to Effective rate NOT below EBR, presently 6.65%).
+Realty Loans
+CIBIL Score
+CRP
+ER
+>=800
+EBR + 0.30%
+6.95%
+750 - 799
+EBR + 0.40%
+7.05%
+700 - 749
+EBR + 0.50%
+7.15%
+650 - 699
+EBR + 0.60%
+7.25%
+550 - 649
+EBR + 0.70%
+7.35%
+NTC
+EBR + 0.50%
+7.15%
+<550
+Not eligible
+Step up CRP based on Credit score-
+Tribal Plus
+(No change) An additional 10 bps will be added to the final rate.
+Home loan to Kerala Govt
+(No change)EBR+15 bps ER : 6.80%
+Apon Ghar
+(No change)
+The rate applicable will be as applicable to the beneficiaries of SBI Privilege Scheme.
+Suraksha Loans
+(No change) Same rate as applicable to underlying home loan account
+RML
+(No change)
+For Public: EBR + 240 bps ER: 9.05% For SBI staff Pensioners : EBR + 140 bps ER : 8.05%
+EMD
+(No change) EBR + 380 bps ER : 10.45%
+Flexipay, NRI, PMAY,Differential Offerings
+As per Home Loans rates
+HOME TOP UP LOANS ROI Structure wef 01.04.2022
+Loan Amt
+TERM LOAN
+OVER DRAFT
+All Loan
+Limits
+Increment /zasez/ on current CIBIL score as under :
+Upto Rs 20 lacs) - NA
+Not below the underlying home loan rate
+Loan amt >= 20 lacs & upto Rs 2 crs -
+30 bps over applicable TL top Up Rate
+{ER 7.35%  to 7.95 %}
+Current CIBIL score
+Increment
+ER
+(loan a6ove Rs 2 cr) — NA
+>=800
+EBR + 40 bps
+7.50%
+750 to 799
+EBR + 50 bps
+7.15%
+700 to 749
+EBR + 60 bps
+7.25%
+650 to 699
+EBR + 70 bps
+7.35%
+550 to 649
+EBR + 100 bps
+7.65%
+<550
+Not eligible
+Other Top Up Loans (Loan Quantum Upto Rs 8 lacs)
+Type of Top Up
+Term Loan
+Overdraft
+CRP
+ER
+CRP
+ER
+Yono Insta Top Up
+NA
+NA
+EBR + 50 bps + Convenience fee 10 bps
+7.25%
+Insta Home top up
+Smart Top Up
+EBR+ 60 bps
+7.25%
+EBR + 100 bps
+7.65%
+P-LAP ROI Structure wef 01.04.2022
+Loan Amt/borrower type
+Step Up CRP Based On Credit score (CIBIL) score
+All Loan Limits irrespective of Salaried / Non- Salaried and residential /  commercial property etc
+Credit  score
+Step up CRP
+Effective Rate
+>=800
+EBR + 175 bps
+ER 8.40 %
+750 —799
+EBR + 185 bps
+ER 8.50 %
+700-749
+EBR + 185 bps
+ER 8.60 %
+650-699
+EBR + 205 bps
+ER 8.70 %
+550 — 649
+EBR + 215 bps
+ER 8.80 %
+NTC / No CIBIL score /-1
+EBR + 195 bps
+ER 8.60 %
+<550
+Not eligible
+Personal Loan Schemes
+Interest Rates on 1st APRIL 2026 For the purpose of computing perquisite valuation
+SBI Personal Loan scheme - Rate of Interest (as on 01.04.2026)
+2-year MCLR @ 8.75%
+Mean ROI (Q4 FY25): 12.68%
+Spread over 2-year MCLR
+Effective Interest Rate
+1.25% - 6.25%
+10.00% - 15.00%
+Interest Rates on 1st APRIL 2025 For the purpose of computing perquisite valuation
+SBI Personal Loan scheme - Rate of Interest (as on 01.04.2025)
+2-year MCLR @ 9.05%
+Mean ROI (Q4 FY25): 12.68%
+Spread over 2-year MCLR
+Effective Interest Rate
+1.25% - 6.25%
+10.30% - 15.30%
+Interest Rates on 1st APRIL, 2024 For the purpose of computing perquisite valuation
+PERSONAL LOAN SCHEMES - Rate of Interest
+2-year MCLR @ 8.75%
+Mean ROI for Xpress Credit (Q3 FY24): 12.32%
+I. XPRESS CREDIT SCHEME [including Pre-Approved Xpress Credit  (PAXC)/ RTXC/ RMP Xpress Credit]
+A. Applicants of Defence/ Central Armed Police/ Indian Coast Guard
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+2.40% - 3.90%
+11.15% - 12.65%
+B. Applicants of Central Govt./ State Govt./ Police / Railway/ Central Public Sector Enterprises (CPSEs) Considered Under ‘RATNA’ Status
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+2.55% - 5.05%
+11.30% - 13.80%
+C. Applicants of Other Corporates
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+4.55% - 5.55%
+12.30% - 14.30%
+II. XPRESS ELITE SCHEME (including RTXC Elite)
+Salary Account with SBI:
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+2.40% - 2.90%
+11.15% - 11.65%
+Salary Account with another Bank:
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+2.65% - 3.15%
+11.40% - 11.90%
+III. XPRESS FLEXI SCHEME (Overdraft Facility)
+0.25% higher than I. Xpress Credit scheme for Diamond Salary Package customers and II. Xpress Elite scheme for Platinum Salary Package customers
+IV. XPRESS LITE SCHEME
+1% higher than I. Xpress Credit scheme for all brackets
+V. SBI QUICK PERSONAL LOAN SCHEME THROUGH CLP PORTAL (i.e.,
+https://www.sbiloansin59minutes.com
+)
+(for customer not maintaining salary account with SBI)
+0.25% higher than I. Xpress Credit Scheme for all Brackets
+VI. XPRESS CREDIT INSTA TOP-UP LOANS
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+3.65%
+12.40%
+VII. PRE-APPROVED PERSONAL LOANS (PAPL) TO NON-CSP CUSTOMERS
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+5.05% - 5.55%
+13.80% - 14.30%
+VIII. PENSION LOAN SCHEMES
+Mean ROI for Pension Loan (Q3 FY24): 11.33%
+Scheme
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+SBI Pension Loan
+2.55%
+11.30%
+Jai Jawan Pension Loan
+2.55%
+11.30%
+Pension Loan Scheme For Treasury & PSU Pensioners
+2.55%-3.05%
+11.30% - 11.80%
+Pre-Approved Pension Loans(PAPNL)
+2.55%
+11.30%
+Pre-approved Insta Pension Top-Up
+2.55%
+11.30%
+Interest Rates on 1st APRIL, 2023 For the purpose of computing perquisite valuation
+State Bank of India: Interest Rates on 1
+st
+APRIL, 2023
+For the purpose of computing perquisite valuation
+Interest rates as on 1st April, 2023 on various loans in Personal Segment advances are as under:
+PERSONAL LOAN SCHEMES - Rate of Interest
+I. XPRESS CREDIT SCHEME
+A. Applicants of Defence/ Central Armed Police/ Indian Coast Guard
+2-year MCLR
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+8.60%
+2.40% - 3.90%
+11.00% - 12.50%
+B. Applicants of Central Govt./ State Govt./ Police / Railway/ Central Public Sector Enterprises (CPSEs) Considered Under ‘RATNA’ Status
+2-year MCLR
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+8.60%
+2.40% - 4.90%
+11.00% - 13.50%
+C. Applicants of Other Corporates
+2-year MCLR
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+8.60%
+2.40% - 4.90%
+11.00% - 13.50%
+II. XPRESS ELITE SCHEME
+Salary account with SBI:
+2-year MCLR
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+8.60%
+2.40% - 2.90%
+11.00% - 11.50%
+Salary Account with another Bank:
+2-year MCLR
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+8.60%
+2.65% - 3.15%
+11.25% - 11.75%
+III. XPRESS FLEXI SCHEME (Overdraft Facility) 0.25% higher than I. Xpress Credit scheme for Diamond Salary Package customers and II. Xpress Elite scheme for Platinum Salary Package customers
+IV. XPRESS LITE SCHEME
+1% higher than I. Xpress Credit scheme for all brackets
+V. SBI QUICK PERSONAL LOAN SCHEME THROUGH CLP PORTAL (i.e.,
+https://www.sbiloansin59minutes.com
+) (for customer not maintaining salary account with SBI) 0.25% higher than I. Xpress Credit Scheme for all Brackets
+VI. XPRESS FLEXI SCHEME (Overdraft Facility)
+2-year MCLR
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+8.60%
+3.50%
+12.10%
+VII. PENSION LOAN SCHEMES
+Scheme
+2-year MCLR
+Spread over 2-year MCLR
+Effective Interest Rate with No Reset
+SBI Pension Loan
+8.60%
+2.55%
+11.15%
+Jai Jawan Pension Loan
+8.60%
+2.55%
+11.15%
+Pension Loan to Treasury/ PSU Pensioners
+8.60%
+2.55%- 3.05%
+11.15%- 11.65%
+Pre-Approved Pension Loans (PAPNL)
+8.60%
+2.55%
+11.15%
+Pre-approved Insta Pension Top-Up
+8.60%
+2.55%
+11.15%
+Interest Rates on 1st APRIL, 2022 For the purpose of computing perquisite valuation
+State Bank of India: Interest Rates on 1
+st
+APRIL, 2022
+For the purpose of computing perquisite valuation
+Interest rates as on 1
+st
+APRIL, 2022 on various loans in Personal Segment advances are as under
+External Bench Mark lending Rate (EBR):6.65%
+PERSONAL LOAN SCHEMES – RATE OF INTEREST
+A. For Defence/ Para-Military/ Indian Coast Guard Salary Package Applicants
+CIC Score (CIBIL CV Score
+2-year MCLR
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+≥ 670
+7.20%
+3.40%
+10.60%
+650-669
+7.20%
+3.90%
+11.10%
+B.
+For Central Govt. Salary Package/ State Govt. Salary Package/ Police Salary Package/ Railway Salary Package/ Central Public Sector Enterprises (CPSEs) Considered Under ‘RATNA’ Status Applicants and for applicants of identified reputed Corporates.
+CIC Score (CIBIL CV Score
+2-year MCLR
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+≥ 761
+7.20%
+3.40%
+10.60%
+735-760
+7.20%
+3.90%
+11.10%
+670-734
+7.20%
+4.40%
+11.60%
+650-669
+7.20%
+4.90%
+12.10%
+C. For Other Corporate Salary Package (CSP) Applicants:
+CIC Score (CIBIL CV Score
+2-year MCLR
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+≥ 761
+7.20%
+4.40%
+11.60%
+735-760
+7.20%
+4.90%
+12.10%
+670-734
+7.20%
+5.40%
+12.60%
+<670
+No Loan
+Note
+:a) In case of the NIL CIC Score, Risk Scoring Model (RSM) score shall substitute the CIC Score in interest rate structure as under:
+RSM
+≥75
+66-74
+57-65
+41-56
+Govt. SP (DSP, ICGSP, PMSP, RSP, PSP,SGSP, CGSP, etc.)
+(CIBIL CV
+Score)
+≥ 761
+735-760
+670-734
+650-669
+Corporate salary package customers (CSP)
+(CIBIL CV
+Score)
+≥ 761
+735-760
+670-734
+670-734
+c) Following category of borrowers will get special concessions*:
+Criteria
+Concession Offered
+Loan amount ≥ Rs 10,00,000
+50 bps in Rate of interest
+Platinum Salary Package customers
+50 bps in Rate of Interest
+Central Public Sector Enterprises (CPSEs)
+Considered Under ‘RATNA’ Status
+50 bps in Rate of Interest
+*Subject to condition that
+total concession shall not exceed 100 bps
+and Salary account is linked to respective Employer Code wherever applicable.
+d)
+‘Overdraft’ Facility:
+In case of the customer who avails Overdraft (OD) facility,
+50 bps premium
+will be charged over and above the applicable interest rate.
+II. XPRESS ELITE SCHEME:(Term loan/ Overdraft)
+A. SBI Salary Package A/c Holders:
+CIC Score (CIBIL CV Score
+2-year MCLR
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+≥ 791
+7.20%
+2.40%
+9.60%
+735-790
+7.20%
+2.90%
+10.10%
+650-734/ NIL Score
+7.20%
+3.90%
+11.10%
+<650
+No Loan
+B. Other than Salary Package A/c Holders (including Applicants not maintaining Salary A/c with our Bank):
+CIC Score (CIBIL CV Score
+2-year MCLR
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+≥ 791
+7.20%
+2.65%
+9.85%
+735-790
+7.20%
+3.15%
+10.35%
+650-734/ NIL Score
+7.20%
+4.15%
+11.35%
+<650
+No Loan
+Note:
+No further concession is permitted under the Scheme.
+III. III.XPRESS CREDIT- NON-PERMANENT EMPLOYEES (NPES)
+Employer Type
+Rate of Interest
+i) Central and State Government, Quasi- Government, Central PSUs, State PSUs, Defence personnel, Educational Institutions of National Repute
+Check-off Category-I :
+430 bps above 2 yr MCLR i.e. 11.50%
+Check-off Category-II:
+640 bps above 2 yr MCLR i.e. 13.60%
+ii) Co-operatives/ Institutions not covered under regular Xpress Credit loan scheme and Unrated Corporates
+Check-off Category-I:
+505 bps above 2 yr MCLR i.e. 12.25%
+Check-off Category-II:
+665 bps above 2 yr MCLR i.e. 13.85%
+IV. XPRESS LITE SCHEME : 1% higher than Xpress Credit scheme for all brackets
+V. PRE-APPROVED XPRESS CREDIT ON YONO (PAXC)
+Category
+(CIBIL CV Score)
+2 year MCLR with no reset
+Spread over 2 year MCL
+Effective Interest Rate with No Reset
+DSP/PMSP/ICGSP applicants
+≥ 670
+7.20%
+3.40%
+10.60%
+<670
+7.20%
+3.90%
+11.10%
+CGSP, PSP, RSP, SGSP, CSP customer with Select Employer
+Code
+≥ 761
+7.20%
+3.40%
+10.60%
+735-760
+7.20%
+3.90%
+11.10%
+670-734
+7.20%
+4.40%
+11.60%
+650-669
+7.20%
+4.90%
+12.10%
+Others
+≥ 761
+7.20%
+4.40%
+11.60%
+735-760
+7.20%
+4.90%
+12.10%
+670-734
+7.20%
+5.40%
+12.60%
+VI.OTHER UNSECURED PERSONAL LOANS
+VI.OTHER UNSECURED PERSONAL LOANS
+Scheme
+(2 year MCLR)
+Spread over 2 year MCLR
+Effective Interest Rate with No Reset
+SBI Pension Loan*
+7.20%
+2.55%
+9.75%
+Jai Jawan Pension Loan
+7.20%
+2.55%
+9.75%
+Pension Loan To Coal Mines
+Provident Fund (CMPF) Pensioners
+7.20%
+2.55%
+9.75%
+Pre-Approved Pension Loans on YONO (PAPNL)
+7.20%
+2.55%
+9.75%
+Insta Pension
+7.20%
+2.55%
+9.75%
+Xpress Credit Insta Top-Up
+7.20%
+3.50%
+10.70%
+SPL. PAPL
+7.20%
+2.40%
+9.60%
+Clean Overdraft
+7.20%
+8.45%
+15.65%
+*The Treasury/PSU Pensioners to be charged a premium of 0.50% in case concerned Treasury/ PSU (Pension Payment Authorities) do not give consents/undertaking in writing that it will not accept any request from the pensioner to transfer his pension payment to any other Bank/ Branch till a NOC is issued by our Bank/Branch.
+VII. SBI Quick Personal Loan Scheme through CLP portal
+(for customer not maintaining salary account with SBI) : 0.25% higher than Xpress Credit Scheme for all Brackets
+VIII. Pre-Approved Personal Loans (PAPL)- Non-CSP
+VI.OTHER UNSECURED PERSONAL LOANS
+Scheme
+1 year MCLR
+Spread over 1 year MCLR
+Effective Interest Rate with No Reset
+Pre-Approved Personal Loans (PAPL) Non-CSP
+7.00%
+5.60%
+12.60%
+Interest rate on 01.04.2025 For the purpose of computing perquisite valuation
+EDUCATION LOAN - RATE OF INTEREST
+Student Loan
+(Upto ₹7.50 Lakh
+10.90%
+Above ₹7.50 Lakh
+9.90%
+0.50 % concession for Girl Student
+Scholar Loan
+7.90% to 9.40%
+Skill Loan
+(Upto ₹7.50lakh
+10.40%
+0.50 % concession for Girl Student
+Global Edvantage (Including Takeover)
+Above ₹7.50 Lakh with security
+9.90%
+0.50 % concession for Girl Student
+For Top 100 Institutes
+Above ₹7.50 Lakh without Security
+9.90%
+Above ₹7.50 Lakh with Security
+9.40%
+Shaurya Education Loan (Including Takeover)
+(Upto ₹7.50 Lakh
+10.90%
+Above ₹7.50 Lakh with security
+9.90%
+Above ₹7.50 Lakh without Security
+10.40%
+0.50 % concession for Girl Student
+All Education Loans are linked to External Benchmark rate ( EBLR) Prevailing EBLR = 8.90%
+Interest Rates on 01-04-2024 For the purpose of computing perquisite valuation
+EDUCATION LOAN SCHEMES - RATE OF INTEREST
+The interest rates will be floating for entire period of loan
+Mean Rate of Interest 10.47%
+SBI STUDENT LOAN SCHEME
+Loan Limit
+EBR*
+CRP
+Effective Interest Rate
+Rate Type
+Upto Rs 7.5 Lakhs
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession in interest for girl students
+Above Rs 7.5 Lacs
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession in interest for girl students
+0.50% concession for students availing of SBI Rinn Raksha or any other existing policy assigned in favour of our Bank
+SBI SCHOLAR LOAN SCHEME (Including  TAKEOVER and PART-TIME COURSES for select institutes)
+List
+EBR*
+CRP
+Business Strategy Discount
+Effective Interest Rate
+Rate Type
+AA
+All IITs
+9.15%
+0.00%
+(-) 1.00%
+8.15%
+(With or without co-borrower)
+Floating
+Other institutes
+9.15%
+0.05%
+(-) 1.00%
+8.20%
+(With or without co-borrower)
+Floating
+A
+All IITs
+9.15%
+0.00%
+(-) 1.00%
+8.15%
+Floating
+Other institutes
+9.15%
+0.50%
+(-) 1.00%
+8.65%
+Floating
+B
+All NITs
+9.15%
+0.50%
+(-) 1.00%
+8.65%
+Floating
+Other institutes
+9.15%
+1.00%
+(-) 1.00%
+9.15%
+Floating
+C
+All NITs
+9.15%
+0.50%
+(-) 1.00%
+8.65%
+Floating
+Other institutes
+9.15%
+1.50%
+(-) 1.00%
+9.65%
+Floating
+SBI SKILL LOAN SCHEME
+Loan Limit
+EBR*
+CRP
+Effective Interest Rate
+Rate Type
+Upto Rs 1.5 Lacs
+9.15%
+1.50%
+10.65%
+Floating
+Concession
+No Further Concession
+SBI GLOBAL ED-VANTAGE SCHEME
+Loan Limit
+EBR*
+CRP
+Effective Interest Rate
+Rate Type
+Above Rs. 7.50 lacs & Upto Rs 1.5 Cr
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life policy assigned in favour of our Bank
+Further Concession
+0.50% concession for girl students
+SBI TAKEOVER EDUCATION LOANS SCHEME
+(Under Student Loan & Global Ed-Vantage Scheme)
+Loan Limit
+EBR*
+CRP
+Effective Interest Rate
+Rate Type
+Above Rs 10 lacs & Upto Rs 1.5 Cr
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life insurance policy assigned in favour of our Bank
+Further Concession
+0.50% concession for girl students
+SHAURYA EDUCATION LOAN
+(For wards of Defence & Indian Coast Guard )
+Loan Limit
+EBR*
+CRP
+Effective Interest Rate
+Rate Type
+Upto 7.50 lakhs
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession for girl students
+Above Rs. 7.50 Lakhs & Upto Rs. 1.50 Cr
+In case of Secured Loan
+9.15%
+2.00%
+11.15%
+Floating
+In case of Unsecured Loan
+9.15%
+2.60%
+11.75%
+Floating
+Concession
+0.50% concession for girl students
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life insurance policy assigned in favour of our Bank
+*EBR = Repo Rate + Spread,
+Currently: Repo rate = 6.50%
+Spread = 2.65%
+EBR = 9.15%
+Interest Rates on 01-04-2023 For the purpose of computing perquisite valuation
+EDUCATION LOAN SCHEMES - RATE OF INTEREST (w.e.f. 15.02.2023) Mean Rate of Interest 9.37%
+SBI STUDENT LOAN SCHEME
+Loan Limit
+EBR
+CRP
+Effective Interest Rate
+Rate Type
+Upto Rs 7.5 Lakhs
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession in interest for girl students
+Above Rs 7.5 Lakhs
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession in interest for girl students
+0.50% concession for students availing of SBI Rinn Raksha or any other existing policy assigned in favour of our Bank
+SBI SCHOLAR LOAN SCHEME (Including TAKEOVER and PART-TIME COURSES for select institutes)
+LIST
+EBR
+CRP
+Business Strategy Discount
+Effective Interest Rate
+Rate Type
+AA
+All IITs
+9.15%
+0.00%
+(-) 0.60%
+8.55% (With or without co-borrower)
+Floating
+Other institutes
+9.15%
+0.05%
+(-) 0.60%
+8.60% (With or without co-borrower)
+Floating
+A
+All IITs
+9.15%
+0.00%
+(-) 0.60%
+8.55%
+Floating
+Other institutes
+9.15%
+0.50%
+(-) 0.60%
+9.05%
+Floating
+B
+All NITs
+9.15%
+0.50%
+(-) 0.60%
+9.05%
+Floating
+Other institutes
+9.15%
+1.00%
+(-) 0.60%
+9.55%
+Floating
+C
+All NITs
+9.15%
+0.50%
+(-) 0.60%
+9.05%
+Floating
+Other institutes
+9.15%
+1.50%
+(-) 0.60%
+10.05%
+Floating
+SBI SKILL LOAN SCHEME
+Loan Limit
+EBR
+CRP
+Effective Interest Rate
+Rate Type
+Upto Rs 1.5 Lakhs
+9.15%
+1.50%
+10.65%
+Floating
+Concession
+No Further Concession
+SBI GLOBAL ED-VANTAGE SCHEME
+Loan Limit
+EBR
+CRP
+Effective Interest Rate
+Rate Type
+Above Rs. 7.50 lakhs & Upto Rs 1.5 Cr
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life insurance policy assigned in favour of our Bank
+Further Concession
+0.50% concession for girl students
+SBI TAKEOVER EDUCATION LOANS SCHEME (Under Student Loan & Global Ed-Vantage Scheme)
+Loan Limit
+EBR
+CRP
+Effective Interest Rate
+Rate Type
+Above Rs 10 lakhs & Upto Rs 1.5 Cr
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life insurance policy assigned in favour of our Bank
+Further Concession
+0.50% concession for girl students
+SHAURYA EDUCATION LOAN (For spouse/wards of Defence & Indian Coast Guard)
+Loan Limit
+EBR
+CRP
+Effective Interest Rate
+Rate Type
+Upto 7.50 lakhs
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession in interest for girl students
+Above Rs. 7.50 Lakhs & Upto Rs. 1.50 Cr
+In case of Secured Loan
+9.15%
+2.00%
+11.15%
+Floating
+In case of Unsecured Loan
+9.15%
+2.00%
+11.15%
+Floating
+Concession
+0.50% concession for girl students
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life insurance policy assigned in favour of our Bank
+Interest Rates on 22.06.2021 For the purpose of computing perquisite valuation
+EDUCATION LOAN SCHEMES - RATE OF INTEREST (w.e.f. 22.06.2021)
+Mean Rate of Interest 8.68%
+SBI STUDENT LOAN SCHEME
+Loan Limit
+EBLR
+Spread
+Effective Interest Rate
+Rate Type
+Upto Rs 7.5 Lakhs
+6.65%
+2.00%
+8.65%
+Floating
+Concession
+0.50% concession in interest for girl students
+Above Rs 7.5 Lakhs
+6.65%
+2.00%
+8.65%
+Floating
+Concession
+0.50% concession in interest for girl students
+0.50% concession for students availing of SBI Rinn Raksha or any other existing policy assigned in favour of our Bank
+SBI SCHOLAR LOAN SCHEME
+(Including PART-TIME COURSES for select institutes)
+LIST
+EBLR
+Spread
+Effective Interest Rate
+Rate Type
+AA
+ROI
+6.65%
+0.20%
+6.85%
+(With co-borrower)
+Floating
+ROI
+6.65%
+0.30%
+6.95%
+(Without co-borrower)
+Floating
+A
+All IIMs & IITs
+6.65%
+0.35%
+7.00%
+Floating
+Other institutes
+6.65%
+0.50%
+7.15%
+Floating
+B
+All NITs
+6.65%
+0.50%
+7.15%
+Floating
+Other institutes
+6.65%
+1.00%
+7.65%
+Floating
+C
+All NITs
+6.65%
+0.50%
+7.15%
+Floating
+Other institutes
+6.65%
+1.50%
+8.15%
+Floating
+SBI SKILL LOAN SCHEME
+Loan Limit
+EBLR
+Spread
+Effective Interest Rate
+Rate Type
+Upto Rs 1.5 Lakhs
+6.65%
+1.50%
+8.15%
+Floating
+Concession
+No Further Concession
+SBI GLOBAL ED-VANTAGE SCHEME
+Loan Limit
+EBLR
+Spread
+Effective Interest Rate
+Rate Type
+Above Rs. 7.50 lakhs & Upto Rs 1.5 Cr
+6.65%
+2.00%
+8.65%
+Floating
+Concession
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life insurance policy assigned in favour of our Bank
+Further Concession
+0.50% concession for girl students
+SBI TAKEOVER OF COLLATERALISED EDUCATION LOANS SCHEME
+Loan Limit
+EBLR
+Spread
+Effective Interest Rate
+Rate Type
+Above Rs 10 lakhs & Upto Rs 1.5 Cr
+6.65%
+2.00%
+8.65%
+Floating
+Concession
+0.50% concession for girl students
+SHAURYA EDUCATION LOAN
+(For wards of Defense & Indian Coastal Guard Officers)
+Loan Limit
+EBLR
+Spread
+Effective Interest Rate
+Rate Type
+Upto 7.50 lakhs
+6.65%
+2.00%
+8.65%
+Floating
+Concession
+0.50% concession in interest for girl students
+Above Rs. 7.50 Lakhs & Upto Rs. 1.50 Cr
+In case of Secured Loan
+6.65%
+2.00%
+8.65%
+Floating
+In case of Unsecured Loan
+6.65%
+2.60%
+9.25%
+Floating
+Concession
+0.50% concession for girl students
+0.50% concession for students availing of SBI Rinn Raksha or any other existing life insurance policy assigned in favour of our Bank
+Loan against Securities as on 01.04.2025
+Loan against Securities as on 01.04.2025 is as under:
+Secured Personal Loans
+Scheme
+1-year MCLR
+Spread over 1-year MCLR
+Effective Interest Rate
+Loan against NSC/ KVP
+9.00%
+2.50%
+11.50%
+Loan against Insurance Policies of LIC/ Dept. of Post Offices/India Post/SBI Life/ ICICI Prudential/ HDFC Standard
+Loan against Mutual Fund Units
+9.00%
+2.50%
+11.50%
+Loan against Sovereign Gold Bond (SGB)
+9.00%
+2.00%
+11.00%
+II. LOAN AGAINST BANK TIME DEPOSIT (TDR/STDR) / FCNR (B) DEPOSIT
+Secured Personal Loans (2/3)
+Loan against Bank’s Time Deposits (Domestic)
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against NRO/NRE Fixed Deposits
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against FCNR (B) Deposit (Loan in INR)
+2.90% over 1-year MCLR (presently 1 year MCLR is 9.00%).
+Loan against Securities as on 01.04.2024
+Loan against Securities as on 01.04.2024 is as under:
+Secured Personal Loans
+Scheme
+1-year MCLR
+Spread over 1-year MCLR
+Effective Interest Rate
+Loan against Shares, Mutual Funds & Dual Advantage Fund
+8.65%
+2.50%
+11.15%
+Loan against SGB
+8.65%
+2.00%
+10.65%
+Loan against NSC/ KVP/ RBI Relief Bond/ Surrender Value of SBI Life/ LIC
+8.65%
+2.50%
+11.15%
+II. LOAN AGAINST BANK TIME DEPOSIT (TDR/STDR) / FCNR (B) DEPOSIT
+Secured Personal Loans (2/3)
+Loan against Bank’s Time Deposits (Domestic)
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against NRO Fixed Deposits
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against NRE Fixed Deposits
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against FCNR (B) Deposit
+2.90% over 1-year MCLR (1-year MCLR as on 01.04.2022 is 7.00%).
+Loan against Securities as on 01.04.2022
+Loan against Securities as on 01.04.2022 is as under:
+Secured Personal Loans
+Scheme
+1-year MCLR
+Spread over 1-year MCLR
+Effective Interest Rate
+Loan against Shares, Mutual Funds & Dual Advantage Fund
+7.00%
+2.50%
+9.50%
+Loan against SGB
+7.00%
+2.00%
+9.00%
+Loan against NSC/ KVP/ RBI Relief Bond/ Surrender Value of SBI Life/ LIC
+7.00%
+4.65%
+11.65%
+II. LOAN AGAINST BANK TIME DEPOSIT (TDR/STDR) / FCNR (B) DEPOSIT
+Secured Personal Loans (2/3)
+Loan against Bank’s Time Deposits (Domestic)
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against NRO Fixed Deposits
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against NRE Fixed Deposits
+1.00% over the rate of interest paid on the relative Time Deposits offered as security irrespective of the loan amount.
+Loan against FCNR (B) Deposit
+2.90% over 1-year MCLR (1-year MCLR as on 01.04.2022 is 7.00%).
+Interest Rates on 01-04-2025 For the purpose of computing perquisite valuation
+Auto Loans Interest Rates
+(Fixed Rate-Interest Rate applied at the time of disbursement will remain same for the entire loan period)
+Scheme
+(1-year MCLR: 9.00%)
+i) SBI Car Loan,
+ii) NRI Car Loan,
+iii) Assured Car Loan Scheme
+From 9.20% to 10.15%
+Loyalty Car Loan Scheme
+SBI Car Loan, NRI Car Loan
+From 9.15% to 10.10% (CIC Based rates are applicable)
+SBI Green Car Loan (For Electric Cars)
+From 9.10% to 10.15%
+Certified Pre-owned Car Loan Scheme
+From 11.75% to 15.25% (CIC Based rates are applicable).
+SBI Two-Wheeler Loan
+13.35% to 14.85% (0.50% Concession available for EV)
+Super Bike Loan Scheme
+12.85% to 14.35%
+Finer pricing for New Car Loans based on CIC scores
+CIC Score
+Term of Loan
+3-5 Years
+Above 5 Years
+800 & above
+0.20% + 1 Year MCLR
+9.20%
+0.30% + 1 Year MCLR
+9.30%
+775 - 799
+0.35% + 1 Year MCLR
+9.35%
+0.45% + 1 Year MCLR
+9.45%
+757-774
+0.45% + 1 Year MCLR
+9.45%
+0.55% + 1 Year MCLR
+9.55%
+721-756
+0.70% + 1 Year MCLR
+9.70%
+0.80% + 1 Year MCLR
+9.80%
+700-720
+0.95% + 1 Year MCLR
+9.95%
+1.05% + 1 Year MCLR
+10.05%
+650-699
+1.05% + 1 Year MCLR
+10.05%
+1.15% + 1 Year MCLR
+10.15%
+-1(NTC)
+9.45% to 9.80%
+Mean Rate for Auto Loans for Quarter 2 (FY 24-25): 9.27%
+Interest Rates on 01-04-2024 For the purpose of computing perquisite valuation
+Auto Loans Interest Rates
+(Fixed Rate-Interest Rate applied at the time of disbursement will remain same for the entire loan period)
+Scheme
+(1-year MCLR: 8.65%)
+i) SBI Car Loan,
+ii) NRI Car Loan,
+iii) Assured Car Loan Scheme
+From 8.85% to  9.80%
+Loyalty Car Loan Scheme
+SBI Car Loan, NRI Car Loan
+From 8.80% to 9.75% (CIC Based rates are applicable)
+SBI Green Car Loan (For Electric Cars)
+From 8.75% to 9.45%
+Certified Pre-owned Car Loan Scheme
+From 11.40% to 14.90% (CIC Based rates are applicable).
+SBI Two-Wheeler Loan
+13.00% to 14.50% (0.50% Concession available for EV)
+Finer pricing for New Car Loans based on CIC scores
+CIC Score
+Term of Loan
+3-5 Years
+Above 5 Years
+800 & above
+0.20% + 1 Year MCLR
+8.85%
+0.30% + 1 Year MCLR
+8.95%
+775 - 799
+0.35% + 1 Year MCLR
+9.00%
+0.45% + 1 Year MCLR
+9.10%
+757-774
+0.45% + 1 Year MCLR
+9.10%
+0.55% + 1 Year MCLR
+9.20%
+721-756
+0.70% + 1 Year MCLR
+9.35%
+0.80% + 1 Year MCLR
+9.45%
+700-720
+0.95% + 1 Year MCLR
+9.60%
+1.05% + 1 Year MCLR
+9.70%
+650-699
+1.05% + 1 Year MCLR
+9.70%
+1.15% + 1 Year MCLR
+9.80%
+-1(NTC)
+9.10% to 9.45%
+Super Bike Loan Scheme
+S.No.
+CIBIL Score
+Salaried customers / Defense / Pensioners
+Others
+1
+>=741
+3.50% + 1 Year MCLR
+12.15%
+4.50 + 1 Year MCLR
+13.15%
+2
+731-740
+5.00% + 1 Year MCLR
+13.65%
+6.00 + 1 Year MCLR
+14.65%
+3
+700-730 and (New to Credit)
+10.75% + 1 Year MCLR
+19.40%
+11.75 + 1 Year MCLR
+20.40%
+Mean Rate for Auto Loans: 9.00%
+Interest Rates on 01-04-2023 For the purpose of computing perquisite valuation
+Auto Loans Interest Rates w.e.f. 01.04.2023 (Fixed Rate)
+Scheme
+Interest Rate w.e.f. 01.04.2023 (1-year MCLR: 8.50%)
+i) SBI Car Loan, ii) NRI Car Loan, iii) Assured Car Loan Scheme
+From 8.85% to 9.65%
+Loyalty Car Loan Scheme
+SBI Car Loan, NRI Car Loan
+From 8.80% to 9.60% (CIC Based rates are applicable)
+SBI Green Car Loan (For Electric Cars)
+From 8.60% to 9.30%
+Certified Pre-owned Car Loan Scheme
+From 11.25% to 14.75% (CIC Based rates are applicable).
+SBI Two-Wheeler Loan
+17.75% p.a. to 19.50% p. a
+Finer pricing for New Car Loans based on CIC scores.  (1-year MCLR: 8.50%)
+CIC Score
+Term of Loan
+3-5 Years
+Above 5 Years
+775 & above
+0.35% + 1 Year MCLR
+8.85%
+0.45% + 1 Year MCLR
+8.95%
+757 - 774
+0.45% + 1 Year MCLR
+8.95%
+0.55% + 1 Year MCLR
+9.05%
+721-756
+0.70% + 1 Year MCLR
+9.20%
+0.80% + 1 Year MCLR
+9.30%
+700-720
+0.95% + 1 Year MCLR
+9.45%
+1.05% + 1 Year MCLR
+9.55%
+650 - 699
+1.05% + 1 Year MCLR
+9.55%
+1.15% + 1 Year MCLR
+9.65%
+-1
+8.95% to 9.30%
+Super Bike Loan Scheme
+S.No.
+CIBIL Score
+Salaried customers / Defense / Pensioners
+Others
+1
+>=741
+3.50 + 1 Year MCLR
+12.00%
+4.50 + 1 Year MCLR
+13.00%
+2
+731-740
+5.00 + 1 Year MCLR
+13.50%
+6.00 + 1 Year MCLR
+14.50%
+3
+700-730 and (New to Credit)
+10.75 + 1 Year MCLR
+19.25%
+11.75 + 1 Year MCLR
+20.25%
+Mean Rate for Auto Loans: 8.50%
+Interest Rates on 01-04-2022 For the purpose of computing perquisite valuation
+Auto Loans as on 01.04.2022 is as under:
+1 Year MCLR
+7.00%
+(A) SBI CAR LOANS/NRI CAR LOANS/ASSURED CAR LOAN
+FOR MEN BORROWERS
+CIC Score
+Term of Loan
+3-5 Years
+ROI
+Above 5 Years
+ROI
+>=757
+0.75% above 1 Year MCLR
+7.75
+0.85% above 1 Year MCLR
+7.85
+721-756
+1% above 1 Year MCLR
+8.00
+1.10 % above 1 Year MCLR
+8.10
+689-720
+1.25% above 1 Year MCLR
+8.25
+1.35% above 1 Year MCLR
+8.35
+606-688
+1.35% above 1 Year MCLR
+8.35
+1.45% above 1 Year MCLR
+8.45
+For “-1” Category Customer Rate of Interest is based on RSM Score
+RSM Score
+3-5 Years
+ROI
+Above 5 Years
+ROI
+>=71
+0.75% above 1 Year MCLR
+7.75
+0.85% above 1 Year MCLR
+7.85
+46-70
+1.00% above 1 Year MCLR
+8.00
+1.10 % above 1 Year MCLR
+8.10
+FOR WOMEN BORROWERS (Concession of 5 bps available as under)
+606-688
+1.30% above 1 Year MCLR
+8.30
+1.40% above 1 Year MCLR
+8.40
+(B) LOYALTY CAR LOANS/LOYALTY NRI CAR LOANS
+FOR MEN BORROWERS
+CIC Score
+Term of Loan
+3-5 Years
+ROI
+Above 5 Years
+ROI
+>=757
+0.70% above 1 Year MCLR
+7.70
+0.80% above 1 Year MCLR
+7.80
+721-756
+0.95% above 1 Year MCLR
+7.95
+1.05% above 1 Year MCLR
+8.05
+689-720
+1.20% above 1 Year MCLR
+8.20
+1.30% above 1 Year MCLR
+8.30
+606-688
+1.30% above 1 Year MCLR
+8.30
+1.40% above 1 Year MCLR
+8.40
+-1
+Not Applicable
+Not Applicable
+FOR WOMEN BORROWERS: (Concession of 5 bps available as under)
+CIC Score
+Term of Loan
+3-5 Years
+ROI
+Above 5 Years
+ROI
+606-688
+1.25% above 1 Year MCLR
+8.25
+1.35% above 1 Year MCLR
+8.35
+(C) CERTIFIED PRE-OWNED CAR LOANS
+CIC Score
+Term of Loan
+1-3 Years
+ROI
+Above 3 Years to 5 years
+ROI
+>=757
+2.75% above 1 Year MCLR
+9.75
+3.25% above 1-year MCLR
+10.25
+721-756
+3.75 % above 1 Year MCLR
+10.75
+4.25% above 1-year MCLR
+11.25
+689-720
+5.75% above 1 Year MCLR
+12.75
+6.25% above 1-year MCLR
+13.25
+606-688
+Not Applicable
+-1
+4.25% above 1 Year MCLR
+11.25
+4.75% above 1-year MCLR
+11.75
+(D) LOYALTY CERTIFIED PRE-OWNED CAR LOANS
+ROI
+For Men:
+2.25% above 1 Year MCLR:
+9.25
+For Women:
+2.20% above 1 Year MCLR:
+9.20
+Concession of 20 bps in Rate of Interest is applicable for Green Car Loan scheme for Electric Vehicles.
+(E) Two-Wheeler Loan
+CIC Score
+Salaried Customer/ Defence Pensioners
+ROI
+Others
+ROI
+>= 741
+3.50% above 1year MCLR
+10.50
+4.50% above 1year MCLR
+11.50
+731-740
+5.00% above 1year MCLR
+12.00
+6.00% above 1year MCLR
+13.00
+700-730 and (New to credit)
+10.75% above    1year MCLR
+17.75
+11.75% above 1year MCLR
+18.75
+CIC Score
+Tenure in months
+36
+ROI
+48
+ROI
+>=741
+9.25% above 1year MCLR
+16.25
+9.50% 1year above MCLR
+16.50
+731-740
+9.75% above 1year MCLR
+16.75
+10.00% above 1year MCLR
+17.00
+700-730
+10.75% above 1year MCLR
+17.75
+11.00% above 1year MCLR
+18.00
+(F) SBI Easy Ride Pre-Approved Two-Wheeler Loan (PA2W)
+Interest Rate Structure – Salary Package Customers
+For Defence/ Paramilitary/ Indian Coast Guard Salary Package Applicants:
+CIC Score (CIBIL CV Score)
+1-year MCLR
+Spread over 1-year MCLR
+Interest Rate for PA2W
+≥ 670
+7.00%
+3.35%
+10.35%
+650 to 669 and NTC (CIBIL V3: 141 -200)
+7.00%
+3.85%
+10.85%
+For Central Govt. Salary Package/ State Govt. Salary Package/ Police Salary Package/ Railway Salary Package/ Central Public Sector Enterprises (CPSEs) Considered Under ‘RATNA’ Status Applicants.
+CIC Score (CIBIL CV Score)
+1-year MCLR
+Spread over 1-year MCLR
+Interest Rate for PA2W
+≥ 761
+7.00%
+3.35%
+10.35%
+735-760
+7.00%
+3.85%
+10.85%
+670-734 and NTC (CIBIL V3: 141 -200)
+7.00%
+4.35%
+11.35%
+650-669
+7.00%
+4.85%
+11.85%
+For Other Corporate Salary Package Customers
+≥ 761
+7.00%
+4.35%
+11.35%
+735-760
+7.00%
+4.85%
+11.85%
+670-734 and NTC (CIBIL V3: 141 -200)
+7.00%
+5.35%
+12.35%
+650-669
+7.00%
+5.85%
+12.85%
+The following category of borrowers will get additional concession
+.
+Criteria
+Concession Offered in Rate of Interest
+Platinum salary package customers
+50 bps
+Central Public Sector Enterprises (CPSEs) Considered under ‘RATNA’ Status
+50 bps
+Revised Interest Rate Structure – Non-Salary Package customers
+CIC Score (CIBIL CV Score)
+1-year MCLR
+Spread over 1-year MCLR
+Interest Rate for PA2W
+≥ 741
+7.00%
+4.50%
+11.50%
+731-740
+7.00%
+5.00%
+12.00%
+700-730 and NTC (CIBIL V3: 151 -200)
+7.00%
+6.00%
+13.00%
+Rate of interest (Fixed) at the time of sanction of the loan will remain same for the entire tenure of loan amount.
+Last Updated On : Wednesday, 20-05-2026

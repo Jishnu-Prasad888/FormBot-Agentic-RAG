@@ -1,0 +1,44 @@
+YONO CASH
+1. What is YONO Cash?
+YONO Cash is a unique feature available in the YONO SBI/YONO Lite App. It enables an account holder to withdraw money instantly from any of the SBI ATMs and most of SBIs Merchant POS terminals or Customer Service Points (CSPs) within India without using any physical card or filling up any physical withdrawal slip
+2. What are the services available under YONO Cash?
+User can use the services to withdraw/obtain cash from any of the channels i.e. ATM, POS terminal or CSP without using ATM/Debit card.
+3. Does the service work only during branch hours?
+No, the service is available 24x7 throughout the year.
+4. Does the customer need to hold a SBI account?
+Yes, the customer is required to have a savings bank account or Current Account with State Bank of India. This service is not available for overdraft account.
+5. What information is the customer required to provide while raising YONO Cash request?
+For withdrawal, the customer is required to provide the Bank the amount he/she wishes to withdraw and select the debit account from the list of available accounts
+6. Does the customer need to visit the branch for YONO Cash request?
+The customer need not visit the branch for YONO Cash request. Customer can raise YONO Cash request in YONO SBI/YONO lite app.
+7. Can I cancel a YONO Cash request after creation?
+Yes, YONO Cash request can be cancelled by selecting the specific YONO Cash request from Post-Login-> Home -> YONO Cash -> transactions tab-> select request-> Cancel Request.
+8. What are the charges applicable on YONO Cash?
+At present there are no charges for availing this facility.
+9. Can the customer withdraw partially?
+No, the customer has to withdraw the whole amount in a single transaction i.e. No partial withdrawals are allowed at present.
+10. What happens in case customer does not withdraw the cash in time?
+The particular YONO Cash request will lapse. However, customer can raise another YONO Cash request at any point of time from YONO SBI app.
+11. What is the validity period of the YONO Cash Reference Number?
+The customer has 4 hours to withdraw/obtain the money using YONO Cash reference number
+12. Is there any limit applicable for YONO Cash?
+Yes. The limit on various channels are as under:
+Transaction Type
+Transaction limit Per Transaction
+Cumulative Limit (Per CIF Per 24 hrs)
+Limit on No of transactions per CIF per 24 hrs for each type of YONO Cash transaction
+YONO Cash - ATM
+₹ 20000
+₹ 20000 including all the variants of YONO Cash (Rs.2000 for YONO Cash @ PoS)
+2
+YONO Cash @ POS
+₹ 2000
+2
+YONO Cash @ CSP
+₹ 10000
+2
+YONO Shopping
+₹ 10000
+2
+The limits are applicable across YONO SBI and YONO Lite.
+Last Updated On : Monday, 03-02-2025

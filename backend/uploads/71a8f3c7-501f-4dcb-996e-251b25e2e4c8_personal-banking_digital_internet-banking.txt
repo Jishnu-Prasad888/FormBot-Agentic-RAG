@@ -1,0 +1,88 @@
+Welcome Aboard
+https://onlinesbi.sbi.bank.in
+, the Internet banking portal of our bank, enables its retail banking customers to operate their accounts from anywhere anytime, removing the restrictions imposed by geography and time. It's a platform that enables the customers to carry out their banking activities from their desktop, aided by the power and convenience of the Internet.
+How Do I
+Features
+Using Internet banking services, you can do the following normal banking transactions online:
+Funds transfer between own accounts.
+Third party transfers to accounts maintained at any branch of SBI
+Inter Bank Transfers to accounts with other Banks
+Online standing instructions for periodical transfer for the above
+Credit PPF accounts across branches
+Request for Issue of Demand Draft
+Request for opening of new accounts
+Request for closure of Loan Accounts
+Request for Issue of Cheque Book
+Earn reward points for transactions through Internet Banking
+Value Added Features
+Apart from these, the other salient value-added features available are:
+Utility bill payments
+Online Ticket Booking for travel by Road, Rail and Air
+SBILIFE, LIC and other insurance premia payments
+SBI and other Mutual funds Investments
+SBI and other Credit Card dues payments
+Tax Payment Income, Service, State Govt
+Customs Duty Payment
+Online Share Trading (eZ-trade@SBI)
+Online Application for IPO
+Fee Payment to select educational institutions including IITs and NITs
+Truly smart services to cover most of your banking transactions. All this and much more, from your desktop.
+All our branches are enabled for Internet Banking.Contact your branch for availing this service. You can visit
+www.onlinesbi.sbi
+for downloading the registration form.
+On security front, the site is 'VeriSign' certified - indicating that it's absolutely safe and secure for you to transact online. Additional layers of security are available for doing transactions.
+Terms & Conditions
+General Information
+The
+www.onlinesbi.sbi
+registration form(s) should be addressed and sent directly to the Branches where the applicant(s) maintain his/her/their account(s).
+Separate registration is required in case the accounts are maintained at different branches. Separate registration is allowed for single and joint accounts at the option of the user.
+Normally the account holders can access his accounts through the www.onlinesbi.sbi only after he/she acknowledges to the respective Branch (es) the receipt of the User-Id and Password sent to him/her.
+Each account holder in a joint account with Either or Survivor type mode of operation may register himself/ herself as a USER of the www.onlinesbi.sbi facility.
+All other accounts not listed in the registration form will be available on the www.onlinesbi.sbi for the purpose of enquiry only. The customers may approach Branch for enabling transaction rights on such accounts any time.
+The
+www.onlinesbi.sbi
+service cannot be claimed as a right. The Bank may also convert the Service into a discretionary service anytime, if so warranted, after it has been made available to the USER.
+Online Registration Process:
+A new user driven registration process and re-issue of login password, in the name of “Green Password” has been developed. Under the URIB (User Driven Registration Process for Internet Banking)/Green Password, retail customers with joint accounts having E or S, F or S, L or S and A or S and Corporate customers can create temporary user name & password after validation of input data in prescribed manner.
+With the help of SBI Debit Card details customer can himself activate without going to Branch. If customer does not have SBI Debit Card he can visit the Branch for activation after online registration.
+Bank's Terms
+All requests received from the USERS are logged and transmitted to the User's Branch for their fulfillment. The requests become effective from the time these are recorded/ registered at the respective branch. While registering the request, the USER is informed about the time normally taken by the Bank for fulfillment of such requests.
+The rules and regulations applicable to the banking transactions done in the traditional way in India will be applicable mutatis mutandi for the transactions done through the www.onlinesbi.sbi service.
+Disputes between the registered USER of this service and the Bank with regard to the transactions done through www.onlinesbi.sbi will be subject to the jurisdiction of the competent Courts where the branch maintaining the relative account of the user is located and will be governed by Indian Laws in force from time to time.
+The Bank will take reasonable care to make use of the available technology for ensuring security and preventing unauthorized access to any of the services offered through the
+www.onlinesbi.sbi
+.
+The
+www.onlinesbi.sbi
+service is a VeriSign certified secure site. It assures that during the session user is dealing with web-site of SBI. The two-way communication is secured with 128-bit SSL encryption technology, which ensures the confidentiality of the data during transmission. The access-control methods designed on the site afford a high level of security to the transactions conducted on www.onlinesbi.sbi.
+It is proposed to implement, in due course, the PKI (Public Key Infrastructure)/Digital Signature technology for the www.onlinesbi.sbi Service.
+The Bank reserves the right to modify, change, add or cancel any of the services offered through www.onlinesbi.sbi or the Terms of Service listed in this Document without prior notice to the Users. The changes will be notified to the users / customers through a notification on the site.
+USER's Obligations
+The Username and the Password given by the Bank must be replaced by Username and Password of the USER at the time of FIRST log-in. This is Mandatory.
+The registered USER is free to choose a User Name and Password of his choice as per the guidelines on the site. However, he/she is advised to avoid choosing a password that is generic in nature, guessable/inferable from the personal data such as name, date of birth, address, telephone number, driving license/car number etc.
+The USER is welcome to access
+www.onlinesbi.sbi
+from anywhere anytime. However, as a matter of precaution and safety, he should avoid using PCs with public access.
+There is no way to retrieve the Password from the system. In case the USER forgets his/her Password, he/she will have to use the Trouble Logging In option in the site or approach the branch for getting a new password.
+The USER must keep the user name and Password strictly confidential and known only to himself/herself. It is a good practice to commit the password to memory rather than write it down somewhere. Bank will not be responsible for any loss sustained by the USER due to breach of this condition.
+The Bank presupposes that log-in using valid user name and Password is a valid session initiated by none other than the USER to whom the said username and the Password belongs.
+All transactions executed through a valid session as defined above will be construed to have been emanated from the registered USER and will be legally binding on him/her. The USER is cautioned against leaving the computer unattended during a valid session.
+Should the USER notice that any information relating to his/her account(s) is incorrect or discrepant the same should be immediately brought to the notice of the Branch (es) by e-mail or letter.
+The USER will not attempt or permit others to attempt accessing
+www.onlinesbi.sbi
+through any unlawful means.
+Internet Banking Security Tips
+8 Golden Rules to make your Internet Banking experience safe and secure
+Change your Password at regular intervals
+Help SBI in preventing frauds (phishing) by reporting such incidents to
+report.phishing@sbi.co.in
+Access portal by typing
+www.onlinesbi.sbi
+Do not click on any shortcuts/links
+Avoid accessing your account from public places like cyber cafes
+Use virtual keyboard to enter user ID and Password
+Avoid entering sensitive info in pop-ups
+Track your transactions and usage history regularly
+Use latest and genuine software on your system with secure settings
+Last Updated On : Tuesday, 02-12-2025

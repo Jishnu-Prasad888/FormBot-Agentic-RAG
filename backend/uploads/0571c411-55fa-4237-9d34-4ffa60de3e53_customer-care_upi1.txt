@@ -1,0 +1,269 @@
+1. What is BHIM SBI Pay (UPI App of SBI)?
+“BHIM SBI Pay” (UPI App of SBI) is a payment application that allows account holders of any Banks participating in UPI to register, send money, receive money and do online bill payments, recharges, etc. using their smartphones.
+2. How can I register on UPI in YONO SBI app?
+SBI customer can register on UPI using YONO SBI app by visiting YONO LoginYONO PayUPI. If you are already registered on YONO SBI, You need to select the SIM which is registered in your bank account and to follow in the onscreen navigation.
+Other Bank customer has to select “Register for UPI” menu available immediately on the YONO SBI registration page and to follow the onscreen navigation.
+3. What is YONO For Every Indian (YFEI)?
+• YFEI is a payment solution that allows account holders of any Bank participating in UPI to send money, receive money by registering themselves on YONO SBI App.
+4. Why Existing YONO SBI App has been upgraded to YONO for every Indian (YFEI)?
+• YONO SBI App was initially only available to SBI Customers. Later, YONO SBI App was made available for other Bank customers called as YONO for Every Indian. SBI customers can access the full fledge mobile banking solution on YONO SBI App by clicking
+“Register Now”
+button available immediately after launching the App and Any Bank customer can access the YONO SBI App by clicking
+“Register for UPI”
+Tab.
+5. What are the features being offered through UPI interface of YFEI (What is new in YFEI)?
+Pay by contacts, Pay by UPI Id/number, Pay by Bank A/c, Scan & Pay, & Request Money (Collect Request), UPI QR Cash withdrawal.
+Bill Payments via SBI Unipay
+Manage all Bank accounts.
+Best in class look and feel with user friendly\
+Biometric based App
+Share payment
+Create Mapper/ UPI number
+Set/Reset UPI PIN using Aadhaar
+Withdraw Cash through UPI QR Cash enabled ATMs
+6. Can a customer use more than one UPI application on same mobile device?
+Yes, customer can use more than one UPI application on the same mobile and link same as well as different accounts in all the UPI apps. e.g. BHIM SBI Pay App, YONO SBI, YFEI, Google Pay, WhatsApp, etc.
+7. Will a customer be able to use BHIM SBI Pay, UPI on YONO SBI or YFEI across all Mobile platforms?
+BHIM SBI Pay, UPI on YONO SBI or YFEI is available on Android and iOS platform.
+8. Can a customer link his mobile wallet to BHIM SBI Pay, UPI on YONO SBI or YFEI/UPI?
+Mobile wallet functionality is not available through BHIM SBI Pay, UPI on YONO SBI or YFEI. However, similar functionality called UPI Lite is made available for BHIM SBI Pay customers where customers can load funds and can perform UPI transactions without UPI PIN.
+9. How can I install the BHIM SBI Pay, YONO SBI or YFEI?
+Go to Google Play store/ Appstore as the case be.
+Download BHIM SBI Pay, YONO SBI.
+Click on the install/open button and complete the steps for Registration.
+Please ensure that you have linked your registered mobile number with your bank account and the same mobile number is used during registration.
+10. Do I need to do any registration before remitting funds using UPI in BHIM SBI Pay, UPI on YONO SBI or YFEI?
+Yes, a customer needs to register with BHIM SBI Pay, UPI on YONO SBI or YFEI, link his/her accounts and need to set the UPI PIN for remitting funds using UPI.
+However, for receiving funds you need not to download any UPI application. If user is registered with UPI App, then either he can use a VPA or he can receive funds based on Account & IFSC details
+11. How can I register as a Merchant? *
+SBI customers who wish to register as a Merchant and wants SBI UPI QR code (to receive funds from their customers) can approach their nearest branch. Later he can register themselves on the BHIM SBI Pay, click on the 'Business' tab, choose register mobile Number and enroll as a Merchant. Enter account number or VPA/UPI ID and follow the on-screen instructions.
+Existing merchants already having SBI UPI QR Code can register themselves on the BHIM SBI Pay, UPI on YONO SBI or YFEI app, click on the 'Business' tab, choose register mobile Number and enroll as a Merchant. Enter account number or VPA/UPI ID and follow the on-screen instructions.
+Facilities available through BHIM SBI Pay Business Tab are view the agent-wise transaction MIS, receive real-time payment confirmations, manage agents, and receive voice alerts etc.
+12. What is a Virtual Payment Address (VPA)?
+"Virtual Payment Address" is a virtual ID which is unique. For example, name or number or a combination of numbers and characters followed by @sbi or @oksbi that you can choose for yourself, like, ramesh@sbi or 7051448888@oksbi. Your account is linked to a VPA. So, you can pay/receive money using your VPA instead of sharing bank account details.
+13. How to generate a Virtual Payment Address (VPA)?
+• Download BHIM SBI Pay, YONO SBI App. Follow registration process and post linking the account, App will ask to create the VPA. Customer can create his preferred VPA or he can choose one from the three recommended VPAs.
+14. How to link account to my UPI for transacting?
+Select the Bank of your choice (where you have your account/s) from the list of Banks displayed during the registration process.
+Select the account displayed on the App to register. Set UPI PIN if it is not already set for the selected account.
+15. Can I link more than one account to a single virtual payment address?
+Yes, Multiple bank accounts can be linked to the same virtual address (VPA)
+16. I have 2 accounts with SBI, do I need separate virtual payment addresses (VPA) for each of  these accounts?
+No. You can link the same VPAs to the multiple accounts. In addition to this, App allows you to create maximum 3 VPAs. You can either link one VPA to one account or link one VPA to multiple accounts. In case of multiple accounts linked to single VPA, the default account can be changed using “My Account” section under hamburger menu in the BHIM SBI Pay app by selecting the account and taping on the option “Set as Default Account” and by visiting UPI profile section in YONO SBI (YONO Pay UPI) or YFEI using the option by selecting the account and taping on the option “Set as Primary”. Amount will be credited to default account associated with the VPA
+17. What is Mapper / UPI number?
+Mapper registration allows the users to create his/her own 'numeric' UPI number with his/her preferred app. The UPI number is an 8-10 digit number chosen by the user. However in case the user chooses a 10-digit number, it has to be mandatorily the user’s mobile number. Creation of UPI mapper/ number eases the transaction journey for the user and reduces the chances of error in identifying the beneficiary.
+18. How can I change my Default A/c in BHIM SBI Pay, YONO SBI or YFEI?
+Login to BHIM SBI Pay, YONO SBI or YFEI and refer to the point no. 16 for changing the default account.
+19. How can I change my Default A/c in UPI on YONO SBI or YFEI?
+UPI on YONO SBI :
+Login to YONO SBI à YONO Payà UPIà Click on profile icon (Left top corner)
+Select Account from linked accounts available.
+Click Set ‘As Primary’
+YFEI
+Login to YONO
+Click on profile icon (Left top corner)
+Select Account from linked accounts available.
+Click Set ‘As Primary’
+20. I have an account with ‘XYZ’ bank. Can I transact with it using BHIM SBI Pay, YONO SBI or YFEI?
+Yes, you can do transactions in your ‘XYZ’ bank account using BHIM SBI Pay, YONO SBI or YFEI. In this case, the XYZ bank should support UPI functionality.
+21. I intend to add multiple accounts from other banks on BHIM SBI Pay, YONO SBI or YFEI. Do I need a separate virtual payment  address (VPA) for each of these accounts?
+Not necessary. A single VPA can be created and linked to multiple accounts. One of the accounts will be default The default account can be changed at any time. The money will be paid/received from/in the default account.
+The VPA can be toggled between the various accounts by setting a preferred account under “My Accounts” available in hamburger menu in BHIM SBI Pay App and by visiting UPI profile section in YONO SBI (YONO Pay à UPI) or YFEI.
+You also have the option to create separate VPA for each You can create max 3 VPAs on the App.
+22. Can I use another UPI app simultaneously in my phone? Will I be required to register again, or I  can carry the same virtual address?
+Yes, you can use multiple UPI apps in single mobile
+For using different UPI apps, you need to download these apps and complete registration process of the respective
+You can also use the same “name” in all VPAs, but the handle (name@handle) will always be different for all apps. (Ex: name@sbi, name@upi, name@hdfc, etc)
+23. Do I need to register a beneficiary before transferring funds through BHIM SBI Pay, UPI using YONO SBI or YFEI? What details of beneficiary will be required?
+No, registration of Beneficiary is not required for transferring funds through BHIM SBI Pay, UPI using YONO SBI or YFEI.
+You need any one of VPA/Account+IFSC Code/ QR code of the
+These details can be saved in the App for future use so that every time you need not have to enter the beneficiary
+24. Does the beneficiary also have to register for UPI for receiving funds?
+In case of Virtual Private Address (VPA) or QR Code mode, the beneficiary needs to register with UPI and in turn will have a Virtual ID (VPA) or QR
+But in case of Account +IFSC the beneficiary need not be registered for
+25. Does the beneficiary/receiver need to have a Bank account?
+Yes, the beneficiary/receiver must have a bank account for receiving the money. Amount is directly credited to the account instantly.
+26. How can I refer my contact/friends for registering and use BHIM SBI Pay?
+You can refer BHIM SBI Pay, UPI using YONO SBI or YFEI App to your contacts & friends through various modes like SMS, WhatsApp, email, Share to phone, Facebook,
+For sending invitation, login to BHIM SBI Pay, go to main menu and select ‘Invite’
+Select type of message from the various option shown to send the invitation register for SBI Pay App to the contacts/friends.
+The user receiving the invite can download and install the BHIM BI Pay app from the link provided in your
+27. What is an App PIN and how will I create App PIN?
+App PIN is required to open the On registration screen after creation of VPA you will be asked to create an App PIN, which is required for opening the BHIM SBI Pay, UPI using YONO SBI or YFEI App every time.
+Please do not share your PIN with
+28. What happens if I forget my UPI PIN?
+In case you forget the UPI PIN of an Account, you need to re-generate new UPI PIN under My Account tab.
+In case of BHIM SBI Pay App, select an account from the accounts available under My Accounts section and click on Reset UPI PIN If it is YONO SBI or YFEI, visit UPI profile section and Tap on the account for which UPI PIN has to be reset and click on Reset UPI PIN option.
+UPI PIN can be reset using Debit card details or Aadhaar number mapped with the registered mobile number and account.
+29. What happens if I forget my Secret Answer on BHIM SBI Pay?
+In case you forget the security answer, you can re-create App
+An OTP will be sent alternate mobile number to enable you to re-create App
+Therefore, please always keep your alternate mobile number updated in your profile.
+30. What happens if my mobile phone is lost?
+In case of loss of mobile phone, you need to simply block your mobile number, by contacting your mobile service
+Immediately you need to disable the UPI services by contacting SBI contact center or by approaching nearest any SBI branch.
+No transaction can be initiated without knowing your App PIN and UPI
+In case if UPI lite is enabled, no transaction can be performed without knowing your App PIN. UPI Lite allows debit up to Rs. 2000 without UPI PIN, if balance is available in it.
+The transactions are further protected by device binding (linked to mobile handset). If the same SIM is used in a different mobile device, the user has to re-register.
+While re-registration, BHIM SBI Pay and UPI using YONO SBI / YFEI will ask for existing UPI PIN for validation.
+Never share your App PIN or UPI PIN with
+In case, both your mobile handset and SIM is changed, approach your branch to update the new mobile number in your account.
+You need to re-register for BHIM SBI Pay, UPI using YONO SBI or YFEI as a  new user by creating new VPA, in case device and mobile gets changed.
+31. Will I be able to use UPI after I change my SIM or mobile device?
+In case of change in SIM card (new mobile number), you can use the same Please ensure that your new mobile number is linked  with   your      bank account.
+You can continue using the same application and same Virtual ID(VPA).
+In case you change your mobile phone and using the SIM, then on downloading the app, it will ask for the “re-verification”.
+a. Post selecting the Bank account, App will ask the user to enter the existing UPI PIN for the user verification and post successful validation, user can login to BHIM SBI Pay App with the existing App PIN. If user has forgot the App PIN, user can reset the same by answering the secret question set at the time of App registration. On entering the correct answer, you can continue with old VPA on BHIM SBI Pay App.
+b. In case of YONO SBI (YONO Payà UPI), post selecting the Bank account, App will ask the user to enter the existing UPI PIN for the user verification and post successful validation, user can continue with old
+c. In case of YFEI, post selecting the Bank account, App will ask the user to enter the existing UPI PIN for the user verification and post successful validation, user will be asked to set the MPIN. Upon creation of new MPIN, user can continue with old
+32. In case my mobile is used by another person, will there be any security breach?
+d. BHIM SBI Pay, UPI using YONO SBI or YFEI has 2 levels of During login the application is secured by a Login password.
+e. For any transaction using UPI, UPI PIN of the Account would be required at the time of transaction except UPI Lite.
+33. In case I want to disable the VPA, what should I do?
+f. You have to login to BHIM SBI Pay app and go to main menu and use the De-Register option to de-register the UPI facility.
+34. What is the upper transaction limit for sending or requesting money using BHIM SBI Pay, UPI on YONO SBI or YFEI?
+(a) First transaction after setting/resetting UPI PIN maximum amount will be Rs.5,000/- and cumulative   amount in a day will be Rs.5,000/- for the first 24 hours for Android users and Rs. 5,000/- per day for first 5 days for iOS users.
+(b) Post completion of above limit, per transaction and per day limit is Rs.1, 00,000/- in BHIM SBI Pay, UPI on YONO SBI or YFEI, at present.
+(c) You can do a maximum number of 20 transactions in 24 hours per account within the 1,00,000/- limit for P2P transaction and there is no limit in terms of transactions in 24 hours per account within the Rs.1,00,000/- limit for P2M transaction.
+Note: These are subject to change time to time as per NPCI guidelines or Bank’s decision.
+35. What are the different options for transferring funds using BHIM SBI Pay, UPI on YONO SBI or YFEI?
+The different options available for transferring funds using BHIM SBI Pay, UPI on YONO SBI or YFEI are:
+Transfer through VPA/UPI ID
+Account Number + IFSC
+Scanning QR Code
+Mobile Number.
+36. How can I transfer money?
+Login to BHIM SBI Pay, UPI on YONO SBI or YFEI App
+Select any of the payment options like VPA, Mobile number or Account and IFSC or Scan the QR code.
+Enter other required details and amount
+Select Debit Account from the linked accounts.
+Enter UPI PIN to authorize transaction.
+Transaction is successfully processed.
+37. What is ‘Collect Request’?
+Collect Request is for collecting money from you. If you receive a Collect Request, be mindful that money will be debited/paid from your account.
+Never ever approve/authorize a ‘Collect’ request from an unknown person.
+38. How can I receive money using a Virtual Payment Address?
+Login to BHIM SBI Pay, UPI using YONO SBI or YFEI App
+Select option ‘Collect’. In BHIM SBI Pay and Payment request in UPI using YONO SBI or YFEI.
+Enter Virtual Address of the Payer/ Sender
+Enter other required details
+Select Credit Account from the linked accounts and Click on ‘Tick’ mark to initiate Collect. Collect Request will be sent to the Payer as SMS and notification.
+Once Payer approves your Collect request, Money will be credited to your selected account.
+39. What is the timeline to approve a collect request by a payer?
+The timeline to approve a collect request by default is 30 minutes for P2P and limit will be set by the merchant as per their requirement for P2M transactions.
+40. How do I respond to a collect request that has been sent to me?
+You will get a notification when anybody initiates a collect request on you.
+Click on the notification or Login to BHIM SBI Pay, YONO SBI or YFEI
+Select required Collect request from pending items.
+Click Approve/Reject/SPAM as per your wish.
+Enter UPI PIN for approving the request. Money will be debited from your account & sent to beneficiary’s  account instantly.
+41. Can I transfer money abroad using BHIM SBI Pay?
+Yes, Users can click on the ‘Foreign Outward Remittances’ tab in BHIM SBI Pay app, select the country and then initiate the payments. At present, the Foreign Outward remittance feature is enabled for Singapore.
+42. Can I link my NRE/NRO accounts in BHIM SBI Pay, UPI on YONO SBI or YFEI?
+Yes, you can link NRE/NRO accounts in BHIM SBI Pay, UPI on YONO SBI or YFEI.
+43. If I have more than one account linked to a Virtual Payment Address, how do I select the account  from which I want to send money to a beneficiary?
+From all account, set Preferred Account as primary for transactions so that the same account is displayed in the drop down during every transaction.
+User can also select any other debit account during the “Pay” transaction by selecting from the list of account using dropdown .
+44. How can I track my transaction status?
+Login to BHIM SBI Pay, UPI on YONO SBI or YFEI App
+Select option ‘Transaction History’ to see recent transactions. Transaction status will be displayed as – Pending/Success/Failed/Reject/Expired depending on the type of transaction.
+Click on the particular transactions to know the details.
+You can see your transaction from ‘Transaction History’ option also in main menu.
+45. How can I pay SBI credit card bill payment through SBI Pay?
+Login to BHIM SBI Pay, UPI on YONO SBI or YFEI App
+Select option ‘Pay’ and then go to Pay to VPA option.
+Enter VPA as “sbicard.16digit card number@sbi” for Master and VISA (15 digit for Amex SBI cards) and search VPA. For example, if your card number is 1234567890123456 enter VPA as sbicard.1234567890123456@sbi.
+Once VPA validated enter the amount to pay and authorize the payment.
+46. How can I apply for IPO services through ASBA using BHIM SBI Pay?
+You can apply Initial Public Offerings (IPOs) using mandate facility in BHIM SBI Pay.
+For applying to IPO, you should mention your VPA as a payment option in ASBA application form or on broker website.
+The intermediary/broker while lodging IPO application will put your VPA and will create a mandate for the applicable amount. The mandate request will come to your mobile as a notification for execution
+Login to BHIM SBI Pay, go to mandate menu and execute the mandate received for IPO. The required amount will be blocked in your account.
+If shares allotted to you, the applicable amount will be debited automatically from your account and balance amount blocked, if any, will be released. On non-allotment blocked amount will be released in the account.
+The limit for IPO application for public issue using UPI is Rs.5 Lakhs per transaction. There is no restriction for you on the number of public issues that can be applied simultaneously using the same UPI ID/ VPA.
+47. How will I do bill payments/mobile recharge through the App?
+Users can login to the BHIM SBI Pay App by giving their app PIN. After login at lower portion of the home screen you will see various option like Recharge, DTH, etc. Click on the required service and proceed to do the shopping or payments in easy steps.
+Alternatively, by scanning the Merchant QR/entering VPA at Merchant site you can make the payment. (After entering VPA, a collect request will go to the BHIM App and will be displayed by pressing Bell Icon or the Merchant Site will take the customer directly to the payment page of their application (Intent Collect))
+48. How will I book Flight, Bus or Hotel through the BHIM SBI Pay App?
+Login to the BHIM SBI Pay App by giving your app PIN. After login at lower portion of the home screen you will see links for Flight, Bus and Hotel among the various links available. Click on the required service and proceed to complete the online booking instantly and confirm by making payment in easy steps.
+49. What is UPI mandate?
+With this customer’s account is auto debited where he has pre-authorized a transaction and blocked the funds in his account for a debit to be initiated on a later date. UPI mandate can be used in the scenario where the money is to be paid. Customer creates/receives a mandate and authorizes as an acceptance of payment on a future date, say ‘D” date.
+The approved amount is blocked in the customer’s account linked to his VPA (UPI-ID)
+The customer has an active mandate authorized by him for payment on D date
+On D date, if the mandate is not revoked, the account of the customer is debited automatically and credited into the authorized receiver’s account.
+50. How to create a UPI Mandate?
+e-Mandate creation is a one-time Payer initiates the Create UPI Mandate request from merchant website.
+Payer inputs the UPI ID of the intended beneficiary, amount and frequency (One time only).
+Payer confirms the details entered and authorizes the mandate request received on the App by entering the UPI
+Post transaction authentication, a “Mandate Created” message is displayed to the Payer with the details of the Payee UPI ID, Amount, Frequency and validity period. Payer’s account linked to the UPI ID is now blocked Payer can Modify/Revoke the mandate later
+Payer can share the QR code created specifically for this mandate transaction with the Payee
+Payee receives the QR code, opens the App through which Payer has created his VPA, verifies the displayed details and clicks on Submit.
+Post submission of request, Payee receives a message on the screen stating that the funds sent by Payer have been credited to Payee’s UPI linked account with the UPI ID of the Payer being displayed.
+51. How to modify UPI Mandate?
+Merchant initiated mandates cannot be modified. However, mandated initiated through QR code or intent call only can be modified by visiting mandate section in the App.
+52. How to revoke UPI Mandate?
+Revoke Mandate Requests can be initiated by both the Payer/Payee
+User selects the Mandate that is to be revoked from the list of mandates that are active/ pending. This list is displayed on the Mandate Home Screen
+User revokes the mandate and reconfirms by authorizing the revoke mandate transaction by input of the UPI
+A Mandate revoked message is displayed on the next screen displaying the UPI ID, Amount, frequency and Validity.
+53. If I have any issue with UPI transactions, how can I raise a complaint?
+Complaints can be raised either by visiting https://crcf.sbi.co.in portal or directly in the Complaints Management System (CRM/CMS) page of our website (www. Onlinesbi.com: www bank.sbi) directly by customer or through branch or calling Contact Centre at 18001234/18002100.
+However, financial complaints can be registered through application as well using Raise Dispute option
+Login to BHIM SBI Pay, UPI on YONO SBI or YFEI
+If it is BHIM SBI Pay, Tap on History to view all recent transactions
+If it is YONO SBI or YFEI, Tap on Transaction History to view all recent transactions
+Select the transaction and Click Raise Dispute button on BHIM SBI Pay App and Raise a Complaint button on YONO SBI or YFEI.
+Select Dispute type, enter Remark.
+Click Submit
+54. What if my account is debited but the transaction does not go through?
+If the transaction fails due to any technical issue, the amount gets auto reversed in the account.
+The amount would be transferred back to your account on T+1 day after the beneficiary bank verifies at their end and advises to the remitter bank.
+If the amount is not credited back to your account in T+2 days, you can raise a dispute for the specific transaction through the App from the menu ‘History’ in BHIM SBI Pay and “Transaction History” in YONO SBI/YFEI or lodge complaints through CRM-CMS page (by https://crcf.sbi.co.in) of our website https://Onlinesbi.sbi or https:// bank.sbi)
+55. Can I put a stop payment request for funds transferred by BHIM SBI Pay, UPI on YONO SBI or YFEI?
+No, once the payment is authorized, you cannot stop the transaction.
+56. What happens if a customer enters wrong UPI-PIN during a transaction?
+App will prompt him to re-enter the correct UPI-PIN. A maximum of three attempts are allowed.
+57. Customer is getting message “number of PIN tries exceeded”.
+Customer to reset UPI PIN for the particular account.
+In case of BHIM SBI Pay App, select an account from the accounts available under My Accounts section and click on Reset UPI PIN option. If it is YONO SBI or YFEI, visit UPI profile section and Tap on the account for which UPI PIN has to be reset and click on Reset UPI PIN option.
+UPI PIN can be reset using Debit card details or Aadhaar number mapped with the registered mobile number and account.
+58. Customer is getting a message “Debit Card Not Found”. What does it mean?
+In this case, customer should confirm, if he is using the same debit card which is mapped with his Bank account. Ideally, this error occurs only in case, if the customer is using different debit card which is not mapped with the selected account.
+59. Customer gets message “Unable to fetch mobile number for registration”. What does it mean?
+In such cases, please check the network connectivity of the mobile number. In case of prepaid customers, there should be sufficient balance as well. Please ask the customer also to check if any encrypted message is received in SMS. If so, ask him to try again. He will be able to register successfully.
+60. If the customer’s mobile is used by another person for a short while, is it possible for the other person to misuse the same for doing UPI transaction?
+g. Every transaction in UPI requires use of App PIN and UPI PIN. In case if UPI lite is enabled, no transaction can be performed without knowing your App PIN. UPI Lite allows debit up to Rs. 2000/- per day and max. Rs. 500/- per transaction without UPI PIN, if balance is available in it. To unlock phone, the other person should know the lock pattern of the device. Unless the UPI PIN and device lock is known to the other person who is using the mobile temporarily, there is no scope for misuse
+61.	Customer is not able to find his bank account number in App?
+In this case, customer should confirm, if he is using the same mobile number which is registered with his Bank account. If it is other than that of registered mobile number, then UPI App will not display any account on the App. Hence, customer should ensure to use only registered mobile number while UPI registration.
+62. Customer gets error,” Transaction cannot be completed. Compliance Violation (Remitter)”?
+Please ask the customer to check whether minimum balance is maintained in the bank account. If not, then this error is shown or if maximum permissible debits or UPI transaction count /amount limit have crossed or any other transaction limit is set on the particular account.
+63. Can I disable/re-enable UPI facility/services in my account?
+Yes. In case you do not want to continue to use UPI facility in your account, you can stop the facility by contacting the branch . Option is made available to customers of Bank for disabling UPI services through the following channels:
+a) BHIM SBI Pay (Disabling): Log in BHIM SBI Pay >hamburger menu> Disable UPI Services>Select Account
+b) Contact Centre: Customer to call on 1800 1234/1800 2100 Requests for Disabling UPI services Customer Provides information sought for viz. registered Mobile no/Account No. UPI services are disabled for the account/s
+c) Customer can visit any nearest SBI branch.
+64. What are the charges levied on the customer?
+Presently, no charges are levied for BHIM SBI Pay, UPI on YONO SBI or YFEI based UPI transactions. Charges are subject to revision from time to time by government. Any change in this matter will be published on Bank’s website www.bank.sbi.
+65. Can I withdraw cash using BHIM SBI Pay, UPI on YONO SBI or YFEI App?
+Yes. Visit any UPI QR Cash enabled ATM and scan the QR code post entering the amount through the BHIM SBI Pay, UPI on YONO SBI or YFEI App and follow the navigation.
+66. Can I link any Rupay credit card on BHIM SBI Pay for UPI Payments?
+Yes. Please login to BHIM SBI Pay and click on Link Rupay credit card to register your card on the App.
+67. Is UPI Lite functionality is live on BHIM SBI Pay?
+Yes. UPI Lite functionality is live on BHIM SBI Pay.
+68. How do I enable UPI LITE on BHIM SBI Pay?
+Launch BHIM SBI PAY
+Tap on UPI LITE section. App will prompt you to load the fund in UPI Lite. Post successful loading the fund in it, the UPI lite will be enabled on the App.
+69. What are the transaction level limits applicable for UPI Lite?
+Currently customer can add maximum Rs. 2000/-. Customer can make maximum Rs. 500/- per transaction, with a total Cumulative usage per day: ₹4,000 (daily limit). Maximum balance which can be made available in UPI LITE account at any time: ₹2,000.
+Note: These are subject to change time to time as per NPCI guidelines or Bank’s decision.
+70. Do I need a UPI PIN for UPI LITE transactions through BHIM SBI Pay App?
+No, UPI LITE transactions do not require UPI PIN, making small-value payments quick and hassle-free through BHIM SBI Pay.
+71. Can I disable UPI LITE after enabling it?
+Yes, you can disable UPI LITE anytime through the BHIM SBI Pay App.
+72. Are UPI LITE transactions visible in my bank statement?
+No, UPI LITE transactions are not reflected in your bank statement as they are deducted directly from the wallet. Only the wallet load transactions appear.
+73. What if customer has active UPI LITE account with balance in his mobile device and wants to change the mobile device?
+Customer should first disable the existing LITE account in his phone so that LITE balance is transferred to the user bank account. User can then again do a fresh LITE account creation in the new device
+74. I have registered YONO SBI and getting only UPI payments feature and not getting others  features like shop & order, loans, FD, RD, etc.
+If you have registered YONO SBI as “New to SBI’, hence only UPI features are available. If you are an existing SBI customer and want to use full features of YONO SBI, please uninstall and re-install the YONO SBI and select “Register Now” from Existing SBI Customers section and then register YONO SBI.
+Last Updated On : Tuesday, 04-02-2025

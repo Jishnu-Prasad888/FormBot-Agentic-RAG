@@ -1,0 +1,106 @@
+(FAQ) RTGS/ NEFT
+1. What is Inter Bank Transfer?
+Inter Bank Transfer is a special service that allows you to transfer funds electronically to accounts in other banks in India through:
+NEFT:
+NEFT: The acronym NEFT stands for National Electronic Funds Transfer. Funds are transferred to the credit account with the other participating Bank using RBI's NEFT service. RBI acts as the service provider and transfers the credit to the other bank's account. This system of fund transfer operates on a Deferred Net Settlement basis. Presently, NEFT operates on a 24x7x365 basis with half hourly settlement.
+RTGS:
+The acronym RTGS stands for Real Time Gross Settlement. This is a system where the processing of funds transfer instructions takes place at the time they are received (real time). Also, the settlement of funds transfer instructions occurs individually on an instruction-by-instruction basis (gross settlement). The RTGS system is the one of the fastest interbank money transfer facility available through secure banking channels in India. RTGS is available on all days on 24x7x365 basis.
+2. What is the minimum/maximum amount for RTGS/NEFT transactions?
+Type
+Minimum
+Maximum
+RTGS
+Rs. 2 Lakh
+No Limit
+NEFT
+Rs. 1/-
+No Limit
+3. When does the beneficiary get the credit for a RTGS payment?
+Under normal circumstances, the beneficiary Bank branch receives the funds in near real time as soon as funds are transferred by the
+remitting Bank. The beneficiary Bank has to credit the beneficiary’s account within 30 minutes of receiving the funds transfer message.
+4. When does the beneficiary get credit for NEFT payment?
+NEFT operates 24x7 basis in half hourly batches throughout the year on all days. Beneficiary can expect to get the credit for the NEFT transactions within two hours from the batch in which the transaction was settled.
+5. If an RTGS transaction is not credited to a beneficiary account, does the Remitter get back the money?
+Yes.
+Yes. If the beneficiary’s bank is unable to credit the beneficiary’s account for any reason, the former will return the money to the remitting bank within one hour of receipt of the payment at the Payment Interface (PI) or before the end of the RTGS Business Day, whichever is earlier. Once the amount is received by the remitting bank, it is credited to the remitters account by the concerned branch.
+6. If a NEFT transaction is not credited to a beneficiary account, does the Remitter get back the money?
+Yes.
+If the money cannot be credited for any reason, the beneficiary’s bank has to return the money within next two hours i.e. (B+2) of completion of the batch in which the transaction was processed to the remitting bank. Once this amount is received back by the remitting bank, the amount is credited to the Remitter's account by the remitting bank.
+7. At what time during the day/week is the RTGS /NEFT service is available?
+NEFT service is available on all days on 24x7x365 basis with half hourly settlement.
+RTGS service is available on all days on 24x7x365 basis.
+8. What are the essential details required to make an RTGS & NEFT payment?
+The Remitter has to provide the following details:
+Amount to be remitted
+Remitter Account Number (applicable for RTGS & NEFT transactions through account)
+Beneficiary Customer Account Name
+Beneficiary Customer Account Number
+Name of the beneficiary bank and branch
+Beneficiary Branch’s IFSC
+Sender’s and Beneficiary’s LEI number (for eligible transactions)
+Sending Customer’s Name & Address
+Sending Customer’s Mobile No/Email Id
+9. How to find the IFSC of the beneficiary branch?
+Based on simple search option- Location, Bank name & Branch name, the IFSC can be searched through online channels (Internet Banking/ YONO). IFSC can also be obtained by remitter from his/ her bank branch. Alternatively, it is available on the cheque leaf of the beneficiary which can be used by remitter.
+10. What are the service charges applicable for RTGS/NEFT transactions?
+NEFT
+Branch Channel
+Online Channel
+Up to ₹ 10,000
+₹
+2.00+ GST
+--NIL--
+Above ₹10,000/- and up to ₹1.00 lakh
+₹
+4.00+ GST
+Above ₹1.00 lakh and up to ₹2.00 lakhs
+₹
+12.00+ GST
+Above ₹2.00 lakhs
+₹
+20.00+ GST
+RTGS
+Branch Channel
+Online Channel
+₹2.00 lakhs to ₹5.00 lakhs
+Rs. 20.00+ GST
+--NIL--
+Above ₹5.00 lakhs
+Rs. 40.00+ GST
+NEFT/RTGS transaction charges waived for Current Account Variants:
+Gold, Diamond, Platinum, Rhodium
+& Govt Depts/Autonomous Bodies/ Statutory Bodies & Defence- Para Military Establishments. For Silver Current Account Normal charges, Free through CINB channel.
+NEFT/ RTGS transaction charges for Salary Package Accounts:
+a) Waived for Online / Branch channel for all variants of DSP, PMSP, ICGSP, CGSP, PSP, and RSP including Shaurya Family Pension Accounts
+b) Waived for CSP/ SGSP/SUSP and Family Savings Account-SBI RISHTEY as under:
+i.Through Online Channel: All variants
+ii. Through Branch Channel: Waived only for Diamond. Platinum and Rhodium variants
+For latest service charges:
+Revised Service Charges - Personal Banking
+can be accessed by customers.
+11. Whom can I contact, in case of non-credit or delay in credit to the beneficiary account for NEFT transaction?
+Please contact your bank/branch or the receiver bank/branch or the Customer Facilitation Service centre of the banks.
+Customers can also call our contact centre at
+18001234 & 18002100.
+The Customer Facilitation Service centre details of banks can be accessed by visiting RBI site at following path:
+https://rbi.org.in
+>>FUNCTIONWISE SITES
+>>Payment and Settlement Systems
+>>Information Useful to Banks/FIs
+>>4. Customer Facilitation Centres for NEFT and RTGS
+12. Which remittance form is to be used for making RTGS/NEFT payment through branches?
+Remittance form for RTGS/NEFT to be used at branches
+can be downloaded from here
+Address
+Contact Details
+E-mail ID
+Asst. General Manager(IT-PS)
+State Bank Global IT Centre, 3rd Floor, C Wing, Balaji Bhavan, Sector-11, CBD Belapur
+Navi Mumbai – 400 614
+NEFT Tel:
+022-27560746
+RTGS Tel:
+022-27560746
+neft@sbi.co.in
+sbirtgs@sbi.co.in
+Last Updated On : Thursday, 01-08-2024

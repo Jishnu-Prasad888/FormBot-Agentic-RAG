@@ -1,0 +1,81 @@
+EMI chart
+ReCalculate
+REPAYMENT SCHEDULE
+Interest is serviced during study + moratorium period
+Loan Amount
+|
+1L
+|
+25L
+|
+50L
+|
+75L
+|
+100L
+|
+125L
+|
+150L
+|
+175L
+|
+200L
+Interest Rate
+|
+0.1%
+|
+2%
+|
+4%
+|
+6%
+|
+8%
+|
+10%
+|
+12%
+|
+14%
+|
+16%
+|
+18%
+|
+20%
+Course Period
+|
+1Y
+|
+2Y
+|
+3Y
+|
+4Y
+|
+5Y
+|
+6Y
+|
+7Y
+|
+8Y
+|
+9Y
+Moratorium
+0
+Total Moratorium
+0
+/-
+O/S at start of repayment
+0
+/-
+EMI (10 years) #
+0
+/-
+EMI (12 years) #
+Note:
+Calculator is provided only as general self-help Planning Tools.
+Calculated Result is indicative only.
+Last Updated On : Friday, 26-12-2025

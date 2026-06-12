@@ -1,0 +1,27 @@
+Customers can avail instant overdraft facility, against the mutual fund units of all AMCs registered with CAMS
+Features
+Loan available against MF schemes of all AMCs registered with CAMS
+Minimum Loan Amount: Rs 25,000/-
+Maximum Loan Amount:
+Equity/ Hybrid/ ETF MF: Rs. 10 lakhs
+Debt/ FMP MF: Rs. 5 crores
+Margin:
+Equity/ Hybrid/ ETF MF: 50%
+Debt/ FMP MF: 25%
+Interest Rate:
+Click here
+to view the interest rates
+Eligibility
+Resident Indians over 18 years of age having SB/CA account in single name with SBI
+MF holding with CAMS should be in single name only
+Bank and MF account should have same PAN and mobile number.
+Eligible open-ended MF Schemes of all AMCs registered with CAMS.
+How to Avail
+After Login to YONO, under Hamberger menu > Loan > Loan Against Mutual Fund Units, click on Apply Now.
+Review the product features, eligibility details and click on “I am interested
+Select “Equity” or “Debt” fund and enter requisite loan amount
+Select amount of lien to be marked against desired funds
+Review processing fee, branch and lien marking details
+Accept Terms & Conditions, enter OTP & confirm Loan account will be created, and Overdraft limit will be enabled
+Download YONO SBI
+Last Updated On : Wednesday, 21-05-2025

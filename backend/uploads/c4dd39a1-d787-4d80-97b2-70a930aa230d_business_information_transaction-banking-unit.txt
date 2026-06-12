@@ -1,0 +1,282 @@
+Brief History
+Cash Management Product offered by Transaction Banking Department in SBI is operational since 1997. Formally launched in 1998 to cater to the needs of Oil Marketing Companies viz: IOCL, BPCL, HPCL etc. This was soon expanded to other corporate clients too. We entered in Govt. Business in 2007 by catering to CBDT (ITRO: Income Tax Refund Order) and became Sole Refund banker.
+SBI Transaction Banking and CMP has earned recognition internationally by way of 2 awards in 2021 for the Transaction Banking space
+The Best Transaction Bank in India by The Asian Banker
+The Best Payment Bank in India by The Asian Banker
+Solutions Provided by Us to Corporates
+Cash Management Product of SBI is a technology driven platform for Bulk Transaction processing requirements (Collection and Payments) for Clients. It allows clients to have effective treasury management and efficient capital utilization. Among the Transaction Banking solutions provided to our clients by us are the following notable facilities
+Collection of bulk cash and cheques across pan-India with customized MIS for easy reconciliation
+Collection of funds through electronic modes NACH, Direct Debit, e-Mandate and e-NACH with customized MIS for EMI, SIP or regular payment collection
+Realtime collection products which make entire SBI Branches available for collection needs of a client
+Customized payment solutions like special portal for faster processing of payments, integration with client’s ERP for processing of payments and providing API based system
+Customized MIS to suit client’s IT requirements
+Liquidity Management to manage funds across multiple accounts efficiently.
+Execution of Dividend Warrant payments
+Dedicated client support to facilitate the collection and payment processes
+Collection Products
+Cash/Cheque Collection & Deposition
+Robust and scalable technology platform along with largest branch network in India
+Collection /Deposition of cash/cheque in pooling account
+Customized MIS on Daily & Monthly basis, facilitating smooth and effective reconciliation
+Single point of contact and escalation matrix for any issues related to Transaction Banking facilities
+Best agencies empanelled for pick up.
+SME Cash Pickup to cater to small corporates/ proprietorships
+E-Collection
+Collection through RTGS/NEFT/UPI/IMPS/Direct Credit/Cheque using Virtual Account Number (VAN). Virtual Account Number (VAN) enables fast, secure, and traceable source of funds.
+Collection in Corporate’s account using VAN through RTGS/NEFT/UPI/IMPS/DCR/Cheques.
+Short VAN with Alphanumeric character.
+Masking of original account number of the Client.
+Both static and dynamic creation of dealer/customer specific VAN is feasible.
+Customized MIS with narration field available for easy reconciliation.
+Digi Dealer
+Uses mobile application to collect information regarding cash collection and generates voucher for the same
+Cash deposition in all SBI Branches, presently 22,000+ Branches pan-India
+Real Time credit to Client’s pool account
+No Need to input SBI Pool Account No. by Client’s depositors
+Masks the 11-digit SBI Account No. of Client
+Real time Management Information System (MIS) Reports
+NACH & Mandate Based Direct Debit
+Registration of Mandates for Corporates for SBI as well as other Bank account holders
+Instant, online and secure receipt of Collections
+Prompt & Customized MIS reports
+Opens a large customer base of the Bank to the Corporates for fast settlement of funds enabling efficient working capital management
+E-Mandate
+E-mandate allows registration of mandates online by internet login/Debit cards/Aadhaar OTP
+Dedicated portal for uploading transactions
+Transactions possible during Bank holidays also
+Reduces TAT for registration and eliminates rejection of Mandates due to signature mismatch
+E-Pay
+Payment Aggregator or Merchant Aggregator is a service provider who aggregates and provides various payment acceptance services to the merchants.
+SBIePay provides complete, simple and secure online Payment Gateway Services, with a real-time Credit Card, Debit Card, Net Banking and Mobile Payment transaction validation process.
+SBIePay is certified with Payment Card Industry Data Security Standard (PCI DSS)
+Direct integration with major public & private Bank’s Net-banking service and BHIM SBI Pay for collection of funds using UPI channels.
+E.g., Payment Link on Merchant websites like HPCL, IOCL etc.
+Easy Collect
+Collections of receivables with online validations by the Clients Server across entire network of SBI Branches for through cash/cheques. Mostly used by Insurance Companies. Can be extended to Telephone Cos, Educational Institutions.
+Best suited when volumes of receivables are huge & spread into remote locations
+Leverages technology and widespread large branch network of the bank for faster receipt of funds and instant reconciliation
+Real Time validation of collection amount / premium details and validations of other details of collection as required by the Client, through web interface
+MIS will be sent as per requirement of Corporate through Portal / H2H (Host to Host)
+Power Jyoti Pre Upload (Power Jyoti PUL) For NBFCs
+Deposit/transaction of Collections / installments in Cash and Transfer only through designated agent / employee of the Client
+Cash deposition in all SBI Branches
+Collections will be pooled in one account and MIS of collection made available to company in desired format
+Mainly covering customers with small ticket size collections
+Liquidity Management
+Sweep & Reverse Sweep Mechanism in multiple accounts of same corporate maintained with SBI
+Facilitates interest saving & Efficient management of funds for Corporate
+Debit balances also can be swept if day light limits are fixed
+Reverse sweeps also done from one account to several accounts
+Customized MIS facility available
+Payment Products
+E-payments: RTGS / NEFT/ IMPS/ Direct Credit
+Comprehensive, user friendly and customized single file format for all types of pay-outs
+Authorization based on authorization matrix shared by the Client
+Data sharing through secure channels: Portal/Host to host utility/SFTP
+Availability of SAP Extraction and Integration features
+Ease of reconciliation by providing ERP compatible MIS reports
+Customized payment advices to the customer and to the corporate
+Dedicated Client Services officers for client support and resolution of issues
+CCPAP And Demand Drafts
+Centralized bulk printing of Multicity cheques (CCPAPs – Corporate Cheques Payable at par) as well as Bulk Drafts printing
+Decentralised printing of cheques at Clients single location or multiple location using the MICR enabled or laser printer.
+Online validation of the Instrument number, Amount and Drawer account number before clearing, to avoid fraudulent payments
+Customized advice to the company
+Option of facsimile/digital signature available for instrument size up to Rs. 100 Lakhs.
+Regular paid/unpaid status and Reconciliation reports is provided
+Bulk payment requests processed within a day and dispatched to corporates.
+Dividend Warrants
+Dividend /principal redemption/interest pay-out can be done using SBI multi payment options like RTGS / NEFT, DCR (SBI to SBI fund transfer), Dividend Warrants, Demand Drafts, SWIFT, Dollar Demand Drafts etc.
+Account opening is done in home branch within a day
+Instant return and reconciliation report available
+DDs can be issued immediately for any transaction failure/returns
+Skilled and dedicated team for this special task
+CHARGES:
+Sl. No.
+TB PRODUCT/SERVICE
+SUB-PARAMETER
+REVISED PRICING
+A.
+COLLECTIONS
+1
+CHEQUE COLLECTION/ VAN CLEARING
+1.a
+CTS -Cheques (Clear Funds)IOI
+CTS -Cheques  (Clear Funds)
+₹ 0.04 per ₹ 1000
+Minimum ₹ 10/- per instrument
+1.b
+CTS -Cheques (Unclear Funds) or Guaranteed Credit (GC) on T+1 basis. GC to be carved out from existing Cash Credit limit / by way of lien on Current Account by concerned Branch.
+CTS -Cheques  (Unclear Funds)
+₹ 0.06 per ₹ 1000
+Minimum ₹ 10/- per instrument
+1.c
+Outstation Cheque Collection  (on Actual realization basis)
+Outstation cheques - Clear Funds (Including Speed
+Clearing)
+All locations
+₹100/- per instrument
+1.d
+Cheques Drawn on SBI
+Including            Centralised
+Deposition – All locations
+₹ 0.02 / ₹ 1000
+Min. ₹ 5 /- per instrument
+1.e
+Cheque Return Charges
+(Local Clearing/ Outstation collections/SBI Cheque – All locations)
+For cheques deposited with us returned unpaid
+₹150/- per cheque for cheque amount up to ₹ 1 Lakh and
+₹ 250/- per cheque for cheque amount more than ₹ 1 lakh
+For cheques drawn on us and returned due to fault at customer’s end. (Not to be charged where customer is not at fault as per RBI guidelines)
+₹150/- per cheque
+2
+E-COLLECTION
+2.a
+E-Collection including VAN Collections (Electronic Collection)
+Inward RTGS/NEFT /IMPS/ DCR (SBI to SBI Transfer)
+₹ 3.00 per transaction
+3
+CASH COLLECTION
+3.a
+Cash Deposition (Direct Cash Deposition by Clients/Digi-dealer/VAN-Cash)
+All locations
+Rs. 2.00/1000 Min ₹ 50/- per transaction
+3.b
+Cash Collection (Cash Pick-up by Agency/ Corporate Digi-dealer/ VANCash- Pick up)
+All locations
+₹ 1.25 per ₹1000
+PLUS Agency Charges at actuals
+B
+MANDATES
+1
+PHYSICAL MANDATES:
+1.a
+Direct Debit- Mandates On -us (Physical/Scanned) Processing at CMPOC Platform
+Mandate Verification  (On Us)
+₹ 12/- per Mandate
+Transaction (On Us)
+₹7/- per Transaction
+Failure Charges
+₹ 250/- per Mandate
+1.b
+NACH Mandates (Processing at NACH platform of NPCI) Off-us
+Mandate Verification (Off Us)
+₹ 12/- per Mandate
+Transaction/Modification/
+Cancellation  (Off Us)
+₹ 7/- per Mandate plus NACH penalty if any, at actuals.
+Penalty
+₹ 25/- will be charged to the presenting client, if any returned Mandate re-presents more than twice for the reasons ‘Account Closed’, ‘Invalid Account’ and ‘No such account’.
+2
+e-MANDATES:
+2.a
+e-MANDATES
+(On-us)
+Mandate Verification (On Us)
+₹ 10/- per Mandate
+Transaction (On Us)
+₹ 4/- per Mandate
+Failure Charges
+₹ 250/- per Mandate
+Penalty
+₹ 25/- will be charged If any client re-presents a returned Mandate more than twice for the reasons ‘Account Closed’, ‘Invalid Account’ and ‘No such account’. Penalty will be applicable only if the transactions are presented more than twice by the same bank.
+2.b
+e-NACH
+Mandate Verification (On & off Us)
+₹ 10/- per Mandate
+Transaction  (On & off Us)
+₹ 4/- per Mandate
+Failure Charges
+For on-us transaction
+: ₹ 250/- per Mandate
+For off-us transaction
+: NIL
+Penalty
+₹ 25/- will be charged If any client re-presents a returned Mandate more than twice for the reasons ‘Account Closed’, ‘Invalid Account’ and ‘No such account’. Penalty will be applicable only if the transactions are presented more than twice by the same bank.
+C
+PAYMENTS
+1
+IOI /DD
+1.a
+IOI (Demand Draft) - Printing
+(To be printed at CMPOC,
+Hyderabad only)
+For any quantity
+IOI amount:
+Upto ₹5000/- : ₹25 per instrument
+Above ₹5000 upto ₹10000:  ₹50 per instrument
+Above ₹ 10000 upto 1 Lakh:  ₹5 per 1000 (Min.  ₹60 per instrument)
+Above ₹1 lakh:   ₹4 per 1000 (Min.  ₹ 600 Max. ₹ 2000 per instrument)
+1.b
+Cancellation of IOI (Demand Draft)
+Cancellation of IOI (DD)
+₹200/- per instrument
+2
+CCPAP
+2.a
+CORPORATE CHEQUE PAYABLE
+AT PAR
+(CCPAP) - Printing
+Post Funded - Corporate
+Cheques Payable @ PAR
+(CCPAP) - with / without - A4 advice
+₹ 20 per instrument PLUS Courier/Postal Charges at actuals
+2.b
+2.c
+Provision of Blank CCPAP
+Stationery to Clients
+(Remote Printing)
+For any quantity
+Uniform Pricing for any quantity: ₹ 15 per instrument PLUS Courier/Postal Charges at actuals
+Stop Payment / Cancellation of CCPAP
+Stop Payment /
+Cancellation of CCPAP
+₹ 100/- per instrument maximum ₹ 500/- per instance.
+3
+e-PAYMENTS
+3
+E- PAYMENTS
+(Electronic Payments)
+RTGS/NEFT/ IMPS
+₹5/- per transaction
+DCR (SBI to SBI transfer)
+₹ 2/- per transaction
+D
+Liquidity management (LM)
+1
+LIQUIDITY MANAGEMENT
+Sweep & Reverse Sweep
+₹ 0.02 / 1000
+Min. ₹ 25/- per transaction
+Max.₹ 1000/- per transaction
+E
+DIVIDEND WARRANT/INTEREST WARRANT/REFUND ORDER OR REDEMPTION WARRANT
+(Instrument Types: 14 / 19 / 29)
+1.a
+Paper Instruments Mode
+(DW/DD/MCC)
+(Domestic)
+No. of Shareholders - < 1 lakhs
+₹6 per instrument
+No. of Shareholders - > 1 lakhs
+₹4 per instrument
+1.b
+Electronic Mode (RTGS/NEFT/
+NECS)
+(Domestic)
+No. of Shareholders - < 1 lakhs
+₹3 per instrument
+No. of Shareholders - > 1 lakhs
+₹1 per instrument
+1.c
+DW/IOI (DD)/MCC (Pertaining to DW related) Cancellation/ Revalidation/Stop
+NA
+NIL
+NOTE:
+1.
+All the above service charges will be exclusive of GST
+. GST will be charged on actual applicable basis.
+2.
+Agency Charges applicable will be recovered at actual (For Agency Pick up/Doorstep services).
+Last Updated On : Friday, 03-10-2025

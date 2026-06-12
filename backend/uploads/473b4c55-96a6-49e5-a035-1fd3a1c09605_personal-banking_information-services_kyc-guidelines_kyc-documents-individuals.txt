@@ -1,0 +1,36 @@
+KYC Documents Individuals
+Individuals (Documents acceptable as proof of identity/address)
+Passport
+Voter's Identity Card
+Driving Licence
+Aadhaar Letter/Card
+NREGA Card
+Letter issued by the National Population Register containing details of name and address.
+Any one document towards proof of identity and proof of address (either permanent or current )
+Minors
+If minor is less than 10 years of age, ID proof of the person who will operate the account to be submitted.
+In cases where minor can operate the account independently, KYC procedure for identification/address verification as in the case of any other individuals would apply.
+NRIs
+Passport and Residence Visa Copies, duly attested by
+Foreign offices
+Notary Public
+Indian Embassy
+officers of correspondent banks whose signatures are verifiable through an authorized(A/B category Forex handling branch) branch of the Bank
+Small Accounts
+(small account' means a savings account in a banking company where
+the aggregate of all credits in a financial year does not exceed rupees one lakh;
+the aggregate of all withdrawals and transfers in a month does not exceed rupees ten thousand; and
+the balance at any point of time does not exceed rupees fifty thousand)
+Submission of self-attested photograph and affixation of signature or thump impression before the officer of the Bank who is authorized to approve opening of accounts who will certify under his signature that the person opening the account has affixed his signature or thumb impression, as the case may be, in his presence.
+(small account shall remain operational initially for a period of twelve months, and thereafter for a further period of twelve months if the holder of such an account provides evidence before the Bank of having applied for any of the officially valid documents within twelve months of the opening of the said account, with the entire relaxation provisions to be reviewed in respect of the said account after twenty four months)
+A small account can also be opened with any one of the following documents which are deemed as ‘Officially Valid Documents'
+identity card with applicant's photograph issued by Central/State Government Departments, Statutory/Regulatory Authorities, Public Sector Undertakings, Scheduled Commercial Banks, and Public Financial Institutions;
+letter issued by a gazetted officer, with a duly attested photograph of the person
+Details of Annexures for KYC Updation
+Annexure A-Self Declaration form for KYC updation-No change in KYC information
+Annexure B-KYC Updation form for Individual
+KYC Udation through YONO (BILINGUAL)
+KYC Updation through ATM (BILINGUAL)
+KYC updation through INB (BILINGUAL)
+UPDATE KYC NOW
+Last Updated On : Tuesday, 09-06-2026

@@ -1,0 +1,510 @@
+G-SIB indicators
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2026 (Values in million INR)
+S. No.
+Indicator
+Sub- indicator
+31.03.2026
+1
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+89,81,356.95
+Cross-jurisdictional liabilities
+76,96,661.17
+2
+Size
+Total exposure including Insurance Subsidiaries
+9,17,62,785.69
+3
+Interconnectedness
+Intra-financial system assets
+1,14,00,178.85
+Intra-financial system liabilities
+68,31,785.62
+Securities outstanding
+1,17,04,899.83
+4
+Substitutability/financial institution infrastructure
+Assets Under custody
+2,74,31,501.62
+Payments Activity
+37,60,03,875.00
+Underwritten transactions in debt and equity markets
+6,53,663.20
+Trading Volume fixed income sub-indicator
+17,49,158.90
+Trading Volume equities and other securities sub-indicator
+43,563.66
+5
+Complexity
+Notional amount of OTC Derivatives
+4,92,89,538.07
+Level 3 assets
+4,48,162.73
+Trading and available-for-sale securities
+35,92,346.35
+​​​​​​​Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2025 (Values in million INR)
+S. No.
+Indicator
+Sub- indicator
+31.03.2025
+1
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+87,56,680.33
+Cross-jurisdictional liabilities
+65,78,603.50
+2
+Size
+Total exposure including Insurance Subsidiaries
+8,02,56,783.71
+3
+Interconnectedness
+Intra-financial system assets
+1,07,01,861.72
+Intra-financial system liabilities
+50,06,167.31
+Securities outstanding
+82,83,903.47
+4
+Substitutability/financial institution infrastructure
+Assets Under custody
+2,49,72,496.71
+Payments Activity
+31,10,76,927.13
+Underwritten transactions in debt and equity markets
+7,33,370.10
+Trading Volume in Fixed Income Securities
+20,61,464.35
+Trading Volume in Equities and other Securities
+67,361.22
+5
+Complexity
+Notional amount of OTC Derivatives
+2,13,29,919.72
+Level 3 assets
+5,19,313.20
+Trading and available-for-sale securities
+31,98,639.01
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2024 INR (Rs. in Crores)
+S. No.
+Indicator
+Sub- indicator
+31.03.2024
+1
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+720088.85
+Cross-jurisdictional liabilities
+558003.16
+2
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+6942582.47
+3
+Interconnectedness
+Intra-financial system assets
+952769.25
+Intra-financial system liabilities
+393501.91
+Securities outstanding
+767920.05
+4
+Substitutability/financial institution infrastructure
+Assets Under custody
+2220785.71
+Payments Activity
+26503443.63
+Underwritten transactions in debt and equity markets
+92571.30
+5
+Complexity
+Notional amount of OTC Derivatives
+1623500.57
+Level 3 assets
+13985.13
+Trading and available-for-sale securities
+228179.59
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2023 INR (Rs. In Crores)
+S. No.
+Indicator
+Sub- indicator
+31.03.2023
+1
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+599411.46
+Cross-jurisdictional liabilities
+713844.98
+2
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+6519031.20
+3
+Interconnectedness
+Intra-financial system assets
+828119.64
+Intra-financial system liabilities
+107104.48
+Securities outstanding
+556609.13
+4
+Substitutability/financial institution infrastructure
+Assets Under custody
+1856336.04
+Payments Activity
+25662805.26
+Underwritten transactions in debt and equity markets
+45486.46
+5
+Complexity
+Notional amount of OTC Derivatives
+1722249.86
+Level 3 assets
+15623.79
+Trading and available-for-sale securities
+250631.80
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2022 INR (In Crores)
+S. No.
+Indicator
+Sub- indicator
+31.03.2022
+1.
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+159513.60
+Cross-jurisdictional liabilities
+534416.30
+2.
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+5661462.50
+3.
+Interconnectedness
+Intra-financial system assets
+299261.00
+Intra-financial system liabilities
+443303.50
+Securities outstanding
+518995.20
+4.
+Substitutability/financial institution infrastructure
+Assets Under custody
+1457748.60
+Payments Activity
+21509921.80
+Underwritten transactions in debt and equity markets
+4086.00
+5.
+Complexity
+Notional amount of OTC Derivatives
+1709326.70
+Level 3 assets
+15119.30
+Trading and available-for-sale securities
+226757.40
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2021 INR (billions)
+S. No.
+Indicator
+Sub- indicator
+31.03.2021
+1.
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+1236.98
+Cross-jurisdictional liabilities
+4089.04
+2.
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+51093.66
+3.
+Interconnectedness
+Intra-financial system assets
+2798.33
+Intra-financial system liabilities
+3823.77
+Securities outstanding
+3843.16
+4.
+Substitutability/financial institution infrastructure
+Assets Under custody
+104.50
+Payments Activity
+167984.82
+Underwritten transactions in debt and equity markets
+480.40
+5.
+Complexity
+Notional amount of OTC Derivatives
+13460.06
+Level 3 assets
+156.06
+Trading and available-for-sale securities
+2053.75
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2020 INR (In Crores)
+S. No.
+Indicator
+Sub- indicator
+31.03.2020
+1.
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+497557.55
+Cross-jurisdictional liabilities
+528750.00
+2.
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+4015245.96
+3.
+Interconnectedness
+Intra-financial system assets
+177414.64
+Intra-financial system liabilities
+332278.74
+Securities outstanding
+272433.88
+4.
+Substitutability/financial institution infrastructure
+Assets Under custody
+733983.58
+Payments Activity
+19044923.05
+Underwritten transactions in debt and equity markets
+20619.00
+5.
+Complexity
+Notional amount of OTC Derivatives
+1016479.43
+Level 3 assets
+15685.81
+Trading and available-for-sale securities
+103811.70
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2019
+S. No.
+Indicator
+Sub- indicator
+INR (billions) 31.03.2019
+1.
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+4031.55
+Cross-jurisdictional liabilities
+4863.54
+2.
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+41243.75
+3.
+Interconnectedness
+Intra-financial system assets
+1740.71
+Intra-financial system liabilities
+2222.15
+Securities outstanding
+3352.26
+4.
+Substitutability/financial institution infrastructure
+Assets Under custody
+5480.70
+Payments Activity
+194375.90
+Underwritten transactions in debt and equity markets
+37.71
+5.
+Complexity
+Notional amount of OTC Derivatives
+1232.02
+Level 3 assets
+31.50
+Trading and available-for-sale securities
+355.47
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2018
+S. No.
+Indicator
+Sub- indicator
+INR (billions)
+1.
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+4021.34
+Cross-jurisdictional liabilities
+4525.75
+2.
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+38242.85
+3.
+Interconnectedness
+Intra-financial system assets
+2305.53
+Intra-financial system liabilities
+2047.27
+Securities outstanding
+2943.48
+4.
+Substitutability/financial institution infrastructure
+Assets Under custody
+4652.01
+Payments Activity
+164684.40
+Underwritten transactions in debt and equity markets
+0.00
+5.
+Complexity
+Notional amount of OTC Derivatives
+5436.40
+Level 3 assets
+28.37
+Trading and available-for-sale securities
+573.59
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2017
+S. No.
+Indicator
+Sub- indicator
+INR (billions)
+1.
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+3405.95
+Cross-jurisdictional liabilities
+4403.85
+2.
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+37603.62
+3.
+Interconnectedness
+Intra-financial system assets
+2585.43
+Intra-financial system liabilities
+1074.13
+Securities outstanding
+3341.53
+4.
+Substitutability/financial institution infrastructure
+Assets Under custody
+3481.01
+Payments Activity
+115820.37
+Underwritten transactions in debt and equity markets
+0.00
+5.
+Complexity
+Notional amount of OTC Derivatives
+6317.87
+Level 3 assets
+24.58
+Trading and available-for-sale securities
+302.09
+Disclosure on indicators for identification of Global Systemically Important Banks (G-SIBs) as on end March 2016
+S. No.
+Indicator
+Sub- indicator
+INR (billions)
+1.
+Cross-jurisdictional activity
+Cross-jurisdictional claims
+3170.98
+Cross-jurisdictional liabilities
+4249.51
+2.
+Size
+Total exposure as defined for use in Basel III Leverage Ratio
+33454.99
+3.
+Interconnectedness
+Intra-financial system assets
+1070.83
+Intra-financial system liabilities
+398.88
+Securities outstanding
+1187.68
+4.
+Substitutability/financial institution infrastructure
+Assets Under custody
+2209.02
+Payments Activity
+101667.59
+Underwritten transactions in debt and equity markets
+0.86
+5.
+Complexity
+Notional amount of OTC Derivatives
+5754.95
+Level 3 assets
+80.11
+Trading and available-for-sale securities
+716.45
+General
+Code Of Conduct For The Bank Of Directors And Management Approved By The Central Board
+(364 KB)
+Disclosure Document for Portfolio Management Services (PMS)
+(280 KB)
+Code of Ethics, V-3.0(Abridged)
+(5 MB)
+Code of Conduct- Expressing views in Internet or Social Media
+(252 KB)
+Abridged Anti-Bribery & Anti-Corruption policy
+(140 KB)
+Sexual Harassment of women at workplace (Prevention, Prohibition and Redressal)  Policy (Abridged)
+(430 KB)
+Conflict of Interest Policy (Abridged)
+(107 KB)
+Vision Statement
+To be a Bank known for bringing about sustainable improvement in the lives of citizens of the country with focus on socially & economically disadvantaged communities.
+Objective
+To participate in activities which benefit community development, social responsibility and environmental sustainability, so as to reach out to socially & economically disadvantaged sections of society.
+Accord primacy to support national priorities like Swach Bharat Abhiyan, Jal Shakti Abhiyan, Beti Bachao Beti Padhao, River Rejuvenation etc.
+SBI Foundation
+Corporate Social Responsibility Policy
+(326 KB)
+Policy on KYC Standards, AML and CFT Measures (Abridged Version)
+(185 KB)
+Climate Change Risk Managment Policy V3 ( Abridged Version)
+(160 KB)
+Fedai and Fimmda Code
+Our Bank adheres to the following Codes:
+FX Global Code
+(2.3 MB)
+FEDAI Addendum to FX Global Code
+(38 KB)
+FIMMDA Code of Fair Practices for Debt Markets
+(420 KB)
+Application/ fees/ appeal/ misc. Details
+Making an application under the act:
+Public seeking for information should submit the application to the nearest ACPIO (All Branch Managers of SBI branches have been identified as ACPIO) who will forward the information to the concerned CPIO for giving the information or otherwise as permitted under the Act.As per the Act, the information can be furnished only to citizens of India.The application / request for information, should contain inter- alia apart from their citizen status, their contact details such as latest postal address, telephone number, fax number, e-mail address, etc., and in case of third party information, their connection / relationship with the person / entity.
+How to send the application
+i) A request for information under Sec 6(1) of the RIA to be accompanied by an application fee of Rs.10/- by way of cash against proper receipt or by DD or Banker's cheque favouring "State Bank of India" if the applicant is not belonging to the below poverty line category.The application along with the draft / Bankers cheque as above, should be submitted by the public / requestor to the nearest Branch Head (ACPIO) (who will forward to the concerned CPIO) or directly to the respective CPIO.Alternatively the fees of Rs.10/- can be paid in cash at all the branches of SBI for credit to their P&T A/c and receipted counterfoil for the payment be obtained and enclosed to the application.Payment of Rs.10/- is fees prescribed by the Government and will not, by itself make an applicant eligible for such information sought by him / her. Disclosure of information will be subject to scrutiny of the request by CPIO and the relevant provisions of the Act.
+ii)If the application is submitted to the ACPIO, the ACPIO would verify the application, enter it in a register maintained for the purpose in the serial order, with the serial number along with the details of the applicant / date of receipt / related CPIO / fees details etc., and give an acknowledgement to the applicant for future reference.
+How long will the bank take to provide information
+i) The CPIO will take up the application for consideration as required under the Act, only if the application contains proper applicant information as detailed above and the required fees.
+ii)If the information requested for is held by and its subject matter is closely connected with the function of another CPIO / Public Authority, the PIO shall transfer within 5 days the request, to that other CPIO / Public Authority and inform the applicant immediately.
+iii)The CPIO on receipt of a request shall, within 30 days of receipt of the request, either provide the information on payment of such fee / charges as may be prescribed or reject the request under Section 8 / 9 of the Act.
+iv)If the CPIO failsto give a decision on the request within the period specified, he shall be deemed to have refused the request.
+ANY FURTHER CHARGES TO GET THE INFORMATION
+As per the Right to Information (Regulation of Fees and Cost) Rules, 2005, the public authority(Bank) shall charge:
+Rs.2/- for each page (in A-4 or A-3 size paper) created or copied;
+actual charge or cost price of a copy in larger size paper;
+actual cost or price for samples or models; and
+for inspection of records, no fee for the first hour; and a fee of Rs.5/- for subsequent hour(or fraction thereof thereafter).
+Further, to provide information under Section 7(5) of the Right to Information Act 2005, the public authority shall charge:
+Rs.50/- per diskette or floppy; and
+for information provided in printed form at the price fixed for such publication or Rs.2/- per page of photocopy for extracts from the publication.
+At what stage do the further charges have to be paid
+If the concerned CPIO of the Bank has the information and can provide it to youhe / shewill,within 30 days of receiving the application by the CPIO along with appropriate fees, communicate to the requestor the cost of providing the information as prescribed under Section 7(1) of Right to Information Act.
+When will the information be given
+The public will get the information, once the concerned CPIO decides to give information and receives the payment of charges prescribed by him / her towards providing the information.
+Can the CPIO refuse to give information
+The Right to Information Act, 2005 under Sections 8 and 9 exempts certain categories of information from disclosure, and the following may have relevance to Banks.
+Information, which has been expressly forbidden to be published by any court of law or tribunal or the disclosure of which may constitute contempt of court.
+Information including commercial confidence, trade secrets or intellectual property, the disclosure of which would harm the competitive position of a third party, unless the competent authority is satisfied that larger public interest warrants the disclosure of such information;
+Information available to a person in his fiduciary relationship, unless the competent authority is satisfied that the larger public interest warrants the disclosure of such information;
+Information which would impede the process of investigation or apprehension or prosecution of offenders;
+Information, which relates to personal information the disclosure of which has no relationship to any public activity or interest, or which would cause unwarranted invasion of the privacy of the individual.
+The CPIO of the Bank can refuse to part with any information, if he / she feels that such information is falling under any of the above provisions.
+What about right to appeal
+Under the Right to Information Act, 2005 the public have the right to appeal to the Appellate Authority if he / she is not satisfied with the information provided by the concerned CPIO or his / her decision not to provide the information requested.
+What is to be done by a citizen if he is not satisfied with the decision of the appellate authority
+Under the Act, if a citizen is not satisfied with the decision of the Appellate Authority within the State Bank of India, he / she can appeal to the Central Information Commissioner notified / appointed by the Central Government in terms of Chapter 3 of the Right to Information Act, 2005.
+Last Updated On : Tuesday, 09-06-2026

@@ -1,0 +1,105 @@
+National Pension System (NPS) is a defined contribution pension system introduced by the Government of India as a part of Pension Sector reforms, with an objective to provide social security to all citizens of India. It is administered and regulated by PFRDA.
+Features of NPS scheme
+Tier I – Pension account (Mandatory A/C - Tax benefit available)
+Tier II – Investment account (Optional A/C – No tax benefit but corpus is withdrawable anytime)
+Minimum Contribution during A/C opening is Rs.500 for Tier I
+Minimum Contribution during A/C opening is Rs.1,000 for Tier II
+Minimum total contribution in a year Rs.1,000 (Min. amount per contribution Rs.500) for Tier I
+Minimum total contribution in a year N.A. (Min. amount per contribution Rs.250) for Tier II
+A very low-cost product with Fund Management Charges of 0.03-0.09%.
+Attractive market linked returns
+Flexibility of Investments – Subscriber may select a Pension Fund Manager (PFM) of their choice. Subscriber is allowed to change PFM once during a Financial Year. Subscribers may also define their asset allocation, which may be changed four times in a given Financial Year.
+Portable across jobs and geographies.
+24 X 7 X 365 through Web & Mobile App of Central Recordkeeping Agency (CRA)
+One-time shift to NPS- Existing corpus under Superannuation can one-time be transferred to NPS without any Tax Incidence
+Continuation in NPS scheme post retirement – Provision to contribute till 75 years or to defer withdrawal upto the age of 75 years.
+Complete withdrawal for corpus less than Rs.5 lacs - In case total accumulated corpus is less than Rs.5 Lacs on attaining the age of 60, subscriber may withdraw entire corpus.
+Eligibility
+Individuals aged between 18-70 years
+All citizens of India including RIs and Non-Resident Indians (NRIs)
+Individuals covered under any pension scheme.
+Benefits of investing in NPS for securing Post Retirement Life
+Tax Benefit available under Tier I Account:
+Employee Contribution:
+Exclusive tax savings provision: Tax deduction u/s 80CCD (1B) on contribution of Rs.50,000.
+Tax deduction u/s 80CCE for investments (10% of Basic & DA) within overall limit of Rs. 1.50 lacs.
+Employer contribution
+Tax deduction upto 10% of salary (Basic + DA) u/s 80CCD (2) subject to monetary ceiling of Rs.7.5 lacs (includes PF, Superannuation, etc.)
+Exit Option under Tier I :
+On attaining age of 60 years :
+Min. 40% of the corpus needs to be invested in Annuity Scheme
+60% of the corpus can be commuted/withdrawn in lump sum/ staggered anytime upto age of 75 yrs; Amount is tax free.
+If total corpus is equal or less than Rs. 5.00 Lacs, then entire corpus can be withdrawn
+Before 60 years of age (after completion of 5 years):
+20% of the corpus can be withdrawn in lump sum
+80% of the corpus will be invested in a ‘Annuity Scheme’
+If total corpus is equal or less than Rs. 2.50 Lacs, then entire corpus can be withdrawn
+Part Withdrawals under Tier I :
+A partial withdrawal of accumulated pension wealth, not exceeding 25% of the employee contributions, after a lock in period of 3 years.
+Allowed to withdraw only a maximum of three (3) times during the entire tenure subject to conditions prescribed by the Regulator.
+How to make subsequent contributions
+Subscribers can apply for NPS through the below mentioned routes:
+Online Mode: Subscriber may visit
+https://www.onlinesbi.sbi/
+and available under ‘Deposit & Investment’.  It is also available under ‘Investment/NPS Contribution’ menu at YONO.
+Offline Mode: Subscriber may visit nearest registered State Bank of India branch for NPS and submit NPS Contribution Instruction Slip (NCIS) along with the contribution amount.
+Standing Instruction (SI)
+Standing Instruction (SI) functionality is available to average cost of purchase just like Systematic Investment Plan (SIP) facility in Mutual Funds. Interested subscribers can give SI/ Auto Debit instructions for processing their monthly contributions either online under ‘Deposit & Investment’ menu available at
+https://www.onlinesbi.sbi/
+or under ‘Investment/NPS Contribution’ menu at YONO or by submitting physical request form to a registered Bank branch for NPS. SI request form may be downloaded by clicking on the link below.
+NPS SI Request Form
+Point of Presence (POP) / Bank Charges:
+Following costs are to be borne by the Subscriber at the time of registration and/or performing any transaction through Point of Presence (POP)/ Bank. The contribution will be remitted net of bank charges.
+Summary of the Point of Presence (POP) / Bank Charges
+Type of Service
+Service charges to be paid to the Point of Presence (POP) by the Subscriber (excluding GST)
+Initial Subscriber Registration/per subscriber
+Rs. 400/-
+Initial Contribution amount / per subscriber
+0.50% of the contribution amount (Maximum up to Rs.25000/-)
+Subsequent Contribution Transaction Charge/ per subscriber
+0.50% of the contribution amount (Maximum up to Rs.25000/-)
+Any other transaction not involving a contribution from subscriber/ per subscriber
+Rs. 30/-
+NPS Registration:
+Subscriber can open NPS account through SBI YONO or Online SBI or thorough Branch Channel.
+Digital Channel : Customer can open e-2-e digital NPS account by login in SBI YONO or Online SBI (Internet Banking). In YONO it is available under “Investments”. In Online SBI (Internet Banking) customer can click on “Deposit & Investment” and follow the instructions.
+Branch Channel : : Alternatively customer can open the NPS account by visiting nearby SBI Branch (PoP-SP)
+Subscriber registration form can be obtained from any Points of Presence – Service Provider (PoP-SP).
+Service tax and other levies, as applicable, will be levied as per the existing tax laws. Also, please note that the fee structure may change from time to time as may be decided by PFRDA.
+For more product information, please call Customer Care.
+Grievance Redressal Policy for NPS & NPS Lite
+Grievance Redressal Policy for NPS & NPS Lite
+NPS Vatsalya
+Scheme:
+A saving-cum-pension scheme regulated and administered by the PFRDA.
+Eligibility:
+All minor citizens (age below 18 years).
+Operations:
+Account opened in the name of minor and operated by Guardian
+Minor to be sole beneficiary
+Where to open account:
+NPS Vatsalya account can be opened by visiting Nearest SBI branch.
+Document required:
+KYC of Guardian shall be carried out by submitting Proof of Identity and Address (Aadhaar, Driving License, Passport, Voter ID card, NREGA Job Card, National Population Register).
+Date of Birth proof of the Minor (Birth certificate, School leaving certificate, Matriculation Certificate, PAN, Passport).
+NRE / NRO Bank Account (solo or joint) of the minor in case the guardian is NRI.
+Contribution:
+Account Opening contribution: Min Rs. 1,000 /- and Max no Limit
+Subsequent contribution: Min. Rs. 1,000 /- p.a. and Max no Limit
+Pension Fund Selection:
+Guardian can choose any one of the Pension Fund registered with PFRDA.
+Investment Choices:
+Default Choice: Moderate Life Cycle Fund -LC-50 (50% equity).
+Auto Choice: Guardian can choose Lifecycle Fund -Aggressive-LC-75 (75% equity), Moderate LC-50 (50% equity) or Conservative-LC-25(25% equity).
+Active Choice: Guardian actively decides allocation of funds across Equity (upto 75%), Corporate Debt (upto 100%), Government Securities (upto 100%) and Alternate Asset (upto 5%).
+Withdrawal, exit and death:
+Withdrawal up to 25% of contribution after lock-in-period of 3 years allowed for education, specified illness and disability. Max three times.
+Upon attainment of age of 18 years, Seamless shift to NPS Tier– I (All Citizen)
+Exit allowed on attainment of 18 years of age
+Corpus more than Rs. 2.5 lacs:
+80% corpus is utilized for purchase of annuity and 20% can be withdrawn as lump sum.
+Corpus less than or equal to Rs. 2.5 lacs:
+entire corpus can be withdrawn as a lumpsum.
+On death, entire corpus would be returned to the guardian.
+Last Updated On : Monday, 01-12-2025

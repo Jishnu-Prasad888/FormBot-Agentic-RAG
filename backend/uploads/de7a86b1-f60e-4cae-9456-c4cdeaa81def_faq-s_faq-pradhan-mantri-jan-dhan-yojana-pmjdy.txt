@@ -1,0 +1,123 @@
+FAQ Pradhan Mantri Jan-Dhan Yojana (PMJDY)
+Q1. What is Pradhan Mantri Jan-Dhan Yojana?
+ANS :
+Pradhan Mantri Jan-Dhan Yojana (PMJDY) is a National Mission on Financial Inclusion. The plan envisages universal access to banking facilities with at least one basic banking account for ‘every adult’, financial literacy, access to credit, insurance and pension facility. Under the scheme, a basic savings bank deposit (BSBD) account can be opened with benefits of no minimum balance requirement, free Rupay debit card with embedded free personal accidental insurance upto Rs. 2 lakh, overdraft facility upto Rs. 10,000, subject to terms & condition and eligibility for DBT, Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY), Pradhan Mantri Suraksha Bima Yojana (PMSBY), Atal Pension Yojana (APY).
+Q2. How is PMJDY different from the earlier Financial Inclusion Plan (Swabhimaan)?
+ANS :
+PMJDY focuses on coverage of ‘every adults’ as against the earlier plan which focused on coverage of villages. It focuses on coverage of rural as well as urban areas. PMJDY entails to cover entire country by extending banking facilities to ‘every adult’ against the earlier goal to cover ‘every household’.
+Q3. Who can open PMJDY account
+ANS :
+Any individual
+At branch channel – No age restriction
+At BC channel – Age of 10 years through e-KYC
+Q4. Whether Joint account can be opened in Pradhan Mantri Jan-Dhan Yojana
+ANS :
+joint account can be opened at Branches only.
+Q5. Under this Scheme, where can I open an account?
+ANS :
+Account can be opened in any Bank Branch or CSP Outlets.
+Q6. Do you have to pay some fee to open a Bank account under PMJDY?
+ANS :
+NO
+Q7. What is BSBD Account?
+ANS :
+Basic Savings Bank Deposit (BSBD) account has been designed as a Savings Bank account to provide affordable banking facilities to the public at large. As per RBI guidelines, Bank offer the following basic minimum facilities in a BSBD account, free of charge, without any requirement of minimum balance to be maintained in such an account: -
+Deposit of cash.
+Receipt of money through any electronic channel or deposit / collection of cheques.
+No limit on number and value of deposits that can be made in a month.
+Rupay debit card (base variant) is issued. No charges are levied towards annual fee, either at the time of issuance or renewal.
+Cheque book with minimum 25 cheque leaves per year issued in branch channel BSBD Accounts.
+Internet and mobile banking facility issued in Branch channel BSBD Accounts.
+Passbook or monthly statement of account in lieu of passbook, either in print or by email, as per request of the account holder. Further, issuance of a continuation passbook, on exhaustion of the pages in the previous passbook, shall not attract any charge.
+Minimum of four free withdrawals and ATM transactions (done either at the bank’s own ATM or another bank’s ATM), in a month. Digital payment transactions excluding ATM transactions, i.e., Point of Sale transfers, NEFT, RTGS, UPI, IMPS, etc., shall not be counted as withdrawals for this purpose.
+Q8. Number of Accounts
+ANS :
+The holder of a BSBD account shall not be eligible to open another BSBD account in the same bank or any other bank. Accordingly, before opening a new BSBD account or converting an existing savings bank account to a BSBD account, the customer shall submit a declaration that he / she does not have a BSBD account in any bank.
+Q9. Minimum balance amount
+ANS :
+NIL
+Q10. Maximum balance amount
+ANS :
+No upper limit
+Q11. Whether initial deposit is required?
+ANS :
+No
+Q12. What is RuPay Debit Card?
+ANS :
+Rupay Debit Card is a domestic debit card introduced by National Payment Corporation of India (NPCI). This card is accepted at all ATMs and PoS machines (for making cashless payment for purchases) in the country.
+Q13. What is PIN Number?
+ANS :
+Personal Identification Number (PIN) is a 4-digit number that confirms the identity of the customer and is required to use the Debit Card. The customer is expected to retain the PIN in their memory and keep it confidential. A cardholder can generate a 4-digit Personal Identification Number (PIN) through various channels such as SMS, INB, IVR, ATM, SBI Quick Mobile application, CSPs and branches. It is essential to maintain the secrecy of the PIN, and if it is inadvertently or otherwise divulged to anyone, the customer should change it immediately to prevent any misuse of the Debit Card.
+Q14. How to keep your RuPay Card safe?
+ANS :
+Beneficiary of RuPay Card is required to keep the Card in safe custody. PIN should be changed at frequent intervals and should never be shared with anyone. While using the card at ATM Machine or PoS, PIN should be entered in machine very secretly so that nobody could even guess about the PIN Number. As far as possible, Card should be used at authorized places / centres only. Besides, PIN number should never be written on the Card.
+Q15. What is special advantage of RuPay Debit Card?
+ANS :
+It provides accidental insurance cover upto Rs 2.00 lac for PMJDY accounts holder.
+Q16. Whether illiterate customers can be issued RuPay Card?
+ANS :
+Yes.
+Q17. How to keep debit card operational?
+ANS :
+Benefits of Insurance will be available to the Cardholders who have performed minimum one successful financial or non-financial transaction at any Channel both Intra and Inter-bank i.e. on-us (ATM / Micro ATM / POS / e-com / CSP of the bank) or off us (transactions at other bank channels), within 90 days prior to date of accident including accident date for Rupay Cardholders.
+Q18. How long the debit card is valid and how to get Debit Card renewed?
+ANS :
+Debit Card expiry date is mentioned on the Card itself. Account-holder is advised to get issued new card well before expiry date of his/her existing card by giving fresh application to the concerned bank.
+Q19.If someone has two or more accounts and two or more RuPay Debit Cards, whether accidental insurance cove is available in each account / each card?
+ANS :
+Accidental insurance cover is available only in one account.
+Q20. How to link Mobile Number with Bank Account?
+ANS :
+a) At the time of opening new account mobile number given by the customer will be linked to his account automatically.
+b) Request may be submitted at the Branch in case of change of Mobile number.
+Q21.What is PoS Machine
+ANS :
+PoS stands for Point of Sale. M-ATM is a PoS Machine installed at Business Centres to facilitate cashless purchases to their customers.
+Q22. Does a person already having a Bank account in any bank needs to open another account under Pradhan Mantri Jan-Dhan Yojna (PMJDY) to get the Accidental Benefit/Life Insurance Benefit under the Scheme?
+ANS :
+A person who is already having a bank account with any bank can enrol under PMJJBY scheme for life insurance cover and PMSBY schemes for personal accidental insurance cover at the prescribed premium subject to their eligibility. Moreover, he/ she may open a separate account under PMJDY with request for issuance of a Rupay card to avail embedded (with Rupay card) free accidental insurance upto Rs. 2 lakh.
+Q23.What is the concept of overdraft of Rs.10000/- in PMJDY Account and for whom this facility is available?
+ANS :
+Overdraft facility (SBOD) upto Rs.10,000/- will be available to one account holder of PMJDY per household after 6 months of satisfactory conduct of the account, subject to fulfilment of eligibility criteria.
+Q24. Whether Overdraft facility can be availed in more than one account?
+ANS
+: Overdraft facility upto Rs.10,000/- is available for only one member of the family.
+Q25. Whether any premium is charged to the account holders for Accidental Insurance associated with Rupay card?
+ANS :
+No premium is charged to the beneficiary.
+Q26. If both husband and wife who are opening accounts under PMJDY are eligible for Accidental Insurance Cover and overdraft facility of Rs.10,000/- in both the accounts, separately?
+ANS :
+Accidental Insurance cover of Rs 2.00 lakh is available to all individual PMJDY customers having Rupay Card. However, overdraft (SBOD) facility upto Rs.10,000/- will be available to only one person in the family.
+Q27. What documents are required to open an account under Pradhan Mantri Jan-Dhan Yojana?
+ANS :
+At Customer Service Point outlets
+Account under PMJDY is opened through e-KYC based on Aadhaar.
+At Branches
+If Aadhaar Card/Aadhaar Number or proof of possession of Aadhar is available, then no other documents are required. If address has changed, then a self-certification of current address is sufficient.
+If Aadhaar Card is not available, then any one of the following Officially Valid Documents (OVD) is required: Voter ID Card, Driving License, Passport, NREGA Card & Letter issued by the National Population Register. If these documents also contain your address, it can serve both as "Proof of Identity and Address".
+Q28. Whether Cheque Book will be issued in accounts opened under PMJDY
+ANS :
+Yes, Cheque book with 25 cheque leaves can be issued free of cost per year for accounts opened at branches. Accounts opened at CSP outlets would also be issued cheque book on request to the branch.
+Q29. What are the direct / special benefits attached to PMJDY?
+ANS :
+Special benefits attached to the scheme are:
+Free Rupay debit card with embedded free personal accidental insurance upto Rs. 2 lakh.
+No minimum balance required.
+Easy Transfer of money across India
+Beneficiaries of Government Schemes will get Direct Benefit Transfer in these accounts.
+After satisfactory operation of the account for 6 months, an overdraft facility will be permitted, subject to eligibility criteria.
+Access to Pension, insurance products.
+Q30. I have no official valid document for opening an account. Can I still open an account with bank?
+ANS
+: Reserve Bank of India (RBI) vide its direction dated 28.11.2025 has clarified as under:
+"Those persons who do not have any of the ‘officially valid documents’ can open "Small Accounts" with banks. A "Small Account" can be opened on the basis of a self- attested photograph and putting his/her signatures or thumb print in the presence of an officials of the bank. Such accounts have limitations regarding the aggregate credits (not more than Rupees one lac in a financial year), aggregate withdrawals and transfers (nor more than Rupees ten thousand in a month) and balance in the accounts (not more than Rupees fifty thousand at any point of time, excluding deposits made through Government grants, welfare benefits and payment against procurements). These accounts would be valid normally for a period of twelve months. Thereafter, such accounts would be allowed to continue for a further period of twelve more months, if the account holder provides a document showing that he/she has applied for any of the Officially Valid Document, within 12 months of opening the small account.
+Q31. How much interest savings would earn in PMJDY Account?
+ANS :
+Interest rate applicable for Saving Bank Accounts shall be admissible to accounts opened under PMJDY Scheme.
+Q32. How much interest will be charged by bank on overdraft facility in PMJDY
+ANS :
+3.25% above 1 year EBLR.
+Q33.Can I get my PMJDY account transferred to other City / State upon my  transfer posting to other States?
+ANS
+: PMJDY accounts are opened on CBS (Core Banking Solution) platform and the account can easily be transferred to any branch of the bank in any city/town as per the request of the account holder.
+Last Updated On : Monday, 30-03-2026

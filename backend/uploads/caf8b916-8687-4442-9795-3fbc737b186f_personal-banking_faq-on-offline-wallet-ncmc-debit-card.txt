@@ -1,0 +1,46 @@
+FAQ on Offline Wallet - NCMC Debit Card
+1. How to activate the Offline Wallet?
+Offline Wallet is in inactive mode when received by customer. Customer must activate the Offline Wallet by visiting transit operator’s terminal (metro, bus terminal etc.) and performing either of the two transactions i.e. Add Money & Service Creation.
+2. How to add money to the Offline Wallet?
+Customer is required to do Add Money transaction either by depositing cash or with same debit card at the designated terminals located at Metro stations/Bus stations etc.
+3. How to create the service area on card?
+Request for creation of services should be placed by customer by taking the card to the designated terminal of transit operator and request to be made with them for desired service. Service Creation refers to merchant specific services such as monthly Metro pass. (After activation of the Offline Wallet of the card, by completing above step, customer is free to do Add Money from bank’s ECHANNELS.)
+4. How to enquire the balance on the Offline Wallet?
+POS terminals of designated Transport Operators will display the balance of Offline wallet. Similarly, after Offline wallet transactions, wherever a receipt is generated it will provide the latest balance of the offline wallet.
+5. How to update the Balance on the Offline Wallet?
+When customer performs Add Money transaction through bank’s E-CHANNELS, he/she must mandatorily perform Balance Update transaction at the designated Transport Operator/Terminal. Terminal operator will double tap the card on the device for updating the same.
+6. How to spend the money via Offline Wallet?
+Only once Customer has activated the Offline wallet and performed Add Money to maintain necessary balance, can he/she use the card for metro transit cases. At entry gate of metro station, he/she is required to tap the card at designated device and can start the journey. Once the journey is accomplished, he/she must tap the card again at the exit gate. AFC (Automatic Fare Calculator) System of metro will calculate the fare and deduct the amount from offline wallet.
+7. How to Block the Offline Wallet?
+Offline wallet balance cannot be blocked and is liable for misuse if lost/misplaced/stolen. Bank will not bear any liability for the residual balance on the wallet if card is lost and misused.
+8. When the refund will be processed in case of Card closure/damage/replacement?
+The refund of the card may be processed after cooling period prescribed by card network.
+9. Terms of Card Expiry?
+The expiry date of the card is printed on the card itself. In case expiry is encountered by customer, the card will cease functioning and all services of the card will also expire. In case of re-issuance of card customer would have to get the service, areas written on the new card by operators/merchants.
+10. STEP BY STEP PROCESS FOR ENABLING/DISABLING OFFLINE WALLET ON RUPAY DEBIT CARD THROUGH SBI ATMs
+VISIT ANY SBI ATM
+INSERT SBI RUPAY CARD AT CARD SLOT
+SELECT PAYMENT OPTION AS DOMESTIC
+SELECT LANGUAGE
+SELECT TRANSACTION AS “BANKING”
+NEXT SCREEN SELECT “SERVICES”
+NEXT SCREEN SELECT “WALLET”
+ATM MAY ASK TO INPUT ANY NUMBER BETWEEN 10 TO 99.
+NEXT SCREEN INPUT YOUR ATM PIN
+NEXT SCREEN THREE OPTIONS “FLAG” “LIMIT’ AND “NO CHANGE” WILL APPEAR
+SELECT FLAG TO ENABLE/DISABLE THE OFFLINE WALLET
+AFTER ENABLEMENT REQUEST WILL BE REGISTERED AND CONFIRMATION MESSAGE WILL BE SENT ON MOBILE
+11. STEP BY STEP PROCESS FOR SETTING OFFLINE WALLET LIMIT ON RUPAY DEBIT CARD THROUGH SBI ATMs
+VISIT ANY SBI ATM
+INSERT SBI RUPAY CARD AT CARD SLOT
+SELECT PAYMENT OPTION AS DOMESTIC
+SELECT LANGUAGE
+SELECT TRANSACTION AS “BANKING”
+NEXT SCREEN SELECT “SERVICES”
+NEXT SCREEN SELECT “WALLET”
+ATM MAY ASK TO INPUT ANY NUMBER BETWEEN 10 TO 99.
+NEXT SCREEN INPUT YOUR ATM PIN
+NEXT SCREEN THREE OPTIONS “FLAG” “LIMIT’ AND “NO CHANGE” WILL APPEAR
+INPUT LIMIT (MAX RS 2,000/-) TO SET THE OFFLINE WALLET LIMIT ON CARD
+INPUT WALLET LIMIT. REQUEST WILL BE REGISTERED AND CONFIRMATION MESSAGE WILL BE SENT ON MOBILE
+Last Updated On : Saturday, 30-12-2023

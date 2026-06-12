@@ -1,0 +1,15 @@
+1. What is e-Statement and what are its advantages?
+An e-Statement is a summarized periodical record (viz. quarterly or monthly) of all the transactions made by a customer.
+Advantages:
+You will get all the transactions at a time and you can keep track of it.
+2. . Do I need to pay for this new e-Statement service?
+No. SBI is providing the service free of cost.
+3. How do I change / update my email address for receiving notification of  e-Statement?
+Login through INB.
+Go to profile.
+Change your email address.
+4. Can I print my e-Statement?
+Yes, you can print the statement once you receive it in your email address.
+5. Can I save my e-Statement?
+Yes, you can save the statement in the device you are using by downloading it from your email address
+Last Updated On : Tuesday, 04-02-2025

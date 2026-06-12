@@ -1,0 +1,29 @@
+‘SBI Patrons’ : Term Deposit Scheme for Super Senior Citizens
+Bank has decided to launch a new variant of Term Deposit “SBI Patrons” for Super Senior Citizens. As per section 194P of Income Tax Act 1961, resident individuals attaining the age of 80 years or more are considered as Super Senior Citizen. Under ‘SBI Patrons’ scheme, super senior citizens will be offered interest rate of 10 bps above the card rates applicable for senior citizens.
+Salient Features
+Summary of the Lakhpati Recurring Deposit product features
+S. No.
+Feature
+Details
+1
+Purpose
+Recognition of patronage of Super Senior Citizens by providing them additional benefit in terms of rate of interest.
+2
+Eligible customers
+All individuals (including SBI Staff) attaining the age of 80 years and above, singly/ jointly. In case of joint account, the primary account holder should attain the age of 80 years and above. Existing term deposit customers including SBI Staff will also get the benefit of additional interest on attaining 80 years of age from the date of launch. This will be taken care of by the system itself based on date of birth fed in the CBS system. Account holders need not do anything to avail additional benefit. The benefit is available for retail depositors only. (TD amount less than ₹3 Crores)
+3
+Type of deposit
+TDR/ STDR (Callable only)
+4
+Minimum & Maximum amount
+Minimum: ₹1000/- Maximum: Less than ₹3 crore.
+5
+Period of Deposit
+7 days to 10 years
+6
+Mode of operation
+Single/ Jointly
+7
+Premature withdrawal
+Available with penal clause as applicable for normal Term Deposit.
+Last Updated On : Tuesday, 02-12-2025

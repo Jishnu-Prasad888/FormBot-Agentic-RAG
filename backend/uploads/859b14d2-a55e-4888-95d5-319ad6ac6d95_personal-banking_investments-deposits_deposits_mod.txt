@@ -1,0 +1,74 @@
+Multi Option Deposit Scheme (MODS)
+is one of the variants of Term Deposits.   MODS can be opened through Savings Bank Account under Auto Sweep facility or Stand-Alone basis.
+The basic feature of this scheme is to facilitate customer to gain higher interest rate, out of the surplus funds above a
+threshold limit
+from the Savings Bank Account is transferred
+automatically
+to Term Deposits (MODS).  In case the amount falls short in Savings Bank Account for honouring debit mandate, partial/ full withdrawal (reverse sweep) from term deposits will be executed and credited back into Savings Bank Account.
+The product features are as under:
+Features
+Summary of the Multi Option Deposit Scheme
+1
+Type of Account
+TDR /STDR
+2
+Purpose
+Surplus funds above a threshold limit from the Savings Bank Account is transferred automatically to Term Deposits.
+Stand-Alone MOD can be created by customer as and when required.
+3
+Who can Open the A/C
+Any Individual Singly Or jointly, Minor (himself/herself or through his/her guardian)
+4
+Auto Sweep facility
+Savings Plus, Salary Package, Wealth Customers, minors.
+5
+Period of Deposit
+Minimum tenor is 1 year, and maximum is 5 years.
+6
+Minimum threshold limit beyond which MODS will execute under Auto Sweep.
+₹50,000/-
+7
+Minimum Resultant Balance
+in SB (Post Auto Sweep)
+₹35,000/-
+8
+Minimum amount of TDR /STDR
+₹15,000/- and in multiple of ₹5,000/- thereafter.
+9
+Reverse Sweep / Minimum withdrawal
+In units of ₹5,000/- and in multiple thereof., When the outstanding balance in TDR reaches ₹15,000/-, full amount reversal to SB, irrespective of requirement. Withdrawal of unit will take place for latest MOD made (LIFO). (Option is available for customers to choose FIFO or LIFO)
+10
+Stand Alone
+Can be created irrespective of threshold limit and resultant balance (as mentioned above) from Savings Bank Account.
+11
+Maximum amount
+No limit
+12
+Issue of Term Deposit advice
+A deposit advice is issued to customers in lieu of Term Deposit Receipts. In case of auto sweep, no advice is issued.
+13
+Interest application and premature payment.
+By default, Interest is paid quarterly and is compounded. When there is a break of MOD, the amount is paid with penalty at the applicable interest rate for the period the broken amount has run, and the remaining amount continue to earn original rate of interest. TDS is deducted as applicable.
+Senior Citizens: Eligible for additional interest rate as applicable.
+Super Senior Citizens: Not eligible for additional interest rate as applicable.
+14
+Premature Penalty
+As per extant penalty clause.
+15
+Loan/Overdraft Facility
+Facility available. Further breaking of units when lien is marked on a particular account is not allowed.
+16
+Nomination facility
+The Nomination details available in primary /linked Savings Bank Account will automatically stamp in MOD accounts.
+However, if a customer wants to change Nomination in any of the accounts, he may do.
+17
+KYC guidelines
+As per bank extant KYC guidelines.
+In case of non-KYC compliant, MOD shall not be executed though auto sweep facility.
+18
+Maturity
+Partial withdrawal and remaining maturity amount are transferred automatically to linked Savings Bank Account.
+19
+Tax deduction at source
+Tax Deductible at Source is applicable as per Income Tax Rules.
+Last Updated On : Monday, 01-12-2025

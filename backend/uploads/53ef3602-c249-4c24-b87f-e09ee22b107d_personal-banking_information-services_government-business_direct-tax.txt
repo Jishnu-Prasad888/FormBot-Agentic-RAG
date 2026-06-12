@@ -1,0 +1,39 @@
+Features
+Customer to login at e-filling site (www.incometax.gov.in) of ITD for generation of Challan.
+Users can use their Internet Banking facility / ATM-cum-Debit card / UPI for Tax Payment.
+Tax Payment Using Internet Banking / ATM-cum-Debit card / UPI: User Guide
+Click on the SBI e-Tax Link, it will divert to e-filling site of ITD.
+Enter the required information to Generate Challan (CRN).
+Proceed for payment through Internet Banking facility / ATM-cum-Debit card / UPI.
+Selecting State Bank of India from the list of banks will redirect the user to
+www.onlinesbi.sbi
+. After entering credentials and successful payment user can download the challan receipt from ITD site.
+Options to pay through ATM cum Debit Cards of SBI are displayed. Choose the desired options. User to enter account number and enter code received on registered mobile. Select the Active ATM card and enter the card details like Card holder name, expiry date, PIN number and captcha for payment of tax.
+After entering secure code password after successful payment user can download the challan receipt from ITD site.
+UPI: The menu is available in Other Payment Mode. Select VPA and proceed for payment by entering VPA and remarks.
+User can deposit challan amounting up to Rs. 10000.00 through Cash at any Branch of SBI.
+Direct Taxes
+SBI accepts all types of Direct Taxes as follows:
+Summary of the SBI accepts all types of Direct Taxes
+Applicable Challan Number
+Tax Type
+Major Head Code
+Challan No. ITNS 280
+Payment of Income tax & Corporation Tax
+020
+Challan No. ITNS 281
+Tax Deducted at Source / Tax Collected at Source (TDS/TCS) (Income tax & Corporation Tax)
+021
+Challan No. ITNS 282
+payment of Security Transaction Tax, Hotel Receipts Tax, Estate Duty, Interest Tax, Wealth Tax, Expenditure Tax /Other direct taxes & Gift tax)
+023
+024
+028
+031
+032
+033
+034
+Form 26QB
+Payment of TDS on Sale of Property
+Commodity Transaction Tax
+Last Updated On : Tuesday, 02-12-2025

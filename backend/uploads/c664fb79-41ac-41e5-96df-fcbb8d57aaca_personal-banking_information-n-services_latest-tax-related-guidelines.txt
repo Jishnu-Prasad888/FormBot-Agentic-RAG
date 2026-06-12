@@ -1,0 +1,70 @@
+Latest Tax related guidelines
+IMPLICATIONS OF PAN NOT LINKED WITH AADHAAR (INOPERATIVE PAN) W.E.F. 01.07.2023
+CBDT has made all the PANs inoperative which are not linked with Aadhaar w.e.f. 01.07.2023. As per section 139AA of the Income Tax act, 1961 every person who has been allotted PAN is required to link his PAN with his/her Aadhaar number on or before 30
+th
+June 2023. In case of failure to link PAN with Aadhaar by 30.06.2023, the PAN of such person shall become inoperative w.e.f. 01.07.2023. In such cases, it will be deemed that the individual has not furnished the PAN. The individuals who are exempt from linking PAN with their Aadhaar are:
+Residents of the states of Assam, Jammu and Kashmir, and Meghalaya
+non-residents as per the I-T Act, 1961
+persons aged 80 and above at any time during the previous year
+and those who are not citizens of India.
+Consequences of not linking PAN with Aadhaar:
+Customers whose PAN is not linked with Aadhaar (inoperative PAN) are advised to compulsorily inform the bank branch after linking their PAN with Aadhaar to avoid the TDS and TCS at higher rates (in accordance with the provisions of section 206AA and section 206CC respectively).
+Benefits of Form 15G/H is not available for customers who have not linked their PAN with Aadhaar.
+Customers who have submitted Form 15G / 15H prior to 30.06.2023 and whose PAN is not linked with Aadhaar (Inoperative) as on 01.07.2023 are advised to submit Form 15G/H afresh after linking their PAN with Aadhaar to enable the Bank to extend the benefits of Form 15G/15H.
+In cases where the PAN is not linked with Aadhaar, Form 60 cannot be obtained from such individuals as the person already holds a PAN.
+CHANGES APPLICABLE IN TCS RATES AND THRESHOLD LIMITS W.E.F. 01.04.2025
+CBDT has revised TCS rates and threshold limits w.e.f. 01.04.2025. The existing and revised rates and threshold limits are given below:
+Summary of the rates
+LRS remittance for
+Existing TCS rates and Threshold valid upto 31.03.2025
+Revised TCS rates and Threshold w.e.f. 01.04.2025
+Section Rate (%)
+Specified Person Rate (206CCA)(%)
+Rate for Inoperative PAN  (%)
+Threshold limit (in Rs.)
+Section Rate (%)
+Specified Person Rate (206CCA)(%)
+Rate for Inoperative PAN holder (%)
+Threshold limit (in Rs.)
+Overseas Tour programme package upto 10 lakh
+5
+10
+10
+upto Rs. 7 lakhs
+5
+-
+10
+upto Rs. 10 lakhs
+Overseas Tour programme package over 10 lakh
+20
+20
+20
+more than Rs. 7 lakhs
+20
+-
+20
+more than Rs. 10 lakhs
+Purpose of Education (through loan obtained from Financial Institutions defined u/s 80E)
+0.50
+5
+5
+7,00,000
+0
+-
+0
+10 lakhs
+Purpose of Education (Other than Loan i.e., Margin Money) & Medical Treatment
+5
+10
+10
+5
+-
+10
+Any other Nature
+20
+20
+20
+20
+-
+20
+Last Updated On : Tuesday, 24-02-2026

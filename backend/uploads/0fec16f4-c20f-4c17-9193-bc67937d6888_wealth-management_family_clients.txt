@@ -1,0 +1,9 @@
+Family Clients
+Existing to Bank (ETB) Client/New to Bank (NTB) Client
+Minimum Family# TRV of INR 50 Lacs.
+#WEALTH FAMILY ACCOUNTS DEFINITION
+Wealth Family includes the following members:
+Wealth Client,
+His/her Spouse and
+Major Children
+Last Updated On : Friday, 06-09-2024
