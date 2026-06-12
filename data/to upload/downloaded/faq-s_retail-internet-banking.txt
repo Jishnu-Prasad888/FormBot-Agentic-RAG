@@ -1,0 +1,81 @@
+FAQ Retail Internet Banking
+Q. I am not able to login with the username and password received from bank.
+User ID and password are case sensitive i.e. capital and small letters are different here.
+SBI provided username and passwords are for one time usage only
+Q. What should I do after logging in.
+A. When you log in for the first time, the system will prompt you to change your username and password. Username can be alpha-numeric and maximum 20 characters. Your password should be minimum 8 characters and maximum 20 characters. It should have alpha-numeric and at least one special character.
+Q. I am getting message "invalid User ID and password combination”:
+A. This could be due to wrong User ID password combination used by you. Please note user id and password are case sensitive. e.g. ROHIT, rohit and Rohit are different here. Your password should be minimum 8 characters and maximum 20 characters. It should have alpha-numeric and at least one special character e.g.Rohit@0658
+Q. I have forgotten my login password.
+A. Please click on the link “Forget Username / Login password” available to the right of username option at login page. Choose the option “Forgot My Login Password” and click on Next button. Enter Username, Account number, Country, Mobile number registered with INB and Date of Birth. Enter the text as shown in the image. Click on ‘Submit’ button. Enter the one-time password (OTP) sent on the registered mobile number. Click on ‘confirm’ button. Following three options will be displayed for Resetting of Login Password:
+Using ATM Card detail
+Using Profile Password
+Reset your login password with Branch Assistance
+Q. I want to change my username.
+A. Username cannot be changed by the customer or branch. Please ask your branch to register you again.
+Q. I want to change my login password.
+A. Please go to profile and choose the option as change password.
+Q. I have forgotten my profile password.
+A. Retail Internet Banking user can reset his profile password online by using three options available.
+Path: My Accounts & Profile>> Profile>> My Profile >> click on the link Forgot Profile Password. The following options will be available for resetting profile password.
+(i) Using Hint Question Answer (set at the time of first login)
+(ii) By Visting Branch
+(iii) Approval through ATM Debit Card
+Q. I want to change my address or update my email address.
+A. For change of address please contact your branch, and for email update please go to Personal details in Profile tab. Change/update email online through profile password.
+Q. I want to pay my bills online.
+A. Please go to bill payment option in Online SBI. You will be redirected to SBI Unipay website for bill payments.
+Q. I want to request for a Cheque Book.
+A. Please go to cheque book Services option under Request & Enquiries tab, select cheque book request option, enter the required details and submit.
+Q. I have ordered a draft but it has not yet reached destination.
+A. Please note the draft cannot be delivered to third party. It can only be dispatched at your registered address. Please contact your branch for more details.
+Q. What will be your charges for a draft.
+A. Please refer bank’s website https://bank.sbi for details of service charges.
+Q. I cannot see interest credited in my account.
+A. Interest is paid every quarter in June, September, December & March in savings account.
+Q. I want to know the latest interest rates.
+A. Please visit https://bank.sbi for interest rates and other information.
+Q. I want to give nomination for my account
+A. Please go to Online Nomination under Request & Enquiries tab and register/view/cancel nominee after selecting the account.
+Q. I want to know about NRI schemes.
+A. Please visit https://bank.sbi.
+Q. My name is wrongly displayed in OnlineSBI
+A. Please go to profile and correct the display name as you wish to appear in OnlineSBI.
+Q. I want to download Statement of my account.
+A. Please go to My Accounts & Profile and account statement option, select the account and enter the required details and submit.
+Q. I am unable to open my STDR online.
+A. You can open STDR by upgrade Transaction Rights without visiting the Branch by using option: Request & Enquiries >> Upgrade / Downgrade Access Level option. Select the account to be upgraded / Downgraded, OTP will be received on the registered mobile number, enter the OTP and confirm. Post updation of access level, you can try to open STDR online. For opening of Joint STDR account, both the account holders should have internet banking facility where one account holder has to create the request and other has to approve through his / her user id.
+Q. I am unable to do fund transfer.
+A. This is because your branch has not given you transaction rights, please go to Request & Enquires tab and upgrade access level of debit account from View Only to Transaction Rights.
+Q. I want to do third Party transfer.
+A. Please go to profile section and click on add/manage beneficiary option for adding the beneficiary using profile password as third party account. Also, define sufficient limit for fund transfer and third-party transfer to the newly added beneficiary in profile section. After activation of beneficiary, third party transfer can be done upto Rs 5,00,000 for newly added beneficiary within first four days of cooling period.
+Q. What is the limit for draft issue.
+A. The limit for draft issue is Rs.5,00,000/-.
+Q. How complaint for unauthorised transaction can be raised.
+A. Please click on link “
+Register Complaint of Unauthorized Transaction”
+available on landing page of Online SBI for raising the complaints related to unauthorized transactions.
+Path- Pre-login Page:
+Click on link “Register Complaint of Unauthorized Transaction” >> Enter Account number & CAPTCHA and click on sent OTP option >> Enter the OTP received on Registered Mobile Number and click on validate OTP option >> Enter the required details on Next page and click on submit for raising the complaints of Unauthorized Transaction.
+Path- Post-login Page:
+Post login to OnlineSBI >> Click on Customer Care option available in right top of the screen >> Please click on “Click here” option to Register Complaint of unauthorized transactions >> Enter Account number & CAPTCHA and click on sent OTP option >> Enter the OTP received on Registered Mobile Number and click on validate OTP option >> Enter the required details on Next page and click on submit for raising complaints of Unauthorized Transaction.
+Q. How complaint related to OnlineSBI can be raised.
+A.
+Path- Pre-login Page:
+Click on Customer care tab available on landing page of OnlineSBI >> On the next screen, please select appropriate Complaint Types / Complaint and Submit >> Enter Account number & CAPTCHA and click on sent OTP option >> Enter the OTP received on Registered Mobile Number and click on validate OTP option >> Enter the required details on Next page and click on submit for raising complaints
+Path- Post-login Page:
+Post login to OnlineSBI >> Click on Customer Care option available in right top of the screen >> Please click on “Click here” option to lodge the complaint for Internet banking transactions >> Enter Account number & CAPTCHA and click on sent OTP option >> Enter the OTP received on Registered Mobile Number and click on validate OTP option >> Enter the required details on Next page and click on submit for raising complaints.
+Q. How to open FD through Joint Account.
+A. If the funding account is in joint name under “E or S” Fixed Deposit can be opened in single name or joint name of same depositors.
+For creation of Fixed Deposit through Joint Account in Single name, please select tab “In Single Name”.
+For creation of Fixed Deposit through Joint Account in Joint name Please select tab “In Joint Name”
+For Mode of operation will be “E or S” following conditions to be fulfilled:
+Both customers should have Internet Banking facility (INB) with full transactions rights.
+Full KYC compliance in respect of both customers should be recorded in Bank.
+Both customers should be Resident Indian.
+Both customers should be literate.
+PAN Details/ Form 60 to be available for all the applicants.
+Both the applicants should have mobile numbers mapped to their User IDs in Internet Banking.
+The Joint account holder whoever is initiating the FD Creation request will become the primary account holder and the approver will become the secondary one.
+The pre-closure request if initiated for this FD account, the primary account holder has to initiate the pre-closure request and secondary account holder has to approve the request
+Last Updated On : Tuesday, 24-06-2025

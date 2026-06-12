@@ -1,0 +1,58 @@
+Features
+SBI Unipay (BBPS) – One Stop Solution for Bill Payments and Collections
+Bharat Bill Payment System
+is a Reserve Bank of India (RBI) conceptualized ecosystem driven by National Payments Corporation of India (NPCI). It is a one-stop ecosystem for all recurring bills providing an interoperable and accessible “Anytime Anywhere” recurring payment service to all customers across India with certainty, reliability, and safety of transactions.
+Bharat BillPay enables the consumers of banks and non-banks across India to make bill payment via their preferred mode of channel like Mobile App, Mobile Banking, Website/Pre-login, ATM, Internet Banking, KIOSK, Physical centres like Agent, Bank-Branch, Business Correspondents.
+SBI as Operating Unit on BBPS :
+State Bank of India has been registered as an operating unit under BBPS and started as a Customer Operating unit in 2017. SBI has developed its application “SBI UNIPAY” to function as both Customer Operating Unit and Biller Operating Unit under BBPS.
+SBI Unipay for Customers
+Customers can make bill payments through below mentioned channels of Banks
+YONO
+YONO LITE
+Online SBI (Retail INB)
+YONO Business
+Prelogin Portal
+Business Correspondents / Customer service points
+Salient Features :
+Interoperable (Connecting all billers at one place)
+24x7 anywhere utility for bill payments & recharges.
+Instant confirmation of bill payments in the form of SMS/email/print out.
+SBI Unipay facilitates payments via multiple modes i.e. Net banking, Debit Card, UPI, Credit card, direct debit etc.
+Nil charges for any bill payments through digital mode.
+SBI Unipay for Billers
+SBI Unipay support available for Biller onboarding under the below categories –
+Mobile (Prepaid & Postpaid)
+Electricity
+Loan Repayment
+Water
+DTH
+Municipal Services / Taxes
+Education Fees
+Credit Card
+GAS (LPG & Piped Gas)
+Recurring Deposits
+Mutual Funds
+Cable TV
+Broadband
+Insurance
+Housing Societies
+Subscriptions
+Landline Post-paid
+FasTag Recharge
+Donations
+Clubs & Associations
+Metro/ NCMC Recharge
+Rental
+Gold
+Hospital & Pathology
+Salient Features :
+One point access Integration
+Wider reach through multiple channels and payment modes.
+Biller portal for MIS generation and real time transaction monitoring.
+Improved liquidity due to faster payment collection.
+Cost effective (Flat fee compared to Ad Valorem)
+Supports both Offline and Online biller integration.
+Pay your Bills :
+Prelogin Portal URL -
+https://customer.sbiunipay.sbi/CustomerPortal/quickPay
+Last Updated On : Tuesday, 16-01-2024

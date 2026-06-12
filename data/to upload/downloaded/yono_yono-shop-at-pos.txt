@@ -1,0 +1,14 @@
+Steps to be followed in YONO app
+YONO Pre-login:
+YONO app Pre-login-> Tap on YONO Cash
+YONO Post login: Login to YONO app -> MPIN/User Id & Password-> Landing Page-> Tap on YONO Cash
+Under the “Create Request” tab, select "Cardless shopping", choose the account, enter the amount, and create a one-time YONO Cash PIN.
+Review the transaction details, accept the terms and conditions, and confirm.
+Once the request is processed, you’ll receive a transaction reference number via SMS to your registered mobile number.
+Steps to be followed at the PoS
+Visit any merchant with SBI POS terminal and advise the amount you want to pay for shopping, using YONO, the merchant
+The merchant will enter the amount as advised by the customer and hand over the PoS terminal.
+"Verify the amount and then enter the Transaction Reference Number followed by the YONO Cash PIN.(For YONO Shop @ PoS, the amount entered in PoS terminal can be lesser than or equal to the amount entered while generating the reference number through app)"
+Amount will be debited from your account and equivalent amount will get credited in the account of merchant
+Download YONO SBI
+Last Updated On : Thursday, 19-06-2025

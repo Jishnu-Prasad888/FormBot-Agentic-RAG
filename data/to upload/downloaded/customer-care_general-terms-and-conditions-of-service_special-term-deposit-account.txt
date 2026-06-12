@@ -1,0 +1,8 @@
+Special Term Deposit Account
+Special Term Deposit (STD) Account can be opened in the same way as the Term Deposit Account. The interest on the STD Account is compounded at quarterly intervals and principal and interest are paid on maturity.
+Minimum and maximum period of deposit may be 7 days and 120 months respectively. Minimum and maximum periods are subject to change.
+Minimum amount of deposit is Rs.1,000/- and thereafter, in multiple of Rs.100/-.
+Loan facility is available against Special Term Deposit and loan amount depends upon the residual tenor.
+Other terms and conditions are same as in case of Term Deposit Account.
+The Bank offers other variants of fixed deposits like recurring deposit accounts etc. Further details can be had from the branch where you wish to open the account
+Last Updated On : Saturday, 16-07-2022

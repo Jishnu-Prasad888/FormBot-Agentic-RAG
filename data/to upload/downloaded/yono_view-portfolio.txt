@@ -1,0 +1,9 @@
+View your portfolio and track it anytime, anywhere.
+Pre-requisite
+To view your portfolio, your SBICAP Securities demat & trading account must be linked to YONO. Linking is one time activity.
+How to View
+Log in to YONO SBI
+Go to My Investment section.
+Tap on Link Demat & Trading.
+Download YONO SBI
+Last Updated On : Wednesday, 16-07-2025

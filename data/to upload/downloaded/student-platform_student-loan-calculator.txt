@@ -1,0 +1,74 @@
+EMI chart
+ReCalculate
+Total Annual Cost to Attend:
+Enter the annual costs to attend the college of your choice.
+Duration of Course (In Years)
+|
+1Y
+|
+2Y
+|
+3Y
+|
+4Y
+|
+5Y
+|
+6Y
+|
+7Y
+|
+8Y
+|
+9Y
+Annual Tuition Fees
+|
+1T
+|
+10L
+|
+20L
+|
+30L
+|
+40L
+|
+50L
+|
+60L
+|
+70L
+|
+80L
+|
+90L
+|
+100L
+Annual Hostel Fees
+Annual Other Fees (Mess etc)
+Books, Supplies, Laptop etc
+Gift Aid (Scholarships & Grants):
+Enter the total amount of gift aid awarded.
+Scholarships
+Grants
+Your Financial Contributions:
+Enter the amounts of savings and income you plan to contribute to fund your education.
+Student Savings
+Parents and Relatives
+others and Relatives
+0
+/-
+Total Annual Cost to Attend
+0
+/-
+Total Gift Aid
+0
+/-
+Total Contributions
+0
+/-
+Total Amount to Finance
+Note:
+Calculator is provided only as general self-help Planning Tools.
+Calculated Result is indicative only.
+Last Updated On : Wednesday, 10-12-2025

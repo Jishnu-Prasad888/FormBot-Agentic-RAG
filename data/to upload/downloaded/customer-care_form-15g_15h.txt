@@ -1,0 +1,9 @@
+1. What is the functionality of 15G/H?
+The forms 15G and 15H need to be submitted for tax exemptions on interest earned on bank deposits
+2. What is the criteria for submitting 15G?
+Form 15G is meant for non-senior citizens i.e. <=60 years. The aggregate of the interest (excluding interest earned on securities) received during the financial year should not exceed the basic exemption slab of Rs. 2.5 lakh (as per Old Tax regime) and Rs 3.00 Lakhs (as per New Tax regime).
+3. What is the criteria for submitting 15 H?
+Form 15H is meant for senior citizens i.e. >60 years. The aggregate of the interest (excluding interest earned on securities) received during the financial year should not exceed the basic exemption slab of Rs. 2.5 lakh (as per Old Tax regime) and Rs 3.00 Lakhs (as per New Tax regime).
+4. Can NRI customer generate and submit 15G/H in SBI YONO Lite?
+No. In SBI YONO Lite NRI customer cannot submit form 15G/H.
+Last Updated On : Tuesday, 04-02-2025

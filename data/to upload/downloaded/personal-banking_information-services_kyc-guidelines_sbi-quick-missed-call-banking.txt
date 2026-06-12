@@ -1,0 +1,227 @@
+SBI Quick – Missed Call Banking
+SBI Quick – MISSED CALL BANKING is a free service from the Bank where in you can get your Account Balance, Mini Statement and more just by giving a Missed Call or sending an SMS with pre-defined keywords to pre-defined mobile numbers from your registered mobile number. Please ensure that your mobile number is updated in your account to be able to register for this service
+If you have an Android, Windows, iOS or Blackberry phone, you can download SBI Quick app from the respective App Store. Various services of SBI Quick facility are available in pre-login section itself. With this app you need not remember the various keywords and destination mobile numbers. Once app is installed, internet connection is not required to use SBI Quick, as the communication would happen over SMS or Missed Call. Note that mobile app is not mandatory for using this facility.
+Download Now
+DOMESTIC SERVICES
+ONE TIME REGISTRATION PROCESS
+ONE TIME REGISTRATION PROCESS
+Send SMS, ‘REG Account Number’ to
+07208933148
+e.g. REG 12345678901
+from the registered mobile no for that particular account. Confirmation message will be received indicating successful/unsuccessful registration.
+If successful
+then you can start using the services.
+If unsuccessful:
+Check the SMS format and destination mobile number
+Ensure that your mobile number from which the SMS is sent, is updated with the Bank for that account number. If not, visit your Branch and update the same.
+ACCOUNT SERVICES
+ACCOUNT SERVICES
+Balance Enquiry
+To get the last ‘clear’ balance on the account.
+You may give a Missed Call or send an SMS ‘
+BAL
+’ to
+919223766666
+MOD Balance Enquiry
+Send SMS “
+MODBAL
+” to “
+919223766666
+” to get available balance and MOD balance as response through SMS
+Mini Statement
+To get the Mini Statement i.e. last 5 transactions on the account.
+You may give a Missed Call or send an SMS
+‘MSTMT
+’ to
+919223766666
+Cheque Book Request Acknowledgement
+Send message "
+CHQREQ
+" to
+917208933145
+You will receive an SMS. Send consent
+SMS (CHQACCY6 digit no. received in SMS)
+to
+917208933145
+within 2 hours of receipt of SMS for further processing.
+Cheque Book Request
+Send message
+"CHQREQ"
+to
+917208933145
+You will receive an SMS. Send consent SMS (CHQACCY6 digit no. received in SMS) to 09223588888 within 2 hours of receipt of SMS for further processing
+E-Statement – last 6 month
+You can avail e-statement for last 6 months of your Savings Bank account. The statement will be sent on your registered email ID with password encrypted PDF file
+Send an SMS
+‘ESTMT <space> <Account Number> <space> <code>
+to
+917208933145
+(Note: Code is any 4 digit number of your choice which will be used to encrypt the PDF attachment sent to your registered email address)
+Education Loan Interest Certificate
+To avail interest certificate of your Education Loan for the Financial Year.
+Send SMS
+ELI <space> <Account Number> <space> <code>
+to
+917208933145
+(Note: Code is any 4 digit number of your choice which will be used to encrypt the PDF attachment sent to your registered email address)
+Home Loan Interest Certificate
+To avail interest certificate of your Home Loan for the Financial Year
+Send SMS
+HLI <space> <Account Number> <space> <code>
+to
+917208933145
+(Note: Code is any 4 digit number of your choice which will be used to encrypt the PDF attachment sent to your registered email address)
+ENROLL Positive Pay System (PPS)
+You can enrol the cheque details in positive pay system. One time registration from SBI Branch is required before using the same. You can approach any SBI Branch register to your Account to avail this facility. Once registered for this feature, it is required to submit the details of issued cheques to Bank through various electronic Channel (as made available by Bank) . You can send the following details from your registered mobile no to
+07208933145
+SMS format.
+CHQL Cheque No Amount Date of issuance(ddmmyyyy) Y/N (Multi City/Normal) Beneficiary Name. You will get the SMS based confirmation message from Bank regarding the status of Cheque details lodgement.
+Full list of Services
+Send SMS “HELP” to “917208933145” to get full list of services as response through SMS.
+Language Change (Hindi/English)
+For Language Change (Hindi/English) send message Hindi for Hindi language & English for English language to
+917208933148
+GREEN PIN
+GREEN PIN
+Now you can generate your ATM Card PIN through an SMS.
+Send SMS from registered mobile number in the below format,
+PIN CCCC AAAA to 8655807197
+Where XXXX is the last 4 digits of
+ATM Card number
+and YYYY is last 4 digits of the
+Account Number.
+OTP will be send on your registered number
+OTP must be used to change the SBI Debit Card PIN at any ATM within 2 days as OTP will be valid for 2 days only. Recommended to be done within 24 hours.
+LOANS
+LOANS
+To get latest features of loan products
+SMS ‘HOME’ /‘CAR’/ ‘Personal’/ ‘Gold’ / ‘SME’ to
+917208933145
+You will receive an instant SMS advising the features of the service. You may give a Missed Call to following numbers for:
+917208933140 for Home Loan
+917208933141 for Car Loan
+917208933143 for Gold Loan
+917208933142 for Personal Loan
+917208933144 for SME
+Our representative will also call you to assist in filling up the details for Loan.
+MOBILE TOPUP/ PREPAID MOBILE RECHARGE
+MOBILE TOPUP/ PREPAID MOBILE RECHARGE
+Registered SBI Quick Customers can do Recharge of the Same registered mobile No by sending a SMS on
+917208933145
+. This is a two-step process.
+In first step you have to send a SMS
+MOBRCService Provider Recharge_amount
+3 CHAR ABBREVIATION FOR OPERATORS:
+AIRTEL               : AIR
+BSNL                 : BSN
+MTNL DELHI     : MTD
+MTNL MUMBAI : MTM
+RELIANCE JIO    : JIO
+VI                       :  VI
+Daily limit per user is capped at Rs 700 and monthly limit at Rs.1000
+After successful processing of first Step Message you will receive a confirmation message with 6 digit OTP
+Once the SMS is received you have to send a SMS on 917208933145
+MOBACC 6 digit OTP
+This SMS has to be sent within 10 minutes of receiving the OTP message.
+Once the second step message gets received, your account will get debited by respective amount and recharge will be processed. You will also get a confirmation SMS from your Telecom Operator.
+MOBILE TOPUP/RECHARGE confirmation
+For Mobile Topup/ Recharge confirmation send message
+" MOBACC OTP" to 917208933145
+PM SOCIAL SECURITY SCHEMES
+PM SOCIAL SECURITY SCHEMES
+Pradhan Mantri Suraksha Bima Yojana (PMSBY) & Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)
+You can now register for Pradhan Mantri Suraksha Bima Yojana (PMSBY) and Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) by an SMS from the SBI Quick App. As there are more than 3 data items to be provided, it is advisable that this service be availed through the SBI Quick App only.
+PMJJBY/PMSBY(space)A/CNO(space)RELATIONSHIP_WITH_NOMINEE(space)NOMINEEDOB(DDMMYYYY)(space)NOMINEE_FIRSTNAME(space)NOMINEE_LASTNAME to
+917208933145
+Note that Prime Minister’s Social Security Schemes can also be availed of by visiting your nearest SBI Branch.
+DE-REGISTRATION PROCESS
+DE-REGISTRATION PROCESS
+You can de-register from SBI Quick through the following process
+SMS ‘DREG ’ to 917208933148
+You will receive a confirmation message indicating successful/unsuccessful de-registration.
+If successful then you will not be able to use the services till you register again.
+If unsuccessful check the format and destination mobile number and try again.
+Charges:
+For 6 digit number i.e. 567676 premium charges will apply.
+For 10 digit numbers, SMS charges will be as per customer’s mobile bill plan.
+For Missed Call, there is no charge. If the customers listens to IVR of 3 seconds which will be played after 4-5 rings, then customer will be charged as per customer’s mobile bill plan for 3 seconds
+INTERNATIONAL SERVICES
+ONE TIME REGISTRATION PROCESS
+ONE TIME REGISTRATION PROCESS
+Send SMS, ‘REG Account Number’ to
+918422833333
+e.g. REG 12345678901
+from the registered mobile no for that particular account. Confirmation message will be received indicating successful/unsuccessful registration.
+If successful
+then you can start using the services.
+If unsuccessful:
+Check the SMS format and destination mobile number
+Ensure that your mobile number from which the SMS is sent, is updated with the Bank for that account number. If not, visit your Branch and update the same.
+DE-REGISTRATION PROCESS
+DE-REGISTRATION PROCESS
+You can de-register from SBI Quick through the following process
+SMS ‘DREG ’ to
+918422833333
+You will receive a confirmation message indicating successful/unsuccessful de-registration.
+If successful
+then you will not be able to use the services till you register again.
+If unsuccessful
+check the format and destination mobile number and try again.
+Charges:
+For 6 digit number i.e. 567676 premium charges will apply.
+For 10 digit numbers, SMS charges will be as per customer’s mobile bill plan.
+For Missed Call, there is no charge. If the customers listens to IVR of 3 seconds which will be played after 4-5 rings, then customer will be charged as per customer’s mobile bill plan for 3 seconds
+Balance Enquiry
+BALANCE ENQUIRY
+To get the last ‘clear’ balance on the account.
+You may give a Missed Call or send an SMS ‘BAL’ to
+919220055222
+Mini Statement
+MINI STATEMENT
+To get the Mini Statement i. e. last 5 transactions on the account.
+You may give a Missed Call or send an SMS
+‘MSTMT’
+to
+919220055333
+MOD Balance Enquiry
+MOD BALANCE ENQUIRY
+Send SMS “MODBAL” to “
+919220055222
+” to get available balance and MOD balance as response through SMS.
+Full list of Services
+FULL LIST OF SERVICES
+Send SMS “HELP” to “
+918108511111
+” to get full list of services as response through SMS.
+ATM Card Configuration
+ATM CARD CONFIGURATION
+ATM Card Blocking
+You can block the ATM Card linked to the registered account in case of loss/theft. To block atm card, send an SMS from registered mobile number as ‘BLOCKXXXX’ to 567676 (XXXX represents last 4 digit of the card number).
+On acceptance of the request for blocking, you will get a confirmatory SMS alert that contains the ticket number, date and time of blocking. Note that ATM Card can also be blocked through the following means:
+By calling State Bank Contact Centre.
+By visiting any nearest State Bank Branch
+By logging on to OnlineSBI (only for personal segment customers).
+ATM Card Switch On/Off usage at PoS, ATM, etc.
+You can now control your ATM Card channel of usage by sending an SMS from your registered mobile number. You can choose to activate/deactivate usage at ATM, POS, E-Commerce
+Send an SMS
+‘SWON/SWOFF ATM/POS/ECOM/INTL/DOM/NFC xxxx(last 4 digits(5 digits in case of NFC) of Customer's debit card no). to 918422933333
+SWON: Switch on
+Swoff: Switch off
+E.g. SWON POS 1234 to activate POS usage
+SWOFF INTL 1234 to deactivate International usage
+On acceptance of the request for activation/deactivation, you will get a confirmatory SMS alert that contains the reference number, date and time of request. Note that ATM Card usage can also be controlled through the following means:
+Through the State Bank Anywhere mobile app.
+By logging on to OnlineSBI (only for personal segment customers).
+What If you have two account numbers with the Bank with the same mobile number mentioned on both?
+You can register for SBI Quick for only one account at any point of time. If you want to change the mapped account number, you have to de-register SBI Quick from the first account and then register for the second one.
+Is it mandatory that the mobile number to be used for SBI Quick has to be registered with the Bank for that particular account?
+Yes. If not done, visit your Home Branch and update your mobile number for that account.
+Is it available for all types of Accounts?
+SBI Quick is available for SB/CA/OD/CC accounts.
+How is this facility different from State Bank Anywhere or State Bank Freedom?
+There are 2 distinct differences:
+You don’t need a Login ID, Password to use this facility. Just one time registration from the mobile number recorded with Bank for that particular Account.
+SBI Quick does not provide any financial transactional services. Unlike State Bank Anywhere or State Bank Freedom there are no transaction services available.
+Is there any limit of the number of enquiries that can be made in a day/month?
+As of now there is no such restriction. Unlimited
+Last Updated On : Monday, 13-04-2026

@@ -1,0 +1,19 @@
+Process of activation of Inoperative Accounts
+Inoperative Accounts:
+A savings/ current account shall be treated as inoperative, if there are no ‘*customer induced transactions’ in the account for a period of over two years.
+Impact on account on becoming Inoperative:
+When an account become Inoperative, debit transaction will not be allowed without submission of fresh KYC documents.
+Process of activation of Accounts:
+Customer having Inoperative Account requires to visit any SBI branch with latest KYC documents.
+A request should be given to the branch for activation of account.
+Branch will activate the account based on the KYC documents submitted by the customer.
+Customer will be informed through SMS / e-mails on activation of account.
+All request received by the branches for activation of account will be processed within three working days from the receipt of the complete application.
+*Customer Induced transactions:
+The transactions in account which are in the nature of:
+a financial transaction initiated by or done at the behest of the account holder by the bank/ third party such as cash withdrawals / Deposits, RTGS, NEFT, NACH, Dividend etc.  or;
+a non-financial transaction such as an enquiry or request for any product/ service initiated by the account holder through any ATM or internet banking or mobile banking application of the bank or through Third Party Application Providers, which requires two-factor authentication (2FA) and leaves a trail for audit purposes or successful log-in to the internet banking/ mobile banking application etc.  or;
+KYC updation done in face-to-face physical mode or through digital channels such as internet banking or mobile banking application of the bank
+Reactivate Your
+Account Now
+Last Updated On : Wednesday, 10-06-2026

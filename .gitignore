@@ -17,3 +17,4 @@ backend/logs/rag.log
 eval/
 chroma_db/
 popos/
+logs/

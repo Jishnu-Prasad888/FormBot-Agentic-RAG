@@ -1,0 +1,65 @@
+Purpose
+To enable the farmers to avoid distress sale immediately after harvest when the prices are usually low, by providing necessary liquidity support against pledge of these agri. commodities (farm produce).
+The loan is given against the receipts issued by
+Warehouses registered with WDRA.
+Warehouses managed by approved Collateral Managers
+Features
+Eligible:
+Individual farmers(single/joint), FPOs, SHGs, JLGs, Agro-Food processing Units/Farmer Co-operative Societies, PACS.
+Type of Facility:
+Demand Laon with maximum tenor of 12 months.
+Quantum of loan:
+Loan Limit (Loan to Value) = 75% of underlying security of Warehouse Receipt (Quantity*Valuation). The commodity offered for pledge will be valued by considering the lowest of the following:
+a. Minimum Support price, wherever declared.
+b. Current Market price.
+c. Value mentioned in e-NWR/WHR.
+Limit = (Quantity × Valuation) – Margin.
+Maximum loan:
+Based on value of value of Warehouse Receipt(s) to be pledged.
+For Individual Farmers/SHGs/JLGs: 2 Crores
+For FPOs/Farmer Co-operative societies/PACS/Agro-Food Processing units: 10 crores
+Moratorium:
+NA
+Repayment:
+The maximum loan term – 12 months. The maximum loan term shall be one month prior to the shelf life of the commodity.
+Security:
+Primary:
+Hypothecation / Pledge of e-NWR / Warehouse Receipts issued by WDRA registered Warehouses / Collaterally Managed Godowns
+Collateral:
+NIL
+Loans given against e-NWRs will be covered in Credit Guarantee Scheme for e-NWR based Pledge Financing (CGSNPF).
+Documents
+Application form with 2 photos
+ID & address proof
+eNWRs/WHRs
+Land records (in case of farmers)
+Security documents for loan.
+Any other document as per sanction.
+For e-NWRs:
+For Farmers (Individual/Joint/SHG/JLG):
+Tenure upto 6 months
+*
+6 M MCLR
+Tenure above 6 months
+15 bps + 1Yr MCLR
+*
+7% p.a. for small and marginal farmers subject to GOI guidelines on Interest Subvention Scheme from time to time.
+For Others:
+Tenure upto 6 months
+25 bps + EBLR
+Tenure above 6 months
+50 bps + EBLR
+For WHRs issued by Collateral Managers
+For Farmers (Individual/Joint/SHG/JLG):
+Tenure upto 6 months
+15 bps + 6 M MCLR
+Tenure above 6 months
+30 bps + 1Yr MCLR
+For Others:
+For Farmers (Individual/Joint/SHG/JLG):
+Tenure upto 6 months
+40 bps + EBLR
+Tenure above 6 months
+65 bps + EBLR
+For detailed and updated information, please contact our nearest Branch.
+Last Updated On : Saturday, 02-08-2025

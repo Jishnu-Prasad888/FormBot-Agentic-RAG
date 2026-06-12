@@ -1,0 +1,98 @@
+National Pension System for NRIs
+National Pension System (NPS) is a defined contribution pension system introduced by the Government of India as a part of pension sector reforms, with an objective to provide social security to all citizens of India. It is administered and regulated by PFRDA.
+Features of National Pension System for NRI
+Tier I – Pension account (Mandatory A/C - Tax benefit available)
+Tier II – NRIs are not eligible
+Minimum Contribution during A/C opening
+Tier I – Rs.500
+Minimum total contribution in a year - Rs.1,000 (Min. amount per contribution Rs.500)
+Part Withdrawals under Tier I
+A partial withdrawal of accumulated pension wealth, not exceeding 25% of the employee contributions, after a lock in period of 3 years.
+Allowed to withdraw only a maximum of three (3) times during the entire tenure subject to conditions prescribed by the Regulator.
+Exit Option under Tier I
+1. On attaining age of 60 years:
+Min. 40% of the corpus needs to be invested in Annuity System
+60% of the corpus can be commuted/withdrawn in lump sum/ staggered anytime up to age of 75 yrs.; 40% of total corpus withdrawn is tax free
+If the accumulated corpus is less than ₹5 lakhs, the entire corpus is paid as lumpsum to the subscriber
+2. Before 60 years of age (after completion of 05 years):
+20% of the corpus can be withdrawn in lump sum
+80% of the corpus will be invested in a ‘Annuity System’
+If the accumulated corpus is less than ₹2.5 lakh, the entire corpus is paid as lumpsum to the subscriber.
+Eligibility for NRI NPS account
+All Citizens of India
+Age: Individuals aged between 18-70 years
+Covered under any pension System: Eligible to subscribe
+Benefits of investing in NPS for securing Post Retirement Life
+1.
+Tax Benefit
+available under Tier I Account:
+a. Employee Contribution:
+i. Tax deduction u/s 80CCE for investments (10% of Basic & DA) within overall limit of Rs. 1.50 lacs.
+ii.Exclusive tax savings provision: Tax deduction u/s 80CCD (1B) on contribution of Rs.50,000
+b.Employer contribution:
+Tax deduction up to 10% of salary (Basic + DA) u/s 80CCD (2) subject to an aggregate limit of ₹7.5 lakh
+2.
+Low Cost
+– A very low-cost product with Fund Management Charges of 0.01%.
+3.
+Superior returns
+– Attractive market linked returns
+4.
+Flexibility of Investments
+– Subscriber may select a Pension Fund Manager (PFM) of their choice. Subscriber is allowed to change PFM once during a Financial Year. Subscribers may also define their asset allocation, which may be changed four times in a given Financial Year.
+5.
+Portability
+– Portable across jobs and geographies.
+6.
+Online Access to NPS account
+– 24x7x365 through Web & Mobile App of Central Recordkeeping Agency (CRA)
+7.
+One-time shift to NPS
+- Existing corpus under Superannuation can one-time be transferred to NPS without any Tax Incidence.
+8.
+Continuation in NPS scheme post retirement
+– Provision to contribute till 70 years or to defer withdrawal up to the age of 75 years.
+9.
+Complete withdrawal for corpus less than Rs.5 lacs
+- In case total accumulated corpus is less than Rs. 5 Lacs on attaining the age of 60 or later, subscriber may withdraw entire corpus.
+How to Subscribe National Pension System for NRI
+Subscribers can apply NPS for NRI through the below mentioned routes:
+Online Mode: Subscribers can apply for NPS account online. Desirous subscriber may visit
+www.onlinesbi.sbi
+and click on ‘NPS Registration’, which is available under ‘e-Services’ menu.
+Offline Mode: Subscriber desirous to join NPS (National Pension System) for NRI can visit nearest registered State Bank of India branch for NPS and submit Registration Form & NPS Contribution Instruction Slip (NCIS) along with self-attested KYC documents.
+Click to download the following forms:
+Subscriber Registration Form (CSRF) for Retail Individual & Corporate
+Annexure I to CSRF (Tier II details)
+Annexure II to CSRF (Additional request details)
+Annexure III to CSRF (Additional nomination form)
+NPS Contribution Instruction Slip (NCIS)
+Registered branch list for NPS business is available at ‘POP-SP locations’ menu under ‘Quick Links’ at
+npscra.nsdl.co.in
+How to make subsequent contributions
+Subscribers can contribute for NPS through the below mentioned routes:
+Online Mode: Subscriber may visit www.onlinesbi.sbi and click on ‘NPS Contribution’, which is available under ‘Payments/ Transfers’ menu.
+Offline Mode: Subscriber may visit nearest registered State Bank of India branch for NPS and submit NPS Contribution Instruction Slip (NCIS) along with the contribution amount.
+Standing Instruction (SI)
+Standing Instruction (SI) functionality is available to average cost of purchase just like Systematic Investment Plan (SIP) facility in Mutual Funds. Interested subscribers can give SI/ Auto Debit instructions for processing their monthly contributions either online through ‘NPS Contribution’ menu available at www.onlinesbi.sbi or by submitting physical request form to a registered Bank branch for NPS account for NRI. SI request form may be downloaded by clicking on the link below.
+NPS SI Request Form
+Point of Presence (POP) / Bank Charges:
+Following costs are to be borne by the Subscriber at the time of registration and/or performing any transaction through Point of Presence (POP)/ Bank. The contribution will be remitted net of bank charges.
+Type of Service
+Service charges to be paid to the Point of Presence (POP) by the Subscriber (excluding GST)
+Initial Subscriber Registration/per subscriber
+Rs. 400/-
+Initial Contribution amount / per subscriber
+Ad valorem 0.50% of the contribution amount (Minimum: ₹30/- & Maximum: up to ₹25,000/-)
+Subsequent Contribution Transaction Charge/ per subscriber
+Ad valorem 0.50% of the contribution amount (Minimum: ₹30/- & Maximum: up to ₹25,000/-)
+Any other transaction not involving a contribution from subscriber/ per subscriber
+Rs. 30/-
+Persistency
+₹50 per annum for annual contribution from ₹1000 to ₹2999
+₹75 per annum for annual contribution from ₹3000 to ₹6000
+₹100 per annum for annual contribution above ₹6000 (only for NPS All Citizen model) – recovered through cancellation of units
+Service tax and other levies, as applicable, will be levied as per the existing tax laws. Also, please note that the fee structure may change from time to time as may be decided by PFRDA.
+Grievance Redressal Policy For NPS & NPS Lite
+Grievance Redressal Policy for NPS & NPS Lite
+Last Updated On : Friday, 13-12-2024

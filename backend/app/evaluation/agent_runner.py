@@ -14,6 +14,15 @@ from app.rag.cross_encoder import cross_encoder
 from app.evaluation.evaluator import evaluate_single
 from app.embeddings.openai_client import openai_client
 from app.core.config import settings
+from app.core.evaluation_logger import EvaluationLogger
+from app.services.elasticsearch_service import es_service
+
+# Global logger instance
+_current_logger = None
+
+def set_evaluation_logger(logger: EvaluationLogger):
+    global _current_logger
+    _current_logger = logger
 
 
 RAG_SYSTEM = """Answer the question carefully"""
@@ -52,20 +61,29 @@ async def evaluate_question(
     """
     t0 = time.time()
     
+    if _current_logger:
+        _current_logger.log("QUESTION_START", f"Q: {question}\nExpected: {expected_answer}")
+    
     # Synonym expansion
     synonym_expander = get_synonym_expander()
     queries = synonym_expander.expand_query(question)
+    if _current_logger:
+        _current_logger.log("SYNONYM_EXPANSION", f"Generated {len(queries)} queries:\n" + "\n".join(queries))
     
     # Retrieve chunks for all query variants
     all_chunks = []
     chunk_ids_seen = set()
     
-    for query in queries:
+    for idx, query in enumerate(queries, 1):
         # Vector search (nearest neighbor)
         vector_results = await vector_rag.retrieve(query, "text_documents", top_k=10)
+        if _current_logger:
+            _current_logger.log(f"VECTOR_SEARCH_{idx}", f"Query: {query}\nFound: {len(vector_results)} chunks")
         
         # BM25 search
         bm25_results = bm25_retriever.search("text_documents", query, top_k=10)
+        if _current_logger:
+            _current_logger.log(f"BM25_SEARCH_{idx}", f"Query: {query}\nFound: {len(bm25_results)} chunks")
         
         # Merge
         merged = _merge_results(vector_results, bm25_results)
@@ -77,19 +95,49 @@ async def evaluate_question(
                 chunk_ids_seen.add(cid)
                 all_chunks.append(c)
     
+    if _current_logger:
+        _current_logger.log("MERGE_RESULTS", f"Total unique chunks: {len(all_chunks)}")
+    
     # Rerank to top_k
     reranked = cross_encoder.rerank(question, all_chunks, top_k=top_k)
+    if _current_logger:
+        _current_logger.log("RERANK", f"Top {top_k} chunks after reranking")
+        for i, chunk in enumerate(reranked, 1):
+            _current_logger.log(f"CHUNK_{i}", 
+                f"Score: {chunk.get('score', 0)}\n"
+                f"File: {chunk.get('filename', 'unknown')}\n"
+                f"Text: {chunk.get('chunk_text', '')[:300]}...")
     
     # Generate answer
     chunk_texts = _chunk_texts(reranked)
-    context_text = "\n---\n".join(chunk_texts)
+    
+    # Enhance with Elasticsearch
+    original_count = len(chunk_texts)
+    enhanced_texts = await es_service.enhance_with_iterative_query(chunk_texts, question, max_tries=5, logger=_current_logger)
+    if _current_logger:
+        _current_logger.log("ES_ENHANCEMENT_COMPLETE", 
+            f"Original: {original_count} chunks\n"
+            f"Enhanced: {len(enhanced_texts)} chunks\n"
+            f"Added: {len(enhanced_texts) - original_count} from Elasticsearch"
+            f"\nEnhanced texts :\n" + "\n---\n".join(enhanced_texts)
+            )
+    
+    context_text = "\n---\n".join(enhanced_texts)
     
     if context_text.strip():
         prompt = f"Context:\n{context_text}\n\nQuestion: {question}"
     else:
         prompt = f"Question: {question}"
     
+    if _current_logger:
+        _current_logger.log("LLM_PROMPT", f"Prompt length: {len(prompt)} chars\nPrompt preview:\n{prompt[:500]}...")
+    
+    llm_start = time.time()
     generated_answer = await openai_client.generate(prompt, system=RAG_SYSTEM)
+    llm_time = (time.time() - llm_start) * 1000
+    
+    if _current_logger:
+        _current_logger.log("LLM_ANSWER", f"Generated in {llm_time}ms:\n{generated_answer}")
     
     # Build retrieved chunk IDs and derive gold IDs via text matching
     retrieved_chunk_ids = [c.get("chunk_id", "") for c in reranked if c.get("chunk_id")]
@@ -108,9 +156,20 @@ async def evaluate_question(
         if best_score > 0:
             gold_chunk_ids = {c.get("chunk_id") for c in reranked if c.get("score", 0) >= best_score * 0.9 and c.get("chunk_id")}
 
+    if _current_logger:
+        _current_logger.log("GOLD_CHUNKS", f"Identified {len(gold_chunk_ids)} gold chunks from {len(retrieved_chunk_ids)} retrieved")
+
     # Score
-    scores = await evaluate_single(question, expected_answer, generated_answer, chunk_texts,
+    scores = await evaluate_single(question, expected_answer, generated_answer, enhanced_texts,
                                    retrieved_chunk_ids=retrieved_chunk_ids, gold_chunk_ids=gold_chunk_ids)
+    
+    if _current_logger:
+        _current_logger.log("METRICS", 
+            f"Accuracy: {scores.get('accuracy_llm')}\n"
+            f"Faithfulness: {scores.get('faithfulness')}\n"
+            f"Context Precision: {scores.get('context_precision')}\n"
+            f"Context Recall: {scores.get('context_recall')}\n"
+            f"Answer Relevancy: {scores.get('answer_relevancy')}")
     
     latency_ms = round((time.time() - t0) * 1000, 1)
 

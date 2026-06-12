@@ -1,0 +1,40 @@
+Video KYC Account Opening
+1. Can minor accounts be opened through this process?
+No. The process is available for customers who are major in age, literate, and should be able to sign uniformly.
+2. Can joint accounts be opened through this process?
+No. The process is presently available for singly operated accounts only.
+3. When can customer carry out the video KYC process? Is it available 24*7?
+Customer can carry out the video KYC on any working day during Business Hours. This facility is not available on Bank Holidays at the video calling centre (LCPC), including second/fourth Saturdays and all Sundays. It will depend upon the Home branch selected and the working hours of the LCPC linked to Home branch.
+4. Does this account is activated for Debit and Credit transactions?
+Accounts will be opened automatically with debit restriction after successful video KYC, however you can credit this account. The account will be debit activated post verification and authorization within T+2 days.
+5. Can I open multiple accounts using Video KYC?
+No. Only one account can be opened using Video KYC for user who is New to bank
+6. Is email address mandatory to open this account?
+No, Email address is not mandatory for this account. However, in case email address is being entered in the App, a separate OTP is sent to the email of the customer to verify the same and to ensure the correctness of the email being entered into the system
+7. Is PAN mandatory to open accounts through this process?
+PAN is mandatory to open this account.
+8. Why do Customer need to give access to his/her location for the video KYC process? Why do he/she need to give consent for his/her camera and microphone?
+Providing location access will help in ascertaining his/her location. According to RBI guidelines, he/she need to be in India to carry out the VCIP. Location of the customer is for verification purpose only and will not be shared with anyone. Since it is a video verification process, the consent to use the camera and microphone is needed to proceed with the VCIP process.
+9. What if Insta Plus journey is started by mistake and customer wants to open any other type of account (Insta /Digital /Regular) Savings account?
+The customer has to wait for T+2 days till the application is purged.
+10. Whether passbook and cheque book will be given to customer?
+Cheque book are available on request by post logging through YONO or and passbook can be obtained by visiting branch
+11. Customer had tried carrying out the Video KYC process but is not successful due to slow internet connection and video quality. What can he/she do?
+Customer can also open Savings account through YONO using e-KYC/OVD by entering all the data and visiting branch once for completion of KYC process. Alternatively, he/she can directly visit any Branch with Aadhaar/OVD and can open Savings account.
+12. Will there be any limitation on transactions if the account is opened through VCIP process?
+Once the account is opened and activated there are no limitations on number or amount of transactions on the account
+13. What can lead to rejection of video KYC?
+Video KYC can be rejected due to various reasons such as low video quality etc. showing incorrect PAN card, customer’s photos could not be captured due to insufficient lighting etc
+14. If the Customer has rejected location/camera access by mistake. What should he/she do?
+Customer need to grant location and Camera access to proceed with the VCIP. If the same has been rejected by mistake he/she can resume the process using mobile number and application password.
+15. What are the benefits to customer for opening these accounts?
+The benefits are as below:
+• No Issuance/ Annual Maintenance Charges for ATM Debit Card
+• No Charges for non- maintenance of Average Monthly Balance.
+• Free Consolidated Account Statement
+• Free SMS and Internet Banking facility
+16. What will be the charges in this account?
+Charges for all services other than those mentioned above will be in accordance with extant service charges applicable to Regular Savings Bank account without cheque book
+17. I have not received account number after completion of Video KYC call?
+Please resume from the YONO Application and check the status of your call, if successful you will be able to view the Account number.
+Last Updated On : Monday, 03-02-2025

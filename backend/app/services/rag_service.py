@@ -17,6 +17,8 @@ from app.rag.evaluator import (
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.repositories.log_repository import log_repo
 from app.core.config import settings
+from app.services.elasticsearch_service import es_service
+from app.core.evaluation_logger import EvaluationLogger
 
 
 RAG_SYSTEM = """You are an expert assistant. Answer the question using only the provided context.
@@ -122,28 +124,57 @@ class RAGService:
         questions: list[dict],
         dataset_name: str = "default",
     ) -> dict[str, Any]:
+        logger = EvaluationLogger(f"{dataset_name}_{int(time.time())}")
+        logger.log("EVALUATION_START", f"Dataset: {dataset_name}, Total questions: {len(questions)}")
+        
         results = {
             "accuracy": [], "faithfulness": [], "context_precision": [],
             "context_recall": [], "answer_relevancy": [], "latency_ms": [], "failed": [],
         }
 
-        for q in questions:
+        for q_idx, q in enumerate(questions, 1):
             question = q["question"]
             expected = q["expected_answer"]
+            
+            logger.log_question(question, q_idx, len(questions))
+            
             try:
                 start = time.time()
+                
+                # Retrieve
                 chunks = await self.retrieve(question, strategy="hybrid", top_k=settings.TOP_K)
                 context_texts = [r["chunk_text"] for r in chunks]
-                context = "\n\n".join(context_texts)
+                logger.log_retrieval("hybrid", settings.TOP_K, chunks)
+                
+                # Enhance with Elasticsearch iterative queries
+                original_count = len(context_texts)
+                enhanced_texts = await es_service.enhance_with_iterative_query(context_texts, question, max_tries=5, logger=logger)
+                logger.log_es_enhancement(len(enhanced_texts), original_count)
+                
+                context = "\n\n".join(enhanced_texts)
                 prompt = f"Context:\n{context}\n\nQuestion: {question}"
+                
+                llm_start = time.time()
                 answer = await ollama_client.generate(prompt, system=RAG_SYSTEM)
+                llm_latency = (time.time() - llm_start) * 1000
+                logger.log_llm_call("Generate Answer", prompt, answer, llm_latency)
+                
                 latency = (time.time() - start) * 1000
 
-                acc_score, _ = await compute_accuracy(answer, expected)
-                faith_score, _ = await compute_faithfulness(answer, context_texts)
-                cp_score, _ = await compute_context_precision(question, context_texts)
-                cr_score, _ = await compute_context_recall(expected, context_texts)
-                ar_score, _ = await compute_answer_relevancy(question, answer)
+                acc_score, acc_rat = await compute_accuracy(answer, expected)
+                logger.log_metrics("Accuracy", acc_score, acc_rat)
+                
+                faith_score, faith_rat = await compute_faithfulness(answer, enhanced_texts)
+                logger.log_metrics("Faithfulness", faith_score, faith_rat)
+                
+                cp_score, cp_rat = await compute_context_precision(question, enhanced_texts)
+                logger.log_metrics("Context Precision", cp_score, cp_rat)
+                
+                cr_score, cr_rat = await compute_context_recall(expected, enhanced_texts)
+                logger.log_metrics("Context Recall", cr_score, cr_rat)
+                
+                ar_score, ar_rat = await compute_answer_relevancy(question, answer)
+                logger.log_metrics("Answer Relevancy", ar_score, ar_rat)
 
                 results["accuracy"].append(acc_score)
                 results["faithfulness"].append(faith_score)
@@ -152,6 +183,7 @@ class RAGService:
                 results["answer_relevancy"].append(ar_score)
                 results["latency_ms"].append(latency)
             except Exception as e:
+                logger.log_error(str(e), question)
                 results["failed"].append({"question": question, "error": str(e)})
 
         def avg(lst): return round(sum(lst) / len(lst), 4) if lst else 0.0
@@ -165,6 +197,8 @@ class RAGService:
             "latency_avg_ms": avg(results["latency_ms"]),
             "failed_questions": results["failed"],
         }
+        
+        logger.log_summary(final)
 
         await log_repo.create_evaluation_run(db, {
             "id": str(uuid.uuid4()),

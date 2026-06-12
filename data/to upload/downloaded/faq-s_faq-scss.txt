@@ -1,0 +1,116 @@
+FAQ SCSS
+1. What are the documents required for opening a Senior Citizens’ Account (SCSS) account with SBI?
+SCSS account opening form (Form 1)
+Nomination Form
+Passport size photograph
+Copy of PAN Card/ Form 60-61
+Copy of Aadhaar / Aadhaar Enrolment Number
+2. What are the mandatory documents related with KYC required for opening SCSS, 2019?
+PAN and Aadhaar of the customer are mandatorily required for opening SCSS, 2019 account.
+3. Whether Aadhaar is necessary to open SCSS account?
+Yes. Aadhaar is necessary during account opening.
+Where the Aadhaar Number has not been assigned to an individual, he shall furnish proof of application of enrolment for Aadhaar at the time of opening an account and the account holder shall furnish the Aadhaar number to the Branch within a period of six months from the date of opening of account for linking the account with Aadhaar Number.
+If a Depositor has already opened an account and has not submitted his Aadhaar number to the Branch, he shall do so within a period of six months with effect from the 1st day of April 2023.
+4. What will be impact in the account if Aadhaar has not been submitted by the Customer?
+In the event of failure of the Depositor to submit the Aadhaar number within the specified period of six months, his account shall cease to be operational till the time he submits the Aadhaar Number to the Branch.
+5. Whether PAN is mandatory to open an SCSS account?
+Yes. The Permanent Account Number or Form 60 as defined in the Income Tax Rules, 1962 is mandatory.
+Provided that the individual who has not submitted the Permanent Account Number at the time of opening an account shall submit the same to the Branch within a period of two months from the date of happening of any of the following events, whichever is the earliest, namely: -
+The balance at any point of time in the account exceeds Rupees fifty thousand.
+The aggregate of all credits in the account in any financial year exceeds Rupees one lakh.
+The aggregate of all withdrawals and transfers in a month from the account exceeds Rupees ten thousand.
+6. What will be impact in the account if PAN has not been submitted by the Customer?
+In the event of the failure of the Depositor to submit the Permanent Account Number within the specified period of two months, his account shall cease to be operational till the time he submits the Permanent Account Number to the Branch.
+7. Can a joint account be opened under the Scheme with any person?
+Joint account under the SCSS, 2019, can be opened only with the spouse. [Rule 3 (4)] Govt. Notification G.S.R. 916(E) dated 12.12.2019.
+8. Can a depositor open more than one account under the Scheme?
+Any depositor may open an account at any deposit office by making an application in Form-1 along with the amount of deposit as per the pay-in-slip, duly filled in, along with age proof.
+A depositor may operate more than one account under these rules subject to the condition that the deposits in all accounts taken together shall not exceed the maximum limit as specified under rule 4. A depositor may open the account in individual capacity or jointly with spouse.
+9. What should be the age of the spouse in case of a joint account?
+In case of a joint account, the age of the first account holder shall be considered to determine the eligibility to open the account and there shall be no age limit for the second applicant. (i.e. spouse). [Rule 3 (5)]
+10. What will be the share of the joint account holder in the deposit in an account?
+The whole amount of deposit in a joint account shall be attributable to the first account holder only. [Rule 3 (6)]
+11. Whether both the spouses can open separate accounts in their individual capacity with separate limit of ₹ 30 lakhs for each of them?
+Both the spouses can open single / joint accounts with each other with the maximum deposits upto ₹ 30 lakhs in each account, provided both are individually eligible to invest under relevant provisions of the Rules governing the Scheme. [Rules 3 (7)]
+12. Whether any minimum limit has been prescribed for deduction of tax   at source?
+Tax is to be deducted at source as per the minimum limit prescribed by the Government.
+13. Whether only one person or number of persons can be nominated in the accounts opened under the Scheme?
+The depositor may, at the time of opening of the account, nominate a person or persons (not exceeding four individuals) who, in the event of death of the depositor, shall be entitled to receive the eligible balance. [Rule 14(1) of G.S.R. No. 1003(E) dated 05.10.2018.
+14. Can a nomination be made after the account has already been opened?
+Yes, Nomination may be made by the depositor at any time after opening of the account, but before its closure, by an application in Form -10 accompanied by the Passbook to the deposit office. [Rule 14 (3) of G.S.R. No. 1003(E) dated 05.10.2018.
+15. Can a nomination be cancelled or changed?
+Yes, the Nomination made by the depositor may be cancelled or varied by submitting a fresh nomination in Form -10 to the deposit office where the account is being maintained. [Rule 14 (3) of G.S.R. No. 1003(E) dated 05.10.2018.
+16. Can nomination be made in joint account also?
+Nomination can be made in joint account also. In such a case, the joint holder will be the first person entitled to receive the amount payable in the event of death of the depositor. The nominee’s claim will arise only after the death of both the joint holders. [Rule 14(1) of G.S.R. No. 1003(E) dated 05.10.2018.
+17. In case of a joint account, if the first holder / depositor expires before maturity, can the account be continued?
+In case of a joint account, if the first holder / depositor expires before the maturity of the account, the spouse may continue the account on the same terms and conditions as specified under the SCSS Rules, if the spouse meets eligibility conditions under the Scheme on the date of death of the account holder. However, if the second holder, i.e., spouse has his / her own individual account, the aggregate of his/her individual account and the deposit amount in the joint account of the deceased spouse should not be more than the prescribed maximum limit. [Rules 7 (2) G.S.R. 916 (E) dated 12.12.2019.
+18. What happens to the accounts if both the spouses are maintaining individual accounts and not any joint account and one of them expires?
+If both the spouses have opened separate account or accounts under the Scheme and either of the spouses dies during the currency of the account(s), then such account(s) standing in the name of the deceased depositor/spouse shall not be continued and such account(s) shall be closed. The account can be closed by making an application in Form ‘3’. [Rules 7 (3) G.S.R. 916 (E) dated 12.12.2019.
+19. Whether any fee has been prescribed for nomination and / or change / cancellation of nomination?
+No fee has been prescribed for nomination and / or change / cancellation of nomination(s) in the accounts under the SCSS, 2019.
+20. What is the age limit in the case of retired Defence Personnel for investment in the scheme?
+The retired personnel of Defence Services (excluding Civilian Defence Employees) will be eligible to subscribe under the scheme on attaining the age of fifty years subject to fulfilment of other specified conditions. Refer. Cir No. NBG/GAD-SCSS/28/2017-18 dated 29.12.2017
+21. What is the meaning of ‘retirement benefits’ for the purpose of SCSS, 2019?
+"Retirement benefits" for the purpose of SCSS Rules have been defined as 'any payment due to the depositor on account of retirement on superannuation or otherwise and includes Provident Fund dues, retirement / superannuation gratuity, commuted value of pension, cash equivalent of leave, savings element of Group Savings linked Insurance Scheme payable by employer on retirement, retirement-cum-withdrawal benefit under the Employees’ Family Pension Scheme and ex-gratia payments under a Voluntary or a Special Voluntary Retirement Scheme'. (Para -4 (1) of G.S.R. 916 (E) dated 12.12.2019.
+22. Can deposits under the SCSS scheme be made only from amounts received as retirement’s benefits?
+In case an investor has attained the age of 60 years and above, the source of amount being invested is immaterial [Rule 3(i)]. However, if the investor is 55 years or above, but below 60 years and has retired on superannuation or otherwise on the date of opening of account under the Scheme or has retired from the Defence Services, only the retirement benefits can be invested in the SCSS. [Para 3((ii) & 4(1)]. of G.S.R. 916 (E) dated 12.12.2019.
+23. Is there a period prescribed for opening deposit account under the SCSS scheme, by the senior citizen, from the retirement benefits?
+If the investor is 60 years and above, there is no time period prescribed for opening the SCSS account(s). However, for those below 60 years, following time limits have been prescribed:
+The persons who have attained the age of 55 years or more but less than 60 years and who retired on superannuation or otherwise on the date of opening of an account under these rules, subject to the condition that the account is opened by such individual within one month of the date of retirement benefits. Para 3((ii) of G.S.R. 916 (E) dated 12.12.2019.
+The retired personnel of Defence Services (excluding Civilian Defence Employees) will be eligible to subscribe under the Scheme on attaining the age of fifty years subject to the fulfilment of other specified conditions. Refer. Cir No. NBG/GAD-SCSS/28/2017 – 18 dated 29.12.2017
+24. Can an account holder obtain loan by pledging the deposit / account under the SCSS, 2019?
+The facility of pledging the deposit / account under the SCSS-2019 for obtaining loans is not permitted since the account holder will not be able to withdraw the interest amount periodically, defeating the very purpose of the scheme. (GOI letter F. No.2/8/2004/NS-II dated May 31, 2005)
+25. Is premature withdrawal of the deposits from the accounts under the SCSS-2019 permitted?
+Yes, the account holder may withdraw the deposit and close the account at any time on an application in Form-2 subject to the following conditions, namely: -
+In case the account is closed before one year after the date of opening of account, interest paid on the deposit in the account shall be recovered from the deposit and the balance shall be paid to the account holder.
+In case the account is closed after the expiry of one year but before the expiry of two years from the date of opening of the account, an amount equal to
+one and half percent of the deposit
+shall be deducted, and the balance shall be paid to the account holder.
+In case the account is closed on or after the expiry of two years from the date of opening of the account, an amount equal to
+one percent of the deposit
+shall be deducted and the balance shall be paid to the account holder.
+However, if the depositor is availing the facility of extension of account under sub-paragraph (1) of paragraph 8, he/she may withdraw the deposit and close the account at any time after the expiry of one year from the date of extension of the account without any deduction.
+26. Can an SCSS account be extended?
+A depositor may extend the account for a further period of three years by making an application on Form-4, to the deposit office
+within a period of one year from the date of maturity
+. [Para 8((3) of G.S.R. 916 (E) dated 12.12.2019.
+27. Does an account, which is not extended on maturity, earn any interest?
+In case a depositor does not close the account on maturity and also does not extend the account, the account will be treated as matured and the depositor will be entitled to close the account at any time subject to the condition that the post maturity interest at the rate as applicable to the deposits under the Post Office Savings Accounts from time to time will be payable on such matured deposits up to the end of the month preceding the month of the closure of the account.(para 5 (8))
+28. Whether commission is payable to the agents under the Scheme?
+Payment of commission on the Scheme has been discontinued w.e.f. December 1, 2011 (Government of India Notification dated November 25, 2011). Refer Cir. No. NBG/GAD-PPF-SCSS/22/2019-20 dated 13.12.2011
+29. Which Form Should be issued by Transferor Branch  to Transferee Office in case the  account opening Form with prescribed identification document is not available?
+Form-16.The branch to give duly filled Form-16 to the transferee office, in case account opening forms are not traceable. The transferor branch shall verify all the information appearing in account opening form/Form-16.
+30. Whether Change of name or surname may be allowed by the branch?
+Yes. Change of name or surname may be allowed by the branch by following the procedure laid down by RBI for change of name or surname in Bank Savings account.
+31. Whether Joint Account can be converted into Single Account?
+Yes .It shall be allowed only in case of a single surviving Joint Account Holder.
+32. Whether NRI can be made nominee?
+Yes. Non-resident Indians shall be eligible to be nominated as nominee subject to the condition that payment to such nominee/s shall be on non-repatriation basis.
+33. If there is no nomination in the account, then how the deceased settlement will be done by the branch if the proceeds are up-to  Rs. 5.00 lacs?
+If a depositor dies and there is no nomination in force at the time of his death, and the probate of his will or letters of administration of estate or a succession certificate granted under the Indian Succession Act, 1925 (39 of 1925), or legal heir certificate issued by the revenue authority not below the rank of Tahsildar having jurisdiction, is not produced within six months from the date of death of the depositor to the Branch ,where the account stands, then,-
+if the eligible amount in the account does not exceed Rupees five lakh, the branch, for reasons to be recorded in writing, may pay the same to any person appearing to the branch as the rightful claimant and to the satisfaction of the branch ,to be entitled to receive the amount or to administer the estate of the deceased, on an application in Form- 11 accompanied by the following documents; namely:-
+Death certificate of the account holder;
+Passbook or deposit receipt or statement of account in original;
+Affidavit in Form-13;
+Letter of disclaimer in Form-14;
+Bond of Indemnity in Form-15; and
+Identity proof of the legal heir;
+Provided further that, in case of any dispute raised before the Branch and before the payment of claim, the amount shall be paid by the Branch to the claimant on submission of a succession certificate granted under the Indian Succession Act, 1925 (39 of 1925) issued by the Court only along with the following documents; namely:-
+Claim form;
+Pass book or deposit receipt or statement of account in original;
+Death certificate of the account holder; and
+Identity proof of the legal heir.
+34. If there is no nomination in the account, then how the deceased settlement will be done by the branch if the proceeds are above   Rs. 5.00 lacs?
+If the eligible amount in a deceased account is above Rupees five lakh, the amount shall be paid by the Branch to the claimant on submission of the probate of his will or letters of administration of estate or a succession certificate granted under the Indian Succession Act, 1925 (39 of 1925) issued by the Court, or legal heir certificate issued by the revenue authority not below the rank of Tahsildar having jurisdiction along with the following documents; namely:-
+Claim form;
+Passbook or deposit receipt or statement of account in original;
+Death certificate of the account holder; and
+Identity proof of the legal heir;
+Provided further that, in case of any dispute raised before the Branch and before the payment of claim, the amount shall be paid by the Branch to the claimant on submission of a succession certificate granted under the Indian Succession Act, 1925 (39 of 1925) issued by the court only along with the following documents; namely:-
+Claim form;
+Passbook or deposit receipt or statement of account in original;
+Death certificate of the account holder; and
+Identity proof of the legal heir.
+35. Whether Opening of Accounts, accepting deposits, making payments of interest and maturity or prematurity proceeds, closing and transferring accounts in conformity to these and scheme provisions and maintaining records thereof, are responsibilities of the branch?
+Yes, these are responsibilities of the branch maintaining the account.
+Last Updated On : Thursday, 04-04-2024

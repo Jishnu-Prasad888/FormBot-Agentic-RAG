@@ -1,0 +1,607 @@
+Contact Centre
+SBI Contact Centre: Available at your service – Anytime, Anywhere
+SBI Contact Centre (i.e. SBI Helpline) serves you a bouquet of services round the clock in your preferred language*
+Customers in India can access SBI Contact Centre services from their place of convenience and at their preferred time just by dialling the SBI toll-free Helpline numbers illustrated below:
+Sr No
+Toll Free Number
+1
+18001234
+2
+18002100
+3
+1800112211
+4
+18004253800
+*Currently, the Contact Centre serves in 15 languages i.e. Hindi, English, Telugu, Bengali, Tamil, Kannada, Marathi, Malayalam, Odia, Gujarati, Assamese, Punjabi, Konkani, Bhojpuri and Maithili.
+Contact Centre Services (Inbound)
+Call
+1800 1234
+or
+1800 2100
+IVR Main Menu
+IVR Sub-Menu
+Press 0
+For Block ATM Card, INB & UPI
+ATM Card Block
+INB Block
+UPI Block
+Press 1
+For Account Related services
+Account Balance
+Last 5 Transactions
+Account Statement
+CIF Information
+Nomination Information
+Press 2
+For Debit Card & Cheque Book Related
+PIN Generation
+Debit Card Dispatch Status
+Debit Card Re-Issuance
+New Cheque Book request
+Cheque Book Dispatch Status Enquiry
+ATM Card Switch On/Off & Limit Amend
+Request for Cheque Stop
+Press 3
+For Interest Certificate , INB & YONO
+YONO
+YONO BUSINESS
+TDS and Deposit Interest Certificate
+Home Loan Interest Certificate
+Education Loan Interest Certificate
+Internet Banking
+Press 4
+For Deposit & Loan Product Information, Complaints
+Deposit and Loan Interest Rate
+Loan & Deposit Product Information
+Complaint Status
+Lodge Complaint
+Haz Yatra
+Prepaid Card services
+Step by Step of services available at Contact Centre: For Block ATM Card, INB & UPI
+0.1 Card Block
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “0” to select “To Block Your ATM Card, UPI, Internet Banking”
+Press “1” to select option “Card Block”
+If IVR asks, please enter last 4 digit of the account number or card number
+Press 1 to confirm blocking of card.
+You Card will be blocked, and an SMS will be sent to your registered mobile number Service availability conditions
+0.2 Blocking of Internet Banking
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “0” to select “To Block Your ATM Card, UPI, Internet Banking”
+Press “2” to select option “INB Blocking”
+IVR will ask for your confirmation for blocking the INB User ID. Press 1 to confirm blocking of INB.
+If IVR asks for your Date of Birth, please enter your DoB in DDMMYYYY format. IVR will announce the DoB entered by you. Press 1 to confirm or Press 2 to re-enter.
+You INB User ID will be blocked, and an SMS will be sent to your registered mobile number.
+0.3 Blocking of UPI Services
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “0” to select “To Block Your ATM Card, UPI, Internet Banking”
+Press “3” to select option “UPI Blocking”
+Please enter Last 4-digits of account numbers on which you wish to block UPI services
+UPI services on the account number will be blocked, and an SMS will be sent to your registered mobile number
+Step by Step of services available at Contact Centre: Account Related services
+1.1 & 1.2 Account Balance & Last 5 Txn through
+Call Contact Centre Toll-Free Number 1800 1234 or 1800 2100.
+Opt for language.
+Press ‘1’ for “Account Balance and Statement”
+Enter the last 4 digit of account number, if asked for.
+IVR will announce the Balance.
+Then, Press “1” for to last 5 transactions,
+IVR will announce the last 5 transactions and send an SMS to your mobile number.
+1.3 Account Statement
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press “1” for “Account Balance and Statement”
+IVR will announce the Balance.
+Subsequently, Press ‘2’ For Account Statement,
+The account statement will be sent at the email address registered with the Bank.
+1.4 CIF Enquiry(NEW SERVICES)
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “­1” for “Account Balance & Statement”
+Enter the last 4 digit of account number, if asked for,
+Press “3” for “CIF Enquiry”.
+CIF along with Home Branch code will be sent to your registered Mobile Number.
+1.5 Nomination Status(NEW SERVICES)
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press “1” to for “Account Balance and Statement”
+Enter the last 4 digit of account number, if asked for,
+Press “4” for “Nomination Enquiry”.
+Nomination Status will be announced by IVR.
+Step by Step of services available at Contact Centre: Debit Card & Cheque Book Related
+2.1 Green PIN generation
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “2” for “ATM Card & Cheque Book ”
+Press “1” for “ATM Card PIN Generation”.
+Enter “Last 5 Digits” of Account Number
+Enter “Last 5 Digits” of Card Number
+Enter your year of Birth in “YYYY” format
+One Time PIN generation will be sent to your registered mobile number which will be used for generating permanent PIN through SBI ATM.
+2.2 Debit Card Dispatch Status Enquiry
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “2” for “ATM Card & Chequebook Related services”
+Subsequently, press 2 for “Debit Card Tracking”.
+If IVR asks for last 4 digit of the account number, please enter the last 4 digit of account number against which the debit card is issued.
+IVR will announce the dispatch status of the latest card issued against your account. An SMS will also be sent to your registered mobile number. Service availability conditions
+2.3 Card Reissuance
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press 2 for ‘ATM Card & Chequebook Related services’
+Press “3” for “Card reissuance”.
+If IVR asks for Last 4 digit of the account number- please enter the last 4 digit of account number for your account against which the blocked card needs to be reissued.
+Please enter your DOB in DDMMYYYY format
+Your card will be reissued and will be sent to your registered address.
+2.4 Cheque Book Request
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press 2 for ‘ATM Card & Chequebook Related services’
+Press “4” for “Cheque Book issuance”.
+If IVR asks please enter the last 4 digit of account number for your account
+The Cheque Book will be issued and will be delivered at your registered addressed.
+2.5 Cheque Book Dispatch Status Enquiry
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “2” for “ATM Card & Chequebook Related services”.
+Subsequently, press “5” for “Cheque Book Tracking”.
+If IVR asks, please enter the last 4 digit of account number against which cheque book is issued.
+IVR will announce the dispatch status and an SMS will also be sent to your registered mobile number. Service availability conditions
+2.6  ATM Switch On/Off & Limit Amend
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “­2” to for “ATM Card & Cheque Book”
+Press “6” for “ATM card Switch On/Off”.
+Press “1” to avail Switch On/Off service for enabling/disabling a particular usage channel
+Enter “Last 5 Digits” of Account Number
+Enter “Last 5 Digits” of Card Number
+Enter Year of Birth in “YYYY” format
+For Switching On a particular usage channel, press “0” or for Switching Off press “1”
+Select Usage Channel, press:
+0 For International Transactions
+1 For Domestic Transactions
+2 For ATM Cash Withdrawal Transactions
+3 For PoS Transactions
+4 For E-Commerce (online) Transactions
+5 For Contactless Transactions
+On successful validations, IVR announce "A confirmation SMS and email are sent to RMN".
+2.7 Cheque Stop(NEW SERVICES)
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “2” for “ATM Card & Cheque Book”
+Press “7” for “Cheque Stop Request”.
+If IVR asks, enter the last 4 digit of Account Number
+Enter “6” digit number of cheque to be stopped or enter cheque range to be stopped.
+After stopping of Cheque or cheque range, confirmation will be sent to registered mobile number.
+Step by Step of services available at Contact Centre: Interest Certificate &YONO INB
+3.1 YONO
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 1 for “YONO”.
+Your call will be connected to Customer Service Representative for resolution
+3.2 YONO BUSINESS
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 2 for “YONO BUSINESS”.
+IVR will announce “This service is available for corporate customers , if you are a corporate customer please press 1 to confirm”
+Your call will be connected to Customer Service Representative for resolution
+3.3 TDS and Deposit Interest Certificate through
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “3” to for “Interest Certificate, Phone Banking Internet Banking, and SBI YONO”
+Press “3” for “TDS and Deposit interest certificate”.
+Enter the last 4 digit of account number, if asked for
+TDS and Deposit Interest certificate will be sent to your registered e-mail.
+3.4 Home Loan Interest Certificate
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “3” to for “Interest Certificate, Internet Banking, and SBI YONO”
+Press “4” for “Home Loan interest certificate”.
+Enter the last 4 digit of Home Loan account
+HL Interest certificate will be sent to your registered e-mail address.
+3.5 Education Loan Interest Certificate
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language of your choice.
+Press “3” to for “Interest Certificate, Internet Banking, and SBI YONO”
+Press “5” for “Education Loan interest certificate”.
+Enter the last 4 digit of Education Loan
+EL Interest certificate will be sent to your registered e-mail address.
+3.6 Internet Banking
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 2 for “Internet Banking”.
+Your call will be connected to Customer Service Representative for resolution
+Step by Step of services available at Contact Centre: Interest Rate, Deposit & Loan Product, Complaints, and Prepaid Cards
+4.1. Deposit and Loan Interest Rate
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 4 for “Loans, Deposits, Feedback & Complaints”.
+Press “1” for “For Various Interest Rate”.
+Press “1” For Deposit Interest Rate”.
+Press “2” for “Loan Interest Rate”
+Complaint status will be played on IVR.
+4.2. Loan & Deposit Product
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 4 for “Loans, Deposits, Feedback & Complaints”.
+Press “2” for “Loan & Deposit Product”.
+Your call will be connected to Customer Service Representative for resolution
+4.3. Complaint Status
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 4 for “Loans, Deposits, Feedback & Complaints”.
+Press “3” for “Complaint Status”.
+IVR will prompt you to Press “1” if the ticket number is available with you, press “1”.
+Enter complaint ticket number received on your RMN.
+Complaint status will be played on IVR.
+4.4. Lodge Complaint
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 4 for “Loans, Deposits, Feedback & Complaints”.
+Then,  Press “4” for “Lodge Complaint”.
+Your call will be connected to Customer Service Representative for resolution
+4.5. Haj Yatra
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 4 for “Loans, Deposits, Feedback & Complaints”.
+Press “5” for “Haj Yatra”.
+Your call will be connected to Customer Service Representative for resolution
+4.6. FTC and Prepaid Card services(NEW SERVICES)
+Call Contact Centre Toll-Free Number 1800 1234 from your mobile.
+Opt for language.
+Press 4 for “Loans, Deposits, Feedback & Complaints”.
+Press “6” for “
+FTC & Prepaid Card services
+”.
+Press “1” for Blocking of Prepaid Card
+Press “2” for Enable ATM/POS/E-com channel
+Press “3” for Disable ATM/POS/E-com channel
+Press “4” for Balance Enquiry of FTC & Prepaid Card
+Enter the last 4 digit of FTC or Prepaid Card, if asked for
+List of Inbound services
+CONTACT CENTRE: LIST OF 50 SERVICES
+DIAL 18001234 । 18002100
+S. No.
+Service Name
+Available through
+IVR
+Agent
+1
+ATM Card Blocking
+✓
+✓
+2
+Internet Banking User Id. Blocking
+✓
+✓
+3
+Request for Stop Cheque/s
+✓
+✓
+4
+UPI Blocking
+✓
+✓
+5
+Account Balance
+✓
+✓
+6
+Last 5 Transactions
+✓
+✓
+7
+Account Balance & Last 5 Transactions through SMS
+✓
+✓
+8
+Deposit Account Details & Transaction Enquiry
+✓
+9
+Loan Account Details, Transaction & EMI Schedule Enquiry
+✓
+10
+Account Statement
+✓
+✓
+11
+Cheque Book Issuance
+✓
+✓
+12
+Cheque Book Dispatch Status
+✓
+✓
+13
+TDS details by email
+✓
+✓
+14
+Deposit Interest Certificate by email
+✓
+✓
+15
+Green PIN Generation
+✓
+16
+ATM Card Reissuance
+✓
+✓
+17
+ATM Card Dispatch Status
+✓
+✓
+18
+ATM Switch On/Off & Limit Set/Modify
+✓
+19
+Deposit & Loans Products Features
+✓
+20
+Home Loan Interest Certificate
+✓
+✓
+21
+Education Loan Interest Certificate
+✓
+✓
+22
+Interest Rates information
+✓
+✓
+23
+Interest Rates through SMS
+✓
+24
+Pension Related Information
+✓
+25
+Prepaid Card Related
+✓
+26
+YONO Related Queries
+✓
+27
+INB Related Queries
+✓
+28
+BHIM UPI Related Queries
+✓
+29
+Complaint Registration
+✓
+30
+Complaint Status
+✓
+✓
+31
+Unauthorised Transactions Reporting – Debit Card/INB/UPI
+✓
+32
+Income Tax Refund Order information
+✓
+33
+Goods & Services Tax information
+✓
+34
+FASTAG information
+✓
+35
+PAPL Closure
+✓
+36
+KYC Status
+✓
+37
+CIF and Home Branch Information
+✓
+✓
+38
+Blocking of CINB Saral ID
+✓
+39
+Announcing Nomination Status
+✓
+40
+Information on Digital Channels Usage Subscribed
+✓
+41
+Support to YONO Business Customers
+✓
+42
+FTC and Prepaid Card services
+✓
+43
+De- Registration of AEPS
+✓
+44
+Product Interest Registration
+✓
+45
+Prior Intimation of Foreign Visit
+✓
+46
+Home Loan Provisional Interest Certificate
+✓
+47
+New ATM Card Issuance
+✓
+48
+KYC Updation (No Change in Particulars)
+✓
+49
+Retail Loans Account Statement
+✓
+50
+WhatsApp Banking Registration
+✓
+✓
+Contact Centre Outbound services
+List of Outbound services available through Contact Centre
+Awareness calls to the borrowers on 10 & 3 days prior to the due date of payment of dues.
+Handholding the customers for availing digital products:
+Agent calling & voice blast for
+Pre-approved Personal Loan (PAPL)
+Pre-approved Business Loan (PABL)
+Agent calling for
+Insta Home Top up loan (IHTL)
+Pre-approved Car loan (PACL)
+Personal Gold Loan (PGL)
+Agri Gold Loan (AGL)
+Home Top Up Loan (HTL)
+Solar Roof Top Loan
+Foreign Travel Card (FTC)
+E-Shield Insta Term Insurance
+Handholding the customers for completing loan application in case of leads dropped-off from OCAS & Click 2 Call (for all products) & YONO (HL & PAPL).
+Agent calling to customers interested in availing Credit Cards, Mutual Funds, Life Insurance, General Insurance, Demat Accounts.
+Voice blast & agent calling for activating YONO application to inactive users.
+Agent calling to corporates for registering on MCA site for opening Current a/c with our Bank
+Facilitating borrowers to pay overdue/EMI amount using UPI, Debit Card, other Bank’s INB through ePay Payment Gateway
+Agent calling to new Corporate Salary Package (CSP) customers for: (i) Welcome, (ii) Information for INB/YONO set up, (iii) Information about the family benefits, (iv) feedback, (v) Information about the investment set up
+Agent calling to new Current account customers for (i) welcome, (ii) follow-up, (iii) feedback & digital solutions, (iv) upselling, (v) thank you & referral
+Welcome calling to customers availing new Education & Auto Loans
+Voice blast to customers on decline of Debit Card transactions at the e-Com sites advising the Card control features
+Agent calling to customers after closure of Home Loan accounts for collection of title deeds from the Bank
+Calling customers for activation of
+PMJDY Accounts
+Savings Bank a/c
+Debit Cards
+Feedback calling to Current a/c customers.
+Other services through dedicated Toll-free numbers
+Sr No
+Toll Free Number
+Support provided for
+1
+1800 1111 09
+For unauthorised transaction reporting)
+2
+1800 1111 01
+SBI YONO
+3
+1800 11 0009
+Pensioners
+4
+1800 11 0001
+PMJDY
+5
+1800 11 0018
+SBI FASTag
+6
+1800 11 2017
+GST
+7
+1800 11 2018
+Home Loan
+8
+1800 425 9760
+Income Tax Refund Orders (ITRO)
+9
+1800 8900
+Wealth & Platinum customers
+10
+1800 1111 03
+SBI Doorstep Banking Services
+11
+1800 8888
+Helpline for Senior Citizen & Differently abled Customers
+The Contact Centre services can also be availed by calling +91-80-26599990 (toll number). Our overseas customers can make use following
+International Toll Free Numbers (ITFNs)
+that serves 21 countries, for details refer below:
+Country
+International Toll Free Number*
+Australia
+1800-012-473
+Bahrain
+80-801-724
+Belgium
+80-076-562
+Canada
+1866-3284-209
+France
+800-740-849
+Germany
+800-183-0736
+Hong Kong
+800-932-045
+Italy
+800-789-407
+Japan
+006-633-812-439
+Netherlands
+800-022-3031
+New Zealand
+800-449-909
+Oman
+80075792
+Qatar
+00800100157
+Russia
+810-800-293-010-12
+Saudi Arabia
+800-814-4209
+Singapore
+800-101-2333
+South Africa
+800-982-360
+UAE
+800-091-190-05
+USA
+1866-328-4209
+UK
+808-101-7633
+*Please do not add Country Code (e.g. +91 or 0091) while dialing the above International Toll Free Numbers
+Other customers residing outside India may dial +91-80-26599990 (call rates applicable) to avail services of SBI Contact Centre
+Apart from calls, you can also send your queries to the Contact Centre by emails at the following email id.
+contactcentre@sbi.co.in
+Never respond to any email, phone call or SMS, no matter how appealing or official looking, seeking your personal information such as ATM PIN, ATM Card details, Password, User Name, etc. Such communications are sent by fraudsters to trick you into parting with your credentials. State Bank or any of its representative will never ask you to download any third-party application on your Mobile, Tablet, laptop, desktop or any other electronic devices.
+Please report immediately on
+report.phishing@sbi.co.in
+if you receive any such email/SMS or Phone call.
+Privacy Statement
+The origin of State Bank of India date back to 1806 when the Bank of Calcutta (later called the Bank of Bengal) was established. In 1921, the Bank of Bengal and two other Presidency banks (Bank of Madras and Bank of Bombay) were amalgamated to form the Imperial Bank of India. In 1955, the controlling interest in the Imperial Bank of India was acquired by the Reserve Bank of India and the State Bank of India (SBI) came into existence by an act of Parliament as successor to the Imperial Bank of India. In the Indian Financial world, SBI is synonymous with trust and security.
+In line with recognized International Practice and for the information of customers and others who visit the Bank's website we believe it is necessary to post a privacy statement. The information shared with the Bank will be treated as private. We also desire to say explicitly that adequate precautions have been taken to protect information relating to customers and their dealings with the Bank from the mischievous and the fraudsters.
+Customer confidentiality and privacy is of utmost concern to SBI. Our employees treat the information concerning your accounts in the same responsible and confidential way that we want our own financial affairs to be treated.
+By using PAPL facility, you agree to our use of your personal information in accordance with this Privacy Statement, as may be amended from time to time by us at our discretion.
+1. Recognition of your expectation of privacy
+We recognize that our customers expect privacy and security for their personal and financial affairs. We understand that, by selecting us for your banking needs, you have entrusted us to safeguard your personal financial information. We want you to be informed of our commitment to protect the privacy of your personal financial information with the following privacy principles and practices.
+2. What personally identifiable information is collected from you?
+We do not collect any information from the customer over the call except confirming the name from the recipient of the call to ensure and authenticate that conversation is happening with right party for providing Pre-Approved Personal Loan (PAPL) through Contact Centre. SBI does not ask for OTP and advises not to share with anybody.
+3. How we use, collect, and retain customer information
+We collect, retain, and use information about you only when we reasonably believe that it will help administer our business or provide products, services, and other opportunities to you. We collect and retain information about you only for business purposes.
+4. We use information to:
+Open and administer your accounts and to protect your records and funds.
+Comply with all applicable laws and regulations.
+Help us design or improve our products and services for your benefit.
+Understand your financial needs so that we can provide you with quality products and superior service.
+To comply with laws, guidelines and regulations that govern the financial services in the country.
+5. How we keep customer information accurate
+It is in your interest, and it is our objective to have accurate, current and complete information concerning you and your accounts. We have strict procedures that our employees abide by to meet this objective. While some procedures are required by Central, State laws or RBI regulations, we have implemented additional procedures to maintain accurate, current, and complete financial information including processes to update information and remove outdated information. If you believe that we have incorrect information about you or your accounts, please email us through the feedback mechanism provided on the website or modify the profile information on the site as permissible. We will correct any erroneous information as quickly as possible.
+6. How we limit access to customer information by our employees/ Contact Centre.
+We have procedures that limit access to personally identifiable information to those employees/ Contact Centre with a business reason for knowing such information about you. We educate our employees on their responsibility to protect the confidentiality of customer information and hold them accountable if they violate this privacy policy.
+7. Our security procedures to protect customer information
+We follow best security practices to help prevent unauthorized access to confidential information about you.
+8. How we restrict the disclosure of customer information
+SBI does not release customer information except as directed by law or as per your mandate. We do not share specific information about customer accounts or other personally identifiable data with non-affiliated third parties for their independent use unless:
+The information is provided to help complete a transaction initiated by you;
+You request or authorize it;
+The disclosure is required by/or directed by law; or
+You have been informed about the possibility of such disclosure for marketing or similar purposes through a prior communication and have been given the opportunity to decline.
+9. By formulating and disclosing our privacy policy to you, we want you to understand our commitment to personal privacy.
+A potential customer who inquires about our products and services or who would like a copy of our privacy policy
+A customer who has established a relationship with us.
+A potential customer who has applied for a loan
+A visitor to SBI's web site.
+10. If you have any questions or concerns about this privacy policy, please write to us at AGM, Contact Centre Outbound, SBI, “C” Wing Mittal Tower, Nariman Point, Mumbai-400021..
+11. Privacy policy is on SBI's web site
+For each visitor to SBI's web site (
+https://bank.sbi/
+)
+12. Other information about our web site
+a. Children visiting SBI's web site : We are confident that parents will not judge any of the information provided by SBI as objectionable for viewing by their children.
+b. Links to or from SBI's web site : SBI is not responsible for information practices employed by web sites linked with our web site. Generally, links to non-SBI web sites are provided solely as pointers to information on topics that may be useful to users of SBI's web site.
+c. Encrypted information: Information provided by you on SBI's web site is encrypted or scrambled in order to secure information.
+13. Privacy policy is subject to change periodically.
+Last Updated On : Thursday, 26-02-2026

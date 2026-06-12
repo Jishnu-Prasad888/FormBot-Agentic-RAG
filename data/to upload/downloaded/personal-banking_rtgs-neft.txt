@@ -1,0 +1,27 @@
+RTGS NEFT
+Real Time Gross Settlement System (RTGS)& National Electronic Fund Transfer system (NEFT)
+Bank offers Real Time Gross Settlement System (RTGS) & National Electronic Fund Transfer system (NEFT) which enables an efficient, secure, economical and reliable system of transfer of funds from bank to bank as well as from remitters account in a particular bank to the beneficiarys account in another bank across the country.
+1. RTGS:
+An electronic payment system in which payment instructions between banks are processed and settled individually and continuously, on a real time basis, throughout the day. Available for transaction value of Rs.2.00 lacs and above.
+2. NEFT :
+Another electronic payment system in which payment instructions between banks are processed and settled on deferred net settlement (DNS) basis at fixed times during the day. There is no minimum or maximum stipulated transaction value for using this facility.
+Note
+:RTGS and NEFT systems work on all days (24X7) across the states.
+I
+nformation Required for transfer of Funds
+Amount to be remitted
+Remitter Account Number (applicable for RTGS & NEFT transactions through account)
+Beneficiary Customer Account Name
+Beneficiary Customer Account Number
+Name of the beneficiary bank and branch
+Beneficiary Branch’s IFSC
+Sender’s and Beneficiary’s LEI number (for eligible transactions)
+Sending Customer’s Name & Address
+These facilities are available at all our branches. For further details, please contact our nearest branch or contact centre at 18001234 & 18002100.
+The Customer Facilitation Service centre details of banks can be accessed by visiting RBI site at following path:
+https://rbi.org.in
+>>FUNCTIONWISE SITES
+>>Payment and Settlement Systems
+>>Information Useful to Banks/FIs
+>>Customer Facilitation Centres for NEFT and RTGS
+Last Updated On : Tuesday, 02-12-2025

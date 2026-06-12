@@ -1,0 +1,23 @@
+Features
+SBI Green Remit Card is a simple Magstripe based card without PIN.
+The product is targeted to facilitate Non-Home Cash Deposit Transactions to be routed through Green Channel Counter (GCC)/ Cash Deposit Machine (CDM)
+Card can be used for deposit of Cash (INR) to the designated beneficiary's SBI account.
+Card is accepted at all Green Channel Counter Branches and Cash Deposit Machines.
+Deposit can be made by way of cash only.
+Transaction limit is Rs.25,000/- per transaction subject to a monthly cap of Rs.1,00,000/-
+Branch will issue pre-printed SBI Green Remit Card instantaneously to the remitter
+Eligibility
+All customers (remitters), particularly non-account holders, who want to remit money to a SBI bank account at regular intervals
+Customer may visit any GCC branch or CDM branch and submit simple Application Form along with one ID proof document
+Card would be mapped to the particular beneficiary account (Has to be an SBI account).
+Service Charges
+Issue of Card : Rs.20/- (w.e.f. 15 th July 2013)
+Transaction Charges in GCC : As applicable to regular non-home cash deposit transactions at branch
+Transaction Charges in CDM : As applicable to regular non-home cash deposit transactions at branch
+Transactions through GRC
+Remitter can visit any GCC branch or CDM to deposit cash to the predetermined SBI account
+When card is swiped, account particulars are shown on the screen for confirmation.
+Customer is prompted to enter amount and after cash is collected and verified, acknowledgement is generated.
+Remitter and Beneficiary will get SMS immediately on successful completion of the transaction.
+Beneficiary SBI account will be updated with the transaction amount along with Card number.
+Last Updated On : Monday, 01-12-2025

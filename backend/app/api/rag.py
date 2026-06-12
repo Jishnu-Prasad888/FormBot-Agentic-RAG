@@ -6,6 +6,7 @@ multi-agent RAG pipeline (coordinator → evaluator), and returns per-question
 detail alongside aggregate metrics.
 """
 
+import time
 from typing import Any
 
 from fastapi import APIRouter, Depends
@@ -15,7 +16,8 @@ from pydantic import BaseModel
 
 from app.core.dependencies import get_db
 from app.services.rag_service import rag_service
-from app.evaluation.agent_runner import evaluate_question, failed_question_row
+from app.evaluation.agent_runner import evaluate_question, failed_question_row, set_evaluation_logger
+from app.core.evaluation_logger import EvaluationLogger
 
 from app.schemas.rag import RAGQueryRequest, RAGQueryResponse, RAGRetrieveRequest
 from app.schemas.search import SearchResult
@@ -70,11 +72,17 @@ class EvaluateRequest(BaseModel):
 
 @router.post("/evaluate")
 async def evaluate_rag(req: EvaluateRequest, db: AsyncSession = Depends(get_db)) -> dict[str, Any]:
+    # Initialize logger for this evaluation run
+    logger = EvaluationLogger(f"{req.dataset_name}_{int(time.time())}")
+    set_evaluation_logger(logger)
+    logger.log("EVAL_START", f"Dataset: {req.dataset_name}\nQuestions: {len(req.questions)}\nTop-k: {req.top_k}")
+    
     per_question: list[dict] = []
     failed: list[dict] = []
     latencies: list[float] = []
 
-    for qa in req.questions:
+    for idx, qa in enumerate(req.questions, 1):
+        logger.log("QUESTION_NUMBER", f"{idx}/{len(req.questions)}")
         try:
             row = await evaluate_question(
                 qa.question, 
@@ -86,6 +94,7 @@ async def evaluate_rag(req: EvaluateRequest, db: AsyncSession = Depends(get_db))
             per_question.append(row)
             latencies.append(row["latency_ms"])
         except Exception as exc:
+            logger.log("ERROR", f"Question {idx} failed: {str(exc)}")
             failed.append({"question": qa.question, "error": str(exc)})
             per_question.append(failed_question_row(qa.question, qa.expected_answer, str(exc)))
 

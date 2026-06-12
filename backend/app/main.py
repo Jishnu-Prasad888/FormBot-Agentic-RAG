@@ -30,6 +30,7 @@ from app.api.agents import router as agents_router
 from app.api.chroma import router as chroma_router
 from app.api.embeddings import router as embeddings_router
 from app.api.web import router as web_router
+from app.api.elasticsearch import router as elasticsearch_router
 
 
 
@@ -93,3 +94,4 @@ app.include_router(agents_router)
 app.include_router(chroma_router)
 app.include_router(embeddings_router)
 app.include_router(web_router)
+app.include_router(elasticsearch_router)

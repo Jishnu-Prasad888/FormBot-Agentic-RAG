@@ -141,6 +141,10 @@ export const healthOllama = async () => {
   const { data } = await api.get('/health/ollama');
   return data;
 };
+export const healthElasticsearch = async () => {
+  const { data } = await api.get('/api/elasticsearch/status');
+  return data;
+};
 
 // ─── ChromaDB ────────────────────────────────────────────────────────────────
 

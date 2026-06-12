@@ -1,0 +1,60 @@
+NRI (Non-Resident Indian) Account Opening Through YONO
+Features
+Account can be opened with a zero balance.
+Rupee denominated account.
+Interest is paid quarterly on the daily balance in Savings Bank account. No interest is paid in the Current Account.
+Principal & interest amount are fully repatriable for NRE Accounts.
+Repatriation of balances from NRO account to Overseas account is permitted upto USD 1 million per financial year subject to submission of required documents.
+Validity of Passport and Visa documents is more than 45 days. Visa/Work permit expiry date is not applicable for PIO.
+Experience 24*7 banking access through internet banking
+Facility of transfer of accounts through Internet Banking channel.
+Nomination facility is available.
+Eligibility
+Customer should not have any existing relationship with SBI.
+New to Bank (NTB) customers above 18 years of age who are literate and able to sign uniformly.
+Passport and Email ID is mandatory.
+Aadhaar is optional.
+PAN is optional. If PAN is not provided, system generated Form 60 has to be signed by the customer.
+Document to prove NRI/OCI status such as VISA, PIO/OCI card, valid document for seafarer etc.
+Prerequisites
+The app version of YONO can be accessed through mobile (smartphones). The ‘YONO’ mobile application is available on Goggle Play Store and iOS Apple App Store.
+Customer wanting to open NRE/NRO account, should be a Non- Resident Indian, or PIO/OCI above 18 years in age, should have Passport, a valid mobile number and email ID and a document to prove the residential status.
+How to open NRI Account through YONO App?
+Download YONO App
+Click Open Savings account >> Open NRE/NRO Account
+Enter Country Name, Mobile No with ISD code, Email id and click on submit >> Account opening – OTP verification : Enter Mobile OTP, Email OTP and click on Submit.
+NRI Consent – confirm country of residence, agrees data sharing and consent clause.
+Select
+Account - NRE/NRO,
+Type Saving/Current,
+Status Type –NRI/ PIO -> Click on Next.
+Product Information will be displayed. Click on next.
+Select Open Account via options – Branch Visit in India / Courier documents to GNC in India.
+Enter Personal details, Additional Personal details, Passport and Visa Details, Current and Permanent Address details.
+Additional details, Contact details, Educational Qualification, Religion, Category, Occupation, Nomination details, Services - select (Ex: SMS alerts, cheque book, Debit card, Taxation Details and address
+Review details ,enter OTP for acceptance of ‘Terms and Conditions’
+NRI application completed successfully.
+Depending upon the option chosen, during journey, the steps to be followed are:
+Send the documents to Global NRI Centre (GNC), Ernakulam: Customer needs to download and print the documents Account opening form (AOF) including Customer Information Sheet (CIS) Covering Letter, consent clause, form60 received in the email, sign it and get the AOF/KYC documents (Passport, VISA/ OCI card, Proof of overseas address) attested by Notary / Indian Embassy/ High Commission/ Foreign Office/ Representative Office / Court Magistrate/ Judge and forward it to GNC directly.
+Visit a SBI Branch in India: Customer needs to visit the branch along with the original KYC documents for Verification within 30 days.
+* Customer can track the status of the application in YONO App once application is submitted. Customer can resume the journey within 90 days after entering Mobile number and email ID and Year of birth.
+Frequently Asked Questions
+Can minor accounts be opened through this process?
+A) No. The process is presently available for customers who are major in age, literate and able to sign uniformly.
+Can joint accounts be opened through this process?
+A) No, the process is presently available for singly operated accounts only.
+Does this account have Debit restriction? How will the LCPC remove the debit restriction flag?
+A) Yes. Accounts opened through this process will be subject to second level scrutiny by bank officials.
+Is Email address and PAN mandatory to open this account?
+A) Yes. Email address is mandatory for this account. PAN is not mandatory to open this account. Form 60 has to be obtained from the customer in case PAN is not submitted.
+Are the KYC documents of the customer required to be verified by official before opening this account?
+A) If customer chooses to send the documents to GNC, he/she will get the AOF/KYC documents attested by Notary / Indian Embassy/ High Commission/ Foreign Office/ Representative Office / Court Magistrate/ Judge and forward it to GNC directly. If customer chooses to visit Branch in India, KYC documents need to be verified with original by the Branch official before opening this account.
+What are the charges applicable to these accounts?
+A) Charges for all services will be in accordance with extant service charges applicable to NRE/NRO saving/Current account.
+Whether the account opened through YONO process will have Debit Restrictions?
+A) Yes, there will be Debit Freeze for accounts opened end to end. These accounts will be activated after 2nd level scrutiny by Bank officials.
+Customer has submitted the application in YONO App, within how many days he is required to send the documents to GNC/ visit Branch?
+A) Customer is required to send the documents to GNC/ visit branch within 30 days of submitting the application in YONO App.
+*Customers may call on a Customer Care Number of SBI Contact Centre 1800 1234 (Toll free) or 1800 425 3800 (Toll free) or 1800112211 or 1800 2100 (toll free) or +91-80-26599990 (chargeable) regarding any information, feedback, query or complaint.
+Download YONO SBI
+Last Updated On : Tuesday, 06-02-2024
