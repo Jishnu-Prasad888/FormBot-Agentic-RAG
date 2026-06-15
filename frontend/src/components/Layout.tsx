@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
-  LayoutDashboard, FileText, Search, MessageSquare,
-  Brain, Bot, FlaskConical, Database, Menu, X, Zap,
+  LayoutDashboard, FileText, FlaskConical, Menu, X, Zap,
   Activity, ChevronRight
 } from 'lucide-react';
 import type { Page } from '../types';
@@ -16,12 +15,7 @@ interface Props {
 const NAV_ITEMS: { id: Page; label: string; icon: React.ElementType; accent?: string }[] = [
   { id: 'dashboard',   label: 'Dashboard',   icon: LayoutDashboard },
   { id: 'documents',   label: 'Documents',   icon: FileText },
-  { id: 'search',      label: 'Search',      icon: Search },
-  { id: 'chat',        label: 'Chat',        icon: MessageSquare },
-  { id: 'rag',         label: 'RAG Query',   icon: Brain },
-  { id: 'agents',      label: 'Agents',      icon: Bot },
   { id: 'evaluate',    label: 'Evaluate',    icon: FlaskConical },
-  { id: 'collections', label: 'Collections', icon: Database },
 ];
 
 export default function Layout({ currentPage, onNavigate, children, healthStatus }: Props) {

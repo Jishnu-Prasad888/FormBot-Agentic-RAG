@@ -164,12 +164,7 @@ export interface ChromaCollection {
 export type Page =
   | 'dashboard'
   | 'documents'
-  | 'search'
-  | 'chat'
-  | 'rag'
-  | 'agents'
-  | 'evaluate'
-  | 'collections';
+  | 'evaluate';
 
 export interface Toast {
   id: string;

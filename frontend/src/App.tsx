@@ -3,12 +3,7 @@ import Layout from './components/Layout';
 import ToastContainer from './components/Toast';
 import Dashboard from './pages/Dashboard';
 import Documents from './pages/Documents';
-import SearchPage from './pages/Search';
-import Chat from './pages/Chat';
-import RAGQuery from './pages/RAGQuery';
-import Agents from './pages/Agents';
 import Evaluate from './pages/Evaluate';
-import Collections from './pages/Collections';
 import type { Page, Toast } from './types';
 import { healthCheck, healthDb, healthChroma, healthOllama } from './api/client';
 
@@ -56,12 +51,7 @@ export default function App() {
     switch (page) {
       case 'dashboard':   return <Dashboard onNavigate={setPage} onHealthUpdate={updateHealth} />;
       case 'documents':   return <Documents {...commonProps} />;
-      case 'search':      return <SearchPage {...commonProps} />;
-      case 'chat':        return <Chat {...commonProps} />;
-      case 'rag':         return <RAGQuery {...commonProps} />;
-      case 'agents':      return <Agents {...commonProps} />;
       case 'evaluate':    return <Evaluate {...commonProps} />;
-      case 'collections': return <Collections {...commonProps} />;
       default:            return <Dashboard onNavigate={setPage} onHealthUpdate={updateHealth} />;
     }
   };
