@@ -20,17 +20,9 @@ from app.chromadb.client import chroma_client
 # API routers
 from app.api.health import router as health_router
 from app.api.documents import router as documents_router
-from app.api.search import router as search_router
 from app.api.chat import router as chat_router
 from app.api.rag import router as rag_router
-from app.api.tablerag import router as tablerag_router
-from app.api.pdf import router as pdf_router
-from app.api.markdown import router as markdown_router
-from app.api.agents import router as agents_router
 from app.api.chroma import router as chroma_router
-from app.api.embeddings import router as embeddings_router
-from app.api.web import router as web_router
-from app.api.elasticsearch import router as elasticsearch_router
 
 
 
@@ -84,14 +76,6 @@ app.add_exception_handler(Exception, generic_exception_handler)
 # Register all routers
 app.include_router(health_router)
 app.include_router(documents_router)
-app.include_router(search_router)
 app.include_router(chat_router)
 app.include_router(rag_router)
-app.include_router(tablerag_router)
-app.include_router(pdf_router)
-app.include_router(markdown_router)
-app.include_router(agents_router)
 app.include_router(chroma_router)
-app.include_router(embeddings_router)
-app.include_router(web_router)
-app.include_router(elasticsearch_router)
