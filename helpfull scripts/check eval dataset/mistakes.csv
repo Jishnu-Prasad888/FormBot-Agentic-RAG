@@ -1,0 +1,491 @@
+Question no,Eval Question,Eval Answer
+1,what is CIF (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL),"CIF stands for Customer Information File. In the context of an Account Opening Form for a Resident Individual, it is the unique profile the bank creates for a customer that contains all their personal, KYC, and relationship details. All accounts (savings, current, fixed deposits, loans, etc.) held by that individual in the same bank are linked to this single CIF, allowing the bank to view and manage the customer’s entire relationship under one customer ID."
+2,what is CKYC (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL),"CKYC stands for Central Know Your Customer. It is a centralized KYC registry system in India, managed by CERSAI, where an individual’s KYC details (identity and address proof, photograph, etc.) are stored and can be used across financial institutions.
+
+An “Account Opening Form for Resident Individual – CKYC” is the standardized form used by banks and other financial institutions to collect KYC information of a resident individual for uploading to the CKYC registry. Once registered, the individual is allotted a 14‑digit CKYC number, which can then be used for opening accounts or availing services with other financial entities without repeating the full KYC process each time."
+3,what is BSBDA (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL),"BSBDA stands for Basic Savings Bank Deposit Account. It is a type of zero-balance savings account designed for financial inclusion, allowing individuals to open and maintain a bank account without the requirement of a minimum balance and with certain basic banking services provided free of charge."
+8,what are equivalent e-documents (ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL),"Equivalent e-documents are electronically issued documents (such as Aadhaar, PAN, passport, driving licence, etc.) that are:
+
+1. Issued or made available in electronic form directly by the issuing authority (e.g., UIDAI, Income Tax Department, Passport Office, RTO, etc.), and  
+2. Verifiable through a secure electronic platform (such as DigiLocker or the issuing authority’s own system), and  
+3. Contain or are backed by a valid digital signature or electronic authentication of the issuing authority.
+
+For an ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL, such equivalent e-documents would include, for example, e-Aadhaar, e-PAN, or other officially issued e-documents meeting the above criteria, as accepted under applicable KYC/Regulatory guidelines."
+12,what are sourcing entities - branch/rmru/fsto (Agriculture Loan Application Form),"In the context of an Agriculture Loan Application Form, “sourcing entities” are the channels or officers through whom the loan application is originated/collected:
+
+- **Branch**: The loan application is sourced directly through the bank branch staff (counter staff/loan desk/branch manager) at the branch premises.  
+- **RMRU (Rural Marketing & Recovery Unit / Rural Marketing & Retail Unit – terminology may vary by bank)**: A specialized rural business/marketing unit or team responsible for mobilizing, sourcing, and sometimes monitoring rural and agricultural loans; applications routed through these officers/units are marked as RMRU-sourced.  
+- **FSTO (Field Supervisor / Field Staff / Field Technical Officer – as defined by the bank)**: Designated field-level bank staff who visit villages/farms, identify potential borrowers, collect applications, and carry out field verifications; applications they originate are marked as FSTO-sourced.
+
+These labels do not describe loan size or type, but indicate *who/which channel* brought in (sourced) the application."
+13,what are sourcing entities - dsa/dse/sboss/ba (Agriculture Loan Application Form),"In the context of an Agriculture Loan Application Form, “sourcing entities” are the channels through which the loan application is brought to the bank. The abbreviations generally mean:
+
+- DSA – Direct Selling Agent: Third‑party agents empaneled by the bank to source loan applications.
+- DSE – Direct Sales Executive: Bank’s own (or contracted) sales staff who directly source loan applications.
+- SBOSS / SB-OSS – SBI’s in‑house sourcing channel/platform (often “SBI One Stop Solution” or similar) used by bank staff for sourcing and processing applications.
+- BA – Business Associate / Business Correspondent: Authorized individuals or outlets (e.g., CSPs/Bank Mitras) engaged by the bank to source applications and provide basic banking services, especially in rural/underbanked areas."
+14,how to categorize asset as movable/immovable/liquid (Agriculture Loan Application Form),"Immovable Assets: Assets permanently attached to the earth or to something attached to the earth, which cannot be moved without substantial damage or alteration. For agriculture, this typically includes: agricultural land, residential/ farm house, permanent farm buildings and sheds, borewells/open wells, permanent irrigation structures, godowns, and any other permanent constructions on land.
+
+Movable Assets: Tangible assets that can be moved from one place to another without altering their basic character. For agriculture, this includes: tractors, harvesters, tillers, other farm machinery/implements, vehicles, livestock/cattle, stored/harvested crops, fertilizers, seeds, and other stock.
+
+Liquid Assets: Cash or assets that can be quickly and easily converted into cash with minimal loss of value. Typically includes: cash in hand, balances in savings/current accounts, fixed deposits (FDs), recurring deposits (RDs), units of mutual funds, listed shares/securities, and certain government savings instruments (e.g., NSC, KVP) to the extent they can be readily encashed or pledged. Gold jewelry is generally considered a personal/ movable asset, but may be treated as a liquid asset by some banks only if it can be easily pledged for a loan."
+17,what qualifies as a tie-up which has to be mentioned (Agriculture Loan Application Form),"A tie-up, for the purpose of the Agriculture Loan Application Form, generally refers to any formal arrangement or agreement (not necessarily tri-partite) between the farmer and another entity (such as a corporate buyer/processor, input supplier, FPO, cooperative, government agency, or aggregator) that affects production, procurement, marketing, or repayment of the loan and is relevant to the bank’s assessment. This can include buy-back arrangements, contract farming agreements, input supply on credit linked to crop sale, or any other structured linkage that supports or secures the loan."
+18,what is rlms application no. (auto loan application),"RLMS application number in the context of an auto loan (e.g., with SBI) is the unique reference/registration number generated by the bank’s Retail Loan Management System when your loan application is created. It is used to identify, track, and process your specific auto loan application in the bank’s system, and may be requested by staff or used for status tracking."
+19,what is sourcing entity type - branch/mpst (auto loan application),"In an SBI auto loan application, the “sourcing entity type” indicates who/what channel originated (sourced) your loan request:
+
+- **Branch**: The loan application was sourced through a regular SBI branch—i.e., you visited or interacted with a physical branch, and a branch staff member (like a relationship manager or loan officer) initiated and logged your application.
+
+- **MPST (Marketing & Processing Support Team)**: The loan application was sourced through SBI’s dedicated marketing/processing support channel rather than a standard branch counter. This typically includes specialized teams or executives (often mobile or centralized) who canvass, contact customers, collect documents, and log applications, sometimes working out of loan camps, dealer locations, or centralized processing units rather than a normal branch front desk."
+20,what is sourcing entity type - ssl (auto loan application),"In the context of an SBI auto loan application, “Sourcing Entity Type – SSL” typically refers to **SBI Securities Limited** (or a similar SBI group distribution/lead-generation channel) as the entity that sourced or originated your loan application. It indicates that your loan lead came through that specific SBI group channel, not directly at a branch."
+22,what is sourcing entity type - alc (auto loan application),"In the context of an auto loan application, the sourcing entity type ""ALC"" typically stands for ""Auto Loan Center"" (or a similarly named dedicated auto-loan sourcing channel). It indicates that the loan application was sourced/initiated through a specialized auto loan unit or channel, rather than a regular bank branch or other sourcing entity."
+25,what is exim registration code (Application form for msme loans (business loan)),"In the context of MSME/business loan application forms, “EXIM registration code” refers to the Importer Exporter Code (IEC), also commonly called the EXIM code. It is a mandatory 10‑digit registration issued by the Directorate General of Foreign Trade (DGFT), Ministry of Commerce, to any business that wants to import or export goods or services. Without this code, a business cannot legally engage in import‑export activities."
+29,what is type of facility term loan (Application form for msme loans (business loan)),"A facility term loan in the context of an MSME business loan application refers to a loan facility where a fixed amount is sanctioned for a specific purpose (usually business needs such as working capital, machinery, expansion, etc.) and is to be repaid over a defined tenure in installments (EMIs). It is not limited only to permanent capital assets; it can be structured for various business purposes depending on the bank’s MSME product."
+32,what are BIS/FPO/ISO specifications and for what kind of businesses should the be follwed (Application form for msme loans (business loan)),"BIS (Bureau of Indian Standards): Indian national standards body that sets and certifies quality and safety standards for products and some services (e.g., ISI mark, Hallmark).  
+Should be followed by: Manufacturers and some service providers whose products fall under mandatory BIS certification (electrical/electronic goods, steel products, gas cylinders, toys, cement, packaged drinking water, some food-contact materials, etc.), and any business that wants to show compliance with Indian standards.
+
+FPO (Fruit Products Order): A quality control regulation (earlier under FPO mark, now largely under FSSAI) for processed fruit and vegetable products (juices, jams, squashes, pickles, etc.).  
+Should be followed by: Food-processing businesses dealing with fruit/vegetable-based products—manufacturers, packers, and processors of such foods.
+
+ISO (International Organization for Standardization): International standards for management systems (e.g., ISO 9001 for quality management, ISO 14001 for environment, ISO 22000 for food safety, ISO 27001 for information security).  
+Should be followed by: Any business (manufacturing, services, IT, healthcare, food, logistics, etc.) that wants to implement recognized management systems and demonstrate quality, safety, environmental, or information-security compliance, often to meet customer, tender, or export requirements."
+33,what are BIS/FPO/ISO specifications and for what kind of businesses should the be follwed (Application form for msme loans (business loan)),"BIS, FPO and ISO are different types of standards/certifications:
+
+1. **BIS (Bureau of Indian Standards)**  
+   - What it is: Indian national standards and certification (including ISI mark) for product quality, safety, and reliability.  
+   - Who should follow:  
+     - Manufacturers of products where BIS certification is mandatory (e.g., electrical appliances, some construction materials, certain consumer goods, etc.).  
+     - Any business that wants to show compliance with Indian quality/safety standards for its products.
+
+2. **FPO (Fruit Products Order)**  
+   - What it is: Earlier a mandatory quality mark for processed fruit and vegetable products; now effectively subsumed under **FSSAI** regulations, but still referred to in some contexts.  
+   - Who should follow:  
+     - Food processing units dealing with fruit/vegetable products: jams, jellies, squashes, pickles, fruit juices, canned fruits/vegetables, etc.
+
+3. **ISO (International Organization for Standardization)**  
+   - What it is: International standards for quality management, environment management, food safety, information security, etc. (e.g., ISO 9001, ISO 14001, ISO 22000).  
+   - Who should follow:  
+     - Any business (manufacturing, services, IT, trading, food, logistics, etc.) that wants to implement and demonstrate standardized management systems for quality, environment, food safety, information security, etc.  
+     - Often useful for MSMEs seeking to improve processes and credibility, especially for exports or large corporate/government tenders."
+34,what are BIS/FPO/ISO specifications and for what kind of businesses should the be follwed (Application form for msme loans (business loan)),"BIS, FPO, and ISO are different types of standards/certifications that may be asked about in MSME/business loan forms to understand how compliant and organized your business is.
+
+1. **BIS (Bureau of Indian Standards)**  
+   - **What it is:** India’s national standards body that sets quality and safety standards for products and some processes. BIS certification is often mandatory for certain products.  
+   - **Who should follow it:**  
+     - Manufacturers of products that fall under compulsory BIS certification (e.g., electrical appliances, some electronics, cement, steel products, packaged drinking water, some food-contact materials, etc.).  
+     - Any business making products where BIS standards are prescribed (even if voluntary, it helps in quality assurance and market acceptance).
+
+2. **FPO (Fruit Products Order) / FSSAI context**  
+   - Historically, **FPO** was a quality mark for processed fruit and vegetable products under the Fruit Products Order, 1955. Its role has largely been taken over by **FSSAI** (Food Safety and Standards Authority of India), but the term still appears in older forms or references.  
+   - **What it is (in practical current terms):** Regulatory/quality compliance for food processing, especially fruit and vegetable–based products.  
+   - **Who should follow it:**  
+     - Food processing units, especially those making jams, squashes, juices, pickles, sauces, canned fruits/vegetables, etc.  
+     - Any MSME involved in processing, packing, or selling such fruit/vegetable products should now primarily have **FSSAI** registration/license, but older references may still say “FPO”.
+
+3. **ISO (International Organization for Standardization)**  
+   - **What it is:** International standards for management systems, quality, environment, safety, information security, etc. (e.g., ISO 9001 for quality management, ISO 14001 for environment, ISO 22000 for food safety, ISO 27001 for information security).  
+   - **Who should follow it:**  
+     - Manufacturing units (small, medium, or large) wanting to show structured quality management.  
+     - Export-oriented businesses that need to meet buyer or international tender requirements.  
+     - Service businesses (IT, BPO, logistics, healthcare, education, etc.) that want to demonstrate standardized processes."
+35,what are kishor/tarun categories (PMMY Loan application),"Under the Pradhan Mantri Mudra Yojana (PMMY):
+
+- Kishor: Loans from ₹50,001 to ₹5,00,000  
+- Tarun: Loans from ₹5,00,001 to ₹10,00,000"
+39,what is form 16 (personal loan application form),"Form 16 is not a personal loan application form. It is an official certificate issued by an employer in India to its salaried employees. It details the employee’s salary paid and the tax deducted at source (TDS) on that salary during a financial year, and serves as proof of TDS for filing income tax returns."
+40,for whom is form 16 mandatory (personal loan application form),"Form 16 is generally required for salaried individuals applying for a personal loan, as it serves as proof of income and tax deduction by the employer. It is not mandatory for self-employed or non-salaried applicants, who instead provide other income documents such as ITRs, bank statements, and financial statements."
+41,what is DSP-PMSP-ICGSP (personal loan application form),"DSP stands for Defence Salary Package, PMSP stands for Paramilitary Salary Package, and ICGSP stands for Indian Coast Guard Salary Package. This personal loan application form is specifically meant for individuals holding these respective salary packages."
+51,what is sale transaction category normal sale/ POA Sale/ Gift deed/ thru 3rd party guarantor (Home loan application form),"On a home loan application form, “sale transaction category” describes the legal/transactional nature of how you are acquiring the property:
+
+1. Normal Sale:  
+   - A straightforward purchase from the current owner (individual, builder, or developer).  
+   - You pay consideration (money) and receive the property via a regular sale deed/agreement to sell.
+
+2. POA Sale (Power of Attorney Sale):  
+   - The sale is executed by someone holding a valid Power of Attorney from the actual owner.  
+   - The attorney signs documents and completes the transaction on behalf of the owner.  
+   - Legally, the property is still being sold by the owner, but through their authorized representative.
+
+3. Gift Deed:  
+   - The property is transferred without monetary consideration, typically between relatives.  
+   - Ownership passes as a “gift” via a registered gift deed.  
+   - The loan, if any, is usually for construction/renovation on the gifted property or for other related purposes, not for “buying” it in the usual sense.
+
+4. Through 3rd Party Guarantor:  
+   - This does not describe how the property is being sold, but rather how the loan is being secured.  
+   - A third party (not the buyer or seller) guarantees repayment of the home loan.  
+   - The sale itself is usually still a normal sale; the guarantor is an additional security for the bank, not a different mode of transfer."
+53,Can savings for a minor be withdrawn (SSA Account Withdrawal),"Yes, the SSA account withdrawal form allows a guardian to withdraw savings if the account holder is a minor, subject to the bank’s rules and required documentation (such as proof of guardianship and ID)."
+54,What things need to be ensured when withdrawing savings for a minor (SSA Account Withdrawal),"When withdrawing savings from a minor’s SSA (Sukanya Samriddhi Account), it must be ensured that:
+1) The withdrawal is made by the guardian on behalf of the minor (or by the girl herself after attaining the eligible age, as per scheme rules).
+2) The minor (account holder) is alive at the time of withdrawal.
+3) The withdrawal purpose and amount comply with SSA rules (e.g., limited percentage of balance, permitted reasons such as education, marriage, etc., as applicable under the scheme)."
+55,Will I need a SB account to withdraw the savings (SSA Account Withdrawal),"No, you do not necessarily need an SB (savings bank) account to withdraw from an SSA (Sukanya Samriddhi Account). You can either:
+
+1. Receive the withdrawal amount via cheque/demand draft, or  
+2. Get it credited to an SB account (in which case you must provide the SB account details in the withdrawal form).
+
+Having an SB account is only required if you choose the credit-to-SB option, not for withdrawal in general."
+57,What is a demand draft (SSA Account Withdrawal),"A demand draft is a prepaid negotiable instrument issued by a bank directing another bank branch (or bank) to pay a specified sum to a named person or entity, and it is commonly used for safe, guaranteed transfers—such as withdrawing and transferring funds from an SSA (Sukanya Samriddhi Account) to a beneficiary’s account."
+59,what are the rules for premature withdrawal (SSA Account Withdrawal),"Premature withdrawal from a Sukanya Samriddhi Account (SSA) is allowed only under specific conditions:
+
+1. **For Higher Education of the Girl Child**  
+   - Up to **50% of the balance** at the end of the **preceding financial year** can be withdrawn.  
+   - Allowed **after the account holder attains 18 years of age or has passed 10th standard, whichever is earlier**.  
+   - Withdrawal must be for **actual fees and other charges** required at the time of admission, as evidenced by the **offer of admission or fee slip** from the educational institution.  
+   - Withdrawal may be made **in one lump sum or in installments**, not exceeding **five installments** in a financial year.
+
+2. **On Account of Marriage of the Girl Child**  
+   - The account may be **closed prematurely** if the girl has attained **18 years of age** and is getting married.  
+   - Application for closure can be made **one month before or up to three months after the date of marriage**, with proof of age and marriage.
+
+3. **Other Premature Closure Grounds (not regular withdrawals but closure)**  
+   - On **death of the account holder** (with payment to guardian/nominee).  
+   - On account of **extreme compassionate grounds** such as life-threatening disease of the account holder or death of the guardian, as permitted by rules.
+
+The provided answer only covers part of the higher-education withdrawal rule and omits the marriage-related and other premature closure provisions, as well as the installment rule, so it is incomplete."
+65,Till when will I get the interest on the amount and what will happen to the amount on premature death (SSA Account Premature Closure),"In case of the death of the girl child, the account shall be closed immediately on application, and the balance in the account along with interest accrued up to the date of death will be paid to the guardian/nominee/legal heir. No further interest is payable after the date of death."
+68,What is CBS (SSA Account Premature Closure),"CBS in the context of SSA Account Premature Closure stands for Core Banking Solution, which is the centralized, networked banking platform that electronically connects all branches/offices of the bank or post office, enabling uniform, real‑time processing of transactions such as opening, servicing, and premature closure of Sukanya Samriddhi Accounts."
+69,What happens when the account holder become a non-resident of India (SSA Account Premature Closure),"If, after opening the SSA account, the account holder becomes a non-resident or non-citizen of India, the guardian or account holder must intimate the post office or bank within one month of this change. From the date of such change in status, the account is deemed closed, and it must be formally closed. The balance in the account will earn only the Post Office Savings Account interest rate from the date the account holder became non-resident/non-citizen until the date of closure, and this adjusted interest will be payable at closure."
+70,what is the Power to relax (SSA Account Premature Closure),"The Central Government may, by order and for reasons to be recorded in writing, relax the provisions of the Sukanya Samriddhi Account Rules relating to premature closure, where it is satisfied that the operation of any such provision causes undue hardship to the account holder, provided that such relaxation is not inconsistent with the other provisions of these rules."
+72,What are the qualifications for openeing the account (SSA Application for opening an account),"Account can be opened in the name of a girl child who is a resident Indian, from birth up to 10 years of age (a one‑time relaxation of 1 year is sometimes given for existing schemes at launch). The account is opened and operated by the guardian (parent/legal guardian) until the girl attains 18 years. Only one account is allowed per girl child. A maximum of two accounts are allowed per family (for two girl children), with a third account permitted only in the case of twin or triplet girl children born in the second birth (or in the first birth itself, as per current rules)."
+73,where to open the account (SSA Application for opening an account),You can open an SSA account by visiting your nearest post office or any authorized bank branch that offers Sukanya Samriddhi Accounts.
+74,What is the interest rate I can expect (SSA Application for opening an account),"The interest rate applicable to your SSA (Sukanya Samriddhi Account) will be the rate officially notified by the Government of India for the current quarter at the time of deposit. You should check the latest government notification or the bank/post office where you are opening the account for the current rate, as it changes periodically and may not be 8.2% at the time you apply."
+75,Can I get a tax exemption for this (SSA Application for opening an account),"You may be eligible for a tax deduction under Section 80C of the Income Tax Act for eligible deposits, but it depends on the specific type of SSA/account and current tax rules. You should confirm the exact nature of the account (e.g., Sukanya Samriddhi Account) and check the latest Income Tax provisions or consult a tax professional to ensure eligibility and limits."
+79,What documents of the depositor is needed (SSA Application for opening an account),"Identity proof (e.g., Aadhaar card, PAN card, passport), address proof (e.g., Aadhaar card, utility bill, ration card, passport), and recent photographs of the depositor as specified in the SSA account opening form."
+83,what all can be changed using this form (customer request form),"Using this customer request form, you can request changes/updates to:
+- Personal and KYC details  
+- Aadhaar seeding/linking for DBT (government subsidies)  
+- Deletion/removal of Aadhaar data  
+- Safe Deposit Locker services, including:
+  - New locker request  
+  - Adding/changing nominee  
+  - Changing ownership  
+  - Closing the locker"
+85,what is term deposit (customer request form),"A term deposit is a fixed‑term investment account where a customer deposits a specific sum of money with a bank or financial institution for a predetermined period (the “term”) at an agreed, usually fixed, rate of interest. The funds generally cannot be withdrawn before maturity without penalty. On the customer request form, the customer typically specifies:
+- Deposit amount
+- Tenure (term)
+- Interest payout option (e.g., periodic payout or reinvestment)
+- Maturity instructions (e.g., credit to account or renew)
+
+At maturity, the principal is returned along with any interest due as per the chosen payout option."
+86,what is term deposit (re-investment) (customer request form),"A term deposit (re-investment) on a customer request form refers to an instruction that, when the existing term deposit matures, both the principal and (usually) the interest are automatically placed into a new term deposit for another fixed term, instead of being paid out to the customer. It is an option to roll over the deposit at maturity, typically at the then‑applicable interest rate and chosen tenure."
+89,"what is LIFO, FIFO (customer request form)","LIFO (Last-In, First-Out) and FIFO (First-In, First-Out) are methods for determining the order in which items are processed or fulfilled.
+
+- LIFO (Last-In, First-Out): The most recently added item/request is handled first, and earlier ones are handled later.
+- FIFO (First-In, First-Out): The earliest (oldest) item/request is handled first, and newer ones are handled later.
+
+In a customer request form context, choosing LIFO or FIFO specifies whether the newest or oldest requests/items should be processed first."
+94,what are things need to be taken care of while closing the account due to intended marriage (SSA Account Closure Form),"In case of closure due to intended marriage, the following must be taken care of:
+
+1. The account holder must be at least 18 years of age on the date of marriage.
+2. A declaration on non‑judicial stamp paper, duly signed by the account holder and attested by a notary, must be furnished, confirming the intended marriage and that the age condition (18 years or above on the date of marriage) is satisfied.
+3. Proof of age (e.g., birth certificate, school certificate, or any officially accepted age proof) must be attached to support the declaration.
+4. The closure request should be made within the permissible time window as per SSA rules (generally within one month before or three months after the date of marriage, as applicable under the current scheme guidelines).
+5. All required fields in the SSA Account Closure Form must be correctly filled, and supporting documents (declaration, age proof, and any marriage‑related proof if prescribed) must be submitted to the post office/bank where the account is held."
+97,what all can i deposit using this (deposit slip),You can deposit cash (Indian currency) and cheques (local and outstation).
+98,what can i not deposit using this (deposit slip),"You generally cannot deposit:
+- Foreign currency cash (unless the bank specifically allows it with a different form/process)
+- Physical valuables (gold, silver, jewellery, etc.)
+- Non-cash items like gift cards, vouchers, or cryptocurrencies
+- Digital/online transfer requests (NEFT, RTGS, IMPS, UPI) – those are done electronically, not via a cash/cheque deposit slip"
+99,can i deposit multiple things of the same kind at once using a single slip (deposit slip),"Yes, you can usually deposit multiple items of the same type (for example, several checks or a stack of cash bills) using a single deposit slip. You list or total them on that one slip. However, whether you can mix cash and checks on the same slip, or different categories of checks, depends on the specific bank’s rules and the format of its deposit slips."
+100,"how to deposit 1, 2, 5, 10 rs coins (deposit slip)","You only need to enter the total amount of coins on the deposit slip; you do not need to list the individual count of 1, 2, 5, and 10 rupee coins unless your bank’s slip specifically has a separate section asking for denomination-wise details."
+101,should i fill both the halves? (deposit slip),"Not always. Typically, you fill out the top portion (bank’s copy) completely, and the bottom portion (your receipt) may only need key details like amount, date, and account info. Requirements vary by bank, so follow the instructions printed on the slip or ask the bank staff."
+103,what does crossing cheques mean (deposit slip),"Crossing a cheque means drawing two parallel lines on the face of the cheque (often on the top left) to indicate that it must be paid only through a bank account and not encashed over the counter. A crossed cheque can only be deposited into a bank account, not taken as cash. Writing “A/c Payee” or “Account Payee Only” between the lines further restricts it so that the amount can be credited only to the account of the payee named on the cheque."
+104,can i still deposit the out of circulation 1k and 2k notes? (deposit slip),"No, you cannot deposit out-of-circulation 1k and 2k notes as valid currency; leave those rows blank on the deposit slip unless your bank has a specific process for exchanging demonetized notes."
+106,what is OVD (Withdrawal Slip),"OVD in the context of a withdrawal slip generally refers to ""Original Voucher Date"" or ""Original Value Date,"" indicating the date on which the original transaction or voucher was created/valued."
+107,what is GCC (Withdrawal Slip),"GCC (Withdrawal Slip) in SBI refers to the Green Channel Counter, a paperless facility in SBI branches that allows customers to perform transactions such as cash withdrawal, deposit, and fund transfer using their ATM/Debit Card and PIN instead of traditional withdrawal or deposit slips."
+109,Can I direct the amount from my account to another account (Withdrawal Slip),"No. A standard withdrawal slip is used to withdraw cash from your own account, not to transfer funds directly to another account. To move money to another account, you must use the bank’s designated transfer method (such as a transfer form, cheque, online transfer, or deposit slip into the other account), as per the bank’s procedures."
+110,What methods can you use to withdraw from your account (Withdrawal Slip),"You can withdraw from your account using:
+- Passbook
+- Officially Valid Document (OVD)
+- GCC (General Credit Card / Kisan Credit Card, as applicable)"
+111,What all details should I fill in the form (Withdrawal Slip),"On a typical bank withdrawal slip, you should fill in:
+- Date  
+- Name of the account holder  
+- Account number  
+- Type of account (Savings/Current, etc., if asked)  
+- Amount to withdraw (in figures and in words)  
+- Branch name (home branch, if required)  
+- Mobile number (if required)  
+- PAN number (if required for large withdrawals, as per bank rules)  
+- Mode of identification, if asked (e.g., passbook / GCC / OVD details)  
+- Signature of the account holder"
+113,what should I ensure when using OVD and GCC to withdraw amount (Withdrawal Slip),"You should ensure that the withdrawal slip is duly filled and signed, and that it is accompanied by your Officially Valid Document (OVD) and Gold Card/General Credit Card (GCC) as required by the bank. It is not mandatory to have the registered mobile number just to use OVD and GCC for a withdrawal, unless the bank specifically requires mobile-based authentication for that transaction."
+114,what is the liimits for opening the account (SCSS Account Opening Form),"The account shall be opened with a minimum deposit of one thousand rupees or any sum in multiples of one thousand rupees, not exceeding the maximum investment limit prescribed for SCSS (currently Rs. 30 lakhs, subject to change as per government notifications)."
+118,who can be the second account holder (SCSS Account Opening Form),Only the spouse of the primary account holder can be the second (joint) account holder in an SCSS account.
+120,what is the tax benifit (SCSS Account Opening Form),"Investment in SCSS (Senior Citizens Savings Scheme) is eligible for deduction under Section 80C of the Income Tax Act (subject to the overall 80C limit), but this deduction is available only under the old tax regime, not under the new regime.
+
+Interest earned on SCSS is fully taxable as “Income from Other Sources.” TDS is deducted on interest if it exceeds the prescribed threshold in a financial year, as per prevailing tax rules (the threshold and conditions may change over time and should be checked against current law). The reference to “Section 123 of the Income Tax Act, 2025” is incorrect and not applicable."
+122,who arent explicitly not allowed to open a SCSS account (SCSS Account Opening Form),Non-Resident individuals and Hindu Undivided Families (HUFs) are not allowed to open a SCSS account.
+124,what type of accounts can I open (SCSS Account Opening Form),"Under the Senior Citizens Savings Scheme (SCSS), you can open:
+- A single account (in your own name), or  
+- A joint account with your spouse (husband or wife) only."
+125,what are all the documents needed to open the form (SCSS Account Opening Form),"PAN Card, Aadhaar Card, Address Proof, Birth Certificate, Passport-size Photographs, and any additional KYC documents or forms as specified by the institution providing the SCSS Account Opening Form."
+126,what all details are required to add nominees (SCSS Account Opening Form),"Name of nominee(s), relationship with the account holder, full address of nominee(s), Aadhaar number (if required as per current rules), date of birth of nominee (mandatory if minor), share of entitlement for each nominee (if more than one), nature/capacity of entitlement (beneficial owner or trustee), and guardian’s details (name, address, relationship) if the nominee is a minor."
+128,how accurateshould cost of source and future of finance be. confusion owing to possible fee hike or scholarship (education loan application form),"On the education loan application form, you should be as accurate as possible but always grounded in official documents, not guesses.
+
+1. **Cost of study (tuition, living, etc.)**
+   - Use the **official fee structure / offer letter / I-20 / cost-of-attendance document** from the university.
+   - If the form asks for costs for the *entire course*, multiply the official annual/semester costs accordingly and mention that these are **as per current official fee structure**.
+   - Do **not** inflate numbers arbitrarily for a “possible” hike. Banks already know fees may increase; they usually keep a small buffer or can revise disbursements later if the university issues a new fee letter.
+
+2. **Future of finance / source of funds section**
+   - Break up the funding as clearly as possible:
+     - **Education loan**: amount you are applying for.
+     - **Own funds / family funds**: savings, fixed deposits, etc.
+     - **Confirmed scholarships / assistantships**: only those that are officially granted in writing.
+   - If a scholarship is **not yet confirmed**, do **not** show it as guaranteed funding. You can:
+     - Either omit it, or
+     - Mention it separately as “Scholarship applied for (result pending)” in a remarks section if available.
+
+3. **Fee hike / scholarship changes later**
+   - **Fee hike**: If fees increase later, the university will issue a revised fee demand letter. You can submit this to the bank; they may:
+     - Increase the sanction (if within their norms), or
+     - Adjust semester-wise disbursements within the sanctioned limit.
+   - **Scholarship awarded later**:
+     - Inform the bank and provide the scholarship letter.
+     - The scholarship will reduce the amount the bank needs to disburse, thus lowering your final loan burden.
+     - In many cases, the scholarship is treated as part of your “margin” (your contribution), and the bank simply disburses less.
+
+4. **Level of precision**
+   - Numbers should be **exact as per documents** (to the nearest currency unit) where possible.
+   - For future years where the university itself gives only an estimate, you can use those estimates and note “as per university estimate; subject to change.”
+
+In summary: base all figures on official documents,"
+129,what is SBI Rinn Raksha (education loan application form),"SBI Rinn Raksha is a group life insurance scheme offered to SBI loan borrowers (including education loan borrowers) to cover the outstanding loan in case of the borrower’s death or certain other covered contingencies. It is optional credit‑life insurance, not the education loan application form itself.
+
+The “SBI Rinn Raksha (education loan application form)” would be the specific form used to apply for this Rinn Raksha insurance cover along with an SBI education loan. It typically captures details such as:
+
+- Borrower’s personal details (name, age, contact, etc.)
+- Loan account details (type of loan, amount, tenure)
+- Nominee details
+- Health/medical declarations (if applicable)
+- Consent and declarations for availing the Rinn Raksha cover and allowing premium to be financed/added to the loan (if chosen)
+
+So, SBI Rinn Raksha is the insurance product; the “education loan application form” in this context is the document used to opt into that insurance when taking an SBI education loan."
+131,should i submit physical form along with application vidya lakshmi portal (education loan application form),"You generally do not have to submit a separate physical copy of the Vidya Lakshmi application form itself, but you almost always must visit the chosen bank branch with printed copies of your documents (and often a printout of the online application summary) for verification and further processing.
+
+Process is typically:
+1. Fill and submit the Common Education Loan Application Form (CELAF) online on the Vidya Lakshmi Portal and choose your bank/branch.
+2. Wait for the bank to contact you or follow up with the selected branch.
+3. Visit the branch with:
+   - Printout of the online application or application ID
+   - Required supporting documents (KYC, admission letter, fee structure, mark sheets, income proof, collateral documents if applicable, etc.)
+4. Sign all required physical forms/agreements provided by the bank.
+
+So: you don’t usually submit a separate “physical Vidya Lakshmi form,” but you do need to go to the bank with printouts and documents; the loan cannot be completed purely online."
+135,What data needs to be enterd to change nominees (APPLICATION FOR NOMINATION/CHANGE/CANCELLATION OF NOMINATION   form),"To change nominees in the “APPLICATION FOR NOMINATION / CHANGE / CANCELLATION OF NOMINATION” form, you generally need to enter:
+- Depositor’s/account holder’s details (name, account number, address, etc.)
+- Details of the new nominee(s): full name, relationship with depositor, permanent address
+- Date of birth (if minor) or age (if not minor)
+- Share of each nominee in the amount payable
+- Guardian’s details and address if the nominee is a minor
+- Specimen signatures of the nominee(s) (if required by the institution)
+- Date and signature of the depositor/account holder (and witnesses, if required)
+
+Photographs may be required depending on the institution’s rules."
+136,What information is needed incase of minor (APPLICATION FOR NOMINATION/CHANGE/CANCELLATION OF NOMINATION   form),"Name and date of birth of the minor, relationship of the minor to the account holder, name, address and age of the guardian who will receive and manage the minor’s amount, and the guardian’s relationship to the minor."
+137,how do I cancel or revoke the nominations made earlier (APPLICATION FOR NOMINATION/CHANGE/CANCELLATION OF NOMINATION   form),"You can cancel or revoke earlier nominations by submitting a fresh “Application for Nomination / Change / Cancellation of Nomination” form and selecting the option for “Cancellation” (or “Change/Cancellation,” as applicable). In the form, clearly mention the details of the previous nomination you want to cancel (such as date of submission and reference/acknowledgment number, if any), and submit it to the same authority/office where the original nomination was filed, following their prescribed process (including any required identification and signatures)."
+138,what is kfs for (key fact statement),"A Key Fact Statement (KFS) is a short, standardized document that summarizes the essential terms and costs of a financial product (such as a loan, credit card, or deposit), including key fees, interest rates, repayment obligations, and major conditions. Its purpose is to present these critical details clearly and comparably so customers can easily understand and compare products before deciding."
+140,what should i do with it (key fact statement),"Review the key fact statement carefully to understand all fees, interest rates, and terms; compare it with what you were verbally told or other offers; ask questions and request corrections if anything is unclear or incorrect; and only sign or proceed with the product if you fully understand and agree with the terms."
+141,what are key points that i should check (key fact statement),"Key points you should check (key fact statements):
+- Loan amount and tenure: Confirm the sanctioned amount and loan term match what you requested.
+- Interest rate and type: Verify the exact rate and whether it is fixed or floating, as per your preference.
+- EMI amount: Check the monthly installment and ensure it is affordable within your budget.
+- Fees and charges: Review processing fees, stamp duty, administrative charges, legal/valuation fees, and any other listed charges. Understand that typically only listed charges can be levied later.
+- Penalties: Check late payment charges, cheque bounce/return charges, and any default-related penalties.
+- Prepayment/foreclosure terms: Confirm if there are charges or restrictions on part-prepayment or full pre-closure.
+- Other key conditions: Look for special conditions, insurance requirements, and any clauses that could affect your costs or obligations."
+144,what is the cheque or DD realisation charge (SCSS Account Deposit Slip),"Cheque or DD realisation charge on an SCSS Account Deposit Slip is the fee taken by the post office/bank for collecting (clearing) the deposit amount when you make the SCSS deposit through a cheque or demand draft. It is not the commission for issuing a DD, but a separate charge for processing and realising the instrument into the SCSS account."
+145,what is account transfer fees (SCSS Account Deposit Slip),"In the context of SCSS (Senior Citizens Savings Scheme) and its deposit/transfer slip, “account transfer fees” refers to the charge levied by the post office/bank when you transfer an existing SCSS account from one deposit office/branch to another.
+
+Key points:
+- It is **not** a fee for NEFT/RTGS/UPI etc., but specifically for **shifting your SCSS account** from one branch/post office to another.
+- The fee is usually a **small, fixed amount per account transfer**, prescribed in the SCSS/post office savings rules (e.g., a nominal charge when you request transfer of the SCSS account).
+- It is shown on the SCSS Account Deposit/Transfer Slip so the office can:
+  - Record that a transfer is being requested, and  
+  - Collect the applicable transfer fee from the depositor."
+146,what is duplicate passbook fees (SCSS Account Deposit Slip),Duplicate passbook fees for an SCSS account (Senior Citizens Savings Scheme) are ₹10 per passbook.
+148,what denominations can i use to deposit (SCSS Account Deposit Slip),"You can use denominations of ₹500, ₹100, ₹50, ₹20, and ₹10. The ₹1,000 denomination is no longer accepted, so you should strike out or leave blank the row for ₹1,000 on the SCSS Account Deposit Slip."
+149,what other details should I keep in mind to have to fill in the form (SCSS Account Deposit Slip),"Your account number, cheque/demand draft number and date, bank/branch on which drawn, depositor’s name, contact details (if required), amount in figures and words, mode of deposit (cash/cheque/DD), and your signature."
+152,what is the permissible limit for cash payment (PPF account closure form),"The permissible limit for cash payment at the time of PPF account closure is ₹20,000. Any amount above ₹20,000 must be paid by cheque, demand draft, or electronic transfer."
+153,"what is that ""certified for use Minor"" (PPF account closure form)","In the PPF account closure form, the phrase “certified for use – Minor” (or the section referring to a minor) is meant to be filled and signed by the guardian when the PPF account is in the name of a minor (a child under 18).
+
+By signing there, the guardian is:
+1. Certifying that they are the lawful guardian of the minor whose PPF account is being closed/withdrawn.
+2. Confirming that the minor is alive.
+3. Confirming that the proceeds will be used for the benefit of the minor (as required under PPF rules).
+
+You typically write the minor’s name where indicated, and the guardian signs in the relevant place. If the PPF account is in your own name as an adult (not a minor’s account), you leave the “Minor” certification section blank; it does not apply to you."
+154,when will the account closure possible (SCSS Application for closure of account)),"On maturity after 5 years from the date of opening (or after the extended block of 3 years, if the account has been extended), or earlier in cases where premature closure is allowed under SCSS rules (such as death of the depositor or other specified conditions)."
+155,what details are needed  in the form (SCSS Application for closure of account)),"Details typically needed in the SCSS account closure application form include:
+- Name of the account holder
+- SCSS account number
+- Date of account opening
+- Date of account maturity (if applicable)
+- Reason for closure (if before maturity)
+- Amount/closure proceeds (as applicable)
+- Details of the account to which the amount is to be credited (bank name, branch, account number, IFSC, type of account)
+- Name and address of the bank/post office where SCSS account is held
+- PAN of the account holder (if required)
+- Signature of the account holder (and nominee/legal heir, if applicable)
+- Date and place of application"
+157,incase of adding a thumb impression what things to be note (SCSS Application for closure of account)),"In case of adding a thumb impression in an SCSS application for closure of account, the thumb impression must be:
+1) Clearly affixed in the designated space.
+2) Attested by a competent witness (such as a Gazetted Officer or authorized bank/post office official) who knows the depositor and certifies that the thumb impression is that of the account holder.
+3) Accompanied by the witness’s full name, designation, and signature/stamp."
+159,conditions for the interest to be deposited (SCSS Application for closure of account)),"Interest payable on the due dates as specified in sub‑rule (2) shall be credited to the depositor’s savings account in the deposit office where the SCSS account exists, if the depositor has so authorised, and subject to the condition that such credit does not cause the balance in the savings account to exceed the prescribed maximum limit for that account."
+162,what are the rules for depositing amount into my account (PPF Account Deposit slip),"For a standard Public Provident Fund (PPF) account, the rules for depositing are:
+
+1. **Number of deposits per year**:  
+   - You can make **multiple deposits** in a financial year (currently up to 12 deposits per year; earlier rules allowed up to 12–24 depending on interpretation, but not just one).  
+   - It is **not** restricted to a single, one-time deposit.
+
+2. **Minimum deposit**:  
+   - Minimum total deposit per financial year: **₹500**.
+
+3. **Maximum deposit**:  
+   - Maximum total deposit per financial year: **₹1.5 lakh** (₹150,000), not ₹15 lakh.  
+   - This limit is the **aggregate** of all deposits in that PPF account in that financial year.
+
+4. **Denomination / multiples**:  
+   - Deposits must be in **multiples of ₹50** (not necessarily in round chunks of ₹1,000).
+
+5. **Mode of deposit**:  
+   - Cash, cheque, demand draft, or electronic transfer (as allowed by your bank/post office).
+
+6. **Who can deposit**:  
+   - The account holder (or guardian in case of minor’s account) can deposit.  
+   - For a minor’s PPF, combined deposits in the guardian’s own PPF and the minor’s PPF cannot exceed **₹1.5 lakh per financial year** in total.
+
+7. **Special retirement-related rules**:  
+   - The description in the provided answer about a one-time deposit linked to retirement benefits up to ₹15 lakh applies to certain **Senior Citizens’ Savings Schemes (SCSS)** or specific retirement-linked schemes, **not** to a standard PPF account.  
+   - PPF does **not** limit your deposit to retirement proceeds nor to ₹15 lakh as a one-time cap.
+
+So, the provided answer is incorrect for a PPF account deposit slip."
+163,what is the cheque or DD realisation charge (PPF Account Deposit slip),"The “cheque or DD realisation charge” on a PPF Account Deposit slip is the fee the bank charges for collecting (clearing) your payment when you deposit into your PPF account using a cheque or demand draft instead of cash. It is usually a small fixed amount or a small percentage of the cheque/DD amount, subject to the bank’s schedule of charges, and is debited to you for processing and crediting the funds to your PPF account."
+164,what is account transfer fees (PPF Account Deposit slip),"In the context of a PPF (Public Provident Fund) account deposit slip, “account transfer” refers to depositing money into your PPF by transferring funds from another bank account (usually your savings account) instead of depositing cash or cheque.
+
+The “account transfer fees” line on or related to a PPF deposit slip would therefore mean any charges your bank may levy for transferring money from your bank account to the PPF account (for example, via NEFT/RTGS/IMPS if done at a branch). Many banks do not charge for such transfers when done online, but if there is a fee, it is simply the bank’s normal fund-transfer charge; there is no special or separate “PPF account transfer fee” mandated for depositing into a PPF."
+165,what is duplicate passbook fees (PPF Account Deposit slip),"Duplicate passbook fee for a PPF account is ₹1 (one rupee), payable to the Accounts Office for issuing a duplicate in case the original passbook is lost or destroyed."
+166,what are the accepted modes of deposit (PPF Account Deposit slip),"The accepted modes of deposit for a PPF account (as per the deposit slip) are:
+- Cash
+- Cheque
+- Demand Draft (DD)
+- Pay Order
+
+Electronic transfers like NEFT/RTGS/online transfer may be allowed by the bank/post office, but they are not typically listed as modes on the physical PPF deposit slip itself."
+167,what denominations can i use to deposit (PPF Account Deposit slip),"You can deposit in any valid Indian currency denominations that you actually have (e.g., ₹2000, ₹500, ₹200, ₹100, ₹50, ₹20, ₹10, and coins), subject to what the bank/branch is currently accepting. On the PPF deposit slip, you simply list the denominations and quantities so that the total matches the amount you are depositing. There is no special or restricted set of denominations specific to PPF; it follows normal cash/cheque deposit rules of the bank."
+168,what other details should I keep in mind to have to fill in the form (PPF Account Deposit slip),"In addition to your account number, cheque/demand draft number and date, and bank/branch on which it is drawn, you generally also need:
+- Name of account holder
+- Amount in figures and words
+- PAN (if required by the bank/post office)
+- Depositor’s signature
+- Date and place of deposit"
+169,what happens if i deposit more than the acceptable ammount (PPF Account Deposit slip),"If you deposit more than the permissible limit in a PPF account, the excess amount is simply not eligible for interest or tax benefits. Banks/post offices may inform you and can refund the excess, but there is no interest payable on the excess deposit, and it does not get PPF benefits."
+170,what details of mine are needed to add nominee (Public Provident Fund Account Nomination Form),"Typically you need: your name, PPF account number, address, date of birth, and signature (and sometimes PAN or other ID details as required by the bank/post office)."
+172,what happens in case of adding minors in nominees (Public Provident Fund Account Nomination Form),"In case you add a minor as a nominee in a Public Provident Fund (PPF) account, you must appoint a guardian (usually a parent or another adult) to receive and manage the funds on behalf of the minor if the PPF account holder dies. The amount is not transferred to the minor directly but to the appointed guardian, who will hold it for the minor until they attain majority."
+173,when can i add nominees (Public Provident Fund Account Nomination Form),You can add nominees to your Public Provident Fund (PPF) account at any time after opening the account by submitting Form E (Nomination Form) to the bank/post office where the PPF account is held.
+177,what happens incase no nominees are mentioned (Public Provident Fund Account Nomination Form),"If no nominee is mentioned, the PPF account balance (after any applicable deductions) will be payable to the legal heirs of the account holder, upon production of the necessary legal documents (such as a succession certificate, legal heir certificate, or probate of will, as required by the post office/bank)."
+178,what about the interest to be paid by the nominees after death of the account owner (Public Provident Fund Account Nomination Form),"After the death of the PPF account holder, the account stops earning interest from the end of the month preceding the month of death, and no further interest is payable to or by the nominee. The nominee is not required to pay any interest; they are only entitled to receive the balance (principal plus interest accrued up to the relevant date) in the deceased’s account."
+183,can I open a new account instead of extending a account (Public Provident Fund Account Extension Form-),"No. Under current Public Provident Fund (PPF) rules, an individual can hold only one PPF account in their name (with very limited exceptions such as certain old accounts). You cannot open a new PPF account simply instead of extending the existing one. After maturity, you must either close the existing account and withdraw the balance, or extend the same account (with or without further contributions) in blocks of 5 years. You are not allowed to open a fresh PPF account while one in your name already exists."
+185,is there tax concessions in the extended period also (Public Provident Fund Account Extension Form-),"Yes. The Public Provident Fund (PPF) continues to enjoy the same tax concessions during the extended period as in the original term. Contributions (within the prescribed limit) are eligible for deduction under Section 80C, the interest earned (including during the extended period) is tax‑free, and withdrawals (including on maturity after extension) are exempt from income tax."
+187,what details need to be given for extension of the ppf account (Public Provident Fund Account Extension Form-),"Name of the account holder, PPF account number, date of maturity of the PPF account, full address, desired period of extension (with or without contribution), signature of the account holder, and any other details as required by the specific bank/post office form (such as PAN and nomination details, if asked)."
+188,equivalent to two months net salary is the total new limit or over and above existing limit (overdraft against salary form),"The phrase “equivalent to two months’ net salary” by itself does **not** tell you whether this is a *new total limit* or *over and above* any existing overdraft/credit limits. That depends on the specific bank’s product terms.
+
+In most banks’ “overdraft against salary” products, the sanctioned overdraft limit is defined as up to a certain multiple of net monthly salary (e.g., 2× net salary). That figure is typically the **total limit for that overdraft facility itself**, not an automatic extra limit on top of any other overdraft or loan you may have.
+
+So, unless the form or bank explicitly states “over and above existing limits” or “in addition to your current overdraft,” you should assume:
+
+- The overdraft against salary facility has a **maximum limit equal to two months’ net salary**, and  
+- That figure is the **cap for that particular facility**, not a guaranteed extra limit beyond all other facilities.
+
+To be certain, you must confirm with the bank or check the detailed product terms on the form or sanction letter."
+191,what is bps (overdraft against salary form),"In the context of an overdraft against salary form, “bps” stands for “basis points.” A basis point is a unit used to express small changes in interest rates or margins. 
+
+1 basis point (1 bps) = 0.01% (one-hundredth of a percent).  
+So, 100 bps = 1.00%, 250 bps = 2.50%, etc.
+
+If the form says, for example, “MCLR + 250 bps,” and the MCLR is 8.50%, the effective interest rate will be 8.50% + 2.50% = 11.00%."
+192,what if latest 2 months salary slips cannot be produced (overdraft against salary form),"If you cannot provide the latest two months’ salary slips, the bank may not automatically reject your overdraft application, but it is likely to delay or affect the assessment. In most cases, the bank will either:
+- Ask for alternative income proof (e.g., bank statements showing salary credits, employment letter, older salary slips, Form 16/ITR), or  
+- Ask you to submit the missing salary slips later before approving the overdraft.
+
+The exact outcome depends on the bank’s policy; it is not guaranteed that the application will be “instantly rejected” in all cases."
+195,important pointers while filling (PM SVANidhi form),"While filling the PM SVANidhi form, keep these important pointers in mind:
+
+1. **Eligibility & Documents Ready**
+   - Confirm you are an eligible street vendor (as per ULB list, certificate of vending, or LoR).
+   - Keep these handy:
+     - Aadhaar card (preferably with mobile number linked for e-KYC).
+     - Voter ID / PAN (if available).
+     - Bank account details (account number, IFSC, bank name).
+     - Vendor ID / Certificate of Vending / Letter of Recommendation (LoR) from ULB, if applicable.
+     - Recent passport-size photograph (if required by portal/bank).
+
+2. **Mobile Number & e-KYC**
+   - Use a valid, active mobile number; it will be used for OTPs and communication.
+   - If Aadhaar is not linked to mobile, be prepared for offline KYC at the bank/CSC.
+
+3. **Correct Vendor Category & Location**
+   - Select the correct vending category (e.g., stationary, mobile, or any other option given on the portal).
+   - Enter accurate vending location details (landmark, ward, street/area) as per your actual place of vending.
+   - Ensure the ULB (municipality/town panchayat) selected is correct.
+
+4. **Proof of Vending**
+   - If you have:
+     - **Certificate of Vending / Vendor ID**: Enter the correct number and upload/submit as required.
+     - **Not in list / No ID**: Apply for or obtain a **Letter of Recommendation (LoR)** from the ULB as per official process. Do not invent or guess any LoR or ID number.
+   - Do not leave “Proof of Vending” fields blank; follow the portal’s specified options (e.g., “Vendor in Survey List”, “Vendor with LoR”, etc.).
+
+5. **Loan Details**
+   - Choose the correct **loan amount** (usually up to ₹10,000 for first loan; higher for subsequent loans as per scheme rules).
+   - Select the correct **bank / branch** and ensure your bank account details are accurate to avoid rejection or delay.
+   - Confirm whether this is your **first, second, or third loan** under PM SVANidhi, and fill accordingly.
+
+6. **Personal & Address Details**
+   - Name, father’s/spouse"
+196,what is the form for (loan against property allocation form),"The “loan against property allocation form” is the application form used to apply for a loan against property (LAP), where you provide details such as your personal information, property details, income, required loan amount, and purpose of the loan so the lender can process and allocate the LAP."
+197,"meaning of the roles applicant, co-applicant and guarantor (loan against property allocation form)","In a loan against property:
+
+- Applicant: The primary borrower in whose name the loan is taken. This person is mainly responsible for repaying the loan and is the primary owner/user of the funds.
+
+- Co-applicant: An additional borrower who applies jointly with the applicant. A co-applicant is equally responsible for repayment and is usually a co-owner of the property or a close family member whose income is also considered for loan eligibility.
+
+- Guarantor: A third party who does not receive the loan amount but guarantees repayment. If the applicant and co-applicant fail to repay, the guarantor is legally liable to repay the loan as per the guarantee terms."
+198,"what are processing fees, valuation fees and legal fees (loan against property allocation form)","Processing fees are charges the bank takes to cover its administrative and processing costs for evaluating and sanctioning your loan application.  
+Valuation fees are charges paid (usually to an external valuer/engineer) for assessing and certifying the current market value and condition of the property being offered as security.  
+Legal fees are charges (usually paid to an external lawyer/firm) for carrying out legal due diligence on the property, including title search, checking for disputes, encumbrances, prior mortgages, and preparing/ vetting the loan and mortgage documents."
+199,"is it compulsory to consent to share my personal financial data with SBI's Group Companies, Subsidiaries, and Joint Ventures. (loan against property allocation form)","No, it is not compulsory to give your consent for this data sharing, and your application should not be rejected solely because you choose “No.”"
+200,what is LTV and how much is allowed (loan against property allocation form),"LTV (Loan-to-Value) is the ratio of the loan amount to the market value of the property being mortgaged, expressed as a percentage. 
+
+For a loan against property (LAP), banks/NBFCs in India typically allow an LTV of about 50%–70% of the property’s assessed value, depending on the lender, property type, borrower profile, and regulatory norms. You need to check the specific lender’s LAP policy or product document for the exact LTV limit applicable to your case; it is not universally fixed at 65% or 60% as in the example given."
+202,what is realty gold loan and why does it require builder letters (gold loan application form),"A “Realty Gold Loan” is a type of gold‐backed loan specifically meant to fund a real estate (property) transaction—typically for making part of the payment for a flat/house, meeting margin money, or covering related property costs—rather than for general personal use. The borrower pledges gold, and the loan amount is disbursed for the stated property purpose.
+
+Builder letters (or a letter from the builder) are required so the lender can:
+
+1. Confirm the details of the property (project name, flat number, cost, stage of construction, builder’s credentials).
+2. Verify that there is a genuine underlying real estate transaction and that the loan is actually being used toward that property.
+3. Reduce fraud and misrepresentation (e.g., fake projects, inflated prices, or diversion of funds).
+4. Ensure compliance with internal credit policies and regulatory norms that distinguish property‐linked loans from general‐purpose gold loans.
+
+In short, the builder letter is a verification and documentation tool tying the gold‐backed loan to a specific, legitimate real estate purchase."
+203,what is gross weight and net weight and how to enter it (gold loan application form),"Gross weight is the total weight of the ornament as it is, including gold plus stones, beads, enamel, lac, hooks, etc. Net weight is the weight of gold alone after deducting the weight of stones, beads, lac, and other non-gold parts.
+
+How to enter it in a gold loan application form (typical process):
+- If the form is being filled by bank staff/appraiser (most common): Leave the gross and net weight columns blank; the appraiser will weigh the ornaments, calculate gross and net weight, and enter them.
+- If the form specifically instructs the customer to fill it (less common):  
+  - Enter the gross weight as shown on the weighing scale for each ornament.  
+  - Do not guess the net weight; leave it for the appraiser, who will determine and enter the net weight after testing and deducting non-gold components.
+
+Always follow the specific instructions of the bank/branch; when in doubt, leave the weight fields blank for official measurement."
+204,what is 75% LTV (gold loan application form),"75% LTV in a gold loan application form means the loan amount can be up to 75% of the value of the gold you pledge (as per the lender’s valuation). For example, if your gold is valued at ₹1,00,000, the maximum loan you can get is ₹75,000."
+205,Is data sharing consent compulsory (gold loan application form),"Data sharing consent for marketing or cross-selling is not legally compulsory to obtain a gold loan; the bank cannot make the loan itself conditional on your agreeing to share data for such ancillary purposes. However, many physical application forms (including SBI’s) embed marketing/data‑sharing language inside a general “declaration” or “consent” block. In practice, this can make it appear non‑negotiable.
+
+If you do not wish to consent to data sharing for marketing or cross‑selling, you should:
+
+1. Clearly strike out the specific marketing/data‑sharing sentences or clauses on the form before signing, and/or
+2. Add a handwritten note near your signature stating that your consent is limited to processing the loan and regulatory requirements, and does not extend to marketing or third‑party data sharing.
+
+The bank should still process your loan application based on the core, mandatory consents needed for the loan itself, even if you refuse consent for optional marketing/data sharing."

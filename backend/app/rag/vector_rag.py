@@ -390,6 +390,7 @@ class VectorRAG:
         top_k: int = 5,
         filters: Optional[dict] = None,
         expand: bool = False,
+        candidate_document_ids: Optional[set[str]] = None,
     ) -> list[dict[str, Any]]:
         """
         Retrieve the top_k most relevant chunks for *query*.
@@ -410,12 +411,15 @@ class VectorRAG:
         """
         effective_query = expand_acronyms(query) if expand else query
         query_embedding = await ollama_client.embeddings(effective_query)
-        where = build_chroma_filter(filters) if filters else None
+        where = build_chroma_filter(filters or {}, candidate_document_ids)
 
         candidate_k = self._candidate_k(top_k)
         results: list[dict[str, Any]] = chroma_client.search(
             collection_name, query_embedding, candidate_k, where
         )
+
+        if candidate_document_ids:
+            results = [r for r in results if r.get("metadata", {}).get("document_id") in candidate_document_ids]
 
         # Drop empty chunks early
         results = [r for r in results if r.get("chunk_text", "").strip()]
@@ -432,6 +436,7 @@ class VectorRAG:
         top_k: int = 5,
         filters: Optional[dict] = None,
         expand: bool = False,
+        candidate_document_ids: Optional[set[str]] = None,
     ) -> list[dict[str, Any]]:
         """
         Search multiple collections, merge all candidates, rerank globally,
@@ -452,7 +457,7 @@ class VectorRAG:
         """
         effective_query = expand_acronyms(query) if expand else query
         query_embedding = await ollama_client.embeddings(effective_query)
-        where = build_chroma_filter(filters) if filters else None
+        where = build_chroma_filter(filters or {}, candidate_document_ids)
 
         candidate_k = self._candidate_k(top_k)
         all_results: list[dict[str, Any]] = []
@@ -469,6 +474,9 @@ class VectorRAG:
                 logger.warning(
                     "Collection '%s' search failed (skipping): %s", collection, exc
                 )
+
+        if candidate_document_ids:
+            all_results = [r for r in all_results if r.get("metadata", {}).get("document_id") in candidate_document_ids]
 
         # Drop empties, merge hybrid scores globally, then rerank
         all_results = [r for r in all_results if r.get("chunk_text", "").strip()]

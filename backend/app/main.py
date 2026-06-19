@@ -23,6 +23,7 @@ from app.api.documents import router as documents_router
 from app.api.chat import router as chat_router
 from app.api.rag import router as rag_router
 from app.api.chroma import router as chroma_router
+from app.api.forms import router as forms_router
 
 
 
@@ -79,3 +80,4 @@ app.include_router(documents_router)
 app.include_router(chat_router)
 app.include_router(rag_router)
 app.include_router(chroma_router)
+app.include_router(forms_router)

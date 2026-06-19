@@ -7,6 +7,7 @@ import pandas as pd
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.rag.metadata_filter import build_chroma_filter
+from app.rag.bm25 import bm25_retriever
 
 
 SCHEMA_COLLECTION = "table_documents"
@@ -54,46 +55,82 @@ class TableRAG:
         }
 
         ids, embeddings, documents, metadatas = [], [], [], []
+        chunk_records = []
 
         # Schema chunk with column details
         col_types = ", ".join([f"{col} ({dtype})" for col, dtype in schema_info["dtypes"].items()])
         schema_text = f"Table: {filename}\nColumns: {col_types}\nTotal rows: {schema_info['row_count']}"
         schema_emb = await ollama_client.embeddings(schema_text)
-        schema_id = f"{document_id}_schema"
+        schema_id = str(uuid.uuid4())
         ids.append(schema_id)
         embeddings.append(schema_emb)
         documents.append(schema_text)
-        metadatas.append({
+        schema_meta = {
             "document_id": document_id,
             "filename": filename,
             "document_type": "csv",
             "chunk_type": "schema",
             "columns": json.dumps(list(df.columns)),
+            "chunk_id": schema_id,
             **(extra_metadata or {}),
+        }
+        metadatas.append(schema_meta)
+        chunk_records.append({
+            "id": schema_id,
+            "document_id": document_id,
+            "chunk_index": 0,
+            "chunk_text": schema_text,
+            "chunk_metadata": schema_meta,
+            "metadata_json": schema_meta,
+            "qdrant_point_id": schema_id,
         })
 
         # Row chunks: convert to readable text format (preserve headers in each chunk)
         chunk_size = 10  # Increased from 5 to capture more context
-        for start in range(0, min(len(df), 500), chunk_size):
+        for idx, start in enumerate(range(0, min(len(df), 500), chunk_size), start=1):
             end = start + chunk_size
             row_text = self._convert_table_section_to_text(df, start, end)
             row_emb = await ollama_client.embeddings(row_text)
-            row_id = f"{document_id}_rows_{start}"
+            row_id = str(uuid.uuid4())
             ids.append(row_id)
             embeddings.append(row_emb)
             documents.append(row_text)
-            metadatas.append({
+            row_meta = {
                 "document_id": document_id,
                 "filename": filename,
                 "document_type": "csv",
                 "chunk_type": "rows",
                 "row_start": start,
                 "row_end": end,
+                "chunk_id": row_id,
                 **(extra_metadata or {}),
+            }
+            metadatas.append(row_meta)
+            chunk_records.append({
+                "id": row_id,
+                "document_id": document_id,
+                "chunk_index": idx,
+                "chunk_text": row_text,
+                "chunk_metadata": row_meta,
+                "metadata_json": row_meta,
+                "qdrant_point_id": row_id,
             })
 
         chroma_client.add_documents(SCHEMA_COLLECTION, ids, embeddings, documents, metadatas)
-        return {"document_id": document_id, "chunk_count": len(ids), "schema": schema_info}
+        try:
+            bm25_retriever.index(SCHEMA_COLLECTION, [
+                {
+                    "chunk_id": ids[i],
+                    "chunk_text": documents[i],
+                    "metadata": metadatas[i],
+                    "document_id": metadatas[i].get("document_id", ""),
+                    "filename": metadatas[i].get("filename", ""),
+                }
+                for i in range(len(ids))
+            ])
+        except Exception:
+            pass
+        return {"document_id": document_id, "chunk_count": len(ids), "schema": schema_info, "chunks": chunk_records}
 
     async def query(
         self,

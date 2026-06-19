@@ -19,6 +19,7 @@ from app.repositories.log_repository import log_repo
 from app.core.config import settings
 from app.services.elasticsearch_service import es_service
 from app.core.evaluation_logger import EvaluationLogger
+from app.services.graph_service import graph_service
 
 
 RAG_SYSTEM = """You are an expert assistant. Answer the question using only the provided context.
@@ -39,6 +40,11 @@ class RAGService:
         Retrieve from single or multiple collections.
         If all_collections=True, search across all available collections.
         """
+        candidate_ids = None
+        if settings.USE_KG_RETRIEVAL:
+            graph_result = await graph_service.get_candidates(query, filters)
+            candidate_ids = graph_result.candidate_document_ids or None
+
         if all_collections:
             return await multi_collection_retriever.retrieve_all_collections(
                 query, strategy, top_k, filters
@@ -46,12 +52,12 @@ class RAGService:
 
         col = collection_name or "text_documents"
         if strategy == "vector":
-            return await vector_rag.retrieve(query, col, top_k, filters)
+            return await vector_rag.retrieve(query, col, top_k, filters, False, candidate_ids)
         elif strategy == "bm25":
             results = bm25_retriever.search(col, query, top_k)
-            return filter_results(results, filters or {})
+            return filter_results(results, filters or {}, candidate_ids)
         elif strategy == "hybrid":
-            return await hybrid_rag.retrieve(query, col, top_k, filters)
+            return await hybrid_rag.retrieve(query, col, top_k, filters, candidate_ids)
         elif strategy == "table":
             return await table_rag.query(query, top_k=top_k)
         elif strategy == "pdf":
@@ -70,10 +76,22 @@ class RAGService:
         filters: Optional[dict] = None,
     ) -> dict[str, Any]:
         start = time.time()
+        graph_context = ""
+        if settings.USE_KG_RETRIEVAL:
+            try:
+                graph_result = await graph_service.get_candidates(query, filters)
+                if graph_result.forms:
+                    form_lines = "\n".join([f"- {f.get('name')}" for f in graph_result.forms if f.get("name")])
+                    graph_context = f"Forms:\n{form_lines}\n"
+            except Exception:
+                graph_context = ""
+
         chunks = await self.retrieve(query, strategy, top_k, filters)
         context = "\n\n".join(
             f"[{r.get('filename','?')}] {r['chunk_text']}" for r in chunks
         )
+        if graph_context:
+            context = graph_context + "\n" + context
         prompt = f"Context:\n{context}\n\nQuestion: {query}"
         answer = await ollama_client.generate(prompt, system=RAG_SYSTEM)
         latency = (time.time() - start) * 1000
@@ -92,6 +110,16 @@ class RAGService:
             "latency_ms": latency,
             "agent_used": "rag_service",
         })
+
+        try:
+            await log_repo.create_query_log(db, {
+                "id": str(uuid.uuid4()),
+                "query": query,
+                "response": answer,
+                "latency": latency,
+            })
+        except Exception:
+            pass
 
         confidence = round(sum(r.get("score", 0) for r in chunks) / max(len(chunks), 1), 4)
         return {

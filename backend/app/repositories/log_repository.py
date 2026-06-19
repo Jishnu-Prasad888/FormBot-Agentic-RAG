@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from app.database.models import RetrievalLog, EvaluationRun
+from app.database.models import RetrievalLog, EvaluationRun, QueryLog
 
 
 
@@ -18,6 +18,13 @@ class LogRepository:
         await db.commit()
         await db.refresh(run)
         return run
+
+    async def create_query_log(self, db: AsyncSession, data: dict) -> QueryLog:
+        log = QueryLog(**data)
+        db.add(log)
+        await db.commit()
+        await db.refresh(log)
+        return log
 
     async def list_retrieval_logs(self, db: AsyncSession, skip: int = 0, limit: int = 50) -> list[RetrievalLog]:
         result = await db.execute(

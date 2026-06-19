@@ -6,6 +6,7 @@ import pdfplumber
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.core.config import settings
+from app.rag.bm25 import bm25_retriever
 
 PDF_COLLECTION = "pdf_documents"
 
@@ -33,6 +34,7 @@ class PDFHierarchicalRAG:
         extra_metadata: Optional[dict] = None,
     ) -> dict[str, Any]:
         ids, embeddings, documents, metadatas = [], [], [], []
+        chunk_records = []
         current_section = "Introduction"
         chunk_index = 0
 
@@ -57,19 +59,30 @@ class PDFHierarchicalRAG:
                     if current_para:
                         chunk_text = " ".join(current_para).strip()
                         if len(chunk_text) > 50:
-                            chunk_id = f"{document_id}_p{page_num}_c{chunk_index}"
+                            chunk_id = str(uuid.uuid4())
                             emb = await ollama_client.embeddings(chunk_text)
                             ids.append(chunk_id)
                             embeddings.append(emb)
                             documents.append(chunk_text)
-                            metadatas.append({
+                            meta = {
                                 "document_id": document_id,
                                 "filename": filename,
                                 "document_type": "pdf",
                                 "section": current_section,
                                 "page_number": page_num,
                                 "chunk_index": chunk_index,
+                                "chunk_id": chunk_id,
                                 **(extra_metadata or {}),
+                            }
+                            metadatas.append(meta)
+                            chunk_records.append({
+                                "id": chunk_id,
+                                "document_id": document_id,
+                                "chunk_index": chunk_index,
+                                "chunk_text": chunk_text,
+                                "chunk_metadata": meta,
+                                "metadata_json": meta,
+                                "qdrant_point_id": chunk_id,
                             })
                             chunk_index += 1
                         current_para = []
@@ -81,25 +94,49 @@ class PDFHierarchicalRAG:
             if current_para:
                 chunk_text = " ".join(current_para).strip()
                 if len(chunk_text) > 50:
-                    chunk_id = f"{document_id}_p{page_num}_c{chunk_index}"
+                    chunk_id = str(uuid.uuid4())
                     emb = await ollama_client.embeddings(chunk_text)
                     ids.append(chunk_id)
                     embeddings.append(emb)
                     documents.append(chunk_text)
-                    metadatas.append({
+                    meta = {
                         "document_id": document_id,
                         "filename": filename,
                         "document_type": "pdf",
                         "section": current_section,
                         "page_number": page_num,
                         "chunk_index": chunk_index,
+                        "chunk_id": chunk_id,
                         **(extra_metadata or {}),
+                    }
+                    metadatas.append(meta)
+                    chunk_records.append({
+                        "id": chunk_id,
+                        "document_id": document_id,
+                        "chunk_index": chunk_index,
+                        "chunk_text": chunk_text,
+                        "chunk_metadata": meta,
+                        "metadata_json": meta,
+                        "qdrant_point_id": chunk_id,
                     })
                     chunk_index += 1
 
         if ids:
             chroma_client.add_documents(PDF_COLLECTION, ids, embeddings, documents, metadatas)
-        return {"document_id": document_id, "chunk_count": len(ids)}
+            try:
+                bm25_retriever.index(PDF_COLLECTION, [
+                    {
+                        "chunk_id": ids[i],
+                        "chunk_text": documents[i],
+                        "metadata": metadatas[i],
+                        "document_id": metadatas[i].get("document_id", ""),
+                        "filename": metadatas[i].get("filename", ""),
+                    }
+                    for i in range(len(ids))
+                ])
+            except Exception:
+                pass
+        return {"document_id": document_id, "chunk_count": len(ids), "chunks": chunk_records}
 
     async def query(
         self,

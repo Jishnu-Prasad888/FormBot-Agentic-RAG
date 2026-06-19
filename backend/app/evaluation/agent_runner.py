@@ -144,6 +144,10 @@ async def _fetch_neighbor_chunks(
     if not chunks:
         return chunks
 
+    # Neighbor fetching is only supported on Chroma collections; fall back otherwise.
+    if getattr(chroma_client, "backend_name", "chroma") != "chroma":
+        return chunks
+
     expanded = []
     seen_ids = {c.get("chunk_id") for c in chunks if c.get("chunk_id")}
 

@@ -150,12 +150,13 @@ class OpenAIClient:
         retry=retry_if_exception_type((httpx.ConnectError, httpx.TimeoutException)),
     )
     async def embeddings(self, text: str, model: Optional[str] = None) -> list[float]:
+        """Embed text with a fallback model if the primary fails."""
+        primary_model = model or self.embed_model
+        fallback_model = settings.OPENAI_EMBED_FALLBACK_MODEL
         client = await self._get_client()
-        payload = {
-            "model": model or self.embed_model,
-            "input": text,
-        }
-        try:
+
+        async def _embed(m: str) -> list[float]:
+            payload = {"model": m, "input": text}
             response = await client.post(
                 "/embeddings",
                 json=payload,
@@ -164,10 +165,16 @@ class OpenAIClient:
             response.raise_for_status()
             data = response.json()
             return data["data"][0]["embedding"]
-        except httpx.HTTPStatusError as e:
-            raise OpenAIConnectionError(str(e))
-        except (httpx.ConnectError, httpx.TimeoutException) as e:
-            raise OpenAIConnectionError(str(e))
+
+        try:
+            return await _embed(primary_model)
+        except Exception:
+            if fallback_model and fallback_model != primary_model:
+                try:
+                    return await _embed(fallback_model)
+                except Exception as e:
+                    raise OpenAIConnectionError(str(e))
+            raise
 
     async def batch_embeddings(self, texts: list[str], model: Optional[str] = None) -> list[list[float]]:
         """

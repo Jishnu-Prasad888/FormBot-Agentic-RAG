@@ -70,13 +70,14 @@ class HybridRAG:
         collection_name: str = "text_documents",
         top_k: int = 5,
         filters: Optional[dict] = None,
+        candidate_document_ids: Optional[set[str]] = None,
     ) -> list[dict[str, Any]]:
 
         # Dense retrieval: top 50
         vector_results = []
         try:
             vector_results = await vector_rag.retrieve(
-                query, collection_name, settings.DENSE_TOP_K, filters
+                query, collection_name, settings.DENSE_TOP_K, filters, False, candidate_document_ids
             )
         except Exception:
             pass
@@ -85,7 +86,7 @@ class HybridRAG:
         bm25_results = []
         try:
             bm25_raw = bm25_retriever.search(collection_name, query, settings.BM25_TOP_K)
-            bm25_results = filter_results(bm25_raw, filters or {})
+            bm25_results = filter_results(bm25_raw, filters or {}, candidate_document_ids)
         except Exception:
             pass
 

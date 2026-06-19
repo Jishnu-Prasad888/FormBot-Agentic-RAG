@@ -15,6 +15,7 @@ from app.rag.markdown_rag import markdown_rag
 from app.rag.bm25 import bm25_retriever
 from app.core.config import settings
 from app.core.exceptions import DocumentNotFoundError, UnsupportedFileTypeError
+from app.graph import graph_ingestor
 
 
 SUPPORTED_TYPES = {
@@ -49,14 +50,15 @@ def _detect_type(filename: str) -> str:
     return SUPPORTED_TYPES[ext]
 
 
-def _chunk_text(text: str, chunk_size: int = 512, overlap: int = 50) -> list[str]:
-    words = text.split()
-    chunks = []
+def _chunk_text(text: str, chunk_size: int = 1500, overlap: int = 250) -> list[str]:
+    """Character-based chunking with overlap."""
+    chunks: list[str] = []
     start = 0
-    while start < len(words):
-        end = min(start + chunk_size, len(words))
-        chunks.append(" ".join(words[start:end]))
-        start += chunk_size - overlap
+    step = max(chunk_size - overlap, 1)
+    while start < len(text):
+        end = min(start + chunk_size, len(text))
+        chunks.append(text[start:end])
+        start += step
     return chunks
 
 
@@ -74,7 +76,7 @@ async def _index_text_chunks(
 
     for i, chunk_text in enumerate(chunks):
         emb = await ollama_client.embeddings(chunk_text)
-        chunk_id = f"{document_id}_chunk_{i}"
+        chunk_id = str(uuid.uuid4())
         ids.append(chunk_id)
         embeddings.append(emb)
         documents.append(chunk_text)
@@ -83,6 +85,7 @@ async def _index_text_chunks(
             "filename": filename,
             "document_type": doc_type,
             "chunk_index": i,
+            "chunk_id": chunk_id,
             **(extra_metadata or {}),
         }
         metadatas.append(meta)
@@ -92,6 +95,8 @@ async def _index_text_chunks(
             "chunk_index": i,
             "chunk_text": chunk_text,
             "chunk_metadata": meta,
+            "metadata_json": meta,
+            "qdrant_point_id": chunk_id,
         })
 
     if ids:
@@ -131,13 +136,16 @@ class DocumentService:
         if doc_type == "pdf":
             result = await pdf_rag.index(doc_id, filename, content, extra_metadata)
             chunk_count = result["chunk_count"]
+            chunk_records = result.get("chunks", [])
         elif doc_type == "markdown":
             text = content.decode("utf-8", errors="replace")
             result = await markdown_rag.index(doc_id, filename, text, extra_metadata)
             chunk_count = result["chunk_count"]
+            chunk_records = result.get("chunks", [])
         elif doc_type == "csv":
             result = await table_rag.index_csv(doc_id, filename, content, extra_metadata)
             chunk_count = result["chunk_count"]
+            chunk_records = result.get("chunks", [])
         else:
             # text / json
             text = content.decode("utf-8", errors="replace")
@@ -149,15 +157,27 @@ class DocumentService:
             "filename": filename,
             "filepath": str(filepath),
             "document_type": doc_type,
+            "title": (extra_metadata or {}).get("title"),
+            "category": (extra_metadata or {}).get("category"),
+            "source": (extra_metadata or {}).get("source"),
             "retrieval_strategy": strategy,
             "language": (extra_metadata or {}).get("language", "en"),
             "chunk_count": chunk_count,
             "embedding_model": settings.OPENAI_EMBED_MODEL,
             "collection_name": collection,
+            "form_name": (extra_metadata or {}).get("form_name"),
             "metadata_json": extra_metadata or {},
         }
 
         doc = await document_repo.create(db, doc_data)
+
+        # Seed graph (metadata-only pass)
+        try:
+            await graph_ingestor.upsert_document_node(doc_data)
+            await graph_ingestor.link_document_to_category(doc_id, doc_data.get("category"))
+            await graph_ingestor.connect_form_to_document(doc_data.get("form_name"), doc_id)
+        except Exception:
+            pass
 
         # Persist chunks to DB for non-specialized types
         if chunk_records:
@@ -196,17 +216,34 @@ class DocumentService:
             text = content.decode("utf-8", errors="replace")
             result = await markdown_rag.index(doc_id, doc.filename, text, doc.metadata_json)
             chunk_count = result["chunk_count"]
+            chunk_records = result.get("chunks", [])
         elif doc_type == "csv":
             result = await table_rag.index_csv(doc_id, doc.filename, content, doc.metadata_json)
             chunk_count = result["chunk_count"]
+            chunk_records = result.get("chunks", [])
         else:
             text = content.decode("utf-8", errors="replace")
             chunk_records = await _index_text_chunks(doc_id, doc.filename, doc_type, text, collection, doc.metadata_json)
             chunk_count = len(chunk_records)
-            if chunk_records:
-                await document_repo.bulk_create_chunks(db, chunk_records)
+
+        if chunk_records:
+            await document_repo.bulk_create_chunks(db, chunk_records)
 
         await document_repo.update(db, doc_id, {"chunk_count": chunk_count})
+
+        try:
+            await graph_ingestor.upsert_document_node({
+                "id": doc.id,
+                "filename": doc.filename,
+                "title": doc.metadata_json.get("title") if doc.metadata_json else None,
+                "category": doc.metadata_json.get("category") if doc.metadata_json else None,
+                "source": doc.metadata_json.get("source") if doc.metadata_json else None,
+                "form_name": doc.metadata_json.get("form_name") if doc.metadata_json else None,
+            })
+            await graph_ingestor.link_document_to_category(doc.id, doc.metadata_json.get("category") if doc.metadata_json else None)
+            await graph_ingestor.connect_form_to_document(doc.metadata_json.get("form_name") if doc.metadata_json else None, doc.id)
+        except Exception:
+            pass
         return {"document_id": doc_id, "message": "Reindexed successfully", "chunk_count": chunk_count}
 
     async def delete(self, db: AsyncSession, doc_id: str) -> bool:

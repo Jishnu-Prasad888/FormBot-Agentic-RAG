@@ -1,0 +1,288 @@
+SBI Demand Draft (DD)
+
+A Demand Draft (DD) is a banking instrument used to transfer money from one account to another. It is a prepaid payment method issued by a bank, ensuring guaranteed payment to the recipient. An SBI Demand Draft is considered one of the safest and most secure ways to conduct financial transactions.
+
+Last Updated: 19-03-2025 05:26:40 AM
+
+Nowadays, digital payment methods such as UPI, NEFT, RTGS, and IMPS are commonly used. However, SBI Demand Drafts are still widely accepted by educational institutions, schools, colleges, examination centers, and other organizations for applications, admissions, and official payments.
+
+SBI Demand Draft Details / Components
+
+An SBI Demand Draft contains:
+
+Bank name and branch details that issued the DD
+Name of the individual or organization authorized to receive payment
+Date of issue
+Payable amount (in words and figures)
+Name of the bank branch where the DD is payable
+Demand Draft serial number
+Authorized signatures of bank officials
+SBI Demand Draft Validity
+An SBI Demand Draft is valid for 3 months from the date of issue.
+If not presented within this period, it expires.
+An expired DD can be revalidated by the bank.
+Important Notes
+Only the drawer (purchaser) can request revalidation.
+The payee (recipient) cannot revalidate the DD.
+A revalidated DD cannot be revalidated again.
+Revalidation Charges
+₹200 + GST
+How to Generate an SBI Demand Draft
+
+SBI offers two methods:
+
+Offline (via bank branch)
+Online (via SBI Internet Banking)
+Procedure to Issue SBI Demand Draft Offline (At Branches)
+
+Fill out the DD application form with:
+
+Beneficiary's name
+City/branch where the DD is payable
+DD amount
+Applicable bank service charges
+Applicant's details
+Depositor's signature (may differ from the applicant)
+Submission
+
+Submit the application form along with:
+
+Cash or cheque payment
+
+After verification, the demand draft is issued.
+
+Procedure to Issue SBI Demand Draft Online
+Log in to SBI Internet Banking.
+Click Payments/Transfers.
+Select Issue Demand Draft under Other Payments/Receipts.
+Choose the account to be debited.
+Enter the DD amount.
+Enter the beneficiary name in the "In Favour Of" field.
+Enter the payable branch code.
+Select delivery mode:
+Collect from branch
+Receive by post
+SBI Demand Draft Fees & Charges
+DD Issuance Charges
+DD Amount	Charges
+Up to ₹5,000	₹25 (including GST)
+Above ₹5,000 up to ₹10,000	₹50 (including GST)
+Above ₹10,000 up to ₹1,00,000	₹5 per ₹1,000 (Minimum ₹60, including GST)
+Above ₹1,00,000	₹4 per ₹1,000 (Minimum ₹600, Maximum ₹2,000, including GST)
+Other Charges
+Service	Charges
+DD Cancellation or Duplicate DD Issuance	₹200 + GST
+DD Revalidation	₹200 + GST
+Demand Draft Cancellation Charges
+DD Amount	Charges
+Up to ₹500	Nil
+Above ₹500 up to ₹5,000	₹25 + GST
+Above ₹5,000 up to ₹10,000	₹50 + GST
+Above ₹10,000	₹100 + GST
+SBI DD Cancellation Process
+Can SBI DD Be Cancelled Online?
+
+No. SBI currently does not provide an online facility for DD cancellation. Customers must visit a branch to complete the process.
+
+When a DD is issued, the amount is debited immediately from the account. The DD can be cancelled, and the amount can be refunded after deducting applicable charges.
+
+Keep the following documents safely:
+
+Original Demand Draft
+Cash payment receipt (if applicable)
+Case 1: DD Purchased Using Cash
+Visit the SBI branch.
+Submit:
+Original DD
+Cash payment receipt
+The bank processes the cancellation.
+Refund is provided after deducting cancellation charges.
+Case 2: DD Purchased Through Bank Account
+Obtain a DD cancellation form from the branch.
+Fill in all required details.
+Submit:
+Completed cancellation form
+Original DD
+The refund is credited to your bank account after deducting cancellation charges.
+If the DD Is Lost
+
+If the DD is lost, recovering the amount becomes more difficult. Contact the bank immediately and provide:
+
+DD copy (if available)
+DD reference number
+
+Keeping copies of the DD is strongly recommended.
+
+How to Prevent SBI Demand Draft Fraud
+Maintain complete details of the drawer.
+Keep photocopies/scanned copies of the draft.
+Take immediate legal and banking action if suspicious activity is detected.
+A demand draft is a negotiable instrument issued by the bank to the drawer. The instrument directs other bank or branch to pay the payee (beneficiary) a specific sum of money stated in the draft. Unlike cheques, demand drafts are pre-paid instruments. This means that the drawer has to first give the money to the bank to issue a demand draft. This unique feature of demand drafts makes them a safer fund transfer option.
+
+In addition, demand drafts do not come in books or bundles and are not issued to every customer who has a bank account. On the contrary, demand drafts are issued specifically to the people who request the bank. Likewise, anyone who wants to transfer funds can issue a demand draft regardless of having a bank account. The payment for the draft can be made through cheque or cash. The individual has to fill a form and deposit the stated money. The banks also charge a small fee for issuing a draft which is around Rs. 100 to Rs. 200.
+
+Since demand drafts require upfront payment, these are safer than any other non-digital instrument. This is because the drawer can choose the payment time and place of the draft. In addition, forging a demand draft privately is not possible as it requires certain parameters such as special bond paper, bank watermark, etc.
+
+Types of Demand Drafts: Demand drafts are of two types, viz. sight demand draft and time demand draft. 
+Sight Demand Draft: These are regular demand drafts that are payable on sight. This means the payment is made by the bank as the payee presents the draft to the bank. 
+Time Demand Draft: These types of demand drafts are payable at a specific time determined by the drawer. The time limit is within the validity of the draft which is 3 months.
+
+Demand Draft – DD Form, How to Apply, Features, Advantages
+Updated: 11-11-2024 11:33:08 AM
+Demand Draft also called DD is a way to initiate transactions from one bank to another. It is a negotiable instrument that guarantees payment of a specific amount of money to the specified payee.
+
+Demand draft is only issued by the bank and one cannot issue a DD on an individual level. It is majorly issued in cases where parties are unknown to each other. The bank (drawee) issues demand draft to a client (drawer) to pay the specified amount of money to the specified person (payee).
+
+Demand Draft Details
+The important fields on a Demand Draft (DD) and the values they contain have been discussed here:
+
+Field in the DD	Field Details
+Bank Branch	The branch of bank issuing the DD
+To Pay	Details of the Payee
+Date/Validity	Date of issue of DD/ Validity period of 3 months from this date
+Amount (in words)	The amount payable to the drawee in figures
+DD number	A unique number assigned to the DD
+Signature	Signatures and stamp of the issuing bank’s authorised person
+Until net banking, mobile banking, credit cards, etc. had become popular, people used to make loan and other payments by DD. The risks associated with a demand draft are minimal as compared to a cheque which is the reason why DDs have always been preferred by many people over cheques for payment. However, there are still few risks involved with demand drafts, such as:
+
+A Demand Draft may be forged or stolen
+The banks issuing the DD may go out of business before the DD is deposited and cleared
+The drawee may not deposit the DD on time and it may become invalid
+The drawer may have made a mistake while getting the DD
+Demand Draft (DD) Form
+It is important to fill in DD form with all necessary details. Here are few fields that you need to fill to get a DD issued by a bank:
+
+Name and Address of the drawer (your name)
+Name of the drawee
+Name and address of the payee
+Name of the city where DD is payable
+Amount payable to the drawee (in words)
+Amount payable to the drawee (in figures)
+Exchange (fee charged by the bank)
+Total amount payable by the drawer to the bank (in figures)
+Signature of the drawer
+Name and Address of the drawer
+In many DD forms, drawer is referred as the “applicant”.
+
+How to Issue a Demand Draft Offline
+Step 1: Fill the DD form with all details mentioned above
+
+Step 2: Make the payment either through cash or from your bank account.
+
+Step 3: The bank verifies all details mentioned in the DD form.
+
+Step 4: After successful verification and receipt of money, the bank issues the demand draft to the applicant.
+
+Step 5: The applicant has to submit this DD to the payee and complete the transaction.
+
+How to Issue a Demand Draft Online
+Step 1: Login to your bank’s official website via net banking service
+
+Step 2: Search for ‘Request and Enquiries’ section on the website’s main page
+
+Step 3: Search and click on Issue Demand Draft service
+
+Step 4: Select the bank account from where you want the DD amount to be deducted
+
+Step 5: Enter the DD details, such as DD amount, payee’s details, purpose, etc.
+
+Step 6: Mention the 5-digit bank’s branch code from which you want to obtain DD
+
+Step 7: Select the branch where you want the DD to be paid
+
+Step 8: Select the delivery method – By courier or in-person
+
+Step 9: Click on Submit to finish the process
+
+Important Points to Note for a DD
+If you are going to pay for the DD in cash, submit the DD form and pay cash to get the DD.
+If you are going to pay from your bank account, you will need to furnish those details as well before you can get the DD. The bank will immediately deduct the money and issue you the DD.
+For amounts exceeding Rs. 50,000 or more, you will have to give your PAN details to the bank.
+For smaller amounts, you only need to present your ID and address proof to the bank.
+It is advisable to check the details on your DD including the drawee’s details, etc. before you leave the bank.
+Before you handover the DD to the payee, make sure to keep a copy (photocopy or photo) of the DD. This will help you if there are any problems with the DD.
+Features of a Demand Draft
+DD is payable on demand
+There is no stamp on a DD
+Can be negotiated by endorsement and delivery
+Not payable to bearer
+It cannot be stopped except by court order
+Amount is refunded if DD is not delivered
+The purchaser of the DD need not be a customer of the bank
+Advantages of a Demand Draft
+Unlike a personal cheque, demand draft is guaranteed by the bank. It means that the payee gets the guarantee for funds.
+Demand Draft is a more convenient method for transferring huge amounts. Unlike e-transfer, it doesn’t require the information of the payee and doesn’t have capping on fund transfer. Hence, demand drafts are commonly used whilst making huge purchases, such as payment of fees, medical bills, buying a car or a house, etc.
+A demand draft can be used for cross-border purchases and investments
+Types of Demand Draft
+Sight Demand Draft
+
+Sight Demand Draft is a standard demand draft in which it is paid to the payee instantly upon presentation. The payment may be subject to verification of required and submitted documents. If the depositor fails to submit the required documents then the bank may hold the release of the payment.
+
+Time Demand Draft
+
+The demand draft is paid by the bank only after a specific period of time has passed which is the demand draft clearing time. Time demand draft has an expiry date after which the bank shall not release the payment. Moreover, the payment is made after a certain time has passed.
+
+Limitations of a Demand Draft
+A Demand Draft represents a transaction that has already taken place. Hence, it cannot be cancelled once it is delivered to the payee.
+If the demand draft gets lost, stolen, or altered with and the funds are cashed out by the wrong person, the bank is not responsible for replacing the lost money.
+Demand draft is valid only for 3 months and if not encashed in this time frame, the payee is at a loss of funds.
+Demand Draft Cancellation
+A demand draft cancellation letter is written to withdraw the raised demand draft for the transaction. There could be several reasons to cancel the demand draft. If an individual wants to cancel the raised demand draft, he/she will have to write a DD cancellation application to the bank where the individual has applied it and submit it to the bank.
+
+Note: If you have paid in cash at the time of issuing your demand draft, you will be able to retrieve payment in cash only. However, if the payment is made through cheque, the amount will be credited to your bank account.
+
+How to Write a DD Cancellation Letter
+Individual before canceling the demand draft must keep in mind the below-mentioned points:
+
+Keep the tone of the letter formal
+The letter must be addressed to the branch manager
+Add a clear subject stating the reason for canceling the demand draft
+Add your account number, DD number, and the amount of DD in the body
+Explain the reason for canceling the DD
+Conclude the letter formally
+FAQs
+
+Q. How long does it take for a demand draft to clear?
+
+Ans. If you have a bank account in the same bank that issues the DD, the payment will be cleared within hours or in one business day. In the case the banks are different, it can take up to three working days.
+
+Q. What is the DD charge for Rs. 1 Lakh?
+
+Ans. The DD charge for Rs. 1 lakh shall vary from bank to bank. It may be free for some banks and some may charge a nominal charge for the same.
+
+Q. What is the validity of the demand draft?
+
+Ans. The demand draft is valid for 3 months from the date of issue, which is printed on the DD.
+
+Q. Is a fee charged from payee at the time of encashment?
+
+Ans. No, no fee is charged from the payee at the time of encashment by the bank.
+
+Q. What will happen if I lose my demand draft?
+
+Ans. If you lose your DD, you need to sign an Indemnity Bond in stamp paper for the issuing bank. A copy can be helpful to present when you visit the bank. The bank will take some time to process the payment. Some banks clear payments for lost demand drafts in one week while others wait until the expiry date of the DD. In any case, they will deduct charges before issuing you a refund.
+
+Q. How to cancel a demand draft?
+
+Ans. Since you did not issue the DD directly, you cannot cancel a DD on your own. You need to visit the issuer bank and follow the procedure to cancel a DD if it has not been cleared. If you paid by cash, you need to submit the original DD, receipt of cash payment, and DD cancellation form to request cancellation of DD. You will receive a refund after the deduction of the cancellation charges levied by the bank.
+
+If you made the payment using your bank account, you can submit the original DD and the cancellation form. The amount will be refunded to your bank account after deducting the cancellation charges.
+
+Q. How to encash a demand draft?
+
+Ans. It is not possible to encash a DD anymore. Banks have stopped paying a drawee in cash to avoid fraudulent transactions. If you are the payee, when your bank receives a DD, they will make the payment to your bank account only.
+
+Q. What to do if the DD expires before I encash it?
+
+Ans. Demand drafts have a validity period of 3 months from the date of issue (printed on DD). If it is not presented within its validity period, the DD becomes invalid. However, the amount is not refunded to the drawer automatically even if he made a payment from his bank account. Only the drawer can submit the application to the issuing bank for the revalidation of the DD. The issuing bank will verify the records and details before revalidating the DD for another 3 months. If the revalidated DD is not presented, it cannot be revalidated again.
+
+Q. Is a fee charged from payee at the time of encashment?
+
+Ans. No, no fee is charged from the payee at the time of encashment by the bank.
+
+If you lose your DD, you need to sign an Indemnity Bond in stamp paper for the issuing bank. A copy can be helpful to present when you visit the bank. The bank will take some time to process the payment. Some banks clear payments for lost demand drafts in one week while others wait until the expiry date of the DD. In any case, they will deduct charges before issuing you a refund.
+
+Q. What to do if the DD expires before I encash it?
+
+Ans. Demand drafts have a validity period of 3 months from the date of issue (printed on DD). If it is not presented within its validity period, the DD becomes invalid. However, the amount is not refunded to the drawer automatically even if he made a payment from his bank account. Only the drawer can submit the application to the issuing bank for the revalidation of the DD. The issuing bank will verify the records and details before revalidating the DD for another 3 months. If the revalidated DD is not presented, it cannot be revalidated again.
+
