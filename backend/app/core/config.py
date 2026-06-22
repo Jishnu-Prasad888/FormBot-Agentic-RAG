@@ -40,7 +40,7 @@ class Settings(BaseSettings):
 
     # ── OpenAI ────────────────────────────────────────────────────────────────
     OPENAI_API_KEY: str = ""
-    OPENAI_LLM_MODEL: str = "gpt-4o-mini"
+    OPENAI_LLM_MODEL: str = "gpt-5.1"
     OPENAI_EMBED_MODEL: str = "text-embedding-3-large"
     OPENAI_EMBED_FALLBACK_MODEL: str = "text-embedding-3-small"
     OPENAI_TIMEOUT: int = 120

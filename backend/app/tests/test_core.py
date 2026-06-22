@@ -130,7 +130,7 @@ def test_bm25_remove_collection():
 
 def test_settings_defaults():
     from app.core.config import settings
-    assert settings.OPENAI_LLM_MODEL == "gpt-4o-mini"
+    assert settings.OPENAI_LLM_MODEL == "gpt-5.1"
     assert settings.OPENAI_EMBED_MODEL == "text-embedding-3-small"
     assert settings.TOP_K == 5
     assert settings.CHUNK_SIZE == 512

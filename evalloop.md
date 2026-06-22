@@ -206,7 +206,7 @@ For each `{question, expected_answer}` pair:
 ├─────────────────────────────────────────────────────────────┤
 │ Step 2 — GENERATE                                           │
 │   Build prompt: Context + [Source: filename] chunks + Q     │
-│   OpenAI chat completion (gpt-4o-mini default)              │
+│   OpenAI chat completion (gpt-5.1 default)                  │
 │   System: concise, context-grounded assistant               │
 ├─────────────────────────────────────────────────────────────┤
 │ Step 3 — SCORE (LLM-as-Judge)                               │
@@ -282,7 +282,7 @@ Each result includes: `chunk_id`, `chunk_text`, `metadata`, `document_id`, `file
 
 ## Answer Generation (Step 2 Detail)
 
-**LLM:** OpenAI Chat Completions (`OPENAI_LLM_MODEL`, default `gpt-4o-mini`)  
+**LLM:** OpenAI Chat Completions (`OPENAI_LLM_MODEL`, default `gpt-5.1`)  
 **Client:** `backend/app/embeddings/openai_client.py`
 
 ### Prompt structure
@@ -409,7 +409,7 @@ Environment variables (`.env` in `backend/`):
 | Variable | Default | Role in eval |
 |----------|---------|--------------|
 | `OPENAI_API_KEY` | — | Required for embeddings, generation, and judging |
-| `OPENAI_LLM_MODEL` | `gpt-4o-mini` | Answer generation + all judge calls |
+| `OPENAI_LLM_MODEL` | `gpt-5.1` | Answer generation + all judge calls |
 | `OPENAI_EMBED_MODEL` | `text-embedding-3-small` | Query/chunk embeddings for vector search |
 | `OPENAI_TIMEOUT` | `120` | HTTP timeout (frontend axios also uses 120s) |
 | `CHROMA_PERSIST_DIR` | `./chroma_db` | Vector store location |
