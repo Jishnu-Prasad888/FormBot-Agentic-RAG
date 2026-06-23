@@ -72,6 +72,8 @@ class PDFHierarchicalRAG:
                                 "page_number": page_num,
                                 "chunk_index": chunk_index,
                                 "chunk_id": chunk_id,
+                                "chunk_type": "section",
+                                "chunk_position": chunk_index,
                                 **(extra_metadata or {}),
                             }
                             metadatas.append(meta)
@@ -83,6 +85,16 @@ class PDFHierarchicalRAG:
                                 "chunk_metadata": meta,
                                 "metadata_json": meta,
                                 "qdrant_point_id": chunk_id,
+                                "vector_id": chunk_id,
+                                "chunk_type": meta.get("chunk_type"),
+                                "content_summary": meta.get("content_summary"),
+                                "extracted_entities": meta.get("extracted_entities"),
+                                "section": meta.get("section"),
+                                "field_name": meta.get("field_name"),
+                                "requirement_tags": meta.get("requirement_tags"),
+                                "regulatory_reference": meta.get("regulatory_reference"),
+                                "confidence_score": meta.get("confidence_score"),
+                                "chunk_position": meta.get("chunk_position"),
                             })
                             chunk_index += 1
                         current_para = []
@@ -107,6 +119,8 @@ class PDFHierarchicalRAG:
                         "page_number": page_num,
                         "chunk_index": chunk_index,
                         "chunk_id": chunk_id,
+                        "chunk_type": "section",
+                        "chunk_position": chunk_index,
                         **(extra_metadata or {}),
                     }
                     metadatas.append(meta)
@@ -118,6 +132,16 @@ class PDFHierarchicalRAG:
                         "chunk_metadata": meta,
                         "metadata_json": meta,
                         "qdrant_point_id": chunk_id,
+                        "vector_id": chunk_id,
+                        "chunk_type": meta.get("chunk_type"),
+                        "content_summary": meta.get("content_summary"),
+                        "extracted_entities": meta.get("extracted_entities"),
+                        "section": meta.get("section"),
+                        "field_name": meta.get("field_name"),
+                        "requirement_tags": meta.get("requirement_tags"),
+                        "regulatory_reference": meta.get("regulatory_reference"),
+                        "confidence_score": meta.get("confidence_score"),
+                        "chunk_position": meta.get("chunk_position"),
                     })
                     chunk_index += 1
 

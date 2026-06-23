@@ -4,9 +4,11 @@ import json
 from pathlib import Path
 from typing import Any, Optional
 from datetime import datetime
+import hashlib
 import aiofiles
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.repositories.document_repository import document_repo
+from app.repositories.kag_repository import kag_repo
 from app.chromadb.client import chroma_client
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.rag.table_rag import table_rag
@@ -16,6 +18,7 @@ from app.rag.bm25 import bm25_retriever
 from app.core.config import settings
 from app.core.exceptions import DocumentNotFoundError, UnsupportedFileTypeError
 from app.graph import graph_ingestor
+from app.graph import graph_ingestor as gi
 
 
 SUPPORTED_TYPES = {
@@ -86,6 +89,8 @@ async def _index_text_chunks(
             "document_type": doc_type,
             "chunk_index": i,
             "chunk_id": chunk_id,
+            "chunk_type": "paragraph",
+            "chunk_position": i,
             **(extra_metadata or {}),
         }
         metadatas.append(meta)
@@ -97,6 +102,16 @@ async def _index_text_chunks(
             "chunk_metadata": meta,
             "metadata_json": meta,
             "qdrant_point_id": chunk_id,
+            "vector_id": chunk_id,
+            "chunk_type": meta.get("chunk_type"),
+            "content_summary": meta.get("content_summary"),
+            "extracted_entities": meta.get("extracted_entities"),
+            "section": meta.get("section"),
+            "field_name": meta.get("field_name"),
+            "requirement_tags": meta.get("requirement_tags"),
+            "regulatory_reference": meta.get("regulatory_reference"),
+            "confidence_score": meta.get("confidence_score"),
+            "chunk_position": meta.get("chunk_position"),
         })
 
     if ids:
@@ -110,6 +125,127 @@ async def _index_text_chunks(
 
 
 class DocumentService:
+    async def _ingest_kag_structures(
+        self,
+        db: AsyncSession,
+        doc_data: dict[str, Any],
+        metadata: dict[str, Any],
+    ) -> None:
+        """Persist structured form/regulation data to Postgres + Neo4j."""
+        form_name = metadata.get("form_name")
+        form_version = metadata.get("version") or metadata.get("form_version") or "v1"
+        kag_type = metadata.get("kag_type")
+
+        # Only proceed if this looks like a form/regulation payload
+        if kag_type not in {"form", "regulation", "guideline"} and not form_name:
+            return
+
+        # Postgres: FormVersion + Fields + Requirements + Regulations
+        fv_id = str(uuid.uuid4())
+        await kag_repo.upsert_form_version(db, metadata.get("form_id") or str(uuid.uuid4()), form_version, {
+            "id": fv_id,
+            "status": metadata.get("status"),
+            "effective_date": metadata.get("effective_date"),
+            "supersedes_id": metadata.get("supersedes_id"),
+        })
+
+        fields = metadata.get("fields") or []
+        field_id_map: dict[str, str] = {}
+        field_rows = []
+        for f in fields:
+            fid = f.get("id") or str(uuid.uuid4())
+            field_id_map[f.get("name")] = fid
+            field_rows.append({
+                "id": fid,
+                "form_version_id": fv_id,
+                "name": f.get("name"),
+                "field_type": f.get("type") or f.get("field_type"),
+                "validation_rules": f.get("validation_rules"),
+                "required": bool(f.get("required", False)),
+                "description": f.get("description"),
+            })
+        await kag_repo.bulk_upsert_fields(db, field_rows)
+
+        # Field dependencies
+        deps = []
+        for f in fields:
+            source = field_id_map.get(f.get("name"))
+            for dep in f.get("depends_on", []) or []:
+                target = field_id_map.get(dep.get("field"))
+                if source and target:
+                    deps.append({
+                        "id": str(uuid.uuid4()),
+                        "source_field_id": source,
+                        "target_field_id": target,
+                        "condition": dep.get("condition"),
+                    })
+        await kag_repo.bulk_upsert_field_dependencies(db, deps)
+
+        # Regulations and requirements
+        regulation_rows = []
+        for r in metadata.get("regulations", []) or []:
+            rid = r.get("id") or str(uuid.uuid4())
+            regulation_rows.append({
+                "id": rid,
+                "title": r.get("title") or r.get("citation") or "regulation",
+                "authority": r.get("authority"),
+                "effective_date": r.get("effective_date"),
+                "citation": r.get("citation"),
+                "description": r.get("description"),
+            })
+        for row in regulation_rows:
+            await kag_repo.upsert_regulation(db, row)
+
+        requirements = []
+        req_links = []
+        for req in metadata.get("requirements", []) or []:
+            req_id = req.get("id") or str(uuid.uuid4())
+            requirements.append({
+                "id": req_id,
+                "description": req.get("description") or "",
+                "applicability": req.get("applicability"),
+                "regulation_id": req.get("regulation_id"),
+                "regulation_ref": req.get("regulation_ref"),
+            })
+            req_links.append({
+                "id": str(uuid.uuid4()),
+                "form_version_id": fv_id,
+                "requirement_id": req_id,
+                "applies_if": req.get("applies_if"),
+            })
+        await kag_repo.bulk_upsert_requirements(db, requirements)
+        await kag_repo.bulk_upsert_form_requirements(db, req_links)
+
+        # Form → Regulation links
+        form_reg_links = []
+        for r in regulation_rows:
+            form_reg_links.append({
+                "id": str(uuid.uuid4()),
+                "form_version_id": fv_id,
+                "regulation_id": r.get("id"),
+                "relation_type": "REFERENCES",
+            })
+        await kag_repo.bulk_upsert_form_regulations(db, form_reg_links)
+
+        # Graph: forms, versions, fields, dependencies, regulations, links
+        try:
+            if form_name:
+                await gi.upsert_form(form_name, metadata.get("category"))
+                await gi.upsert_form_version(form_name, form_version, metadata.get("status"), metadata.get("supersedes"))
+            for f in fields:
+                await gi.upsert_field(form_name or "", form_version, f.get("name"), f.get("type"), f.get("required"))
+                for dep in f.get("depends_on", []) or []:
+                    await gi.link_field_dependency(f.get("name"), dep.get("field"), dep.get("condition"))
+            for r in regulation_rows:
+                await gi.upsert_regulation(r.get("title"), r.get("citation"), r.get("authority"))
+                if form_name:
+                    await gi.link_form_regulation(form_name, form_version, r.get("title"), "REFERENCES")
+            for req in requirements:
+                await gi.upsert_requirement(req.get("description"), req.get("regulation_ref"))
+                if form_name:
+                    await gi.link_form_requirement(form_name, form_version, req.get("description"))
+        except Exception:
+            pass
     async def upload_and_index(
         self,
         db: AsyncSession,
@@ -119,7 +255,14 @@ class DocumentService:
     ) -> dict[str, Any]:
         doc_type = _detect_type(filename)
         doc_id = str(uuid.uuid4())
+        kag_type = (extra_metadata or {}).get("kag_type")  # form | regulation | guideline
         collection = TYPE_TO_COLLECTION[doc_type]
+        if kag_type in {"form", "regulation", "guideline"}:
+            collection = {
+                "form": "bank_forms_collection",
+                "regulation": "regulations_collection",
+                "guideline": "guidelines_collection",
+            }[kag_type]
         strategy = TYPE_TO_STRATEGY[doc_type]
 
         # Save file
@@ -132,24 +275,31 @@ class DocumentService:
         # Index based on type
         chunk_count = 0
         chunk_records = []
+        content_hash = hashlib.sha256(content).hexdigest()
+        document_version = (extra_metadata or {}).get("version", "v1")
+        base_meta = {
+            "document_version": document_version,
+            "content_hash": content_hash,
+            "kag_type": kag_type,
+        }
 
         if doc_type == "pdf":
-            result = await pdf_rag.index(doc_id, filename, content, extra_metadata)
+            result = await pdf_rag.index(doc_id, filename, content, {**(extra_metadata or {}), **base_meta})
             chunk_count = result["chunk_count"]
             chunk_records = result.get("chunks", [])
         elif doc_type == "markdown":
             text = content.decode("utf-8", errors="replace")
-            result = await markdown_rag.index(doc_id, filename, text, extra_metadata)
+            result = await markdown_rag.index(doc_id, filename, text, {**(extra_metadata or {}), **base_meta})
             chunk_count = result["chunk_count"]
             chunk_records = result.get("chunks", [])
         elif doc_type == "csv":
-            result = await table_rag.index_csv(doc_id, filename, content, extra_metadata)
+            result = await table_rag.index_csv(doc_id, filename, content, {**(extra_metadata or {}), **base_meta})
             chunk_count = result["chunk_count"]
             chunk_records = result.get("chunks", [])
         else:
             # text / json
             text = content.decode("utf-8", errors="replace")
-            chunk_records = await _index_text_chunks(doc_id, filename, doc_type, text, collection, extra_metadata)
+            chunk_records = await _index_text_chunks(doc_id, filename, doc_type, text, collection, {**(extra_metadata or {}), **base_meta})
             chunk_count = len(chunk_records)
 
         doc_data = {
@@ -166,7 +316,11 @@ class DocumentService:
             "embedding_model": settings.OPENAI_EMBED_MODEL,
             "collection_name": collection,
             "form_name": (extra_metadata or {}).get("form_name"),
-            "metadata_json": extra_metadata or {},
+            "metadata_json": {**(extra_metadata or {}), **base_meta},
+            "content_hash": content_hash,
+            "document_version": document_version,
+            "processing_status": "indexed",
+            "processing_log": None,
         }
 
         doc = await document_repo.create(db, doc_data)
@@ -176,6 +330,15 @@ class DocumentService:
             await graph_ingestor.upsert_document_node(doc_data)
             await graph_ingestor.link_document_to_category(doc_id, doc_data.get("category"))
             await graph_ingestor.connect_form_to_document(doc_data.get("form_name"), doc_id)
+            if doc_data.get("form_name"):
+                await graph_ingestor.upsert_form(doc_data.get("form_name"), doc_data.get("category"))
+                await graph_ingestor.upsert_form_version(doc_data.get("form_name"), document_version)
+        except Exception:
+            pass
+
+        # Persist structured KAG metadata (forms/fields/requirements/regulations)
+        try:
+            await self._ingest_kag_structures(db, doc_data, doc_data.get("metadata_json") or {})
         except Exception:
             pass
 
@@ -207,23 +370,35 @@ class DocumentService:
 
         doc_type = doc.document_type
         collection = TYPE_TO_COLLECTION.get(doc_type, "text_documents")
+        kag_type = (doc.metadata_json or {}).get("kag_type")
+        if kag_type in {"form", "regulation", "guideline"}:
+            collection = {
+                "form": "bank_forms_collection",
+                "regulation": "regulations_collection",
+                "guideline": "guidelines_collection",
+            }[kag_type]
         chunk_count = 0
+        base_meta = {
+            "document_version": (doc.metadata_json or {}).get("document_version", "v1"),
+            "content_hash": doc.metadata_json.get("content_hash") if doc.metadata_json else None,
+            "kag_type": kag_type,
+        }
 
         if doc_type == "pdf":
-            result = await pdf_rag.index(doc_id, doc.filename, content, doc.metadata_json)
+            result = await pdf_rag.index(doc_id, doc.filename, content, {**(doc.metadata_json or {}), **base_meta})
             chunk_count = result["chunk_count"]
         elif doc_type == "markdown":
             text = content.decode("utf-8", errors="replace")
-            result = await markdown_rag.index(doc_id, doc.filename, text, doc.metadata_json)
+            result = await markdown_rag.index(doc_id, doc.filename, text, {**(doc.metadata_json or {}), **base_meta})
             chunk_count = result["chunk_count"]
             chunk_records = result.get("chunks", [])
         elif doc_type == "csv":
-            result = await table_rag.index_csv(doc_id, doc.filename, content, doc.metadata_json)
+            result = await table_rag.index_csv(doc_id, doc.filename, content, {**(doc.metadata_json or {}), **base_meta})
             chunk_count = result["chunk_count"]
             chunk_records = result.get("chunks", [])
         else:
             text = content.decode("utf-8", errors="replace")
-            chunk_records = await _index_text_chunks(doc_id, doc.filename, doc_type, text, collection, doc.metadata_json)
+            chunk_records = await _index_text_chunks(doc_id, doc.filename, doc_type, text, collection, {**(doc.metadata_json or {}), **base_meta})
             chunk_count = len(chunk_records)
 
         if chunk_records:

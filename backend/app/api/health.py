@@ -59,6 +59,24 @@ async def health_openai():
     }
 
 
+@router.get("/health/qdrant")
+async def health_qdrant():
+    try:
+        ok = chroma_client.health_check()
+        collections = chroma_client.list_collections() if ok else []
+        return {
+            "status": "ok" if ok else "error",
+            "vector_store": getattr(chroma_client, "backend_name", "unknown"),
+            "collections": collections,
+        }
+    except Exception as exc:
+        return {
+            "status": "error",
+            "vector_store": getattr(chroma_client, "backend_name", "unknown"),
+            "detail": str(exc),
+        }
+
+
 @router.get("/health/neo4j")
 async def health_neo4j():
     if not neo4j_client.enabled:

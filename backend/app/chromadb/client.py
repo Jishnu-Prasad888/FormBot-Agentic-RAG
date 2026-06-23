@@ -15,6 +15,9 @@ COLLECTIONS = [
     "text_documents",
     "audio_transcripts",
     "web_documents",
+    "bank_forms_collection",
+    "regulations_collection",
+    "guidelines_collection",
 ]
 
 
@@ -29,6 +32,9 @@ try:
         MatchValue,
         PointStruct,
         VectorParams,
+        HnswConfigDiff,
+        ScalarQuantization,
+        ScalarQuantizationConfig,
     )
 except ImportError:
     QdrantClient = None  # type: ignore
@@ -60,6 +66,13 @@ class _QdrantBackend:
                     size=size,
                     distance=self._distance(),
                 ),
+                hnsw_config=HnswConfigDiff(
+                    m=settings.QDRANT_HNSW_M,
+                    ef_construct=settings.QDRANT_HNSW_EF_CONSTRUCT,
+                ),
+                quantization_config=ScalarQuantization(
+                    scalar=ScalarQuantizationConfig(enabled=settings.QDRANT_USE_SCALAR_QUANTIZATION)
+                ) if settings.QDRANT_USE_SCALAR_QUANTIZATION else None,
             )
 
     def _to_filter(self, where: Optional[dict]) -> Optional[Filter]:

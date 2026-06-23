@@ -83,6 +83,16 @@ class TableRAG:
             "chunk_metadata": schema_meta,
             "metadata_json": schema_meta,
             "qdrant_point_id": schema_id,
+            "vector_id": schema_id,
+            "chunk_type": schema_meta.get("chunk_type"),
+            "content_summary": schema_meta.get("content_summary"),
+            "extracted_entities": schema_meta.get("extracted_entities"),
+            "section": schema_meta.get("section"),
+            "field_name": schema_meta.get("field_name"),
+            "requirement_tags": schema_meta.get("requirement_tags"),
+            "regulatory_reference": schema_meta.get("regulatory_reference"),
+            "confidence_score": schema_meta.get("confidence_score"),
+            "chunk_position": 0,
         })
 
         # Row chunks: convert to readable text format (preserve headers in each chunk)
@@ -114,6 +124,16 @@ class TableRAG:
                 "chunk_metadata": row_meta,
                 "metadata_json": row_meta,
                 "qdrant_point_id": row_id,
+                "vector_id": row_id,
+                "chunk_type": row_meta.get("chunk_type"),
+                "content_summary": row_meta.get("content_summary"),
+                "extracted_entities": row_meta.get("extracted_entities"),
+                "section": row_meta.get("section"),
+                "field_name": row_meta.get("field_name"),
+                "requirement_tags": row_meta.get("requirement_tags"),
+                "regulatory_reference": row_meta.get("regulatory_reference"),
+                "confidence_score": row_meta.get("confidence_score"),
+                "chunk_position": idx,
             })
 
         chroma_client.add_documents(SCHEMA_COLLECTION, ids, embeddings, documents, metadatas)

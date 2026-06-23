@@ -38,8 +38,7 @@ class Neo4jClient:
             return []
         async with driver.session() as session:
             result = await session.run(cypher, params or {})
-            records = await result.to_list()
-            return [r.data() for r in records]
+            return await result.data()
 
     async def run_write(self, cypher: str, params: Optional[dict[str, Any]] = None) -> None:
         driver = await self._get_driver()

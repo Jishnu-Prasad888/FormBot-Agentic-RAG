@@ -47,7 +47,16 @@ export default function Documents({ onToast }: Props) {
     let success = 0, fail = 0;
     for (const file of Array.from(files)) {
       try {
-        await uploadDocument(file);
+        // Optional: read sidecar JSON for KAG metadata if present (same name + .json)
+        let metadata: any = undefined;
+        try {
+          const jsonName = file.name.replace(/\.[^.]+$/, '') + '.json';
+          // browser cannot read sibling files without input; keeping placeholder for future wiring
+          metadata = undefined;
+        } catch {
+          metadata = undefined;
+        }
+        await uploadDocument(file, metadata);
         success++;
       } catch {
         fail++;

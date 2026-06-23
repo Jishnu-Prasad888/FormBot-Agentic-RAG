@@ -141,6 +141,14 @@ export const healthOllama = async () => {
   const { data } = await api.get('/health/ollama');
   return data;
 };
+export const healthNeo4j = async () => {
+  const { data } = await api.get('/health/neo4j');
+  return data;
+};
+export const healthQdrant = async () => {
+  const { data } = await api.get('/health/qdrant');
+  return data;
+};
 export const healthElasticsearch = async () => {
   const { data } = await api.get('/api/elasticsearch/status');
   return data;

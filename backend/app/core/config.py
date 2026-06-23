@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     # ── Primary DB ────────────────────────────────────────────────────────────
     # Default points to Postgres; set to SQLite URL for local/dev fallback.
     DATABASE_URL: str = Field(
-        default="postgresql+asyncpg://bank_user:bank_password@localhost:5432/bank_kag"
+        default="postgresql+asyncpg://bank_user:bank_password@localhost:7000/bank_kag"
     )
 
     # ── Legacy Chroma (kept for fallback) ──────────────────────────────────────
@@ -27,9 +27,13 @@ class Settings(BaseSettings):
     QDRANT_COLLECTION: str = "bank_documents"
     QDRANT_VECTOR_SIZE: int = 3072  # text-embedding-3-large dimension
     QDRANT_DISTANCE: str = "Cosine"
+    QDRANT_HNSW_M: int = 32
+    QDRANT_HNSW_EF_CONSTRUCT: int = 200
+    QDRANT_HNSW_EF: int = 64
+    QDRANT_USE_SCALAR_QUANTIZATION: bool = False
 
     # ── Neo4j (knowledge graph) ───────────────────────────────────────────────
-    USE_KG_RETRIEVAL: bool = False
+    USE_KG_RETRIEVAL: bool = True
     NEO4J_URI: str = "bolt://localhost:7687"
     NEO4J_USER: str = "neo4j"
     NEO4J_PASSWORD: str = "password"

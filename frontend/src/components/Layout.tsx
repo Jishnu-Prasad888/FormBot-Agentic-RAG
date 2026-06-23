@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   LayoutDashboard, FileText, FlaskConical, Menu, X, Zap,
-  Activity, ChevronRight
+  Activity, ChevronRight, BookOpen
 } from 'lucide-react';
 import type { Page } from '../types';
 
@@ -16,6 +16,7 @@ const NAV_ITEMS: { id: Page; label: string; icon: React.ElementType; accent?: st
   { id: 'dashboard',   label: 'Dashboard',   icon: LayoutDashboard },
   { id: 'documents',   label: 'Documents',   icon: FileText },
   { id: 'evaluate',    label: 'Evaluate',    icon: FlaskConical },
+  { id: 'kag',         label: 'KAG Guide',   icon: BookOpen },
 ];
 
 export default function Layout({ currentPage, onNavigate, children, healthStatus }: Props) {
@@ -96,6 +97,8 @@ export default function Layout({ currentPage, onNavigate, children, healthStatus
             { label: 'API', key: 'api' },
             { label: 'DB', key: 'db' },
             { label: 'Chroma', key: 'chroma' },
+            { label: 'Qdrant', key: 'qdrant' },
+            { label: 'Neo4j', key: 'neo4j' },
             { label: 'Ollama', key: 'ollama' },
           ].map(({ label, key }) => {
             const s = healthStatus[key] || 'unknown';

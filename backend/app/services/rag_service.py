@@ -2,6 +2,7 @@ import time
 import uuid
 from typing import Any, AsyncGenerator, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
 from app.rag.vector_rag import vector_rag
 from app.rag.hybrid_rag import hybrid_rag
 from app.rag.bm25 import bm25_retriever
@@ -20,6 +21,7 @@ from app.core.config import settings
 from app.services.elasticsearch_service import es_service
 from app.core.evaluation_logger import EvaluationLogger
 from app.services.graph_service import graph_service
+from app.database.models import Chunk
 
 
 RAG_SYSTEM = """You are an expert assistant. Answer the question using only the provided context.
@@ -27,6 +29,25 @@ Be factual, concise, and cite sources. If the answer is not in the context, say 
 
 
 class RAGService:
+    async def _keyword_lookup(self, db: AsyncSession, query: str, limit: int = 5) -> list[dict[str, Any]]:
+        try:
+            stmt = select(Chunk).where(Chunk.chunk_text.ilike(f"%{query}%")).limit(limit)
+            rows = await db.execute(stmt)
+            chunks = rows.scalars().all()
+            results: list[dict[str, Any]] = []
+            for c in chunks:
+                results.append({
+                    "chunk_id": c.id,
+                    "document_id": c.document_id,
+                    "filename": c.chunk_metadata.get("filename") if c.chunk_metadata else "",
+                    "chunk_text": c.chunk_text,
+                    "score": 0.9,
+                    "metadata": c.chunk_metadata or {},
+                })
+            return results
+        except Exception:
+            return []
+
     async def retrieve(
         self,
         query: str,
@@ -35,15 +56,17 @@ class RAGService:
         filters: Optional[dict] = None,
         collection_name: Optional[str] = None,
         all_collections: bool = False,
+        candidate_document_ids: Optional[set[str]] = None,
     ) -> list[dict[str, Any]]:
         """
         Retrieve from single or multiple collections.
         If all_collections=True, search across all available collections.
         """
-        candidate_ids = None
+        candidate_ids = set(candidate_document_ids) if candidate_document_ids else None
         if settings.USE_KG_RETRIEVAL:
             graph_result = await graph_service.get_candidates(query, filters)
-            candidate_ids = graph_result.candidate_document_ids or None
+            graph_candidates = graph_result.candidate_document_ids or set()
+            candidate_ids = (candidate_ids or set()) | graph_candidates or None
 
         if all_collections:
             return await multi_collection_retriever.retrieve_all_collections(
@@ -65,7 +88,7 @@ class RAGService:
         elif strategy == "markdown":
             return await markdown_rag.query(query, top_k=top_k)
         else:
-            return await hybrid_rag.retrieve(query, col, top_k, filters)
+            return await hybrid_rag.retrieve(query, col, top_k, filters, candidate_ids)
 
     async def query(
         self,
@@ -87,6 +110,14 @@ class RAGService:
                 graph_context = ""
 
         chunks = await self.retrieve(query, strategy, top_k, filters)
+
+        # Tier-1 keyword search (Postgres) to add exact matches
+        keyword_hits = await self._keyword_lookup(db, query, top_k)
+        seen_ids = {c.get("chunk_id") for c in chunks if c.get("chunk_id")}
+        for hit in keyword_hits:
+            if hit.get("chunk_id") in seen_ids:
+                continue
+            chunks.append(hit)
         context = "\n\n".join(
             f"[{r.get('filename','?')}] {r['chunk_text']}" for r in chunks
         )

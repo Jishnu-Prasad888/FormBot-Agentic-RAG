@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 # ==========================
 # CONFIG
 # ==========================
-CSV_1 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/15th june elasticsearch online added RRF and que - synonym expa - vector + bm25 - rrf - cross encoder - chunk expansion - cross encoder - ES.csv" 
-CSV_2 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/19th june gpt5.1  added neo4j and qrant alogn with postgeres sql and elasticsearch overall score 64.9.csv"
+CSV_1 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/19th june added neo4j and qrant alogn with postgeres sql and elasticsearch overall score 64.9.csv" 
+CSV_2 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/22 june only 0.6 less accuracy questions from the 19th june gpt 4o results.csv"
 
 METRICS = [
     "Accuracy (LLM)",

@@ -1,0 +1,52 @@
+1. Can I open a recurring deposit (RD) account through Internet banking ?
+Yes, if you have Internet banking user name and password, and at least one transaction account mapped to the username.
+
+2. What is the minimum tenure for an online deposit ?
+The period of deposit shall be minimum 12 months and maximum 120 months.
+
+3. What are the interest rates for a recurring deposit ?
+The interest rates vary from time to time. You can view the latest interest rates by clicking on "View current interest rate" link provided in e-RD request page.
+
+4. What is the minimum amount for a recurring deposit a/c ?
+The minimum amount of monthly installment shall be Rs 100. The amount of installment and number of installment can not be changed after opening of the account.
+
+5. In whose name will the Recurring deposit (RD) account be opened? What is the mode of operation ?
+The name(s) and mode of operation and branch of newly generated deposit a/c will be same as in debit a/c, from which RD a/c is funded.
+
+6. How is the maturity amount calculated? Can I make enquiry before opening e-RD ?
+The maturity amount is based on the installment, tenure & type of a/c selected by the customer. The maturity value of RD is rounded off to the nearest rupee and paid after 30 days /one month deposit of last installment or on the expiry of the period, for which the deposit was accepted, whichever is later. You may enquire the maturity amount, maturity date and rate of interest, without opening e-RD through “Enquiry” tab available in e-RD page.
+
+7. What are the types of accounts from which I can debit an amount for the deposit ?
+You can debit a current account to open RD account. The account selected for debiting should be valid transactional a/c through Internet Banking channel and should not be a stopped / dormant / locked account.
+
+8. Can I open online term deposit a/c for any other name(s), not belonging to debit a/c from which recurring deposit a/c is funded ?
+No, You may contact the branch for the same.
+
+9. Can I transfer the maturity money to any of my accounts ?
+No, maturity amount or the amount payable before maturity will be transferred only to the debit account from which the first was funded.
+
+10. Is there any cut off time for creating e-RD online ?
+Yes. e-RD can be created online from 8:00 AM IST to 8:00 PM IST. Requests initiated beyond this period will be scheduled for the next opening hours.
+
+11. How can I cancel my standing instruction for e-RD ?
+You may cancel your standing instructions, which are set through Internet Banking, by "View/Cancel" tab, under e-Services -> Standing instruction link.
+
+12. Is it mandatory to set standing instructions for periodic installment payment of RD ?
+No, you can pay the installment at your branch or you can also set the standing instruction at branch or through Internet banking anytime. Only your first installment is paid online at the time of opening of RD a/c.
+
+13. Can I close my RD account online ?
+Yes, you may close your RD a/c online through "Close A/c" tab under e-RD, which are created through e-RD only. RD a/c created through any other means can not closed through "Close a/c" tab under e-RD.
+
+14. What are the charges for RD pre-mature closure ?
+Interest paid on premature withdrawal of term deposits could be less than the contracted rate, as per the applicable rule on the date of premature payment.
+
+15. What is the penalty for default in installment payment ?
+Whenever a depositor fails to pay the installment on due date for three consecutive months the account shall not be closed and service charge of Rs 10/- is applicable. The penalty charged on delayed payment of instalment shall be
+i) Penalty in case of delay in payment of installment of RD of 5 years or less shall be Rs 1.50 for every Rs 100 per month.
+ii) Such penalty shall be Rs 2.00 for every Rs. 100 per month for the account on more than 5 years.
+
+16. What are the maturity instrcuctions applicable to e-RD ?
+You can choose "Payback Principal and Interest" or "Convert to STDR" as maturity instruction for your e-RD. "Payback Principal and Interest" option will transfer the maturity proceeds to your debit account on maturity of e-RD. "Convert to STDR" option will create fixed deposit for period selected by you with the maturity amount of e-RD.
+
+17. How TDS will be calculated for e-RD ?
+The RD account is subject to TDS.

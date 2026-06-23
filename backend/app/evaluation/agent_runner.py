@@ -1,5 +1,5 @@
 """
-Metadata-aware RAG evaluation for banking/product documents.
+KAG-first evaluation for banking/product documents.
 
 Flow:
   Question
@@ -8,15 +8,13 @@ Flow:
     ↓
   Intent Detection & Metadata Filter Generation
     ↓
-  Hybrid Retrieval (Vector + BM25) with filters
+  KAG Retrieval (Neo4j candidates → hybrid vector with metadata filters)
     ↓
-  RRF Fusion
+  Cross-Encoder Rerank
     ↓
-  Cross-Encoder Rerank (first pass)
+  Neighbor Chunk Expansion
     ↓
-  Neighbor Chunk Expansion (same document, adjacent chunks)
-    ↓
-  Cross-Encoder Rerank (second pass)
+  Cross-Encoder Rerank
     ↓
   ES Enhancement
     ↓
@@ -27,18 +25,16 @@ import time
 import re
 from typing import Any
 
-from app.rag.vector_rag import vector_rag
-from app.rag.bm25 import bm25_retriever
+from app.chromadb.client import chroma_client
 from app.rag.synonym_expansion import get_synonym_expander
 from app.rag.cross_encoder import cross_encoder
-from app.rag.rrf import reciprocal_rank_fusion
-from app.rag.metadata_filter import filter_results
-from app.chromadb.client import chroma_client
 from app.evaluation.evaluator import evaluate_single
 from app.embeddings.openai_client import openai_client
 from app.core.config import settings
 from app.core.evaluation_logger import EvaluationLogger
 from app.services.elasticsearch_service import es_service
+from app.services.graph_service import graph_service
+from app.services.rag_service import rag_service
 
 # Global logger instance
 _current_logger = None
@@ -265,61 +261,61 @@ async def evaluate_question(
     if _current_logger:
         _current_logger.log("SYNONYM_EXPANSION", f"Generated {len(queries)} queries:\n" + "\n".join(queries))
 
-    # ── 3. Hybrid retrieval + RRF fusion ──────────────────────────────────
-    all_ranked_lists = []
+    # ── 3. KAG retrieval (graph candidates + hybrid vector) ───────────────
+    all_chunks: list[dict[str, Any]] = []
+    graph_forms: set[str] = set()
+    for idx, q in enumerate(queries, 1):
+        graph_result = await graph_service.get_candidates(q, filters)
+        candidate_ids = graph_result.candidate_document_ids or None
+        for f in graph_result.forms:
+            name = f.get("name")
+            if name:
+                graph_forms.add(name)
+        if _current_logger:
+            _current_logger.log(
+                f"GRAPH_{idx}",
+                f"Candidates: {len(candidate_ids or [])}\nForms: {[f.get('name') for f in graph_result.forms]}"
+            )
 
-    for idx, query in enumerate(queries, 1):
-        # Vector search with metadata filters
-        vector_results = await vector_rag.retrieve(
-            query, "text_documents",
-            top_k=getattr(settings, "DENSE_TOP_K", 10),
+        results = await rag_service.retrieve(
+            q,
+            strategy="hybrid",
+            top_k=getattr(settings, "TOP_K", top_k),
             filters=filters if filters else None,
+            candidate_document_ids=candidate_ids,
         )
         if _current_logger:
-            _current_logger.log(f"VECTOR_SEARCH_{idx}",
-                f"Query: {query}\nFound: {len(vector_results)} chunks")
+            _current_logger.log(f"KAG_RETRIEVE_{idx}", f"Query: {q}\nFound: {len(results)} chunks")
+        if results:
+            all_chunks.extend(results)
 
-        # BM25 search
-        bm25_results = bm25_retriever.search(
-            "text_documents", query,
-            top_k=getattr(settings, "BM25_TOP_K", 10),
-        )
-
-        # Apply in-memory metadata filtering for BM25 results
-        if filters:
-            bm25_results = filter_results(bm25_results, filters)
-
-        if _current_logger:
-            _current_logger.log(f"BM25_SEARCH_{idx}",
-                f"Query: {query}\nFound: {len(bm25_results)} chunks")
-
-        if vector_results:
-            all_ranked_lists.append(vector_results)
-        if bm25_results:
-            all_ranked_lists.append(bm25_results)
-
-    if not all_ranked_lists:
-        all_chunks = []
-    else:
-        # ── 4. RRF fusion ─────────────────────────────────────────────────
-        all_chunks = reciprocal_rank_fusion(all_ranked_lists, k=60, top_k=top_k * 4)
+    # Deduplicate by chunk_id
+    deduped = []
+    seen = set()
+    for c in all_chunks:
+        cid = c.get("chunk_id")
+        if cid and cid in seen:
+            continue
+        if cid:
+            seen.add(cid)
+        deduped.append(c)
 
     if _current_logger:
-        _current_logger.log("RRF_FUSION", f"Total unique chunks after RRF: {len(all_chunks)}")
+        _current_logger.log("KAG_DEDUP", f"Chunks after KAG dedup: {len(deduped)}")
 
-    # ── 5. First rerank (over-retrieve) ───────────────────────────────────
-    reranked = cross_encoder.rerank(question, all_chunks, top_k=top_k * 2)
+    # ── 4. Rerank (over-retrieve) ─────────────────────────────────────────
+    reranked = cross_encoder.rerank(question, deduped, top_k=top_k * 2)
     if _current_logger:
-        _current_logger.log("FIRST_RERANK", f"Top {top_k * 2} chunks after initial reranking")
+        _current_logger.log("FIRST_RERANK", f"Top {top_k * 2} chunks after KAG rerank")
 
-    # ── 6. Neighbor chunk expansion ───────────────────────────────────────
+    # ── 5. Neighbor chunk expansion ───────────────────────────────────────
     expanded_chunks = await _fetch_neighbor_chunks(reranked, "text_documents")
     if _current_logger:
         _current_logger.log("NEIGHBOR_EXPANSION",
             f"Before: {len(reranked)} chunks\n"
             f"After neighbor expansion: {len(expanded_chunks)} chunks")
 
-    # ── 7. Second rerank ──────────────────────────────────────────────────
+    # ── 6. Second rerank ──────────────────────────────────────────────────
     reranked_final = cross_encoder.rerank(question, expanded_chunks, top_k=top_k)
     if _current_logger:
         _current_logger.log("SECOND_RERANK", f"Final top {top_k} chunks after neighbor-aware reranking")
@@ -333,6 +329,13 @@ async def evaluate_question(
 
     # ── 8. Generate answer ────────────────────────────────────────────────
     chunk_texts = _chunk_texts(reranked_final)
+
+    # Inject graph context if available
+    graph_note = ""
+    if graph_forms:
+        graph_note = "Graph candidates (Forms):\n" + "\n".join(sorted(graph_forms))
+    if graph_note:
+        chunk_texts = [graph_note] + chunk_texts
 
     # Enhance with Elasticsearch via iterative query
     original_count = len(chunk_texts)
