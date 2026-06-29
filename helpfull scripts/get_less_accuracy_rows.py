@@ -1,15 +1,14 @@
+import pandas as pd
 from pathlib import Path
 
-import pandas as pd
-
 # Input CSV file
-input_file = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/19th june added neo4j and qrant alogn with postgeres sql and elasticsearch overall score 64.9.csv"
+input_file = "C:\\Users\\Jishnu\\Desktop\\SRAG\\eval\\results\\8th june 2nd cross encoder.csv"
 
 # Read CSV
 df = pd.read_csv(input_file)
 
 # Filter rows where Accuracy <= 0.6
-filtered_df = df[df["Accuracy (LLM)"] <= 0.6]
+filtered_df = df[df["Accuracy"] <= 0.6]
 
 # Create output filename
 input_path = Path(input_file)

@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 # ==========================
 # CONFIG
 # ==========================
-CSV_1 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/23 june after KAG and llm changed answers.csv" 
-CSV_2 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/23 june after KAG manual questions.csv"
+CSV_1 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/eval 11th june .csv" 
+CSV_2 = "/media/jishnu/Windows-SSD/Users/Jishnu/Desktop/SRAG/eval/results/rag_eval_1781246175645 12th june overall score 63 added elasticsearch and crawled websites.csv"
 
 METRICS = [
     "Accuracy (LLM)",
