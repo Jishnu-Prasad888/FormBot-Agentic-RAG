@@ -16,8 +16,6 @@ Flow:
     ↓
   Cross-Encoder Rerank
     ↓
-  ES Enhancement
-    ↓
   LLM
 """
 
@@ -32,7 +30,6 @@ from app.evaluation.evaluator import evaluate_single
 from app.embeddings.openai_client import openai_client
 from app.core.config import settings
 from app.core.evaluation_logger import EvaluationLogger
-from app.services.elasticsearch_service import es_service
 from app.services.graph_service import graph_service
 from app.services.rag_service import rag_service
 
@@ -337,20 +334,7 @@ async def evaluate_question(
     if graph_note:
         chunk_texts = [graph_note] + chunk_texts
 
-    # Enhance with Elasticsearch via iterative query
-    original_count = len(chunk_texts)
-    enhanced_texts = await es_service.enhance_with_iterative_query(
-        chunk_texts, question, max_tries=3, logger=_current_logger
-    )
-    if _current_logger:
-        _current_logger.log("ES_ENHANCEMENT_COMPLETE",
-            f"Original: {original_count} chunks\n"
-            f"Enhanced: {len(enhanced_texts)} chunks\n"
-            f"Added: {len(enhanced_texts) - original_count} from Elasticsearch"
-            f"\nEnhanced texts:\n" + "\n---\n".join(enhanced_texts)
-            )
-
-    context_text = "\n---\n".join(enhanced_texts)
+    context_text = "\n---\n".join(chunk_texts)
 
     if context_text.strip():
         prompt = f"Context:\n{context_text}\n\nQuestion: {question}"
@@ -392,7 +376,7 @@ async def evaluate_question(
         _current_logger.log("GOLD_CHUNKS",
             f"Identified {len(gold_chunk_ids)} gold chunks from {len(retrieved_chunk_ids)} retrieved")
 
-    scores = await evaluate_single(question, expected_answer, generated_answer, enhanced_texts,
+    scores = await evaluate_single(question, expected_answer, generated_answer, chunk_texts,
                                    retrieved_chunk_ids=retrieved_chunk_ids, gold_chunk_ids=gold_chunk_ids)
 
     if _current_logger:

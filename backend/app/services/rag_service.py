@@ -18,7 +18,6 @@ from app.rag.evaluator import (
 from app.embeddings.openai_client import openai_client as ollama_client
 from app.repositories.log_repository import log_repo
 from app.core.config import settings
-from app.services.elasticsearch_service import es_service
 from app.core.evaluation_logger import EvaluationLogger
 from app.services.graph_service import graph_service
 from app.database.models import Chunk
@@ -205,12 +204,7 @@ class RAGService:
                 context_texts = [r["chunk_text"] for r in chunks]
                 logger.log_retrieval("hybrid", settings.TOP_K, chunks)
                 
-                # Enhance with Elasticsearch iterative queries
-                original_count = len(context_texts)
-                enhanced_texts = await es_service.enhance_with_iterative_query(context_texts, question, max_tries=5, logger=logger)
-                logger.log_es_enhancement(len(enhanced_texts), original_count)
-                
-                context = "\n\n".join(enhanced_texts)
+                context = "\n\n".join(context_texts)
                 prompt = f"Context:\n{context}\n\nQuestion: {question}"
                 
                 llm_start = time.time()
@@ -223,13 +217,13 @@ class RAGService:
                 acc_score, acc_rat = await compute_accuracy(answer, expected)
                 logger.log_metrics("Accuracy", acc_score, acc_rat)
                 
-                faith_score, faith_rat = await compute_faithfulness(answer, enhanced_texts)
+                faith_score, faith_rat = await compute_faithfulness(answer, context_texts)
                 logger.log_metrics("Faithfulness", faith_score, faith_rat)
                 
-                cp_score, cp_rat = await compute_context_precision(question, enhanced_texts)
+                cp_score, cp_rat = await compute_context_precision(question, context_texts)
                 logger.log_metrics("Context Precision", cp_score, cp_rat)
                 
-                cr_score, cr_rat = await compute_context_recall(expected, enhanced_texts)
+                cr_score, cr_rat = await compute_context_recall(expected, context_texts)
                 logger.log_metrics("Context Recall", cr_score, cr_rat)
                 
                 ar_score, ar_rat = await compute_answer_relevancy(question, answer)
