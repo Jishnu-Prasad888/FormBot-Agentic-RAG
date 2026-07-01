@@ -1,9 +1,0 @@
-With YONO, you can manage your ATM / Debit card with ease. You can –
-1) Block card in case of lost / stolen
-2) Manage usage by enabling / disabling your card for different types of transactions like Domestic Usages, International Usage, ATM transactions, POS (merchant) transactions, E-Commerce Transactions & Contactless (NFC) transactions.
-3) Manage the transaction limit for ATM transactions, POS (Merchant) & E-Commerce Transactions and Contactless (NFC) Transactions
-4) Set / Reset ATM Pin
-5) Activate card
-6) Request a new card
-Download YONO SBI
-Last Updated On : Tuesday, 06-02-2024

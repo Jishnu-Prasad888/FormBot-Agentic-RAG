@@ -1,9 +1,0 @@
-Using YONO you can manage various services pertaining to your account. You can –
-1) Activate SMS alerts in your account
-2) Change your account type from Non-Cheque Book to Cheque Book one
-3) Manage nominee for your PPF account
-4) Change Home branch of your account
-5) Manage e-statements
-6) Disable/Enable UPI
-Download YONO SBI
-Last Updated On : Friday, 31-12-2021
