@@ -1,19 +1,25 @@
+import logging
 import os
 import time
 import uuid
-import shutil
 from datetime import datetime, timezone
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
+from fastapi.encoders import jsonable_encoder
+from fastapi.exceptions import RequestValidationError
+from typing import List
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 
 from app.config import settings
 from app.storage import (
     list_docs, get_doc, create_doc, update_doc, delete_doc,
-    get_chunks, save_chunks, get_all_chunks,
     list_convs, get_conv, create_conv, add_message, delete_conv,
+)
+from app.chroma_store import (
+    add_chunks, get_chunks_by_doc, delete_chunks_by_doc,
+    count_chunks, list_collections_info,
 )
 from app.models import (
     SearchRequest, SearchResponse, SearchResult,
@@ -36,6 +42,8 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Simple RAG", version="2.0.0", lifespan=lifespan)
 
+logger = logging.getLogger("simple_rag")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -43,6 +51,38 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.middleware("http")
+async def add_cors_on_error(request: Request, call_next):
+    try:
+        response = await call_next(request)
+    except HTTPException as exc:
+        response = JSONResponse(
+            status_code=exc.status_code,
+            content={"detail": exc.detail},
+            headers=exc.headers,
+        )
+    except RequestValidationError as exc:
+        response = JSONResponse(
+            status_code=422,
+            content={"detail": jsonable_encoder(exc.errors())},
+        )
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("Unhandled error during request %s %s", request.method, request.url.path)
+        response = JSONResponse(
+            status_code=500,
+            content={"detail": "Internal server error", "error": str(exc)},
+        )
+
+    origin = request.headers.get("origin") or "*"
+    response.headers.setdefault("Access-Control-Allow-Origin", origin)
+    if origin != "*":
+        response.headers.setdefault("Vary", "Origin")
+        response.headers.setdefault("Access-Control-Allow-Credentials", "true")
+    response.headers.setdefault("Access-Control-Allow-Methods", "*")
+    response.headers.setdefault("Access-Control-Allow-Headers", "*")
+    return response
 
 
 def _utcnow() -> str:
@@ -63,7 +103,11 @@ async def health_db():
 
 @app.get("/health/chroma")
 async def health_chroma():
-    return {"status": "ok", "collections": ["default"]}
+    try:
+        cols = list_collections_info()
+        return {"status": "ok", "collections": [c["name"] for c in cols]}
+    except Exception as e:
+        return {"status": "error", "detail": str(e)}
 
 
 @app.get("/health/ollama")
@@ -98,50 +142,72 @@ async def health_elasticsearch():
 # ─── Documents ────────────────────────────────────────────────────────────────
 
 @app.post("/api/documents/upload")
-async def upload_document(file: UploadFile = File(...), metadata: str = Form("{}")):
+async def upload_document(
+    file: UploadFile = File(None),
+    files: List[UploadFile] = File(None),
+    metadata: str = Form("{}"),
+):
     import json
+
     meta = {}
     try:
         meta = json.loads(metadata) if metadata else {}
     except json.JSONDecodeError:
         pass
 
-    ext = os.path.splitext(file.filename or "file.txt")[1].lower()
-    doc_type = ext.lstrip(".") if ext else "text"
-    if doc_type in ("md",):
-        doc_type = "markdown"
+    payload_files: List[UploadFile] = []
+    if files:
+        payload_files = files
+    elif file:
+        payload_files = [file]
+    else:
+        raise HTTPException(400, "No file provided")
 
-    filepath = os.path.join(UPLOAD_DIR, f"{uuid.uuid4()}_{file.filename}")
-    with open(filepath, "wb") as f:
-        content = await file.read()
-        f.write(content)
+    results = []
+    for f in payload_files:
+        ext = os.path.splitext(f.filename or "file.txt")[1].lower()
+        doc_type = ext.lstrip(".") if ext else "text"
+        if doc_type in ("md",):
+            doc_type = "markdown"
 
-    text = extract_text_from_file(filepath)
-    chunks = chunk_text(text)
-    doc = create_doc(
-        filename=file.filename or "unknown",
-        filepath=filepath,
-        doc_type=doc_type,
-        embedding_model=settings.embedding_model,
-        metadata=meta,
-    )
+        filepath = os.path.join(UPLOAD_DIR, f"{uuid.uuid4()}_{f.filename}")
+        with open(filepath, "wb") as out:
+            content = await f.read()
+            out.write(content)
 
-    emb_list = embedder.embed_batch(chunks) if chunks else []
-    metadata_list = []
-    for i, (chunk, emb) in enumerate(zip(chunks, emb_list)):
-        metadata_list.append({"_embedding": emb, "chunk_index": i})
+        text = extract_text_from_file(filepath)
+        chunks = chunk_text(text)
+        doc = create_doc(
+            filename=f.filename or "unknown",
+            filepath=filepath,
+            doc_type=doc_type,
+            embedding_model=settings.embedding_model,
+            metadata=meta,
+        )
 
-    chunk_count = save_chunks(doc.id, chunks, metadata_list)
-    update_doc(doc.id, chunk_count=chunk_count)
+        if chunks:
+            embeddings = embedder.embed_batch(chunks)
+            metadata_list = [{"chunk_index": i} for i in range(len(chunks))]
+            chunk_count = add_chunks(
+                doc.id, doc.filename, chunks, embeddings, metadata_list
+            )
+        else:
+            chunk_count = 0
 
-    return {
-        "id": doc.id,
-        "filename": doc.filename,
-        "document_type": doc_type,
-        "retrieval_strategy": "vector",
-        "chunk_count": chunk_count,
-        "message": "Document uploaded and indexed",
-    }
+        update_doc(doc.id, chunk_count=chunk_count)
+        results.append({
+            "id": doc.id,
+            "filename": doc.filename,
+            "document_type": doc_type,
+            "retrieval_strategy": "vector",
+            "chunk_count": chunk_count,
+            "message": "Document uploaded and indexed",
+        })
+
+    # Backward-compatible single-file response
+    if len(results) == 1:
+        return results[0]
+    return {"uploaded": len(results), "results": results, "message": "Documents uploaded and indexed"}
 
 
 @app.get("/api/documents")
@@ -174,19 +240,26 @@ async def reindex_document(doc_id: str):
     if not text:
         raise HTTPException(400, "Could not extract text from file")
     chunks = chunk_text(text)
-    emb_list = embedder.embed_batch(chunks) if chunks else []
-    metadata_list = []
-    for i, (chunk, emb) in enumerate(zip(chunks, emb_list)):
-        metadata_list.append({"_embedding": emb, "chunk_index": i})
-    chunk_count = save_chunks(doc.id, chunks, metadata_list)
+    delete_chunks_by_doc(doc.id)
+    if chunks:
+        embeddings = embedder.embed_batch(chunks)
+        metadata_list = [{"chunk_index": i} for i in range(len(chunks))]
+        chunk_count = add_chunks(
+            doc.id, doc.filename, chunks, embeddings, metadata_list
+        )
+    else:
+        chunk_count = 0
     update_doc(doc.id, chunk_count=chunk_count)
     return {"document_id": doc.id, "message": "Reindexed", "chunk_count": chunk_count}
 
 
 @app.get("/api/documents/{doc_id}/chunks")
 async def get_document_chunks(doc_id: str):
-    chunks = get_chunks(doc_id)
-    return [c.model_dump() for c in chunks]
+    chunks = get_chunks_by_doc(doc_id)
+    # Remove embedding from metadata if present
+    for c in chunks:
+        c["chunk_metadata"].pop("_embedding", None)
+    return chunks
 
 
 @app.get("/api/documents/{doc_id}/metadata")
@@ -500,7 +573,9 @@ async def run_agent(agent_type: str, req: dict):
 
 @app.get("/api/chroma/collections")
 async def list_collections():
-    return {"collections": ["default"], "counts": {"default": len(get_all_chunks())}}
+    cols = list_collections_info()
+    counts = {c["name"]: c["count"] for c in cols}
+    return {"collections": [c["name"] for c in cols], "counts": counts}
 
 
 # ─── Web ─────────────────────────────────────────────────────────────────────
@@ -535,11 +610,14 @@ async def elasticsearch_upload(file: UploadFile = File(...)):
         doc_type=doc_type,
         embedding_model=settings.embedding_model,
     )
-    emb_list = embedder.embed_batch(chunks) if chunks else []
-    metadata_list = []
-    for i, (chunk, emb) in enumerate(zip(chunks, emb_list)):
-        metadata_list.append({"_embedding": emb, "chunk_index": i})
-    chunk_count = save_chunks(doc.id, chunks, metadata_list)
+    if chunks:
+        embeddings = embedder.embed_batch(chunks)
+        metadata_list = [{"chunk_index": i} for i in range(len(chunks))]
+        chunk_count = add_chunks(
+            doc.id, doc.filename, chunks, embeddings, metadata_list
+        )
+    else:
+        chunk_count = 0
     update_doc(doc.id, chunk_count=chunk_count)
 
     return {"count": chunk_count}

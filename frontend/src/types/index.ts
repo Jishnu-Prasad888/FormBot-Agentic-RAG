@@ -80,7 +80,7 @@ export interface Source {
 
 // ─── RAG Types ─────────────────────────────────────────────────────────────────
 
-export type RAGStrategy = 'vector' | 'bm25' | 'hybrid' | 'table' | 'pdf' | 'markdown';
+export type RAGStrategy = 'vector';
 
 export interface RAGQueryRequest {
   query: string;
@@ -120,7 +120,7 @@ export interface EvaluationResponse {
 
 // ─── Agent Types ───────────────────────────────────────────────────────────────
 
-export type AgentType = 'coordinator' | 'vector' | 'sqlite' | 'router' | 'web' | 'evaluator';
+export type AgentType = 'vector' | 'web' | 'evaluator';
 
 export interface AgentRequest {
   query: string;
@@ -145,9 +145,7 @@ export interface AgentResponse {
 export interface HealthStatus {
   status: 'ok' | 'error';
   database?: string;
-  chromadb?: string;
   ollama?: string;
-  collections?: string[];
   models?: string[];
   detail?: string;
 }
@@ -164,8 +162,7 @@ export interface ChromaCollection {
 export type Page =
   | 'dashboard'
   | 'documents'
-  | 'evaluate'
-  | 'kag';
+  | 'evaluate';
 
 export interface Toast {
   id: string;

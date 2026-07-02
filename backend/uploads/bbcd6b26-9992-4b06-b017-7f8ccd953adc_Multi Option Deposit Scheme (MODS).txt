@@ -1,0 +1,160 @@
+Multi Option Deposit Scheme (MODS) is one of the variants of Term Deposits.   MODS can be opened through Savings Bank Account under Auto Sweep facility or Stand-Alone basis.
+
+The basic feature of this scheme is to facilitate customer to gain higher interest rate, out of the surplus funds above a threshold limit from the Savings Bank Account is transferred automatically to Term Deposits (MODS).  In case the amount falls short in Savings Bank Account for honouring debit mandate, partial/ full withdrawal (reverse sweep) from term deposits will be executed and credited back into Savings Bank Account.
+
+The product features are as under:
+
+Features
+Summary of the Multi Option Deposit Scheme
+1	Type of Account	TDR /STDR
+2	Purpose	
+Surplus funds above a threshold limit from the Savings Bank Account is transferred automatically to Term Deposits.
+
+Stand-Alone MOD can be created by customer as and when required.
+
+3	Who can Open the A/C	Any Individual Singly Or jointly, Minor (himself/herself or through his/her guardian)
+4	Auto Sweep facility	Savings Plus, Salary Package, Wealth Customers, minors.
+5	Period of Deposit	Minimum tenor is 1 year, and maximum is 5 years.
+6	Minimum threshold limit beyond which MODS will execute under Auto Sweep.	₹50,000/-
+7	Minimum Resultant Balance in SB (Post Auto Sweep)	₹35,000/-
+8	Minimum amount of TDR /STDR	₹15,000/- and in multiple of ₹5,000/- thereafter.
+9	Reverse Sweep / Minimum withdrawal	In units of ₹5,000/- and in multiple thereof., When the outstanding balance in TDR reaches ₹15,000/-, full amount reversal to SB, irrespective of requirement. Withdrawal of unit will take place for latest MOD made (LIFO). (Option is available for customers to choose FIFO or LIFO)
+10	Stand Alone	Can be created irrespective of threshold limit and resultant balance (as mentioned above) from Savings Bank Account.
+11	Maximum amount	No limit
+12	Issue of Term Deposit advice	A deposit advice is issued to customers in lieu of Term Deposit Receipts. In case of auto sweep, no advice is issued.
+13	Interest application and premature payment.	
+By default, Interest is paid quarterly and is compounded. When there is a break of MOD, the amount is paid with penalty at the applicable interest rate for the period the broken amount has run, and the remaining amount continue to earn original rate of interest. TDS is deducted as applicable.
+
+ 
+Senior Citizens: Eligible for additional interest rate as applicable.
+
+ 
+Super Senior Citizens: Not eligible for additional interest rate as applicable.
+
+14	Premature Penalty	As per extant penalty clause.
+15	Loan/Overdraft Facility	Facility available. Further breaking of units when lien is marked on a particular account is not allowed.
+16	Nomination facility	
+The Nomination details available in primary /linked Savings Bank Account will automatically stamp in MOD accounts.
+
+However, if a customer wants to change Nomination in any of the accounts, he may do.
+
+17	KYC guidelines	
+As per bank extant KYC guidelines.
+
+In case of non-KYC compliant, MOD shall not be executed though auto sweep facility.
+
+18	Maturity	Partial withdrawal and remaining maturity amount are transferred automatically to linked Savings Bank Account.
+19	Tax deduction at source	Tax Deductible at Source is applicable as per Income Tax Rules.
+1. What is e-TDR/e-STDR (Multi Option Deposit)?
+MOD (Multi Option Deposit) accounts are Term Deposits which are linked to transactional Accounts. Unlike normal Term Deposits which are fully liquidated anytime you need funds; one can withdraw funds from MODS at the time of need. Such withdrawal can be made in multiples of Rs.1,000/- by issuing a cheque from Savings Bank Account or from ATM / branch or through any other channel. The balance amount in MODS will continue to earn interest at the rate applicable at the time of initial deposit. The sum of available balance in the transactional account and MOD balance can be used for issuing cheques or withdrawal or making any other payment.
+2. What is the tenure for MODs?
+Minimum 1 year, maximum 5 years.
+3. What are the interest rates for a term deposit?
+The interest rates vary from time to time. You can view the latest interest rates by clicking on "View current interest rate" link provided in e-TDR/e-STDR (MOD) request page.
+4. What is the minimum amount for a term deposit?
+You can open a MOD account with a minimum amount of Rs. 10,000 with increments in multiple of Rs. 1000. However minimum and maximum amount limit may vary for different product codes.
+5. Can I generate an MOD account advice?
+Yes, you can generate and print an MOD account advice containing all the relevant details , Post login >> My Accounts >> Account Summary >> Deposit Account>> click on MOD account >> Download.
+6. In whose name will the MOD account be opened? What will be the mode of operation?
+The name(s) and mode of operation and branch of newly generated MOD a/c will be same as in debit a/c, from which the MOD a/c is funded.
+7.  How is the maturity amount calculated? Can I make enquiry before opening e-TDR/e-STDR (MOD)?
+The maturity amount is based on the tenor and type of a/c selected by you. You may enquire the maturity amount, maturity date and rate of interest, without opening e-TDR/e-STDR(MOD) through "Enquiry" tab available in e-TDR/e-STDR(MOD) page in Onlinesbi.
+8. What are the types of accounts from which I can debit an amount for the deposit?
+You can debit a savings account to open MODs. The account selected for debiting should be a valid transactional a/c through SBI YONO Lite channel and should not be a stopped / dormant / locked account.
+9. Can I open online term deposit a/c in any other name(s), not belonging to debit a/c from which term deposit a/c is funded?
+No.
+10. Can I transfer the maturity money to any of my accounts?
+No, maturity amount or the amount payable before maturity, will be transferred only to the debit account from which it was funded.
+11. Can senior citizen avail additional rate of interest on MOD accounts?
+Yes, senior citizens can avail additional rate of interest in e-TDR/e-STDR (MOD). The date of birth in Bank's record will be considered for age calculation. The minimum days and minimum amount applicable for additional rate of interest for senior citizens will be as per Bank's discretion. In case of joint accounts, the senior citizen benefit can be availed only if the first account holder qualifies for this benefit.
+12. How can I add nominees in MOD a/c?
+While opening an e-TDR/e-STDR(MOD), you will be provided with an option to retain the same nominee(s) for MOD a/c as appearing in your debit a/c from which the MOD is funded. Customer can also add a new nominee.
+13. Can I add a new nominee online?
+Yes, you can add a new nominee through YONO Lite by clicking on ‘Services’ Tab>>’Online Nomination’ option.
+14. . Is there any cut off time for creating e-TDR/e-STDR (MOD) online?
+Yes. e-TDR / e-STDR (MOD) can be created online from 8:00 AM IST to 8:00 PM IST. Requests initiated beyond this period will be scheduled for the next opening hours.
+What is SBI MOD Scheme?
+SBI MOD Scheme refers to SBI Multi Option Deposit Scheme. These are a form of term deposits that are linked to the individual savings or current account. In a standard term deposit, one can liquidate whenever they need funds but on specific charges. On the other hand, the depositor can withdraw from the SBI MOD account in the multiples of Rs.1000 whenever funds are required. The balance amount in the SBI MOD account will continue to earn interest at the interest rate applicable at the time of the initial deposit.
+
+One can create an SBI Multi Option Deposit Account online by visiting the SBI portal or offline by physically visiting the branch.
+
+Check Latest SBI FD Interest Rates
+
+Features of the SBI MOD Scheme?
+The following are the key features of the SBI MOD Scheme.
+
+Tenure: The tenure to invest in this scheme ranges from a minimum period of 1 year to a maximum period of 5 years. 
+Type of Account: The SBI MOD account is a form of term deposit (TD) account or special term deposit (STD) account.
+Minimum Deposit Amount: The minimum term deposit amount required to open a MOD account is Rs.10,000. However, there is no maximum amount of investment under this scheme. One can use FD calculator to estimate their returns from the SBI MOD Scheme.
+Interest Rate: The rate of interest offered for the SBI MOD scheme is similar to the rates of SBI term deposits. Currently, the interest rate for term deposits ranges from 5.00% – 5.30%. For senior citizens, they earn preferential rates, i.e. 0.50% more than the standard deposit rates. Compare fixed deposit interest rates for all banks before you invest.
+Nomination Facility: The depositors can nominate their beneficiaries under this scheme.
+Tax: The interest earned on a monthly payout fixed deposit account is taxable. Also, the tax rate depends on the individual income tax slab rates. Furthermore, TDS is also applicable on the interest earned for more than Rs.10,000 in a financial year. 
+Loan against FD: The additional benefit is that one can avail loan against their MOD account. Thus, this is to help depositors meet their liquidity requirements.
+Premature Withdrawal: SBI bank also permits premature withdrawal under this scheme. However, there are certain charges for closure before maturity. For deposit accounts up to Rs. 5.00 lakhs, the penalty for premature withdrawal is 0.50% for all tenures. Simultaneously, for deposits above Rs. 5.00 lakhs but below Rs. 1 crore, the penalty for premature withdrawal is 1%. When the SBI MOD account is broken, the interest is paid with a penalty for that period on that particular amount. The remaining amount continues to earn the actual interest rate. Furthermore, no interest is paid on deposits that remain for a period of less than 7 days. 
+Transferability: The depositor can transfer the account from one branch to another anytime 
+Who can Invest in SBI MOD Scheme?
+The following are the persons who are eligible to invest in SBI MOD Scheme –
+
+Resident Individuals – Single or jointly
+Minor – themselves through their Guardian
+Karta of HUF (Hindu Undivided Family)
+Firm
+Company
+Local Bodies 
+Any government department
+Features of the SBI Multi Option Deposit (MOD) Scheme
+The SBI MOD scheme comes with several beneficial features:
+
+Combination of Accounts: The MOD scheme combines term deposits or special term deposits with linked savings bank or current accounts, providing seamless access to funds.
+Complete Liquidity: Depositors can withdraw funds in multiples of ₹5,000 at any time using cheques, ATMs, or Internet Banking, ensuring high liquidity.
+Minimum Deposit: A minimum initial deposit of ₹10,000 is required, with subsequent deposits in multiples of ₹1,000.
+Flexible Tenure: Deposit tenures range from 1 to 5 years. 
+Auto Sweep Facility: The MOD scheme is available through an SBI sweep-in FD facility in savings plus accounts. 
+Minimum Threshold Requirements: For the auto sweep facility, a minimum threshold balance of ₹50,000 and a minimum resultant balance of ₹35,000 are required. The minimum sweep amount is ₹15,000 in multiples of ₹5,000.
+Stand-Alone MODs: Customers can still open individual Stand-Alone MODs or e-MODs with a minimum deposit of ₹10,000, regardless of the threshold limits for auto sweep.
+Additional Interest for Seniors: Additional SBI Senior citizens FD interest rates are applicable that enhance their earning potential.
+Average Monthly Balance (AMB): Maintaining an average monthly balance is required for linked savings bank or current accounts associated with the MOD scheme.
+Nomination Facility: Depositors can nominate beneficiaries for their accounts.
+Loan Against FD: Customers can avail an SBI loan against FD.
+Tax Deduction at Source (TDS): Tax Deductible at Source is applicable as per Income Tax Rules.
+How to Apply for the SBI MOD Scheme?
+The SBI Multi Option Deposit account can be easily opened online or offline, by following these easy steps: 
+
+Online Application Process:
+Step 1: Visit the official SBI website or use the SBI mobile app.
+
+Step 2: Navigate to the Fixed Deposit section.
+
+Step 3: Select "e-TDR/e-STDR" under the MOD menu.
+
+Step 4: Fill in your details, including your debit account number and tenure.
+
+Step 5: Submit your application and confirm your request.
+
+Offline Application Process:
+Step 1: Visit your nearest SBI branch.
+
+Step 2: Request an application form for the MOD scheme.
+
+Step 3: Fill out the form with the required details and submit it along with the necessary documents.
+
+Conclusion
+The SBI Multi-Option Deposit Scheme is a safe investment option offered by India’s largest public sector bank. It is a suitable option for individuals seeking a flexible financial vehicle that combines the benefits of fixed deposits with easy access to funds. With competitive SBI FD interest rates, minimal deposit requirements, and a host of features designed for convenience, the SBI MOD scheme caters well to both short-term liquidity needs and long-term savings goals.
+What is a Multi Option Deposit in SBI?
+The Multi-Option Deposit (MODS) in SBI is a term deposit scheme linked to a savings or current account. It allows depositors to withdraw funds in multiples of ₹5,000 without needing to close the entire deposit.
+What are the benefits of MOD balance in SBI?
+There are many benefits of MOD Balance in SBI:
+Liquidity and partial withdrawals
+Continued interest earnings
+Automatic transfer 
+Emergency fund access 
+Higher interest rates 
+Flexibility
+Which is better, MOD or FD in SBI?
+The choice between MOD and FD depends on individual needs. MOD offers more flexibility with partial withdrawals and liquidity, making it suitable for those who may need access to their funds. Traditional FDs generally provide higher interest rates but lack the same level of access without penalties.
+What is the penalty for a MOD account in SBI?
+For premature withdrawal from an SBI MOD account, a penalty applies: 0.50% for deposits up to ₹5 lakh and 1% for deposits between ₹5 lakh and ₹1 crore. No interest is paid on deposits held for less than seven days.
+How to apply for MOD at SBI?
+You can apply for an SBI MOD account online or offline. Online, log into the SBI portal or app, go to the FD section, select e-TDR/e-STDR under the MOD menu, fill in your details, and submit your request. Offline, visit an SBI branch, request an application form, fill it out, and submit it with the necessary documents.
+What are the disadvantages of an SBI MOD account?
+Some disadvantages of an SBI MOD account include lower interest rates compared to other standard FD interest rates, potential penalties for premature withdrawal, and the requirement to maintain linked savings or current accounts with an Average Monthly Balance (AMB).

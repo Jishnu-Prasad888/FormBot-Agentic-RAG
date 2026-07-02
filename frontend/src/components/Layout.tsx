@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   LayoutDashboard, FileText, FlaskConical, Menu, X, Zap,
-  Activity, ChevronRight, BookOpen
+  Activity, ChevronRight
 } from 'lucide-react';
 import type { Page } from '../types';
 
@@ -16,7 +16,6 @@ const NAV_ITEMS: { id: Page; label: string; icon: React.ElementType; accent?: st
   { id: 'dashboard',   label: 'Dashboard',   icon: LayoutDashboard },
   { id: 'documents',   label: 'Documents',   icon: FileText },
   { id: 'evaluate',    label: 'Evaluate',    icon: FlaskConical },
-  { id: 'kag',         label: 'KAG Guide',   icon: BookOpen },
 ];
 
 export default function Layout({ currentPage, onNavigate, children, healthStatus }: Props) {
@@ -55,10 +54,10 @@ export default function Layout({ currentPage, onNavigate, children, healthStatus
           </div>
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-[#00d4ff]" style={{ fontFamily: 'Space Mono, monospace' }}>
-              RAG//OS
+              Simple RAG
             </div>
             <div className="text-xs text-[#4a5a8e]" style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.6rem' }}>
-              v1.0.0
+              v2.0.0
             </div>
           </div>
           <button
@@ -96,9 +95,6 @@ export default function Layout({ currentPage, onNavigate, children, healthStatus
           {[
             { label: 'API', key: 'api' },
             { label: 'DB', key: 'db' },
-            { label: 'Chroma', key: 'chroma' },
-            { label: 'Qdrant', key: 'qdrant' },
-            { label: 'Neo4j', key: 'neo4j' },
             { label: 'Ollama', key: 'ollama' },
           ].map(({ label, key }) => {
             const s = healthStatus[key] || 'unknown';
@@ -133,7 +129,7 @@ export default function Layout({ currentPage, onNavigate, children, healthStatus
           {/* Breadcrumb */}
           <div className="flex items-center gap-2">
             <span className="text-xs text-[#4a5a8e]" style={{ fontFamily: 'Space Mono, monospace' }}>
-              RAG//OS
+              Simple RAG
             </span>
             <span className="text-[#2a3a6e] text-xs">/</span>
             <span

@@ -1,0 +1,388 @@
+What is IFSC Code?
+The Indian Financial System Code (IFSC), is a unique 11-digit alphanumeric code that is used for online fund transfer transactions done via NEFT, RTGS and IMPS. The IFSC code can be found on the cheque leaf or passbook provided by the bank. The Reserve Bank of India (RBI) assigns the IFSC codes to the bank. Apart from the cheque leaf, you can also find the IFSC code on the official website of the bank and the RBI.
+
+If you are using net banking to transfer money, it is mandatory for the IFSC to be entered to initiate the transfer. Unless there is a merger, banks do not modify or change the IFSC code.
+
+If you wish to transfer money from your account to another account, then all you need is the name of the beneficiary, bank branch, their account number, and the IFSC Code. You must note that IFSC Code is different for every bank branch and hence you must put the correct code so as to eliminate the chance of your fund going to any other person’s branch.
+
+Having the account number and IFSC code ensures you can transfer fund from your account to another one anytime in a hassle-free manner.
+
+Benefits of IFSC Code 
+The following is the list of benefits of IFSC Code are: 
+
+Identification of a Bank and its respective branch 
+In the process of fund transfer, eliminates the errors 
+Transfers can be done accurately with IFSC through various online payment modes such as NEFT, RTGS and IMPS.
+How to Find IFSC code? 
+The following are the ways to find IFSC code: 
+
+Can be found on bank passbook and cheque leaf of the respective bank. 
+From Reserve Bank of India’s website, the list of IFSC codes of banks and their respective branches can be obtained. 
+Bank customers can also visit the banks’ official website to find the IFSC code of a particular bank. 
+A lot of the above discussions have centered on the common bank cheque. This mainstay of the banking world is an amalgamation of a number of components that help to authenticate whether it is genuine and allow us to attach our complete faith in its applicability.
+
+The primary components of a typical bank cheque are illustrated as follows:
+
+Find IFSC Code in a Bank Cheque:
+On a typical bank cheque, it is mandatory for the IFSC code to be listed. The IFSC code will vary from bank-to-bank. In our example image: we are displaying the location of the IFSC code on a HDFC Cheque.
+
+How to Locate Cheque Number and MICR Code
+Displayed in a typewritten font at the bottom of the cheque in special font style. This is primarily used for tracking the cheque and for other administrative purposes.
+
+Fund Transfer Using IFSC Code
+Here are the details fund transfers using IFSC: 
+
+Transaction Charges
+
+Amount
+
+NEFT
+
+RTGS
+
+IMPS
+
+Up to Rs.10,000
+
+Rs.2.50
+
+Minimum: Rs.2 Lakh
+
+Rs.2.00
+
+Rs.10,000 – Rs.2 Lakh
+
+Rs.15.00
+
+No Charges
+
+Rs.12.00
+
+Above Rs.2 Lakh
+
+Rs.25.00
+
+Rs.49.50
+
+Rs.20.00
+
+Note: Customers must check the bank’s website to charge. 
+
+Here is the operating time of various fund transfer modes: 
+
+NEFT: 24 hours 365 days
+
+RTGS: 24 hours 365 days
+
+IMPS: 24 hours 365 days 
+
+Online Money Transfer using IFSC Code:
+The IFSC code can be used to transfer funds using three electronic fund transfer modes such as NEFT, RTGS and IMPS. These types of electronic fund transfers enable customers to easily transfer funds from one account to another.
+
+Choosing electronic transferring systems brings down the chances of error in a transaction because fund transfers are only authorised if accurate details such as the payee's bank specific IFSC code and bank account number are provided.
+
+NEFT: The full form of NEFT is National Electronic Fund Transfer. As the name specifies, it concerns with the transfer of funds from one bank account onto another. This is a popular money transfer system in India. Herein, IFSC codes must be suitably provided to ensure that money is safely transferred from one bank account to another. Apart from the IFSC code, the beneficiary name, account number and account type are also needed to be provided. All NEFT transactions are settled in a batch-wise format. 
+RTGS: RTGS is the acronym for Real Time Gross Settlement. As the name suggests, it is a popular option for the quick transfer of funds (also securities) from one bank to another, without subjecting the same to any waiting period. The operative words here are 'Real Time' (transactions happen instantaneously) and 'Gross' (refers to the fact that no extra charges will be levied). IFSC codes act in a similar way as in the case of NEFT- helping to correctly identify the participating bank branches. RTGS fund transfers are usually used for high-value transactions and are cleared immediately. The details required for RTGS fund are the name of the payee, the IFSC code, the account number, and the transaction amount.
+IMPS: IMPS, short for Immediate Payment Service, is the most popular. It is a relatively new option in India (founded in November 2010). Through this service, money can be transferred instantly and across all popular Indian banks via the service available on the subscriber's mobile phone, ATM or through the internet. This system is reputed for being very safe, fast, economical and not restricted in terms of the maximum amount that can be transferred. One cannot initiate an IMPS fund transfer without providing an IFSC code.
+Difference Between IFSC Code & MICR Code
+Given in the table below are the differences between the IFSC Code and the MICR Code:
+
+IFSC Code
+
+MICR Code
+
+IFSC is a 11-digit alphanumeric number.
+
+MICR is a 9-digit code.
+
+IFSC is used to facilitate electronic money transfer between banks that operate in the country.
+
+MICR is used to make cheque processing simpler and faster.
+
+In an IFSC code, the first four characters indicate the name of the bank.
+
+In the MICR code, the first three digits represent the city code. The next three digits signify the bank MCIR code.
+
+In IFSC, the last six characters represent the branch code.
+
+In the MICR code, the last three digits indicate the bank branch code.
+
+IFSC Code: Key Features
+Helps uniquely identify a specific bank branch
+Helps eliminate errors in the fund transfer process
+Used for all electronic payment options such as NEFT, RTGS and IMPS.
+MICR Code: Format & Importance for Fund Transfers
+Magnetic Ink Character Recognition (MICR) is a 9-digit code that helps identify a particular bank branch that is part of the Electronic Clearing System (ECS). This code can be found on the cheque leaf that is issued by the bank and is generally printed on the passbook that is issued to the account holder.
+
+The main purpose of the MICR code is to clear cheques that are deposited in machines. The code helps in avoiding errors as well.
+
+MICR Code Format
+Of the nine digits, the first three digits identify the specific city, the next three digits identify the specific bank code and the final three digits represent the bank branch code.
+
+For example the MICR code for the SBI branch in Kolkata is '700002021. Here, the first 3 digits '700' is used to identify the specific city, the next three digits '002' represent the specific bank code and the last 3 digits '021' specify the bank branch code. The MICR code is primarily used to process and clear cheques, which is done by machines. The 9-digit code helps eliminate errors in the clearing process, helps in speeding up the process things as well as makes cheque processing more safe and secure.
+
+Top Bank IFSC, MICR & SWIFT Codes List
+In the case of the bank IFSC code, it varies from branch to branch. However, the credit card IFSC code for a particular bank will remain the same across the country.
+
+The credit card IFSC code for some of the banks are mentioned in the table below:
+
+Bank
+
+IFSC
+
+MICR
+
+Swift
+
+HDFC Bank
+
+HDFC0000128
+
+560240065
+
+HDFCINBBBNG
+
+Citibank
+
+CITI0000003
+
+560037002
+
+CITIINBI
+
+Axis Bank
+
+UTIB0000400
+
+560211061
+
+AXISINBB194
+
+HSBC Bank
+
+HSBC0400002
+
+NA
+
+NA
+
+Punjab National Bank
+
+PUNB0112000
+
+560024029
+
+PUNBINBBBCY
+
+IDBI Bank
+
+IBKL0NEFT01
+
+560259006
+
+IBKLINBB008
+
+Yes Bank
+
+YESB0CMSNOC
+
+561532028
+
+YESBINBB
+
+IndusInd Bank
+
+INDB0000018
+
+560234021
+
+INDBINBBBGM
+
+State Bank of India
+
+SBIN00CARDS
+
+560002021
+
+SBININBB112
+
+How IFSC Code Works in Fund Transfers
+Let us take an example of the Canara Bank IFSC code to better understand what IFSC code is and how it works in banking transactions. The IFSC code for the Chandigarh Branch of Canara Bank is CNRB00001995.
+
+Here, CNBR represents the name of the bank, which is Canara Bank
+The 5th character, which is 0, is for future use
+The other 6 characters, 01995, specifically helps the RBI identify a bank branch without any error.
+Now, let us understand how IFSC works. When a fund transfer is initiated to a particular payee, one has to provide the account number and branch-specific IFSC code. Once the remitter provides these details, the money is sent to the account holder and IFSC helps avoid any errors in such transactions.
+
+Apart from fund transfers, IFSC code can also be used to purchase insurance and mutual funds through net banking. The Reserve Bank of India's (RBI) National Clearing Cell monitors all transactions and the IFSC code helps the RBI keep track of transactions and also execute fund transfers without any error.
+
+The IFSC code can also be found on your cheque book or bank passbook. One can also find their bank branch IFSC code in the monthly account statement. The IFSC code for each bank and branch is unique.
+
+Find MICR Code in a Bank Cheque:
+This is displayed next to the cheque number. Both Cheque number and MICR Code are displayed in a unique font and ink, and the latter can only be picked up by a Magnetic Character Ink Reader.
+
+Benefits of MICR Code 
+The main benefit of MICR code is that it enables quick, efficient, and error-free processing of cheques with the help of reading machines, magnetic ink, and technology used in MICR. 
+
+Why IFSC Code is Necessary for Online Banking
+We need an IFSC code because it helps the RBI monitor all banking transactions without any blunders. A simple IFSC code can aid the RBI track, oversee, and seamlessly maintain all financial transactions that are carried out via NEFT, RTGS and IMPS.
+
+For bank customers, IFSC code is important because most electronic fund transfers cannot be initiated unless the IFSC code of the beneficiary/payee is provided along with the bank account number.
+
+IFSC code plays an important role when money is transferred from one account to another through methods such as IMPS, NEFT and RTGS. All these options are fundamentally concerned with inter-bank money transfer but perform this task in different ways. The common thread amongst these varied options is the bank IFSC codes system.
+
+How Can One Transfer Money with IFSC Code of Bank Account?
+If the individual knows his/her way around banking transactions, they are already aware that there are two main forms of fund transfer. One being the old-fashioned physical way, wherein you walk into the bank and remit the cheque. While the second being the electronic way using methods such as IMPS, NEFT or RTGS.
+
+When dealing with the old-school 'going-to-the-bank' way, one does not need to register a beneficiary. However, the electronic method is a bit different and a lot more secure too.
+
+To transfer funds with the help of technology, the individual is required to meet the below-mentioned requirements:
+
+The individual needs to be register for the bank's net banking service.
+Need to register for third-party transactions. (Note that, in this context, third-party refers to a beneficiary from a different bank to that of yours.)
+Registering the beneficiary's account to which funds are to be transferred.
+Process Involved in Making Online Money Transfer
+Nearly every bank in India follows its own policy with regards to a third-party money transfer. One thing worth noting here is that the process remains more or less the same, except for the fact that they are phrased a bit differently.
+
+For example, let's take a look at HDFC Bank's procedure. The steps involved are:
+
+Login to the bank's net banking service with the customer ID and password.
+Click on the 'Third Party Transfer' tab and follow the basic instructions.
+Getting the OTP on the registered mobile number once the details are filled and submitted.
+How to Register the Beneficiary's Account?
+To register a beneficiary, details such as name of the beneficiary, account number, IFSC code of the beneficiary's bank, and name of the Bank branch needs to be provided.
+Once the details are submitted, the registration is complete. However, different banks have different time periods after which you can make your first transfer. For instance, in HDFC Bank's case, it takes 12 hours for the details to check out and get active.
+Registering Third-Party Beneficiaries Using IFSC
+Given below are the steps you will have to follow to register a third-party beneficiary regarding the transfer of fund: 
+
+Log in to your bank’s online banking service providing your user id and password. 
+Click on the option ‘Fund Transfer’. You will be directed to a new page. 
+Click on the ‘Request’ tab and click on the option ‘Add Beneficiary’. 
+Enter the account number, IFSC code, bank branch, and name of the beneficiary. 
+After entering all the details, click on ‘Submit’. 
+It will take some time for the service to activate after which you will be able to transfer funds easily. 
+Once the beneficiary has been added, you can then add the amount and a remark. 
+In the next step choose a mode of communication, after which a one-time password (OTP) will be sent to your preferred mode of communication which is either email or SMS. 
+Enter the OTP after which your fund will be transferred to the beneficiary’s account. 
+How to Transfer Money with the Help of Net Banking & Mobile Banking?
+Transferring money electronically with the help of the IFSC code is a simple process once the individual has set it up. The process to transfer money via net banking and mobile banking are mentioned below:
+
+Through Net-banking:
+The process to transfer funds via net banking is given below:
+
+Visit the official website of the bank.
+Go to the net banking portal.
+Login with the help of the username and password.
+Next, choose 'Transfer funds through NEFT' to transfer the amount to the beneficiary's account. In case, the beneficiary has not been added, the individual should register them for future transactions. To do this, the IFSC code, bank account number, and the bank branch needs to be provided. Once the details are submitted successfully, it can take anywhere between 5 minutes to 12 hours, depending on your bank's policy for the beneficiary account to be activated. After waiting for the stipulated hours, money can be instantly transferred to the beneficiary's account with a buffer of less than an hour.
+Through Mobile Banking:
+Here's how money can be transferred from one bank account to another using the IFSC code through mobile banking:
+
+The first thing that the individual needs to do is to register the 10-digit mobile number for mobile banking by linking it to the bank account. To register, the individual is required to fill a form after which a starter's kit is provided that contains the MMID (a unique 7 digit number) and mPin. This kit is similar to the one that one gets with the debit card.
+After the registration is complete, sending money through SMS is quite simple. First, the individual needs to select 'IMPS'. Next, the individual need to provide the beneficiary's account number, IFSC code, and the amount that he/she wants to send. After confirming the transaction, the individual is required to type in the mPin. On doing so, the money is successfully transferred from the account and deposited in the beneficiary's account.
+What is UPI and How It Relates to IFSC
+It is basically a new payment architecture introduced by Reserve Bank of India under the leadership of former governor Raghuram Rajan along with support from tech scion Nandan Nilekani. In short, UPI is being referred to as a next-generation payment method which is expected to leverage the growing power of smart phone technology and the proportionate rise of smart phone users in the country. It enables making money transactions between any two bank accounts with the help of a smart phone. While the UPI payment method allows payments through online and offline, like net banking and card swipes, it is a lot more seamless and sophisticated at the same time.
+
+How to e-Transfer Funds?
+Given below are the steps you will have to follow to e-Transfer funds from one account to another: 
+
+In order to e-Transfer funds from your account to another account, you will need to register yourself for the bank’s net banking services. 
+You will also have to add the beneficiary by providing their details such as their bank account, IFSC code, bank branch, and their name so that you can transfer funds to their account anytime you want and any number of times. 
+FAQs on IFSC Code
+What is the full form of IFSC?
+The full form of IFSC is Indian Financial System Code.
+
+Why is IFSC used?
+IFSC or Indian Financial System Code is a 11-digit alphanumeric code that is used to uniquely all bank branches within the National Electronic Funds Transfer (NEFT) network by the Reserve Bank of India.
+
+How to search for bank name by IFSC code?
+It is very easy to find the bank name using the IFSC code. The first four characters of the IFSC code represent the bank's name. So, if the bank name is HDFC, then the IFSC code will look something like HDFC0004053.
+
+What is the meaning of MICR code?
+MICR stands for Magnetic Ink Character Recognition. It is a special ink that is sensitive to magnetic fields. It is printed on the bottom of a cheque.
+
+What is the use of MICR code?
+MICR is a technology that helps in verifying the originality of cheques or other paper documents. It is used mainly by banks to process cheques faster. The MICR code helps RBI in identifying the bank branch.
+
+How can I transfer money from one bank account to another online?
+You can transfer money from one bank account to another through online mode using methods like National Electronic Fund Transfer (NEFT), Real-time Gross Settlement (RTGS), Immediate Payment Service (IMPS), and Unified Payment Interface (UPI).
+
+If a bank branch is changed, will the IFSC code change?
+No, if the location of a bank's branch is changed, then the IFSC code will not change. If the bank account is shifted from one branch of the bank to another, only then will the IFSC code be changed.
+
+Are IFSC and SWIFT code same?
+No, the IFSC and SWIFT codes are not the same. IFSC is used for transferring funds within India, while SWIFT code is used for transferring funds at an international level. Moreover, SWIFT is a bank identifier code while IFSC is used to identify a specific bank branch.
+
+How many digits are there in IFSC code?
+There are 11 digits in the IFSC code.  
+
+Who creates IFSC code?
+The IFSC code aids in the identification of a specific bank branch. The Reserve Bank of India gives a unique eleven-digit number known as the Indian Financial System Code, or IFSC, to each bank branch. 
+
+Does IFSC code depend on branch?
+Yes. Each branch has its own IFSC code. No two branches even those of the same bank will share the same IFSC code. 
+
+Is IFSC code same as branch code?
+No, IFSC code is not the same as branch code.
+
+Where is the IFSC code located on the cheque leaf?
+IFSC code is generally present on the top part of every cheque leaf or near the bank branch address.
+
+How can I know my IFSC code by account number?
+The easiest way to know your IFSC code through your account number is to know the following details. The first four digits of the code will be the name of the bank. So, if you have an account with the HDFC bank, then the first four digits will be HDFC. The fifth and sixth digits will always be 0. The last five digits will be the first five digits of your account number.
+
+Does the IFSC code change after account transfer?
+Unless the bank merges with another bank, there will be no change in your IFSC code. However, if you get your branch in which you hold a bank account changed, then your IFSC code will change.
+
+Is IFSC code required for IMPS?
+IFSC code is required for IMPS only if the individual is transferring money using bank account number. If the receiver's MMID is not available, then he/she needs to add the receiver as a payee, for which details such as bank account number, name, and IFSC are required.
+
+Where can I locate MICR code on cheque?
+MICR code is printed on the bottom part of every cheque leaf provided by banks.
+
+Is IFSC code unique?
+Yes, IFSC code is a unique alphanumeric code.
+
+Is it possible to determine the IFSC code of a bank's branch from the savings bank account number hosted in the same bank?
+No, it is not possible as the 15-digit long savings bank account number does not include the bank's IFSC code.
+
+I think I have provided the wrong IFSC code when initiating a NEFT funds transfer. What will happen to my money?
+There is no need to panic as for a NEFT transaction to go through and benefit the intended recipient, you are required to provide the latter's account number and the corresponding bank's IFSC code. In case you provide wrong IFSC code, the system with tally against the recipient's name and account number to identify the mistake and refund the money. The refund will be highlighted in your account within a couple of hours at the maximum.
+
+Can I access the IFSC code from my bank passbook?
+Yes, you can access the IFSC code from the bank passbook. As per a directive from the Reserve Bank of India, banks must print the IFSC and MICR codes prominently on the passbooks, account statements and cheques issued by them.
+
+Do all banks have the same IFSC code?
+No, all the banks have a different IFSC code. In fact, a bank with two different branches will have a unique IFSC code of its own. For example, the IFSC code of an HDFC branch in Koramangala in Bangalore will be different as compared to the IFSC code of an HDFC branch in Indiranagar in the same city.
+
+Is it safe to share IFSC code?
+Yes, you can share your IFSC code. In fact, in order to send or receive money through net banking, the IFSC code is one of the details that you will have to share.
+
+Can we transfer money without IFSC code?
+No, you will need your IFSC code to transfer money to another bank account through net banking, NEFT or RTGS.
+
+What happens if the account number is right but the IFSC code is wrong?
+If your IFSC code is wrong but the account number is right then the transfer of the amount will most likely be canceled. However, if any other person has the same account number as your beneficiary’s, then the money is most likely to be transferred to their account.
+
+What is a MICR reader?
+MICR means Magnetic Ink Character Recognition. The MICR reader is used to identify and process cheques.
+
+Is MICR code the same for all customers?
+Every branch of a bank will have a unique MICR code. Hence, your MICR code will be the same as someone who holds a bank account in the same branch as your bank.
+
+How do you read a MICR line?
+The MICR line from the left will include a nine-character routing number, 12-character account number, and a four-character check number.
+
+News on IFSC Code
+Union Budget 2024: Finance Minister has announced several incentives on IFSC
+In the Union Budget 2024, Finance Minister Nirmala Sitharaman announced tax exemptions for retail schemes and Exchange Traded Funds (ETFs) in the IFSC, similar to those available to specified funds and certain income of the Core Settlement Guarantee Fund in IFSC. Section 94B will not apply to certain finance companies in IFSC. If a venture capital fund (VCF) in IFSC extends a loan or other amount to an assessee, the source of the fund will not require explanation. Additionally, income tax payable on income from securities by specified funds will be exempt from surcharge.
+
+23 July 2024
+Tax Deducted at Source removed by the government on payments to 14 service sector in IFSC
+The government has exempted TDS (Tax Deducted at Source) from payments such as referral fee and brokerage income to 14 service sectors in International Financial Services Centre (IFSC), which will be effective from 1 April 2024. This will be applicable for ten consecutive assessment years for sectors, such as finance company, credit rating agency, fintech, banking, fund management entity, insurance intermediary and investment banking. The TDS exemption is applicable on payments, such as interest on external commercial borrowings, loans, professional/referral fee, brokerage income, insurance commission, dividend and credit rating fee. Form No. 1 must be submitted by an IFSC unit to the payer to avail themselves of TDS exemption.
+
+11 March 2024
+Finance Minister Sitharaman Extends Deadline for IFSC Units, Boosting Tax Exemptions and Encouraging Growth at GIFT City
+Finance Minister Nirmala Sitharaman has extended the deadline for certain businesses to establish units at the International Financial Services Centre (IFSC) to avail tax exemptions. The tax holiday for various businesses at the IFSC does not have a sunset clause. However, entities like aircraft and ship leasing companies were required to commence operations before 31 March to benefit from tax advantages. In the Interim Budget, Sitharaman proposed extending this deadline to 31 March 2025. She also highlighted the efforts of the unified regulator, the International Financial Services Centres Authority (IFSCA), in creating a robust gateway for global capital and financial services. Tax experts believe that this one-year extension will incentivize registrations at the Gujarat International Finance Tec-City (GIFT City) IFSC. According to IFSCA data, as of 30 September 2023, there were 15 registered units for aircraft leasing and four for ship leasing. Between July and September 2023, IFSCA received four applications for aircraft leasing unit registrations and three for ship leasing. The National Securities Depository website indicates a total of 35 registered foreign portfolio investors (FPIs) in GIFT IFSC.
+
+5 February 2024
+    

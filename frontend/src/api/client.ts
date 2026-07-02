@@ -20,6 +20,26 @@ export const uploadDocument = async (file: File, metadata?: Record<string, any>)
   return data;
 };
 
+export const uploadDocuments = async (
+  files: File[],
+  metadata?: Record<string, any>,
+  onProgress?: (percent: number) => void
+) => {
+  const form = new FormData();
+  files.forEach(f => form.append('files', f));
+  if (metadata) form.append('metadata', JSON.stringify(metadata));
+  const { data } = await api.post('/api/documents/upload', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+    onUploadProgress: evt => {
+      if (onProgress && evt.total) {
+        const percent = Math.round((evt.loaded * 100) / evt.total);
+        onProgress(percent);
+      }
+    },
+  });
+  return data;
+};
+
 export const listDocuments = async (skip = 0, limit = 50) => {
   const { data } = await api.get('/api/documents', { params: { skip, limit } });
   return data;

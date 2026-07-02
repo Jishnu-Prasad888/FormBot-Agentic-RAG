@@ -1,14 +1,12 @@
 import os
 import time
-import uuid
-from typing import Optional
 
 from app.embeddings import embedder
-from app.storage import get_all_chunks, get_doc
+from app.chroma_store import search
 from app.models import SearchResult, Source
 
 
-def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50) -> list[str]:
+def chunk_text(text: str, chunk_size: int = 1200, overlap: int = 150) -> list[str]:
     if not text:
         return []
     chunks = []
@@ -49,36 +47,23 @@ def extract_text_from_file(filepath: str) -> str:
 
 
 def retrieve(query: str, top_k: int = 5) -> tuple[list[SearchResult], float]:
-    chunks = get_all_chunks()
-    if not chunks:
-        return [], 0.0
-
     query_emb = embedder.embed(query)
-    chunk_embeddings = [c.chunk_metadata.get("_embedding") for c in chunks]
-
-    if not any(chunk_embeddings):
+    results = search(query_emb, top_k)
+    if not results:
         return [], 0.0
-
-    scored = []
-    for c, emb in zip(chunks, chunk_embeddings):
-        if emb:
-            score = embedder.cosine_similarity(query_emb, emb)
-        else:
-            score = 0.0
-        doc = get_doc(c.document_id)
-        scored.append(SearchResult(
-            chunk_id=c.id,
-            document_id=c.document_id,
-            filename=doc.filename if doc else "unknown",
-            chunk_text=c.chunk_text,
-            score=score,
-            metadata=c.chunk_metadata,
-        ))
-
-    scored.sort(key=lambda x: x.score, reverse=True)
-    results = scored[:top_k]
-    confidence = results[0].score if results else 0.0
-    return results, confidence
+    scored = [
+        SearchResult(
+            chunk_id=r["chunk_id"],
+            document_id=r["document_id"],
+            filename=r["filename"],
+            chunk_text=r["chunk_text"],
+            score=r["score"],
+            metadata=r["metadata"],
+        )
+        for r in results
+    ]
+    confidence = scored[0].score if scored else 0.0
+    return scored, confidence
 
 
 def build_context(results: list[SearchResult]) -> str:

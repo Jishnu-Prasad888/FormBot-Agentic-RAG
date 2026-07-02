@@ -4,15 +4,14 @@ import ToastContainer from './components/Toast';
 import Dashboard from './pages/Dashboard';
 import Documents from './pages/Documents';
 import Evaluate from './pages/Evaluate';
-import KagGuide from './pages/KagGuide';
 import type { Page, Toast } from './types';
-import { healthCheck, healthDb, healthChroma, healthOllama, healthNeo4j, healthQdrant } from './api/client';
+import { healthCheck, healthDb, healthOllama } from './api/client';
 
 export default function App() {
   const [page, setPage] = useState<Page>('dashboard');
   const [toasts, setToasts] = useState<Toast[]>([]);
   const [healthStatus, setHealthStatus] = useState<Record<string, 'ok' | 'error' | 'unknown'>>({
-    api: 'unknown', db: 'unknown', chroma: 'unknown', ollama: 'unknown', neo4j: 'unknown', qdrant: 'unknown',
+    api: 'unknown', db: 'unknown', ollama: 'unknown',
   });
 
   const addToast = useCallback((type: Toast['type'], message: string) => {
@@ -31,16 +30,13 @@ export default function App() {
   // Poll health every 30s
   useEffect(() => {
     const check = async () => {
-      const [api, db, chroma, ollama, neo4j, qdrant] = await Promise.allSettled([
-        healthCheck(), healthDb(), healthChroma(), healthOllama(), healthNeo4j(), healthQdrant(),
+      const [api, db, ollama] = await Promise.allSettled([
+        healthCheck(), healthDb(), healthOllama(),
       ]);
       setHealthStatus({
         api:    api.status    === 'fulfilled' && api.value.status    === 'ok' ? 'ok' : 'error',
         db:     db.status     === 'fulfilled' && db.value.status     === 'ok' ? 'ok' : 'error',
-        chroma: chroma.status === 'fulfilled' && chroma.value.status === 'ok' ? 'ok' : 'error',
         ollama: ollama.status === 'fulfilled' && ollama.value.status === 'ok' ? 'ok' : 'error',
-        neo4j:  neo4j.status  === 'fulfilled' && neo4j.value.status  === 'ok' ? 'ok' : 'error',
-        qdrant: qdrant.status === 'fulfilled' && qdrant.value.status === 'ok' ? 'ok' : 'error',
       });
     };
     check();
@@ -55,7 +51,6 @@ export default function App() {
       case 'dashboard':   return <Dashboard onNavigate={setPage} onHealthUpdate={updateHealth} />;
       case 'documents':   return <Documents {...commonProps} />;
       case 'evaluate':    return <Evaluate {...commonProps} />;
-      case 'kag':         return <KagGuide />;
       default:            return <Dashboard onNavigate={setPage} onHealthUpdate={updateHealth} />;
     }
   };

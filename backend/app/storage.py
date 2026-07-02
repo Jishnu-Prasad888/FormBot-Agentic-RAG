@@ -4,11 +4,11 @@ import uuid
 from datetime import datetime, timezone
 from typing import Optional
 
-from app.models import Document, Chunk, Conversation, Message
+from app.models import Document, Conversation, Message, Source
+from app.chroma_store import delete_chunks_by_doc
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 DOCS_FILE = os.path.join(DATA_DIR, "documents.json")
-CHUNKS_FILE = os.path.join(DATA_DIR, "chunks.json")
 CONVS_FILE = os.path.join(DATA_DIR, "conversations.json")
 
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -88,42 +88,8 @@ def delete_doc(doc_id: str) -> bool:
     if len(new_docs) == len(docs):
         return False
     _save_json(DOCS_FILE, new_docs)
-    chunks = _load_json(CHUNKS_FILE)
-    chunks = [c for c in chunks if c["document_id"] != doc_id]
-    _save_json(CHUNKS_FILE, chunks)
+    delete_chunks_by_doc(doc_id)
     return True
-
-
-# ─── Chunks ───────────────────────────────────────────────────────────────────
-
-def get_chunks(doc_id: str) -> list[Chunk]:
-    chunks = _load_json(CHUNKS_FILE)
-    return [Chunk(**c) for c in chunks if c["document_id"] == doc_id]
-
-
-def get_all_chunks() -> list[Chunk]:
-    chunks = _load_json(CHUNKS_FILE)
-    return [Chunk(**c) for c in chunks]
-
-
-def save_chunks(doc_id: str, chunk_texts: list[str],
-                metadata_list: list[dict] = None):
-    existing = _load_json(CHUNKS_FILE)
-    existing = [c for c in existing if c["document_id"] != doc_id]
-    now = _utcnow()
-    new_chunks = []
-    for i, text in enumerate(chunk_texts):
-        new_chunks.append({
-            "id": _new_id(),
-            "document_id": doc_id,
-            "chunk_index": i,
-            "chunk_text": text,
-            "chunk_metadata": (metadata_list[i] if metadata_list and i < len(metadata_list) else {}),
-            "created_at": now,
-        })
-    existing.extend(new_chunks)
-    _save_json(CHUNKS_FILE, existing)
-    return len(new_chunks)
 
 
 # ─── Conversations ────────────────────────────────────────────────────────────
