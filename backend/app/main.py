@@ -11,6 +11,7 @@ from fastapi.exceptions import RequestValidationError
 from typing import List
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse
+from openai import OpenAI
 
 from app.config import settings
 from app.storage import (
@@ -87,6 +88,70 @@ async def add_cors_on_error(request: Request, call_next):
 
 def _utcnow() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _eval_accuracy_llm(system: str, prompt: str) -> str:
+    if settings.eval_accuracy_provider == "ollama":
+        import httpx
+
+        payload = {
+            "model": settings.eval_accuracy_model,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": prompt},
+            ],
+            "stream": False,
+            "options": {"temperature": 0.0},
+        }
+
+        try:
+            resp = httpx.post(
+                f"{settings.ollama_base_url}/api/chat",
+                json=payload,
+                timeout=60,
+            )
+            resp.raise_for_status()
+            return resp.json()["message"]["content"]
+        except httpx.HTTPStatusError as exc:
+            # Older Ollama versions may not expose /api/chat; fall back to /api/generate
+            if exc.response.status_code != 404:
+                raise
+            resp = httpx.post(
+                f"{settings.ollama_base_url}/api/generate",
+                json={
+                    "model": settings.eval_accuracy_model,
+                    "prompt": f"{system}\n\n{prompt}",
+                    "stream": False,
+                    "options": {"temperature": 0.0},
+                },
+                timeout=60,
+            )
+            try:
+                resp.raise_for_status()
+            except httpx.HTTPStatusError as exc2:
+                if exc2.response.status_code == 404:
+                    detail = exc2.response.text.strip()
+                    raise RuntimeError(
+                        "Eval accuracy model not available on Ollama. "
+                        f"model={settings.eval_accuracy_model}, url={settings.ollama_base_url}, "
+                        f"detail={detail or 'not found'}"
+                    ) from exc2
+                raise
+            data = resp.json()
+            if "response" in data:
+                return data["response"]
+            return data.get("message", {}).get("content", "")
+
+    client = OpenAI(api_key=settings.openai_api_key)
+    resp = client.chat.completions.create(
+        model=settings.eval_accuracy_model,
+        messages=[
+            {"role": "system", "content": system},
+            {"role": "user", "content": prompt},
+        ],
+        temperature=0.0,
+    )
+    return resp.choices[0].message.content or ""
 
 
 # ─── Health ───────────────────────────────────────────────────────────────────
@@ -472,7 +537,7 @@ async def rag_evaluate(req: EvaluationRequest):
                 f"Generated Answer: {answer}\n\n"
                 "Rate accuracy from 0.0 to 1.0. Return only a number."
             )
-            acc_str = llm.generate(
+            acc_str = _eval_accuracy_llm(
                 "You evaluate answer accuracy. Return only a number 0-1.",
                 eval_prompt,
             )

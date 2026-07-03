@@ -9,6 +9,8 @@ class Settings(BaseSettings):
     embedding_model: str = "nomic-embed-text"
     ollama_base_url: str = "http://localhost:11434"
     ollama_model: str = "banking-assistant"
+    eval_accuracy_provider: str = "ollama"
+    eval_accuracy_model: str = "banking-assistant"
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 

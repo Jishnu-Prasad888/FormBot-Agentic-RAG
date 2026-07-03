@@ -709,15 +709,21 @@ export default function Evaluate({ onToast }: Props) {
     try {
       const perQuestion: QuestionResult[] = result?.per_question || [];
       let totalLatency = 0;
+      const isLLMError = (msg: string) =>
+        /ollama|localhost:11434|api\.openai\.com|openai/i.test(msg);
+      let paused = false;
+      let pauseReason = "";
 
       for (let i = 0; i < toEvaluate.length; i++) {
+        if (paused) break;
         setProgress({ done: i, total: toEvaluate.length });
         try {
           const res = await ragEvaluate({
             questions: [toEvaluate[i]],
             dataset_name: `${datasetName}_q${i + 1}`,
           });
-          const qr: QuestionResult = res.per_question?.[0] ?? {
+          const apiResult = res.per_question?.[0];
+          const qr: QuestionResult = apiResult ?? {
             question: toEvaluate[i].question,
             expected_answer: toEvaluate[i].expected_answer,
             generated_answer: "",
@@ -744,6 +750,10 @@ export default function Evaluate({ onToast }: Props) {
             context_recall_rationale: "",
             latency_ms: res.latency_avg_ms ?? 0,
           };
+          if (apiResult?.error && isLLMError(apiResult.error)) {
+            paused = true;
+            pauseReason = apiResult.error;
+          }
           perQuestion.push(qr);
           totalLatency += qr.latency_ms;
         } catch (e: any) {
@@ -775,10 +785,15 @@ export default function Evaluate({ onToast }: Props) {
             latency_ms: 0,
             error: e?.response?.data?.error || String(e),
           });
+          const errMsg = e?.response?.data?.error || String(e);
+          if (isLLMError(errMsg)) {
+            paused = true;
+            pauseReason = errMsg;
+          }
         }
       }
 
-      setProgress({ done: toEvaluate.length, total: toEvaluate.length });
+      setProgress({ done: paused ? perQuestion.length : toEvaluate.length, total: toEvaluate.length });
 
       const succeeded = perQuestion.filter((r) => !r.error);
       const avg = (k: keyof QuestionResult) =>
@@ -807,10 +822,17 @@ export default function Evaluate({ onToast }: Props) {
       };
 
       setResult(summary);
-      onToast(
-        "success",
-        `Evaluation complete — ${succeeded.length}/${valid.length} succeeded`,
-      );
+      if (paused) {
+        onToast(
+          "warning",
+          `Evaluation paused due to LLM error: ${pauseReason}`,
+        );
+      } else {
+        onToast(
+          "success",
+          `Evaluation complete — ${succeeded.length}/${valid.length} succeeded`,
+        );
+      }
     } catch (e: any) {
       onToast("error", e?.response?.data?.error || "Evaluation failed");
     } finally {
