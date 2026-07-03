@@ -5,10 +5,10 @@ class Settings(BaseSettings):
     openai_api_key: str = ""
     openai_model: str = "gpt-4o-mini"
     embedding_provider: str = "openai"
-    llm_provider: str = "openai"
+    llm_provider: str = "ollama"
     embedding_model: str = "text-embedding-3-small"
     ollama_base_url: str = "http://localhost:11434"
-    ollama_model: str = "llama3"
+    ollama_model: str = "banking-assistant"
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 
