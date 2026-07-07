@@ -57,26 +57,8 @@ class LLMClient:
                 yield chunk.choices[0].delta.content
 
     def _generate_ollama(self, system: str, prompt: str) -> str:
-        resp = httpx.post(
-            f"{self.ollama_base}/api/chat",
-            json={
-                "model": self.ollama_model,
-                "messages": [
-                    {"role": "system", "content": system},
-                    {"role": "user", "content": prompt},
-                ],
-                "stream": False,
-                "options": {"temperature": 0.3},
-            },
-            timeout=60,
-        )
-        resp.raise_for_status()
-        return resp.json()["message"]["content"]
-
-    async def _stream_ollama(self, system: str, prompt: str) -> AsyncIterator[str]:
-        async with httpx.AsyncClient(timeout=60) as client:
-            async with client.stream(
-                "POST",
+        try:
+            resp = httpx.post(
                 f"{self.ollama_base}/api/chat",
                 json={
                     "model": self.ollama_model,
@@ -84,15 +66,75 @@ class LLMClient:
                         {"role": "system", "content": system},
                         {"role": "user", "content": prompt},
                     ],
-                    "stream": True,
+                    "stream": False,
                     "options": {"temperature": 0.3},
                 },
-            ) as resp:
-                async for line in resp.aiter_lines():
-                    if line.strip():
-                        data = json.loads(line)
-                        if "message" in data and "content" in data["message"]:
-                            yield data["message"]["content"]
+                timeout=60,
+            )
+            resp.raise_for_status()
+            return resp.json()["message"]["content"]
+        except httpx.HTTPStatusError as exc:
+            if exc.response.status_code != 404:
+                raise
+            resp = httpx.post(
+                f"{self.ollama_base}/api/generate",
+                json={
+                    "model": self.ollama_model,
+                    "prompt": f"{system}\n\n{prompt}",
+                    "stream": False,
+                    "options": {"temperature": 0.3},
+                },
+                timeout=60,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            if "response" in data:
+                return data["response"]
+            return data.get("message", {}).get("content", "")
+
+    async def _stream_ollama(self, system: str, prompt: str) -> AsyncIterator[str]:
+        async with httpx.AsyncClient(timeout=60) as client:
+            try:
+                async with client.stream(
+                    "POST",
+                    f"{self.ollama_base}/api/chat",
+                    json={
+                        "model": self.ollama_model,
+                        "messages": [
+                            {"role": "system", "content": system},
+                            {"role": "user", "content": prompt},
+                        ],
+                        "stream": True,
+                        "options": {"temperature": 0.3},
+                    },
+                ) as resp:
+                    resp.raise_for_status()
+                    async for line in resp.aiter_lines():
+                        if line.strip():
+                            data = json.loads(line)
+                            if "message" in data and "content" in data["message"]:
+                                yield data["message"]["content"]
+            except httpx.HTTPStatusError as exc:
+                if exc.response.status_code != 404:
+                    raise
+                async with client.stream(
+                    "POST",
+                    f"{self.ollama_base}/api/generate",
+                    json={
+                        "model": self.ollama_model,
+                        "prompt": f"{system}\n\n{prompt}",
+                        "stream": True,
+                        "options": {"temperature": 0.3},
+                    },
+                ) as resp:
+                    resp.raise_for_status()
+                    async for line in resp.aiter_lines():
+                        if line.strip():
+                            data = json.loads(line)
+                            if "response" in data:
+                                yield data["response"]
+                            elif "message" in data and "content" in data["message"]:
+                                yield data["message"]["content"]
 
 
 llm = LLMClient()

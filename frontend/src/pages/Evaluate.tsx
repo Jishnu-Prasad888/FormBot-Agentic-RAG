@@ -12,12 +12,13 @@ import {
   FileText,
   X,
   Check,
+  Image as ImageIcon,
+  RefreshCcw,
 } from "lucide-react";
-import { ragEvaluate } from "../api/client";
+import { ocrQuestionsFromImages, ragEvaluate } from "../api/client";
 import Spinner from "../components/Spinner";
 import ScoreBar from "../components/ScoreBar";
-import type { EvaluationResponse } from "../types";
-import { formatLatency } from "../utils/format";
+import type { OcrImageResponse } from "../types";
 
 interface Props {
   onToast: (type: any, msg: string) => void;
@@ -600,6 +601,10 @@ export default function Evaluate({ onToast }: Props) {
   );
   const fileRef = useRef<HTMLInputElement>(null);
   const [csvFileName, setCsvFileName] = useState<string | null>(null);
+  const imageRef = useRef<HTMLInputElement>(null);
+  const [imageLoading, setImageLoading] = useState(false);
+  const [imageStatus, setImageStatus] = useState<string | null>(null);
+  const [imageErrors, setImageErrors] = useState<string[]>([]);
 
   const isQuestionEvaluated = (question: string): boolean => {
     if (!result) return false;
@@ -684,6 +689,81 @@ export default function Evaluate({ onToast }: Props) {
       e.target.value = "";
     },
     [onToast],
+  );
+
+  const handleOcrResponse = useCallback(
+    (data: OcrImageResponse, label: string) => {
+      if (!data.questions || data.questions.length === 0) {
+        setImageStatus(null);
+        onToast("warning", "OCR returned no questions");
+        return;
+      }
+
+      setQAs(data.questions);
+      setResult(null);
+      setRunMode(null);
+      setRunningIndividual(new Set());
+      setCsvFileName(null);
+
+      const summary = `${label} · ${data.count} question${data.count === 1 ? "" : "s"}`;
+      setImageStatus(summary);
+      setImageErrors((data.errors || []).map((e) => `${e.file}: ${e.error}`));
+      if (data.errors && data.errors.length > 0) {
+        onToast(
+          "warning",
+          `${summary} (with ${data.errors.length} extraction error${data.errors.length === 1 ? "" : "s"})`,
+        );
+      } else {
+        onToast("success", `${summary} loaded from OCR`);
+      }
+    },
+    [onToast],
+  );
+
+  const handleLoadSampleImage = async () => {
+    setImageLoading(true);
+    setImageErrors([]);
+    try {
+      const data: OcrImageResponse = await ocrQuestionsFromImages({ use_sample: true });
+      handleOcrResponse(data, "Server sample image");
+    } catch (e: any) {
+      const msg =
+        e?.response?.data?.detail?.message ||
+        e?.response?.data?.detail ||
+        e?.response?.data?.error ||
+        e?.message ||
+        String(e);
+      setImageStatus(null);
+      onToast("error", msg || "Failed to load sample image");
+    } finally {
+      setImageLoading(false);
+    }
+  };
+
+  const handleImageUpload = useCallback(
+    async (fileList: FileList | null) => {
+      if (!fileList || fileList.length === 0) return;
+      setImageLoading(true);
+      setImageErrors([]);
+      try {
+        const files = Array.from(fileList);
+        const data: OcrImageResponse = await ocrQuestionsFromImages({ files });
+        handleOcrResponse(data, `${files.length} uploaded image${files.length === 1 ? "" : "s"}`);
+      } catch (e: any) {
+        const msg =
+          e?.response?.data?.detail?.message ||
+          e?.response?.data?.detail ||
+          e?.response?.data?.error ||
+          e?.message ||
+          String(e);
+        setImageStatus(null);
+        onToast("error", msg || "Image OCR failed");
+      } finally {
+        setImageLoading(false);
+        if (imageRef.current) imageRef.current.value = "";
+      }
+    },
+    [handleOcrResponse, onToast],
   );
 
   const handleEval = async () => {
@@ -1089,6 +1169,92 @@ export default function Evaluate({ onToast }: Props) {
             </div>
           </div>
 
+          {/* Image OCR loader */}
+          <div className="brutal-card p-4 space-y-3">
+            <div className="flex items-center justify-between gap-2">
+              <div
+                className="text-xs font-bold uppercase tracking-widest"
+                style={{ fontFamily: "Space Mono, monospace", color: "#a78bfa" }}
+              >
+                Load Questions From Images
+              </div>
+              {imageStatus && (
+                <span
+                  className="text-[11px] text-[#4a5a8e]"
+                  style={{ fontFamily: "IBM Plex Mono, monospace" }}
+                >
+                  {imageStatus}
+                </span>
+              )}
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              <button
+                className="btn-brutal px-3 py-1.5 text-xs flex items-center gap-1"
+                onClick={handleLoadSampleImage}
+                disabled={imageLoading}
+                style={{ opacity: imageLoading ? 0.6 : 1 }}
+              >
+                {imageLoading ? <Spinner size={12} color="#a78bfa" /> : <ImageIcon size={12} />}
+                Server Sample (sample.png)
+              </button>
+              <button
+                className="btn-brutal px-3 py-1.5 text-xs flex items-center gap-1 btn-brutal-yellow"
+                onClick={() => imageRef.current?.click()}
+                disabled={imageLoading}
+                style={{ opacity: imageLoading ? 0.6 : 1 }}
+              >
+                <Upload size={12} /> Upload Images
+              </button>
+              <input
+                ref={imageRef}
+                type="file"
+                accept="image/*"
+                multiple
+                className="hidden"
+                onChange={(e) => handleImageUpload(e.target.files)}
+              />
+              <button
+                className="btn-brutal px-3 py-1.5 text-xs flex items-center gap-1"
+                onClick={() => {
+                  setImageStatus(null);
+                  setImageErrors([]);
+                }}
+                disabled={imageLoading}
+              >
+                <RefreshCcw size={12} /> Reset OCR State
+              </button>
+            </div>
+
+            <div
+              className="text-xs text-[#4a5a8e]"
+              style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: "0.65rem" }}
+            >
+              Use the built-in sample or upload multiple images; extracted Q&A pairs replace the list below so you can
+              run the same evaluation flow with progress dots, retries, and per-question runs.
+            </div>
+
+            {imageLoading && (
+              <div className="flex items-center gap-2 text-[#a78bfa] text-xs" style={{ fontFamily: "IBM Plex Mono, monospace" }}>
+                <Spinner size={14} color="#a78bfa" /> Running Gemini 2.5 Pro OCR...
+              </div>
+            )}
+
+            {imageErrors.length > 0 && (
+              <div className="space-y-1">
+                {imageErrors.map((err, idx) => (
+                  <div
+                    key={idx}
+                    className="text-xs text-[#ff4d6d]"
+                    style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: "0.65rem" }}
+                  >
+                    {err}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Q&A pairs */}
           <div className="space-y-3 max-h-[60vh] overflow-y-auto pr-1">
             {qas.map((qa, i) => (
@@ -1116,13 +1282,14 @@ export default function Evaluate({ onToast }: Props) {
                       {qa.question.trim() && qa.expected_answer.trim() && (
                         <button
                           onClick={() => handleRunIndividual(i)}
-                          disabled={runningIndividual.has(i)}
+                          disabled={runningIndividual.has(i) || imageLoading}
                           className="text-xs px-2 py-1 border border-[#00ff9f] text-[#00ff9f] hover:bg-[#00ff9f] hover:text-[#0a0e1b] transition-colors"
                           style={{
-                            opacity: runningIndividual.has(i) ? 0.5 : 1,
-                            cursor: runningIndividual.has(i)
-                              ? "not-allowed"
-                              : "pointer",
+                            opacity: runningIndividual.has(i) || imageLoading ? 0.5 : 1,
+                            cursor:
+                              runningIndividual.has(i) || imageLoading
+                                ? "not-allowed"
+                                : "pointer",
                           }}
                         >
                           {runningIndividual.has(i) ? "Running..." : "Run"}
@@ -1248,7 +1415,7 @@ export default function Evaluate({ onToast }: Props) {
                 boxShadow: "4px 4px 0 #a78bfa",
               }}
               onClick={handleEval}
-              disabled={loading}
+              disabled={loading || imageLoading}
             >
               {loading && runMode === "all" ? (
                 <Spinner size={16} color="#a78bfa" />

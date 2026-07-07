@@ -38,6 +38,7 @@ fonttools==4.63.0
 frozenlist==1.8.0
 fsspec==2026.4.0
 googleapis-common-protos==1.75.0
+google-genai==2.10.0
 greenlet==3.5.1
 grpcio==1.81.1
 grpcio-tools==1.81.1

@@ -136,6 +136,16 @@ export const ragEvaluate = async (req: any) => {
   return data;
 };
 
+export const ocrQuestionsFromImages = async (opts: { files?: File[]; use_sample?: boolean }) => {
+  const form = new FormData();
+  if (opts.use_sample) form.append('use_sample', 'true');
+  opts.files?.forEach(file => form.append('files', file));
+  const { data } = await api.post('/api/rag/evaluate/images', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return data;
+};
+
 // ─── Agents ──────────────────────────────────────────────────────────────────
 
 export const runAgent = async (type: string, req: any) => {

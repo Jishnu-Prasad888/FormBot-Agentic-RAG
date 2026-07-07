@@ -108,6 +108,19 @@ export interface EvaluationRequest {
   dataset_name?: string;
 }
 
+export interface OcrQuestionResult {
+  question: string;
+  expected_answer: string;
+}
+
+export interface OcrImageResponse {
+  questions: OcrQuestionResult[];
+  count: number;
+  errors: Array<{ file: string; error: string }>;
+  images_processed: number;
+  from_sample?: boolean;
+}
+
 export interface EvaluationResponse {
   accuracy: number;
   faithfulness: number;

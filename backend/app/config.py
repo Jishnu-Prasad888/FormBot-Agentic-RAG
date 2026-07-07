@@ -11,6 +11,11 @@ class Settings(BaseSettings):
     ollama_model: str = "banking-assistant"
     eval_accuracy_provider: str = "ollama"
     eval_accuracy_model: str = "banking-assistant"
+    gemini_api_key: str = ""
+    gemini_model: str = "gemini-2.5-pro"
+    ocr_provider: str = "gemini"  # gemini | openai | ollama
+    ocr_openai_model: str = "gpt-4o-mini"
+    ocr_ollama_model: str = "llama3.2-vision"
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 

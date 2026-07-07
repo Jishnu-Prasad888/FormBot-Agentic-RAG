@@ -31,8 +31,10 @@ from app.models import (
 from app.embeddings import embedder
 from app.rag import chunk_text, extract_text_from_file, retrieve, build_context, query
 from app.llm import llm
+from app.ocr import ocr
 
 UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "uploads")
+SAMPLE_IMAGE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "sample.png")
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 
@@ -609,6 +611,49 @@ async def rag_evaluate(req: EvaluationRequest):
         failed_questions=failed,
         per_question=per_question,
     ).model_dump()
+
+
+@app.post("/api/rag/evaluate/images")
+async def rag_evaluate_images(
+    use_sample: bool = Form(False),
+    files: List[UploadFile] | None = File(None),
+):
+    images: list[tuple[str, bytes, str]] = []
+
+    if use_sample:
+        if not os.path.exists(SAMPLE_IMAGE_PATH):
+            raise HTTPException(500, "Sample image not found on server")
+        with open(SAMPLE_IMAGE_PATH, "rb") as fh:
+            images.append((os.path.basename(SAMPLE_IMAGE_PATH), fh.read(), "image/png"))
+
+    if files:
+        for f in files:
+            content = await f.read()
+            images.append((f.filename or "image", content, f.content_type or "application/octet-stream"))
+
+    if not images:
+        raise HTTPException(400, "No images provided")
+
+    try:
+        questions, errors = ocr.extract_from_images(images)
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(500, f"OCR failed: {exc}") from exc
+
+    response = {
+        "questions": questions,
+        "count": len(questions),
+        "errors": errors,
+        "images_processed": len(images),
+        "from_sample": use_sample,
+    }
+
+    if len(questions) == 0 and errors:
+        raise HTTPException(
+            status_code=400,
+            detail={"message": "No questions extracted", "errors": errors},
+        )
+
+    return response
 
 
 # ─── Agents ───────────────────────────────────────────────────────────────────
