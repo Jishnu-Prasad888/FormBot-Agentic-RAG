@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+export const BASE_URL = process.env.REACT_APP_API_URL || 'http://10.64.26.80:9000';
 
 export const api = axios.create({
   baseURL: BASE_URL,
@@ -16,6 +16,26 @@ export const uploadDocument = async (file: File, metadata?: Record<string, any>)
   if (metadata) form.append('metadata', JSON.stringify(metadata));
   const { data } = await api.post('/api/documents/upload', form, {
     headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return data;
+};
+
+export const uploadDocuments = async (
+  files: File[],
+  metadata?: Record<string, any>,
+  onProgress?: (percent: number) => void
+) => {
+  const form = new FormData();
+  files.forEach(f => form.append('files', f));
+  if (metadata) form.append('metadata', JSON.stringify(metadata));
+  const { data } = await api.post('/api/documents/upload', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+    onUploadProgress: evt => {
+      if (onProgress && evt.total) {
+        const percent = Math.round((evt.loaded * 100) / evt.total);
+        onProgress(percent);
+      }
+    },
   });
   return data;
 };
@@ -116,6 +136,16 @@ export const ragEvaluate = async (req: any) => {
   return data;
 };
 
+export const ocrQuestionsFromImages = async (opts: { files?: File[]; use_sample?: boolean }) => {
+  const form = new FormData();
+  if (opts.use_sample) form.append('use_sample', 'true');
+  opts.files?.forEach(file => form.append('files', file));
+  const { data } = await api.post('/api/rag/evaluate/images', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return data;
+};
+
 // ─── Agents ──────────────────────────────────────────────────────────────────
 
 export const runAgent = async (type: string, req: any) => {
@@ -139,6 +169,18 @@ export const healthChroma = async () => {
 };
 export const healthOllama = async () => {
   const { data } = await api.get('/health/ollama');
+  return data;
+};
+export const healthNeo4j = async () => {
+  const { data } = await api.get('/health/neo4j');
+  return data;
+};
+export const healthQdrant = async () => {
+  const { data } = await api.get('/health/qdrant');
+  return data;
+};
+export const healthElasticsearch = async () => {
+  const { data } = await api.get('/api/elasticsearch/status');
   return data;
 };
 

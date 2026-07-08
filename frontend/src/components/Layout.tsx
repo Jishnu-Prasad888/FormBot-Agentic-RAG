@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
-  LayoutDashboard, FileText, Search, MessageSquare,
-  Brain, Bot, FlaskConical, Database, Menu, X, Zap,
+  LayoutDashboard, FileText, FlaskConical, Menu, X, Zap,
   Activity, ChevronRight
 } from 'lucide-react';
 import type { Page } from '../types';
@@ -16,12 +15,7 @@ interface Props {
 const NAV_ITEMS: { id: Page; label: string; icon: React.ElementType; accent?: string }[] = [
   { id: 'dashboard',   label: 'Dashboard',   icon: LayoutDashboard },
   { id: 'documents',   label: 'Documents',   icon: FileText },
-  { id: 'search',      label: 'Search',      icon: Search },
-  { id: 'chat',        label: 'Chat',        icon: MessageSquare },
-  { id: 'rag',         label: 'RAG Query',   icon: Brain },
-  { id: 'agents',      label: 'Agents',      icon: Bot },
   { id: 'evaluate',    label: 'Evaluate',    icon: FlaskConical },
-  { id: 'collections', label: 'Collections', icon: Database },
 ];
 
 export default function Layout({ currentPage, onNavigate, children, healthStatus }: Props) {
@@ -60,10 +54,10 @@ export default function Layout({ currentPage, onNavigate, children, healthStatus
           </div>
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-[#00d4ff]" style={{ fontFamily: 'Space Mono, monospace' }}>
-              RAG//OS
+              Simple RAG
             </div>
             <div className="text-xs text-[#4a5a8e]" style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.6rem' }}>
-              v1.0.0
+              v2.0.0
             </div>
           </div>
           <button
@@ -101,7 +95,6 @@ export default function Layout({ currentPage, onNavigate, children, healthStatus
           {[
             { label: 'API', key: 'api' },
             { label: 'DB', key: 'db' },
-            { label: 'Chroma', key: 'chroma' },
             { label: 'Ollama', key: 'ollama' },
           ].map(({ label, key }) => {
             const s = healthStatus[key] || 'unknown';
@@ -136,7 +129,7 @@ export default function Layout({ currentPage, onNavigate, children, healthStatus
           {/* Breadcrumb */}
           <div className="flex items-center gap-2">
             <span className="text-xs text-[#4a5a8e]" style={{ fontFamily: 'Space Mono, monospace' }}>
-              RAG//OS
+              Simple RAG
             </span>
             <span className="text-[#2a3a6e] text-xs">/</span>
             <span

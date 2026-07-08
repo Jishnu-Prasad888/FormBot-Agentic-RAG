@@ -4,7 +4,7 @@ import {
   FileText, Eye, Layers, Filter, X, AlertCircle, CheckCircle
 } from 'lucide-react';
 import {
-  listDocuments, uploadDocument, deleteDocument,
+  listDocuments, uploadDocuments, deleteDocument,
   reindexDocument, getDocumentChunks, getDocumentMetadata
 } from '../api/client';
 import Spinner from '../components/Spinner';
@@ -18,6 +18,7 @@ export default function Documents({ onToast }: Props) {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState<number | null>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [chunks, setChunks] = useState<Record<string, Chunk[]>>({});
   const [reindexing, setReindexing] = useState<string | null>(null);
@@ -44,19 +45,18 @@ export default function Documents({ onToast }: Props) {
   const handleUpload = async (files: FileList | null) => {
     if (!files || files.length === 0) return;
     setUploading(true);
-    let success = 0, fail = 0;
-    for (const file of Array.from(files)) {
-      try {
-        await uploadDocument(file);
-        success++;
-      } catch {
-        fail++;
-      }
+    setUploadProgress(0);
+    try {
+      const fileArray = Array.from(files);
+      await uploadDocuments(fileArray, undefined, (p) => setUploadProgress(p));
+      onToast('success', `${fileArray.length} file(s) uploaded and indexed`);
+      load();
+    } catch {
+      onToast('error', 'Upload failed');
+    } finally {
+      setUploading(false);
+      setUploadProgress(null);
     }
-    setUploading(false);
-    if (success > 0) onToast('success', `${success} file(s) uploaded and indexed`);
-    if (fail > 0) onToast('error', `${fail} file(s) failed`);
-    load();
   };
 
   const handleDelete = async (id: string) => {
@@ -132,7 +132,7 @@ export default function Documents({ onToast }: Props) {
             disabled={uploading}
           >
             {uploading ? <Spinner size={12} /> : <Upload size={12} />}
-            Upload
+            {uploading ? 'Uploading...' : 'Upload'}
           </button>
           <input
             ref={fileInputRef}
@@ -147,7 +147,7 @@ export default function Documents({ onToast }: Props) {
 
       {/* Drop zone */}
       <div
-        className={`border-3 border-dashed transition-all p-6 flex flex-col items-center justify-center gap-2 cursor-pointer ${dragOver ? 'border-[#00d4ff] bg-[#00d4ff]/5' : 'border-[#2a3a6e]'}`}
+        className={`border-3 border-dashed transition-all p-6 flex flex-col items-center justify-center gap-3 cursor-pointer ${dragOver ? 'border-[#00d4ff] bg-[#00d4ff]/5' : 'border-[#2a3a6e]'}`}
         style={{ borderWidth: 2, borderStyle: 'dashed' }}
         onDragOver={e => { e.preventDefault(); setDragOver(true); }}
         onDragLeave={() => setDragOver(false)}
@@ -156,11 +156,25 @@ export default function Documents({ onToast }: Props) {
       >
         <Upload size={20} color={dragOver ? '#00d4ff' : '#2a3a6e'} />
         <span className="text-xs text-center" style={{ fontFamily: 'Space Mono, monospace', color: dragOver ? '#00d4ff' : '#4a5a8e' }}>
-          {uploading ? 'PROCESSING...' : 'DROP FILES OR CLICK TO UPLOAD'}
+          {uploading ? 'UPLOADING FILES...' : 'DROP FILES OR CLICK TO UPLOAD'}
         </span>
         <span className="text-xs text-[#2a3a6e]" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
           PDF · MD · TXT · CSV · JSON
         </span>
+        {uploading && uploadProgress !== null && (
+          <div className="w-full max-w-md">
+            <div className="flex items-center justify-between text-[11px] text-[#4a5a8e]" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
+              <span>Uploading</span>
+              <span>{uploadProgress}%</span>
+            </div>
+            <div className="w-full bg-[#0f1629] border border-[#1e2d54]" style={{ height: '6px' }}>
+              <div
+                className="h-full transition-all duration-200"
+                style={{ width: `${uploadProgress}%`, background: 'linear-gradient(90deg, #00d4ff, #00ff9f)' }}
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Table */}

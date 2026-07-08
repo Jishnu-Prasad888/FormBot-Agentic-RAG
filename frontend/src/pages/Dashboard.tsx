@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import {
-  FileText, Database, MessageSquare, Cpu, Activity,
-  ArrowRight, Zap, TrendingUp, CheckCircle, XCircle,
-  Clock, Server
+  FileText, MessageSquare, Activity,
+  ArrowRight, Zap, CheckCircle, XCircle,
+  Clock
 } from 'lucide-react';
-import { listDocuments, listConversations, listCollections, healthCheck, healthDb, healthChroma, healthOllama } from '../api/client';
+import { listDocuments, listConversations, healthCheck, healthDb, healthOllama } from '../api/client';
 import Spinner from '../components/Spinner';
 import type { Page } from '../types';
 import { formatDateTime } from '../utils/format';
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function Dashboard({ onNavigate, onHealthUpdate }: Props) {
-  const [stats, setStats] = useState({ docs: 0, convs: 0, collections: 0 });
+  const [stats, setStats] = useState({ docs: 0, convs: 0 });
   const [health, setHealth] = useState<Record<string, any>>({});
   const [recentDocs, setRecentDocs] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -24,10 +24,9 @@ export default function Dashboard({ onNavigate, onHealthUpdate }: Props) {
     const load = async () => {
       setLoading(true);
       try {
-        const [docsRes, convsRes, colsRes] = await Promise.allSettled([
+        const [docsRes, convsRes] = await Promise.allSettled([
           listDocuments(0, 5),
           listConversations(),
-          listCollections(),
         ]);
 
         if (docsRes.status === 'fulfilled') {
@@ -37,22 +36,17 @@ export default function Dashboard({ onNavigate, onHealthUpdate }: Props) {
         if (convsRes.status === 'fulfilled') {
           setStats(s => ({ ...s, convs: convsRes.value.total || 0 }));
         }
-        if (colsRes.status === 'fulfilled') {
-          setStats(s => ({ ...s, collections: colsRes.value.collections?.length || 0 }));
-        }
 
         // Health checks
-        const [api, db, chroma, ollama] = await Promise.allSettled([
-          healthCheck(), healthDb(), healthChroma(), healthOllama(),
+        const [api, db, ollama] = await Promise.allSettled([
+          healthCheck(), healthDb(), healthOllama(),
         ]);
         const h = {
           api:    api.status === 'fulfilled' && api.value.status === 'ok' ? 'ok' : 'error',
           db:     db.status === 'fulfilled' && db.value.status === 'ok' ? 'ok' : 'error',
-          chroma: chroma.status === 'fulfilled' && chroma.value.status === 'ok' ? 'ok' : 'error',
           ollama: ollama.status === 'fulfilled' && ollama.value.status === 'ok' ? 'ok' : 'error',
         } as Record<string, 'ok' | 'error'>;
         setHealth({ ...h,
-          chromaCollections: chroma.status === 'fulfilled' ? chroma.value.collections : [],
           ollamaModels: ollama.status === 'fulfilled' ? ollama.value.models : [],
         });
         onHealthUpdate(h);
@@ -73,25 +67,18 @@ export default function Dashboard({ onNavigate, onHealthUpdate }: Props) {
 
   const STAT_CARDS = [
     { label: 'Documents', value: stats.docs, icon: FileText, color: '#ff4d6d', page: 'documents' as Page, desc: 'Indexed files' },
-    { label: 'Conversations', value: stats.convs, icon: MessageSquare, color: '#00d4ff', page: 'chat' as Page, desc: 'Chat sessions' },
-    { label: 'Collections', value: stats.collections, icon: Database, color: '#00ff9f', page: 'collections' as Page, desc: 'Vector stores' },
-    { label: 'Agents', value: 6, icon: Cpu, color: '#ffe600', page: 'agents' as Page, desc: 'Active agents' },
+    { label: 'Conversations', value: stats.convs, icon: MessageSquare, color: '#00d4ff', page: 'evaluate' as Page, desc: 'Chat sessions' },
   ];
 
   const HEALTH_CHECKS = [
     { key: 'api',    label: 'FastAPI', detail: 'REST API' },
-    { key: 'db',     label: 'SQLite',  detail: 'Relational DB' },
-    { key: 'chroma', label: 'ChromaDB',detail: `${health.chromaCollections?.length || 0} collections` },
+    { key: 'db',     label: 'JSON Store',  detail: 'File-based storage' },
     { key: 'ollama', label: 'Ollama',  detail: `${health.ollamaModels?.length || 0} models` },
   ];
 
   const QUICK_ACTIONS = [
     { label: 'Upload Document', desc: 'Index new file', color: '#ff4d6d', page: 'documents' as Page },
-    { label: 'RAG Query', desc: 'Ask a question', color: '#00d4ff', page: 'rag' as Page },
-    { label: 'Chat', desc: 'Conversational AI', color: '#00ff9f', page: 'chat' as Page },
-    { label: 'Run Agent', desc: 'Agentic retrieval', color: '#ffe600', page: 'agents' as Page },
     { label: 'Evaluate', desc: 'Score your RAG', color: '#a78bfa', page: 'evaluate' as Page },
-    { label: 'Search', desc: 'Explore retrieval', color: '#38bdf8', page: 'search' as Page },
   ];
 
   return (
@@ -105,10 +92,10 @@ export default function Dashboard({ onNavigate, onHealthUpdate }: Props) {
           </span>
         </div>
         <h1 className="text-2xl md:text-3xl font-bold" style={{ fontFamily: 'Space Mono, monospace', color: '#e2e8f0' }}>
-          RAG<span style={{ color: '#00d4ff' }}>//</span>PLATFORM
+          Simple<span style={{ color: '#00d4ff' }}>//</span>RAG
         </h1>
         <p className="text-sm text-[#6b82b0] mt-1" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-          Intelligent Multimodal Agentic Retrieval System
+          Simple Retrieval-Augmented Generation
         </p>
       </div>
 
@@ -243,7 +230,7 @@ export default function Dashboard({ onNavigate, onHealthUpdate }: Props) {
                 <tr>
                   <th>Filename</th>
                   <th>Type</th>
-                  <th>Strategy</th>
+                  <th>Model</th>
                   <th>Chunks</th>
                   <th>Uploaded</th>
                 </tr>
@@ -267,7 +254,7 @@ export default function Dashboard({ onNavigate, onHealthUpdate }: Props) {
                       </span>
                     </td>
                     <td style={{ color: '#6b82b0', fontSize: '0.7rem' }}>
-                      {doc.retrieval_strategy?.replace(/_/g, '_')?.toUpperCase()}
+                      {doc.embedding_model || 'vector'}
                     </td>
                     <td style={{ color: '#00ff9f' }}>{doc.chunk_count}</td>
                     <td style={{ color: '#4a5a8e', fontSize: '0.7rem' }}>{formatDateTime(doc.created_at)}</td>

@@ -80,7 +80,7 @@ export interface Source {
 
 // ─── RAG Types ─────────────────────────────────────────────────────────────────
 
-export type RAGStrategy = 'vector' | 'bm25' | 'hybrid' | 'table' | 'pdf' | 'markdown';
+export type RAGStrategy = 'vector';
 
 export interface RAGQueryRequest {
   query: string;
@@ -108,6 +108,19 @@ export interface EvaluationRequest {
   dataset_name?: string;
 }
 
+export interface OcrQuestionResult {
+  question: string;
+  expected_answer: string;
+}
+
+export interface OcrImageResponse {
+  questions: OcrQuestionResult[];
+  count: number;
+  errors: Array<{ file: string; error: string }>;
+  images_processed: number;
+  from_sample?: boolean;
+}
+
 export interface EvaluationResponse {
   accuracy: number;
   faithfulness: number;
@@ -120,7 +133,7 @@ export interface EvaluationResponse {
 
 // ─── Agent Types ───────────────────────────────────────────────────────────────
 
-export type AgentType = 'coordinator' | 'vector' | 'sqlite' | 'router' | 'web' | 'evaluator';
+export type AgentType = 'vector' | 'web' | 'evaluator';
 
 export interface AgentRequest {
   query: string;
@@ -145,9 +158,7 @@ export interface AgentResponse {
 export interface HealthStatus {
   status: 'ok' | 'error';
   database?: string;
-  chromadb?: string;
   ollama?: string;
-  collections?: string[];
   models?: string[];
   detail?: string;
 }
@@ -164,12 +175,7 @@ export interface ChromaCollection {
 export type Page =
   | 'dashboard'
   | 'documents'
-  | 'search'
-  | 'chat'
-  | 'rag'
-  | 'agents'
-  | 'evaluate'
-  | 'collections';
+  | 'evaluate';
 
 export interface Toast {
   id: string;
