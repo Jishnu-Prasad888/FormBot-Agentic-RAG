@@ -1,0 +1,152 @@
+[
+  {
+    "id": "dd357569-ad9b-4ac0-ba12-0781f7ebecbc",
+    "title": "what is CIF number in this form ",
+    "created_at": "2026-07-08T07:39:37.263804+00:00",
+    "updated_at": "2026-07-08T07:39:41.256658+00:00",
+    "messages": [
+      {
+        "id": "eb31db90-62f5-47ff-9077-a1824fda39a3",
+        "conversation_id": "dd357569-ad9b-4ac0-ba12-0781f7ebecbc",
+        "role": "user",
+        "content": "what is CIF number in this form ",
+        "sources": [],
+        "created_at": "2026-07-08T07:39:37.264106+00:00"
+      },
+      {
+        "id": "f183ab66-209c-4a80-a10d-bc854fba43ea",
+        "conversation_id": "dd357569-ad9b-4ac0-ba12-0781f7ebecbc",
+        "role": "assistant",
+        "content": "The context provided does not contain information about a CIF number in the form. It primarily discusses deposit ceilings and account types related to Public Provident Fund Accounts.",
+        "sources": [
+          {
+            "filename": "How to get your CIF number without going to bank.txt",
+            "chunk_id": "08f08d8a-f2a2-4837-baa2-f38e7ca824dc",
+            "score": 0.055188536643981934
+          },
+          {
+            "filename": "FATCA_CRS_Individual_declaration_form.pdf",
+            "chunk_id": "5d547d9a-738b-417e-a7f7-17b2fc796be5",
+            "score": 0.007135629653930664
+          },
+          {
+            "filename": "FATCA Full Form, Meaning, Declaration, Rules, Compliance.txt",
+            "chunk_id": "a5260d09-b512-4ecb-86af-4c5957c407a3",
+            "score": -0.017154693603515625
+          },
+          {
+            "filename": "FATCA Full Form, Meaning, Declaration, Rules, Compliance.txt",
+            "chunk_id": "517c4079-e42f-403e-a38c-46583d9f345c",
+            "score": -0.029877424240112305
+          },
+          {
+            "filename": "FATCA Full Form, Meaning, Declaration, Rules, Compliance.txt",
+            "chunk_id": "58367517-8c50-4cb5-b01a-7815128c24eb",
+            "score": -0.04106247425079346
+          }
+        ],
+        "created_at": "2026-07-08T07:39:41.256658+00:00"
+      }
+    ]
+  },
+  {
+    "id": "63ffb0cb-2367-4be0-a39a-f33ced1d9c09",
+    "title": "can a minor open account ",
+    "created_at": "2026-07-08T07:42:16.238367+00:00",
+    "updated_at": "2026-07-08T07:42:18.887656+00:00",
+    "messages": [
+      {
+        "id": "d386c586-5bf5-405d-9dda-5ea9d3df7f37",
+        "conversation_id": "63ffb0cb-2367-4be0-a39a-f33ced1d9c09",
+        "role": "user",
+        "content": "can a minor open account ",
+        "sources": [],
+        "created_at": "2026-07-08T07:42:16.240472+00:00"
+      },
+      {
+        "id": "774d2931-4374-42ec-8cad-2d06ab2009fe",
+        "conversation_id": "63ffb0cb-2367-4be0-a39a-f33ced1d9c09",
+        "role": "assistant",
+        "content": "Yes, a minor can open a bank account, typically through a natural or legally appointed guardian. Minors above the age of 10 may also be allowed to open and operate savings bank accounts independently, subject to bank policies.",
+        "sources": [
+          {
+            "filename": "Master Circular on Customer Service in Banks.txt",
+            "chunk_id": "e5d0c651-1535-4680-a110-80d51477dad2",
+            "score": 0.39207273721694946
+          },
+          {
+            "filename": "Master Circular on Customer Service in Banks.txt",
+            "chunk_id": "5b92c195-bcc2-4fa1-ba1e-0472fd0ccb20",
+            "score": 0.37807488441467285
+          },
+          {
+            "filename": "SAVINGS BANK RULES.txt",
+            "chunk_id": "51b9cdab-1188-4528-bf82-0624a4f1e905",
+            "score": 0.3694602847099304
+          },
+          {
+            "filename": "modes of operation of accounts.txt",
+            "chunk_id": "ece1ab6c-39a5-45b8-bf94-5d5539e846f1",
+            "score": 0.33228689432144165
+          },
+          {
+            "filename": "maintainance of deposit accounts.txt",
+            "chunk_id": "d0cca0a9-a8c5-4861-b85f-eee275e112bb",
+            "score": 0.2737134099006653
+          }
+        ],
+        "created_at": "2026-07-08T07:42:18.887656+00:00"
+      }
+    ]
+  },
+  {
+    "id": "1dee7b49-5591-45d4-a85f-fcccfe87ff15",
+    "title": "what all feilds to fill here ",
+    "created_at": "2026-07-08T07:42:35.593139+00:00",
+    "updated_at": "2026-07-08T07:42:39.284131+00:00",
+    "messages": [
+      {
+        "id": "83a912ac-ca79-406e-b63b-7922dbb1a1da",
+        "conversation_id": "1dee7b49-5591-45d4-a85f-fcccfe87ff15",
+        "role": "user",
+        "content": "what all feilds to fill here ",
+        "sources": [],
+        "created_at": "2026-07-08T07:42:35.593796+00:00"
+      },
+      {
+        "id": "3257bbcc-3831-44b1-a343-936da7017577",
+        "conversation_id": "1dee7b49-5591-45d4-a85f-fcccfe87ff15",
+        "role": "assistant",
+        "content": "You need to fill in the following fields:\n\n1. Applicant's Name\n2. PAN\n3. Initial Subscription Amount\n4. Permanent Address of Subscriber / Guardian\n5. Date of Birth of Minor\n6. Relationship with Minor\n7. CIF NO\n8. A/C NO\n9. Name\n10. Amount\n11. Rupees\n\nAdditionally, ensure the date is filled in the \"Date\" field and provide the required signatures in the \"Signature\" and \"Additional Specimen Signature\" fields.",
+        "sources": [
+          {
+            "filename": "business_corporate-banking_products-and-services_project-finance.json",
+            "chunk_id": "53b1c2e8-230f-427b-8c7d-3d2b41a09603",
+            "score": -0.20214879512786865
+          },
+          {
+            "filename": "faq-s_faq-project-uptech.json",
+            "chunk_id": "24649036-dc83-47a8-a7fd-20012eaea520",
+            "score": -0.24341344833374023
+          },
+          {
+            "filename": "personal-banking_information-services_engagement_retired.json",
+            "chunk_id": "a75f3b2e-dfce-4176-b000-64e74127d643",
+            "score": -0.2501406669616699
+          },
+          {
+            "filename": "personal-banking_information-services_engagement_retired.json",
+            "chunk_id": "fc09250b-1d55-4f2e-87cb-f4a59b4e7406",
+            "score": -0.252569317817688
+          },
+          {
+            "filename": "business_corporate-banking_products-and-services_project-finance.json",
+            "chunk_id": "7d943bbb-5cd1-472a-b880-3f444d2e9166",
+            "score": -0.25533366203308105
+          }
+        ],
+        "created_at": "2026-07-08T07:42:39.284131+00:00"
+      }
+    ]
+  }
+]

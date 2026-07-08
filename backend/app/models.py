@@ -80,6 +80,18 @@ class ChatRequest(BaseModel):
     top_k: int = 5
 
 
+class LiveAskRequest(BaseModel):
+    question: str
+    conversation_id: Optional[str] = None
+    session_id: Optional[str] = None
+    top_k: int = 5
+    target_language: str = "en"
+    voice: str = "alloy"
+    speak: bool = False
+    use_form_context: bool = True
+    manual_context: Optional[str] = None
+
+
 class RAGQueryRequest(BaseModel):
     query: str
     strategy: Optional[str] = "vector"

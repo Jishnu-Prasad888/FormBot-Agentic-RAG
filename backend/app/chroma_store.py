@@ -2,7 +2,7 @@ import os
 import uuid
 import chromadb
 from chromadb.config import Settings
-from chromadb.errors import NotFoundError, InvalidCollectionException
+from chromadb.errors import NotFoundError
 
 os.environ.setdefault("CHROMADB_DISABLE_TELEMETRY", "1")
 
@@ -29,7 +29,7 @@ def _get_collection():
         client = _get_client()
         try:
             _collection = client.get_collection(COLLECTION_NAME)
-        except (ValueError, NotFoundError, InvalidCollectionException):
+        except (ValueError, NotFoundError):
             _collection = client.create_collection(COLLECTION_NAME)
     return _collection
 

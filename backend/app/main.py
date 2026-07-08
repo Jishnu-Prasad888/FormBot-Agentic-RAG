@@ -1,17 +1,22 @@
+import base64
+import io
+import json
 import logging
 import os
 import time
 import uuid
 from datetime import datetime, timezone
 from contextlib import asynccontextmanager
+from typing import List
 
+import imagehash
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
-from typing import List
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse
 from openai import OpenAI
+from PIL import Image
 
 from app.config import settings
 from app.storage import (
@@ -24,7 +29,7 @@ from app.chroma_store import (
 )
 from app.models import (
     SearchRequest, SearchResponse, SearchResult,
-    ChatRequest, RAGQueryRequest, RAGQueryResponse, Source,
+    ChatRequest, LiveAskRequest, RAGQueryRequest, RAGQueryResponse, Source,
     EvaluationRequest, EvaluationResponse, PerQuestionResult,
     Document,
 )
@@ -36,6 +41,16 @@ from app.ocr import ocr
 UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "uploads")
 SAMPLE_IMAGE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "sample.png")
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+# Live frame / vision settings
+FRAME_MAX_BYTES = 6 * 1024 * 1024  # 6 MB
+MIN_FRAME_INTERVAL_SEC = 0.18  # ~5 FPS
+PHASH_DIFF_THRESHOLD = 4
+
+# Audio defaults
+DEFAULT_TTS_VOICE = "alloy"
+
+_frame_sessions: dict[str, dict] = {}
 
 
 @asynccontextmanager
@@ -90,6 +105,122 @@ async def add_cors_on_error(request: Request, call_next):
 
 def _utcnow() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _compute_phash(image_bytes: bytes) -> str:
+    try:
+        img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+        return str(imagehash.phash(img))
+    except Exception:
+        return ""
+
+
+def _fields_to_map(fields: list[dict]) -> dict[str, str]:
+    out = {}
+    for f in fields or []:
+        key = str(f.get("field") or f.get("name") or "").strip().lower()
+        if key:
+            out[key] = str(f.get("value") or "").strip()
+    return out
+
+
+def _diff_fields(prev: list[dict], curr: list[dict]) -> list[dict]:
+    prev_map = _fields_to_map(prev)
+    curr_map = _fields_to_map(curr)
+    diff: list[dict] = []
+    for k, v in curr_map.items():
+        if k not in prev_map:
+            diff.append({"field": k, "change": "added", "value": v})
+        elif prev_map[k] != v:
+            diff.append({"field": k, "change": "updated", "value": v, "previous": prev_map[k]})
+    return diff
+
+
+def _merge_fields(prev: list[dict], curr: list[dict]) -> list[dict]:
+    merged: dict[str, dict] = {}
+    for f in prev or []:
+        key = str(f.get("field") or f.get("name") or "").strip().lower()
+        if key:
+            merged[key] = dict(f)
+    for f in curr or []:
+        key = str(f.get("field") or f.get("name") or "").strip().lower()
+        if not key:
+            continue
+        existing = merged.get(key, {})
+        val = f.get("value") or existing.get("value") or ""
+        merged[key] = {
+            **existing,
+            **f,
+            "field": f.get("field") or f.get("name") or existing.get("field") or key,
+            "value": val,
+        }
+    return list(merged.values())
+
+
+def _parse_vision_response(text: str) -> tuple[list[dict], str, str]:
+    """Return (fields, layout_markdown, raw_text)."""
+    fields: list[dict] = []
+    layout_md = ""
+    raw_text = text
+    # Simple heuristic: find fenced code blocks
+    for block in text.split("```"):
+        block = block.strip()
+        if not block:
+            continue
+        if block.lower().startswith("json"):
+            block = block[4:].strip()
+        try:
+            data = json.loads(block)
+        except Exception:
+            continue
+        if isinstance(data, dict):
+            if isinstance(data.get("fields"), list):
+                fields = data.get("fields", [])
+            if isinstance(data.get("layout_markdown"), str):
+                layout_md = data.get("layout_markdown", "")
+            if isinstance(data.get("raw_text"), str):
+                raw_text = data.get("raw_text", raw_text)
+            if fields or layout_md:
+                return fields, layout_md, raw_text
+    # Fallback: try parsing whole text as JSON
+    try:
+        data = json.loads(text)
+        if isinstance(data, dict):
+            fields = data.get("fields", []) if isinstance(data.get("fields"), list) else []
+            layout_md = data.get("layout_markdown", "") if isinstance(data.get("layout_markdown"), str) else ""
+            raw_text = data.get("raw_text", raw_text) if isinstance(data.get("raw_text"), str) else raw_text
+    except Exception:
+        pass
+    return fields, layout_md, raw_text
+
+
+def _extract_form(image_bytes: bytes, mime: str) -> tuple[list[dict], str, str]:
+    client = OpenAI(api_key=settings.openai_api_key)
+    b64 = base64.b64encode(image_bytes).decode()
+    image_url = f"data:{mime};base64,{b64}"
+    prompt = (
+        "You are a form transcription assistant. First determine if this is a bank-related form (account, KYC, Aadhaar, PAN, loan, deposit, withdrawal, banking service). "
+        "If it is NOT a bank form, respond with an empty JSON fenced block: {\"fields\": [], \"layout_markdown\": \"\", \"raw_text\": \"\"}. "
+        "If it IS a bank form, then: 1) Extract visible field labels and filled values. "
+        "Return JSON in a fenced block with keys: fields: array of {field, value, confidence, notes}, layout_markdown: markdown recreating the form layout, raw_text: full text. "
+        "Preserve order top-to-bottom, left-to-right. Confidence 0-1."
+    )
+    resp = client.chat.completions.create(
+        model=settings.openai_model,
+        messages=[
+            {"role": "system", "content": prompt},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image_url", "image_url": {"url": image_url, "detail": "high"}},
+                    {"type": "text", "text": "Extract now."},
+                ],
+            },
+        ],
+        temperature=0,
+    )
+    text = resp.choices[0].message.content or ""
+    return _parse_vision_response(text)
 
 
 def _eval_accuracy_llm(system: str, prompt: str) -> str:
@@ -378,6 +509,162 @@ async def search_table(req: SearchRequest):
     return _do_search(req, "table").model_dump()
 
 
+# ─── Live Vision & Streaming Assist ────────────────────────────────────────────
+
+
+def _get_session(session_id: str) -> dict | None:
+    return _frame_sessions.get(session_id)
+
+
+def _ensure_session(session_id: str) -> dict:
+    if session_id not in _frame_sessions:
+        _frame_sessions[session_id] = {
+            "frame_bytes": None,
+            "mime": None,
+            "phash": None,
+            "fields": [],
+            "layout_markdown": "",
+            "raw_text": "",
+            "diff": [],
+            "updated_at": None,
+            "has_new": False,
+            "last_used_phash": None,
+            "last_frame_ts": 0.0,
+        }
+    return _frame_sessions[session_id]
+
+
+@app.post("/api/live/frame/push")
+async def live_frame_push(
+    file: UploadFile = File(...),
+    session_id: str | None = Form(None),
+):
+    sid = session_id or str(uuid.uuid4())
+    session = _ensure_session(sid)
+
+    now = time.time()
+    if session.get("last_frame_ts") and now - session["last_frame_ts"] < MIN_FRAME_INTERVAL_SEC:
+        raise HTTPException(429, f"Too many frames; wait {MIN_FRAME_INTERVAL_SEC:.2f}s")
+
+    content = await file.read()
+    if len(content) > FRAME_MAX_BYTES:
+        raise HTTPException(413, f"Frame too large; limit {FRAME_MAX_BYTES // (1024*1024)} MB")
+
+    mime = file.content_type or "application/octet-stream"
+    phash = _compute_phash(content)
+    prev_phash = session.get("phash")
+    session["last_frame_ts"] = now
+
+    if prev_phash and phash and imagehash.hex_to_hash(prev_phash) - imagehash.hex_to_hash(phash) < PHASH_DIFF_THRESHOLD:
+        # No meaningful visual change; keep frame but skip vision.
+        session.update({
+            "frame_bytes": content,
+            "mime": mime,
+        })
+        return {
+            "session_id": sid,
+            "status": "unchanged",
+            "phash": phash,
+            "updated_at": _utcnow(),
+        }
+
+    try:
+        fields, layout_md, raw_text = _extract_form(content, mime)
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("Vision extraction failed")
+        raise HTTPException(500, f"Vision extraction failed: {exc}") from exc
+
+    merged_fields = _merge_fields(session.get("fields", []), fields)
+    diff = _diff_fields(session.get("fields", []), merged_fields)
+
+    session.update({
+        "frame_bytes": content,
+        "mime": mime,
+        "phash": phash,
+        "fields": merged_fields,
+        "layout_markdown": layout_md,
+        "raw_text": raw_text,
+        "diff": diff,
+        "updated_at": _utcnow(),
+        "has_new": True,
+    })
+
+    return {
+        "session_id": sid,
+        "status": "updated",
+        "phash": phash,
+        "fields": merged_fields,
+        "layout_markdown": layout_md,
+        "diff": diff,
+        "raw_text": raw_text,
+        "updated_at": session["updated_at"],
+    }
+
+
+@app.get("/api/live/frame/context")
+async def live_frame_context(session_id: str):
+    session = _get_session(session_id)
+    if not session:
+        raise HTTPException(404, "Session not found")
+    return {
+        "session_id": session_id,
+        "fields": session.get("fields", []),
+        "layout_markdown": session.get("layout_markdown", ""),
+        "diff": session.get("diff", []),
+        "updated_at": session.get("updated_at"),
+        "phash": session.get("phash"),
+        "has_new": session.get("has_new", False),
+    }
+
+
+@app.post("/api/live/frame/clear")
+async def live_frame_clear(session_id: str):
+    cleared = False
+    if session_id in _frame_sessions:
+        _frame_sessions.pop(session_id, None)
+        cleared = True
+    return {"session_id": session_id, "cleared": cleared}
+
+
+@app.post("/api/live/transcribe")
+async def live_transcribe(audio: UploadFile = File(...), language: str | None = Form(None)):
+    client = OpenAI(api_key=settings.openai_api_key)
+    try:
+        content = await audio.read()
+        result = client.audio.transcriptions.create(
+            model="whisper-1",
+            file=(audio.filename or "audio.webm", content),
+            language=language,
+        )
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("Transcription failed")
+        raise HTTPException(500, f"Transcription failed: {exc}") from exc
+    return {"text": result.text, "language": language or "auto"}
+
+
+@app.post("/api/live/tts")
+async def live_tts(data: dict):
+    text = data.get("text", "")
+    voice = data.get("voice") or DEFAULT_TTS_VOICE
+    if not text:
+        raise HTTPException(400, "text is required")
+    client = OpenAI(api_key=settings.openai_api_key)
+    try:
+        audio_resp = client.audio.speech.create(
+            model="tts-1",
+            voice=voice,
+            input=text,
+        )
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("TTS failed")
+        raise HTTPException(500, f"TTS failed: {exc}") from exc
+
+    def _iter_bytes():
+        yield audio_resp.read()
+
+    return StreamingResponse(_iter_bytes(), media_type="audio/mpeg")
+
+
 # ─── Chat ─────────────────────────────────────────────────────────────────────
 
 @app.post("/api/chat")
@@ -442,6 +729,72 @@ async def chat_stream(req: ChatRequest):
                     [s.model_dump() for s in sources])
 
     return StreamingResponse(generate(), media_type="text/plain")
+
+
+def _build_form_context(session: dict) -> tuple[str, list[dict]]:
+    if not session:
+        return "", []
+    fields = session.get("fields", []) or []
+    layout_md = session.get("layout_markdown", "") or ""
+    diff = session.get("diff", []) or []
+    parts = []
+    if diff:
+        parts.append("Recent form changes:\n" + json.dumps(diff, ensure_ascii=False, indent=2))
+    if fields:
+        parts.append("Current form fields:\n" + json.dumps(fields, ensure_ascii=False, indent=2))
+    if layout_md:
+        parts.append("Form layout (markdown):\n" + layout_md)
+    return "\n\n".join(parts), diff
+
+
+@app.post("/api/live/ask")
+async def live_ask(req: LiveAskRequest):
+    if not req.conversation_id:
+        conv = create_conv()
+        req.conversation_id = conv.id
+
+    add_message(req.conversation_id, "user", req.question)
+
+    context, sources, confidence, elapsed = query(req.question, req.top_k or 5)
+
+    form_ctx = ""
+    if req.session_id and req.use_form_context:
+        session = _get_session(req.session_id)
+        if session:
+            form_ctx, _ = _build_form_context(session)
+            session["has_new"] = False
+            session["last_used_phash"] = session.get("phash")
+
+    system_prompt = (
+        "You are a helpful RAG assistant. Answer the user's question based on the provided context. "
+        "If the context doesn't contain enough information, say so. Be concise."
+    )
+    if form_ctx:
+        system_prompt += " Use the live form fields when relevant."
+    if req.target_language and req.target_language.lower() not in ("en", "english"):
+        system_prompt += f" Respond in {req.target_language}."
+
+    user_parts = []
+    user_parts.append(f"RAG context:\n{context}")
+    if form_ctx:
+        user_parts.append(f"Live form context:\n{form_ctx}")
+    if req.manual_context:
+        user_parts.append(f"User provided context:\n{req.manual_context}")
+    user_parts.append(f"Question: {req.question}")
+    user_prompt = "\n\n".join(user_parts)
+
+    async def stream_and_store():
+        full_answer = ""
+        async for token in llm.generate_stream(system_prompt, user_prompt):
+            full_answer += token
+            yield token
+        add_message(req.conversation_id, "assistant", full_answer, [s.model_dump() for s in sources])
+
+    return StreamingResponse(
+        stream_and_store(),
+        media_type="text/plain",
+        headers={"X-Conversation-Id": req.conversation_id},
+    )
 
 
 @app.get("/api/chat/conversations")

@@ -24,10 +24,13 @@ class LLMClient:
             return self._generate_ollama(system, prompt)
         return self._generate_openai(system, prompt)
 
-    def generate_stream(self, system: str, prompt: str) -> AsyncIterator[str]:
+    async def generate_stream(self, system: str, prompt: str) -> AsyncIterator[str]:
         if self.provider == "ollama":
-            return self._stream_ollama(system, prompt)
-        return self._stream_openai(system, prompt)
+            async for t in self._stream_ollama(system, prompt):
+                yield t
+            return
+        async for t in self._stream_openai(system, prompt):
+            yield t
 
     def _generate_openai(self, system: str, prompt: str) -> str:
         client = self._get_openai()
