@@ -4,6 +4,7 @@ import ToastContainer from './components/Toast';
 import Dashboard from './pages/Dashboard';
 import Documents from './pages/Documents';
 import Evaluate from './pages/Evaluate';
+import LiveMeet from './pages/LiveMeet';
 import type { Page, Toast } from './types';
 import { healthCheck, healthDb, healthOllama } from './api/client';
 
@@ -51,6 +52,7 @@ export default function App() {
       case 'dashboard':   return <Dashboard onNavigate={setPage} onHealthUpdate={updateHealth} />;
       case 'documents':   return <Documents {...commonProps} />;
       case 'evaluate':    return <Evaluate {...commonProps} />;
+      case 'live':        return <LiveMeet {...commonProps} />;
       default:            return <Dashboard onNavigate={setPage} onHealthUpdate={updateHealth} />;
     }
   };

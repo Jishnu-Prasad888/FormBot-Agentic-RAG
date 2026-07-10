@@ -175,7 +175,8 @@ export interface ChromaCollection {
 export type Page =
   | 'dashboard'
   | 'documents'
-  | 'evaluate';
+  | 'evaluate'
+  | 'live';
 
 export interface Toast {
   id: string;

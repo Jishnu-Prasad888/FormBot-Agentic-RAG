@@ -250,3 +250,78 @@ export const streamChat = async (
     onError(e);
   }
 };
+
+// ─── Live Assist ─────────────────────────────────────────────────────────────
+
+export const pushLiveFrame = async (blob: Blob, session_id?: string) => {
+  const form = new FormData();
+  form.append('file', new File([blob], 'frame.jpg', { type: blob.type || 'image/jpeg' }));
+  if (session_id) form.append('session_id', session_id);
+  const { data } = await api.post('/api/live/frame/push', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return data;
+};
+
+export const liveTranscribe = async (blob: Blob, language?: string) => {
+  const form = new FormData();
+  form.append('audio', new File([blob], 'audio.webm', { type: blob.type || 'audio/webm' }));
+  if (language) form.append('language', language);
+  const { data } = await api.post('/api/live/transcribe', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return data;
+};
+
+export const liveTts = async (text: string, voice?: string) => {
+  const resp = await fetch(`${BASE_URL}/api/live/tts`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text, voice }),
+  });
+  const blob = await resp.blob();
+  return URL.createObjectURL(blob);
+};
+
+export const clearLiveFrame = async (session_id: string) => {
+  const { data } = await api.post('/api/live/frame/clear', { session_id });
+  return data;
+};
+
+export const streamLiveAsk = async (
+  body: {
+    question: string;
+    conversation_id?: string;
+    session_id?: string;
+    target_language?: string;
+    top_k?: number;
+    use_form_context?: boolean;
+    manual_context?: string;
+  },
+  handlers: {
+    onToken: (token: string) => void;
+    onDone: () => void;
+    onError: (e: any) => void;
+    onConversation?: (id: string) => void;
+  },
+) => {
+  try {
+    const resp = await fetch(`${BASE_URL}/api/live/ask`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const cid = resp.headers.get('x-conversation-id');
+    if (cid && handlers.onConversation) handlers.onConversation(cid);
+    const reader = resp.body!.getReader();
+    const decoder = new TextDecoder();
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      handlers.onToken(decoder.decode(value));
+    }
+    handlers.onDone();
+  } catch (e) {
+    handlers.onError(e);
+  }
+};

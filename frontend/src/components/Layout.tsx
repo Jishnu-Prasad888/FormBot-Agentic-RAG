@@ -16,6 +16,7 @@ const NAV_ITEMS: { id: Page; label: string; icon: React.ElementType; accent?: st
   { id: 'dashboard',   label: 'Dashboard',   icon: LayoutDashboard },
   { id: 'documents',   label: 'Documents',   icon: FileText },
   { id: 'evaluate',    label: 'Evaluate',    icon: FlaskConical },
+  { id: 'live',        label: 'Live Meet',   icon: Activity },
 ];
 
 export default function Layout({ currentPage, onNavigate, children, healthStatus }: Props) {
