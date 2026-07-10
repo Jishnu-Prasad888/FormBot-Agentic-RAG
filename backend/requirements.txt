@@ -1,16 +1,9 @@
 fastapi
 uvicorn
-python-multipart
 openai
-google-genai
 numpy
 httpx
 pydantic
 pydantic-settings
 python-dotenv
-aiofiles
-PyPDF2
-python-docx
 chromadb
-Pillow
-ImageHash
