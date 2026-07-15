@@ -1,0 +1,44 @@
+\contentsline {section}{\numberline {1}Abstract}{3}{section.1}%
+\contentsline {section}{\numberline {2}Introduction}{3}{section.2}%
+\contentsline {section}{\numberline {3}Problem Statement}{3}{section.3}%
+\contentsline {section}{\numberline {4}System Architecture and Methodology}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}High-Level Architecture}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Data and Corpus}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Methodology}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Technology Stack Evolution}{4}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Architecture Modes and Feature Flags}{5}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Agentic Retrieval Pipeline}{5}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Development Chronology}{5}{section.5}%
+\contentsline {section}{\numberline {6}Daily Progress Log}{6}{section.6}%
+\contentsline {section}{\numberline {7}Evaluation Framework}{7}{section.7}%
+\contentsline {subsection}{\numberline {7.1}LLM-as-a-Judge Metrics}{7}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Retrieval Metrics}{7}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Performance Summary}{8}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Module-by-Module Implementation}{8}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Ingestion}{8}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Vector Retrieval}{8}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Knowledge Graph}{9}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Reranking and Context Assembly}{9}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Query Handling}{9}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Generation}{9}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Evaluation}{9}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Frontend and Reliability Enhancements}{10}{subsection.8.8}%
+\contentsline {section}{\numberline {9}Results}{10}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Key Runs (Chronological)}{10}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Evaluation Figures}{15}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Roadmap and Implementation Goals}{15}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Goal 1: Canonical Government Schemes Data Platform}{15}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Goal 2: Intelligent Upload and Strategy Selection}{15}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Goal 3: ChromaDB Vector Store and Embedding Infrastructure}{15}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Goal 4: Metadata-First Storage}{15}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Goal 5: Document Registry Service}{15}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Goal 6: TableRAG for CSV and Excel}{15}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Goal 7: Hierarchical Structure-Aware RAG}{15}{subsection.10.7}%
+\contentsline {subsection}{\numberline {10.8}Goal 8: Agentic Retrieval Architecture}{16}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.9}Goal 9: Hybrid Retrieval Layer}{16}{subsection.10.9}%
+\contentsline {subsection}{\numberline {10.10}Goal 10: Reranking and Context Optimization}{16}{subsection.10.10}%
+\contentsline {subsection}{\numberline {10.11}Implementation Milestones}{16}{subsection.10.11}%
+\contentsline {section}{\numberline {11}Live Multimodal Extension}{16}{section.11}%
+\contentsline {section}{\numberline {12}Conclusion and Future Scope}{16}{section.12}%
+\contentsline {section}{\numberline {13}Acknowledgements}{17}{section.13}%
+\contentsline {section}{\numberline {14}References}{17}{section.14}%

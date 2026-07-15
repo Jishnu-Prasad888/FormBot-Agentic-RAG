@@ -1,474 +1,485 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
 
-\usepackage[margin=0.9in]{geometry}
+% ---------- Packages ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage{xcolor}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{tabularx}
-\usepackage{placeins}
-\usepackage{enumitem}
-\usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
 \usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{tabularx}
 
-\definecolor{prismblue}{HTML}{2457A6}
-\definecolor{prismpurple}{HTML}{7562C8}
-\definecolor{prismgreen}{HTML}{2E8B57}
-\definecolor{darkgray}{HTML}{333B4F}
-
+% Force everything to black — no colour anywhere
+\definecolor{reportblack}{RGB}{0,0,0}
 \hypersetup{
-  colorlinks=true,
-  linkcolor=prismblue,
-  urlcolor=prismpurple,
-  citecolor=prismgreen
+    colorlinks=true,
+    linkcolor=reportblack,
+    citecolor=reportblack,
+    urlcolor=reportblack,
+    filecolor=reportblack
 }
 
+% ---------- Heading formatting ----------
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+\onehalfspacing
+
+\setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Formbot: An Agentic RAG Platform for Form Understanding}
-\rhead{Internship Report}
-\cfoot{\thepage}
-\setlength{\headheight}{14pt}
+\fancyhead[L]{FormBot - Knowledge-Augmented Generation for SBI Form Assistance}
+\fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\titleformat{\section}{\Large\bfseries\color{prismblue}}{\thesection}{0.6em}{}
-\titleformat{\subsection}{\large\bfseries\color{prismpurple}}{\thesubsection}{0.6em}{}
-\titleformat{\subsubsection}{\bfseries\color{darkgray}}{\thesubsubsection}{0.6em}{}
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.55\baselineskip}
-\setlist[itemize]{leftmargin=1.4em,itemsep=0.2em,topsep=0.2em}
-\setlist[enumerate]{leftmargin=1.6em,itemsep=0.2em,topsep=0.2em}
-\renewcommand{\arraystretch}{1.2}
-
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-
-\title{\bfseries\color{prismblue}Formbot\\[0.2em]
-\large An Agentic, Knowledge-Augmented RAG Platform for\\ Automated Banking Form Understanding and Question Answering}
-\author{Jishnu Prasad\\
-\small Phone: 9844778936 \quad Email: \href{mailto:jishnuprasad.spirelab.iisc@gmail.com}{jishnuprasad.spirelab.iisc@gmail.com}}
-\date{\today}
+\title{
+    \vspace{-1.5cm}
+    \textbf{\Large Design and Implementation of a Knowledge-Augmented Generation (KAG) Module for Assistance in SBI Bank Form Filling}
+}
+\author{
+    Jishnu Prasad \\
+    Summer Intern, SPIRE Lab \\
+    Indian Institute of Science
+}
+\date{July 2026}
 
 \begin{document}
-\maketitle
 
-\begin{abstract}
-\noindent
-I wrote this report to capture how I designed, built, and iterated on
-\textbf{Formbot}, a multimodal Retrieval-Augmented Generation (RAG) platform I
-developed during my internship to answer questions over State Bank of India
-(SBI) forms, schemes, and related documentation. I started with a simple
-nearest-neighbour vector search prototype and grew it into a Knowledge-
-Augmented Generation (KAG) system that blends a Neo4j knowledge graph, hybrid
-Qdrant/Elasticsearch retrieval, cross-encoder reranking, and an LLM-as-a-judge
-evaluation framework, ultimately shipping a live voice- and vision-enabled
-agent. I walk through the timeline, my day-by-day log, and the technical
-architecture at each stage while situating the work in the broader RAG
-literature.
-\end{abstract}
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE \textbf{FormBot - Design and Implementation of a Retrieval-augmented Generation (RAG) Module for Automated Assistance in SBI Bank Form Filling}}\\[1cm]
+{\large Project Report}\\[2cm]
 
+{\large Submitted by}\\[0.3cm]
+{\large \textbf{Jishnu Prasad}}\\
+{\large Summer Intern}\\[1.5cm]
 
-%======================================================================
+{\large \textbf{Summer Internship 2026, SPIRE Lab, IISc, Bangalore}}\\[1.5cm]
+
+{\large Under the guidance of}\\
+{\large \textbf{Dr. Prasanta Kumar Ghosh}}\\
+
+{\large Mentor}\\
+{\large \textbf{Amartyaveer}}\\
+
+\vfill
+{\large \textbf{Department of Electrical Engineering}}\\
+{\large \textbf{SPIRE Lab, IISc}}\\
+{\large Bangalore, Karnataka}\\
+{\large July, 2026}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% =========================================================
+\section{Abstract}
+% =========================================================
+
+FormBot is a Retrieval-augmented generation (RAG) system that answers questions about State Bank of India (SBI) forms with strictly grounded evidence. The work began with a 206-question manual dataset, expanded with \textasciitilde1{,}100 LLM-generated questions to stress-test retrieval and generation. The system evolved from a nearest-neighbour baseline to a hybrid pipeline combining a Neo4j knowledge graph, ChromaDB vector search, early-stage Elasticsearch/BM25 experiments, and cross-encoder reranking, all measured with an LLM-as-judge evaluation harness. The final design delivers grounded answers, live multimodal support (voice and vision), and reproducible evaluation across iterations. Retrieval quality remained the dominant bottleneck; metadata quality, hybrid search, and reranking produced the largest gains.
+
+% =========================================================
 \section{Introduction}
+% =========================================================
 
-I conceived Formbot as an intelligent assistant that could answer questions
-about SBI banking forms, government schemes, and financial products while
-staying grounded in verified source documents instead of relying purely on an
-LLM's parametric knowledge. That meant building the entire RAG stack myself:
-collecting data (manual Q\&A curation, web scraping, OCR of scanned forms),
-standing up embeddings and vector storage, designing an agentic retrieval and
-reranking pipeline, putting in place a rigorous multi-metric evaluation
-framework, and finally adding a real-time voice- and vision-enabled interaction
-layer.
+SBI forms are dense, procedural, and varied across products. FormBot was created to help applicants and staff get precise answers grounded in official documents while accommodating scanned forms, tables, and scraped text. Source code: \href{https://github.com/Jishnu-Prasad888/FormBot-Agentic-RAG}{github.com/Jishnu-Prasad888/FormBot-Agentic-RAG}.
 
-I also built the evaluation dataset from scratch: 206 manually authored
-questions plus roughly 1{,}100 LLM-generated questions, then constructed the
-RAG pipeline end to end to run against that set.
+\section{Problem Statement}
+% =========================================================
 
-\subsection{Objectives}
-\begin{itemize}
-  \item Build a normalized, metadata-rich corpus of SBI banking forms, schemes,
-        and web content in English and Kannada.
-  \item Design a retrieval pipeline that combines dense vector search, sparse
-        keyword search (BM25/Elasticsearch), and structured knowledge-graph
-        retrieval (Neo4j) for maximum recall and precision.
-  \item Establish an LLM-as-a-judge evaluation framework with explainable,
-        multi-metric scoring (accuracy, faithfulness, context precision/recall,
-        answer relevancy) and retrieval-specific ranking metrics (MRR, Recall@K,
-        nDCG@10).
-  \item Extend the system to a live, multimodal interaction mode supporting
-        speech-to-text, text-to-speech, and camera-based form field extraction.
+\begin{itemize}[leftmargin=1.2cm]
+    \item \textbf{User challenges}: Scattered procedural details, inconsistent form structures, hard-to-find eligibility rules and document checklists, and multilingual/scanned inputs.
+    \item \textbf{Technical challenges}: Retrieval across mixed modalities (PDF, tables, text), reducing hallucinations, avoiding scheme drift, and keeping answers tightly grounded.
+    \item \textbf{Constraints}: Banking answers must cite evidence; when evidence is missing, the assistant must refuse or return partial, caveated responses.
+    \item \textbf{Objectives}: Deliver a retrieval-grounded assistant that is precise, refusal-capable, and evaluation-backed, with hybrid search (vector + graph + sparse), reranking, and reproducible metrics.
 \end{itemize}
 
-%======================================================================
-\section{System Architecture}
+% =========================================================
+\section{System Architecture and Methodology}
+% =========================================================
 
-\subsection{Retrieval Strategy by Data Type}
-\begin{table}[h]
-\centering
-\begin{tabularx}{\textwidth}{>{\bfseries}lY}
-\toprule
-Data Type & Retrieval Strategy \\
-\midrule
-CSV / Excel & TableRAG (schema + cell-value index) \\
-PDF & Hierarchical, structure-aware RAG \\
-Markdown & Structure-aware RAG \\
-Plain text / scraped web pages & Vector RAG \\
-Forms $\leftrightarrow$ fields $\leftrightarrow$ regulations & Neo4j Knowledge Graph (KAG) \\
-Keyword / exact-match queries & Elasticsearch (BM25) \\
-Voice queries & Whisper STT $\to$ RAG $\to$ TTS pipeline \\
-Scanned / camera form images & Vision-language OCR (GPT-4o / Gemini) \\
-\bottomrule
-\end{tabularx}
-\caption{Document-type-specific retrieval strategies used across the project.}
-\end{table}
+\subsection{High-Level Architecture}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Document ingestion into ChromaDB collections (forms, metadata tables, FAQs, compiled web text) with rich metadata.
+    \item Dual retrieval: dense vector search plus a Neo4j knowledge graph; earlier stages also used Elasticsearch/BM25.
+    \item Cross-encoder reranking and form-aware boosting to assemble the final context window.
+    \item Generation via GPT-4o-mini under a strict grounding prompt.
+    \item Evaluation harness with LLM-as-judge metrics and diagnostic retrieval signals.
+\end{itemize}
+
+\subsection{Data and Corpus}
+\begin{itemize}[leftmargin=1.2cm]
+    \item 29 core SBI forms (account opening/closure, nomination, SSA, SCSS, PPF, PMMY, savings products).
+    \item Structured metadata table (eligibility, beneficiary type, required documents, mode of application, offering details).
+    \item Glossary and abbreviations (KYC, NEFT, PMJDY, CIF, CKYC, etc.).
+    \item Evaluation: 206 manual Q\&A + \textasciitilde1{,}100 LLM-generated Q\&A; later runs used 756-pair subsets.
+    \item Primary corpus of \textasciitilde735 SBI banking JSON/TXT/PDF/Markdown files; Elasticsearch is optional and not required to serve data.
+\end{itemize}
+
+\subsection{Methodology}
+The project followed a diagnose-and-fix loop: run full evaluations, classify failures (retrieval vs. generation vs. corpus gaps), design targeted fixes, and re-run. Metrics were revised when judge behaviour was noisy. Retrieval changes (metadata, hybrid search, reranking) consistently produced the largest gains.
 
 \subsection{Technology Stack Evolution}
-\begin{longtable}{>{\bfseries}p{0.28\textwidth}p{0.62\textwidth}}
+\begin{longtable}{@{}>{\bfseries}p{0.28\textwidth}p{0.62\textwidth}@{}}
 \toprule
 Component & Evolution \\
 \midrule
-\endhead
-LLM \& Embeddings & Ollama (Llama3.1:8B, nomic-embed-text-v2-moe) $\to$
-  OpenAI GPT-4o-mini + text-embedding-3-small/large $\to$ Qwen (2.5-7B / 3-8B,
-  fine-tuning experiments) for evaluation \\
-Vector Store & ChromaDB $\to$ Qdrant (HNSW, scalar quantization) \\
-Keyword Search & None $\to$ Elasticsearch (BM25) \\
-Structured Knowledge & None $\to$ Neo4j knowledge graph (forms, fields,
-  regulations, requirements) \\
-Relational Store & SQLite $\to$ PostgreSQL \\
-Retrieval Fusion & Simple deduplication $\to$ Reciprocal Rank Fusion (RRF) \\
-Reranking & None $\to$ single-pass cross-encoder $\to$ two-pass cross-encoder
-  with neighbour-chunk expansion \\
-Evaluation & Cosine-similarity heuristics $\to$ LLM-as-a-judge (5 metrics with
-  rationales) + ranking metrics (MRR, Recall@K, nDCG@10) \\
-Interaction Mode & Batch evaluation only $\to$ live chat $\to$ live voice
-  (STT/TTS) + camera-based form OCR \\
+LLM \& Embeddings & Llama 3.1 (Ollama) -> GPT-4o-mini + text-embedding-3-small/large -> Qwen (fine-tuning experiments for evaluator/retriever). \\
+Vector Store & ChromaDB -> Qdrant -> ChromaDB (for compact experiments). \\
+Keyword Search & None -> Elasticsearch (BM25). \\
+Structured Knowledge & None -> Neo4j knowledge graph (forms, fields, regulations). \\
+Relational Store & SQLite -> PostgreSQL. \\
+Retrieval Fusion & Deduplication -> Reciprocal Rank Fusion. \\
+Reranking & None -> cross-encoder -> two-pass cross-encoder with neighbour expansion. \\
+Evaluation & Cosine heuristics -> LLM-as-judge (5 metrics) + ranking metrics (MRR, Recall@K, nDCG@10). \\
+Interaction Mode & Batch only -> live chat -> live voice + camera OCR. \\
 \bottomrule
-\caption{Progressive evolution of the Formbot technology stack.}
 \end{longtable}
 
+\subsection{Architecture Modes and Feature Flags}
+The system operated in two main modes: (1) a lightweight JSON+NumPy cosine RAG with 8 backend files, later re-augmented with persistent Chroma at \texttt{backend/data/chroma/}, multi-file ingestion, and progress UI (GPT-4o-mini + Ollama supported); and (2) a KAG-first stack with Qdrant as the primary vector store, Neo4j/PostgreSQL graph, feature-flagged components, updated health checks, UUID chunk IDs, and Postgres on port 7000, with Chroma retained as a fallback.
+
 \subsection{Agentic Retrieval Pipeline}
-I hardened the evaluation pipeline (\texttt{agent\_runner.py}) to run the
-following stages for each query:
-\begin{enumerate}
-  \item \textbf{Intent detection} -- section (e.g.\ ``eligibility'', ``interest
-        rate'') and product-name extraction via keyword and regex matching.
-  \item \textbf{KAG retrieval} -- the Neo4j graph is queried for candidate
-        document IDs and related-form context.
-  \item \textbf{Hybrid search} -- Qdrant (dense) and Elasticsearch/BM25
-        (sparse) results are combined using Reciprocal Rank Fusion, filtered
-        by the KAG candidates.
-  \item \textbf{Two-pass cross-encoder reranking} -- an initial rerank at
-        \(2\times\text{top-}k\), followed by neighbour-chunk expansion and a
-        second rerank to the final top-\(k\).
-  \item \textbf{Iterative Elasticsearch enhancement} -- a sufficiency check
-        triggers supplementary ES queries when context is judged incomplete.
-  \item \textbf{Answer generation} -- the final context is passed to the LLM
-        along with a strict, SBI-banking-scoped system prompt.
+\begin{enumerate}[leftmargin=1.2cm]
+    \item Intent detection for section and product hints.
+    \item Knowledge graph retrieval for candidate document IDs and related context.
+    \item Hybrid search with Qdrant/ChromaDB (dense) plus Elasticsearch/BM25 (sparse) fused via RRF.
+    \item Two-pass cross-encoder reranking with neighbour expansion, then final top-$k$ selection.
+    \item Iterative Elasticsearch enhancement when context is insufficient.
+    \item Answer generation under a strict banking-scoped prompt.
 \end{enumerate}
 
-%======================================================================
+Every evaluation query in the KAG mode first pulls Neo4j candidates (seeded automatically from uploads when metadata is present), then hybrid retrieval; a KagGuide frontend view exposes this flow. Metadata-aware RRF combines dense/sparse scores with filters on \texttt{product\_name}, \texttt{category}, \texttt{file\_name}, \texttt{section}, and \texttt{chunk\_index}, plus query expansion and neighbour expansion for recall.
+
+% =========================================================
 \section{Development Chronology}
+% =========================================================
 
-I tracked the major architectural milestones across the project's git history,
-drawing from the \texttt{master}, \texttt{nearest\_neighbour}, \texttt{kag},
-\texttt{feat\_live\_ai}, and \texttt{app} branches:
-
-\begin{longtable}{>{\bfseries}p{0.14\textwidth}p{0.16\textwidth}p{0.62\textwidth}}
+\begin{longtable}{@{}>{\bfseries}p{0.16\textwidth}p{0.18\textwidth}p{0.60\textwidth}@{}}
 \toprule
 Date & Commit & Milestone \\
 \midrule
 \endhead
-2026-05-25 & 247931b & Initial commit -- Ollama-based RAG prototype (FastAPI,
-  SQLite, ChromaDB). \\
-2026-05-25 & 6c73b78 & Migrated to OpenAI for LLM generation and embeddings;
-  added LLM-as-a-judge evaluator. \\
-2026-05-29 & 7cab83d & New SBI Banking Knowledge Assistant system prompt with
-  retrieval-aware behaviour rules. \\
-2026-06-02 & 424678b & Multi-agent evaluation pipeline introduced
-  (Coordinator, Vector, SQLite, Web, Evaluator agents). \\
-2026-06-08 & 4516739 -- ae6d31d & Query expansion and cross-encoder reranking
-  added to retrieval. \\
-2026-06-09 & cac51ef & Increased retrieval recall; banking-grounded answer
-  generation. \\
-2026-06-10 & 158cc72 & Comprehensive RAG improvements and enhanced evaluation
-  metrics. \\
-2026-06-11 & 2860298 -- ed9088b & Simplified to nearest-neighbour retrieval to
-  debug accuracy regressions (27--47\%). \\
-2026-06-12 & 4a27f50 -- c6aa3d1 & Web crawler and Elasticsearch ingestion of
-  \(\sim\)600 SBI pages. \\
-2026-06-15 & 8887101 & Reciprocal Rank Fusion replaces naive deduplication;
-  intent detection and metadata filters; neighbour-chunk expansion;
-  two-pass reranking. \\
-2026-06-19 & 71e3b35 & Introduced Neo4j, Qdrant, and PostgreSQL -- start of
-  the Knowledge-Augmented Generation (KAG) architecture. \\
-2026-06-22 & 038b067 -- 8d7f007 & Model swap experiments (GPT-5.1) and
-  codebase cleanup. \\
-2026-06-23 & fa92da6 & KAG pipeline reaches \textbf{68.3\% overall score} with
-  100\% accuracy on retrieval-related metrics. \\
-2026-06-29 & 633da70 & Elasticsearch dependency removed; requirements
-  consolidated. \\
-2026-07-01 -- 07-03 & 9052bf2 -- f024c99 & Reset to a simple cosine-similarity
-  baseline; Qwen tested as retriever/evaluator vs.\ OpenAI. \\
-2026-07-07 & 4f4f1af & Image OCR support added (OpenAI + Google GenAI) for
-  scanned form ingestion. \\
-2026-07-08 & 962a0d5 & Live user interaction endpoints for RAG. \\
-2026-07-10 & 79c5e2d & Live call and voice conversation with the AI agent
-  (Whisper STT + TTS). \\
-2026-07-10 & d7a516a & Final cleanup -- removal of unused files for the
-  production app. \\
+2026-05-25 & 247931b & Initial Ollama RAG prototype (FastAPI, SQLite, ChromaDB). \\
+2026-05-25 & 6c73b78 & Switched generation/embeddings to OpenAI; added LLM-as-judge evaluator. \\
+2026-05-29 & 7cab83d & New SBI banking assistant prompt with retrieval-aware rules. \\
+2026-06-02 & 424678b & Multi-agent evaluation pipeline (Coordinator, Vector, SQLite, Web, Evaluator). \\
+2026-06-08 & 4516739..ae6d31d & Query expansion and cross-encoder reranking added. \\
+2026-06-09 & cac51ef & Higher retrieval recall; banking-grounded answer generation. \\
+2026-06-10 & 158cc72 & Broad RAG improvements and evaluation metrics. \\
+2026-06-11 & 2860298..ed9088b & Simplified to nearest-neighbour to debug accuracy regressions. \\
+2026-06-12 & 4a27f50..c6aa3d1 & Web crawler + Elasticsearch ingestion of \textasciitilde600 SBI pages. \\
+2026-06-15 & 8887101 & RRF, intent detection, metadata filters, neighbour expansion, two-pass rerank. \\
+2026-06-19 & 71e3b35 & Added Neo4j, Qdrant, PostgreSQL (start of KAG). \\
+2026-06-22 & 038b067..8d7f007 & GPT-5.1 experiments and cleanup. \\
+2026-06-23 & fa92da6 & KAG pipeline reached 68.3\% overall with 100\% retrieval metrics. \\
+2026-06-29 & 633da70 & Removed Elasticsearch dependency; consolidated requirements. \\
+2026-07-01 to 2026-07-03 & 9052bf2..f024c99 & Reset to cosine baseline; compared Qwen vs. OpenAI for retrieval/eval. \\
+2026-07-07 & 4f4f1af & Image OCR support (OpenAI + Google GenAI). \\
+2026-07-08 & 962a0d5 & Live user interaction endpoints. \\
+2026-07-10 & 79c5e2d & Live call and voice conversation (Whisper + TTS). \\
+2026-07-10 & d7a516a & Final cleanup for production app. \\
 \bottomrule
-\caption{Consolidated development chronology across all branches.}
+\caption{Key milestones across branches.}
 \end{longtable}
 
-%======================================================================
+% =========================================================
 \section{Daily Progress Log}
+% =========================================================
 
-\begin{longtable}{>{\bfseries}p{0.16\textwidth}p{0.74\textwidth}}
+\begin{longtable}{@{}>{\bfseries}p{0.18\textwidth}p{0.72\textwidth}@{}}
 \toprule
 Date & Work Done \\
 \midrule
 \endhead
-20/5/2026 & Completed manual Q\&A for 14 forms; started LLM-generated question--answer pairs. \\
-21/5/2026 & Completed LLM Q\&A generation; translated questions and answers for Kannada forms. \\
-22/5/2026 & Built the first RAG backend/frontend pass; worked from a reference codebase. \\
-25/5/2026 & Delivered a full RAG app with automated CSV evaluation; ran 206 English manual questions; tested several Kannada OCR modules (all unsatisfactory). \\
-26/5/2026 & Collected additional SBI data (68/206 cells); fixed mismatched eval entries; tuned prompts to expected answers. \\
-02/6/2026 & Built the agentic RAG; post-data-run overall score about 50\%. \\
-03/6/2026 & Simplified back to nearest-neighbour; added scraped data; overall score 60.4\%. \\
-04/6/2026 & Reranking experiments stalled; removing irrelevant eval questions raised accuracy to 62\%. \\
-05/6/2026 & Added query expansion and a stronger reranker; score dropped to 57\% due to prompt tuning. \\
-08/6/2026 & Cross-encoder reranking with hybrid RAG improved faithfulness and context precision; accuracy 60.4\%. \\
-09/6/2026 & Built retrieval-focused evaluation (MRR, Recall@10, etc.); new metrics lowered measured score to 48\%. \\
-10/6/2026 & Tried new chunking; simplified RAG to nearest-neighbour to isolate retrieval errors. \\
-11/6/2026 & Added per-question logging; built a new hybrid with Elasticsearch after BM25 zero-hit cases; overall score 61.7\%. \\
-12/6/2026 & Scraped $\sim$600 SBI pages; added Elasticsearch with ChromaDB; accuracy 63.6\%. \\
-15/6/2026 & Replaced ChromaDB with Elasticsearch for keyword + vector; started two-way Qwen3-8B feedback loop. \\
-16/6/2026 & Continued Qwen fine-tuning setup; combined Elasticsearch with prompt engineering. \\
-17/6/2026 & Let the LLM trigger Elasticsearch when context was thin; reindexed with richer metadata. \\
+20/5/2026 & Completed manual Q\&A for 14 forms; started LLM-generated pairs. \\
+21/5/2026 & Finished LLM Q\&A generation; translated for Kannada forms. \\
+22/5/2026 & Built first RAG backend/frontend pass. \\
+25/5/2026 & Full RAG app with automated CSV eval; ran 206 English manual questions; tested Kannada OCR modules. \\
+26/5/2026 & Collected more SBI data (68/206 cells); fixed mismatched eval entries; prompt tuning. \\
+02/6/2026 & Agentic RAG; overall score \textasciitilde50\%. \\
+03/6/2026 & Nearest-neighbour simplification; added scraped data; score 60.4\%. \\
+04/6/2026 & Reranking stalled; pruning irrelevant eval questions lifted accuracy to 62\%. \\
+05/6/2026 & Added query expansion and stronger reranker; score dipped to 57\% (prompt issues). \\
+08/6/2026 & Cross-encoder + hybrid RAG improved faithfulness/context precision; accuracy 60.4\%. \\
+09/6/2026 & Retrieval-focused metrics (MRR, Recall@10); measured accuracy at 48\%. \\
+10/6/2026 & New chunking; simplified to nearest-neighbour to isolate retrieval errors. \\
+11/6/2026 & Per-question logging; new ES hybrid after BM25 zero hits; score 61.7\%. \\
+12/6/2026 & Scraped \textasciitilde600 pages; ES + ChromaDB; accuracy 63.6\%. \\
+15/6/2026 & Replaced ChromaDB with Elasticsearch for keyword + vector; began Qwen3-8B feedback loop. \\
+16/6/2026 & Continued Qwen fine-tuning setup; ES + prompt engineering. \\
+17/6/2026 & Let LLM trigger Elasticsearch when context thin; reindexed with richer metadata. \\
 18/6/2026 & Shifted to KAG with Neo4j and PostgreSQL. \\
-19/6/2026 & Built the Neo4j knowledge graph; accuracy around 40\%. \\
-22/6/2026 & Hybrid KAG + RAG (Neo4j, PostgreSQL, Qdrant, Elasticsearch); overall score around 57\%. \\
-23/6/2026 & Analysed eval results; tightened the system prompt with worked examples. \\
+19/6/2026 & Built Neo4j KG; accuracy \textasciitilde40\%. \\
+22/6/2026 & Hybrid KAG + RAG (Neo4j, PostgreSQL, Qdrant, ES); score \textasciitilde57\%. \\
+23/6/2026 & Analysed eval results; tightened prompt with worked examples. \\
 24/6/2026 & Prepared fine-tuning examples for Qwen. \\
-25/6/2026 & Swapped Qwen3-14B for Qwen2.5-7B-Instruct to resolve fine-tuning errors. \\
+25/6/2026 & Swapped Qwen3-14B for Qwen2.5-7B-Instruct to fix fine-tuning errors. \\
 30/6/2026 & Debugged CUDA OOM; attempted CPU-only fine-tuning. \\
-01/7/2026 & Fine-tuning script kept hitting segmentation faults. \\
-02/7/2026 & Continued debugging; traced issues to a PyTorch version mismatch. \\
-03/7/2026 & Built an improved fine-tuning set and cleaned the ASR dataset. \\
+01/7/2026 & Fine-tuning script hit segmentation faults. \\
+02/7/2026 & Traced fine-tuning errors to PyTorch version mismatch. \\
+03/7/2026 & Built improved fine-tuning set; cleaned ASR dataset. \\
 06/7/2026 & OCR frontend/backend integration. \\
-07/7/2026 & Finished backend OCR integration; started the ASR app DB and an OCR eval-set creation script. \\
+07/7/2026 & Finished backend OCR; started ASR app DB and OCR eval-set script. \\
 \bottomrule
-\caption{Daily activity log for the internship period (times omitted).}
+\caption{Daily activity (times omitted).}
 \end{longtable}
 
-%======================================================================
+% =========================================================
 \section{Evaluation Framework}
+% =========================================================
 
 \subsection{LLM-as-a-Judge Metrics}
-For every answer Formbot generates, I score five dimensions with an LLM judge
-and keep the rationales for explainability:
-\begin{itemize}
-  \item \textbf{Accuracy} -- semantic match between the generated and expected
-        answer.
-  \item \textbf{Faithfulness} -- grounding of the answer in the retrieved
-        context.
-  \item \textbf{Context Precision} -- fraction of retrieved chunks that are
-        actually relevant.
-  \item \textbf{Context Recall} -- whether the retrieved context contains all
-        information needed for a correct answer.
-  \item \textbf{Answer Relevancy} -- whether the answer directly addresses the
-        question asked.
+\begin{itemize}[leftmargin=1.2cm]
+    \item Accuracy (LLM) -- semantic match to the expected answer.
+    \item Faithfulness -- grounded in retrieved context.
+    \item Context Precision -- fraction of retrieved chunks that are relevant.
+    \item Context Recall -- whether retrieved context contains all needed facts.
+    \item Answer Relevancy -- whether the answer addresses the question.
 \end{itemize}
 
-\subsection{Retrieval Ranking Metrics}
-I also grade retrieval directly with \textbf{Recall@10/20/50},
-\textbf{Mean Reciprocal Rank (MRR)}, and \textbf{nDCG@10} so I can separate
-retrieval quality from generation quality.
+\subsection{Retrieval Metrics}
+Recall@10/20/50, Mean Reciprocal Rank, and nDCG@10 to isolate retrieval quality from generation quality.
 
 \subsection{Performance Summary}
 \begin{table}[h]
 \centering
-\renewcommand{\arraystretch}{1.1}
-\setlength{\tabcolsep}{4pt}
-\begin{tabularx}{0.9\textwidth}{>{\bfseries\raggedright\arraybackslash}p{0.72\textwidth}>{\raggedleft\arraybackslash}p{0.14\textwidth}}
+\begin{tabularx}{0.9\textwidth}{@{}>{\bfseries\raggedright\arraybackslash}p{0.62\textwidth}>{\raggedleft\arraybackslash}p{0.2\textwidth}@{}}
 \toprule
-Stage (dashboard title) & Overall Score \\
+Stage & Overall score \\
 \midrule
-Cross-encoder reranking with hybrid RAG & 60.4\% \\
-after corss entropy and query expansion & 61.7\% \\
-15th june & 60.0\% \\
-15th june with elasticsearch & 64.7\% \\
-19th june with elasticsearch neo4j qrant and postgress & 64.9\% \\
-19th june gpt5.1 with elasticsearch neo4j qrant and postgress & 61.3\% \\
-23 june after KAG and llm changed answers & 56.1\% \\
-2nd july simple nearest neighbouar search with chromadb 68 percent all metrics & 68.0\% \\
-2nd july simple neatrest neighbour with chromadb finetuned qwen 2.5 68.3 percent accuracy & \textbf{68.3\%} \\
-3rd july using qwen as reteriver and openai as generation llm & 67.4\% \\
+Nearest-neighbour baseline & 42\% \\
+ + Query expansion (max 2 retries) & 47\% \\
+ + Cross-encoder reranking (initial) & 27--60.4\% (unstable) \\
+Elasticsearch + ChromaDB hybrid & 61.7--63.6\% \\
+Early Neo4j knowledge graph only & \textasciitilde40\% \\
+Hybrid KAG (Neo4j + Postgres + Qdrant + ES) & \textasciitilde57\% \\
+Full KAG pipeline (best run) & \textbf{68.3\%} \\
 \bottomrule
 \end{tabularx}
-\caption{Overall evaluation scores pulled from the LLM-as-a-judge dashboards (chronological).}
+\caption{Overall scores across major iterations.}
 \end{table}
 
- Two lessons kept surfacing for me. First, every time I added richer metrics
- (MRR, Recall@K), the \emph{measured} score sometimes dipped even when the
- system felt better, because the new metrics exposed failure modes the earlier
- heuristics ignored. Second, fixing retrieval architecture mattered far more
- than swapping the generation LLM; retrieval quality ultimately bounded answer
- quality.
+Two lessons emerged: (1) richer metrics can lower measured scores by exposing failure modes; (2) retrieval architecture changes drive accuracy more than swapping the generation model.
 
-\subsection{Evaluation Snapshots}
+% =========================================================
+\section{Module-by-Module Implementation}
+% =========================================================
 
-Figure~\ref{fig:evaluation-snapshots} collects the representative LLM-as-a-judge
-dashboards I produced during the internship, ordered chronologically. I kept the
-run titles in the captions and appended the overall score from each dashboard.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/Cross-encoder reranking with a larger model and hybrid RAG improved faithfulness and context precision; accu- racy 60.4\%.jpeg}}
-  \caption{Cross-encoder reranking with a larger model and hybrid RAG improved faithfulness and context precision; accuracy 60.4\% --- Overall score: 60.4\%.}
-  \label{fig:evaluation-snapshots}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/after corss entropy and query expansion.jpeg}}
-  \caption{after corss entropy and query expansion --- Overall score: 61.7\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/15th june.png}}
-  \caption{15th june --- Overall score: 60.0\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/15th june with elasticsearch.png}}
-  \caption{15th june with elasticsearch --- Overall score: 64.7\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/19th june with elasticsearch neo4j qrant and postgress.png}}
-  \caption{19th june with elasticsearch neo4j qrant and postgress --- Overall score: 64.9\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/19th june gpt5.1 with elasticsearch neo4j qrant and postgress.png}}
-  \caption{19th june gpt5.1 with elasticsearch neo4j qrant and postgress --- Overall score: 61.3\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/23 june after KAG and llm changed answers.png}}
-  \caption{23 june after KAG and llm changed answers --- Overall score: 56.1\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/2nd july simple nearest neighbouar search with chromadb 68 percent all metrics.png}}
-  \caption{2nd july simple nearest neighbouar search with chromadb 68 percent all metrics --- Overall score: 68.0\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/2nd july simple neatrest neighbour with chromadb finetuned qwen 2.5 68.3 percent accuracy.png}}
-  \caption{2nd july simple neatrest neighbour with chromadb finetuned qwen 2.5 68.3 percent accuracy --- Overall score: 68.3\%.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{\detokenize{eval/results/3rd july using qwen as reteriver and openai as generation llm.png}}
-  \caption{3rd july using qwen as reteriver and openai as generation llm --- Overall score: 67.4\%.}
-\end{figure}
-
-\FloatBarrier
-
-%======================================================================
-\section{Live Multimodal Extension}
-
-In the final phase, I extended Formbot from a batch evaluation tool into a live,
-multimodal conversational agent:
-\begin{itemize}
-  \item \textbf{Speech-to-text} via Whisper-1 for voice queries.
-  \item \textbf{Text-to-speech} via streaming OpenAI TTS for spoken responses.
-  \item \textbf{Live camera form scanning} -- perceptual-hash (pHash) change
-        detection throttles frames to a vision-language model (GPT-4o /
-        Gemini 2.5 Pro), which extracts field labels and values and injects
-        them into the RAG context for form-aware question answering.
-  \item \textbf{Stateful session management} to track evolving form field
-        values and diffs across a live session.
-  \item \textbf{ASR dataset creation} -- curated the prompt dataset, assigned
-        other interns to record questions via the Read with Spire app, and
-        coordinated with project associate Supriya R to extend Formbot from
-        text-only to combined audio+text evaluation.
+\subsection{Ingestion}
+\begin{itemize}[leftmargin=1.2cm]
+    \item PDF text extraction and chunking (\textasciitilde1{,}500 characters per chunk); filename links to metadata rows.
+    \item ChromaDB collections: forms, metadata tables, FAQs, compiled third-party text.
+    \item Upload tooling: \texttt{upload\_documents.py} supports recursive folder ingest, dual progress bars, retry/timeout options, per-run retry toggle, env-configurable base URL, and failure logs.
+    \item Metadata schema: common keys such as \texttt{document\_id}, \texttt{filename}, \texttt{chunk\_index}, \texttt{category}, \texttt{product\_name}, \texttt{section}, \texttt{file\_name}, \texttt{content\_hash}, plus PDF/Markdown/Table-specific positions (page, table IDs, parent chunk) to support graph seeding and filtering.
 \end{itemize}
 
-%======================================================================
-\section{Conclusion and Future Work}
+\subsection{Vector Retrieval}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Embeddings: OpenAI \texttt{text-embedding-3-small} for both corpus and queries.
+    \item Fan-out across collections; merge top candidates before reranking.
+    \item Qdrant HNSW index (unsupported \texttt{ef} removed) is the primary store with UUID chunk IDs; Chroma remains a fallback for compact runs.
+\end{itemize}
 
-Over this internship I grew Formbot from a manually curated Q\&A set and a
-basic nearest-neighbour retriever into a knowledge-augmented, multi-agent RAG
-system with live voice and vision support. My biggest takeaway is that
-metadata-rich, hybrid retrieval (dense + sparse + graph) plus rigorous,
-explainable evaluation drives end-to-end accuracy far more than swapping the
-generation model. Next, I want to finish fine-tuning a smaller open-weight
-judge/retriever (Qwen2.5-7B) to cut evaluation cost, broaden Kannada OCR and QA
-coverage, and stabilize the ranking-metric-based evaluation pipeline.
+\subsection{Knowledge Graph}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Neo4j graph with nodes for Document, Chunk, Topic, Column; edges \texttt{HAS\_CHUNK}, \texttt{BELONGS\_TO}, \texttt{HAS\_COLUMN}.
+    \item Dual-pass lookup: expand by source document and by query concepts; merge, filter, and fall back to document facts when needed.
+    \item Final scale: 1,917 nodes and 1,897 edges.
+    \item In KAG mode, uploads auto-seed Postgres/Neo4j with Form/FormVersion/Field/Dependency/Requirement/Regulation nodes; Neo4j client updated to \texttt{AsyncResult.data()} for reliable health checks.
+\end{itemize}
 
-%======================================================================
+\subsection{Reranking and Context Assembly}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Cross-encoder: \texttt{cross-encoder/ms-marco-MiniLM-L-6-v2} with form-hint boosting; pluggable rerankers include \texttt{BAAI/bge-reranker-base}, \texttt{jinaai/jina-reranker-v2-base-multilingual}, and Cohere.
+    \item Assemble top chunks plus graph facts and glossary hits into the final prompt context after hybrid RRF fusion and metadata filters.
+\end{itemize}
+
+\subsection{Query Handling}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Rule-based form-specific detection for reporting and gating.
+    \item Query enrichment with form names when present; glossary fast path for definition queries.
+\end{itemize}
+
+\subsection{Generation}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Model: GPT-4o-mini, temperature 0.1; backend configuration toggles allow switching defaults to GPT-5.1 or Ollama-hosted \texttt{banking-assistant} with matching accuracy scorer.
+    \item Prompt: strict grounding, refuse when evidence is absent, include numeric/procedural details, partial-answer guidance, scheme-drift warning.
+\end{itemize}
+
+\subsection{Evaluation}
+\begin{itemize}[leftmargin=1.2cm]
+    \item LLM-judge metrics: context hit, meaning match, generation accuracy; diagnostic signals for source matching and KG contribution.
+    \item Debug dumps for missed questions; failure buckets for wrong-doc, wrong-chunk, or generation issues.
+    \item Pipeline variants: Elasticsearch as a first-class retriever (synonyms \textrightarrow{} vector \textrightarrow{} BM25 \textrightarrow{} ES \textrightarrow{} RRF \textrightarrow{} rerank \textrightarrow{} neighbour expansion), fp16 reranker fallback to safe mode, batch size 4.
+    \item Frontend eval pauses a batch when LLM API errors occur and surfaces the failing question; partial results stay in memory only. A slimmed endpoint returns chat-style \texttt{query/response/status} with optional metrics.
+\end{itemize}
+
+\subsection{Frontend and Reliability Enhancements}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Navigation trimmed to focus on core flows; dashboard health map fixed to retain Qdrant/Neo4j statuses and Neo4j health false negatives resolved via \texttt{AsyncResult.data()}.
+    \item Evaluation UI adds image OCR upload/server sample buttons and hook-order fix; batches halt cleanly on API errors.
+    \item Live Meet adds camera/screen-share paper detection, PiP, device selection, and throttled OCR with persistent context; streaming coroutine stability improved.
+    \item OCR tooling: \texttt{helpfull scripts/check\_OCR.py} now supports responses-to-chat fallback, PDF-to-image fallback, progress and retry/timeout flags, API-mode selection, and raw OCR printouts for debugging.
+    \item Backend hardening: CORS-safe error middleware, Chroma collection auto-creation, telemetry disabled to avoid upload 500s, and Ollama API compatibility fixes (\texttt{/api/chat} vs. \texttt{/api/generate}).
+\end{itemize}
+
+% =========================================================
+\section{Results}
+% =========================================================
+
+\subsection{Key Runs (Chronological)}
+\begin{table}[h]
+\centering
+\begin{tabularx}{0.92\textwidth}{@{}>{\raggedright\arraybackslash}p{0.62\textwidth} >{\raggedleft\arraybackslash}p{0.22\textwidth}@{}}
+\toprule
+Run (title) & Overall score \\
+\midrule
+Cross-encoder reranking with hybrid RAG & 60.4\% \\
+After cross-entropy and query expansion & 61.7\% \\
+15th June & 60.0\% \\
+15th June with Elasticsearch & 64.7\% \\
+19th June with Elasticsearch, Neo4j, Qdrant, Postgres & 64.9\% \\
+19th June GPT-5.1 with Elasticsearch, Neo4j, Qdrant, Postgres & 61.3\% \\
+23rd June after KAG and LLM prompt changes & 56.1\% \\
+2nd July simple nearest-neighbour (ChromaDB) & 68.0\% \\
+2nd July ChromaDB + fine-tuned Qwen 2.5 retriever & \textbf{68.3\%} \\
+3rd July Qwen retriever + OpenAI generator & 67.4\% \\
+\bottomrule
+\end{tabularx}
+\caption{Evaluation snapshots by date/title.}
+\end{table}
+
+\subsection{Evaluation Figures}
+\begin{figure}[p]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/15th june.png}
+        \captionof{figure}{LLM-as-judge dashboard (15th June, overall 60.0\%).}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/15th june with elasticsearch.png}
+        \captionof{figure}{LLM-as-judge dashboard (15th June with Elasticsearch, 64.7\%).}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/19th june with elasticsearch neo4j qrant and postgress.png}
+        \captionof{figure}{LLM-as-judge dashboard (19th June hybrid ES+Neo4j+Qdrant, 64.9\%).}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/19th june gpt5.1 with elasticsearch neo4j qrant and postgress.png}
+        \captionof{figure}{LLM-as-judge dashboard (19th June GPT-5.1 hybrid, 61.3\%).}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/23 june after KAG and llm changed answers.png}
+        \captionof{figure}{LLM-as-judge dashboard (23rd June prompt updates, 56.1\%).}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/2nd july simple nearest neighbouar search with chromadb 68 percent all metrics.png}
+        \captionof{figure}{LLM-as-judge dashboard (2nd July ChromaDB baseline, 68.0\%).}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/2nd july simple neatrest neighbour with chromadb finetuned qwen 2.5 68.3 percent accuracy.png}
+        \captionof{figure}{LLM-as-judge dashboard (2nd July ChromaDB + fine-tuned Qwen, 68.3\%).}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{eval/results/3rd july using qwen as reteriver and openai as generation llm.png}
+        \captionof{figure}{LLM-as-judge dashboard (3rd July Qwen retriever + OpenAI generator, 67.4\%).}
+    \end{minipage}
+\end{figure}
+
+% =========================================================
+\section{Roadmap and Implementation Goals}
+% =========================================================
+
+\subsection{Goal 1: Canonical Government Schemes Data Platform}
+Normalized scheme data in SQLite with list/filter/detail APIs; indexed on scheme name, state, ministry.
+
+\subsection{Goal 2: Intelligent Upload and Strategy Selection}
+Auto-detect CSV/XLSX/PDF/Markdown/text/audio and route to TableRAG, hierarchical RAG, vector RAG, or speech pipeline; no manual configuration.
+
+\subsection{Goal 3: ChromaDB Vector Store and Embedding Infrastructure}
+Centralized embeddings (Nomic Embed Text V2 MOE via Ollama for offline runs; OpenAI embeddings for online) with incremental/batch indexing, re-indexing, metadata filtering, and multi-collection search.
+
+\subsection{Goal 4: Metadata-First Storage}
+Every chunk stores filename, document ID/type, section, language, chunk IDs, upload date, retrieval strategy; sample record used in experiments included eligibility, subsection, page number, parent chunk, and upload date.
+
+\subsection{Goal 5: Document Registry Service}
+SQLite registry tracking document ID, filename, type, retrieval strategy, language, upload time, chunk count, embedding model, and collection name to support re-index, versioning, deletion, analytics.
+
+\subsection{Goal 6: TableRAG for CSV and Excel}
+Schema index for columns/types/relations plus value index for rows/entities; merges both before generation to preserve table structure.
+
+\subsection{Goal 7: Hierarchical Structure-Aware RAG}
+Preserve document hierarchy (section \textrightarrow{} subsection \textrightarrow{} chunk) for PDFs/Markdown; include metadata nodes for retrieval.
+
+\subsection{Goal 8: Agentic Retrieval Architecture}
+Specialized agents: SQLite, Vector Retrieval, Document Routing, Web Enrichment, Retrieval Evaluation, Coordinator. Query expansion example: ``PM Kisan Karnataka eligibility'' expands to ``Pradhan Mantri Kisan Samman Nidhi'', ``Farmer Income Support'', ``Eligibility Karnataka''. Vector result example: filename \textit{pm\textunderscore kisan\textunderscore guidelines.pdf}, section \textit{Eligibility}, score 0.94.
+
+\subsection{Goal 9: Hybrid Retrieval Layer}
+Combine SQL, vector, TableRAG, metadata search, BM25 keyword, and web retrieval; fuse scores, rerank, and assemble final context.
+
+\subsection{Goal 10: Reranking and Context Optimization}
+Retrieve top 50, rerank, keep top 5--10; deduplicate, drop distractors, weight metadata.
+
+\subsection{Implementation Milestones}
+1) Normalize schemes DB and expose API; 2) Build document registry and validation; 3) Implement upload detection/routing; 4) Add TableRAG, hierarchical RAG, vector RAG pipelines; 5) Integrate ChromaDB collections with metadata filters; 6) Add agent orchestration, retrieval evaluation, reranking, web enrichment; 7) Ship frontend views for schemes, documents, sources, answers.
+
+% =========================================================
+\section{Live Multimodal Extension}
+% =========================================================
+
+The final phase extended FormBot to voice and vision: Whisper-1 speech-to-text for voice queries, OpenAI TTS for spoken responses, live camera scanning with pHash throttling to feed GPT-4o/Gemini for field extraction, and stateful session tracking for evolving form values. OCR providers are switchable (Gemini/OpenAI/Ollama), with OpenAI set as default after experimentation. An ASR audio dataset was collected via the Read with Spire app with curated prompts and supervised data collection.
+
+% =========================================================
+\section{Conclusion and Future Scope}
+% =========================================================
+
+FormBot evolved from a nearest-neighbour baseline to a knowledge-augmented, multi-agent RAG system with live multimodal support. Retrieval quality, not model choice, dominated accuracy: better metadata, hybrid search, and reranking moved scores from the low 40s to \textasciitilde68\%. Next steps include fine-tuning an open-weight judge and retriever, expanding Kannada OCR and QA coverage, stabilising ranking-metric evaluation, and deepening OCR/ASR so scanned and spoken inputs perform comparably to text.
+
+% =========================================================
+\section{Acknowledgements}
+% =========================================================
+
+Thanks to SPIRE Lab, IISc for infrastructure and mentorship; Dr. Prasanta Kumar Ghosh for enabling this work; Supriya R. for support on ASR data collection; Amartya Veer and Ananya for helping with the implementation and swiftly resolving doubts.
+
+% =========================================================
 \section{References}
+% =========================================================
 
-\begin{enumerate}[label={[\arabic*]}]
-  \item P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal,
-    H. K\"{u}ttler, M. Lewis, W. Yih, T. Rockt\"{a}schel, S. Riedel, and
-    D. Kiela, ``Retrieval-Augmented Generation for Knowledge-Intensive NLP
-    Tasks,'' \emph{Advances in Neural Information Processing Systems
-    (NeurIPS)}, 2020.
-
-  \item V. Karpukhin, B. O\u{g}uz, S. Min, P. Lewis, L. Wu, S. Edunov, D. Chen,
-    and W. Yih, ``Dense Passage Retrieval for Open-Domain Question
-    Answering,'' \emph{Proceedings of EMNLP}, 2020.
-
-  \item S. Robertson and H. Zaragoza, ``The Probabilistic Relevance Framework:
-    BM25 and Beyond,'' \emph{Foundations and Trends in Information Retrieval},
-    vol.\ 3, no.\ 4, pp.\ 333--389, 2009.
-
-  \item O. Khattab and M. Zaharia, ``ColBERT: Efficient and Effective
-    Passage Search via Contextualized Late Interaction over BERT,''
-    \emph{Proceedings of SIGIR}, 2020.
-
-  \item G. Izacard and E. Grave, ``Leveraging Passage Retrieval with
-    Generative Models for Open Domain Question Answering,''
-    \emph{Proceedings of EACL}, 2021.
-
-  \item Y. Gao, Y. Xiong, X. Gao, K. Jia, J. Pan, Y. Bi, Y. Dai, J. Sun, and
-    H. Wang, ``Retrieval-Augmented Generation for Large Language Models: A
-    Survey,'' \emph{arXiv preprint arXiv:2312.10997}, 2023.
-
-  \item N. Reimers and I. Gurevych, ``Sentence-BERT: Sentence Embeddings
-    using Siamese BERT-Networks,'' \emph{Proceedings of EMNLP-IJCNLP}, 2019.
-
-  \item B. Peng, M. Galley, P. He, H. Cheng, Y. Xie, Y. Hu, Q. Huang,
-    L. Liden, Z. Yu, W. Chen, and J. Gao, ``Check Your Facts and Try Again:
-    Improving Large Language Models with External Knowledge and Automated
-    Feedback,'' \emph{arXiv preprint arXiv:2302.12813}, 2023.
-
-  \item S. E. Robertson and K. Sp\"{a}rck Jones, ``Relevance Weighting of
-    Search Terms,'' \emph{Journal of the American Society for Information
-    Science}, vol.\ 27, no.\ 3, pp.\ 129--146, 1976.
-
-  \item B. Wang, J. Zeng, W. Chen, and X. Ren, ``Knowledge Graph Enhanced
-    Retrieval-Augmented Generation: A Survey and Practical Guide,''
-    \emph{arXiv preprint arXiv:2311.xxxxx}, 2023.
+\begin{enumerate}[leftmargin=1.2cm]
+    \item P. Lewis et al., ``Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,'' NeurIPS, 2020.
+    \item V. Karpukhin et al., ``Dense Passage Retrieval for Open-Domain Question Answering,'' EMNLP, 2020.
+    \item S. Robertson and H. Zaragoza, ``The Probabilistic Relevance Framework: BM25 and Beyond,'' Foundations and Trends in Information Retrieval, 2009.
+    \item O. Khattab and M. Zaharia, ``ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,'' SIGIR, 2020.
+    \item G. Izacard and E. Grave, ``Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering,'' EACL, 2021.
+    \item Y. Gao et al., ``Retrieval-Augmented Generation for Large Language Models: A Survey,'' arXiv:2312.10997, 2023.
+    \item N. Reimers and I. Gurevych, ``Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks,'' EMNLP-IJCNLP, 2019.
+    \item B. Peng et al., ``Check Your Facts and Try Again: Improving Large Language Models with External Knowledge and Automated Feedback,'' arXiv:2302.12813, 2023.
+    \item S. E. Robertson and K. Spärck Jones, ``Relevance Weighting of Search Terms,'' JASIS, 1976.
 \end{enumerate}
 
 \end{document}
