@@ -1,0 +1,673 @@
+[
+  {
+    "group_id": "0010d0a0-97cf-405d-afac-ee8644d38226",
+    "questions": [
+      {
+        "question_id": "AOF39A818C7",
+        "question": "What does CIF stand for in the account opening form for a resident individual?"
+      },
+      {
+        "question_id": "AOF230E95DD",
+        "question": "What is CKYC for the account opening form for resident individuals?"
+      },
+      {
+        "question_id": "AOFEE8DF76F",
+        "question": "What is FATCA in the context of the account opening form for a resident individual?"
+      },
+      {
+        "question_id": "AOFFB980AE6",
+        "question": "What is TIN in the context of an account opening form for a resident individual?"
+      },
+      {
+        "question_id": "AOFE6379602",
+        "question": "What do the account types \"resident individual,\" \"normal,\" \"small,\" and \"minor\" mean in the context of an account opening form?"
+      },
+      {
+        "question_id": "AOF8ED4A1FF",
+        "question": "What is the mode of operation for the account opening form for a resident individual?"
+      },
+      {
+        "question_id": "ALABECC7A0A",
+        "question": "What is the facility type for an agriculture loan application form - is it a cash credit (CC) facility?"
+      },
+      {
+        "question_id": "ALA6FA03134",
+        "question": "What does the facility type TL/DL refer to in an agriculture loan application form?"
+      },
+      {
+        "question_id": "ALA78EDC09B",
+        "question": "What are the sourcing entities for an agriculture loan application form, such as branch, RMU, or FSTO?"
+      },
+      {
+        "question_id": "ALABAC3835E",
+        "question": "What is the difference between primary security and collateral security in an agriculture loan application form?"
+      },
+      {
+        "question_id": "ALAC7AC6B77",
+        "question": "Is a passport compulsory for an auto loan application?"
+      },
+      {
+        "question_id": "ALAF13C87BA",
+        "question": "What is the NACH repayment mode for an auto loan application?"
+      },
+      {
+        "question_id": "CUSD7B17CE8",
+        "question": "What is the EXIM registration code required for the application form for MSME business loans?"
+      },
+      {
+        "question_id": "CUSD0ED412C",
+        "question": "What are the URC and UAC numbers required for the MSME loan application form?"
+      },
+      {
+        "question_id": "CUSEE67758D",
+        "question": "What does ZED rated mean in the context of the application form for MSME (Micro, Small, and Medium Enterprises) business loans?"
+      },
+      {
+        "question_id": "BLAEF372A28",
+        "question": "What is the type of facility referred to as cash credit in the application form for MSME loans (business loans)?"
+      },
+      {
+        "question_id": "BLA241C5C6A",
+        "question": "What type of facility is a term loan for the MSME loan application form?"
+      },
+      {
+        "question_id": "CUSD9703743",
+        "question": "What type of facility do you need for the MSME loan application, LC or BG?"
+      },
+      {
+        "question_id": "BLA4FF69C08",
+        "question": "What are proforma invoices for the application form for MSME loans (business loans)?"
+      },
+      {
+        "question_id": "PLA8AC02DCA",
+        "question": "What are the Kishor and Tarun categories in relation to my PMMY loan application?"
+      },
+      {
+        "question_id": "PLA61E069F7",
+        "question": "What is the Shishu category in the PMMY loan application?"
+      },
+      {
+        "question_id": "PLACF275A3C",
+        "question": "What is Form 16 in relation to a personal loan application?"
+      },
+      {
+        "question_id": "PLA45312A9D",
+        "question": "For whom is Form 16 mandatory in the personal loan application process?"
+      },
+      {
+        "question_id": "PLAD06FC56C",
+        "question": "What does DSP-PMSP-ICGSP refer to in a personal loan application form?"
+      },
+      {
+        "question_id": "PLAE1D35683",
+        "question": "What does LOS stand for in the context of a personal loan application form?"
+      },
+      {
+        "question_id": "PLA45823D6D",
+        "question": "What does \"repayment mode - PDCs\" mean in a personal loan application form?"
+      },
+      {
+        "question_id": "PLA6F6CBECA",
+        "question": "What is the repayment mode for a personal loan application form, specifically regarding ECS?"
+      },
+      {
+        "question_id": "HLAFDE1B94A",
+        "question": "What is a power of attorney in the context of a home loan application form?"
+      },
+      {
+        "question_id": "HLA1D52D015",
+        "question": "What is the IFSC code required for a home loan application form?"
+      },
+      {
+        "question_id": "HLAFE8E1B62",
+        "question": "What does HFC/FI mean in the context of a home loan application form for the takeover of home loans from other banks or financial institutions?"
+      },
+      {
+        "question_id": "HLADBC9BEDD",
+        "question": "What is RERA in the context of a home loan application form?"
+      },
+      {
+        "question_id": "HLAD64A5596",
+        "question": "What is the sale transaction category for a home loan application form: normal sale, POA sale, gift deed, or through a third-party guarantor?"
+      },
+      {
+        "question_id": "HLA66BD969B",
+        "question": "What types of collateral are accepted for a home loan application, such as term deposits, NSC, KVP, government promissory notes, immovable property, or third-party guarantees?"
+      },
+      {
+        "question_id": "SAWB4989984",
+        "question": "Can savings for a minor be withdrawn from an SSA account?"
+      },
+      {
+        "question_id": "SAW29E6FE84",
+        "question": "What should be ensured when withdrawing savings for a minor from an SSA account?"
+      },
+      {
+        "question_id": "SAWB06B9629",
+        "question": "Will I need a savings bank account to withdraw from my SSA account?"
+      },
+      {
+        "question_id": "SAWD16344C9",
+        "question": "What is a demand draft for SSA account withdrawal?"
+      },
+      {
+        "question_id": "SAW631EB78A",
+        "question": "What are the rules for premature withdrawal from a SSA account?"
+      },
+      {
+        "question_id": "SAW5232A287",
+        "question": "Can I withdraw the savings from an SSA account after the death of a minor?"
+      },
+      {
+        "question_id": "SAW5D23B385",
+        "question": "Can a Non-Resident Indian (NRI) be made a nominee for an SSA account withdrawal?"
+      },
+      {
+        "question_id": "SAWE9BAF5AA",
+        "question": "Can the guardian be changed for an SSA account withdrawal if the account belongs to a minor or a person of unsound mind?"
+      },
+      {
+        "question_id": "SAC54788D6C",
+        "question": "When will an SSA account be closed in the event of premature death?"
+      },
+      {
+        "question_id": "SAP48EFD8C4",
+        "question": "For a premature closure of an SSA account, until when will I receive interest on the amount, and what will happen to the amount in the event of premature death?"
+      },
+      {
+        "question_id": "SAC3A9687AE",
+        "question": "What happens to the interest on the SSA account from the date of death to the date of account closure?"
+      },
+      {
+        "question_id": "SAP32378E95",
+        "question": "What happens to a SSA account in the event of premature closure due to a life-threatening disease affecting the account holder?"
+      },
+      {
+        "question_id": "SAP286A79E5",
+        "question": "What does CBS stand for in relation to the premature closure of an SSA account?"
+      },
+      {
+        "question_id": "SAP88F740AC",
+        "question": "What is the power to relax regarding premature closure of an SSA account?"
+      },
+      {
+        "question_id": "SAO88F10379",
+        "question": "What are the qualifications for opening an account for an SSA application?"
+      },
+      {
+        "question_id": "SAOA4038BCB",
+        "question": "What interest rate can I expect for an SSA application when opening an account?"
+      },
+      {
+        "question_id": "SAO4639B33A",
+        "question": "Can I receive a tax exemption for opening an account for my SSA application?"
+      },
+      {
+        "question_id": "SAOA19FA96A",
+        "question": "What is Section 80C of the Income Tax Act for the SSA application to open an account?"
+      },
+      {
+        "question_id": "SAOFFBF39DA",
+        "question": "What documents do I need to open an SSA account for my application?"
+      },
+      {
+        "question_id": "SAO79E4A9AA",
+        "question": "What documents are needed from the depositor to apply for an SSA account?"
+      },
+      {
+        "question_id": "SAO987F7E11",
+        "question": "What are the operations involved in opening an account for the SSA application?"
+      },
+      {
+        "question_id": "SAO212AC474",
+        "question": "For an SSA application to open an account, can there be two accounts for the same depositor?"
+      }
+    ]
+  },
+  {
+    "group_id": "4eba1971-d041-4ac4-8bd5-d8ab0f08cc80",
+    "questions": [
+      {
+        "question_id": "CUSCB4CB471",
+        "question": "What changes can be made using the customer request form?"
+      },
+      {
+        "question_id": "CUSA8E3B966",
+        "question": "What do PPO and FPPO mean on the customer request form?"
+      },
+      {
+        "question_id": "CUSEA0BE0E9",
+        "question": "What is a term deposit in the context of a customer request form?"
+      },
+      {
+        "question_id": "CUS681643B7",
+        "question": "What is a term deposit (re-investment) in the context of a customer request form?"
+      },
+      {
+        "question_id": "CUS5410340C",
+        "question": "What is an annuity deposit in the customer request form?"
+      },
+      {
+        "question_id": "CUS6190126E",
+        "question": "What is an autosweeper or MOD in relation to the customer request form?"
+      },
+      {
+        "question_id": "CUS04DBA315",
+        "question": "What do LIFO and FIFO mean in the context of a customer request form?"
+      },
+      {
+        "question_id": "SAC66C7AE67",
+        "question": "Where can I withdraw the amount for the SSA account closure form?"
+      },
+      {
+        "question_id": "SACC95863F2",
+        "question": "When will the account mature for the SSA account closure form?"
+      },
+      {
+        "question_id": "SAC159F34B1",
+        "question": "Can the account closure be completed before the account holder reaches 21 years of age for the SSA account closure form?"
+      },
+      {
+        "question_id": "SAC33ECE70B",
+        "question": "What are the conditions for closing an SSA account in case of marriage?"
+      },
+      {
+        "question_id": "SAC03667106",
+        "question": "What should be considered when closing an SSA account due to an upcoming marriage?"
+      },
+      {
+        "question_id": "SACAD9904B5",
+        "question": "What is the official procedure for closing an India Post savings account when the withdrawal amount is 20,000 rupees or more?"
+      },
+      {
+        "question_id": "SAC017F6167",
+        "question": "What are the deposit limits for the SSA account closure form?"
+      },
+      {
+        "question_id": "DEP3FD62DC8",
+        "question": "What can I deposit using this deposit slip?"
+      },
+      {
+        "question_id": "DEP1300D6AD",
+        "question": "What items am I unable to deposit using a deposit slip?"
+      },
+      {
+        "question_id": "DEPF40E0BE2",
+        "question": "Can I use a single deposit slip to deposit multiple items of the same kind at once?"
+      },
+      {
+        "question_id": "DEP004FFCB3",
+        "question": "Who is the SWO or passing officer on a deposit slip?"
+      },
+      {
+        "question_id": "DEPC1AA6873",
+        "question": "What does crossing a cheque mean when referring to a deposit slip?"
+      },
+      {
+        "question_id": "WIT46206C43",
+        "question": "What does COS161R refer to on a withdrawal slip?"
+      },
+      {
+        "question_id": "WIT8676DE41",
+        "question": "What does OVD stand for on a withdrawal slip?"
+      },
+      {
+        "question_id": "WITE1E07303",
+        "question": "What does GCC stand for on a withdrawal slip?"
+      },
+      {
+        "question_id": "WIT3F3161F3",
+        "question": "What is the withdrawal limit for a withdrawal slip in the GCC?"
+      },
+      {
+        "question_id": "WIT4E599DF6",
+        "question": "Can I transfer the amount from my account to another account using a withdrawal slip?"
+      },
+      {
+        "question_id": "WIT5E5D2B4B",
+        "question": "What methods can you use to withdraw from your account using a withdrawal slip?"
+      },
+      {
+        "question_id": "WITEEB94F59",
+        "question": "What details should I include in the withdrawal slip?"
+      },
+      {
+        "question_id": "SAO8766E315",
+        "question": "What are the limits for opening an SCSS account?"
+      },
+      {
+        "question_id": "SAO095C3B42",
+        "question": "How long can the SCSS account be extended for the account opening form?"
+      },
+      {
+        "question_id": "SAOFFA99B71",
+        "question": "What interest rate can I expect for the SCSS account opening form?"
+      },
+      {
+        "question_id": "SAOF6006D94",
+        "question": "What happens if I don't claim the interest that is payable every quarter on my SCSS account opening form?"
+      },
+      {
+        "question_id": "SAO8E730704",
+        "question": "Who can be the second account holder for an SCSS account opening form?"
+      },
+      {
+        "question_id": "SAOACC0AD34",
+        "question": "What documents are accepted as valid identification and address proof for the SCSS account opening form?"
+      },
+      {
+        "question_id": "SAO8BF02A09",
+        "question": "What are the tax benefits of opening an SCSS account?"
+      },
+      {
+        "question_id": "SAOB57873AA",
+        "question": "What are the eligibility requirements for opening an SCSS account?"
+      },
+      {
+        "question_id": "SAOED4C7870",
+        "question": "Who is explicitly not allowed to open a SCSS account?"
+      },
+      {
+        "question_id": "SAODA40D4FC",
+        "question": "What is the limit on cash deposits for the SCSS account opening form?"
+      },
+      {
+        "question_id": "SAOEE6AE117",
+        "question": "What types of accounts can I open on the SCSS account opening form?"
+      },
+      {
+        "question_id": "SAO4571ED64",
+        "question": "What documents are needed to open an SCSS account?"
+      },
+      {
+        "question_id": "SAOAF8D8389",
+        "question": "What details are required to add nominees to the SCSS account opening form?"
+      },
+      {
+        "question_id": "UNKEBA9FA29",
+        "question": "Who signs as the co-applicant and who signs as the guarantor on an education loan application form?"
+      },
+      {
+        "question_id": "UNKE0CE03A9",
+        "question": "What is SBI Rinn Raksha on the education loan application form?"
+      },
+      {
+        "question_id": "UNK0412D766",
+        "question": "What is a moratorium in the context of an education loan application form?"
+      },
+      {
+        "question_id": "UNKBDE94BCC",
+        "question": "Should I submit a physical form along with my education loan application on the Vidya Lakshmi portal?"
+      },
+      {
+        "question_id": "PPF119F0A5B",
+        "question": "Can a nomination be made after the account has already been opened for the application regarding nomination, change, or cancellation of a nomination form?"
+      },
+      {
+        "question_id": "SAN5A60C6FF",
+        "question": "Can a nomination be cancelled or changed for the application for nomination, change, or cancellation of the nomination form?"
+      },
+      {
+        "question_id": "CUS33BDE5B9",
+        "question": "How will the branch handle the settlement of a deceased account with no nomination if the proceeds are up to Rs. 5.00 lacs?"
+      },
+      {
+        "question_id": "SANC30187EB",
+        "question": "What data needs to be entered to change the nominees on the application for nomination, change, or cancellation of nomination form?"
+      },
+      {
+        "question_id": "SAN5534010E",
+        "question": "What information is needed for the application for nomination, change, or cancellation of nomination for a minor?"
+      },
+      {
+        "question_id": "SAN02EE8DDD",
+        "question": "How can I cancel or revoke my previously made nominations on the application for nomination, change, or cancellation of nomination form?"
+      },
+      {
+        "question_id": "KFS25DD6E5B",
+        "question": "What is KFS in relation to key fact statements?"
+      },
+      {
+        "question_id": "KFS6D82F543",
+        "question": "What should I do if a key fact statement has a blank that isn't matching?"
+      },
+      {
+        "question_id": "SAD979E0706",
+        "question": "What are the rules for depositing an amount into my SCSS account using a deposit slip?"
+      },
+      {
+        "question_id": "SAD337924F3",
+        "question": "What is the cheque or demand draft realization charge for an SCSS account deposit slip?"
+      },
+      {
+        "question_id": "SAD8234A8EA",
+        "question": "What are the account transfer fees for an SCSS account deposit slip?"
+      },
+      {
+        "question_id": "SAD27167BFC",
+        "question": "What are the duplicate passbook fees for an SCSS account deposit slip?"
+      }
+    ]
+  },
+  {
+    "group_id": "ea5248c6-6b38-47f8-b039-03f98f8f1c95",
+    "questions": [
+      {
+        "question_id": "SAD56BCD50C",
+        "question": "What are the accepted modes of deposit for an SCSS account deposit slip?"
+      },
+      {
+        "question_id": "SADB019DD92",
+        "question": "What denominations can I use to deposit into a SCSS account with a deposit slip?"
+      },
+      {
+        "question_id": "SAD099AFCD2",
+        "question": "What additional details should I keep in mind when filling out the SCSS account deposit slip?"
+      },
+      {
+        "question_id": "KFSEE9E676C",
+        "question": "Can deposits under the SCSS scheme only be made from amounts received as retirement benefits?"
+      },
+      {
+        "question_id": "SADDEB6CF77",
+        "question": "What happens if I deposit more than the acceptable amount into my SCSS account?"
+      },
+      {
+        "question_id": "PPF5D3922F1",
+        "question": "What does \"certified for use by a minor\" mean on the PPF account closure form?"
+      },
+      {
+        "question_id": "SACB297800D",
+        "question": "When will the account closure be possible for SCSS applications?"
+      },
+      {
+        "question_id": "SAC1A37D778",
+        "question": "What methods are available for withdrawing funds in an SCSS application when closing an account?"
+      },
+      {
+        "question_id": "SAC3FB7854A",
+        "question": "What should be noted when adding a thumb impression for the closure of an account in an SCSS application?"
+      },
+      {
+        "question_id": "SACD369CD06",
+        "question": "In the context of an SCSS application for account closure, what does overpaid interest mean?"
+      },
+      {
+        "question_id": "SAC8706C79E",
+        "question": "What are the conditions for the interest to be deposited when closing an account in the SCSS application?"
+      },
+      {
+        "question_id": "SACD267F2A0",
+        "question": "What happens if I, the depositor, don't close the account for the SCSS application?"
+      },
+      {
+        "question_id": "SAC15C56807",
+        "question": "What happens to the closure of an SCSS account in the event of death?"
+      },
+      {
+        "question_id": "PPFBFFD9383",
+        "question": "What are the rules for depositing an amount into my PPF account using a deposit slip?"
+      },
+      {
+        "question_id": "PPFA7C2B930",
+        "question": "What is the cheque or demand draft realization charge for a PPF account deposit slip?"
+      },
+      {
+        "question_id": "PPF41D3D8A3",
+        "question": "What are the account transfer fees for a PPF account deposit slip?"
+      },
+      {
+        "question_id": "PPF43D7920C",
+        "question": "What are the duplicate passbook fees for a PPF account deposit slip?"
+      },
+      {
+        "question_id": "PPF12553E21",
+        "question": "What are the accepted modes of deposit for a PPF account deposit slip?"
+      },
+      {
+        "question_id": "PPF1B6A12D5",
+        "question": "What denominations can I use to deposit in a PPF account deposit slip?"
+      },
+      {
+        "question_id": "PPFE8EAFB43",
+        "question": "What additional details should I keep in mind when filling out a PPF account deposit slip?"
+      },
+      {
+        "question_id": "PPF8370CC04",
+        "question": "What happens if I deposit more than the acceptable amount in a PPF account deposit slip?"
+      },
+      {
+        "question_id": "PPFB098C5D1",
+        "question": "What details are needed for the nomination form of a public provident fund account?"
+      },
+      {
+        "question_id": "PPF6D070A1C",
+        "question": "What happens when minors are added as nominees in a public provident fund account nomination form?"
+      },
+      {
+        "question_id": "PPFDD152C99",
+        "question": "When can I add nominees to my public provident fund account nomination form?"
+      },
+      {
+        "question_id": "PPFF544FA64",
+        "question": "Can I add a nominee to a Public Provident Fund account opened for a minor?"
+      },
+      {
+        "question_id": "PPF4FE5D2C8",
+        "question": "Can I change the nomination on my Public Provident Fund account after I have submitted the form?"
+      },
+      {
+        "question_id": "PPFFD5A8898",
+        "question": "What actions can nominees take regarding a public provident fund account in the event of the depositor's death?"
+      },
+      {
+        "question_id": "PPF943800FB",
+        "question": "What happens if no nominees are mentioned in the public provident fund account nomination form?"
+      },
+      {
+        "question_id": "PPFF6CFD468",
+        "question": "What happens to the interest on a Public Provident Fund account after the account owner's death, in relation to the nominees?"
+      },
+      {
+        "question_id": "PPFEA0A59F3",
+        "question": "Will there be a fee for adding or changing nominations on a public provident fund account nomination form?"
+      },
+      {
+        "question_id": "PPFE580843F",
+        "question": "Can I extend my Public Provident Fund (PPF) account as a Non-Resident Indian (NRI)?"
+      },
+      {
+        "question_id": "PPF6C549334",
+        "question": "Can a person holding power of attorney extend a Public Provident Fund (PPF) account using the extension form?"
+      },
+      {
+        "question_id": "PPF4F3D7128",
+        "question": "What withdrawals can I make from my Public Provident Fund account after it has been extended?"
+      },
+      {
+        "question_id": "PPF439AC1A1",
+        "question": "Can I open a new Public Provident Fund account instead of extending my existing account?"
+      },
+      {
+        "question_id": "PPF99ACB18C",
+        "question": "Can I cancel my request to extend my public provident fund account?"
+      },
+      {
+        "question_id": "PPF03325E80",
+        "question": "Is there a tax concession for the extended period of a public provident fund account?"
+      },
+      {
+        "question_id": "UNKEE32C18B",
+        "question": "What withdrawals can I make during the extended period of my public provident fund account?"
+      },
+      {
+        "question_id": "PPF92F9EB8A",
+        "question": "What details are required to be provided for the extension of a Public Provident Fund account?"
+      },
+      {
+        "question_id": "CUSCBFE8438",
+        "question": "Is the new overdraft limit for the salary form, equivalent to two months' net salary, the total limit or in addition to the existing limit?"
+      },
+      {
+        "question_id": "CUS5F812214",
+        "question": "What does \"reducing drawing power basis\" mean in the context of an overdraft against salary form?"
+      },
+      {
+        "question_id": "CUS1DFAEB5C",
+        "question": "What is MCLR in relation to the overdraft against salary form?"
+      },
+      {
+        "question_id": "CUSE670B538",
+        "question": "What does BPS mean in the context of an overdraft against a salary?"
+      },
+      {
+        "question_id": "CUS6CB4C914",
+        "question": "What should I do if I cannot provide the latest two months of salary slips for the overdraft against salary form?"
+      },
+      {
+        "question_id": "PSL56CCEC4C",
+        "question": "What does ULB stand for in the context of the PM Svanidhi form?"
+      },
+      {
+        "question_id": "PSLB626B8B0",
+        "question": "Who should fill out the PM Svanidhi form?"
+      },
+      {
+        "question_id": "LAPFA1943EC",
+        "question": "What is the purpose of the loan against property allocation form?"
+      },
+      {
+        "question_id": "LAP8F314E58",
+        "question": "What do the roles of applicant, co-applicant, and guarantor mean in the loan against property allocation form?"
+      },
+      {
+        "question_id": "LAP46AEED9F",
+        "question": "What are the processing fees, valuation fees, and legal fees for the loan against property allocation form?"
+      },
+      {
+        "question_id": "LAP6664D2E2",
+        "question": "Is it compulsory to consent to share my personal financial data with SBI's group companies, subsidiaries, and joint ventures for the loan against property allocation form?"
+      },
+      {
+        "question_id": "LAPC9151560",
+        "question": "What is LTV in the context of a loan against property allocation form, and what amount is typically allowed?"
+      },
+      {
+        "question_id": "GLAB4055012",
+        "question": "What is the difference between bullet repayment and EMI schemes in a gold loan application form?"
+      },
+      {
+        "question_id": "GLAF151E714",
+        "question": "What is a realty gold loan in the context of a gold loan application form, and why is it necessary to have builder letters for it?"
+      },
+      {
+        "question_id": "GLAB8F381FD",
+        "question": "What are the gross weight and net weight in a gold loan application form, and how should they be entered?"
+      },
+      {
+        "question_id": "GLA78D565C6",
+        "question": "What does 75% LTV mean in relation to a gold loan application form?"
+      }
+    ]
+  }
+]

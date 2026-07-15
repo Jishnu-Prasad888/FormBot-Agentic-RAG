@@ -1,0 +1,19 @@
+Session: ses_145705d09ffejgzXfrwtk0Kq4K
+Title: Complete reranking info
+Created: 2026-06-12T06:40:36.087000+00:00
+
+User messages:
+- 2026-06-12T06:40:36.103000+00:00: give me compelte info about reranking here
+
+Assistant messages:
+- 2026-06-12T06:41:57.813000+00:00: ## Reranking in SRAG The project has **two reranking systems** that coexist: ### 1. Pluggable `_Reranker` (`backend/app/rag/vector_rag.py:191-268`) - Supports three backends via `RERANKER_BACKEND` env-var: `bge` (`BAAI/bge-reranker-base`), `jina` (`jinaai/jina-reranker-v2-base-multilingual`), `coher...
+
+Assistant reasoning entries: 2
+Reasoning samples:
+- 2026-06-12T06:40:36.118000+00:00: The user is asking about reranking in the context of SRAG (Speculative RAG or similar RAG system). Let me explore the codebase to understand what reranking is used for here.
+- 2026-06-12T06:41:57.813000+00:00: The user asked for "compelte info about reranking here" - they want complete information about reranking in this project. Let me provide a concise but comprehensive summary based on the exploration results.
+
+Tools used:
+- task: 1
+
+File changes detected (apply_patch/write tools): no

@@ -18,3 +18,4 @@ eval/
 chroma_db/
 popos/
 logs/
+.venv/

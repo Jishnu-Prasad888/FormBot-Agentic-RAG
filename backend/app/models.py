@@ -167,3 +167,16 @@ class EvaluationResponse(BaseModel):
     dataset_name: str = ""
     failed_questions: list[dict] = []
     per_question: list[PerQuestionResult] = []
+
+
+# Chat-style request/response used by drop-in endpoints
+class QueryRequest(BaseModel):
+    form_entry: str
+    voice_query: str
+    scheme_name: str
+
+
+class QueryResponse(BaseModel):
+    query: str
+    response: str
+    status: int
